@@ -94,9 +94,9 @@ The GitHub user name for the owner of the GitHub repository to be created\. If t
 
 ### Ref<a name="aws-resource-codestar-githubrepository-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a string combination of the repository owner and the repository name, such as `my-github-account/my-github-repo`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a string combination of the repository owner and the repository name, such as `my-github-account/my-github-repo`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-codestar-githubrepository--examples"></a>
 

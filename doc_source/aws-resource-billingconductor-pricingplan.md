@@ -63,7 +63,7 @@ A map that contains tag keys and tag values that are attached to a pricing plan\
 
 ### Ref<a name="aws-resource-billingconductor-pricingplan-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-billingconductor-pricingplan-return-values-fn--getatt"></a>
 

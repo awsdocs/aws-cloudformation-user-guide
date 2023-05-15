@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Ec2ImageId](#cfn-nimblestudio-streamingimage-ec2imageid)" : String,
       "[Name](#cfn-nimblestudio-streamingimage-name)" : String,
       "[StudioId](#cfn-nimblestudio-streamingimage-studioid)" : String,
-      "[Tags](#cfn-nimblestudio-streamingimage-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-nimblestudio-streamingimage-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -31,7 +31,7 @@ Properties:
   [Name](#cfn-nimblestudio-streamingimage-name): String
   [StudioId](#cfn-nimblestudio-streamingimage-studioid): String
   [Tags](#cfn-nimblestudio-streamingimage-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-nimblestudio-streamingimage-properties"></a>

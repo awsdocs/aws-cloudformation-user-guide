@@ -1,4 +1,4 @@
-# IdentityStore resource type reference<a name="AWS_IdentityStore"></a>
+# Identity Store resource type reference<a name="AWS_IdentityStore"></a>
 
 **Resource types**
 + [AWS::IdentityStore::Group](aws-resource-identitystore-group.md)

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-throttlingburstlimit)" : Integer,
   "[ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit)" : Double,
   "[TracingEnabled](#cfn-apigateway-deployment-stagedescription-tracingenabled)" : Boolean,
-  "[Variables](#cfn-apigateway-deployment-stagedescription-variables)" : {Key : Value, ...}
+  "[Variables](#cfn-apigateway-deployment-stagedescription-variables)" : {Key: Value, ...}
 }
 ```
 
@@ -58,7 +58,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit): Double
   [TracingEnabled](#cfn-apigateway-deployment-stagedescription-tracingenabled): Boolean
   [Variables](#cfn-apigateway-deployment-stagedescription-variables): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-apigateway-deployment-stagedescription-properties"></a>

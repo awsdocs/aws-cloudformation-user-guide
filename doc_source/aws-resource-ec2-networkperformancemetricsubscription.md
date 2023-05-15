@@ -63,6 +63,6 @@ The statistic used for the subscription\.
 
 ### Ref<a name="aws-resource-ec2-networkperformancemetricsubscription-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `primaryIdentifier` property, which consists of the following properties: `source`, `destination`, `metric`, and `statistic`, with each value separated by a pipe \(\|\)\. For example, `{ "Ref": "us-east-1|us-east-2|aggregate-latency|p50" }`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `primaryIdentifier` property, which consists of the following properties: `source`, `destination`, `metric`, and `statistic`, with each value separated by a pipe \(\|\)\. For example, `{ "Ref": "us-east-1|us-east-2|aggregate-latency|p50" }`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

@@ -78,7 +78,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 When you pass the logical ID of an `AWS::MediaConvert::Preset` resource to the intrinsic `Ref` function, the function returns the name of the output preset, such as `HEVC high res`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-mediaconvert-preset-return-values-fn--getatt"></a>
 

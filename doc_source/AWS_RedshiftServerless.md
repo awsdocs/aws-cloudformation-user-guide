@@ -1,4 +1,4 @@
-# RedshiftServerless resource type reference<a name="AWS_RedshiftServerless"></a>
+# Amazon Redshift Serverless resource type reference<a name="AWS_RedshiftServerless"></a>
 
 **Resource types**
 + [AWS::RedshiftServerless::Namespace](aws-resource-redshiftserverless-namespace.md)

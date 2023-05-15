@@ -132,5 +132,5 @@ The title of the sheet\.
 A list of the visuals that are on a sheet\. Visual placement is determined by the layout of the sheet\.  
 *Required*: No  
 *Type*: List of [Visual](aws-properties-quicksight-template-visual.md)  
-*Maximum*: `30`  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

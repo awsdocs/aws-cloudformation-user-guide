@@ -1,6 +1,6 @@
 # AWS::QuickSight::VPCConnection<a name="aws-resource-quicksight-vpcconnection"></a>
 
-<a name="aws-resource-quicksight-vpcconnection-description"></a>The `AWS::QuickSight::VPCConnection` resource Property description not available\. for QuickSight\.
+Creates a new VPC connection\.
 
 ## Syntax<a name="aws-resource-quicksight-vpcconnection-syntax"></a>
 
@@ -48,57 +48,68 @@ Properties:
 ## Properties<a name="aws-resource-quicksight-vpcconnection-properties"></a>
 
 `AvailabilityStatus`  <a name="cfn-quicksight-vpcconnection-availabilitystatus"></a>
-Property description not available\.  
+The availability status of the VPC connection\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `AVAILABLE | PARTIALLY_AVAILABLE | UNAVAILABLE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsAccountId`  <a name="cfn-quicksight-vpcconnection-awsaccountid"></a>
-Property description not available\.  
+The AWS account ID of the account where you want to create a new VPC connection\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
+*Pattern*: `^[0-9]{12}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DnsResolvers`  <a name="cfn-quicksight-vpcconnection-dnsresolvers"></a>
-Property description not available\.  
+A list of IP addresses of DNS resolver endpoints for the VPC connection\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-quicksight-vpcconnection-name"></a>
-Property description not available\.  
+The display name for the VPC connection\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-quicksight-vpcconnection-rolearn"></a>
-Property description not available\.  
+The ARN of the IAM role associated with the VPC connection\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-quicksight-vpcconnection-securitygroupids"></a>
-Property description not available\.  
+The Amazon EC2 security group IDs associated with the VPC connection\.  
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `16`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetIds`  <a name="cfn-quicksight-vpcconnection-subnetids"></a>
-Property description not available\.  
+A list of subnet IDs for the VPC connection\.  
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `15`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-quicksight-vpcconnection-tags"></a>
-Property description not available\.  
+A map of the key\-value pairs for the resource tag or tags assigned to the VPC connection\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VPCConnectionId`  <a name="cfn-quicksight-vpcconnection-vpcconnectionid"></a>
-Property description not available\.  
+The ID of the VPC connection that you're creating\. This ID is a unique identifier for each AWS Region in an AWS account\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1000`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-quicksight-vpcconnection-return-values"></a>

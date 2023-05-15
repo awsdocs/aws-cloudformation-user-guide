@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AlgorithmHyperParameters](#cfn-personalize-solution-solutionconfig-algorithmhyperparameters)" : {Key : Value, ...},
+  "[AlgorithmHyperParameters](#cfn-personalize-solution-solutionconfig-algorithmhyperparameters)" : {Key: Value, ...},
   "[AutoMLConfig](#cfn-personalize-solution-solutionconfig-automlconfig)" : AutoMLConfig,
   "[EventValueThreshold](#cfn-personalize-solution-solutionconfig-eventvaluethreshold)" : String,
-  "[FeatureTransformationParameters](#cfn-personalize-solution-solutionconfig-featuretransformationparameters)" : {Key : Value, ...},
+  "[FeatureTransformationParameters](#cfn-personalize-solution-solutionconfig-featuretransformationparameters)" : {Key: Value, ...},
   "[HpoConfig](#cfn-personalize-solution-solutionconfig-hpoconfig)" : HpoConfig
 }
 ```
@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AlgorithmHyperParameters](#cfn-personalize-solution-solutionconfig-algorithmhyperparameters): 
-    Key : Value
+    Key: Value
   [AutoMLConfig](#cfn-personalize-solution-solutionconfig-automlconfig): 
     AutoMLConfig
   [EventValueThreshold](#cfn-personalize-solution-solutionconfig-eventvaluethreshold): String
   [FeatureTransformationParameters](#cfn-personalize-solution-solutionconfig-featuretransformationparameters): 
-    Key : Value
+    Key: Value
   [HpoConfig](#cfn-personalize-solution-solutionconfig-hpoconfig): 
     HpoConfig
 ```

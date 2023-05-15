@@ -4,6 +4,38 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_NetworkFirewall.md) | The following resource was updated: AWS::NetworkFirewall::FirewallPolicy 
+
+ [AWS::NetworkFirewall::FirewallPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)   
+Use the `PolicyVariables` property to set your one or more CIDRs as your `HOME_NET` if your firewall uses a centralized deployment model\.   
+Use the `IPSet` property specify list of IP addresses and address ranges, in CIDR notation for use with `IPSets`\.   | May 18, 2023 | 
+| [Updated resources](AWS_ElastiCache.md) | AWS::ElastiCache::ReplicationGroup\. 
+
+ [WS::ElastiCache::ReplicationGroup\.ClusterMode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)   
+To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to Compatible\. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode disabled\. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode configuration and set the cluster mode to Enabled\. For more information, see [Modify cluster mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/modify-cluster-mode.html)\.  | May 11, 2023 | 
+| [Updated resources](AWS_XRay.md) | Additional details were added for specifying resource\-based policies and sampling rules\. 
+
+ [AWS::XRay::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html)   
+Use the `ResourcePolicy` resource to specify a resource\-based policy which enables access to specific X\-Ray resources\. 
+
+ [AWS::XRay::SamplingRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html)   
+Use the `AWS::XRay::SamplingRule` resource to specify an X\-Ray sampling rule\.  | May 11, 2023 | 
+| [New resource](AWS_IoT.md) | The following resource was added: AWS::IoT::ThingGroup\. 
+
+ [AWS::IoT::ThingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html)   
+Use AWS::IoT::ThingGroup to create a thing group\.  | May 11, 2023 | 
+| [New resource](AWS_IoT.md) | The following resource was added: AWS::IoT::BillingGroup\. 
+
+ [AWS::IoT::BillingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html)   
+Use AWS::IoT::BillingGroup to create a new billing group\.  | May 11, 2023 | 
+| [New resource](AWS_IoT.md) | The following resource was added: AWS::IoT::ThingType\. 
+
+ [AWS::IoT::ThingType](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingtype.html)  
+Use AWS::IoT::ThingType to create a new thing type\.  | May 11, 2023 | 
+| [New resource](AWS_OSIS.md) | The following resource was added: AWS::OSIS::Pipeline\. 
+
+ [AWS::OSIS::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchingestion-pipeline.html)   
+Use the `AWS::OSIS::Pipeline` resource to specify an Amazon OpenSearch Ingestion pipeline\. For more information, see [ Amazon OpenSearch Ingestion](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ingestion.html)\.  | May 11, 2023 | 
 | [Updated resources](AWS_DeviceFarm.md) | The following resources were updated: AWS::DeviceFarm::Project\. 
 
  [AWS::DeviceFarm::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-project.html)   
@@ -34,6 +66,19 @@ Use the `AWS::Proton::EnvironmentAccountConnection` resource to specify an envir
 
  [ AWS::QuickSight::VPCConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html)   
 Use the `AWS::QuickSight::VPCConnection` resource to create a new VPC connection in Amazon QuickSight\.  | May 4, 2023 | 
+| [New resources](AWS_EC2.md) | The following resources were added: AWS::EC2::VerifiedAccessInstance, AWS::EC2::VerifiedAccessGroup, AWS::EC2::VerifiedAccessEndpoint and AWS::EC2::VerifiedAccessTrustProvider\. 
+
+ [AWS::EC2::VerifiedAccessInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html)   
+Use the `AWS::EC2::VerifiedAccessInstance` resource to create an instance\. 
+
+ [AWS::EC2::VerifiedAccessGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html)   
+Use the `AWS::EC2::VerifiedAccessGroup` resource to create a group\. 
+
+ [AWS::EC2::VerifiedAccessEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html)   
+Use the `AWS::EC2::VerifiedAccessEndpoint` resource to create an endpoint\. 
+
+ [AWS::EC2::VerifiedAccessTrustProvider](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html)   
+Use the `AWS::EC2::VerifiedAccessTrustProvider` resource to create a trust provider\.  | April 28, 2023 | 
 | [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster\. 
 
  [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
@@ -51,10 +96,6 @@ Use the `ConnectivityInfo.VpcConnectivity` property to get details for VPC conne
 
 [AWS::DataSync::StorageSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-storagesystem.html)  
 Use the `AWS::DataSync::StorageSystem` resource to create an AWS resource for an on\-premises storage system that DataSync Discovery can collect information about\.  | April 27, 2023 | 
-| [New resource](AWS_IoT.md) | The following resource was added: AWS::IoT::DomainConfiguration TlsConfig\. 
-
- [AWS::IoT::DomainConfiguration TlsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-tlsconfig.html)   
-Use AWS::IoT::DomainConfiguration TlsConfig resource to specify security policy settings in domain configuration\.  | April 27, 2023 | 
 | [New resource](AWS_MSK.md) | The following resources were added: AWS::MSK::ClusterPolicy and AWS::MSK::VpcConnection\. 
 
  [AWS::MSK::ClusterPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-clusterpolicy.html)   
@@ -489,6 +530,10 @@ The `DBSystemId` return value is the Oracle system ID \(Oracle SID\) for a conta
 
  [AWS::SageMaker::FeatureGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html)   
 Use the `AWS::SageMaker::FeatureGroup` resource to create a new feature group using either an Apache Iceberg or Glue table format\.  | December 22, 2022 | 
+| [Updated resource](AWS_Backup.md) | The following resource was updated: AWS::Backup::ReportPlan 
+
+ [AWS::Backup::BackupSelection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html)   
+This resource was updated to allow the report plan to include multiple Regions and multiple accounts\.  | December 21, 2022 | 
 | [Updated resources](AWS_M2.md) | The following resources were updated: AWS::M2::Application and AWS::M2::Environment\. 
 
  [AWS::M2::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-application.html)   
@@ -697,6 +742,10 @@ Use the `AWS::Organizations::Policy` resource to create a policy of a specified 
 
  [AWS::EMRServerless::Application:Architecture](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html)   
 Use the `AWS::EMRServerless::Application:Architecture` resource to specify the CPU architecture type of the application\.  | November 17, 2022 | 
+| [New resource](AWS_XRay.md) | The following resource was added: AWS::XRay::ResourcePolicy\. 
+
+ [AWS::XRay::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html)   
+Use the `ResourcePolicy` resource to specify a resource\-based policy which enables access to specific X\-Ray resources\.  | November 17, 2022 | 
 | [New Resource](AWS_CloudFront.md) | The following resource was added: AWS::CloudFront::ContinuousDeploymentPolicy\. 
 
  [AWS::CloudFront::ContinuousDeploymentPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html)   

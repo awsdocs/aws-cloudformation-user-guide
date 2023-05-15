@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-greengrassv2-componentversion-componentplatform-attributes)" : {Key : Value, ...},
+  "[Attributes](#cfn-greengrassv2-componentversion-componentplatform-attributes)" : {Key: Value, ...},
   "[Name](#cfn-greengrassv2-componentversion-componentplatform-name)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-greengrassv2-componentversion-componentplatform-attributes): 
-    Key : Value
+    Key: Value
   [Name](#cfn-greengrassv2-componentversion-componentplatform-name): String
 ```
 

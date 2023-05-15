@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CacheParameterGroupName](#cfn-elasticache-replicationgroup-cacheparametergroupname)" : String,
       "[CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames)" : [ String, ... ],
       "[CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname)" : String,
+      "[ClusterMode](#cfn-elasticache-replicationgroup-clustermode)" : String,
       "[DataTieringEnabled](#cfn-elasticache-replicationgroup-datatieringenabled)" : Boolean,
       "[Engine](#cfn-elasticache-replicationgroup-engine)" : String,
       "[EngineVersion](#cfn-elasticache-replicationgroup-engineversion)" : String,
@@ -74,6 +75,7 @@ Properties:
   [CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames): 
     - String
   [CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname): String
+  [ClusterMode](#cfn-elasticache-replicationgroup-clustermode): String
   [DataTieringEnabled](#cfn-elasticache-replicationgroup-datatieringenabled): Boolean
   [Engine](#cfn-elasticache-replicationgroup-engine): String
   [EngineVersion](#cfn-elasticache-replicationgroup-engineversion): String
@@ -223,6 +225,12 @@ If you're going to launch your cluster in an Amazon VPC, you need to create a su
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ClusterMode`  <a name="cfn-elasticache-replicationgroup-clustermode"></a>
+Enabled or Disabled\. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to Compatible\. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode disabled\. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode configuration and set the cluster mode to Enabled\. For more information, see [Modify cluster mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/modify-cluster-mode.html)\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataTieringEnabled`  <a name="cfn-elasticache-replicationgroup-datatieringenabled"></a>
 Enables data tiering\. Data tiering is only supported for replication groups using the r6gd node type\. This parameter must be set to true when using r6gd nodes\. For more information, see [Data tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html)\.  
@@ -457,9 +465,9 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ### Fn::GetAtt<a name="aws-resource-elasticache-replicationgroup-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-elasticache-replicationgroup-return-values-fn--getatt-fn--getatt"></a>
 

@@ -138,11 +138,11 @@ A list of key\-value pair tags to be attached to the resource\.
 
 ### Ref<a name="aws-resource-cassandra-table-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the table and the keyspace where the table exists \(delimited by '\|'\)\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the table and the keyspace where the table exists \(delimited by '\|'\)\. For example:
 
  `{ "Ref": "myKeyspace|myTable" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cassandra-table--examples"></a>
 

@@ -96,9 +96,9 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-guardduty-filter-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the filter, such as `SampleFilter`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the filter, such as `SampleFilter`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-filter--examples"></a>
 
@@ -106,7 +106,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Declare a Filter Resource<a name="aws-resource-guardduty-filter--examples--Declare_a_Filter_Resource"></a>
 
-The following example shows how to declare a GuardDuty `Filter` resource:
+The following example shows how to declare a `Filter` resource:
 
 #### JSON<a name="aws-resource-guardduty-filter--examples--Declare_a_Filter_Resource--json"></a>
 

@@ -1,4 +1,4 @@
-# Lex resource type reference<a name="AWS_Lex"></a>
+# Amazon Lex resource type reference<a name="AWS_Lex"></a>
 
 **Resource types**
 + [AWS::Lex::Bot](aws-resource-lex-bot.md)

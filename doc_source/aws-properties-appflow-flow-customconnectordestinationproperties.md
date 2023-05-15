@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CustomProperties](#cfn-appflow-flow-customconnectordestinationproperties-customproperties)" : {Key : Value, ...},
+  "[CustomProperties](#cfn-appflow-flow-customconnectordestinationproperties-customproperties)" : {Key: Value, ...},
   "[EntityName](#cfn-appflow-flow-customconnectordestinationproperties-entityname)" : String,
   "[ErrorHandlingConfig](#cfn-appflow-flow-customconnectordestinationproperties-errorhandlingconfig)" : ErrorHandlingConfig,
   "[IdFieldNames](#cfn-appflow-flow-customconnectordestinationproperties-idfieldnames)" : [ String, ... ],
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CustomProperties](#cfn-appflow-flow-customconnectordestinationproperties-customproperties): 
-    Key : Value
+    Key: Value
   [EntityName](#cfn-appflow-flow-customconnectordestinationproperties-entityname): String
   [ErrorHandlingConfig](#cfn-appflow-flow-customconnectordestinationproperties-errorhandlingconfig): 
     ErrorHandlingConfig

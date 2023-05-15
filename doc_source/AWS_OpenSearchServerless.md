@@ -1,4 +1,4 @@
-# Amazon OpenSearch Serverless<a name="AWS_OpenSearchServerless"></a>
+# Amazon OpenSearch Serverless resource type reference<a name="AWS_OpenSearchServerless"></a>
 
 **Resource types**
 + [AWS::OpenSearchServerless::AccessPolicy](aws-resource-opensearchserverless-accesspolicy.md)

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EnvironmentVariables](#cfn-greengrassv2-componentversion-lambdaexecutionparameters-environmentvariables)" : {Key : Value, ...},
+  "[EnvironmentVariables](#cfn-greengrassv2-componentversion-lambdaexecutionparameters-environmentvariables)" : {Key: Value, ...},
   "[EventSources](#cfn-greengrassv2-componentversion-lambdaexecutionparameters-eventsources)" : [ LambdaEventSource, ... ],
   "[ExecArgs](#cfn-greengrassv2-componentversion-lambdaexecutionparameters-execargs)" : [ String, ... ],
   "[InputPayloadEncodingType](#cfn-greengrassv2-componentversion-lambdaexecutionparameters-inputpayloadencodingtype)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EnvironmentVariables](#cfn-greengrassv2-componentversion-lambdaexecutionparameters-environmentvariables): 
-    Key : Value
+    Key: Value
   [EventSources](#cfn-greengrassv2-componentversion-lambdaexecutionparameters-eventsources): 
     - LambdaEventSource
   [ExecArgs](#cfn-greengrassv2-componentversion-lambdaexecutionparameters-execargs): 

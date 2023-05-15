@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ClientAuthentication](#cfn-msk-serverlesscluster-clientauthentication)" : ClientAuthentication,
       "[ClusterName](#cfn-msk-serverlesscluster-clustername)" : String,
-      "[Tags](#cfn-msk-serverlesscluster-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-msk-serverlesscluster-tags)" : {Key: Value, ...},
       "[VpcConfigs](#cfn-msk-serverlesscluster-vpcconfigs)" : [ VpcConfig, ... ]
     }
 }
@@ -29,7 +29,7 @@ Properties:
     ClientAuthentication
   [ClusterName](#cfn-msk-serverlesscluster-clustername): String
   [Tags](#cfn-msk-serverlesscluster-tags): 
-    Key : Value
+    Key: Value
   [VpcConfigs](#cfn-msk-serverlesscluster-vpcconfigs): 
     - VpcConfig
 ```

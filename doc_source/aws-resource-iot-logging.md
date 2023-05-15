@@ -53,6 +53,6 @@ The role ARN used for the log\.
 
 ### Ref<a name="aws-resource-iot-logging-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the log ID\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the log ID\. For example:
 
  `{"Ref": "Log-12345"}` 

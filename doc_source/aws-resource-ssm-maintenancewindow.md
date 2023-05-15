@@ -134,9 +134,9 @@ Optional metadata that you assign to a resource in the form of an arbitrary set 
 
 ### Ref<a name="aws-resource-ssm-maintenancewindow-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the maintenance window ID, such as `mw-abcde1234567890yz`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the maintenance window ID, such as `mw-abcde1234567890yz`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ssm-maintenancewindow--examples"></a>
 

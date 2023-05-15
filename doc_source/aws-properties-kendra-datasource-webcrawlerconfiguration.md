@@ -101,14 +101,14 @@ Web proxy credentials are optional and you can use them to connect to a web prox
 A list of regular expression patterns to exclude certain URLs to crawl\. URLs that match the patterns are excluded from the index\. URLs that don't match the patterns are included in the index\. If a URL matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UrlInclusionPatterns`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-urlinclusionpatterns"></a>
 A list of regular expression patterns to include certain URLs to crawl\. URLs that match the patterns are included in the index\. URLs that don't match the patterns are excluded from the index\. If a URL matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Urls`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-urls"></a>

@@ -654,10 +654,10 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 `StorageType`  <a name="cfn-rds-dbcluster-storagetype"></a>
 Specifies the storage type to be associated with the DB cluster\.  
 This setting is required to create a Multi\-AZ DB cluster\.  
-Valid values: `io1`   
-When specified, a value for the `Iops` parameter is required\.  
-Default: `io1`   
-Valid for: Multi\-AZ DB clusters only  
+When specified for a Multi\-AZ DB cluster, a value for the `Iops` parameter is required\.  
+Valid values: `aurora`, `aurora-iopt1` \(Aurora DB clusters\); `io1` \(Multi\-AZ DB clusters\)  
+Default: `aurora` \(Aurora DB clusters\); `io1` \(Multi\-AZ DB clusters\)  
+Valid for: Aurora DB clusters and Multi\-AZ DB clusters  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -688,15 +688,15 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 
 ### Ref<a name="aws-resource-rds-dbcluster-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB cluster\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the DB cluster\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-rds-dbcluster-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-rds-dbcluster-return-values-fn--getatt-fn--getatt"></a>
 

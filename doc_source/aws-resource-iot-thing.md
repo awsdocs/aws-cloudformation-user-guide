@@ -49,7 +49,7 @@ You can't change a thing's name\. To change a thing's name, you must create a ne
 
 ### Ref<a name="aws-resource-iot-thing-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the thing name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the thing name\. For example:
 
  `{ "Ref": "MyThing" }` 
 
@@ -57,21 +57,17 @@ For a stack named MyStack, a value similar to the following is returned:
 
  `MyStack-MyThing-AB1CDEFGHIJK` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-thing-return-values-fn--getatt"></a>
-
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-thing-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the AWS IoT thing, such as `arn:aws:iot:us-east-2:123456789012:thing/MyThing`\.
+Property description not available\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-The Id of this thing\.
+Property description not available\.
 
 ## Examples<a name="aws-resource-iot-thing--examples"></a>
 

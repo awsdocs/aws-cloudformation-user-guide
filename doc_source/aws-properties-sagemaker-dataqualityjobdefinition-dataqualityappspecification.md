@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ContainerArguments](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-containerarguments)" : [ String, ... ],
   "[ContainerEntrypoint](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-containerentrypoint)" : [ String, ... ],
-  "[Environment](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-environment)" : {Key : Value, ...},
+  "[Environment](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-environment)" : {Key: Value, ...},
   "[ImageUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-imageuri)" : String,
   "[PostAnalyticsProcessorSourceUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-postanalyticsprocessorsourceuri)" : String,
   "[RecordPreprocessorSourceUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-recordpreprocessorsourceuri)" : String
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ContainerEntrypoint](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-containerentrypoint): 
     - String
   [Environment](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-environment): 
-    Key : Value
+    Key: Value
   [ImageUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-imageuri): String
   [PostAnalyticsProcessorSourceUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-postanalyticsprocessorsourceuri): String
   [RecordPreprocessorSourceUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-recordpreprocessorsourceuri): String

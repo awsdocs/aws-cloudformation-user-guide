@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Criterion](#cfn-macie-findingsfilter-findingcriteria-criterion)" : {Key : Value, ...}
+  "[Criterion](#cfn-macie-findingsfilter-findingcriteria-criterion)" : {Key: Value, ...}
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Criterion](#cfn-macie-findingsfilter-findingcriteria-criterion): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-macie-findingsfilter-findingcriteria-properties"></a>

@@ -37,8 +37,8 @@ A unique string \(ID\) that is used to identify a hosted zone\. For example: `Z0
 
 ### Ref<a name="aws-resource-route53-dnssec-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the hosted zone ID\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the hosted zone ID\. For example:
 
  `{ "Ref": "Z00001111A1ABCaaABC11" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

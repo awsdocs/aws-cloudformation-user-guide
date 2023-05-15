@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CaveatsAndRecommendations](#cfn-sagemaker-modelcard-additionalinformation-caveatsandrecommendations)" : String,
-  "[CustomDetails](#cfn-sagemaker-modelcard-additionalinformation-customdetails)" : {Key : Value, ...},
+  "[CustomDetails](#cfn-sagemaker-modelcard-additionalinformation-customdetails)" : {Key: Value, ...},
   "[EthicalConsiderations](#cfn-sagemaker-modelcard-additionalinformation-ethicalconsiderations)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CaveatsAndRecommendations](#cfn-sagemaker-modelcard-additionalinformation-caveatsandrecommendations): String
   [CustomDetails](#cfn-sagemaker-modelcard-additionalinformation-customdetails): 
-    Key : Value
+    Key: Value
   [EthicalConsiderations](#cfn-sagemaker-modelcard-additionalinformation-ethicalconsiderations): String
 ```
 

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-robomaker-robotapplication-name)" : String,
       "[RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
       "[Sources](#cfn-robomaker-robotapplication-sources)" : [ SourceConfig, ... ],
-      "[Tags](#cfn-robomaker-robotapplication-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-robomaker-robotapplication-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -35,7 +35,7 @@ Properties:
   [Sources](#cfn-robomaker-robotapplication-sources): 
     - SourceConfig
   [Tags](#cfn-robomaker-robotapplication-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-robomaker-robotapplication-properties"></a>
@@ -85,13 +85,13 @@ A map that contains tag keys and tag values that are attached to the robot appli
 
 When you pass the logical ID of an `AWS::RoboMaker::RobotApplication` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the robot application, such as `arn:aws:robomaker:us-west-2:123456789012:robot-application/MyRobotApplication/1546541208251`\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-robomaker-robotapplication-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-robomaker-robotapplication-return-values-fn--getatt-fn--getatt"></a>
 

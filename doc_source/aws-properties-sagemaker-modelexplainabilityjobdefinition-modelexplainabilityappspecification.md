@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ConfigUri](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-configuri)" : String,
-  "[Environment](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment)" : {Key : Value, ...},
+  "[Environment](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment)" : {Key: Value, ...},
   "[ImageUri](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-imageuri)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ConfigUri](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-configuri): String
   [Environment](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment): 
-    Key : Value
+    Key: Value
   [ImageUri](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-imageuri): String
 ```
 

@@ -66,7 +66,7 @@ Information about the gateways to update\.
 
 ### Ref<a name="aws-resource-iotwireless-taskdefinition-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the task definition\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the task definition\.
 
 ### Fn::GetAtt<a name="aws-resource-iotwireless-taskdefinition-return-values-fn--getatt"></a>
 

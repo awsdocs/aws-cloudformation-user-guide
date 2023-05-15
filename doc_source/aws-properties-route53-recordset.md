@@ -291,9 +291,9 @@ If you're creating an alias record that has the same name as the hosted zone \(k
 
 ### Ref<a name="aws-properties-route53-recordset-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the value of the domain name of the record set, such as `acme.example.com`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the value of the domain name of the record set, such as `acme.example.com`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-properties-route53-recordset--examples"></a>
 

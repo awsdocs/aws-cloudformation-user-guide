@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Children](#cfn-amplifyuibuilder-component-componentchild-children)" : [ ComponentChild, ... ],
   "[ComponentType](#cfn-amplifyuibuilder-component-componentchild-componenttype)" : String,
-  "[Events](#cfn-amplifyuibuilder-component-componentchild-events)" : {Key : Value, ...},
+  "[Events](#cfn-amplifyuibuilder-component-componentchild-events)" : {Key: Value, ...},
   "[Name](#cfn-amplifyuibuilder-component-componentchild-name)" : String,
-  "[Properties](#cfn-amplifyuibuilder-component-componentchild-properties)" : {Key : Value, ...}
+  "[Properties](#cfn-amplifyuibuilder-component-componentchild-properties)" : {Key: Value, ...}
 }
 ```
 
@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - ComponentChild
   [ComponentType](#cfn-amplifyuibuilder-component-componentchild-componenttype): String
   [Events](#cfn-amplifyuibuilder-component-componentchild-events): 
-    Key : Value
+    Key: Value
   [Name](#cfn-amplifyuibuilder-component-componentchild-name): String
   [Properties](#cfn-amplifyuibuilder-component-componentchild-properties): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-amplifyuibuilder-component-componentchild-properties"></a>

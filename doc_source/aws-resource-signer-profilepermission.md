@@ -64,3 +64,9 @@ A unique identifier for the cross\-account permission statement\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Return values<a name="aws-resource-signer-profilepermission-return-values"></a>
+
+### Ref<a name="aws-resource-signer-profilepermission-return-values-ref"></a>
+
+The StatementId and ProfileName in the form StatementId\|ProfileName

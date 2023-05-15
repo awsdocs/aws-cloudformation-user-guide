@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Authentication](#cfn-msk-vpcconnection-authentication)" : String,
       "[ClientSubnets](#cfn-msk-vpcconnection-clientsubnets)" : [ String, ... ],
       "[SecurityGroups](#cfn-msk-vpcconnection-securitygroups)" : [ String, ... ],
-      "[Tags](#cfn-msk-vpcconnection-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-msk-vpcconnection-tags)" : {Key: Value, ...},
       "[TargetClusterArn](#cfn-msk-vpcconnection-targetclusterarn)" : String,
       "[VpcId](#cfn-msk-vpcconnection-vpcid)" : String
     }
@@ -33,7 +33,7 @@ Properties:
   [SecurityGroups](#cfn-msk-vpcconnection-securitygroups): 
     - String
   [Tags](#cfn-msk-vpcconnection-tags): 
-    Key : Value
+    Key: Value
   [TargetClusterArn](#cfn-msk-vpcconnection-targetclusterarn): String
   [VpcId](#cfn-msk-vpcconnection-vpcid): String
 ```
@@ -80,17 +80,17 @@ The VPC id of the remote client\.
 
 ### Ref<a name="aws-resource-msk-vpcconnection-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the VPC connection\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\) of the VPC connection\.
 
 For Amazon MSK VPC connection `MyVpcConnection`, `Ref` returns the ARN of the VPC connection whose logical ID is `MyVpcConnection`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-msk-vpcconnection-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-msk-vpcconnection-return-values-fn--getatt-fn--getatt"></a>
 

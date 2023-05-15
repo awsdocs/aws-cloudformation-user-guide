@@ -63,9 +63,9 @@ The ARN of the network load balancer of the VPC targeted by the VPC link\. The n
 
 ### Ref<a name="aws-resource-apigateway-vpclink-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the `VpcLink`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the `VpcLink`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-apigateway-vpclink-return-values-fn--getatt"></a>
 

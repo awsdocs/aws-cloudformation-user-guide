@@ -77,9 +77,9 @@ The route response key\.
 
 ### Ref<a name="aws-resource-apigatewayv2-routeresponse-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Route Response resource ID, such as `abc123`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Route Response resource ID, such as `abc123`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigatewayv2-routeresponse--examples"></a>
 

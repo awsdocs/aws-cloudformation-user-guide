@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CloudFormation::Stack",
   "Properties" : {
       "[NotificationARNs](#cfn-cloudformation-stack-notificationarns)" : [ String, ... ],
-      "[Parameters](#cfn-cloudformation-stack-parameters)" : {Key : Value, ...},
+      "[Parameters](#cfn-cloudformation-stack-parameters)" : {Key: Value, ...},
       "[Tags](#cfn-cloudformation-stack-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TemplateURL](#cfn-cloudformation-stack-templateurl)" : String,
       "[TimeoutInMinutes](#cfn-cloudformation-stack-timeoutinminutes)" : Integer
@@ -39,7 +39,7 @@ Properties:
   [NotificationARNs](#cfn-cloudformation-stack-notificationarns): 
     - String
   [Parameters](#cfn-cloudformation-stack-parameters): 
-    Key : Value
+    Key: Value
   [Tags](#cfn-cloudformation-stack-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TemplateURL](#cfn-cloudformation-stack-templateurl): String
@@ -92,11 +92,11 @@ Updates aren't supported\.
 
 ### Ref<a name="aws-properties-stack-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the stack ID\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the stack ID\. For example:
 
  `arn:aws:cloudformation:us-east-2:123456789012:stack/mystack-mynestedstack-sggfrhxhum7w/f449b250-b969-11e0-a185-5081d0136786` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-properties-stack--examples"></a>
 

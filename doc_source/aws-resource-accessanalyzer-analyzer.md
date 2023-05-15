@@ -64,9 +64,9 @@ The type represents the zone of trust for the analyzer\.
 
 ### Ref<a name="aws-resource-accessanalyzer-analyzer-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the analyzer created\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the analyzer created\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-accessanalyzer-analyzer--examples"></a>
 

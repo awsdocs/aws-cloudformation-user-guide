@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[OAuth2Properties](#cfn-appflow-connectorprofile-customconnectorprofileproperties-oauth2properties)" : OAuth2Properties,
-  "[ProfileProperties](#cfn-appflow-connectorprofile-customconnectorprofileproperties-profileproperties)" : {Key : Value, ...}
+  "[ProfileProperties](#cfn-appflow-connectorprofile-customconnectorprofileproperties-profileproperties)" : {Key: Value, ...}
 }
 ```
 
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OAuth2Properties](#cfn-appflow-connectorprofile-customconnectorprofileproperties-oauth2properties): 
     OAuth2Properties
   [ProfileProperties](#cfn-appflow-connectorprofile-customconnectorprofileproperties-profileproperties): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-appflow-connectorprofile-customconnectorprofileproperties-properties"></a>

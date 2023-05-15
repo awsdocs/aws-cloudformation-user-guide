@@ -1,6 +1,6 @@
 # AWS::GuardDuty::Detector<a name="aws-resource-guardduty-detector"></a>
 
-The `AWS::GuardDuty::Detector` resource specifies a new Amazon GuardDuty detector\. A detector is an object that represents the Amazon GuardDuty service\. A detector is required for Amazon GuardDuty to become operational\.
+The `AWS::GuardDuty::Detector` resource specifies a new detector\. A detector is an object that represents the service\. A detector is required for to become operational\.
 
 Make sure you use either `DataSources` or `Features` in a one request, and not both\.
 
@@ -76,9 +76,9 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-guardduty-detector-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique ID of the detector\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique ID of the detector\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-detector--examples"></a>
 
@@ -86,7 +86,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Declare a Detector Resource<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource"></a>
 
-The following example shows how to declare a GuardDuty `Detector` resource:
+The following example shows how to declare a `Detector` resource:
 
 #### JSON<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource--json"></a>
 

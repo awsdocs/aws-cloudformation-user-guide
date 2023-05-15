@@ -49,13 +49,13 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 
 ### Ref<a name="aws-resource-redshift-clustersecuritygroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "myClusterSecurityGroup" }` 
 
 For the Amazon Redshift cluster security group `myClusterSecurityGroup`, Ref returns the name of the cluster security group\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-redshift-clustersecuritygroup--examples"></a>
 

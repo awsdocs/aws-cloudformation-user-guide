@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DisableNetworking](#cfn-ecs-taskdefinition-containerdefinition-disablenetworking)" : Boolean,
   "[DnsSearchDomains](#cfn-ecs-taskdefinition-containerdefinition-dnssearchdomains)" : [ String, ... ],
   "[DnsServers](#cfn-ecs-taskdefinition-containerdefinition-dnsservers)" : [ String, ... ],
-  "[DockerLabels](#cfn-ecs-taskdefinition-containerdefinition-dockerlabels)" : {Key : Value, ...},
+  "[DockerLabels](#cfn-ecs-taskdefinition-containerdefinition-dockerlabels)" : {Key: Value, ...},
   "[DockerSecurityOptions](#cfn-ecs-taskdefinition-containerdefinition-dockersecurityoptions)" : [ String, ... ],
   "[EntryPoint](#cfn-ecs-taskdefinition-containerdefinition-entrypoint)" : [ String, ... ],
   "[Environment](#cfn-ecs-taskdefinition-containerdefinition-environment)" : [ KeyValuePair, ... ],
@@ -66,7 +66,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DnsServers](#cfn-ecs-taskdefinition-containerdefinition-dnsservers): 
     - String
   [DockerLabels](#cfn-ecs-taskdefinition-containerdefinition-dockerlabels): 
-    Key : Value
+    Key: Value
   [DockerSecurityOptions](#cfn-ecs-taskdefinition-containerdefinition-dockersecurityoptions): 
     - String
   [EntryPoint](#cfn-ecs-taskdefinition-containerdefinition-entrypoint): 

@@ -63,14 +63,14 @@ Configuration information for indexing Confluence blogs\.
 A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in your Confluence\. Content that matches the patterns are excluded from the index\. Content that doesn't match the patterns is included in the index\. If content matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the content isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InclusionPatterns`  <a name="cfn-kendra-datasource-confluenceconfiguration-inclusionpatterns"></a>
 A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your Confluence\. Content that matches the patterns are included in the index\. Content that doesn't match the patterns is excluded from the index\. If content matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the content isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PageConfiguration`  <a name="cfn-kendra-datasource-confluenceconfiguration-pageconfiguration"></a>

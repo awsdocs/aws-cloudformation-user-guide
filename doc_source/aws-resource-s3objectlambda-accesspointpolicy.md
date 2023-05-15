@@ -45,4 +45,4 @@ Object Lambda Access Point resource policy document\.
 
 ### Ref<a name="aws-resource-s3objectlambda-accesspointpolicy-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

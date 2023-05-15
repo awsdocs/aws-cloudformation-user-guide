@@ -29,8 +29,6 @@ The name of the attribute used to store the expiration time for items in the tab
 Currently, you cannot directly change the attribute name used to evaluate time to live\. In order to do so, you must first disable time to live, and then re\-enable it with the new attribute name\. It can take up to one hour for changes to time to live to take effect\. If you attempt to modify time to live within that time window, your stack operation might be delayed\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-dynamodb-globaltable-timetolivespecification-enabled"></a>

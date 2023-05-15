@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AnnotationType](#cfn-omics-annotationstore-tsvstoreoptions-annotationtype)" : String,
-  "[FormatToHeader](#cfn-omics-annotationstore-tsvstoreoptions-formattoheader)" : {Key : Value, ...},
+  "[FormatToHeader](#cfn-omics-annotationstore-tsvstoreoptions-formattoheader)" : {Key: Value, ...},
   "[Schema](#cfn-omics-annotationstore-tsvstoreoptions-schema)" : Json
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AnnotationType](#cfn-omics-annotationstore-tsvstoreoptions-annotationtype): String
   [FormatToHeader](#cfn-omics-annotationstore-tsvstoreoptions-formattoheader): 
-    Key : Value
+    Key: Value
   [Schema](#cfn-omics-annotationstore-tsvstoreoptions-schema): Json
 ```
 

@@ -128,10 +128,10 @@ The granularity of the line items in the report\.
 
 ### Ref<a name="aws-resource-cur-reportdefinition-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns
 
  `{ "Ref": "ReportName" }` 
 
 The name of the report that you want to create\. The name must be unique, is case sensitive, and can't include spaces\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

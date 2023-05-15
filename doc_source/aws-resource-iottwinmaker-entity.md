@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTTwinMaker::Entity",
   "Properties" : {
-      "[Components](#cfn-iottwinmaker-entity-components)" : {Key : Value, ...},
+      "[Components](#cfn-iottwinmaker-entity-components)" : {Key: Value, ...},
       "[Description](#cfn-iottwinmaker-entity-description)" : String,
       "[EntityId](#cfn-iottwinmaker-entity-entityid)" : String,
       "[EntityName](#cfn-iottwinmaker-entity-entityname)" : String,
       "[ParentEntityId](#cfn-iottwinmaker-entity-parententityid)" : String,
-      "[Tags](#cfn-iottwinmaker-entity-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-iottwinmaker-entity-tags)" : {Key: Value, ...},
       "[WorkspaceId](#cfn-iottwinmaker-entity-workspaceid)" : String
     }
 }
@@ -29,13 +29,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTTwinMaker::Entity
 Properties: 
   [Components](#cfn-iottwinmaker-entity-components): 
-    Key : Value
+    Key: Value
   [Description](#cfn-iottwinmaker-entity-description): String
   [EntityId](#cfn-iottwinmaker-entity-entityid): String
   [EntityName](#cfn-iottwinmaker-entity-entityname): String
   [ParentEntityId](#cfn-iottwinmaker-entity-parententityid): String
   [Tags](#cfn-iottwinmaker-entity-tags): 
-    Key : Value
+    Key: Value
   [WorkspaceId](#cfn-iottwinmaker-entity-workspaceid): String
 ```
 
@@ -88,15 +88,15 @@ The ID of the workspace\.
 
 ### Ref<a name="aws-resource-iottwinmaker-entity-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the workspace Id and the entity Id\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the workspace Id and the entity Id\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iottwinmaker-entity-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iottwinmaker-entity-return-values-fn--getatt-fn--getatt"></a>
 

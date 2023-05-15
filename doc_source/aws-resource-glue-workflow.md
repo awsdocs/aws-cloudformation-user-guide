@@ -69,6 +69,6 @@ The tags to use with this workflow\.
 
 ### Ref<a name="aws-resource-glue-workflow-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the workflow name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the workflow name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

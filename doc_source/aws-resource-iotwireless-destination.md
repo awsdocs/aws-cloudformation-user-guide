@@ -85,7 +85,7 @@ The tags are an array of key\-value pairs to attach to the specified resource\. 
 
 ### Ref<a name="aws-resource-iotwireless-destination-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Destination name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Destination name\.
 
 ### Fn::GetAtt<a name="aws-resource-iotwireless-destination-return-values-fn--getatt"></a>
 

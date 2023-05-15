@@ -99,7 +99,7 @@ A user\-defined label for an AWS AppConfig hosted configuration version\.
 
 ### Ref<a name="aws-resource-appconfig-hostedconfigurationversion-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the version number\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the version number\.
 
 ## Examples<a name="aws-resource-appconfig-hostedconfigurationversion--examples"></a>
 

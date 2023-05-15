@@ -72,7 +72,7 @@ Metadata to assign to the application\. Tags help organize and categorize your A
 
 ### Ref<a name="aws-resource-appconfig-application-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the application ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the application ID\.
 
 ## Examples<a name="aws-resource-appconfig-application--examples"></a>
 

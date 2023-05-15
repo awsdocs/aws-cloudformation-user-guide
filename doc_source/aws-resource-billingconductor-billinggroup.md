@@ -80,7 +80,7 @@ Property description not available\.
 
 ### Ref<a name="aws-resource-billingconductor-billinggroup-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-billingconductor-billinggroup-return-values-fn--getatt"></a>
 

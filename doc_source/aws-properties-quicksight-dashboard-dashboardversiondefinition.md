@@ -51,7 +51,7 @@ Property description not available\.
 An array of calculated field definitions for the dashboard\.  
 *Required*: No  
 *Type*: List of [CalculatedField](aws-properties-quicksight-dashboard-calculatedfield.md)  
-*Maximum*: `100`  
+*Maximum*: `500`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ColumnConfigurations`  <a name="cfn-quicksight-dashboard-dashboardversiondefinition-columnconfigurations"></a>

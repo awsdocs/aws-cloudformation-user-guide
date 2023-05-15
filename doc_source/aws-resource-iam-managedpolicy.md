@@ -127,13 +127,13 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 
 ### Ref<a name="aws-resource-iam-managedpolicy-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN\.
 
 In the following sample, the `Ref` function returns the ARN of the `CreateTestDBPolicy` managed policy, such as `arn:aws:iam::123456789012:policy/teststack-CreateTestDBPolicy-16M23YE3CS700`\.
 
  `{ "Ref": "CreateTestDBPolicy" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-iam-managedpolicy--examples"></a>
 

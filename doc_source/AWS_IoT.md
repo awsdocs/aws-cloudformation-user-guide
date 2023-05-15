@@ -3,6 +3,7 @@
 **Resource types**
 + [AWS::IoT::AccountAuditConfiguration](aws-resource-iot-accountauditconfiguration.md)
 + [AWS::IoT::Authorizer](aws-resource-iot-authorizer.md)
++ [AWS::IoT::BillingGroup](aws-resource-iot-billinggroup.md)
 + [AWS::IoT::CACertificate](aws-resource-iot-cacertificate.md)
 + [AWS::IoT::Certificate](aws-resource-iot-certificate.md)
 + [AWS::IoT::CustomMetric](aws-resource-iot-custommetric.md)
@@ -20,6 +21,8 @@
 + [AWS::IoT::ScheduledAudit](aws-resource-iot-scheduledaudit.md)
 + [AWS::IoT::SecurityProfile](aws-resource-iot-securityprofile.md)
 + [AWS::IoT::Thing](aws-resource-iot-thing.md)
++ [AWS::IoT::ThingGroup](aws-resource-iot-thinggroup.md)
 + [AWS::IoT::ThingPrincipalAttachment](aws-resource-iot-thingprincipalattachment.md)
++ [AWS::IoT::ThingType](aws-resource-iot-thingtype.md)
 + [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)
 + [AWS::IoT::TopicRuleDestination](aws-resource-iot-topicruledestination.md)

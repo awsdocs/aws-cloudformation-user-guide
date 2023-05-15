@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-resiliencehub-app-name)" : String,
       "[ResiliencyPolicyArn](#cfn-resiliencehub-app-resiliencypolicyarn)" : String,
       "[ResourceMappings](#cfn-resiliencehub-app-resourcemappings)" : [ ResourceMapping, ... ],
-      "[Tags](#cfn-resiliencehub-app-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-resiliencehub-app-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -38,7 +38,7 @@ Properties:
   [ResourceMappings](#cfn-resiliencehub-app-resourcemappings): 
     - ResourceMapping
   [Tags](#cfn-resiliencehub-app-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-resiliencehub-app-properties"></a>

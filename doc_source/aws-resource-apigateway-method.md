@@ -20,8 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Integration](#cfn-apigateway-method-integration)" : Integration,
       "[MethodResponses](#cfn-apigateway-method-methodresponses)" : [ MethodResponse, ... ],
       "[OperationName](#cfn-apigateway-method-operationname)" : String,
-      "[RequestModels](#cfn-apigateway-method-requestmodels)" : {Key : Value, ...},
-      "[RequestParameters](#cfn-apigateway-method-requestparameters)" : {Key : Value, ...},
+      "[RequestModels](#cfn-apigateway-method-requestmodels)" : {Key: Value, ...},
+      "[RequestParameters](#cfn-apigateway-method-requestparameters)" : {Key: Value, ...},
       "[RequestValidatorId](#cfn-apigateway-method-requestvalidatorid)" : String,
       "[ResourceId](#cfn-apigateway-method-resourceid)" : String,
       "[RestApiId](#cfn-apigateway-method-restapiid)" : String
@@ -46,9 +46,9 @@ Properties:
     - MethodResponse
   [OperationName](#cfn-apigateway-method-operationname): String
   [RequestModels](#cfn-apigateway-method-requestmodels): 
-    Key : Value
+    Key: Value
   [RequestParameters](#cfn-apigateway-method-requestparameters): 
-    Key : Value
+    Key: Value
   [RequestValidatorId](#cfn-apigateway-method-requestvalidatorid): String
   [ResourceId](#cfn-apigateway-method-resourceid): String
   [RestApiId](#cfn-apigateway-method-restapiid): String
@@ -139,9 +139,9 @@ The string identifier of the associated RestApi\.
 
 ### Ref<a name="aws-resource-apigateway-method-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the method ID, such as `mysta-metho-01234b567890example`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the method ID, such as `mysta-metho-01234b567890example`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigateway-method--examples"></a>
 

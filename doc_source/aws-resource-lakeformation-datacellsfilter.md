@@ -92,7 +92,7 @@ A table in the database\.
 
 ### Ref<a name="aws-resource-lakeformation-datacellsfilter-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource properties such as TableCatalogId, DatabaseName, TableName, and FilterName\. For example: 123456789012\|ExampleDbName\|ExampleTableName\|ExampleFilterName
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource properties such as TableCatalogId, DatabaseName, TableName, and FilterName\. For example: 123456789012\|ExampleDbName\|ExampleTableName\|ExampleFilterName
 
 ## Remarks<a name="aws-resource-lakeformation-datacellsfilter--remarks"></a>
 

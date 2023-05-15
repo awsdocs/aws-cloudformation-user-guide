@@ -2,6 +2,8 @@
 
 Describes the S3 data source\.
 
+Your input bucket must be in the same AWS region as your training job\.
+
 ## Syntax<a name="aws-properties-sagemaker-modelpackage-s3datasource-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -65,6 +67,7 @@ Depending on the value specified for the `S3DataType`, identifies either a key n
    `s3://customer_bucket/some/prefix/relative/path/custdata-N` 
 
   The complete set of `S3Uri` in this manifest is the input data for the channel for this data source\. The object that each `S3Uri` points to must be readable by the IAM role that SageMaker uses to perform tasks on your behalf\. 
+Your input bucket must be located in same AWS region as your training job\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  

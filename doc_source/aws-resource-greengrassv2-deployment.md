@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GreengrassV2::Deployment",
   "Properties" : {
-      "[Components](#cfn-greengrassv2-deployment-components)" : {Key : Value, ...},
+      "[Components](#cfn-greengrassv2-deployment-components)" : {Key: Value, ...},
       "[DeploymentName](#cfn-greengrassv2-deployment-deploymentname)" : String,
       "[DeploymentPolicies](#cfn-greengrassv2-deployment-deploymentpolicies)" : DeploymentPolicies,
       "[IotJobConfiguration](#cfn-greengrassv2-deployment-iotjobconfiguration)" : DeploymentIoTJobConfiguration,
       "[ParentTargetArn](#cfn-greengrassv2-deployment-parenttargetarn)" : String,
-      "[Tags](#cfn-greengrassv2-deployment-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-greengrassv2-deployment-tags)" : {Key: Value, ...},
       "[TargetArn](#cfn-greengrassv2-deployment-targetarn)" : String
     }
 }
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::GreengrassV2::Deployment
 Properties: 
   [Components](#cfn-greengrassv2-deployment-components): 
-    Key : Value
+    Key: Value
   [DeploymentName](#cfn-greengrassv2-deployment-deploymentname): String
   [DeploymentPolicies](#cfn-greengrassv2-deployment-deploymentpolicies): 
     DeploymentPolicies
@@ -49,7 +49,7 @@ Properties:
     DeploymentIoTJobConfiguration
   [ParentTargetArn](#cfn-greengrassv2-deployment-parenttargetarn): String
   [Tags](#cfn-greengrassv2-deployment-tags): 
-    Key : Value
+    Key: Value
   [TargetArn](#cfn-greengrassv2-deployment-targetarn): String
 ```
 
@@ -110,15 +110,15 @@ The ARN of the target AWS IoT thing or thing group\.
 
 ### Ref<a name="aws-resource-greengrassv2-deployment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `DeploymentId`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `DeploymentId`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-greengrassv2-deployment-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-greengrassv2-deployment-return-values-fn--getatt-fn--getatt"></a>
 

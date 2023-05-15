@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Anchor](#cfn-amplifyuibuilder-component-actionparameters-anchor)" : ComponentProperty,
-  "[Fields](#cfn-amplifyuibuilder-component-actionparameters-fields)" : {Key : Value, ...},
+  "[Fields](#cfn-amplifyuibuilder-component-actionparameters-fields)" : {Key: Value, ...},
   "[Global](#cfn-amplifyuibuilder-component-actionparameters-global)" : ComponentProperty,
   "[Id](#cfn-amplifyuibuilder-component-actionparameters-id)" : ComponentProperty,
   "[Model](#cfn-amplifyuibuilder-component-actionparameters-model)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Anchor](#cfn-amplifyuibuilder-component-actionparameters-anchor): 
     ComponentProperty
   [Fields](#cfn-amplifyuibuilder-component-actionparameters-fields): 
-    Key : Value
+    Key: Value
   [Global](#cfn-amplifyuibuilder-component-actionparameters-global): 
     ComponentProperty
   [Id](#cfn-amplifyuibuilder-component-actionparameters-id): 

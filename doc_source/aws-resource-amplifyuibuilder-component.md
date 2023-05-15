@@ -13,18 +13,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AmplifyUIBuilder::Component",
   "Properties" : {
       "[AppId](#cfn-amplifyuibuilder-component-appid)" : String,
-      "[BindingProperties](#cfn-amplifyuibuilder-component-bindingproperties)" : {Key : Value, ...},
+      "[BindingProperties](#cfn-amplifyuibuilder-component-bindingproperties)" : {Key: Value, ...},
       "[Children](#cfn-amplifyuibuilder-component-children)" : [ ComponentChild, ... ],
-      "[CollectionProperties](#cfn-amplifyuibuilder-component-collectionproperties)" : {Key : Value, ...},
+      "[CollectionProperties](#cfn-amplifyuibuilder-component-collectionproperties)" : {Key: Value, ...},
       "[ComponentType](#cfn-amplifyuibuilder-component-componenttype)" : String,
       "[EnvironmentName](#cfn-amplifyuibuilder-component-environmentname)" : String,
-      "[Events](#cfn-amplifyuibuilder-component-events)" : {Key : Value, ...},
+      "[Events](#cfn-amplifyuibuilder-component-events)" : {Key: Value, ...},
       "[Name](#cfn-amplifyuibuilder-component-name)" : String,
       "[Overrides](#cfn-amplifyuibuilder-component-overrides)" : Json,
-      "[Properties](#cfn-amplifyuibuilder-component-properties)" : {Key : Value, ...},
+      "[Properties](#cfn-amplifyuibuilder-component-properties)" : {Key: Value, ...},
       "[SchemaVersion](#cfn-amplifyuibuilder-component-schemaversion)" : String,
       "[SourceId](#cfn-amplifyuibuilder-component-sourceid)" : String,
-      "[Tags](#cfn-amplifyuibuilder-component-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-amplifyuibuilder-component-tags)" : {Key: Value, ...},
       "[Variants](#cfn-amplifyuibuilder-component-variants)" : [ ComponentVariant, ... ]
     }
 }
@@ -37,23 +37,23 @@ Type: AWS::AmplifyUIBuilder::Component
 Properties: 
   [AppId](#cfn-amplifyuibuilder-component-appid): String
   [BindingProperties](#cfn-amplifyuibuilder-component-bindingproperties): 
-    Key : Value
+    Key: Value
   [Children](#cfn-amplifyuibuilder-component-children): 
     - ComponentChild
   [CollectionProperties](#cfn-amplifyuibuilder-component-collectionproperties): 
-    Key : Value
+    Key: Value
   [ComponentType](#cfn-amplifyuibuilder-component-componenttype): String
   [EnvironmentName](#cfn-amplifyuibuilder-component-environmentname): String
   [Events](#cfn-amplifyuibuilder-component-events): 
-    Key : Value
+    Key: Value
   [Name](#cfn-amplifyuibuilder-component-name): String
   [Overrides](#cfn-amplifyuibuilder-component-overrides): Json
   [Properties](#cfn-amplifyuibuilder-component-properties): 
-    Key : Value
+    Key: Value
   [SchemaVersion](#cfn-amplifyuibuilder-component-schemaversion): String
   [SourceId](#cfn-amplifyuibuilder-component-sourceid): String
   [Tags](#cfn-amplifyuibuilder-component-tags): 
-    Key : Value
+    Key: Value
   [Variants](#cfn-amplifyuibuilder-component-variants): 
     - ComponentVariant
 ```
@@ -151,9 +151,9 @@ A list of the component's variants\. A variant is a unique style configuration o
 
 ### Fn::GetAtt<a name="aws-resource-amplifyuibuilder-component-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-amplifyuibuilder-component-return-values-fn--getatt-fn--getatt"></a>
 

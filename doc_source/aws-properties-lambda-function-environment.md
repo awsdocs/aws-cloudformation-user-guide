@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Variables](#cfn-lambda-function-environment-variables)" : {Key : Value, ...}
+  "[Variables](#cfn-lambda-function-environment-variables)" : {Key: Value, ...}
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Variables](#cfn-lambda-function-environment-variables): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-lambda-function-environment-properties"></a>

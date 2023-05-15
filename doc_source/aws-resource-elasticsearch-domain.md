@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Elasticsearch::Domain",
   "Properties" : {
       "[AccessPolicies](#cfn-elasticsearch-domain-accesspolicies)" : Json,
-      "[AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions)" : {Key : Value, ...},
+      "[AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions)" : {Key: Value, ...},
       "[AdvancedSecurityOptions](#cfn-elasticsearch-domain-advancedsecurityoptions)" : AdvancedSecurityOptionsInput,
       "[CognitoOptions](#cfn-elasticsearch-domain-cognitooptions)" : CognitoOptions,
       "[DomainEndpointOptions](#cfn-elasticsearch-domain-domainendpointoptions)" : DomainEndpointOptions,
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig)" : ElasticsearchClusterConfig,
       "[ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion)" : String,
       "[EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions)" : EncryptionAtRestOptions,
-      "[LogPublishingOptions](#cfn-elasticsearch-domain-logpublishingoptions)" : {Key : Value, ...},
+      "[LogPublishingOptions](#cfn-elasticsearch-domain-logpublishingoptions)" : {Key: Value, ...},
       "[NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions)" : NodeToNodeEncryptionOptions,
       "[SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions)" : SnapshotOptions,
       "[Tags](#cfn-elasticsearch-domain-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -41,7 +41,7 @@ Type: AWS::Elasticsearch::Domain
 Properties: 
   [AccessPolicies](#cfn-elasticsearch-domain-accesspolicies): Json
   [AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions): 
-    Key : Value
+    Key: Value
   [AdvancedSecurityOptions](#cfn-elasticsearch-domain-advancedsecurityoptions): 
     AdvancedSecurityOptionsInput
   [CognitoOptions](#cfn-elasticsearch-domain-cognitooptions): 
@@ -57,7 +57,7 @@ Properties:
   [EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions): 
     EncryptionAtRestOptions
   [LogPublishingOptions](#cfn-elasticsearch-domain-logpublishingoptions): 
-    Key : Value
+    Key: Value
   [NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions): 
     NodeToNodeEncryptionOptions
   [SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions): 

@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[EvaluationDetails](#cfn-sagemaker-modelcard-content-evaluationdetails)" : [ EvaluationDetail, ... ],
   "[IntendedUses](#cfn-sagemaker-modelcard-content-intendeduses)" : IntendedUses,
   "[ModelOverview](#cfn-sagemaker-modelcard-content-modeloverview)" : ModelOverview,
+  "[ModelPackageDetails](#cfn-sagemaker-modelcard-content-modelpackagedetails)" : ModelPackageDetails,
   "[TrainingDetails](#cfn-sagemaker-modelcard-content-trainingdetails)" : TrainingDetails
 }
 ```
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     IntendedUses
   [ModelOverview](#cfn-sagemaker-modelcard-content-modeloverview): 
     ModelOverview
+  [ModelPackageDetails](#cfn-sagemaker-modelcard-content-modelpackagedetails): 
+    ModelPackageDetails
   [TrainingDetails](#cfn-sagemaker-modelcard-content-trainingdetails): 
     TrainingDetails
 ```
@@ -66,6 +69,12 @@ The intended usage of the model\.
 An overview about the model  
 *Required*: No  
 *Type*: [ModelOverview](aws-properties-sagemaker-modelcard-modeloverview.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ModelPackageDetails`  <a name="cfn-sagemaker-modelcard-content-modelpackagedetails"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ModelPackageDetails](aws-properties-sagemaker-modelcard-modelpackagedetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrainingDetails`  <a name="cfn-sagemaker-modelcard-content-trainingdetails"></a>

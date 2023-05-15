@@ -39,8 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediaconnect-flowsource-encryption-properties"></a>
 
 `Algorithm`  <a name="cfn-mediaconnect-flowsource-encryption-algorithm"></a>
-The type of algorithm that is used for the encryption \(such as aes128, aes192, or aes256\)\.  
-*Required*: Yes  
+The type of algorithm that is used for static key encryption \(such as aes128, aes192, or aes256\)\. If you are using SPEKE or SRT\-password encryption, this property must be left blank\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -57,7 +57,7 @@ The value of one of the devices that you configured with your digital rights man
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyType`  <a name="cfn-mediaconnect-flowsource-encryption-keytype"></a>
-The type of key that is used for the encryption\. If you don't specify a `keyType` value, the service uses the default setting \(`static-key`\)\.  
+The type of key that is used for the encryption\. If you don't specify a `keyType` value, the service uses the default setting \(`static-key`\)\. Valid key types are: `static-key`, `speke`, and `srt-password`\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -64,6 +64,6 @@ The user pool ID for the user pool\.
 
 ### Ref<a name="aws-resource-cognito-userpoolusertogroupattachment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a generated ID, such as `UserToGroupAttachment-YejJvzrEXAMPLE`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a generated ID, such as `UserToGroupAttachment-YejJvzrEXAMPLE`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

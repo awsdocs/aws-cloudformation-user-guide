@@ -107,7 +107,7 @@ Key\-value pairs used to manage metadata for the model card\.
 
 ### Ref<a name="aws-resource-sagemaker-modelcard-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the model card name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the model card name\.
 
 For more information about using the Ref function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

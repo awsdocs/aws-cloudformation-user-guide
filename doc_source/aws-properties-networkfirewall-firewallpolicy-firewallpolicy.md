@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[PolicyVariables](#cfn-networkfirewall-firewallpolicy-firewallpolicy-policyvariables)" : PolicyVariables,
   "[StatefulDefaultActions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefuldefaultactions)" : [ String, ... ],
   "[StatefulEngineOptions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulengineoptions)" : StatefulEngineOptions,
   "[StatefulRuleGroupReferences](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulrulegroupreferences)" : [ StatefulRuleGroupReference, ... ],
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-networkfirewall-firewallpolicy-firewallpolicy-syntax.yaml"></a>
 
 ```
+  [PolicyVariables](#cfn-networkfirewall-firewallpolicy-firewallpolicy-policyvariables): 
+    PolicyVariables
   [StatefulDefaultActions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefuldefaultactions): 
     - String
   [StatefulEngineOptions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulengineoptions): 
@@ -40,6 +43,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-firewallpolicy-firewallpolicy-properties"></a>
+
+`PolicyVariables`  <a name="cfn-networkfirewall-firewallpolicy-firewallpolicy-policyvariables"></a>
+Contains variables that you can use to override default Suricata settings in your firewall policy\.  
+*Required*: No  
+*Type*: [PolicyVariables](aws-properties-networkfirewall-firewallpolicy-policyvariables.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatefulDefaultActions`  <a name="cfn-networkfirewall-firewallpolicy-firewallpolicy-statefuldefaultactions"></a>
 The default actions to take on a packet that doesn't match any stateful rules\. The stateful default action is optional, and is only valid when using the strict rule order\.  

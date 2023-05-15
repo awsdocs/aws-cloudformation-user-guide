@@ -91,15 +91,15 @@ The ID of the VPC for the security group\.
 
 ### Ref<a name="aws-properties-ec2-security-group-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-properties-ec2-security-group-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-properties-ec2-security-group-return-values-fn--getatt-fn--getatt"></a>
 
@@ -148,7 +148,7 @@ InstanceSecurityGroup:
   Type: AWS::EC2::SecurityGroup
   Properties:
     GroupDescription: Allow http to client host
-    VpcId: Ref: myVPC
+    VpcId: !Ref myVPC
     SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: 80
@@ -191,7 +191,7 @@ sgwithoutegress:
     SecurityGroupEgress:
       - CidrIp: 127.0.0.1/32
         IpProtocol: "-1"
-    VpcId: Ref: myVPC
+    VpcId: !Ref myVPC
 ```
 
 ### Allow ping requests<a name="aws-properties-ec2-security-group--examples--Allow_ping_requests"></a>
@@ -232,7 +232,7 @@ SGPing:
   DependsOn: VPC
   Properties:
     GroupDescription: SG to test ping
-    VpcId: Ref: VPC
+    VpcId: !Ref VPC
     SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: 22

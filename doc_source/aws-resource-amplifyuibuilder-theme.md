@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EnvironmentName](#cfn-amplifyuibuilder-theme-environmentname)" : String,
       "[Name](#cfn-amplifyuibuilder-theme-name)" : String,
       "[Overrides](#cfn-amplifyuibuilder-theme-overrides)" : [ ThemeValues, ... ],
-      "[Tags](#cfn-amplifyuibuilder-theme-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-amplifyuibuilder-theme-tags)" : {Key: Value, ...},
       "[Values](#cfn-amplifyuibuilder-theme-values)" : [ ThemeValues, ... ]
     }
 }
@@ -33,7 +33,7 @@ Properties:
   [Overrides](#cfn-amplifyuibuilder-theme-overrides): 
     - ThemeValues
   [Tags](#cfn-amplifyuibuilder-theme-tags): 
-    Key : Value
+    Key: Value
   [Values](#cfn-amplifyuibuilder-theme-values): 
     - ThemeValues
 ```
@@ -82,9 +82,9 @@ A list of key\-value pairs that defines the properties of the theme\.
 
 ### Fn::GetAtt<a name="aws-resource-amplifyuibuilder-theme-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-amplifyuibuilder-theme-return-values-fn--getatt-fn--getatt"></a>
 

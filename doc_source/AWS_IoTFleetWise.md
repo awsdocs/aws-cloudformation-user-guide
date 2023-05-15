@@ -1,4 +1,4 @@
-# IoTFleetWise resource type reference<a name="AWS_IoTFleetWise"></a>
+# AWS IoT FleetWise resource type reference<a name="AWS_IoTFleetWise"></a>
 
 **Resource types**
 + [AWS::IoTFleetWise::Campaign](aws-resource-iotfleetwise-campaign.md)

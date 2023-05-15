@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CertifyForMarketplace](#cfn-sagemaker-modelpackage-certifyformarketplace)" : Boolean,
       "[ClientToken](#cfn-sagemaker-modelpackage-clienttoken)" : String,
       "[CreatedBy](#cfn-sagemaker-modelpackage-createdby)" : UserContext,
-      "[CustomerMetadataProperties](#cfn-sagemaker-modelpackage-customermetadataproperties)" : {Key : Value, ...},
+      "[CustomerMetadataProperties](#cfn-sagemaker-modelpackage-customermetadataproperties)" : {Key: Value, ...},
       "[Domain](#cfn-sagemaker-modelpackage-domain)" : String,
       "[DriftCheckBaselines](#cfn-sagemaker-modelpackage-driftcheckbaselines)" : DriftCheckBaselines,
-      "[Environment](#cfn-sagemaker-modelpackage-environment)" : {Key : Value, ...},
+      "[Environment](#cfn-sagemaker-modelpackage-environment)" : {Key: Value, ...},
       "[InferenceSpecification](#cfn-sagemaker-modelpackage-inferencespecification)" : InferenceSpecification,
       "[LastModifiedBy](#cfn-sagemaker-modelpackage-lastmodifiedby)" : UserContext,
       "[LastModifiedTime](#cfn-sagemaker-modelpackage-lastmodifiedtime)" : String,
@@ -61,12 +61,12 @@ Properties:
   [CreatedBy](#cfn-sagemaker-modelpackage-createdby): 
     UserContext
   [CustomerMetadataProperties](#cfn-sagemaker-modelpackage-customermetadataproperties): 
-    Key : Value
+    Key: Value
   [Domain](#cfn-sagemaker-modelpackage-domain): String
   [DriftCheckBaselines](#cfn-sagemaker-modelpackage-driftcheckbaselines): 
     DriftCheckBaselines
   [Environment](#cfn-sagemaker-modelpackage-environment): 
-    Key : Value
+    Key: Value
   [InferenceSpecification](#cfn-sagemaker-modelpackage-inferencespecification): 
     InferenceSpecification
   [LastModifiedBy](#cfn-sagemaker-modelpackage-lastmodifiedby): 

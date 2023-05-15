@@ -19,8 +19,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[IngestPort](#cfn-mediaconnect-flowsource-ingestport)" : Integer,
       "[MaxBitrate](#cfn-mediaconnect-flowsource-maxbitrate)" : Integer,
       "[MaxLatency](#cfn-mediaconnect-flowsource-maxlatency)" : Integer,
+      "[MinLatency](#cfn-mediaconnect-flowsource-minlatency)" : Integer,
       "[Name](#cfn-mediaconnect-flowsource-name)" : String,
       "[Protocol](#cfn-mediaconnect-flowsource-protocol)" : String,
+      "[SenderControlPort](#cfn-mediaconnect-flowsource-sendercontrolport)" : Integer,
+      "[SenderIpAddress](#cfn-mediaconnect-flowsource-senderipaddress)" : String,
+      "[SourceListenerAddress](#cfn-mediaconnect-flowsource-sourcelisteneraddress)" : String,
+      "[SourceListenerPort](#cfn-mediaconnect-flowsource-sourcelistenerport)" : Integer,
       "[StreamId](#cfn-mediaconnect-flowsource-streamid)" : String,
       "[VpcInterfaceName](#cfn-mediaconnect-flowsource-vpcinterfacename)" : String,
       "[WhitelistCidr](#cfn-mediaconnect-flowsource-whitelistcidr)" : String
@@ -41,8 +46,13 @@ Properties:
   [IngestPort](#cfn-mediaconnect-flowsource-ingestport): Integer
   [MaxBitrate](#cfn-mediaconnect-flowsource-maxbitrate): Integer
   [MaxLatency](#cfn-mediaconnect-flowsource-maxlatency): Integer
+  [MinLatency](#cfn-mediaconnect-flowsource-minlatency): Integer
   [Name](#cfn-mediaconnect-flowsource-name): String
   [Protocol](#cfn-mediaconnect-flowsource-protocol): String
+  [SenderControlPort](#cfn-mediaconnect-flowsource-sendercontrolport): Integer
+  [SenderIpAddress](#cfn-mediaconnect-flowsource-senderipaddress): String
+  [SourceListenerAddress](#cfn-mediaconnect-flowsource-sourcelisteneraddress): String
+  [SourceListenerPort](#cfn-mediaconnect-flowsource-sourcelistenerport): Integer
   [StreamId](#cfn-mediaconnect-flowsource-streamid): String
   [VpcInterfaceName](#cfn-mediaconnect-flowsource-vpcinterfacename): String
   [WhitelistCidr](#cfn-mediaconnect-flowsource-whitelistcidr): String
@@ -92,6 +102,12 @@ The maximum latency in milliseconds\. This parameter applies only to RIST\-based
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MinLatency`  <a name="cfn-mediaconnect-flowsource-minlatency"></a>
+The minimum latency in milliseconds for SRT\-based streams\. In streams that use the SRT protocol, this value that you set on your MediaConnect source or output represents the minimal potential latency of that connection\. The latency of the stream is set to the highest number between the sender’s minimum latency and the receiver’s minimum latency\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-mediaconnect-flowsource-name"></a>
 The name of the source\.  
 *Required*: Yes  
@@ -99,9 +115,34 @@ The name of the source\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Protocol`  <a name="cfn-mediaconnect-flowsource-protocol"></a>
-The protocol that the source uses to deliver the content to MediaConnect\. Adding additional sources to an existing flow requires Failover to be enabled\. When you enable Failover, the additional source must use the same protocol as the existing source\. Only the following protocols support failover: Zixi\-push, RTP\-FEC, RTP, and RIST\.  
+The protocol that the source uses to deliver the content to MediaConnect\. Adding additional sources to an existing flow requires Failover to be enabled\. When you enable Failover, the additional source must use the same protocol as the existing source\. Only the following protocols support failover: Zixi\-push, RTP\-FEC, RTP, RIST and SRT protocols\.  
+ If you use failover with SRT caller or listener, the `FailoverMode` property must be set to `FAILOVER`\. The `FailoverMode` property is found in the `FailoverConfig` resource of the same flow ARN you used for the source's `FlowArn` property\. SRT caller/listener does not support merge mode failover\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SenderControlPort`  <a name="cfn-mediaconnect-flowsource-sendercontrolport"></a>
+The port that the flow uses to send outbound requests to initiate connection with the sender\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SenderIpAddress`  <a name="cfn-mediaconnect-flowsource-senderipaddress"></a>
+The IP address that the flow communicates with to initiate connection with the sender\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceListenerAddress`  <a name="cfn-mediaconnect-flowsource-sourcelisteneraddress"></a>
+Source IP or domain name for SRT\-caller protocol\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceListenerPort`  <a name="cfn-mediaconnect-flowsource-sourcelistenerport"></a>
+Source port for SRT\-caller protocol\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamId`  <a name="cfn-mediaconnect-flowsource-streamid"></a>
@@ -126,17 +167,17 @@ The range of IP addresses that are allowed to contribute content to your source\
 
 ### Ref<a name="aws-resource-mediaconnect-flowsource-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the source ARN\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the source ARN\. For example:
 
 `{ "Ref": "arn:aws:mediaconnect:us-east-1:111122223333:source:2-3aBC45dEF67hiJ89-c34de5fG678h:AwardsShowSource" }`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-mediaconnect-flowsource-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-mediaconnect-flowsource-return-values-fn--getatt-fn--getatt"></a>
 

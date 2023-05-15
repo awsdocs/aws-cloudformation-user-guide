@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
       "[SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn)" : String,
       "[State](#cfn-batch-jobqueue-state)" : String,
-      "[Tags](#cfn-batch-jobqueue-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-batch-jobqueue-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -34,7 +34,7 @@ Properties:
   [SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn): String
   [State](#cfn-batch-jobqueue-state): String
   [Tags](#cfn-batch-jobqueue-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-batch-jobqueue-properties"></a>
@@ -81,15 +81,15 @@ The tags that are applied to the job queue\. For more information, see [Tagging 
 
 ### Ref<a name="aws-resource-batch-jobqueue-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-batch-jobqueue-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-batch-jobqueue-return-values-fn--getatt-fn--getatt"></a>
 

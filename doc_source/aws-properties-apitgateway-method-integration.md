@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod)" : String,
   "[IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses)" : [ IntegrationResponse, ... ],
   "[PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior)" : String,
-  "[RequestParameters](#cfn-apigateway-method-integration-requestparameters)" : {Key : Value, ...},
-  "[RequestTemplates](#cfn-apigateway-method-integration-requesttemplates)" : {Key : Value, ...},
+  "[RequestParameters](#cfn-apigateway-method-integration-requestparameters)" : {Key: Value, ...},
+  "[RequestTemplates](#cfn-apigateway-method-integration-requesttemplates)" : {Key: Value, ...},
   "[TimeoutInMillis](#cfn-apigateway-method-integration-timeoutinmillis)" : Integer,
   "[Type](#cfn-apigateway-method-integration-type)" : String,
   "[Uri](#cfn-apigateway-method-integration-uri)" : String
@@ -42,9 +42,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - IntegrationResponse
   [PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior): String
   [RequestParameters](#cfn-apigateway-method-integration-requestparameters): 
-    Key : Value
+    Key: Value
   [RequestTemplates](#cfn-apigateway-method-integration-requesttemplates): 
-    Key : Value
+    Key: Value
   [TimeoutInMillis](#cfn-apigateway-method-integration-timeoutinmillis): Integer
   [Type](#cfn-apigateway-method-integration-type): String
   [Uri](#cfn-apigateway-method-integration-uri): String

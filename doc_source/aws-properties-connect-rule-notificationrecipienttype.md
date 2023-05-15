@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[UserArns](#cfn-connect-rule-notificationrecipienttype-userarns)" : [ String, ... ],
-  "[UserTags](#cfn-connect-rule-notificationrecipienttype-usertags)" : {Key : Value, ...}
+  "[UserTags](#cfn-connect-rule-notificationrecipienttype-usertags)" : {Key: Value, ...}
 }
 ```
 
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [UserArns](#cfn-connect-rule-notificationrecipienttype-userarns): 
     - String
   [UserTags](#cfn-connect-rule-notificationrecipienttype-usertags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-connect-rule-notificationrecipienttype-properties"></a>

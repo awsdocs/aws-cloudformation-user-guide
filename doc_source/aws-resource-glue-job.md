@@ -222,9 +222,9 @@ The type of predefined worker that is allocated when a job runs\. Accepts a valu
 
 ### Ref<a name="aws-resource-glue-job-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the job name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the job name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-glue-job--examples"></a>
 

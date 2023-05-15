@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BatchStrategy](#cfn-sagemaker-modelpackage-transformjobdefinition-batchstrategy)" : String,
-  "[Environment](#cfn-sagemaker-modelpackage-transformjobdefinition-environment)" : {Key : Value, ...},
+  "[Environment](#cfn-sagemaker-modelpackage-transformjobdefinition-environment)" : {Key: Value, ...},
   "[MaxConcurrentTransforms](#cfn-sagemaker-modelpackage-transformjobdefinition-maxconcurrenttransforms)" : Integer,
   "[MaxPayloadInMB](#cfn-sagemaker-modelpackage-transformjobdefinition-maxpayloadinmb)" : Integer,
   "[TransformInput](#cfn-sagemaker-modelpackage-transformjobdefinition-transforminput)" : TransformInput,
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [BatchStrategy](#cfn-sagemaker-modelpackage-transformjobdefinition-batchstrategy): String
   [Environment](#cfn-sagemaker-modelpackage-transformjobdefinition-environment): 
-    Key : Value
+    Key: Value
   [MaxConcurrentTransforms](#cfn-sagemaker-modelpackage-transformjobdefinition-maxconcurrenttransforms): Integer
   [MaxPayloadInMB](#cfn-sagemaker-modelpackage-transformjobdefinition-maxpayloadinmb): Integer
   [TransformInput](#cfn-sagemaker-modelpackage-transformjobdefinition-transforminput): 

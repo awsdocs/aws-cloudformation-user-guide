@@ -101,7 +101,7 @@ The tags of the pipeline\.
 
 ### Ref<a name="aws-resource-sagemaker-pipeline-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the PipelineName of the pipeline\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the PipelineName of the pipeline\. 
 
 ## Examples<a name="aws-resource-sagemaker-pipeline--examples"></a>
 

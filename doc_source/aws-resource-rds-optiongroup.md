@@ -98,9 +98,9 @@ An optional array of key\-value pairs to apply to this option group\.
 
 ### Ref<a name="aws-resource-rds-optiongroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the option group\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the option group\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-rds-optiongroup--examples"></a>
 

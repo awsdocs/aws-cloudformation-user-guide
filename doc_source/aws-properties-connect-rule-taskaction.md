@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ContactFlowArn](#cfn-connect-rule-taskaction-contactflowarn)" : String,
   "[Description](#cfn-connect-rule-taskaction-description)" : String,
   "[Name](#cfn-connect-rule-taskaction-name)" : String,
-  "[References](#cfn-connect-rule-taskaction-references)" : {Key : Value, ...}
+  "[References](#cfn-connect-rule-taskaction-references)" : {Key: Value, ...}
 }
 ```
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Description](#cfn-connect-rule-taskaction-description): String
   [Name](#cfn-connect-rule-taskaction-name): String
   [References](#cfn-connect-rule-taskaction-references): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-connect-rule-taskaction-properties"></a>

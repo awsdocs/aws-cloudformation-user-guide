@@ -29,13 +29,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-analysis-scatterplotfieldwells-properties"></a>
 
 `ScatterPlotCategoricallyAggregatedFieldWells`  <a name="cfn-quicksight-analysis-scatterplotfieldwells-scatterplotcategoricallyaggregatedfieldwells"></a>
-The aggregated field wells of a scatter plot\. Scatter plots that have a field in the category \(group/color\) field will have aggregated field wells\. The x and y\-axes of these scatter plots are aggregated by category\.  
+The aggregated field wells of a scatter plot\. The x and y\-axes of scatter plots with aggregated field wells are aggregated by category, label, or both\.  
 *Required*: No  
 *Type*: [ScatterPlotCategoricallyAggregatedFieldWells](aws-properties-quicksight-analysis-scatterplotcategoricallyaggregatedfieldwells.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScatterPlotUnaggregatedFieldWells`  <a name="cfn-quicksight-analysis-scatterplotfieldwells-scatterplotunaggregatedfieldwells"></a>
-The unaggregated field wells of a scatter plot\. Scatter plots without a category field well have unaggregated field wells\. The x and y\-axes of these scatter plots are unaggregated\.  
+The unaggregated field wells of a scatter plot\. The x and y\-axes of these scatter plots are unaggregated\.  
 *Required*: No  
 *Type*: [ScatterPlotUnaggregatedFieldWells](aws-properties-quicksight-analysis-scatterplotunaggregatedfieldwells.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

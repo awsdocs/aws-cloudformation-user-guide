@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ContainerHostname](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-containerhostname)" : String,
-  "[Environment](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-environment)" : {Key : Value, ...},
+  "[Environment](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-environment)" : {Key: Value, ...},
   "[Framework](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-framework)" : String,
   "[FrameworkVersion](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-frameworkversion)" : String,
   "[Image](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-image)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ContainerHostname](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-containerhostname): String
   [Environment](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-environment): 
-    Key : Value
+    Key: Value
   [Framework](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-framework): String
   [FrameworkVersion](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-frameworkversion): String
   [Image](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-image): String

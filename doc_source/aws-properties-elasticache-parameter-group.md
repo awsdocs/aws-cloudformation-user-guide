@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CacheParameterGroupFamily](#cfn-elasticache-parametergroup-cacheparametergroupfamily)" : String,
       "[Description](#cfn-elasticache-parametergroup-description)" : String,
-      "[Properties](#cfn-elasticache-parametergroup-properties)" : {Key : Value, ...},
+      "[Properties](#cfn-elasticache-parametergroup-properties)" : {Key: Value, ...},
       "[Tags](#cfn-elasticache-parametergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [CacheParameterGroupFamily](#cfn-elasticache-parametergroup-cacheparametergroupfamily): String
   [Description](#cfn-elasticache-parametergroup-description): String
   [Properties](#cfn-elasticache-parametergroup-properties): 
-    Key : Value
+    Key: Value
   [Tags](#cfn-elasticache-parametergroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -49,7 +49,7 @@ The description for this cache parameter group\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Properties`  <a name="cfn-elasticache-parametergroup-properties"></a>
-A comma\-delimited list of parameter name/value pairs\. For more information, see [ModifyCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the *Amazon ElastiCache API Reference Guide*\.   
+A comma\-delimited list of parameter name/value pairs\.  
 For example:   
 
 ```

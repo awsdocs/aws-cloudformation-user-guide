@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DeploymentId](#cfn-apigateway-stage-canarysetting-deploymentid)" : String,
   "[PercentTraffic](#cfn-apigateway-stage-canarysetting-percenttraffic)" : Double,
-  "[StageVariableOverrides](#cfn-apigateway-stage-canarysetting-stagevariableoverrides)" : {Key : Value, ...},
+  "[StageVariableOverrides](#cfn-apigateway-stage-canarysetting-stagevariableoverrides)" : {Key: Value, ...},
   "[UseStageCache](#cfn-apigateway-stage-canarysetting-usestagecache)" : Boolean
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DeploymentId](#cfn-apigateway-stage-canarysetting-deploymentid): String
   [PercentTraffic](#cfn-apigateway-stage-canarysetting-percenttraffic): Double
   [StageVariableOverrides](#cfn-apigateway-stage-canarysetting-stagevariableoverrides): 
-    Key : Value
+    Key: Value
   [UseStageCache](#cfn-apigateway-stage-canarysetting-usestagecache): Boolean
 ```
 

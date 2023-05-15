@@ -62,7 +62,7 @@ Properties of the virtual private cloud \(VPC\) connection\.
 
 ### Ref<a name="aws-resource-iot-topicruledestination-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the topic rule destination\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the topic rule destination\. For example:
 
  `{ "Ref": "TopicRuleDestination" }` 
 
@@ -70,7 +70,7 @@ A value similar to the following is returned:
 
  `a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-topicruledestination-return-values-fn--getatt"></a>
 

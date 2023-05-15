@@ -99,9 +99,9 @@ Constraint: If both solution stack name and source configuration are specified, 
 
 ### Ref<a name="aws-resource-elasticbeanstalk-configurationtemplate-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When the logical ID of this resource is provided to the `Ref`intrinsic function, `Ref`returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-elasticbeanstalk-configurationtemplate-return-values-fn--getatt"></a>
 

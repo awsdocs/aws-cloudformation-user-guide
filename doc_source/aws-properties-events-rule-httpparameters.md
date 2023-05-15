@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[HeaderParameters](#cfn-events-rule-httpparameters-headerparameters)" : {Key : Value, ...},
+  "[HeaderParameters](#cfn-events-rule-httpparameters-headerparameters)" : {Key: Value, ...},
   "[PathParameterValues](#cfn-events-rule-httpparameters-pathparametervalues)" : [ String, ... ],
-  "[QueryStringParameters](#cfn-events-rule-httpparameters-querystringparameters)" : {Key : Value, ...}
+  "[QueryStringParameters](#cfn-events-rule-httpparameters-querystringparameters)" : {Key: Value, ...}
 }
 ```
 
@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [HeaderParameters](#cfn-events-rule-httpparameters-headerparameters): 
-    Key : Value
+    Key: Value
   [PathParameterValues](#cfn-events-rule-httpparameters-pathparametervalues): 
     - String
   [QueryStringParameters](#cfn-events-rule-httpparameters-querystringparameters): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-events-rule-httpparameters-properties"></a>

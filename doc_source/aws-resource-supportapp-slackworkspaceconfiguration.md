@@ -51,11 +51,11 @@ An identifier used to update an existing Slack workspace configuration in AWS Cl
 
 ### Ref<a name="aws-resource-supportapp-slackworkspaceconfiguration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Slack workspace, such as `T012ABCDEFG`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the Slack workspace, such as `T012ABCDEFG`\.
 
 For the AWS Support App Slack workspace configuration, `Ref` returns the value of the Slack workspace ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-supportapp-slackworkspaceconfiguration--examples"></a>
 

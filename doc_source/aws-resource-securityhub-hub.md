@@ -39,9 +39,9 @@ The tags to add to the hub resource\.
 
 ### Ref<a name="aws-resource-securityhub-hub-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `HubArn` for the hub resource created, such as `arn:aws:securityhub:us-east-1:12345678910:hub/default`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `HubArn` for the hub resource created, such as `arn:aws:securityhub:us-east-1:12345678910:hub/default`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-securityhub-hub--examples"></a>
 

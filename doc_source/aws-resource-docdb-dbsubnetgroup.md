@@ -65,9 +65,9 @@ The tags to be assigned to the subnet group\.
 
 ### Ref<a name="aws-resource-docdb-dbsubnetgroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DBSubnetGroup's name, such as `default`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the DBSubnetGroup's name, such as `default`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-docdb-dbsubnetgroup--examples"></a>
 

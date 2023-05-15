@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RoleArn](#cfn-pipes-pipe-rolearn)" : String,
       "[Source](#cfn-pipes-pipe-source)" : String,
       "[SourceParameters](#cfn-pipes-pipe-sourceparameters)" : PipeSourceParameters,
-      "[Tags](#cfn-pipes-pipe-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-pipes-pipe-tags)" : {Key: Value, ...},
       "[Target](#cfn-pipes-pipe-target)" : String,
       "[TargetParameters](#cfn-pipes-pipe-targetparameters)" : PipeTargetParameters
     }
@@ -43,7 +43,7 @@ Properties:
   [SourceParameters](#cfn-pipes-pipe-sourceparameters): 
     PipeSourceParameters
   [Tags](#cfn-pipes-pipe-tags): 
-    Key : Value
+    Key: Value
   [Target](#cfn-pipes-pipe-target): String
   [TargetParameters](#cfn-pipes-pipe-targetparameters): 
     PipeTargetParameters
@@ -122,13 +122,13 @@ For more information about pipe target parameters, including how to use dynamic 
 
 ### Ref<a name="aws-resource-pipes-pipe-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the pipe that was created by the request\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the pipe that was created by the request\.
 
 ### Fn::GetAtt<a name="aws-resource-pipes-pipe-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-pipes-pipe-return-values-fn--getatt-fn--getatt"></a>
 

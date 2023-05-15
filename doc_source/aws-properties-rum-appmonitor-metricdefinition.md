@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DimensionKeys](#cfn-rum-appmonitor-metricdefinition-dimensionkeys)" : {Key : Value, ...},
+  "[DimensionKeys](#cfn-rum-appmonitor-metricdefinition-dimensionkeys)" : {Key: Value, ...},
   "[EventPattern](#cfn-rum-appmonitor-metricdefinition-eventpattern)" : String,
   "[Name](#cfn-rum-appmonitor-metricdefinition-name)" : String,
   "[Namespace](#cfn-rum-appmonitor-metricdefinition-namespace)" : String,
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DimensionKeys](#cfn-rum-appmonitor-metricdefinition-dimensionkeys): 
-    Key : Value
+    Key: Value
   [EventPattern](#cfn-rum-appmonitor-metricdefinition-eventpattern): String
   [Name](#cfn-rum-appmonitor-metricdefinition-name): String
   [Namespace](#cfn-rum-appmonitor-metricdefinition-namespace): String

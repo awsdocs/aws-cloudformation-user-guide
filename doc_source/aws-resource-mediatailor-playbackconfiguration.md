@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AvailSuppression](#cfn-mediatailor-playbackconfiguration-availsuppression)" : AvailSuppression,
       "[Bumper](#cfn-mediatailor-playbackconfiguration-bumper)" : Bumper,
       "[CdnConfiguration](#cfn-mediatailor-playbackconfiguration-cdnconfiguration)" : CdnConfiguration,
-      "[ConfigurationAliases](#cfn-mediatailor-playbackconfiguration-configurationaliases)" : {Key : Value, ...},
+      "[ConfigurationAliases](#cfn-mediatailor-playbackconfiguration-configurationaliases)" : {Key: Value, ...},
       "[DashConfiguration](#cfn-mediatailor-playbackconfiguration-dashconfiguration)" : DashConfiguration,
       "[HlsConfiguration](#cfn-mediatailor-playbackconfiguration-hlsconfiguration)" : HlsConfiguration,
       "[LivePreRollConfiguration](#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration)" : LivePreRollConfiguration,
@@ -44,7 +44,7 @@ Properties:
   [CdnConfiguration](#cfn-mediatailor-playbackconfiguration-cdnconfiguration): 
     CdnConfiguration
   [ConfigurationAliases](#cfn-mediatailor-playbackconfiguration-configurationaliases): 
-    Key : Value
+    Key: Value
   [DashConfiguration](#cfn-mediatailor-playbackconfiguration-dashconfiguration): 
     DashConfiguration
   [HlsConfiguration](#cfn-mediatailor-playbackconfiguration-hlsconfiguration): 

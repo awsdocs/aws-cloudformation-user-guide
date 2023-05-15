@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::KafkaConnect::Connector",
   "Properties" : {
       "[Capacity](#cfn-kafkaconnect-connector-capacity)" : Capacity,
-      "[ConnectorConfiguration](#cfn-kafkaconnect-connector-connectorconfiguration)" : {Key : Value, ...},
+      "[ConnectorConfiguration](#cfn-kafkaconnect-connector-connectorconfiguration)" : {Key: Value, ...},
       "[ConnectorDescription](#cfn-kafkaconnect-connector-connectordescription)" : String,
       "[ConnectorName](#cfn-kafkaconnect-connector-connectorname)" : String,
       "[KafkaCluster](#cfn-kafkaconnect-connector-kafkacluster)" : KafkaCluster,
@@ -36,7 +36,7 @@ Properties:
   [Capacity](#cfn-kafkaconnect-connector-capacity): 
     Capacity
   [ConnectorConfiguration](#cfn-kafkaconnect-connector-connectorconfiguration): 
-    Key : Value
+    Key: Value
   [ConnectorDescription](#cfn-kafkaconnect-connector-connectordescription): String
   [ConnectorName](#cfn-kafkaconnect-connector-connectorname): String
   [KafkaCluster](#cfn-kafkaconnect-connector-kafkacluster): 

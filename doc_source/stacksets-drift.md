@@ -81,8 +81,6 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
   + Use `[describe\-stack\-set](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-set.html)` to return detailed information about the stack set, including detailed information about the last *completed* drift operation performed on the stack set\. \(Information about drift operations that are in progress isn't included\.\)
   + Use `[list\-stack\-instances](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stack-instances.html)` to return a list of stack instances belonging to the stack set, including the drift status and last drift time checked of each instance\.
   + Use `[describe\-stack\-instance](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-instance.html)` to return detailed information about a specific stack instance, including its drift status and last drift time checked\.
-  + Use `[list\-stack\-instance\-resource\-drifts](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stack-instance-resource-drifts.html)` to return detailed information about the drift status of each resource in a stack instance\.
-  + Use `[describe\-stack\-instance\-resource\-drifts](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-instance-resource-drifts.html)` to return detailed information about the drift status of each resource in a stack instance\.
 
 1. Use `detect-stack-set-drift` to detect drift on an entire stack set and its associated stack instances\.
 

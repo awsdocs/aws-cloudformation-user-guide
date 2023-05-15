@@ -108,9 +108,9 @@ If not specified, this property defaults to email validation\.
 
 ### Ref<a name="aws-resource-certificatemanager-certificate-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the certificate's Amazon Resource Name \(ARN\)\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the certificate's Amazon Resource Name \(ARN\)\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-certificatemanager-certificate--examples"></a>
 

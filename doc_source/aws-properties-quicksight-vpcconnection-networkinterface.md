@@ -1,6 +1,6 @@
 # AWS::QuickSight::VPCConnection NetworkInterface<a name="aws-properties-quicksight-vpcconnection-networkinterface"></a>
 
-<a name="aws-properties-quicksight-vpcconnection-networkinterface-description"></a>The `NetworkInterface` property type specifies Property description not available\. for an [AWS::QuickSight::VPCConnection](aws-resource-quicksight-vpcconnection.md)\.
+The structure that contains information about a network interface\.
 
 ## Syntax<a name="aws-properties-quicksight-vpcconnection-networkinterface-syntax"></a>
 
@@ -31,31 +31,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-vpcconnection-networkinterface-properties"></a>
 
 `AvailabilityZone`  <a name="cfn-quicksight-vpcconnection-networkinterface-availabilityzone"></a>
-Property description not available\.  
+The availability zone that the network interface resides in\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ErrorMessage`  <a name="cfn-quicksight-vpcconnection-networkinterface-errormessage"></a>
-Property description not available\.  
+An error message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInterfaceId`  <a name="cfn-quicksight-vpcconnection-networkinterface-networkinterfaceid"></a>
-Property description not available\.  
+The network interface ID\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `255`  
+*Pattern*: `^eni-[0-9a-z]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-quicksight-vpcconnection-networkinterface-status"></a>
-Property description not available\.  
+The status of the network interface\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ATTACHMENT_FAILED_ROLLBACK_FAILED | AVAILABLE | CREATING | CREATION_FAILED | DELETED | DELETING | DELETION_FAILED | DELETION_SCHEDULED | UPDATE_FAILED | UPDATING`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-quicksight-vpcconnection-networkinterface-subnetid"></a>
-Property description not available\.  
+The subnet ID associated with the network interface\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `^subnet-[0-9a-z]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

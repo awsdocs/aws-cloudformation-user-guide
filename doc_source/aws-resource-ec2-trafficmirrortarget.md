@@ -76,9 +76,9 @@ The tags to assign to the Traffic Mirror target\.
 
 ### Ref<a name="aws-resource-ec2-trafficmirrortarget-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Traffic Mirror target\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the Traffic Mirror target\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrortarget--examples"></a>
 

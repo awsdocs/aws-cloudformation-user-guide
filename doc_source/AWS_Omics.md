@@ -1,4 +1,4 @@
-# Omics resource type reference<a name="AWS_Omics"></a>
+# Amazon Omics resource type reference<a name="AWS_Omics"></a>
 
 **Resource types**
 + [AWS::Omics::AnnotationStore](aws-resource-omics-annotationstore.md)

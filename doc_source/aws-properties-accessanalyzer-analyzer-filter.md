@@ -2,7 +2,7 @@
 
 The criteria that defines the rule\.
 
-To learn about filter keys that you can use to create an archive rule, see [ IAM Access Analyzer filter keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-reference-filter-keys.html) in the *IAM User Guide*\.
+To learn about filter keys that you can use to create an archive rule, see [AWS Identity and Access Management Access Analyzer filter keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-reference-filter-keys.html) in the *AWS Identity and Access Management User Guide*\.
 
 ## Syntax<a name="aws-properties-accessanalyzer-analyzer-filter-syntax"></a>
 

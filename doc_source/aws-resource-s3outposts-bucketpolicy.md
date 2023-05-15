@@ -54,9 +54,9 @@ The name of the Amazon S3 Outposts bucket to which the policy applies\.
 
 ### Ref<a name="aws-resource-s3outposts-bucketpolicy-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the S3 on Outposts bucket Amazon Resource Name \(ARN\)\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the S3 on Outposts bucket Amazon Resource Name \(ARN\)\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-s3outposts-bucketpolicy--examples"></a>
 

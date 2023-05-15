@@ -11,8 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ContentHandling](#cfn-apigateway-method-integrationresponse-contenthandling)" : String,
-  "[ResponseParameters](#cfn-apigateway-method-integration-integrationresponse-responseparameters)" : {Key : Value, ...},
-  "[ResponseTemplates](#cfn-apigateway-method-integration-integrationresponse-responsetemplates)" : {Key : Value, ...},
+  "[ResponseParameters](#cfn-apigateway-method-integration-integrationresponse-responseparameters)" : {Key: Value, ...},
+  "[ResponseTemplates](#cfn-apigateway-method-integration-integrationresponse-responsetemplates)" : {Key: Value, ...},
   "[SelectionPattern](#cfn-apigateway-method-integration-integrationresponse-selectionpattern)" : String,
   "[StatusCode](#cfn-apigateway-method-integration-integrationresponse-statuscode)" : String
 }
@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ContentHandling](#cfn-apigateway-method-integrationresponse-contenthandling): String
   [ResponseParameters](#cfn-apigateway-method-integration-integrationresponse-responseparameters): 
-    Key : Value
+    Key: Value
   [ResponseTemplates](#cfn-apigateway-method-integration-integrationresponse-responsetemplates): 
-    Key : Value
+    Key: Value
   [SelectionPattern](#cfn-apigateway-method-integration-integrationresponse-selectionpattern): String
   [StatusCode](#cfn-apigateway-method-integration-integrationresponse-statuscode): String
 ```

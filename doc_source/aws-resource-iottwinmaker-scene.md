@@ -16,8 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ContentLocation](#cfn-iottwinmaker-scene-contentlocation)" : String,
       "[Description](#cfn-iottwinmaker-scene-description)" : String,
       "[SceneId](#cfn-iottwinmaker-scene-sceneid)" : String,
-      "[SceneMetadata](#cfn-iottwinmaker-scene-scenemetadata)" : {Key : Value, ...},
-      "[Tags](#cfn-iottwinmaker-scene-tags)" : {Key : Value, ...},
+      "[SceneMetadata](#cfn-iottwinmaker-scene-scenemetadata)" : {Key: Value, ...},
+      "[Tags](#cfn-iottwinmaker-scene-tags)" : {Key: Value, ...},
       "[WorkspaceId](#cfn-iottwinmaker-scene-workspaceid)" : String
     }
 }
@@ -34,9 +34,9 @@ Properties:
   [Description](#cfn-iottwinmaker-scene-description): String
   [SceneId](#cfn-iottwinmaker-scene-sceneid): String
   [SceneMetadata](#cfn-iottwinmaker-scene-scenemetadata): 
-    Key : Value
+    Key: Value
   [Tags](#cfn-iottwinmaker-scene-tags): 
-    Key : Value
+    Key: Value
   [WorkspaceId](#cfn-iottwinmaker-scene-workspaceid): String
 ```
 
@@ -88,15 +88,15 @@ The ID of the workspace\.
 
 ### Ref<a name="aws-resource-iottwinmaker-scene-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the workspace Id and the sence Id\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the workspace Id and the sence Id\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iottwinmaker-scene-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iottwinmaker-scene-return-values-fn--getatt-fn--getatt"></a>
 

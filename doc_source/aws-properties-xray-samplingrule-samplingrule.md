@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-xray-samplingrule-samplingrule-attributes)" : {Key : Value, ...},
+  "[Attributes](#cfn-xray-samplingrule-samplingrule-attributes)" : {Key: Value, ...},
   "[FixedRate](#cfn-xray-samplingrule-samplingrule-fixedrate)" : Double,
   "[Host](#cfn-xray-samplingrule-samplingrule-host)" : String,
   "[HTTPMethod](#cfn-xray-samplingrule-samplingrule-httpmethod)" : String,
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-xray-samplingrule-samplingrule-attributes): 
-    Key : Value
+    Key: Value
   [FixedRate](#cfn-xray-samplingrule-samplingrule-fixedrate): Double
   [Host](#cfn-xray-samplingrule-samplingrule-host): String
   [HTTPMethod](#cfn-xray-samplingrule-samplingrule-httpmethod): String
@@ -99,13 +99,14 @@ Matches the ARN of the AWS resource on which the service runs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleARN`  <a name="cfn-xray-samplingrule-samplingrule-rulearn"></a>
-The ARN of the sampling rule\. You must specify either RuleARN or RuleName, but not both\.  
+The ARN of the sampling rule\. Specify a rule by either name or ARN, but not both\.  
+Specifying a sampling rule by name is recommended, as specifying by ARN will be deprecated in future\.
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleName`  <a name="cfn-xray-samplingrule-samplingrule-rulename"></a>
-The name of the sampling rule\. You must specify either RuleARN or RuleName, but not both\.  
+The name of the sampling rule\. Specify a rule by either name or ARN, but not both\.  
 *Required*: Conditional  
 *Type*: String  
 *Minimum*: `1`  
@@ -134,8 +135,8 @@ Matches the path from a request URL\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-xray-samplingrule-samplingrule-version"></a>
-The version of the sampling rule format \(`1`\)\.  
-*Required*: No  
+The version of the sampling rule\. `Version` can only be set when creating a new sampling rule\.  
+*Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `1`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

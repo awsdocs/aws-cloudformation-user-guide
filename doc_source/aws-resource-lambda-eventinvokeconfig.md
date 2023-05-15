@@ -91,7 +91,7 @@ The identifier of a version or alias\.
 
 ### Ref<a name="aws-resource-lambda-eventinvokeconfig-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a unique identifier for this resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a unique identifier for this resource\.
 
 ## Examples<a name="aws-resource-lambda-eventinvokeconfig--examples"></a>
 

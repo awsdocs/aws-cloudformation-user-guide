@@ -16,14 +16,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Cta](#cfn-amplifyuibuilder-form-cta)" : FormCTA,
       "[DataType](#cfn-amplifyuibuilder-form-datatype)" : FormDataTypeConfig,
       "[EnvironmentName](#cfn-amplifyuibuilder-form-environmentname)" : String,
-      "[Fields](#cfn-amplifyuibuilder-form-fields)" : {Key : Value, ...},
+      "[Fields](#cfn-amplifyuibuilder-form-fields)" : {Key: Value, ...},
       "[FormActionType](#cfn-amplifyuibuilder-form-formactiontype)" : String,
       "[LabelDecorator](#cfn-amplifyuibuilder-form-labeldecorator)" : String,
       "[Name](#cfn-amplifyuibuilder-form-name)" : String,
       "[SchemaVersion](#cfn-amplifyuibuilder-form-schemaversion)" : String,
-      "[SectionalElements](#cfn-amplifyuibuilder-form-sectionalelements)" : {Key : Value, ...},
+      "[SectionalElements](#cfn-amplifyuibuilder-form-sectionalelements)" : {Key: Value, ...},
       "[Style](#cfn-amplifyuibuilder-form-style)" : FormStyle,
-      "[Tags](#cfn-amplifyuibuilder-form-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-amplifyuibuilder-form-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -40,17 +40,17 @@ Properties:
     FormDataTypeConfig
   [EnvironmentName](#cfn-amplifyuibuilder-form-environmentname): String
   [Fields](#cfn-amplifyuibuilder-form-fields): 
-    Key : Value
+    Key: Value
   [FormActionType](#cfn-amplifyuibuilder-form-formactiontype): String
   [LabelDecorator](#cfn-amplifyuibuilder-form-labeldecorator): String
   [Name](#cfn-amplifyuibuilder-form-name): String
   [SchemaVersion](#cfn-amplifyuibuilder-form-schemaversion): String
   [SectionalElements](#cfn-amplifyuibuilder-form-sectionalelements): 
-    Key : Value
+    Key: Value
   [Style](#cfn-amplifyuibuilder-form-style): 
     FormStyle
   [Tags](#cfn-amplifyuibuilder-form-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-amplifyuibuilder-form-properties"></a>
@@ -133,9 +133,9 @@ One or more key\-value pairs to use when tagging the form data\.
 
 ### Fn::GetAtt<a name="aws-resource-amplifyuibuilder-form-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-amplifyuibuilder-form-return-values-fn--getatt-fn--getatt"></a>
 

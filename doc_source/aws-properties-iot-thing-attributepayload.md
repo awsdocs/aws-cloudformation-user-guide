@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-iot-thing-attributepayload-attributes)" : {Key : Value, ...}
+  "[Attributes](#cfn-iot-thing-attributepayload-attributes)" : {Key: Value, ...}
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-iot-thing-attributepayload-attributes): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-iot-thing-attributepayload-properties"></a>

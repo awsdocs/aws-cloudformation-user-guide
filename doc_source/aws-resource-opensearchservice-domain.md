@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::OpenSearchService::Domain",
   "Properties" : {
       "[AccessPolicies](#cfn-opensearchservice-domain-accesspolicies)" : Json,
-      "[AdvancedOptions](#cfn-opensearchservice-domain-advancedoptions)" : {Key : Value, ...},
+      "[AdvancedOptions](#cfn-opensearchservice-domain-advancedoptions)" : {Key: Value, ...},
       "[AdvancedSecurityOptions](#cfn-opensearchservice-domain-advancedsecurityoptions)" : AdvancedSecurityOptionsInput,
       "[ClusterConfig](#cfn-opensearchservice-domain-clusterconfig)" : ClusterConfig,
       "[CognitoOptions](#cfn-opensearchservice-domain-cognitooptions)" : CognitoOptions,
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EBSOptions](#cfn-opensearchservice-domain-ebsoptions)" : EBSOptions,
       "[EncryptionAtRestOptions](#cfn-opensearchservice-domain-encryptionatrestoptions)" : EncryptionAtRestOptions,
       "[EngineVersion](#cfn-opensearchservice-domain-engineversion)" : String,
-      "[LogPublishingOptions](#cfn-opensearchservice-domain-logpublishingoptions)" : {Key : Value, ...},
+      "[LogPublishingOptions](#cfn-opensearchservice-domain-logpublishingoptions)" : {Key: Value, ...},
       "[NodeToNodeEncryptionOptions](#cfn-opensearchservice-domain-nodetonodeencryptionoptions)" : NodeToNodeEncryptionOptions,
       "[OffPeakWindowOptions](#cfn-opensearchservice-domain-offpeakwindowoptions)" : OffPeakWindowOptions,
       "[SnapshotOptions](#cfn-opensearchservice-domain-snapshotoptions)" : SnapshotOptions,
@@ -40,7 +40,7 @@ Type: AWS::OpenSearchService::Domain
 Properties: 
   [AccessPolicies](#cfn-opensearchservice-domain-accesspolicies): Json
   [AdvancedOptions](#cfn-opensearchservice-domain-advancedoptions): 
-    Key : Value
+    Key: Value
   [AdvancedSecurityOptions](#cfn-opensearchservice-domain-advancedsecurityoptions): 
     AdvancedSecurityOptionsInput
   [ClusterConfig](#cfn-opensearchservice-domain-clusterconfig): 
@@ -56,7 +56,7 @@ Properties:
     EncryptionAtRestOptions
   [EngineVersion](#cfn-opensearchservice-domain-engineversion): String
   [LogPublishingOptions](#cfn-opensearchservice-domain-logpublishingoptions): 
-    Key : Value
+    Key: Value
   [NodeToNodeEncryptionOptions](#cfn-opensearchservice-domain-nodetonodeencryptionoptions): 
     NodeToNodeEncryptionOptions
   [OffPeakWindowOptions](#cfn-opensearchservice-domain-offpeakwindowoptions): 

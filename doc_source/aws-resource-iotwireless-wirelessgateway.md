@@ -89,7 +89,7 @@ The name of the thing associated with the wireless gateway\. The value is empty 
 
 ### Ref<a name="aws-resource-iotwireless-wirelessgateway-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the wireless gateway ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the wireless gateway ID\.
 
 ### Fn::GetAtt<a name="aws-resource-iotwireless-wirelessgateway-return-values-fn--getatt"></a>
 

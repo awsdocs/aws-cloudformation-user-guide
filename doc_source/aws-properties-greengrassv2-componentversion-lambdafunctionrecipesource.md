@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ComponentDependencies](#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentdependencies)" : {Key : Value, ...},
+  "[ComponentDependencies](#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentdependencies)" : {Key: Value, ...},
   "[ComponentLambdaParameters](#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentlambdaparameters)" : LambdaExecutionParameters,
   "[ComponentName](#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentname)" : String,
   "[ComponentPlatforms](#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentplatforms)" : [ ComponentPlatform, ... ],
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ComponentDependencies](#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentdependencies): 
-    Key : Value
+    Key: Value
   [ComponentLambdaParameters](#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentlambdaparameters): 
     LambdaExecutionParameters
   [ComponentName](#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentname): String

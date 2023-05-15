@@ -53,9 +53,9 @@ The name of an existing stage to associate with the deployment\.
 
 ### Ref<a name="aws-resource-apigatewayv2-deployment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the deployment ID, such as `123abc`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the deployment ID, such as `123abc`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-apigatewayv2-deployment-return-values-fn--getatt"></a>
 

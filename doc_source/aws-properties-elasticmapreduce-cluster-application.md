@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AdditionalInfo](#cfn-elasticmapreduce-cluster-application-additionalinfo)" : {Key : Value, ...},
+  "[AdditionalInfo](#cfn-elasticmapreduce-cluster-application-additionalinfo)" : {Key: Value, ...},
   "[Args](#cfn-elasticmapreduce-cluster-application-args)" : [ String, ... ],
   "[Name](#cfn-elasticmapreduce-cluster-application-name)" : String,
   "[Version](#cfn-elasticmapreduce-cluster-application-version)" : String
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AdditionalInfo](#cfn-elasticmapreduce-cluster-application-additionalinfo): 
-    Key : Value
+    Key: Value
   [Args](#cfn-elasticmapreduce-cluster-application-args): 
     - String
   [Name](#cfn-elasticmapreduce-cluster-application-name): String

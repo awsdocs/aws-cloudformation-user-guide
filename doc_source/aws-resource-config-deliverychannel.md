@@ -97,9 +97,9 @@ If you choose a topic from another account, the topic must have policies that gr
 
 ### Ref<a name="aws-resource-config-deliverychannel-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the delivery channel name, such as default\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the delivery channel name, such as default\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-deliverychannel--examples"></a>
 

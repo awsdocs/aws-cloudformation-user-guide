@@ -1,6 +1,6 @@
 # AWS::XRay::Group<a name="aws-resource-xray-group"></a>
 
-Use the `AWS::XRay::Group` resource to specify a group with a name and a filter expression\. 
+Use the `AWS::XRay::Group` resource to specify a group with a name and a filter expression\. Groups enable the collection of traces that match the filter expression, can be used to filter service graphs and traces, and to supply Amazon CloudWatch metrics\.
 
 ## Syntax<a name="aws-resource-xray-group-syntax"></a>
 
@@ -43,7 +43,7 @@ The filter expression defining the parameters to include traces\.
 
 `GroupName`  <a name="cfn-xray-group-groupname"></a>
 The unique case\-sensitive name of the group\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -57,14 +57,23 @@ The structure containing configurations related to insights\.
 
 `Tags`  <a name="cfn-xray-group-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-xray-group-return-values"></a>
 
+### Ref<a name="aws-resource-xray-group-return-values-ref"></a>
+
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\) of the group\.
+
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-xray-group-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-xray-group-return-values-fn--getatt-fn--getatt"></a>
 
@@ -77,16 +86,15 @@ The group ARN that was created or updated\.
 
 ### Create group<a name="aws-resource-xray-group--examples--Create_group"></a>
 
-This example creates a new group called MyGroup
+This example creates a new group called MyGroup\.
 
 #### JSON<a name="aws-resource-xray-group--examples--Create_group--json"></a>
 
 ```
 {
    "AWSTemplateFormatVersion": "2010-09-09",
-   "Description": "XRay stack",
    "Resources": {
-      "TestGrpResource": {
+      "MyGroupResource": {
          "Type": "AWS::XRay::Group",
          "Properties": {
             "GroupName": "MyGroup",
@@ -106,7 +114,7 @@ This example creates a new group called MyGroup
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
-   Group:
+   MyGroupResource:
       Type: AWS::XRay::Group
       Properties:
          GroupName: MyGroup

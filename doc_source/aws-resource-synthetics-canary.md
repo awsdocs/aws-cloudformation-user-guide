@@ -19,7 +19,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ArtifactConfig](#cfn-synthetics-canary-artifactconfig)" : ArtifactConfig,
       "[ArtifactS3Location](#cfn-synthetics-canary-artifacts3location)" : String,
       "[Code](#cfn-synthetics-canary-code)" : Code,
-      "[DeleteLambdaResourcesOnCanaryDeletion](#cfn-synthetics-canary-deletelambdaresourcesoncanarydeletion)" : Boolean,
       "[ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn)" : String,
       "[FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod)" : Integer,
       "[Name](#cfn-synthetics-canary-name)" : String,
@@ -45,7 +44,6 @@ Properties:
   [ArtifactS3Location](#cfn-synthetics-canary-artifacts3location): String
   [Code](#cfn-synthetics-canary-code): 
     Code
-  [DeleteLambdaResourcesOnCanaryDeletion](#cfn-synthetics-canary-deletelambdaresourcesoncanarydeletion): Boolean
   [ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn): String
   [FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod): Integer
   [Name](#cfn-synthetics-canary-name): String
@@ -84,12 +82,6 @@ The location in Amazon S3 where Synthetics stores artifacts from the runs of thi
 Use this structure to input your script code for the canary\. This structure contains the Lambda handler with the location where the canary should start running the script\. If the script is stored in an S3 bucket, the bucket name, key, and version are also included\. If the script is passed into the canary directly, the script code is contained in the value of `Script`\.   
 *Required*: Yes  
 *Type*: [Code](aws-properties-synthetics-canary-code.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`DeleteLambdaResourcesOnCanaryDeletion`  <a name="cfn-synthetics-canary-deletelambdaresourcesoncanarydeletion"></a>
-Specifies whether AWS CloudFormation is to also delete the Lambda functions and layers used by this canary, when the canary is deleted\. The default is false\.  
-*Required*: No  
-*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRoleArn`  <a name="cfn-synthetics-canary-executionrolearn"></a>
@@ -149,7 +141,7 @@ A structure that contains information about how often the canary is to run, and 
 `StartCanaryAfterCreation`  <a name="cfn-synthetics-canary-startcanaryaftercreation"></a>
 Specify TRUE to have the canary start making runs immediately after it is created\.  
 A canary that you create using CloudFormation can't be used to monitor the CloudFormation stack that creates the canary or to roll back that stack if there is a failure\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -183,17 +175,20 @@ If this canary is to test an endpoint in a VPC, this structure contains informat
 
 ### Ref<a name="aws-resource-synthetics-canary-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the canary, such as `MyCanary`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the canary, such as `MyCanary`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-synthetics-canary-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-synthetics-canary-return-values-fn--getatt-fn--getatt"></a>
+
+`Code.SourceLocationArn`  <a name="Code.SourceLocationArn-fn::getatt"></a>
+Property description not available\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the canary\.

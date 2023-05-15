@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SecurityGroupIds](#cfn-m2-environment-securitygroupids)" : [ String, ... ],
       "[StorageConfigurations](#cfn-m2-environment-storageconfigurations)" : [ StorageConfiguration, ... ],
       "[SubnetIds](#cfn-m2-environment-subnetids)" : [ String, ... ],
-      "[Tags](#cfn-m2-environment-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-m2-environment-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -51,7 +51,7 @@ Properties:
   [SubnetIds](#cfn-m2-environment-subnetids): 
     - String
   [Tags](#cfn-m2-environment-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-m2-environment-properties"></a>
@@ -146,7 +146,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-m2-environment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the environment Amazon Resource Name \(ARN\), such as the following:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the environment Amazon Resource Name \(ARN\), such as the following:
 
  `{ "Ref": “SampleEnv” }` 
 
@@ -154,13 +154,13 @@ Returns a value similar to the following:
 
  `arn:aws:m2:us-west-2:1234567890:env/y3ca6bhaife2bcvxar3lpivfou` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-m2-environment-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-m2-environment-return-values-fn--getatt-fn--getatt"></a>
 

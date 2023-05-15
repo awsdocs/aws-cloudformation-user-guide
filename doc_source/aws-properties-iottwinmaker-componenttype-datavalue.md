@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[IntegerValue](#cfn-iottwinmaker-componenttype-datavalue-integervalue)" : Integer,
   "[ListValue](#cfn-iottwinmaker-componenttype-datavalue-listvalue)" : [ DataValue, ... ],
   "[LongValue](#cfn-iottwinmaker-componenttype-datavalue-longvalue)" : Double,
-  "[MapValue](#cfn-iottwinmaker-componenttype-datavalue-mapvalue)" : {Key : Value, ...},
+  "[MapValue](#cfn-iottwinmaker-componenttype-datavalue-mapvalue)" : {Key: Value, ...},
   "[RelationshipValue](#cfn-iottwinmaker-componenttype-datavalue-relationshipvalue)" : RelationshipValue,
   "[StringValue](#cfn-iottwinmaker-componenttype-datavalue-stringvalue)" : String
 }
@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - DataValue
   [LongValue](#cfn-iottwinmaker-componenttype-datavalue-longvalue): Double
   [MapValue](#cfn-iottwinmaker-componenttype-datavalue-mapvalue): 
-    Key : Value
+    Key: Value
   [RelationshipValue](#cfn-iottwinmaker-componenttype-datavalue-relationshipvalue): 
     RelationshipValue
   [StringValue](#cfn-iottwinmaker-componenttype-datavalue-stringvalue): 

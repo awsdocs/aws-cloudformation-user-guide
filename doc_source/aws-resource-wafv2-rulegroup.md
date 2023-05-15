@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AvailableLabels](#cfn-wafv2-rulegroup-availablelabels)" : [ LabelSummary, ... ],
       "[Capacity](#cfn-wafv2-rulegroup-capacity)" : Integer,
       "[ConsumedLabels](#cfn-wafv2-rulegroup-consumedlabels)" : [ LabelSummary, ... ],
-      "[CustomResponseBodies](#cfn-wafv2-rulegroup-customresponsebodies)" : {Key : Value, ...},
+      "[CustomResponseBodies](#cfn-wafv2-rulegroup-customresponsebodies)" : {Key: Value, ...},
       "[Description](#cfn-wafv2-rulegroup-description)" : String,
       "[Name](#cfn-wafv2-rulegroup-name)" : String,
       "[Rules](#cfn-wafv2-rulegroup-rules)" : [ Rule, ... ],
@@ -42,7 +42,7 @@ Properties:
   [ConsumedLabels](#cfn-wafv2-rulegroup-consumedlabels): 
     - LabelSummary
   [CustomResponseBodies](#cfn-wafv2-rulegroup-customresponsebodies): 
-    Key : Value
+    Key: Value
   [Description](#cfn-wafv2-rulegroup-description): String
   [Name](#cfn-wafv2-rulegroup-name): String
   [Rules](#cfn-wafv2-rulegroup-rules): 

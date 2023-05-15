@@ -61,7 +61,7 @@ A list of regular expression patterns to exclude certain documents in your Sales
 The pattern is applied to the name of the attached file\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeAttachmentFilePatterns`  <a name="cfn-kendra-datasource-salesforceconfiguration-includeattachmentfilepatterns"></a>
@@ -69,7 +69,7 @@ A list of regular expression patterns to include certain documents in your Sales
 The pattern is applied to the name of the attached file\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KnowledgeArticleConfiguration`  <a name="cfn-kendra-datasource-salesforceconfiguration-knowledgearticleconfiguration"></a>

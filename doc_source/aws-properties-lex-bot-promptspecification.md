@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MaxRetries](#cfn-lex-bot-promptspecification-maxretries)" : Integer,
   "[MessageGroupsList](#cfn-lex-bot-promptspecification-messagegroupslist)" : [ MessageGroup, ... ],
   "[MessageSelectionStrategy](#cfn-lex-bot-promptspecification-messageselectionstrategy)" : String,
-  "[PromptAttemptsSpecification](#cfn-lex-bot-promptspecification-promptattemptsspecification)" : {Key : Value, ...}
+  "[PromptAttemptsSpecification](#cfn-lex-bot-promptspecification-promptattemptsspecification)" : {Key: Value, ...}
 }
 ```
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - MessageGroup
   [MessageSelectionStrategy](#cfn-lex-bot-promptspecification-messageselectionstrategy): String
   [PromptAttemptsSpecification](#cfn-lex-bot-promptspecification-promptattemptsspecification): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-lex-bot-promptspecification-properties"></a>

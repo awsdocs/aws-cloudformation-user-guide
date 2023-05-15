@@ -40,5 +40,5 @@ Valid values are defined as follows:
 A list of the target visual IDs that are located in the same sheet of the analysis\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `30`  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

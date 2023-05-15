@@ -1,6 +1,6 @@
 # AWS::MediaConnect::Flow SourcePriority<a name="aws-properties-mediaconnect-flow-sourcepriority"></a>
 
-<a name="aws-properties-mediaconnect-flow-sourcepriority-description"></a>The `SourcePriority` property type specifies Property description not available\. for an [AWS::MediaConnect::Flow](aws-resource-mediaconnect-flow.md)\.
+The priority you want to assign to a source\. You can have a primary stream and a backup stream or two equally prioritized streams\. This setting only applies when Failover Mode is set to FAILOVER\.
 
 ## Syntax<a name="aws-properties-mediaconnect-flow-sourcepriority-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediaconnect-flow-sourcepriority-properties"></a>
 
 `PrimarySource`  <a name="cfn-mediaconnect-flow-sourcepriority-primarysource"></a>
-Property description not available\.  
+The name of the source you choose as the primary source for this flow\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

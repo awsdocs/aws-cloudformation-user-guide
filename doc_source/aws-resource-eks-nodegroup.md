@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DiskSize](#cfn-eks-nodegroup-disksize)" : Integer,
       "[ForceUpdateEnabled](#cfn-eks-nodegroup-forceupdateenabled)" : Boolean,
       "[InstanceTypes](#cfn-eks-nodegroup-instancetypes)" : [ String, ... ],
-      "[Labels](#cfn-eks-nodegroup-labels)" : {Key : Value, ...},
+      "[Labels](#cfn-eks-nodegroup-labels)" : {Key: Value, ...},
       "[LaunchTemplate](#cfn-eks-nodegroup-launchtemplate)" : LaunchTemplateSpecification,
       "[NodegroupName](#cfn-eks-nodegroup-nodegroupname)" : String,
       "[NodeRole](#cfn-eks-nodegroup-noderole)" : String,
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RemoteAccess](#cfn-eks-nodegroup-remoteaccess)" : RemoteAccess,
       "[ScalingConfig](#cfn-eks-nodegroup-scalingconfig)" : ScalingConfig,
       "[Subnets](#cfn-eks-nodegroup-subnets)" : [ String, ... ],
-      "[Tags](#cfn-eks-nodegroup-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-eks-nodegroup-tags)" : {Key: Value, ...},
       "[Taints](#cfn-eks-nodegroup-taints)" : [ Taint, ... ],
       "[UpdateConfig](#cfn-eks-nodegroup-updateconfig)" : UpdateConfig,
       "[Version](#cfn-eks-nodegroup-version)" : String
@@ -52,7 +52,7 @@ Properties:
   [InstanceTypes](#cfn-eks-nodegroup-instancetypes): 
     - String
   [Labels](#cfn-eks-nodegroup-labels): 
-    Key : Value
+    Key: Value
   [LaunchTemplate](#cfn-eks-nodegroup-launchtemplate): 
     LaunchTemplateSpecification
   [NodegroupName](#cfn-eks-nodegroup-nodegroupname): String
@@ -65,7 +65,7 @@ Properties:
   [Subnets](#cfn-eks-nodegroup-subnets): 
     - String
   [Tags](#cfn-eks-nodegroup-tags): 
-    Key : Value
+    Key: Value
   [Taints](#cfn-eks-nodegroup-taints): 
     - Taint
   [UpdateConfig](#cfn-eks-nodegroup-updateconfig): 
@@ -192,19 +192,19 @@ You can't update other properties at the same time as updating `Version`\.
 
 ### Ref<a name="aws-resource-eks-nodegroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "myNodegroup" }` 
 
 For the Amazon EKS node group `myNodegroup`, Ref returns the physical resource ID of the node group\. For example, `cluster-name/nodegroup_name`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-eks-nodegroup-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-eks-nodegroup-return-values-fn--getatt-fn--getatt"></a>
 

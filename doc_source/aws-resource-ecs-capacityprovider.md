@@ -66,13 +66,13 @@ The following basic restrictions apply to tags:
 
 ### Ref<a name="aws-resource-ecs-capacityprovider-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\.
 
 In the following example, the `Ref` function returns the name of the capacity provider, such as `MyStack-MyCapacityProvider-JrwYBzxovGfr`\.
 
  `{ "Ref": "MyCapacityProvider" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ecs-capacityprovider--examples"></a>
 

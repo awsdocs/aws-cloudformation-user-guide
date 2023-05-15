@@ -73,7 +73,7 @@ The length of time \(in seconds\) to wait for players to accept a proposed match
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdditionalPlayerCount`  <a name="cfn-gamelift-matchmakingconfiguration-additionalplayercount"></a>
-The number of player slots in a match to keep open for future players\. For example, if the configuration's rule set specifies a match for a single 12\-person team, and the additional player count is set to 2, only 10 players are selected for the match\. This parameter is not used if `FlexMatchMode` is set to `STANDALONE`\.  
+The number of player slots in a match to keep open for future players\. For example, if the configuration's rule set specifies a match for a single 10\-person team, and the additional player count is set to 2, 10 players will be selected for the match and 2 more player slots will be open for future players\. This parameter is not used if `FlexMatchMode` is set to `STANDALONE`\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -177,15 +177,15 @@ A list of labels to assign to the new matchmaking configuration resource\. Tags 
 
 ### Ref<a name="aws-resource-gamelift-matchmakingconfiguration-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `MatchmakingConfiguration` name, which is unique\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `MatchmakingConfiguration` name, which is unique\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-gamelift-matchmakingconfiguration-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-gamelift-matchmakingconfiguration-return-values-fn--getatt-fn--getatt"></a>
 

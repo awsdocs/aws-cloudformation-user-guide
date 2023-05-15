@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ScriptParameters](#cfn-nimblestudio-studiocomponent-scriptparameters)" : [ ScriptParameterKeyValue, ... ],
       "[StudioId](#cfn-nimblestudio-studiocomponent-studioid)" : String,
       "[Subtype](#cfn-nimblestudio-studiocomponent-subtype)" : String,
-      "[Tags](#cfn-nimblestudio-studiocomponent-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-nimblestudio-studiocomponent-tags)" : {Key: Value, ...},
       "[Type](#cfn-nimblestudio-studiocomponent-type)" : String
     }
 }
@@ -48,7 +48,7 @@ Properties:
   [StudioId](#cfn-nimblestudio-studiocomponent-studioid): String
   [Subtype](#cfn-nimblestudio-studiocomponent-subtype): String
   [Tags](#cfn-nimblestudio-studiocomponent-tags): 
-    Key : Value
+    Key: Value
   [Type](#cfn-nimblestudio-studiocomponent-type): String
 ```
 

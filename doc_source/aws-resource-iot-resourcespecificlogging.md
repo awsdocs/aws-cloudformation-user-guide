@@ -53,7 +53,7 @@ The target type\. Valid Values: `DEFAULT | THING_GROUP`
 
 ### Ref<a name="aws-resource-iot-resourcespecificlogging-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource\-specific log ID\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource\-specific log ID\. For example:
 
  `{"Ref": "MyResourceLog-12345" }` 
 

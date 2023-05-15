@@ -83,9 +83,9 @@ The VPC subnet IDs for the DB proxy endpoint that you create\. You can specify a
 
 ### Ref<a name="aws-resource-rds-dbproxyendpoint-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB proxy endpoint\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the DB proxy endpoint\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-rds-dbproxyendpoint-return-values-fn--getatt"></a>
 

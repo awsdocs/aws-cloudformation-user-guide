@@ -69,9 +69,9 @@ Customized text to include in the invitation email message\.
 
 ### Ref<a name="aws-resource-detective-memberinvitation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the behavior graph and the member account identifier, separated by a pipe character \('\|'\)\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the behavior graph and the member account identifier, separated by a pipe character \('\|'\)\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-detective-memberinvitation--examples"></a>
 

@@ -44,9 +44,6 @@ The settings used to enable or disable CloudWatch Contributor Insights for the s
 The name of the global secondary index\. The name must be unique among all other indexes on this table\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `3`  
-*Maximum*: `255`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: Updates are not supported\.
 
 `KeySchema`  <a name="cfn-dynamodb-table-globalsecondaryindex-keyschema"></a>
@@ -57,7 +54,6 @@ The partition key of an item is also known as its *hash attribute*\. The term "h
 The sort key of an item is also known as its *range attribute*\. The term "range attribute" derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value\.
 *Required*: Yes  
 *Type*: [List](aws-properties-dynamodb-table-keyschema.md) of [KeySchema](aws-properties-dynamodb-table-keyschema.md)  
-*Maximum*: `2`  
 *Update requires*: Updates are not supported\.
 
 `Projection`  <a name="cfn-dynamodb-table-globalsecondaryindex-projection"></a>

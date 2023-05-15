@@ -55,45 +55,13 @@ A predefined metric\. You can specify either a predefined metric or a customized
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScaleInCooldown`  <a name="cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-scaleincooldown"></a>
-The amount of time, in seconds, after a scale\-in activity completes before another scale\-in activity can start\.  
-With the *scale\-in cooldown period*, the intention is to scale in conservatively to protect your application’s availability, so scale\-in activities are blocked until the cooldown period has expired\. However, if another alarm triggers a scale\-out activity during the scale\-in cooldown period, Application Auto Scaling scales out the target immediately\. In this case, the scale\-in cooldown period stops and doesn't complete\.  
-Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default value of 300 for the following scalable targets:  
-+ AppStream 2\.0 fleets
-+ Aurora DB clusters
-+ ECS services
-+ EMR clusters
-+  Neptune clusters
-+ SageMaker endpoint variants
-+ Spot Fleets
-+ Custom resources
-For all other scalable targets, the default value is 0:  
-+ Amazon Comprehend document classification and entity recognizer endpoints
-+ DynamoDB tables and global secondary indexes
-+ Amazon Keyspaces tables
-+ Lambda provisioned concurrency
-+ Amazon MSK broker storage
+The amount of time, in seconds, after a scale\-in activity completes before another scale\-in activity can start\. For more information and for default values, see [Define cooldown periods](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html#target-tracking-cooldown) in the *Application Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScaleOutCooldown`  <a name="cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-scaleoutcooldown"></a>
-The amount of time, in seconds, to wait for a previous scale\-out activity to take effect\.  
-With the *scale\-out cooldown period*, the intention is to continuously \(but not excessively\) scale out\. After Application Auto Scaling successfully scales out using a target tracking scaling policy, it starts to calculate the cooldown time\. The scaling policy won't increase the desired capacity again unless either a larger scale out is triggered or the cooldown period ends\. While the cooldown period is in effect, the capacity added by the initiating scale\-out activity is calculated as part of the desired capacity for the next scale\-out activity\.  
-Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default value of 300 for the following scalable targets:  
-+ AppStream 2\.0 fleets
-+ Aurora DB clusters
-+ ECS services
-+ EMR clusters
-+  Neptune clusters
-+ SageMaker endpoint variants
-+ Spot Fleets
-+ Custom resources
-For all other scalable targets, the default value is 0:  
-+ Amazon Comprehend document classification and entity recognizer endpoints
-+ DynamoDB tables and global secondary indexes
-+ Amazon Keyspaces tables
-+ Lambda provisioned concurrency
-+ Amazon MSK broker storage
+The amount of time, in seconds, to wait for a previous scale\-out activity to take effect\. For more information and for default values, see [Define cooldown periods](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html#target-tracking-cooldown) in the *Application Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[MaxConcurrency](#cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig-maxconcurrency)" : Integer,
-  "[MemorySizeInMB](#cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig-memorysizeinmb)" : Integer
+  "[MemorySizeInMB](#cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig-memorysizeinmb)" : Integer,
+  "[ProvisionedConcurrency](#cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig-provisionedconcurrency)" : Integer
 }
 ```
 
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [MaxConcurrency](#cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig-maxconcurrency): Integer
   [MemorySizeInMB](#cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig-memorysizeinmb): Integer
+  [ProvisionedConcurrency](#cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig-provisionedconcurrency): Integer
 ```
 
 ## Properties<a name="aws-properties-sagemaker-endpointconfig-productionvariant-serverlessconfig-properties"></a>
@@ -38,4 +40,10 @@ The memory size of your serverless endpoint\. Valid values are in 1 GB increment
 *Type*: Integer  
 *Minimum*: `1024`  
 *Maximum*: `6144`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ProvisionedConcurrency`  <a name="cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig-provisionedconcurrency"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

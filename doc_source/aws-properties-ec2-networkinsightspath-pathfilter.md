@@ -1,6 +1,6 @@
 # AWS::EC2::NetworkInsightsPath PathFilter<a name="aws-properties-ec2-networkinsightspath-pathfilter"></a>
 
-<a name="aws-properties-ec2-networkinsightspath-pathfilter-description"></a>The `PathFilter` property type specifies Property description not available\. for an [AWS::EC2::NetworkInsightsPath](aws-resource-ec2-networkinsightspath.md)\.
+Describes a set of filters for a path analysis\. Use path filters to scope the analysis when there can be multiple resulting paths\.
 
 ## Syntax<a name="aws-properties-ec2-networkinsightspath-pathfilter-syntax"></a>
 
@@ -31,25 +31,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-networkinsightspath-pathfilter-properties"></a>
 
 `DestinationAddress`  <a name="cfn-ec2-networkinsightspath-pathfilter-destinationaddress"></a>
-Property description not available\.  
+The destination IPv4 address\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `15`  
+*Pattern*: `^([0-9]{1,3}.){3}[0-9]{1,3}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationPortRange`  <a name="cfn-ec2-networkinsightspath-pathfilter-destinationportrange"></a>
-Property description not available\.  
+The destination port range\.  
 *Required*: No  
 *Type*: [FilterPortRange](aws-properties-ec2-networkinsightspath-filterportrange.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceAddress`  <a name="cfn-ec2-networkinsightspath-pathfilter-sourceaddress"></a>
-Property description not available\.  
+The source IPv4 address\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `15`  
+*Pattern*: `^([0-9]{1,3}.){3}[0-9]{1,3}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourcePortRange`  <a name="cfn-ec2-networkinsightspath-pathfilter-sourceportrange"></a>
-Property description not available\.  
+The source port range\.  
 *Required*: No  
 *Type*: [FilterPortRange](aws-properties-ec2-networkinsightspath-filterportrange.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -58,7 +58,7 @@ Adds to or modifies the tags of the given resource\. Tags are metadata that you 
 
 ### Ref<a name="aws-resource-iotwireless-wirelessdeviceimporttask-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the wireless device import task\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the wireless device import task\.
 
 ### Fn::GetAtt<a name="aws-resource-iotwireless-wirelessdeviceimporttask-return-values-fn--getatt"></a>
 

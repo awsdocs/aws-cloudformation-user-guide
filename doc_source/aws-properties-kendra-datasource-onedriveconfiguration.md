@@ -49,7 +49,7 @@ A list of regular expression patterns to exclude certain documents in your OneDr
 The pattern is applied to the file name\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldMappings`  <a name="cfn-kendra-datasource-onedriveconfiguration-fieldmappings"></a>
@@ -64,7 +64,7 @@ A list of regular expression patterns to include certain documents in your OneDr
 The pattern is applied to the file name\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OneDriveUsers`  <a name="cfn-kendra-datasource-onedriveconfiguration-onedriveusers"></a>

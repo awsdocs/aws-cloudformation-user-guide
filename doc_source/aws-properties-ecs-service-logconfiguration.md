@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[LogDriver](#cfn-ecs-service-logconfiguration-logdriver)" : String,
-  "[Options](#cfn-ecs-service-logconfiguration-options)" : {Key : Value, ...},
+  "[Options](#cfn-ecs-service-logconfiguration-options)" : {Key: Value, ...},
   "[SecretOptions](#cfn-ecs-service-logconfiguration-secretoptions)" : [ Secret, ... ]
 }
 ```
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [LogDriver](#cfn-ecs-service-logconfiguration-logdriver): String
   [Options](#cfn-ecs-service-logconfiguration-options): 
-    Key : Value
+    Key: Value
   [SecretOptions](#cfn-ecs-service-logconfiguration-secretoptions): 
     - Secret
 ```

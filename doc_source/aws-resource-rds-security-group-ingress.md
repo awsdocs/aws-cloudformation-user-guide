@@ -76,6 +76,6 @@ Name of the EC2 security group to authorize\. For VPC DB security groups, `EC2Se
 
 ### Ref<a name="aws-resource-rds-security-group-ingress-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DB security group that this ingress rule is associated with\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the DB security group that this ingress rule is associated with\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

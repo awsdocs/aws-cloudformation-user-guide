@@ -165,6 +165,6 @@ The type of predefined worker that is allocated when a task of this transform ru
 
 ### Ref<a name="aws-resource-glue-mltransform-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the transform ID\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the transform ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

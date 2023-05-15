@@ -55,13 +55,13 @@ The ID of the transit gateway multicast domain\.
 
 ### Ref<a name="aws-resource-ec2-transitgatewaymulticastgroupsource-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the transit gateway multicast domain group source\. 
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the transit gateway multicast domain group source\. 
 
 ### Fn::GetAtt<a name="aws-resource-ec2-transitgatewaymulticastgroupsource-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-transitgatewaymulticastgroupsource-return-values-fn--getatt-fn--getatt"></a>
 

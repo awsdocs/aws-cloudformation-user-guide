@@ -49,11 +49,11 @@ The configuration to associate with a broker\.
 
 ### Ref<a name="aws-resource-amazonmq-configurationassociation-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon MQ configurationassociation ID\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon MQ configurationassociation ID\. For example: 
 
  `c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-amazonmq-configurationassociation--examples"></a>
 

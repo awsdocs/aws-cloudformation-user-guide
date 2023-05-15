@@ -1,4 +1,4 @@
-# VpcLattice resource type reference<a name="AWS_VpcLattice"></a>
+# Amazon VPC Lattice resource type reference<a name="AWS_VpcLattice"></a>
 
 **Resource types**
 + [AWS::VpcLattice::AccessLogSubscription](aws-resource-vpclattice-accesslogsubscription.md)

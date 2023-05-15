@@ -94,9 +94,9 @@ The entity type for which the assignment will be created\.
 
 ### Ref<a name="aws-resource-sso-assignment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a generated ID, combined by all fields with the delimiter `|`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a generated ID, combined by all fields with the delimiter `|`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-sso-assignment--examples"></a>
 

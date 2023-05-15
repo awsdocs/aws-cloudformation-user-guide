@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Datasets](#cfn-sagemaker-modelcard-evaluationdetail-datasets)" : [ String, ... ],
   "[EvaluationJobArn](#cfn-sagemaker-modelcard-evaluationdetail-evaluationjobarn)" : String,
   "[EvaluationObservation](#cfn-sagemaker-modelcard-evaluationdetail-evaluationobservation)" : String,
-  "[Metadata](#cfn-sagemaker-modelcard-evaluationdetail-metadata)" : {Key : Value, ...},
+  "[Metadata](#cfn-sagemaker-modelcard-evaluationdetail-metadata)" : {Key: Value, ...},
   "[MetricGroups](#cfn-sagemaker-modelcard-evaluationdetail-metricgroups)" : [ MetricGroup, ... ],
   "[Name](#cfn-sagemaker-modelcard-evaluationdetail-name)" : String
 }
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [EvaluationJobArn](#cfn-sagemaker-modelcard-evaluationdetail-evaluationjobarn): String
   [EvaluationObservation](#cfn-sagemaker-modelcard-evaluationdetail-evaluationobservation): String
   [Metadata](#cfn-sagemaker-modelcard-evaluationdetail-metadata): 
-    Key : Value
+    Key: Value
   [MetricGroups](#cfn-sagemaker-modelcard-evaluationdetail-metricgroups): 
     - MetricGroup
   [Name](#cfn-sagemaker-modelcard-evaluationdetail-name): String

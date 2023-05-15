@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-codestarnotifications-notificationrule-name)" : String,
       "[Resource](#cfn-codestarnotifications-notificationrule-resource)" : String,
       "[Status](#cfn-codestarnotifications-notificationrule-status)" : String,
-      "[Tags](#cfn-codestarnotifications-notificationrule-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-codestarnotifications-notificationrule-tags)" : {Key: Value, ...},
       "[TargetAddress](#cfn-codestarnotifications-notificationrule-targetaddress)" : String,
       "[Targets](#cfn-codestarnotifications-notificationrule-targets)" : [ Target, ... ]
     }
@@ -40,7 +40,7 @@ Properties:
   [Resource](#cfn-codestarnotifications-notificationrule-resource): String
   [Status](#cfn-codestarnotifications-notificationrule-status): String
   [Tags](#cfn-codestarnotifications-notificationrule-tags): 
-    Key : Value
+    Key: Value
   [TargetAddress](#cfn-codestarnotifications-notificationrule-targetaddress): String
   [Targets](#cfn-codestarnotifications-notificationrule-targets): 
     - Target

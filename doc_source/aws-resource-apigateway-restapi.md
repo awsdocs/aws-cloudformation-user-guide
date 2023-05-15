@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
       "[Mode](#cfn-apigateway-restapi-mode)" : String,
       "[Name](#cfn-apigateway-restapi-name)" : String,
-      "[Parameters](#cfn-apigateway-restapi-parameters)" : {Key : Value, ...},
+      "[Parameters](#cfn-apigateway-restapi-parameters)" : {Key: Value, ...},
       "[Policy](#cfn-apigateway-restapi-policy)" : Json,
       "[Tags](#cfn-apigateway-restapi-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -55,7 +55,7 @@ Properties:
   [Mode](#cfn-apigateway-restapi-mode): String
   [Name](#cfn-apigateway-restapi-name): String
   [Parameters](#cfn-apigateway-restapi-parameters): 
-    Key : Value
+    Key: Value
   [Policy](#cfn-apigateway-restapi-policy): Json
   [Tags](#cfn-apigateway-restapi-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -135,8 +135,8 @@ Use the default mode to define top\-level `RestApi` properties in addition to us
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-apigateway-restapi-name"></a>
-The name of the RestApi\.  
-*Required*: No  
+The name of the RestApi\. A name is required if the REST API is not based on an OpenAPI specification\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -162,15 +162,15 @@ The key\-value map of strings\. The valid character set is \[a\-zA\-Z\+\-=\.\_:/
 
 ### Ref<a name="aws-resource-apigateway-restapi-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `RestApi` ID, such as `a1bcdef2gh`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `RestApi` ID, such as `a1bcdef2gh`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-apigateway-restapi-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-apigateway-restapi-return-values-fn--getatt-fn--getatt"></a>
 

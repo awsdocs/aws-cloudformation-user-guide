@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[SecurityGroupIds](#cfn-batch-computeenvironment-computeresources-securitygroupids)" : [ String, ... ],
   "[SpotIamFleetRole](#cfn-batch-computeenvironment-computeresources-spotiamfleetrole)" : String,
   "[Subnets](#cfn-batch-computeenvironment-computeresources-subnets)" : [ String, ... ],
-  "[Tags](#cfn-batch-computeenvironment-computeresources-tags)" : {Key : Value, ...},
+  "[Tags](#cfn-batch-computeenvironment-computeresources-tags)" : {Key: Value, ...},
   "[Type](#cfn-batch-computeenvironment-computeresources-type)" : String,
   "[UpdateToLatestImageVersion](#cfn-batch-computeenvironment-computeresources-updatetolatestimageversion)" : Boolean
 }
@@ -55,7 +55,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Subnets](#cfn-batch-computeenvironment-computeresources-subnets): 
     - String
   [Tags](#cfn-batch-computeenvironment-computeresources-tags): 
-    Key : Value
+    Key: Value
   [Type](#cfn-batch-computeenvironment-computeresources-type): String
   [UpdateToLatestImageVersion](#cfn-batch-computeenvironment-computeresources-updatetolatestimageversion): Boolean
 ```

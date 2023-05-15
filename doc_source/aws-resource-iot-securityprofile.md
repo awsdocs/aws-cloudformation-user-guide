@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoT::SecurityProfile",
   "Properties" : {
       "[AdditionalMetricsToRetainV2](#cfn-iot-securityprofile-additionalmetricstoretainv2)" : [ MetricToRetain, ... ],
-      "[AlertTargets](#cfn-iot-securityprofile-alerttargets)" : {Key : Value, ...},
+      "[AlertTargets](#cfn-iot-securityprofile-alerttargets)" : {Key: Value, ...},
       "[Behaviors](#cfn-iot-securityprofile-behaviors)" : [ Behavior, ... ],
       "[SecurityProfileDescription](#cfn-iot-securityprofile-securityprofiledescription)" : String,
       "[SecurityProfileName](#cfn-iot-securityprofile-securityprofilename)" : String,
@@ -31,7 +31,7 @@ Properties:
   [AdditionalMetricsToRetainV2](#cfn-iot-securityprofile-additionalmetricstoretainv2): 
     - MetricToRetain
   [AlertTargets](#cfn-iot-securityprofile-alerttargets): 
-    Key : Value
+    Key: Value
   [Behaviors](#cfn-iot-securityprofile-behaviors): 
     - Behavior
   [SecurityProfileDescription](#cfn-iot-securityprofile-securityprofiledescription): String
@@ -90,13 +90,13 @@ The ARN of the target \(thing group\) to which the security profile is attached\
 
 ### Ref<a name="aws-resource-iot-securityprofile-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the security profile name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the security profile name\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-securityprofile-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-securityprofile-return-values-fn--getatt-fn--getatt"></a>
 

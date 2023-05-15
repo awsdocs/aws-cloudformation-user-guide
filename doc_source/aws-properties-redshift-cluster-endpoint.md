@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-redshift-cluster-endpoint-properties"></a>
 
 `Address`  <a name="cfn-redshift-cluster-endpoint-address"></a>
-The DNS address of the Cluster\.  
+The DNS address of the cluster\. This property is read only\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-redshift-cluster-endpoint-port"></a>
-The port that the database engine is listening on\.  
+The port that the database engine is listening on\. This property is read only\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

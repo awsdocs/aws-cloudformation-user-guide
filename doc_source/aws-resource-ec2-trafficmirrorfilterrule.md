@@ -118,9 +118,9 @@ The ID of the filter that this rule is associated with\.
 
 ### Ref<a name="aws-resource-ec2-trafficmirrorfilterrule-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Traffic Mirror filter rule\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the Traffic Mirror filter rule\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrorfilterrule--examples"></a>
 

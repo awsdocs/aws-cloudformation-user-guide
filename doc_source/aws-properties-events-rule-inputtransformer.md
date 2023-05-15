@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap)" : {Key : Value, ...},
+  "[InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap)" : {Key: Value, ...},
   "[InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap): 
-    Key : Value
+    Key: Value
   [InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate): String
 ```
 

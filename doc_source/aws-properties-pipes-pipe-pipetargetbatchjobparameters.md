@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DependsOn](#cfn-pipes-pipe-pipetargetbatchjobparameters-dependson)" : [ BatchJobDependency, ... ],
   "[JobDefinition](#cfn-pipes-pipe-pipetargetbatchjobparameters-jobdefinition)" : String,
   "[JobName](#cfn-pipes-pipe-pipetargetbatchjobparameters-jobname)" : String,
-  "[Parameters](#cfn-pipes-pipe-pipetargetbatchjobparameters-parameters)" : {Key : Value, ...},
+  "[Parameters](#cfn-pipes-pipe-pipetargetbatchjobparameters-parameters)" : {Key: Value, ...},
   "[RetryStrategy](#cfn-pipes-pipe-pipetargetbatchjobparameters-retrystrategy)" : BatchRetryStrategy
 }
 ```
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [JobDefinition](#cfn-pipes-pipe-pipetargetbatchjobparameters-jobdefinition): String
   [JobName](#cfn-pipes-pipe-pipetargetbatchjobparameters-jobname): String
   [Parameters](#cfn-pipes-pipe-pipetargetbatchjobparameters-parameters): 
-    Key : Value
+    Key: Value
   [RetryStrategy](#cfn-pipes-pipe-pipetargetbatchjobparameters-retrystrategy): 
     BatchRetryStrategy
 ```

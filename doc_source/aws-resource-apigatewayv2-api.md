@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProtocolType](#cfn-apigatewayv2-api-protocoltype)" : String,
       "[RouteKey](#cfn-apigatewayv2-api-routekey)" : String,
       "[RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression)" : String,
-      "[Tags](#cfn-apigatewayv2-api-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-apigatewayv2-api-tags)" : {Key: Value, ...},
       "[Target](#cfn-apigatewayv2-api-target)" : String,
       "[Version](#cfn-apigatewayv2-api-version)" : String
     }
@@ -55,7 +55,7 @@ Properties:
   [RouteKey](#cfn-apigatewayv2-api-routekey): String
   [RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression): String
   [Tags](#cfn-apigatewayv2-api-tags): 
-    Key : Value
+    Key: Value
   [Target](#cfn-apigatewayv2-api-target): String
   [Version](#cfn-apigatewayv2-api-version): String
 ```
@@ -168,15 +168,15 @@ A version identifier for the API\.
 
 ### Ref<a name="aws-resource-apigatewayv2-api-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the API ID, such as `a1bcdef2gh`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the API ID, such as `a1bcdef2gh`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-apigatewayv2-api-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-apigatewayv2-api-return-values-fn--getatt-fn--getatt"></a>
 

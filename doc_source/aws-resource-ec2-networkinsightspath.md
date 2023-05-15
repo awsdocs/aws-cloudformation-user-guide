@@ -72,13 +72,13 @@ The destination port\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FilterAtDestination`  <a name="cfn-ec2-networkinsightspath-filteratdestination"></a>
-Property description not available\.  
+Scopes the analysis to network paths that match specific filters at the destination\. If you specify this parameter, you can't specify the parameter for the destination IP address\.  
 *Required*: No  
 *Type*: [PathFilter](aws-properties-ec2-networkinsightspath-pathfilter.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FilterAtSource`  <a name="cfn-ec2-networkinsightspath-filteratsource"></a>
-Property description not available\.  
+Scopes the analysis to network paths that match specific filters at the source\. If you specify this parameter, you can't specify the parameters for the source IP address or the destination port\.  
 *Required*: No  
 *Type*: [PathFilter](aws-properties-ec2-networkinsightspath-pathfilter.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -115,15 +115,15 @@ The tags to add to the path\.
 
 ### Ref<a name="aws-resource-ec2-networkinsightspath-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the path\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the path\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-networkinsightspath-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-networkinsightspath-return-values-fn--getatt-fn--getatt"></a>
 

@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Autoprovision](#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision)" : Boolean,
   "[Driver](#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)" : String,
-  "[DriverOpts](#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)" : {Key : Value, ...},
-  "[Labels](#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)" : {Key : Value, ...},
+  "[DriverOpts](#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)" : {Key: Value, ...},
+  "[Labels](#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)" : {Key: Value, ...},
   "[Scope](#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope)" : String
 }
 ```
@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Autoprovision](#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision): Boolean
   [Driver](#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver): String
   [DriverOpts](#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts): 
-    Key : Value
+    Key: Value
   [Labels](#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels): 
-    Key : Value
+    Key: Value
   [Scope](#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope): String
 ```
 

@@ -107,9 +107,9 @@ The version identifier of the custom action\.
 
 ### Ref<a name="aws-resource-codepipeline-customactiontype-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the custom action name, such as custo\-MyCus\-A1BCDEFGHIJ2\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the custom action name, such as custo\-MyCus\-A1BCDEFGHIJ2\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-codepipeline-customactiontype-return-values-fn--getatt"></a>
 

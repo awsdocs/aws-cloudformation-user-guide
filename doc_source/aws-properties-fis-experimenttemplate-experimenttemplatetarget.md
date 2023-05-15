@@ -13,9 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Filters](#cfn-fis-experimenttemplate-experimenttemplatetarget-filters)" : [ ExperimentTemplateTargetFilter, ... ],
-  "[Parameters](#cfn-fis-experimenttemplate-experimenttemplatetarget-parameters)" : {Key : Value, ...},
+  "[Parameters](#cfn-fis-experimenttemplate-experimenttemplatetarget-parameters)" : {Key: Value, ...},
   "[ResourceArns](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcearns)" : [ String, ... ],
-  "[ResourceTags](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags)" : {Key : Value, ...},
+  "[ResourceTags](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags)" : {Key: Value, ...},
   "[ResourceType](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetype)" : String,
   "[SelectionMode](#cfn-fis-experimenttemplate-experimenttemplatetarget-selectionmode)" : String
 }
@@ -27,11 +27,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Filters](#cfn-fis-experimenttemplate-experimenttemplatetarget-filters): 
     - ExperimentTemplateTargetFilter
   [Parameters](#cfn-fis-experimenttemplate-experimenttemplatetarget-parameters): 
-    Key : Value
+    Key: Value
   [ResourceArns](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcearns): 
     - String
   [ResourceTags](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags): 
-    Key : Value
+    Key: Value
   [ResourceType](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetype): String
   [SelectionMode](#cfn-fis-experimenttemplate-experimenttemplatetarget-selectionmode): String
 ```

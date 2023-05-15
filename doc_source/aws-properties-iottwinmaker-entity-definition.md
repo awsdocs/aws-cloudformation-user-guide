@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Configuration](#cfn-iottwinmaker-entity-definition-configuration)" : {Key : Value, ...},
+  "[Configuration](#cfn-iottwinmaker-entity-definition-configuration)" : {Key: Value, ...},
   "[DataType](#cfn-iottwinmaker-entity-definition-datatype)" : DataType,
   "[DefaultValue](#cfn-iottwinmaker-entity-definition-defaultvalue)" : DataValue,
   "[IsExternalId](#cfn-iottwinmaker-entity-definition-isexternalid)" : Boolean,
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Configuration](#cfn-iottwinmaker-entity-definition-configuration): 
-    Key : Value
+    Key: Value
   [DataType](#cfn-iottwinmaker-entity-definition-datatype): 
     DataType
   [DefaultValue](#cfn-iottwinmaker-entity-definition-defaultvalue): 

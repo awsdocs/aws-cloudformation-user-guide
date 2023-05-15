@@ -77,9 +77,9 @@ Version information that is associated with this build\. Version strings do not 
 
 ### Ref<a name="aws-resource-gamelift-build-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the build ID, such as `build-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the build ID, such as `build-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-gamelift-build-return-values-fn--getatt"></a>
 

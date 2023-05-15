@@ -68,9 +68,9 @@ Indicates whether TagOptions sharing is enabled or disabled for the portfolio sh
 
 ### Ref<a name="aws-resource-servicecatalog-portfolioshare-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the identifier of the portfolio share\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the identifier of the portfolio share\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-servicecatalog-portfolioshare--seealso"></a>
 + [CreatePortfolioShare](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolioShare.html) in the *AWS Service Catalog API Reference*

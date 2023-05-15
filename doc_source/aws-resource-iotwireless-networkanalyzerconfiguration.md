@@ -83,7 +83,7 @@ Wireless gateway resources to add to the network analyzer configuration\. Provid
 
 ### Ref<a name="aws-resource-iotwireless-networkanalyzerconfiguration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the network analyzer configuration\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the network analyzer configuration\.
 
 ### Fn::GetAtt<a name="aws-resource-iotwireless-networkanalyzerconfiguration-return-values-fn--getatt"></a>
 

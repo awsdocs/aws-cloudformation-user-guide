@@ -14,8 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ComponentTypeId](#cfn-iottwinmaker-entity-component-componenttypeid)" : String,
   "[DefinedIn](#cfn-iottwinmaker-entity-component-definedin)" : String,
   "[Description](#cfn-iottwinmaker-entity-component-description)" : String,
-  "[Properties](#cfn-iottwinmaker-entity-component-properties)" : {Key : Value, ...},
-  "[PropertyGroups](#cfn-iottwinmaker-entity-component-propertygroups)" : {Key : Value, ...},
+  "[Properties](#cfn-iottwinmaker-entity-component-properties)" : {Key: Value, ...},
+  "[PropertyGroups](#cfn-iottwinmaker-entity-component-propertygroups)" : {Key: Value, ...},
   "[Status](#cfn-iottwinmaker-entity-component-status)" : Status
 }
 ```
@@ -28,9 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DefinedIn](#cfn-iottwinmaker-entity-component-definedin): String
   [Description](#cfn-iottwinmaker-entity-component-description): String
   [Properties](#cfn-iottwinmaker-entity-component-properties): 
-    Key : Value
+    Key: Value
   [PropertyGroups](#cfn-iottwinmaker-entity-component-propertygroups): 
-    Key : Value
+    Key: Value
   [Status](#cfn-iottwinmaker-entity-component-status): 
     Status
 ```

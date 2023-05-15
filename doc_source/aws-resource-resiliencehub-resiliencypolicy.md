@@ -13,10 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ResilienceHub::ResiliencyPolicy",
   "Properties" : {
       "[DataLocationConstraint](#cfn-resiliencehub-resiliencypolicy-datalocationconstraint)" : String,
-      "[Policy](#cfn-resiliencehub-resiliencypolicy-policy)" : {Key : Value, ...},
+      "[Policy](#cfn-resiliencehub-resiliencypolicy-policy)" : {Key: Value, ...},
       "[PolicyDescription](#cfn-resiliencehub-resiliencypolicy-policydescription)" : String,
       "[PolicyName](#cfn-resiliencehub-resiliencypolicy-policyname)" : String,
-      "[Tags](#cfn-resiliencehub-resiliencypolicy-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-resiliencehub-resiliencypolicy-tags)" : {Key: Value, ...},
       "[Tier](#cfn-resiliencehub-resiliencypolicy-tier)" : String
     }
 }
@@ -29,11 +29,11 @@ Type: AWS::ResilienceHub::ResiliencyPolicy
 Properties: 
   [DataLocationConstraint](#cfn-resiliencehub-resiliencypolicy-datalocationconstraint): String
   [Policy](#cfn-resiliencehub-resiliencypolicy-policy): 
-    Key : Value
+    Key: Value
   [PolicyDescription](#cfn-resiliencehub-resiliencypolicy-policydescription): String
   [PolicyName](#cfn-resiliencehub-resiliencypolicy-policyname): String
   [Tags](#cfn-resiliencehub-resiliencypolicy-tags): 
-    Key : Value
+    Key: Value
   [Tier](#cfn-resiliencehub-resiliencypolicy-tier): String
 ```
 

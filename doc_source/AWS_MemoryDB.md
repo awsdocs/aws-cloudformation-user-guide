@@ -1,4 +1,4 @@
-# Amazon MemoryDB resource type reference<a name="AWS_MemoryDB"></a>
+# Amazon MemoryDB for Redis resource type reference<a name="AWS_MemoryDB"></a>
 
 **Resource types**
 + [AWS::MemoryDB::ACL](aws-resource-memorydb-acl.md)

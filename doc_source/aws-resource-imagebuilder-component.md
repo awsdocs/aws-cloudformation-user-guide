@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-imagebuilder-component-name)" : String,
       "[Platform](#cfn-imagebuilder-component-platform)" : String,
       "[SupportedOsVersions](#cfn-imagebuilder-component-supportedosversions)" : [ String, ... ],
-      "[Tags](#cfn-imagebuilder-component-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-imagebuilder-component-tags)" : {Key: Value, ...},
       "[Uri](#cfn-imagebuilder-component-uri)" : String,
       "[Version](#cfn-imagebuilder-component-version)" : String
     }
@@ -42,7 +42,7 @@ Properties:
   [SupportedOsVersions](#cfn-imagebuilder-component-supportedosversions): 
     - String
   [Tags](#cfn-imagebuilder-component-tags): 
-    Key : Value
+    Key: Value
   [Uri](#cfn-imagebuilder-component-uri): String
   [Version](#cfn-imagebuilder-component-version): String
 ```
@@ -126,15 +126,15 @@ The component version\. For example, `1.0.0`\.
 
 ### Ref<a name="aws-resource-imagebuilder-component-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:component/examplecomponent/2019.12.02/1`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:component/examplecomponent/2019.12.02/1`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-imagebuilder-component-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-imagebuilder-component-return-values-fn--getatt-fn--getatt"></a>
 

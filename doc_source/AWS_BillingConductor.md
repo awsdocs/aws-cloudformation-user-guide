@@ -1,4 +1,4 @@
-# BillingConductor resource type reference<a name="AWS_BillingConductor"></a>
+# AWS Billing Conductor resource type reference<a name="AWS_BillingConductor"></a>
 
 **Resource types**
 + [AWS::BillingConductor::BillingGroup](aws-resource-billingconductor-billinggroup.md)

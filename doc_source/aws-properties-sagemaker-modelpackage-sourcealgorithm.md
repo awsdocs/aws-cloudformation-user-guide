@@ -35,7 +35,7 @@ The name of an algorithm that was used to create the model package\. The algorit
 
 `ModelDataUrl`  <a name="cfn-sagemaker-modelpackage-sourcealgorithm-modeldataurl"></a>
 The Amazon S3 path where the model artifacts, which result from model training, are stored\. This path must point to a single `gzip` compressed tar archive \(`.tar.gz` suffix\)\.  
-The model artifacts must be in an S3 bucket that is in the same region as the algorithm\.
+The model artifacts must be in an S3 bucket that is in the same AWS region as the algorithm\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  

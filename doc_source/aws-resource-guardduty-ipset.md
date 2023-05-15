@@ -39,7 +39,7 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-ipset-properties"></a>
 
 `Activate`  <a name="cfn-guardduty-ipset-activate"></a>
-Indicates whether or not GuardDuty uses the `IPSet`\.  
+Indicates whether or not uses the `IPSet`\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -87,9 +87,9 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-guardduty-ipset-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique ID of the `IPSet`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique ID of the `IPSet`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-ipset--examples"></a>
 
@@ -97,7 +97,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Declare an IPSet Resource<a name="aws-resource-guardduty-ipset--examples--Declare_an_IPSet_Resource"></a>
 
-The following example shows how to declare a GuardDuty `IPSet` resource:
+The following example shows how to declare a `IPSet` resource:
 
 #### JSON<a name="aws-resource-guardduty-ipset--examples--Declare_an_IPSet_Resource--json"></a>
 

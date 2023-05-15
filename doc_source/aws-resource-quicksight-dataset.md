@@ -17,13 +17,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ColumnLevelPermissionRules](#cfn-quicksight-dataset-columnlevelpermissionrules)" : [ ColumnLevelPermissionRule, ... ],
       "[DataSetId](#cfn-quicksight-dataset-datasetid)" : String,
       "[DataSetUsageConfiguration](#cfn-quicksight-dataset-datasetusageconfiguration)" : DataSetUsageConfiguration,
-      "[FieldFolders](#cfn-quicksight-dataset-fieldfolders)" : {Key : Value, ...},
+      "[FieldFolders](#cfn-quicksight-dataset-fieldfolders)" : {Key: Value, ...},
       "[ImportMode](#cfn-quicksight-dataset-importmode)" : String,
       "[IngestionWaitPolicy](#cfn-quicksight-dataset-ingestionwaitpolicy)" : IngestionWaitPolicy,
-      "[LogicalTableMap](#cfn-quicksight-dataset-logicaltablemap)" : {Key : Value, ...},
+      "[LogicalTableMap](#cfn-quicksight-dataset-logicaltablemap)" : {Key: Value, ...},
       "[Name](#cfn-quicksight-dataset-name)" : String,
       "[Permissions](#cfn-quicksight-dataset-permissions)" : [ ResourcePermission, ... ],
-      "[PhysicalTableMap](#cfn-quicksight-dataset-physicaltablemap)" : {Key : Value, ...},
+      "[PhysicalTableMap](#cfn-quicksight-dataset-physicaltablemap)" : {Key: Value, ...},
       "[RowLevelPermissionDataSet](#cfn-quicksight-dataset-rowlevelpermissiondataset)" : RowLevelPermissionDataSet,
       "[Tags](#cfn-quicksight-dataset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -44,17 +44,17 @@ Properties:
   [DataSetUsageConfiguration](#cfn-quicksight-dataset-datasetusageconfiguration): 
     DataSetUsageConfiguration
   [FieldFolders](#cfn-quicksight-dataset-fieldfolders): 
-    Key : Value
+    Key: Value
   [ImportMode](#cfn-quicksight-dataset-importmode): String
   [IngestionWaitPolicy](#cfn-quicksight-dataset-ingestionwaitpolicy): 
     IngestionWaitPolicy
   [LogicalTableMap](#cfn-quicksight-dataset-logicaltablemap): 
-    Key : Value
+    Key: Value
   [Name](#cfn-quicksight-dataset-name): String
   [Permissions](#cfn-quicksight-dataset-permissions): 
     - ResourcePermission
   [PhysicalTableMap](#cfn-quicksight-dataset-physicaltablemap): 
-    Key : Value
+    Key: Value
   [RowLevelPermissionDataSet](#cfn-quicksight-dataset-rowlevelpermissiondataset): 
     RowLevelPermissionDataSet
   [Tags](#cfn-quicksight-dataset-tags): 

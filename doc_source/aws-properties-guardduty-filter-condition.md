@@ -1,6 +1,6 @@
 # AWS::GuardDuty::Filter Condition<a name="aws-properties-guardduty-filter-condition"></a>
 
-Specifies the condition to apply to a single field when filtering through GuardDuty findings\.
+Specifies the condition to apply to a single field when filtering through findings\.
 
 ## Syntax<a name="aws-properties-guardduty-filter-condition-syntax"></a>
 

@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[StageName](#cfn-apigateway-stage-stagename)" : String,
       "[Tags](#cfn-apigateway-stage-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TracingEnabled](#cfn-apigateway-stage-tracingenabled)" : Boolean,
-      "[Variables](#cfn-apigateway-stage-variables)" : {Key : Value, ...}
+      "[Variables](#cfn-apigateway-stage-variables)" : {Key: Value, ...}
     }
 }
 ```
@@ -53,7 +53,7 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TracingEnabled](#cfn-apigateway-stage-tracingenabled): Boolean
   [Variables](#cfn-apigateway-stage-variables): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-apigateway-stage-properties"></a>
@@ -147,9 +147,9 @@ A map \(string\-to\-string map\) that defines the stage variables, where the var
 
 ### Ref<a name="aws-resource-apigateway-stage-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the stage, such as `MyTestStage`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the stage, such as `MyTestStage`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigateway-stage--examples"></a>
 

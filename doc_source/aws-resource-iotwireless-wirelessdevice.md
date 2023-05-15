@@ -101,7 +101,7 @@ The wireless device type\.
 
 ### Ref<a name="aws-resource-iotwireless-wirelessdevice-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the wireless device ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the wireless device ID\.
 
 ### Fn::GetAtt<a name="aws-resource-iotwireless-wirelessdevice-return-values-fn--getatt"></a>
 

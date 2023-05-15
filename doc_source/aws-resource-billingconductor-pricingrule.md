@@ -119,7 +119,7 @@ Usage Type is the unit that each service uses to measure the usage of a specific
 
 ### Ref<a name="aws-resource-billingconductor-pricingrule-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-billingconductor-pricingrule-return-values-fn--getatt"></a>
 

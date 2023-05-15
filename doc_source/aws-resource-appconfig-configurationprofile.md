@@ -133,7 +133,7 @@ A list of methods for validating the configuration\.
 
 ### Ref<a name="aws-resource-appconfig-configurationprofile-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the configuration profile ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the configuration profile ID\.
 
 ## Examples<a name="aws-resource-appconfig-configurationprofile--examples"></a>
 

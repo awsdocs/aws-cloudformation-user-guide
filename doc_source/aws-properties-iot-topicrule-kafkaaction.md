@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ClientProperties](#cfn-iot-topicrule-kafkaaction-clientproperties)" : {Key : Value, ...},
+  "[ClientProperties](#cfn-iot-topicrule-kafkaaction-clientproperties)" : {Key: Value, ...},
   "[DestinationArn](#cfn-iot-topicrule-kafkaaction-destinationarn)" : String,
   "[Key](#cfn-iot-topicrule-kafkaaction-key)" : String,
   "[Partition](#cfn-iot-topicrule-kafkaaction-partition)" : String,
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ClientProperties](#cfn-iot-topicrule-kafkaaction-clientproperties): 
-    Key : Value
+    Key: Value
   [DestinationArn](#cfn-iot-topicrule-kafkaaction-destinationarn): String
   [Key](#cfn-iot-topicrule-kafkaaction-key): String
   [Partition](#cfn-iot-topicrule-kafkaaction-partition): String

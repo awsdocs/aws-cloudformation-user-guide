@@ -55,9 +55,9 @@ You must specify either `InternetGatewayId` or `VpnGatewayId`, but not both\.
 
 ### Ref<a name="aws-resource-ec2-vpc-gateway-attachment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPC gateway attachment\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the VPC gateway attachment\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-vpc-gateway-attachment--examples"></a>
 

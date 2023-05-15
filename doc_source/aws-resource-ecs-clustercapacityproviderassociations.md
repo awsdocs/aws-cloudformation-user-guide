@@ -55,7 +55,7 @@ The default capacity provider strategy to associate with the cluster\.
 
 ### Ref<a name="aws-resource-ecs-clustercapacityproviderassociations-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the cluster name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the cluster name\.
 
 ## Examples<a name="aws-resource-ecs-clustercapacityproviderassociations--examples"></a>
 

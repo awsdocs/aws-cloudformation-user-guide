@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CaptchaConfig](#cfn-wafv2-webacl-captchaconfig)" : CaptchaConfig,
       "[ChallengeConfig](#cfn-wafv2-webacl-challengeconfig)" : ChallengeConfig,
-      "[CustomResponseBodies](#cfn-wafv2-webacl-customresponsebodies)" : {Key : Value, ...},
+      "[CustomResponseBodies](#cfn-wafv2-webacl-customresponsebodies)" : {Key: Value, ...},
       "[DefaultAction](#cfn-wafv2-webacl-defaultaction)" : DefaultAction,
       "[Description](#cfn-wafv2-webacl-description)" : String,
       "[Name](#cfn-wafv2-webacl-name)" : String,
@@ -40,7 +40,7 @@ Properties:
   [ChallengeConfig](#cfn-wafv2-webacl-challengeconfig): 
     ChallengeConfig
   [CustomResponseBodies](#cfn-wafv2-webacl-customresponsebodies): 
-    Key : Value
+    Key: Value
   [DefaultAction](#cfn-wafv2-webacl-defaultaction): 
     DefaultAction
   [Description](#cfn-wafv2-webacl-description): String

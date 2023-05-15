@@ -118,23 +118,23 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ### Fn::GetAtt<a name="aws-resource-cloudtrail-eventdatastore-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-cloudtrail-eventdatastore-return-values-fn--getatt-fn--getatt"></a>
 
 `CreatedTimestamp`  <a name="CreatedTimestamp-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the time stamp of the creation of the event data store, such as `1248496624`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the time stamp of the creation of the event data store, such as `1248496624`\.
 
 `EventDataStoreArn`  <a name="EventDataStoreArn-fn::getatt"></a>
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the CloudTrail event data store, such as `arn:aws:cloudtrail:us-east-1:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the CloudTrail event data store, such as `arn:aws:cloudtrail:us-east-1:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE`\.
 
 `Status`  <a name="Status-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the status of the event data store, such as `ENABLED`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the status of the event data store, such as `ENABLED`\.
 
 `UpdatedTimestamp`  <a name="UpdatedTimestamp-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the time stamp that updates were made to an event data store, such as `1598296624`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the time stamp that updates were made to an event data store, such as `1598296624`\.
 
 ## Examples<a name="aws-resource-cloudtrail-eventdatastore--examples"></a>
 

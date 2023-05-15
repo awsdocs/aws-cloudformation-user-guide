@@ -124,7 +124,7 @@ Assigns metadata to an AWS AppConfig resource\. Tags help organize and categoriz
 
 ### Ref<a name="aws-resource-appconfig-deploymentstrategy-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the deployment strategy ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the deployment strategy ID\.
 
 ## Examples<a name="aws-resource-appconfig-deploymentstrategy--examples"></a>
 

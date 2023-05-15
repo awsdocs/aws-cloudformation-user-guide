@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediaconnect-flow-failoverconfig-properties"></a>
 
 `FailoverMode`  <a name="cfn-mediaconnect-flow-failoverconfig-failovermode"></a>
-The type of failover you choose for this flow\. MERGE combines the source streams into a single stream, allowing graceful recovery from any single\-source loss\. FAILOVER allows switching between different streams\.  
+The type of failover you choose for this flow\. MERGE combines the source streams into a single stream, allowing graceful recovery from any single\-source loss\. FAILOVER allows switching between different streams\. The string for this property must be entered as MERGE or FAILOVER\. No other string entry is valid\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

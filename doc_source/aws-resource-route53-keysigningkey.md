@@ -76,8 +76,8 @@ There was an error during a request\. Before you can continue to work with DNSSE
 
 ### Ref<a name="aws-resource-route53-keysigningkey-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a identifier that is based on both the hosted zone ID and the KSK name properties\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a identifier that is based on both the hosted zone ID and the KSK name properties\. For example:
 
  `{ "Ref": "Z00001111A1ABCaaABC11|KSK1" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

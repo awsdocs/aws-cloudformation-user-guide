@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CustomProperties](#cfn-appflow-flow-customconnectorsourceproperties-customproperties)" : {Key : Value, ...},
+  "[CustomProperties](#cfn-appflow-flow-customconnectorsourceproperties-customproperties)" : {Key: Value, ...},
   "[EntityName](#cfn-appflow-flow-customconnectorsourceproperties-entityname)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CustomProperties](#cfn-appflow-flow-customconnectorsourceproperties-customproperties): 
-    Key : Value
+    Key: Value
   [EntityName](#cfn-appflow-flow-customconnectorsourceproperties-entityname): String
 ```
 

@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoTFleetWise::Vehicle",
   "Properties" : {
       "[AssociationBehavior](#cfn-iotfleetwise-vehicle-associationbehavior)" : String,
-      "[Attributes](#cfn-iotfleetwise-vehicle-attributes)" : {Key : Value, ...},
+      "[Attributes](#cfn-iotfleetwise-vehicle-attributes)" : {Key: Value, ...},
       "[DecoderManifestArn](#cfn-iotfleetwise-vehicle-decodermanifestarn)" : String,
       "[ModelManifestArn](#cfn-iotfleetwise-vehicle-modelmanifestarn)" : String,
       "[Name](#cfn-iotfleetwise-vehicle-name)" : String,
@@ -34,7 +34,7 @@ Type: AWS::IoTFleetWise::Vehicle
 Properties: 
   [AssociationBehavior](#cfn-iotfleetwise-vehicle-associationbehavior): String
   [Attributes](#cfn-iotfleetwise-vehicle-attributes): 
-    Key : Value
+    Key: Value
   [DecoderManifestArn](#cfn-iotfleetwise-vehicle-decodermanifestarn): String
   [ModelManifestArn](#cfn-iotfleetwise-vehicle-modelmanifestarn): String
   [Name](#cfn-iotfleetwise-vehicle-name): String

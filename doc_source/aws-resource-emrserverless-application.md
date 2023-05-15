@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ReleaseLabel](#cfn-emrserverless-application-releaselabel)" : String,
       "[Tags](#cfn-emrserverless-application-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-emrserverless-application-type)" : String,
-      "[WorkerTypeSpecifications](#cfn-emrserverless-application-workertypespecifications)" : {Key : Value, ...}
+      "[WorkerTypeSpecifications](#cfn-emrserverless-application-workertypespecifications)" : {Key: Value, ...}
     }
 }
 ```
@@ -52,7 +52,7 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-emrserverless-application-type): String
   [WorkerTypeSpecifications](#cfn-emrserverless-application-workertypespecifications): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-emrserverless-application-properties"></a>

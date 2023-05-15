@@ -1,6 +1,6 @@
 # AWS::Backup::BackupSelection ConditionParameter<a name="aws-properties-backup-backupselection-conditionparameter"></a>
 
-<a name="aws-properties-backup-backupselection-conditionparameter-description"></a>The `ConditionParameter` property type specifies Property description not available\. for an [AWS::Backup::BackupSelection](aws-resource-backup-backupselection.md)\.
+Includes information about tags you define to assign tagged resources to a backup plan\.
 
 ## Syntax<a name="aws-properties-backup-backupselection-conditionparameter-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-backupselection-conditionparameter-properties"></a>
 
 `ConditionKey`  <a name="cfn-backup-backupselection-conditionparameter-conditionkey"></a>
-Property description not available\.  
+The key in a key\-value pair\. For example, in the tag `Department: Accounting`, `Department` is the key\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConditionValue`  <a name="cfn-backup-backupselection-conditionparameter-conditionvalue"></a>
-Property description not available\.  
+The value in a key\-value pair\. For example, in the tag `Department: Accounting`, `Accounting` is the value\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

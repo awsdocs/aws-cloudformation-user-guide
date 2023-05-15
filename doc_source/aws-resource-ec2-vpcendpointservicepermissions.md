@@ -48,6 +48,6 @@ The ID of the service\.
 
 ### Ref<a name="aws-resource-ec2-vpcendpointservicepermissions-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPC endpoint service permissions\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the VPC endpoint service permissions\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

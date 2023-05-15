@@ -46,6 +46,6 @@ A subscription configuration for additional CloudWatch metrics\.
 
 ### Ref<a name="aws-resource-cloudfront-monitoringsubscription-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier for the monitoring subscription, which is the same as the distribution ID of the distribution that the subscription is for\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique identifier for the monitoring subscription, which is the same as the distribution ID of the distribution that the subscription is for\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

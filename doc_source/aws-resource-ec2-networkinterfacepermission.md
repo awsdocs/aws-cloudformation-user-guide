@@ -54,9 +54,9 @@ The type of permission to grant: `INSTANCE-ATTACH` or `EIP-ASSOCIATE`\.
 
 ### Ref<a name="aws-resource-ec2-networkinterfacepermission-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example: `eni-perm-055663b682ea24b48`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example: `eni-perm-055663b682ea24b48`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-networkinterfacepermission--examples"></a>
 

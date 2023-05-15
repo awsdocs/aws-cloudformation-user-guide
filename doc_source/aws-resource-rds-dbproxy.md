@@ -124,9 +124,9 @@ One or more VPC subnet IDs to associate with the new proxy\.
 
 ### Ref<a name="aws-resource-rds-dbproxy-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB proxy\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the DB proxy\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-rds-dbproxy-return-values-fn--getatt"></a>
 

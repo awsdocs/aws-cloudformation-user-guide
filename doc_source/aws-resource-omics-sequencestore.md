@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-omics-sequencestore-description)" : String,
       "[Name](#cfn-omics-sequencestore-name)" : String,
       "[SseConfig](#cfn-omics-sequencestore-sseconfig)" : SseConfig,
-      "[Tags](#cfn-omics-sequencestore-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-omics-sequencestore-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -30,7 +30,7 @@ Properties:
   [SseConfig](#cfn-omics-sequencestore-sseconfig): 
     SseConfig
   [Tags](#cfn-omics-sequencestore-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-omics-sequencestore-properties"></a>
@@ -63,15 +63,15 @@ Tags for the store\.
 
 ### Ref<a name="aws-resource-omics-sequencestore-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the details of this resource\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the details of this resource\. For example:
 
  `{ "Ref": "SequenceStore.CreationTime" }` `Ref` returns the timestamp for when the sequence store was created\. 
 
 ### Fn::GetAtt<a name="aws-resource-omics-sequencestore-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-omics-sequencestore-return-values-fn--getatt-fn--getatt"></a>
 

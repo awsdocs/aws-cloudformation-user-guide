@@ -87,6 +87,6 @@ The user pool ID for the user pool\.
 
 ### Ref<a name="aws-resource-cognito-userpoolgroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the user pool group\. For example: `Admins`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the user pool group\. For example: `Admins`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

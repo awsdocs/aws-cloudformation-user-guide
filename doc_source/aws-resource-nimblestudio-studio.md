@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DisplayName](#cfn-nimblestudio-studio-displayname)" : String,
       "[StudioEncryptionConfiguration](#cfn-nimblestudio-studio-studioencryptionconfiguration)" : StudioEncryptionConfiguration,
       "[StudioName](#cfn-nimblestudio-studio-studioname)" : String,
-      "[Tags](#cfn-nimblestudio-studio-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-nimblestudio-studio-tags)" : {Key: Value, ...},
       "[UserRoleArn](#cfn-nimblestudio-studio-userrolearn)" : String
     }
 }
@@ -37,7 +37,7 @@ Properties:
     StudioEncryptionConfiguration
   [StudioName](#cfn-nimblestudio-studio-studioname): String
   [Tags](#cfn-nimblestudio-studio-tags): 
-    Key : Value
+    Key: Value
   [UserRoleArn](#cfn-nimblestudio-studio-userrolearn): String
 ```
 

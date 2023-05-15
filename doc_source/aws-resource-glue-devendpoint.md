@@ -172,9 +172,9 @@ Known issue: when a development endpoint is created with the `G.2X` `WorkerType`
 
 ### Ref<a name="aws-resource-glue-devendpoint-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the endpoint name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the endpoint name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-glue-devendpoint--seealso"></a>
 +  [DevEndpoint Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide* 

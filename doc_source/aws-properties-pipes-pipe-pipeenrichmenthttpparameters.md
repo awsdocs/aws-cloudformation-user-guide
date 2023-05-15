@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[HeaderParameters](#cfn-pipes-pipe-pipeenrichmenthttpparameters-headerparameters)" : {Key : Value, ...},
+  "[HeaderParameters](#cfn-pipes-pipe-pipeenrichmenthttpparameters-headerparameters)" : {Key: Value, ...},
   "[PathParameterValues](#cfn-pipes-pipe-pipeenrichmenthttpparameters-pathparametervalues)" : [ String, ... ],
-  "[QueryStringParameters](#cfn-pipes-pipe-pipeenrichmenthttpparameters-querystringparameters)" : {Key : Value, ...}
+  "[QueryStringParameters](#cfn-pipes-pipe-pipeenrichmenthttpparameters-querystringparameters)" : {Key: Value, ...}
 }
 ```
 
@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [HeaderParameters](#cfn-pipes-pipe-pipeenrichmenthttpparameters-headerparameters): 
-    Key : Value
+    Key: Value
   [PathParameterValues](#cfn-pipes-pipe-pipeenrichmenthttpparameters-pathparametervalues): 
     - String
   [QueryStringParameters](#cfn-pipes-pipe-pipeenrichmenthttpparameters-querystringparameters): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-pipes-pipe-pipeenrichmenthttpparameters-properties"></a>

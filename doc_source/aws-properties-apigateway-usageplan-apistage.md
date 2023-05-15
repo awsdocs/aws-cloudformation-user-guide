@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ApiId](#cfn-apigateway-usageplan-apistage-apiid)" : String,
   "[Stage](#cfn-apigateway-usageplan-apistage-stage)" : String,
-  "[Throttle](#cfn-apigateway-usageplan-apistage-throttle)" : {Key : Value, ...}
+  "[Throttle](#cfn-apigateway-usageplan-apistage-throttle)" : {Key: Value, ...}
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ApiId](#cfn-apigateway-usageplan-apistage-apiid): String
   [Stage](#cfn-apigateway-usageplan-apistage-stage): String
   [Throttle](#cfn-apigateway-usageplan-apistage-throttle): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-apigateway-usageplan-apistage-properties"></a>

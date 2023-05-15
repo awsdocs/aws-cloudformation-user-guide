@@ -91,7 +91,7 @@ Metadata to assign to the environment\. Tags help organize and categorize your A
 
 ### Ref<a name="aws-resource-appconfig-environment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the environment ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the environment ID\.
 
 ## Examples<a name="aws-resource-appconfig-environment--examples"></a>
 

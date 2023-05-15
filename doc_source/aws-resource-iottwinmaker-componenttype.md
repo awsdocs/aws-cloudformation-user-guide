@@ -15,11 +15,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ComponentTypeId](#cfn-iottwinmaker-componenttype-componenttypeid)" : String,
       "[Description](#cfn-iottwinmaker-componenttype-description)" : String,
       "[ExtendsFrom](#cfn-iottwinmaker-componenttype-extendsfrom)" : [ String, ... ],
-      "[Functions](#cfn-iottwinmaker-componenttype-functions)" : {Key : Value, ...},
+      "[Functions](#cfn-iottwinmaker-componenttype-functions)" : {Key: Value, ...},
       "[IsSingleton](#cfn-iottwinmaker-componenttype-issingleton)" : Boolean,
-      "[PropertyDefinitions](#cfn-iottwinmaker-componenttype-propertydefinitions)" : {Key : Value, ...},
-      "[PropertyGroups](#cfn-iottwinmaker-componenttype-propertygroups)" : {Key : Value, ...},
-      "[Tags](#cfn-iottwinmaker-componenttype-tags)" : {Key : Value, ...},
+      "[PropertyDefinitions](#cfn-iottwinmaker-componenttype-propertydefinitions)" : {Key: Value, ...},
+      "[PropertyGroups](#cfn-iottwinmaker-componenttype-propertygroups)" : {Key: Value, ...},
+      "[Tags](#cfn-iottwinmaker-componenttype-tags)" : {Key: Value, ...},
       "[WorkspaceId](#cfn-iottwinmaker-componenttype-workspaceid)" : String
     }
 }
@@ -35,14 +35,14 @@ Properties:
   [ExtendsFrom](#cfn-iottwinmaker-componenttype-extendsfrom): 
     - String
   [Functions](#cfn-iottwinmaker-componenttype-functions): 
-    Key : Value
+    Key: Value
   [IsSingleton](#cfn-iottwinmaker-componenttype-issingleton): Boolean
   [PropertyDefinitions](#cfn-iottwinmaker-componenttype-propertydefinitions): 
-    Key : Value
+    Key: Value
   [PropertyGroups](#cfn-iottwinmaker-componenttype-propertygroups): 
-    Key : Value
+    Key: Value
   [Tags](#cfn-iottwinmaker-componenttype-tags): 
-    Key : Value
+    Key: Value
   [WorkspaceId](#cfn-iottwinmaker-componenttype-workspaceid): String
 ```
 
@@ -108,15 +108,15 @@ The ID of the workspace\.
 
 ### Ref<a name="aws-resource-iottwinmaker-componenttype-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the workspace Id and the ComponentType Id\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the workspace Id and the ComponentType Id\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iottwinmaker-componenttype-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iottwinmaker-componenttype-return-values-fn--getatt-fn--getatt"></a>
 

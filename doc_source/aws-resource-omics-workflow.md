@@ -17,9 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Engine](#cfn-omics-workflow-engine)" : String,
       "[Main](#cfn-omics-workflow-main)" : String,
       "[Name](#cfn-omics-workflow-name)" : String,
-      "[ParameterTemplate](#cfn-omics-workflow-parametertemplate)" : {Key : Value, ...},
+      "[ParameterTemplate](#cfn-omics-workflow-parametertemplate)" : {Key: Value, ...},
       "[StorageCapacity](#cfn-omics-workflow-storagecapacity)" : Double,
-      "[Tags](#cfn-omics-workflow-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-omics-workflow-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -35,10 +35,10 @@ Properties:
   [Main](#cfn-omics-workflow-main): String
   [Name](#cfn-omics-workflow-name): String
   [ParameterTemplate](#cfn-omics-workflow-parametertemplate): 
-    Key : Value
+    Key: Value
   [StorageCapacity](#cfn-omics-workflow-storagecapacity): Double
   [Tags](#cfn-omics-workflow-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-omics-workflow-properties"></a>
@@ -110,15 +110,15 @@ Tags for the workflow\.
 
 ### Ref<a name="aws-resource-omics-workflow-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the details of this resource\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the details of this resource\. For example:
 
  `{ "Ref": "Workflow.Type" }` `Ref` returns the type of workflow\. 
 
 ### Fn::GetAtt<a name="aws-resource-omics-workflow-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-omics-workflow-return-values-fn--getatt-fn--getatt"></a>
 

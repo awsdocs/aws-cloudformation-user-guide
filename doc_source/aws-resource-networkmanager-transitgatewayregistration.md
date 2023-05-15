@@ -51,9 +51,9 @@ The Amazon Resource Name \(ARN\) of the transit gateway\.
 
 ### Ref<a name="aws-resource-networkmanager-transitgatewayregistration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the global network and the ARN of the transit gateway\. For example: `global-network-01231231231231231|arn:aws:ec2:us-west-2:123456789012:transit-gateway/tgw-123abc05e04123abc`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the global network and the ARN of the transit gateway\. For example: `global-network-01231231231231231|arn:aws:ec2:us-west-2:123456789012:transit-gateway/tgw-123abc05e04123abc`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-networkmanager-transitgatewayregistration--examples"></a>
 

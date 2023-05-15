@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ExtensionIdentifier](#cfn-appconfig-extensionassociation-extensionidentifier)" : String,
       "[ExtensionVersionNumber](#cfn-appconfig-extensionassociation-extensionversionnumber)" : Integer,
-      "[Parameters](#cfn-appconfig-extensionassociation-parameters)" : {Key : Value, ...},
+      "[Parameters](#cfn-appconfig-extensionassociation-parameters)" : {Key: Value, ...},
       "[ResourceIdentifier](#cfn-appconfig-extensionassociation-resourceidentifier)" : String,
       "[Tags](#cfn-appconfig-extensionassociation-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -29,7 +29,7 @@ Properties:
   [ExtensionIdentifier](#cfn-appconfig-extensionassociation-extensionidentifier): String
   [ExtensionVersionNumber](#cfn-appconfig-extensionassociation-extensionversionnumber): Integer
   [Parameters](#cfn-appconfig-extensionassociation-parameters): 
-    Key : Value
+    Key: Value
   [ResourceIdentifier](#cfn-appconfig-extensionassociation-resourceidentifier): String
   [Tags](#cfn-appconfig-extensionassociation-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -75,13 +75,13 @@ Adds one or more tags for the specified extension association\. Tags are metadat
 
 ### Ref<a name="aws-resource-appconfig-extensionassociation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns information about the extension association\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns information about the extension association\.
 
 ### Fn::GetAtt<a name="aws-resource-appconfig-extensionassociation-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-appconfig-extensionassociation-return-values-fn--getatt-fn--getatt"></a>
 

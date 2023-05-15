@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ResourceExplorer2::Index",
   "Properties" : {
-      "[Tags](#cfn-resourceexplorer2-index-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-resourceexplorer2-index-tags)" : {Key: Value, ...},
       "[Type](#cfn-resourceexplorer2-index-type)" : String
     }
 }
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ResourceExplorer2::Index
 Properties: 
   [Tags](#cfn-resourceexplorer2-index-tags): 
-    Key : Value
+    Key: Value
   [Type](#cfn-resourceexplorer2-index-type): String
 ```
 
@@ -53,17 +53,17 @@ Specifies the type of the index in this Region\. For information about the aggre
 
 ### Ref<a name="aws-resource-resourceexplorer2-index-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the new index\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the new index\. For example:
 
 `arn:aws:resource-explorer-2:us-east-1:123456789012:index/EXAMPLE8-90ab-cdef-fedc-EXAMPLE22222`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-resourceexplorer2-index-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-resourceexplorer2-index-return-values-fn--getatt-fn--getatt"></a>
 

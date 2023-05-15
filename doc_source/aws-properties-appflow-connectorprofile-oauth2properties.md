@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[OAuth2GrantType](#cfn-appflow-connectorprofile-oauth2properties-oauth2granttype)" : String,
   "[TokenUrl](#cfn-appflow-connectorprofile-oauth2properties-tokenurl)" : String,
-  "[TokenUrlCustomProperties](#cfn-appflow-connectorprofile-oauth2properties-tokenurlcustomproperties)" : {Key : Value, ...}
+  "[TokenUrlCustomProperties](#cfn-appflow-connectorprofile-oauth2properties-tokenurlcustomproperties)" : {Key: Value, ...}
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OAuth2GrantType](#cfn-appflow-connectorprofile-oauth2properties-oauth2granttype): String
   [TokenUrl](#cfn-appflow-connectorprofile-oauth2properties-tokenurl): String
   [TokenUrlCustomProperties](#cfn-appflow-connectorprofile-oauth2properties-tokenurlcustomproperties): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-appflow-connectorprofile-oauth2properties-properties"></a>

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Options](#cfn-ecs-taskdefinition-firelensconfiguration-options)" : {Key : Value, ...},
+  "[Options](#cfn-ecs-taskdefinition-firelensconfiguration-options)" : {Key: Value, ...},
   "[Type](#cfn-ecs-taskdefinition-firelensconfiguration-type)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Options](#cfn-ecs-taskdefinition-firelensconfiguration-options): 
-    Key : Value
+    Key: Value
   [Type](#cfn-ecs-taskdefinition-firelensconfiguration-type): String
 ```
 

@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Definition](#cfn-stepfunctions-statemachine-definition)" : Json,
       "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : S3Location,
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)" : String,
-      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : {Key : Value, ...},
+      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : {Key: Value, ...},
       "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : LoggingConfiguration,
       "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)" : String,
       "[StateMachineName](#cfn-stepfunctions-statemachine-statemachinename)" : String,
@@ -37,7 +37,7 @@ Properties:
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
     String
   [DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions): 
-    Key : Value
+    Key: Value
   [LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration): 
     LoggingConfiguration
   [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String

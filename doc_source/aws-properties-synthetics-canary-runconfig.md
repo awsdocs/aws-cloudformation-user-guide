@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ActiveTracing](#cfn-synthetics-canary-runconfig-activetracing)" : Boolean,
-  "[EnvironmentVariables](#cfn-synthetics-canary-runconfig-environmentvariables)" : {Key : Value, ...},
+  "[EnvironmentVariables](#cfn-synthetics-canary-runconfig-environmentvariables)" : {Key: Value, ...},
   "[MemoryInMB](#cfn-synthetics-canary-runconfig-memoryinmb)" : Integer,
   "[TimeoutInSeconds](#cfn-synthetics-canary-runconfig-timeoutinseconds)" : Integer
 }
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ActiveTracing](#cfn-synthetics-canary-runconfig-activetracing): Boolean
   [EnvironmentVariables](#cfn-synthetics-canary-runconfig-environmentvariables): 
-    Key : Value
+    Key: Value
   [MemoryInMB](#cfn-synthetics-canary-runconfig-memoryinmb): Integer
   [TimeoutInSeconds](#cfn-synthetics-canary-runconfig-timeoutinseconds): Integer
 ```

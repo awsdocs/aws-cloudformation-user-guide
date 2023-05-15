@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[LogDriver](#cfn-ecs-taskdefinition-logconfiguration-logdriver)" : String,
-  "[Options](#cfn-ecs-taskdefinition-logconfiguration-options)" : {Key : Value, ...},
+  "[Options](#cfn-ecs-taskdefinition-logconfiguration-options)" : {Key: Value, ...},
   "[SecretOptions](#cfn-ecs-taskdefinition-logconfiguration-secretoptions)" : [ Secret, ... ]
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [LogDriver](#cfn-ecs-taskdefinition-logconfiguration-logdriver): String
   [Options](#cfn-ecs-taskdefinition-logconfiguration-options): 
-    Key : Value
+    Key: Value
   [SecretOptions](#cfn-ecs-taskdefinition-logconfiguration-secretoptions): 
     - Secret
 ```

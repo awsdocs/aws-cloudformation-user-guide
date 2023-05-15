@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Parameters](#cfn-databrew-job-statisticoverride-parameters)" : {Key : Value, ...},
+  "[Parameters](#cfn-databrew-job-statisticoverride-parameters)" : {Key: Value, ...},
   "[Statistic](#cfn-databrew-job-statisticoverride-statistic)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Parameters](#cfn-databrew-job-statisticoverride-parameters): 
-    Key : Value
+    Key: Value
   [Statistic](#cfn-databrew-job-statisticoverride-statistic): String
 ```
 

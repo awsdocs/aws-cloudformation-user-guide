@@ -67,7 +67,7 @@ The Amazon Resource Name \(ARN\) of the role that grants permission to AWS IoT t
 
 ### Ref<a name="aws-resource-iot-accountauditconfiguration-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the account ID\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the account ID\. 
 
 ## Examples<a name="aws-resource-iot-accountauditconfiguration--examples"></a>
 

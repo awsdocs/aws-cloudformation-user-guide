@@ -1,6 +1,6 @@
 # AWS::Backup::BackupSelection Conditions<a name="aws-properties-backup-backupselection-conditions"></a>
 
-<a name="aws-properties-backup-backupselection-conditions-description"></a>The `Conditions` property type specifies Property description not available\. for an [AWS::Backup::BackupSelection](aws-resource-backup-backupselection.md)\.
+Contains information about which resources to include or exclude from a backup plan using their tags\. Conditions are case sensitive\.
 
 ## Syntax<a name="aws-properties-backup-backupselection-conditions-syntax"></a>
 
@@ -33,25 +33,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-backupselection-conditions-properties"></a>
 
 `StringEquals`  <a name="cfn-backup-backupselection-conditions-stringequals"></a>
-Property description not available\.  
+Filters the values of your tagged resources for only those resources that you tagged with the same value\. Also called "exact matching\."  
 *Required*: No  
 *Type*: List of [ConditionParameter](aws-properties-backup-backupselection-conditionparameter.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StringLike`  <a name="cfn-backup-backupselection-conditions-stringlike"></a>
-Property description not available\.  
+Filters the values of your tagged resources for matching tag values with the use of a wildcard character \(\*\) anywhere in the string\. For example, "prod\*" or "\*rod\*" matches the tag value "production"\.  
 *Required*: No  
 *Type*: List of [ConditionParameter](aws-properties-backup-backupselection-conditionparameter.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StringNotEquals`  <a name="cfn-backup-backupselection-conditions-stringnotequals"></a>
-Property description not available\.  
+Filters the values of your tagged resources for only those resources that you tagged that do not have the same value\. Also called "negated matching\."  
 *Required*: No  
 *Type*: List of [ConditionParameter](aws-properties-backup-backupselection-conditionparameter.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StringNotLike`  <a name="cfn-backup-backupselection-conditions-stringnotlike"></a>
-Property description not available\.  
+Filters the values of your tagged resources for non\-matching tag values with the use of a wildcard character \(\*\) anywhere in the string\.  
 *Required*: No  
 *Type*: List of [ConditionParameter](aws-properties-backup-backupselection-conditionparameter.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

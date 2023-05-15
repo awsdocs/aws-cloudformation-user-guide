@@ -150,9 +150,9 @@ This action can partially fail if too many requests are made at the same time\. 
 
 ### Ref<a name="aws-resource-events-rule-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns event rule ID, such as `mystack-ScheduledRule-ABCDEFGHIJK`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns event rule ID, such as `mystack-ScheduledRule-ABCDEFGHIJK`\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-events-rule-return-values-fn--getatt"></a>
 

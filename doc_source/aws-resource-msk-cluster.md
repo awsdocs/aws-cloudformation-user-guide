@@ -56,7 +56,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes)" : Integer,
       "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : OpenMonitoring,
       "[StorageMode](#cfn-msk-cluster-storagemode)" : String,
-      "[Tags](#cfn-msk-cluster-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-msk-cluster-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -85,7 +85,7 @@ Properties:
     OpenMonitoring
   [StorageMode](#cfn-msk-cluster-storagemode): String
   [Tags](#cfn-msk-cluster-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-msk-cluster-properties"></a>

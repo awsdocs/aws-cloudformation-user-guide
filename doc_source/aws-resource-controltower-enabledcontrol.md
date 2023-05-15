@@ -45,11 +45,11 @@ The ARN of the organizational unit\.
 
 ### Ref<a name="aws-resource-controltower-enabledcontrol-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the physical ID of the resource\. The format is of the form `target | control`\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the physical ID of the resource\. The format is of the form `target | control`\. For example:
 
 `arn:aws:organizations::123456789012:ou/o-myorg/ou-my-ouid | arn:aws:controltower:us-west-2::control/AWS-GR_AUTOSCALING_LAUNCH_CONFIG_PUBLIC_IP_DISABLED` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-controltower-enabledcontrol--examples"></a>
 

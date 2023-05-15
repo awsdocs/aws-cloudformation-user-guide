@@ -45,7 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ReplaceComputeEnvironment](#cfn-batch-computeenvironment-replacecomputeenvironment)" : Boolean,
       "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
       "[State](#cfn-batch-computeenvironment-state)" : String,
-      "[Tags](#cfn-batch-computeenvironment-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-batch-computeenvironment-tags)" : {Key: Value, ...},
       "[Type](#cfn-batch-computeenvironment-type)" : String,
       "[UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus)" : Integer,
       "[UpdatePolicy](#cfn-batch-computeenvironment-updatepolicy)" : UpdatePolicy
@@ -67,7 +67,7 @@ Properties:
   [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
   [State](#cfn-batch-computeenvironment-state): String
   [Tags](#cfn-batch-computeenvironment-tags): 
-    Key : Value
+    Key: Value
   [Type](#cfn-batch-computeenvironment-type): String
   [UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus): Integer
   [UpdatePolicy](#cfn-batch-computeenvironment-updatepolicy): 
@@ -151,15 +151,15 @@ Specifies the infrastructure update policy for the compute environment\. For mor
 
 ### Ref<a name="aws-resource-batch-computeenvironment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the compute environment ARN, such as `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the compute environment ARN, such as `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-batch-computeenvironment-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-batch-computeenvironment-return-values-fn--getatt-fn--getatt"></a>
 

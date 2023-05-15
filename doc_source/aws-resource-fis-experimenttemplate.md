@@ -19,13 +19,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::FIS::ExperimentTemplate",
   "Properties" : {
-      "[Actions](#cfn-fis-experimenttemplate-actions)" : {Key : Value, ...},
+      "[Actions](#cfn-fis-experimenttemplate-actions)" : {Key: Value, ...},
       "[Description](#cfn-fis-experimenttemplate-description)" : String,
       "[LogConfiguration](#cfn-fis-experimenttemplate-logconfiguration)" : ExperimentTemplateLogConfiguration,
       "[RoleArn](#cfn-fis-experimenttemplate-rolearn)" : String,
       "[StopConditions](#cfn-fis-experimenttemplate-stopconditions)" : [ ExperimentTemplateStopCondition, ... ],
-      "[Tags](#cfn-fis-experimenttemplate-tags)" : {Key : Value, ...},
-      "[Targets](#cfn-fis-experimenttemplate-targets)" : {Key : Value, ...}
+      "[Tags](#cfn-fis-experimenttemplate-tags)" : {Key: Value, ...},
+      "[Targets](#cfn-fis-experimenttemplate-targets)" : {Key: Value, ...}
     }
 }
 ```
@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::FIS::ExperimentTemplate
 Properties: 
   [Actions](#cfn-fis-experimenttemplate-actions): 
-    Key : Value
+    Key: Value
   [Description](#cfn-fis-experimenttemplate-description): String
   [LogConfiguration](#cfn-fis-experimenttemplate-logconfiguration): 
     ExperimentTemplateLogConfiguration
@@ -44,9 +44,9 @@ Properties:
   [StopConditions](#cfn-fis-experimenttemplate-stopconditions): 
     - ExperimentTemplateStopCondition
   [Tags](#cfn-fis-experimenttemplate-tags): 
-    Key : Value
+    Key: Value
   [Targets](#cfn-fis-experimenttemplate-targets): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-fis-experimenttemplate-properties"></a>
@@ -102,15 +102,15 @@ The targets for the experiment\.
 
 ### Ref<a name="aws-resource-fis-experimenttemplate-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the experiment template ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the experiment template ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-fis-experimenttemplate-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-fis-experimenttemplate-return-values-fn--getatt-fn--getatt"></a>
 

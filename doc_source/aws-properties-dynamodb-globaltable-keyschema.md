@@ -44,5 +44,4 @@ The partition key of an item is also known as its *hash attribute*\. The term "h
 The sort key of an item is also known as its *range attribute*\. The term "range attribute" derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `HASH | RANGE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

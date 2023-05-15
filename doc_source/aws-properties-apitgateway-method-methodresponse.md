@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ResponseModels](#cfn-apigateway-method-methodresponse-responsemodels)" : {Key : Value, ...},
-  "[ResponseParameters](#cfn-apigateway-method-methodresponse-responseparameters)" : {Key : Value, ...},
+  "[ResponseModels](#cfn-apigateway-method-methodresponse-responsemodels)" : {Key: Value, ...},
+  "[ResponseParameters](#cfn-apigateway-method-methodresponse-responseparameters)" : {Key: Value, ...},
   "[StatusCode](#cfn-apigateway-method-methodresponse-statuscode)" : String
 }
 ```
@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ResponseModels](#cfn-apigateway-method-methodresponse-responsemodels): 
-    Key : Value
+    Key: Value
   [ResponseParameters](#cfn-apigateway-method-methodresponse-responseparameters): 
-    Key : Value
+    Key: Value
   [StatusCode](#cfn-apigateway-method-methodresponse-statuscode): String
 ```
 

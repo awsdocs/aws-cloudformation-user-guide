@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BindingProperties](#cfn-amplifyuibuilder-component-componentproperty-bindingproperties)" : ComponentPropertyBindingProperties,
-  "[Bindings](#cfn-amplifyuibuilder-component-componentproperty-bindings)" : {Key : Value, ...},
+  "[Bindings](#cfn-amplifyuibuilder-component-componentproperty-bindings)" : {Key: Value, ...},
   "[CollectionBindingProperties](#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties)" : ComponentPropertyBindingProperties,
   "[ComponentName](#cfn-amplifyuibuilder-component-componentproperty-componentname)" : String,
   "[Concat](#cfn-amplifyuibuilder-component-componentproperty-concat)" : [ ComponentProperty, ... ],
@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BindingProperties](#cfn-amplifyuibuilder-component-componentproperty-bindingproperties): 
     ComponentPropertyBindingProperties
   [Bindings](#cfn-amplifyuibuilder-component-componentproperty-bindings): 
-    Key : Value
+    Key: Value
   [CollectionBindingProperties](#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties): 
     ComponentPropertyBindingProperties
   [ComponentName](#cfn-amplifyuibuilder-component-componentproperty-componentname): String

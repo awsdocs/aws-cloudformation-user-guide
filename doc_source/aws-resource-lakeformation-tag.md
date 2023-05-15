@@ -42,7 +42,7 @@ The identifier for the Data Catalog\. By default, the account ID\. The Data Cata
 `TagKey`  <a name="cfn-lakeformation-tag-tagkey"></a>
  UTF\-8 string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html#aws-glue-api-regex-oneLine)\.  
 The key\-name for the LF\-tag\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.  
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -58,7 +58,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Ref<a name="aws-resource-lakeformation-tag-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Tag’s `TagKey` property value\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Tag’s `TagKey` property value\.
 
 For example: `tagKeyName`
 

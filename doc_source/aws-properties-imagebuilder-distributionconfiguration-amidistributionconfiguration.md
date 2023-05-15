@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AmiTags](#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-amitags)" : {Key : Value, ...},
+  "[AmiTags](#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-amitags)" : {Key: Value, ...},
   "[Description](#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-description)" : String,
   "[KmsKeyId](#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-kmskeyid)" : String,
   "[LaunchPermissionConfiguration](#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-launchpermissionconfiguration)" : LaunchPermissionConfiguration,
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AmiTags](#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-amitags): 
-    Key : Value
+    Key: Value
   [Description](#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-description): String
   [KmsKeyId](#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-kmskeyid): String
   [LaunchPermissionConfiguration](#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-launchpermissionconfiguration): 

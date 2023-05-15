@@ -40,13 +40,13 @@ The name of the project\.
 
 ### Ref<a name="aws-resource-lookoutvision-project-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "CircuitBoardProject" }` 
 
 For the Amazon Lookout for Vision `CircuitBoardProject`, Ref returns the name of the project\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-lookoutvision-project-return-values-fn--getatt"></a>
 
