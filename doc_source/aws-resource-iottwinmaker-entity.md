@@ -110,19 +110,19 @@ The date and time the entity was created\.
 A boolean value that specifies whether the entity has child entities or not\.
 
 `Status`  <a name="Status-fn::getatt"></a>
-Property description not available\.
+The entity status\.
 
 `Status.Error`  <a name="Status.Error-fn::getatt"></a>
-Property description not available\.
+The error\.
 
 `Status.Error.Code`  <a name="Status.Error.Code-fn::getatt"></a>
-Property description not available\.
+The error code\.
 
 `Status.Error.Message`  <a name="Status.Error.Message-fn::getatt"></a>
-Property description not available\.
+The error message\.
 
 `Status.State`  <a name="Status.State-fn::getatt"></a>
-Property description not available\.
+The state ofthe entity, component type, or workspace\.
 
 `UpdateDateTime`  <a name="UpdateDateTime-fn::getatt"></a>
 The date and time when the component type was last updated\.

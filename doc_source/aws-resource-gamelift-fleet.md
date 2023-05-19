@@ -1,6 +1,6 @@
 # AWS::GameLift::Fleet<a name="aws-resource-gamelift-fleet"></a>
 
-The `AWS::GameLift::Fleet` resource creates an Amazon GameLift \(GameLift\) fleet to host game servers\. A fleet is a set of EC2 instances, each of which can host multiple game sessions\.
+The `AWS::GameLift::Fleet` resource creates an Amazon GameLift \(GameLift\) fleet to host custom game server or Realtime Servers\. A fleet is a set of EC2 instances, configured with instructions to run game servers on each instance\.
 
 ## Syntax<a name="aws-resource-gamelift-fleet-syntax"></a>
 
@@ -96,9 +96,10 @@ ACM isn't available in all AWS regions\. A fleet creation request with certifica
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ComputeType`  <a name="cfn-gamelift-fleet-computetype"></a>
-Property description not available\.  
+The type of compute resource used to host your game servers\. You can use your own compute resources with Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ANYWHERE | EC2`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-gamelift-fleet-description"></a>

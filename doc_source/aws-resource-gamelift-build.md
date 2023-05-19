@@ -53,9 +53,11 @@ If you have active fleets using the Windows Server 2012 operating system, you ca
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServerSdkVersion`  <a name="cfn-gamelift-build-serversdkversion"></a>
-Property description not available\.  
+A server SDK version you used when integrating your game server build with Amazon GameLift\. For more information see [Integrate games with custom game servers](https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html)\. By default Amazon GameLift sets this value to `4.0.2`\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `128`  
+*Pattern*: `^\d+\.\d+\.\d+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>
@@ -148,6 +150,7 @@ The following example creates a GameLift build named `MyGameServerBuild`\. The b
                 "Name": "MyGameServerBuild",
                 "Version": "v1.0",
                 "OperatingSystem": "WINDOWS_2012",
+                "ServerSdkVersion: "4.0.2",
                 "StorageLocation": {
                     "Bucket": "MyBucketName",
                     "Key": "MyGameBuildFiles.zip",
@@ -198,6 +201,7 @@ Resources:
       Name: MyGameServerBuild
       Version: v1.0
       OperatingSystem: WINDOWS_2012
+      "ServerSdkVersion: 4.0.2,
       StorageLocation:
         Bucket: "MyBucketName"
         Key: "MyGameBuildFiles.zip"        

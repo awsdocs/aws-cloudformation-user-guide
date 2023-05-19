@@ -33,14 +33,14 @@ Properties:
 ## Properties<a name="aws-resource-lakeformation-tag-properties"></a>
 
 `CatalogId`  <a name="cfn-lakeformation-tag-catalogid"></a>
-Catalog id string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html#aws-glue-api-regex-oneLine)\.  
+Catalog id string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)\.  
 The identifier for the Data Catalog\. By default, the account ID\. The Data Catalog is the persistent metadata store\. It contains database definitions, table definitions, and other control information to manage your AWS Lake Formation environment\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TagKey`  <a name="cfn-lakeformation-tag-tagkey"></a>
- UTF\-8 string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html#aws-glue-api-regex-oneLine)\.  
+ UTF\-8 string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)\.  
 The key\-name for the LF\-tag\.  
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.  
 *Required*: Yes  

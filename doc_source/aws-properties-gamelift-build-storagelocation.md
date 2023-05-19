@@ -1,6 +1,6 @@
 # AWS::GameLift::Build StorageLocation<a name="aws-properties-gamelift-build-storagelocation"></a>
 
-<a name="aws-properties-gamelift-build-storagelocation-description"></a>The `StorageLocation` property type specifies Property description not available\. for an [AWS::GameLift::Build](aws-resource-gamelift-build.md)\.
+The location in Amazon S3 where build or script files are stored for access by Amazon GameLift\. 
 
 ## Syntax<a name="aws-properties-gamelift-build-storagelocation-syntax"></a>
 
@@ -29,25 +29,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-gamelift-build-storagelocation-properties"></a>
 
 `Bucket`  <a name="cfn-gamelift-build-storagelocation-bucket"></a>
-Property description not available\.  
+An Amazon S3 bucket identifier\. Thename of the S3 bucket\.  
+Amazon GameLift doesn't support uploading from Amazon S3 buckets with names that contain a dot \(\.\)\.
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Key`  <a name="cfn-gamelift-build-storagelocation-key"></a>
-Property description not available\.  
+The name of the zip file that contains the build files or script files\.   
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ObjectVersion`  <a name="cfn-gamelift-build-storagelocation-objectversion"></a>
-Property description not available\.  
+The version of the file, if object versioning is turned on for the bucket\. Amazon GameLift uses this information when retrieving files from your S3 bucket\. To retrieve a specific version of the file, provide an object version\. To retrieve the latest version of the file, do not set this parameter\.   
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-gamelift-build-storagelocation-rolearn"></a>
-Property description not available\.  
+The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) for an IAM role that allows Amazon GameLift to access the S3 bucket\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## See also<a name="aws-properties-gamelift-build-storagelocation--seealso"></a>
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create a build with files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html#gamelift-build-cli-uploading-create-build) in the *Amazon GameLift Developer Guide*
++ [ Upload script files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
++  [S3Location](https://docs.aws.amazon.com/gamelift/latest/apireference/API_S3Location.html) in the *Amazon GameLift API Reference* 
+

@@ -67,7 +67,7 @@ The scene ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SceneMetadata`  <a name="cfn-iottwinmaker-scene-scenemetadata"></a>
-Property description not available\.  
+The scene metadata\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -107,7 +107,7 @@ The scene ARN\.
 The date and time when the scene was created\.
 
 `GeneratedSceneMetadata`  <a name="GeneratedSceneMetadata-fn::getatt"></a>
-Property description not available\.
+The generated scene metadata\.
 
 `UpdateDateTime`  <a name="UpdateDateTime-fn::getatt"></a>
 The scene the update time\.

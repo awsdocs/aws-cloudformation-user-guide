@@ -28,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CloudWatchMetricsEnabled`  <a name="cfn-wafv2-webacl-visibilityconfig-cloudwatchmetricsenabled"></a>
 A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch\. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics) in the * AWS WAF Developer Guide*\.  
+For web ACLs, the metrics are for web requests that have the web ACL default action applied\. AWS WAF applies the default action to web requests that pass the inspection of all rules in the web ACL without being either allowed or blocked\. For more information, see [The web ACL default action](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html) in the * AWS WAF Developer Guide*\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

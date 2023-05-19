@@ -4,11 +4,23 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New and updated resources](AWS_Transfer.md) | The following resource was updated: AWS::Transfer::Server 
+
+ [AWS::Transfer::Server IdentityProviderDetails ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html)   
+Use the `SftpAuthenticationMethods` property to specify how to authenticate for SFTP\-enabled servers that use a custom identity provider\.  | May 25, 2023 | 
 | [Updated resources](AWS_NetworkFirewall.md) | The following resource was updated: AWS::NetworkFirewall::FirewallPolicy 
 
  [AWS::NetworkFirewall::FirewallPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)   
 Use the `PolicyVariables` property to set your one or more CIDRs as your `HOME_NET` if your firewall uses a centralized deployment model\.   
 Use the `IPSet` property specify list of IP addresses and address ranges, in CIDR notation for use with `IPSets`\.   | May 18, 2023 | 
+| [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::Prompt 
+
+ [AWS::Connect::EvaluationForm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-prompt.html)   
+Use the `AWS::Connect::Prompt` resource to create a prompt for the specified Amazon Connect instance\.   | May 18, 2023 | 
+| [New resource](AWS_QuickSight.md) | The following resource was added: AWS::QuickSight::Topic\. 
+
+ [ AWS::QuickSight::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html)   
+Use the `AWS::QuickSight::Topic` resource to create a topic in Amazon QuickSight\.  | May 18, 2023 | 
 | [Updated resources](AWS_ElastiCache.md) | AWS::ElastiCache::ReplicationGroup\. 
 
  [WS::ElastiCache::ReplicationGroup\.ClusterMode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)   
@@ -20,6 +32,16 @@ Use the `ResourcePolicy` resource to specify a resource\-based policy which enab
 
  [AWS::XRay::SamplingRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html)   
 Use the `AWS::XRay::SamplingRule` resource to specify an X\-Ray sampling rule\.  | May 11, 2023 | 
+| [New resources](AWS_LakeFormation.md) | The following resources were added:AWS::LakeFormation::DataLakeSettings\.CreateDatabaseDefaultPermissions, AWS::LakeFormation::DataLakeSettings\.CreateTableDefaultPermissions, AWS::LakeFormation::DataLakeSettings\.DataLakePrincipal, AWS::LakeFormation::DataLakeSettings ExternalDataFilteringAllowList, AWS::LakeFormation::DataLakeSettings Permissions, AWS::LakeFormation::DataLakeSettings PrincipalPermissions  
+
+ [AWS::LakeFormation::DataLakeSettings CreateDatabaseDefaultPermissions ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-createdatabasedefaultpermissions.html)   
+Use the `CreateDatabaseDefaultPermissions` resource to set the default permissions for a newly created database\. 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-createtabledefaultpermissions.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-createtabledefaultpermissions.html)   
+ Use the `CreateTableDefaultPermissions` resource to set default permissions for a newly created table\. 
+
+ [AWS::LakeFormation::DataLakeSettings ExternalDataFilteringAllowList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-externaldatafilteringallowlist.html)   
+Use `ExternalDatafilteringAllowlist` resource to list account IDs of Amazon EMR clusters that are allowed to perform data filtering\.  | May 11, 2023 | 
 | [New resource](AWS_IoT.md) | The following resource was added: AWS::IoT::ThingGroup\. 
 
  [AWS::IoT::ThingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html)   

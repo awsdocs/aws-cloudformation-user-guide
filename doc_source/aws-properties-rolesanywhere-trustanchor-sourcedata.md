@@ -28,8 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The root certificate of the AWS Private Certificate Authority specified by this ARN is used in trust validation for temporary credential requests\. Included for trust anchors of type `AWS_ACM_PCA`\.   
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1011`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `X509CertificateData`  <a name="cfn-rolesanywhere-trustanchor-sourcedata-x509certificatedata"></a>

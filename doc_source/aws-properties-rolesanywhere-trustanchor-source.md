@@ -35,5 +35,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The type of the TrustAnchor\.   
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AWS_ACM_PCA | CERTIFICATE_BUNDLE`  
+*Allowed values*: `AWS_ACM_PCA | CERTIFICATE_BUNDLE | SELF_SIGNED_REPOSITORY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

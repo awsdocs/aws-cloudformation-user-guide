@@ -1,6 +1,6 @@
 # AWS::Transfer::Server ProtocolDetails<a name="aws-properties-transfer-server-protocoldetails"></a>
 
-Protocol settings that are configured for your server\.
+The protocol settings that are configured for your server\.
 
 ## Syntax<a name="aws-properties-transfer-server-protocoldetails-syntax"></a>
 

@@ -66,7 +66,8 @@ Specifies how frequently updated findings are exported\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-guardduty-detector-tags"></a>
-The tags to be added to a new detector resource\. Each tag consists of a key and an optional value, both of which you define\.  
+Specifies tags added to a new detector resource\. Each tag consists of a key and an optional value, both of which you define\.  
+Currently, support is available only for creating and deleting a tag\. No support exists for updating the tags\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  

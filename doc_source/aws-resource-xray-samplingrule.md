@@ -3,7 +3,7 @@
 Use the `AWS::XRay::SamplingRule` resource to specify a sampling rule, which controls sampling behavior for instrumented applications\. Include a `SamplingRule` entity to create or update a sampling rule\.
 
 **Note**  
-`SamplingRule.Version` cannot be changed when updating a sampling rule, and will be ignored\.
+`SamplingRule.Version` can only be set when creating a sampling rule\. Updating the version will cause the update to fail\.
 
 Services retrieve rules with [GetSamplingRules](https://docs.aws.amazon.com/xray/latest/api/API_GetSamplingRules.html), and evaluate each rule in ascending order of *priority* for each request\. If a rule matches, the service records a trace, borrowing it from the reservoir size\. After 10 seconds, the service reports back to X\-Ray with [GetSamplingTargets](https://docs.aws.amazon.com/xray/latest/api/API_GetSamplingTargets.html) to get updated versions of each in\-use rule\. The updated rule contains a trace quota that the service can use instead of borrowing from the reservoir\.
 

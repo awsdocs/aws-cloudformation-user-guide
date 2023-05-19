@@ -1,6 +1,6 @@
 # AWS::IoTTwinMaker::Entity Relationship<a name="aws-properties-iottwinmaker-entity-relationship"></a>
 
-<a name="aws-properties-iottwinmaker-entity-relationship-description"></a>The `Relationship` property type specifies Property description not available\. for an [AWS::IoTTwinMaker::Entity](aws-resource-iottwinmaker-entity.md)\.
+The entity relationship\.
 
 ## Syntax<a name="aws-properties-iottwinmaker-entity-relationship-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iottwinmaker-entity-relationship-properties"></a>
 
 `RelationshipType`  <a name="cfn-iottwinmaker-entity-relationship-relationshiptype"></a>
-Property description not available\.  
+The relationship type\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetComponentTypeId`  <a name="cfn-iottwinmaker-entity-relationship-targetcomponenttypeid"></a>
-Property description not available\.  
+the component type Id target\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

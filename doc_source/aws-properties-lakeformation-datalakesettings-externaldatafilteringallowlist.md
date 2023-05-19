@@ -1,3 +1,3 @@
 # AWS::LakeFormation::DataLakeSettings ExternalDataFilteringAllowList<a name="aws-properties-lakeformation-datalakesettings-externaldatafilteringallowlist"></a>
 
-<a name="aws-properties-lakeformation-datalakesettings-externaldatafilteringallowlist-description"></a>The `ExternalDataFilteringAllowList` property type specifies Property description not available\. for an [AWS::LakeFormation::DataLakeSettings](aws-resource-lakeformation-datalakesettings.md)\.
+A list of the account IDs of AWS accounts with Amazon EMR clusters that are allowed to perform data filtering\.

@@ -119,19 +119,19 @@ The ID of the VPC connection that you're creating\. This ID is a unique identifi
 #### <a name="aws-resource-quicksight-vpcconnection-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Property description not available\.
+The Amazon Resource Name \(ARN\) of the VPC connection\.
 
 `CreatedTime`  <a name="CreatedTime-fn::getatt"></a>
-Property description not available\.
+The time that the VPC connection was created\.
 
 `LastUpdatedTime`  <a name="LastUpdatedTime-fn::getatt"></a>
-Property description not available\.
+The time that the VPC connection was last updated\.
 
 `NetworkInterfaces`  <a name="NetworkInterfaces-fn::getatt"></a>
-Property description not available\.
+A list of network interfaces\.
 
 `Status`  <a name="Status-fn::getatt"></a>
-Property description not available\.
+The HTTP status of the request\.
 
 `VPCId`  <a name="VPCId-fn::getatt"></a>
-Property description not available\.
+The ID of the VPC connection that you're creating\. This ID is a unique identifier for each AWS Region in an AWS account\.

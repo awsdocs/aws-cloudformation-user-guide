@@ -1,6 +1,6 @@
 # AWS::IoTTwinMaker::Entity Error<a name="aws-properties-iottwinmaker-entity-error"></a>
 
-<a name="aws-properties-iottwinmaker-entity-error-description"></a>The `Error` property type specifies Property description not available\. for an [AWS::IoTTwinMaker::Entity](aws-resource-iottwinmaker-entity.md)\.
+The entity error\.
 
 ## Syntax<a name="aws-properties-iottwinmaker-entity-error-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iottwinmaker-entity-error-properties"></a>
 
 `Code`  <a name="cfn-iottwinmaker-entity-error-code"></a>
-Property description not available\.  
+The entity error code\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Message`  <a name="cfn-iottwinmaker-entity-error-message"></a>
-Property description not available\.  
+The entity error message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

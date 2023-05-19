@@ -2,9 +2,6 @@
 
 The `AWS::LakeFormation::Resource` represents the data \( buckets and folders\) that is being registered with AWS Lake Formation\. During a stack operation, AWS CloudFormation calls the AWS Lake Formation [https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-credential-vending.html#aws-lake-formation-api-credential-vending-RegisterResource](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-credential-vending.html#aws-lake-formation-api-credential-vending-RegisterResource) API operation to register the resource\. To remove a `Resource` type, AWS CloudFormation calls the AWS Lake Formation [https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-credential-vending.html#aws-lake-formation-api-credential-vending-DeregisterResource](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-credential-vending.html#aws-lake-formation-api-credential-vending-DeregisterResource) API operation\.
 
-**Note**  
-`AWS::LakeFormation::Resource` is a legacy resource that doesn't support the `UPDATE` operation\. Changes to the resource will require an explicit deletion and recreation to apply new properties\. 
-
 ## Syntax<a name="aws-resource-lakeformation-resource-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -55,7 +52,7 @@ Designates a trusted caller, an IAM principal, by registering this caller with t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WithFederation`  <a name="cfn-lakeformation-resource-withfederation"></a>
-Property description not available\.  
+Allows Lake Formation to assume a role to access tables in a federated database\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

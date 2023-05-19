@@ -188,7 +188,8 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 #### <a name="aws-resource-synthetics-canary-return-values-fn--getatt-fn--getatt"></a>
 
 `Code.SourceLocationArn`  <a name="Code.SourceLocationArn-fn::getatt"></a>
-Property description not available\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the Lambda layer where Synthetics stores the canary script code\.  
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the canary\.

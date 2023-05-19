@@ -72,7 +72,9 @@ If you input your canary script directly into the canary instead of referring to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceLocationArn`  <a name="cfn-synthetics-canary-code-sourcelocationarn"></a>
-Property description not available\.  
+The ARN of the Lambda layer where Synthetics stores the canary script code\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-cpuoptions-properties"></a>
 
 `AmdSevSnp`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-amdsevsnp"></a>
-Indicates whether to enable the instance for AMD SEV\-SNP\. AMD SEV\-SNP is supported with M6a, R6a, and C6a instance types only\.  
+Indicates whether to enable the instance for AMD SEV\-SNP\. AMD SEV\-SNP is supported with M6a, R6a, and C6a instance types only\. For more information, see [AMD SEV\-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html)\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `disabled | enabled`  

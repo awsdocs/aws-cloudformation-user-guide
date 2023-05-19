@@ -133,19 +133,19 @@ A boolean value that specifies whether the component type is abstract\.
 A boolean value that specifies whether the component type has a schema initializer and that the schema initializer has run\.
 
 `Status`  <a name="Status-fn::getatt"></a>
-Property description not available\.
+The component type status\.
 
 `Status.Error`  <a name="Status.Error-fn::getatt"></a>
-Property description not available\.
+The component type error\.
 
 `Status.Error.Code`  <a name="Status.Error.Code-fn::getatt"></a>
-Property description not available\.
+component type error code\.
 
 `Status.Error.Message`  <a name="Status.Error.Message-fn::getatt"></a>
-Property description not available\.
+The component type error message\.
 
 `Status.State`  <a name="Status.State-fn::getatt"></a>
-Property description not available\.
+The component type state\.
 
 `UpdateDateTime`  <a name="UpdateDateTime-fn::getatt"></a>
 The component type the update time\.

@@ -51,15 +51,18 @@ The Amazon Resource Name \(ARN\) of the destination\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Distribution`  <a name="cfn-logs-subscriptionfilter-distribution"></a>
-Property description not available\.  
+The method used to distribute log data to the destination, which can be either random or grouped by log stream\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FilterName`  <a name="cfn-logs-subscriptionfilter-filtername"></a>
-Property description not available\.  
+The name of the subscription filter\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `512`  
+*Pattern*: `[^:*]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FilterPattern`  <a name="cfn-logs-subscriptionfilter-filterpattern"></a>
@@ -108,6 +111,8 @@ The following example sends log events that are associated with the `Root` user 
   "Properties" : {
     "RoleArn" : { "Fn::GetAtt" : [ "CloudWatchIAMRole", "Arn" ] },
     "LogGroupName" : { "Ref" : "LogGroup" },
+    "Distribution" : "Random",
+    "FilterName" : "filterNameString",
     "FilterPattern" : "{$.userIdentity.type = Root}",
     "DestinationArn" : { "Fn::GetAtt" : [ "KinesisStream", "Arn" ] }
   }
@@ -126,6 +131,8 @@ SubscriptionFilter:
         - "Arn"
     LogGroupName: 
       Ref: "LogGroup"
+    Distribution: "Random",
+    FilterName: "filterNameString",
     FilterPattern: "{$.userIdentity.type = Root}"
     DestinationArn: 
       Fn::GetAtt: 

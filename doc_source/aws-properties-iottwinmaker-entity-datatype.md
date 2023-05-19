@@ -1,6 +1,6 @@
 # AWS::IoTTwinMaker::Entity DataType<a name="aws-properties-iottwinmaker-entity-datatype"></a>
 
-<a name="aws-properties-iottwinmaker-entity-datatype-description"></a>The `DataType` property type specifies Property description not available\. for an [AWS::IoTTwinMaker::Entity](aws-resource-iottwinmaker-entity.md)\.
+The entity data type\.
 
 ## Syntax<a name="aws-properties-iottwinmaker-entity-datatype-syntax"></a>
 
@@ -34,31 +34,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iottwinmaker-entity-datatype-properties"></a>
 
 `AllowedValues`  <a name="cfn-iottwinmaker-entity-datatype-allowedvalues"></a>
-Property description not available\.  
+The allowed values\.  
 *Required*: No  
 *Type*: List of [DataValue](aws-properties-iottwinmaker-entity-datavalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NestedType`  <a name="cfn-iottwinmaker-entity-datatype-nestedtype"></a>
-Property description not available\.  
+The nested type\.  
 *Required*: No  
 *Type*: [DataType](#aws-properties-iottwinmaker-entity-datatype)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Relationship`  <a name="cfn-iottwinmaker-entity-datatype-relationship"></a>
-Property description not available\.  
+The relationship\.  
 *Required*: No  
 *Type*: [Relationship](aws-properties-iottwinmaker-entity-relationship.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-iottwinmaker-entity-datatype-type"></a>
-Property description not available\.  
+The entity type\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UnitOfMeasure`  <a name="cfn-iottwinmaker-entity-datatype-unitofmeasure"></a>
-Property description not available\.  
+The unit of measure\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

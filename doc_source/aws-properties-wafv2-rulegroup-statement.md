@@ -110,14 +110,31 @@ A logical rule statement used to combine other rule statements with OR logic\. Y
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RateBasedStatement`  <a name="cfn-wafv2-rulegroup-statement-ratebasedstatement"></a>
-A rate\-based rule tracks the rate of requests for each originating IP address, and triggers the rule action when the rate exceeds a limit that you specify on the number of requests in any 5\-minute time span\. You can use this to put a temporary block on requests from an IP address that is sending excessive requests\.   
- AWS WAF tracks and manages web requests separately for each instance of a rate\-based rule that you use\. For example, if you provide the same rate\-based rule settings in two web ACLs, each of the two rule statements represents a separate instance of the rate\-based rule and gets its own tracking and management by AWS WAF\. If you define a rate\-based rule inside a rule group, and then use that rule group in multiple places, each use creates a separate instance of the rate\-based rule that gets its own tracking and management by AWS WAF\.   
-When the rule action triggers, AWS WAF blocks additional requests from the IP address until the request rate falls below the limit\.  
-You can optionally nest another statement inside the rate\-based statement, to narrow the scope of the rule so that it only counts requests that match the nested statement\. For example, based on recent requests that you have seen from an attacker, you might create a rate\-based rule with a nested AND rule statement that contains the following nested statements:  
-+ An IP match statement with an IP set that specifies the address 192\.0\.2\.44\.
-+ A string match statement that searches in the User\-Agent header for the string BadBot\.
-In this rate\-based rule, you also define a rate limit\. For this example, the rate limit is 1,000\. Requests that meet the criteria of both of the nested statements are counted\. If the count exceeds 1,000 requests per five minutes, the rule action triggers\. Requests that do not meet the criteria of both of the nested statements are not counted towards the rate limit and are not affected by this rule\.  
+A rate\-based rule counts incoming requests and rate limits requests when they are coming at too fast a rate\. The rule categorizes requests according to your aggregation criteria, collects them into aggregation instances, and counts and rate limits the requests for each instance\.   
+You can specify individual aggregation keys, like IP address or HTTP method\. You can also specify aggregation key combinations, like IP address and HTTP method, or HTTP method, query argument, and cookie\.   
+Each unique set of values for the aggregation keys that you specify is a separate aggregation instance, with the value from each key contributing to the aggregation instance definition\.   
+For example, assume the rule evaluates web requests with the following IP address and HTTP method values:   
++ IP address 10\.1\.1\.1, HTTP method POST
++ IP address 10\.1\.1\.1, HTTP method GET
++ IP address 127\.0\.0\.0, HTTP method POST
++ IP address 10\.1\.1\.1, HTTP method GET
+The rule would create different aggregation instances according to your aggregation criteria, for example:   
++ If the aggregation criteria is just the IP address, then each individual address is an aggregation instance, and AWS WAF counts requests separately for each\. The aggregation instances and request counts for our example would be the following: 
+  + IP address 10\.1\.1\.1: count 3
+  + IP address 127\.0\.0\.0: count 1
++ If the aggregation criteria is HTTP method, then each individual HTTP method is an aggregation instance\. The aggregation instances and request counts for our example would be the following: 
+  + HTTP method POST: count 2
+  + HTTP method GET: count 2
++ If the aggregation criteria is IP address and HTTP method, then each IP address and each HTTP method would contribute to the combined aggregation instance\. The aggregation instances and request counts for our example would be the following: 
+  + IP address 10\.1\.1\.1, HTTP method POST: count 1
+  + IP address 10\.1\.1\.1, HTTP method GET: count 2
+  + IP address 127\.0\.0\.0, HTTP method POST: count 1
+For any n\-tuple of aggregation keys, each unique combination of values for the keys defines a separate aggregation instance, which AWS WAF counts and rate\-limits individually\.   
+You can optionally nest another statement inside the rate\-based statement, to narrow the scope of the rule so that it only counts and rate limits requests that match the nested statement\. You can use this nested scope\-down statement in conjunction with your aggregation key specifications or you can just count and rate limit all requests that match the scope\-down statement, without additional aggregation\. When you choose to just manage all requests that match a scope\-down statement, the aggregation instance is singular for the rule\.   
 You cannot nest a `RateBasedStatement` inside another statement, for example inside a `NotStatement` or `OrStatement`\. You can define a `RateBasedStatement` inside a web ACL and inside a rule group\.   
+For additional information about the options, see [Rate limiting web requests using rate\-based rules](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rate-based-rules.html) in the * AWS WAF Developer Guide*\.   
+If you only aggregate on the individual IP address or forwarded IP address, you can retrieve the list of IP addresses that AWS WAF is currently rate limiting for a rule through the API call `GetRateBasedStatementManagedKeys`\. This option is not available for other aggregation configurations\.  
+ AWS WAF tracks and manages web requests separately for each instance of a rate\-based rule that you use\. For example, if you provide the same rate\-based rule settings in two web ACLs, each of the two rule statements represents a separate instance of the rate\-based rule and gets its own tracking and management by AWS WAF\. If you define a rate\-based rule inside a rule group, and then use that rule group in multiple places, each use creates a separate instance of the rate\-based rule that gets its own tracking and management by AWS WAF\.   
 *Required*: No  
 *Type*: [RateBasedStatement](aws-properties-wafv2-rulegroup-ratebasedstatement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DirectoryId](#cfn-transfer-server-identityproviderdetails-directoryid)" : String,
   "[Function](#cfn-transfer-server-identityproviderdetails-function)" : String,
   "[InvocationRole](#cfn-transfer-server-identityproviderdetails-invocationrole)" : String,
+  "[SftpAuthenticationMethods](#cfn-transfer-server-identityproviderdetails-sftpauthenticationmethods)" : String,
   "[Url](#cfn-transfer-server-identityproviderdetails-url)" : String
 }
 ```
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DirectoryId](#cfn-transfer-server-identityproviderdetails-directoryid): String
   [Function](#cfn-transfer-server-identityproviderdetails-function): String
   [InvocationRole](#cfn-transfer-server-identityproviderdetails-invocationrole): String
+  [SftpAuthenticationMethods](#cfn-transfer-server-identityproviderdetails-sftpauthenticationmethods): String
   [Url](#cfn-transfer-server-identityproviderdetails-url): String
 ```
 
@@ -53,6 +55,12 @@ This parameter is only applicable if your `IdentityProviderType` is `API_GATEWAY
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `arn:.*role/.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SftpAuthenticationMethods`  <a name="cfn-transfer-server-identityproviderdetails-sftpauthenticationmethods"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-transfer-server-identityproviderdetails-url"></a>

@@ -10,6 +10,7 @@
 + [AWS::Connect::InstanceStorageConfig](aws-resource-connect-instancestorageconfig.md)
 + [AWS::Connect::IntegrationAssociation](aws-resource-connect-integrationassociation.md)
 + [AWS::Connect::PhoneNumber](aws-resource-connect-phonenumber.md)
++ [AWS::Connect::Prompt](aws-resource-connect-prompt.md)
 + [AWS::Connect::QuickConnect](aws-resource-connect-quickconnect.md)
 + [AWS::Connect::Rule](aws-resource-connect-rule.md)
 + [AWS::Connect::SecurityKey](aws-resource-connect-securitykey.md)

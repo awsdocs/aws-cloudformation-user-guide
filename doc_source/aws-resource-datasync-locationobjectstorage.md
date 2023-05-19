@@ -82,7 +82,12 @@ Specifies the secret key \(for example, a password\) if credentials are required
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerCertificate`  <a name="cfn-datasync-locationobjectstorage-servercertificate"></a>
-Specifies a certificate to authenticate with an object storage system that uses a private or self\-signed certificate authority \(CA\)\. You must specify a Base64\-encoded `.pem` file \(for example, `file:///home/user/.ssh/storage_sys_certificate.pem`\)\. The certificate can be up to 32768 bytes \(before Base64 encoding\)\.  
+Specifies a file with the certificates that are used to sign the object storage server's certificate \(for example, `file:///home/user/.ssh/storage_sys_certificate.pem`\)\. The file you specify must include the following:  
++ The certificate of the signing certificate authority \(CA\)
++ Any intermediate certificates
++ base64 encoding
++ A `.pem` extension
+The file can be up to 32768 bytes \(before base64 encoding\)\.  
 To use this parameter, configure `ServerProtocol` to `HTTPS`\.  
 *Required*: No  
 *Type*: String  

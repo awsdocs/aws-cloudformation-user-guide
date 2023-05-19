@@ -55,14 +55,14 @@ A wildcard with exclusions\. You must specify either a `ColumnNames` list or the
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DatabaseName`  <a name="cfn-lakeformation-datacellsfilter-databasename"></a>
-UTF\-8 string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html#aws-glue-api-regex-oneLine)\.  
+UTF\-8 string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)\.  
 A database in the Data Catalog\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-lakeformation-datacellsfilter-name"></a>
-UTF\-8 string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html#aws-glue-api-regex-oneLine)\.  
+UTF\-8 string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)\.  
 The name given by the user to the data filter cell\.  
 *Required*: Yes  
 *Type*: String  
@@ -75,14 +75,14 @@ The name given by the user to the data filter cell\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TableCatalogId`  <a name="cfn-lakeformation-datacellsfilter-tablecatalogid"></a>
-Catalog id string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html#aws-glue-api-regex-oneLine)\.  
+Catalog id string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)\.  
 The ID of the catalog to which the table belongs\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TableName`  <a name="cfn-lakeformation-datacellsfilter-tablename"></a>
- UTF\-8 string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html#aws-glue-api-regex-oneLine)\.  
+ UTF\-8 string, not less than 1 or more than 255 bytes long, matching the [single\-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)\.  
 A table in the database\.  
 *Required*: Yes  
 *Type*: String  
