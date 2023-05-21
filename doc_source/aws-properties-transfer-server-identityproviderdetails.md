@@ -58,9 +58,14 @@ This parameter is only applicable if your `IdentityProviderType` is `API_GATEWAY
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SftpAuthenticationMethods`  <a name="cfn-transfer-server-identityproviderdetails-sftpauthenticationmethods"></a>
-Property description not available\.  
+For SFTP\-enabled servers, and for custom identity providers *only*, you can specify whether to authenticate using a password, SSH key pair, or both\.  
++  `PASSWORD` \- users must provide their password to connect\.
++  `PUBLIC_KEY` \- users must provide their private key to connect\.
++  `PUBLIC_KEY_OR_PASSWORD` \- users can authenticate with either their password or their key\. This is the default value\.
++  `PUBLIC_KEY_AND_PASSWORD` \- users must provide both their private key and their password to connect\. The server checks the key first, and then if the key is valid, the system prompts for a password\. If the private key provided does not match the public key that is stored, authentication fails\.
 *Required*: No  
 *Type*: String  
+*Allowed values*: `PASSWORD | PUBLIC_KEY | PUBLIC_KEY_AND_PASSWORD | PUBLIC_KEY_OR_PASSWORD`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-transfer-server-identityproviderdetails-url"></a>

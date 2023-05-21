@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-appflow-flow-description)" : String,
       "[DestinationFlowConfigList](#cfn-appflow-flow-destinationflowconfiglist)" : [ DestinationFlowConfig, ... ],
       "[FlowName](#cfn-appflow-flow-flowname)" : String,
+      "[FlowStatus](#cfn-appflow-flow-flowstatus)" : String,
       "[KMSArn](#cfn-appflow-flow-kmsarn)" : String,
       "[MetadataCatalogConfig](#cfn-appflow-flow-metadatacatalogconfig)" : MetadataCatalogConfig,
       "[SourceFlowConfig](#cfn-appflow-flow-sourceflowconfig)" : SourceFlowConfig,
@@ -37,6 +38,7 @@ Properties:
   [DestinationFlowConfigList](#cfn-appflow-flow-destinationflowconfiglist): 
     - DestinationFlowConfig
   [FlowName](#cfn-appflow-flow-flowname): String
+  [FlowStatus](#cfn-appflow-flow-flowstatus): String
   [KMSArn](#cfn-appflow-flow-kmsarn): String
   [MetadataCatalogConfig](#cfn-appflow-flow-metadatacatalogconfig): 
     MetadataCatalogConfig
@@ -73,6 +75,13 @@ Properties:
 *Maximum*: `256`  
 *Pattern*: `[a-zA-Z0-9][\w!@#.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FlowStatus`  <a name="cfn-appflow-flow-flowstatus"></a>
+ Indicates the current status of the flow\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `Active | Deleted | Deprecated | Draft | Errored | Suspended`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KMSArn`  <a name="cfn-appflow-flow-kmsarn"></a>
  The ARN \(Amazon Resource Name\) of the Key Management Service \(KMS\) key you provide for encryption\. This is required if you do not want to use the Amazon AppFlow\-managed KMS key\. If you don't provide anything here, Amazon AppFlow uses the Amazon AppFlow\-managed KMS key\.   

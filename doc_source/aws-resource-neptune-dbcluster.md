@@ -22,8 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AssociatedRoles](#cfn-neptune-dbcluster-associatedroles)" : [ DBClusterRole, ... ],
       "[AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones)" : [ String, ... ],
       "[BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod)" : Integer,
+      "[CopyTagsToSnapshot](#cfn-neptune-dbcluster-copytagstosnapshot)" : Boolean,
       "[DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname)" : String,
+      "[DBInstanceParameterGroupName](#cfn-neptune-dbcluster-dbinstanceparametergroupname)" : String,
       "[DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname)" : String,
       "[DeletionProtection](#cfn-neptune-dbcluster-deletionprotection)" : Boolean,
       "[EnableCloudwatchLogsExports](#cfn-neptune-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
@@ -34,6 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow)" : String,
       "[RestoreToTime](#cfn-neptune-dbcluster-restoretotime)" : String,
       "[RestoreType](#cfn-neptune-dbcluster-restoretype)" : String,
+      "[ServerlessScalingConfiguration](#cfn-neptune-dbcluster-serverlessscalingconfiguration)" : ServerlessScalingConfiguration,
       "[SnapshotIdentifier](#cfn-neptune-dbcluster-snapshotidentifier)" : String,
       "[SourceDBClusterIdentifier](#cfn-neptune-dbcluster-sourcedbclusteridentifier)" : String,
       "[StorageEncrypted](#cfn-neptune-dbcluster-storageencrypted)" : Boolean,
@@ -54,8 +57,10 @@ Properties:
   [AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones): 
     - String
   [BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod): Integer
+  [CopyTagsToSnapshot](#cfn-neptune-dbcluster-copytagstosnapshot): Boolean
   [DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname): String
+  [DBInstanceParameterGroupName](#cfn-neptune-dbcluster-dbinstanceparametergroupname): String
   [DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname): String
   [DeletionProtection](#cfn-neptune-dbcluster-deletionprotection): Boolean
   [EnableCloudwatchLogsExports](#cfn-neptune-dbcluster-enablecloudwatchlogsexports): 
@@ -67,6 +72,8 @@ Properties:
   [PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow): String
   [RestoreToTime](#cfn-neptune-dbcluster-restoretotime): String
   [RestoreType](#cfn-neptune-dbcluster-restoretype): String
+  [ServerlessScalingConfiguration](#cfn-neptune-dbcluster-serverlessscalingconfiguration): 
+    ServerlessScalingConfiguration
   [SnapshotIdentifier](#cfn-neptune-dbcluster-snapshotidentifier): String
   [SourceDBClusterIdentifier](#cfn-neptune-dbcluster-sourcedbclusteridentifier): String
   [StorageEncrypted](#cfn-neptune-dbcluster-storageencrypted): Boolean
@@ -98,6 +105,12 @@ An update may require some interruption\. See [ModifyDBInstance](https://docs.aw
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CopyTagsToSnapshot`  <a name="cfn-neptune-dbcluster-copytagstosnapshot"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DBClusterIdentifier`  <a name="cfn-neptune-dbcluster-dbclusteridentifier"></a>
 Contains a user\-supplied DB cluster identifier\. This identifier is the unique key that identifies a DB cluster\.  
 *Required*: No  
@@ -107,6 +120,12 @@ Contains a user\-supplied DB cluster identifier\. This identifier is the unique 
 `DBClusterParameterGroupName`  <a name="cfn-neptune-dbcluster-dbclusterparametergroupname"></a>
 Provides the name of the DB cluster parameter group\.  
 An update may require some interruption\. See [ModifyDBInstance](https://docs.aws.amazon.com/neptune/latest/userguide/api-instances.html#ModifyDBInstance) in the Amazon Neptune User Guide for more information\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DBInstanceParameterGroupName`  <a name="cfn-neptune-dbcluster-dbinstanceparametergroupname"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -133,7 +152,7 @@ Specifies a list of log types that are enabled for export to CloudWatch Logs\.
 Indicates the database engine version\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamAuthEnabled`  <a name="cfn-neptune-dbcluster-iamauthenabled"></a>
 True if mapping of Amazon Identity and Access Management \(IAM\) accounts to database accounts is enabled, and otherwise false\.  
@@ -175,6 +194,12 @@ If a DB cluster snapshot is specified, the target DB cluster is created from the
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ServerlessScalingConfiguration`  <a name="cfn-neptune-dbcluster-serverlessscalingconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ServerlessScalingConfiguration](aws-properties-neptune-dbcluster-serverlessscalingconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotIdentifier`  <a name="cfn-neptune-dbcluster-snapshotidentifier"></a>
 Specifies the identifier for a DB cluster snapshot\. Must match the identifier of an existing snapshot\.  

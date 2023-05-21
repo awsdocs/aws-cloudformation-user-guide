@@ -16,7 +16,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DefaultResourceDiscoveryId](#cfn-ec2-ipam-defaultresourcediscoveryid)" : String,
       "[Description](#cfn-ec2-ipam-description)" : String,
       "[OperatingRegions](#cfn-ec2-ipam-operatingregions)" : [ IpamOperatingRegion, ... ],
-      "[ResourceDiscoveryAssociationCount](#cfn-ec2-ipam-resourcediscoveryassociationcount)" : Integer,
       "[Tags](#cfn-ec2-ipam-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -32,7 +31,6 @@ Properties:
   [Description](#cfn-ec2-ipam-description): String
   [OperatingRegions](#cfn-ec2-ipam-operatingregions): 
     - IpamOperatingRegion
-  [ResourceDiscoveryAssociationCount](#cfn-ec2-ipam-resourcediscoveryassociationcount): Integer
   [Tags](#cfn-ec2-ipam-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -62,12 +60,6 @@ The operating Regions for an IPAM\. Operating Regions are AWS Regions where the 
 For more information about operating Regions, see [Create an IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/create-ipam.html) in the *Amazon VPC IPAM User Guide*\.  
 *Required*: No  
 *Type*: List of [IpamOperatingRegion](aws-properties-ec2-ipam-ipamoperatingregion.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`ResourceDiscoveryAssociationCount`  <a name="cfn-ec2-ipam-resourcediscoveryassociationcount"></a>
-The IPAM's resource discovery association count\.  
-*Required*: No  
-*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-ipam-tags"></a>
@@ -103,6 +95,9 @@ The ID of the IPAM's default private scope\.
 
 `PublicDefaultScopeId`  <a name="PublicDefaultScopeId-fn::getatt"></a>
 The ID of the IPAM's default public scope\.
+
+`ResourceDiscoveryAssociationCount`  <a name="ResourceDiscoveryAssociationCount-fn::getatt"></a>
+Property description not available\.
 
 `ScopeCount`  <a name="ScopeCount-fn::getatt"></a>
 The number of scopes in the IPAM\. The scope quota is 5\.

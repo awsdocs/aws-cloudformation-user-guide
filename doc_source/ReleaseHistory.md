@@ -23,7 +23,7 @@ Use the `AWS::Connect::Prompt` resource to create a prompt for the specified Ama
 Use the `AWS::QuickSight::Topic` resource to create a topic in Amazon QuickSight\.  | May 18, 2023 | 
 | [Updated resources](AWS_ElastiCache.md) | AWS::ElastiCache::ReplicationGroup\. 
 
- [WS::ElastiCache::ReplicationGroup\.ClusterMode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)   
+ [AWS::ElastiCache::ReplicationGroup\.ClusterMode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)   
 To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to Compatible\. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode disabled\. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode configuration and set the cluster mode to Enabled\. For more information, see [Modify cluster mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/modify-cluster-mode.html)\.  | May 11, 2023 | 
 | [Updated resources](AWS_XRay.md) | Additional details were added for specifying resource\-based policies and sampling rules\. 
 

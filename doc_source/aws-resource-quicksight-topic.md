@@ -38,7 +38,7 @@ Properties:
 
 `AwsAccountId`  <a name="cfn-quicksight-topic-awsaccountid"></a>
 The ID of the AWS account that you want to create a topic in\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `12`  
 *Maximum*: `12`  
@@ -47,7 +47,7 @@ The ID of the AWS account that you want to create a topic in\.
 
 `DataSets`  <a name="cfn-quicksight-topic-datasets"></a>
 The data sets that the topic is associated with\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of [DatasetMetadata](aws-properties-quicksight-topic-datasetmetadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -60,7 +60,7 @@ The description of the topic\.
 
 `Name`  <a name="cfn-quicksight-topic-name"></a>
 The name of the topic\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -68,7 +68,7 @@ The name of the topic\.
 
 `TopicId`  <a name="cfn-quicksight-topic-topicid"></a>
 The ID for the topic\. This ID is unique per AWS Region for each AWS account\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `256`  
 *Pattern*: `^[A-Za-z0-9-_.\\+]*$`  

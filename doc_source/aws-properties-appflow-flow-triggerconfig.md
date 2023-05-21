@@ -10,7 +10,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ActivateFlowOnCreate](#cfn-appflow-flow-triggerconfig-activateflowoncreate)" : Boolean,
   "[TriggerProperties](#cfn-appflow-flow-triggerconfig-triggerproperties)" : ScheduledTriggerProperties,
   "[TriggerType](#cfn-appflow-flow-triggerconfig-triggertype)" : String
 }
@@ -19,19 +18,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appflow-flow-triggerconfig-syntax.yaml"></a>
 
 ```
-  [ActivateFlowOnCreate](#cfn-appflow-flow-triggerconfig-activateflowoncreate): Boolean
   [TriggerProperties](#cfn-appflow-flow-triggerconfig-triggerproperties): 
     ScheduledTriggerProperties
   [TriggerType](#cfn-appflow-flow-triggerconfig-triggertype): String
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-triggerconfig-properties"></a>
-
-`ActivateFlowOnCreate`  <a name="cfn-appflow-flow-triggerconfig-activateflowoncreate"></a>
-Property description not available\.  
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TriggerProperties`  <a name="cfn-appflow-flow-triggerconfig-triggerproperties"></a>
  Specifies the configuration details of a schedule\-triggered flow as defined by the user\. Currently, these settings only apply to the `Scheduled` trigger type\.   

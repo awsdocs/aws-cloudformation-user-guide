@@ -3975,6 +3975,7 @@ sponsored by Amazon.
       + [Amazon Neptune resource type reference](AWS_Neptune.md)
          + [AWS::Neptune::DBCluster](aws-resource-neptune-dbcluster.md)
             + [AWS::Neptune::DBCluster DBClusterRole](aws-properties-neptune-dbcluster-dbclusterrole.md)
+            + [AWS::Neptune::DBCluster ServerlessScalingConfiguration](aws-properties-neptune-dbcluster-serverlessscalingconfiguration.md)
          + [AWS::Neptune::DBClusterParameterGroup](aws-resource-neptune-dbclusterparametergroup.md)
          + [AWS::Neptune::DBInstance](aws-resource-neptune-dbinstance.md)
          + [AWS::Neptune::DBParameterGroup](aws-resource-neptune-dbparametergroup.md)
