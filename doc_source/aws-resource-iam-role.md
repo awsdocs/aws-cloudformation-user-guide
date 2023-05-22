@@ -149,7 +149,7 @@ Returns the Amazon Resource Name \(ARN\) for the role\. For example:
 This will return a value such as `arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF`\.
 
 `RoleId`  <a name="RoleId-fn::getatt"></a>
-Returns the stable and unique string identifying the role\. For example, `AIDAJQABLZS4A3QDU576Q`\.  
+Returns the stable and unique string identifying the role\. For example, `AROAJQABLZS4A3QDU576Q`\.  
 For more information about IDs, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM User Guide*\.
 
 ## Examples<a name="aws-resource-iam-role--examples"></a>
