@@ -74,7 +74,7 @@ service-provider::service-name::data-type-name
 + [Amazon DocumentDB \(with MongoDB compatibility\)](AWS_DocDB.md)
 + [Amazon DocumentDB \(with MongoDB compatibility\) elastic](AWS_DocDBElastic.md)
 + [Amazon DynamoDB](AWS_DynamoDB.md)
-+ [Amazon Elastic Compute Cloud](AWS_EC2.md)
++ [Amazon EC2](AWS_EC2.md)
 + [Amazon EC2 Auto Scaling](AWS_AutoScaling.md)
 + [Amazon ECR](AWS_ECR.md)
 + [Amazon ECS](AWS_ECS.md)

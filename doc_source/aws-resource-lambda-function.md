@@ -173,7 +173,7 @@ Configuration values that override the container image Dockerfile settings\. For
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyArn`  <a name="cfn-lambda-function-kmskeyarn"></a>
-The ARN of the AWS Key Management Service \(AWS KMS\) customer managed key that's used to encrypt your function's [environment variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption)\. When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is activated, this key is also used to encrypt your function's snapshot\. If you don't provide a customer managed key, Lambda uses a default service key\.  
+The ARN of the AWS Key Management Service \(AWS KMS\) customer managed key that's used to encrypt your function's [environment variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption)\. When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is activated, Lambda also uses this key is to encrypt your function's snapshot\. If you deploy your function using a container image, Lambda also uses this key to encrypt your function when it's deployed\. Note that this is not the same key that's used to protect your container image in the Amazon Elastic Container Registry \(Amazon ECR\)\. If you don't provide a customer managed key, Lambda uses a default service key\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `(arn:(aws[a-zA-Z-]*)?:[a-z0-9-.]+:.*)|()`  

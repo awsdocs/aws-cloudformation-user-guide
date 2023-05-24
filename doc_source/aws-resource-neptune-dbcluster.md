@@ -106,7 +106,7 @@ An update may require some interruption\. See [ModifyDBInstance](https://docs.aw
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CopyTagsToSnapshot`  <a name="cfn-neptune-dbcluster-copytagstosnapshot"></a>
-Property description not available\.  
+ *If set to `true`, tags are copied to any snapshot of the DB cluster that is created\.*   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -125,7 +125,12 @@ An update may require some interruption\. See [ModifyDBInstance](https://docs.aw
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBInstanceParameterGroupName`  <a name="cfn-neptune-dbcluster-dbinstanceparametergroupname"></a>
-Property description not available\.  
+The name of the DB parameter group to apply to all instances of the DB cluster\. Used only in case of a major engine version upgrade request  
+Note that when you apply a parameter group using `DBInstanceParameterGroupName`, parameter changes are applied immediately, not during the next maintenance window\.  
+
+**Constraints**
++ The DB parameter group must be in the same DB parameter group family as the target DB cluster version\.
++ The `DBInstanceParameterGroupName` parameter is only valid for major engine version upgrades\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

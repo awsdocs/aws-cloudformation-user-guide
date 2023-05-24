@@ -74,13 +74,13 @@ Information about the instance types for which to reserve the capacity\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NoRemoveEndDate`  <a name="cfn-ec2-capacityreservationfleet-noremoveenddate"></a>
-Property description not available\.  
+Used to add an end date to a Capacity Reservation Fleet that has no end date and time\. To add an end date to a Capacity Reservation Fleet, specify `true` for this paramater and specify the end date and time \(in UTC time format\) for the **EndDate** parameter\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemoveEndDate`  <a name="cfn-ec2-capacityreservationfleet-removeenddate"></a>
-Property description not available\.  
+Used to remove an end date from a Capacity Reservation Fleet that is configured to end automatically at a specific date and time\. To remove the end date from a Capacity Reservation Fleet, specify `true` for this paramater and omit the **EndDate** parameter\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -4,18 +4,18 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [New and updated resources](AWS_Transfer.md) | The following resource was updated: AWS::Transfer::Server 
-
- [AWS::Transfer::Server IdentityProviderDetails ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html)   
-Use the `SftpAuthenticationMethods` property to specify how to authenticate for SFTP\-enabled servers that use a custom identity provider\.  | May 25, 2023 | 
 | [Updated resources](AWS_NetworkFirewall.md) | The following resource was updated: AWS::NetworkFirewall::FirewallPolicy 
 
  [AWS::NetworkFirewall::FirewallPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)   
 Use the `PolicyVariables` property to set your one or more CIDRs as your `HOME_NET` if your firewall uses a centralized deployment model\.   
 Use the `IPSet` property specify list of IP addresses and address ranges, in CIDR notation for use with `IPSets`\.   | May 18, 2023 | 
+| [Updated resource](AWS_Transfer.md) | The following resource was updated: AWS::Transfer::Server 
+
+ [AWS::Transfer::Server IdentityProviderDetails ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html)   
+Use the `SftpAuthenticationMethods` property to specify how to authenticate for SFTP\-enabled servers that use a custom identity provider\.  | May 18, 2023 | 
 | [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::Prompt 
 
- [AWS::Connect::EvaluationForm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-prompt.html)   
+ [AWS::Connect::Prompt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-prompt.html)   
 Use the `AWS::Connect::Prompt` resource to create a prompt for the specified Amazon Connect instance\.   | May 18, 2023 | 
 | [New resource](AWS_QuickSight.md) | The following resource was added: AWS::QuickSight::Topic\. 
 

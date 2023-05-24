@@ -35,5 +35,5 @@ The cluster marker configuration of the geospatial point style\.
 The selected point styles \(point, cluster\) of the geospatial map\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `CLUSTER | POINT`  
+*Allowed values*: `CLUSTER | HEATMAP | POINT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1576,7 +1576,7 @@ sponsored by Amazon.
             + [AWS::DynamoDB::Table SSESpecification](aws-properties-dynamodb-table-ssespecification.md)
             + [AWS::DynamoDB::Table StreamSpecification](aws-properties-dynamodb-table-streamspecification.md)
             + [AWS::DynamoDB::Table TimeToLiveSpecification](aws-properties-dynamodb-table-timetolivespecification.md)
-      + [Amazon Elastic Compute Cloud resource type reference](AWS_EC2.md)
+      + [Amazon EC2 resource type reference](AWS_EC2.md)
          + [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md)
             + [AWS::EC2::CapacityReservation TagSpecification](aws-properties-ec2-capacityreservation-tagspecification.md)
          + [AWS::EC2::CapacityReservationFleet](aws-resource-ec2-capacityreservationfleet.md)

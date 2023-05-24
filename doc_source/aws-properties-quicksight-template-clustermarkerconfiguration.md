@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-template-clustermarkerconfiguration-properties"></a>
 
 `ClusterMarker`  <a name="cfn-quicksight-template-clustermarkerconfiguration-clustermarker"></a>
-The cluster marker that is a part of the cluster marker configuration  
+The cluster marker that is a part of the cluster marker configuration\.  
 *Required*: No  
 *Type*: [ClusterMarker](aws-properties-quicksight-template-clustermarker.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

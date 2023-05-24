@@ -1,4 +1,4 @@
-# Amazon Elastic Compute Cloud resource type reference<a name="AWS_EC2"></a>
+# Amazon EC2 resource type reference<a name="AWS_EC2"></a>
 
 **Resource types**
 + [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md)

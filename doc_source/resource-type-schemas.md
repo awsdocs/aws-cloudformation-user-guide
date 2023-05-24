@@ -19,7 +19,6 @@ To learn more about resource provider schemas, including schema format and defin
 |  US West \(Oregon\)  |  [us\-west\-2](https://schema.cloudformation.us-west-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Africa \(Cape Town\)  |  [af\-south\-1](https://schema.cloudformation.af-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Hong Kong\)  |  [ap\-east\-1](https://schema.cloudformation.ap-east-1.amazonaws.com/CloudformationSchema.zip)  | 
-|  Asia Pacific \(Mumbai\)  |  [ap\-south\-1](https://schema.cloudformation.ap-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Hyderabad\)  |  [ap\-south\-2](https://schema.cloudformation.ap-south-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Jakarta\)  |  [ap\-southeast\-3](https://schema.cloudformation.ap-southeast-3.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Melbourne\)  |  [ap\-southeast\-4](https://schema.cloudformation.ap-southeast-4.amazonaws.com/CloudformationSchema.zip)  | 
