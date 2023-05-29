@@ -26,7 +26,7 @@ This example uses a [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormat
 
 ## Creating an Amazon S3 bucket for website hosting and with a DeletionPolicy<a name="scenario-s3-bucket-website"></a>
 
-This example creates a bucket as a website\. The AccessControl property is set to the canned ACL PublicRead \(public read permissions are required for buckets set up for website hosting\)\. Because this bucket resource has a [DeletionPolicy attribute](aws-attribute-deletionpolicy.md) set to `Retain`, AWS CloudFormation will not delete this bucket when it deletes the stack\. The Output section uses `Fn::GetAtt` to retrieve the WebsiteURL attribute and DomainName attribute of the S3Bucket resource\.
+This example creates a bucket as a website\. The AccessControl property is set to Private, otherwise the BucketPolicy will fail to be created\. Because this bucket resource has a [DeletionPolicy attribute](aws-attribute-deletionpolicy.md) set to `Retain`, AWS CloudFormation will not delete this bucket when it deletes the stack\. The Output section uses `Fn::GetAtt` to retrieve the WebsiteURL attribute and DomainName attribute of the S3Bucket resource\.
 
 ### JSON<a name="quickref-s3-example-2.json"></a>
 
@@ -37,76 +37,79 @@ This example creates a bucket as a website\. The AccessControl property is set t
  4.         "S3Bucket": {
  5.             "Type": "AWS::S3::Bucket",
  6.             "Properties": {
- 7.                 "AccessControl": "PublicRead",
- 8.                 "WebsiteConfiguration": {
- 9.                     "IndexDocument": "index.html",
-10.                     "ErrorDocument": "error.html"
-11.                 }
-12.             },
-13.             "DeletionPolicy": "Retain"
-14.         },
-15.         "BucketPolicy": {
-16.             "Type": "AWS::S3::BucketPolicy",
-17.             "Properties": {
-18.                 "PolicyDocument": {
-19.                     "Id": "MyPolicy",
-20.                     "Version": "2012-10-17",
-21.                     "Statement": [
-22.                         {
-23.                             "Sid": "PublicReadForGetBucketObjects",
-24.                             "Effect": "Allow",
-25.                             "Principal": "*",
-26.                             "Action": "s3:GetObject",
-27.                             "Resource": {
-28.                                 "Fn::Join": [
-29.                                     "",
-30.                                     [
-31.                                         "arn:aws:s3:::",
-32.                                         {
-33.                                             "Ref": "S3Bucket"
-34.                                         },
-35.                                         "/*"
-36.                                     ]
-37.                                 ]
-38.                             }
-39.                         }
-40.                     ]
-41.                 },
-42.                 "Bucket": {
-43.                     "Ref": "S3Bucket"
-44.                 }
-45.             }
-46.         }
-47.     },
-48.     "Outputs": {
-49.         "WebsiteURL": {
-50.             "Value": {
-51.                 "Fn::GetAtt": [
-52.                     "S3Bucket",
-53.                     "WebsiteURL"
-54.                 ]
-55.             },
-56.             "Description": "URL for website hosted on S3"
-57.         },
-58.         "S3BucketSecureURL": {
-59.             "Value": {
-60.                 "Fn::Join": [
-61.                     "",
-62.                     [
-63.                         "https://",
-64.                         {
-65.                             "Fn::GetAtt": [
-66.                                 "S3Bucket",
-67.                                 "DomainName"
-68.                             ]
-69.                         }
-70.                     ]
-71.                 ]
-72.             },
-73.             "Description": "Name of S3 bucket to hold website content"
-74.         }
-75.     }
-76. }
+ 7.                 "AccessControl": "Private",
+ 8.                 "PublicAccessBlockConfiguration": {
+ 9.                     "BlockPublicPolicy": false
+10.                 },
+11.                 "WebsiteConfiguration": {
+12.                     "IndexDocument": "index.html",
+13.                     "ErrorDocument": "error.html"
+14.                 }
+15.             },
+16.             "DeletionPolicy": "Retain"
+17.         },
+18.         "BucketPolicy": {
+19.             "Type": "AWS::S3::BucketPolicy",
+20.             "Properties": {
+21.                 "PolicyDocument": {
+22.                     "Id": "MyPolicy",
+23.                     "Version": "2012-10-17",
+24.                     "Statement": [
+25.                         {
+26.                             "Sid": "PublicReadForGetBucketObjects",
+27.                             "Effect": "Allow",
+28.                             "Principal": "*",
+29.                             "Action": "s3:GetObject",
+30.                             "Resource": {
+31.                                 "Fn::Join": [
+32.                                     "",
+33.                                     [
+34.                                         "arn:aws:s3:::",
+35.                                         {
+36.                                             "Ref": "S3Bucket"
+37.                                         },
+38.                                         "/*"
+39.                                     ]
+40.                                 ]
+41.                             }
+42.                         }
+43.                     ]
+44.                 },
+45.                 "Bucket": {
+46.                     "Ref": "S3Bucket"
+47.                 }
+48.             }
+49.         }
+50.     },
+51.     "Outputs": {
+52.         "WebsiteURL": {
+53.             "Value": {
+54.                 "Fn::GetAtt": [
+55.                     "S3Bucket",
+56.                     "WebsiteURL"
+57.                 ]
+58.             },
+59.             "Description": "URL for website hosted on S3"
+60.         },
+61.         "S3BucketSecureURL": {
+62.             "Value": {
+63.                 "Fn::Join": [
+64.                     "",
+65.                     [
+66.                         "https://",
+67.                         {
+68.                             "Fn::GetAtt": [
+69.                                 "S3Bucket",
+70.                                 "DomainName"
+71.                             ]
+72.                         }
+73.                     ]
+74.                 ]
+75.             },
+76.             "Description": "Name of S3 bucket to hold website content"
+77.         }
+78.     }
+79. }
 ```
 
 ### YAML<a name="quickref-s3-example-2.yaml"></a>
@@ -117,42 +120,44 @@ This example creates a bucket as a website\. The AccessControl property is set t
  3.   S3Bucket:
  4.     Type: 'AWS::S3::Bucket'
  5.     Properties:
- 6.       AccessControl: PublicRead
- 7.       WebsiteConfiguration:
- 8.         IndexDocument: index.html
- 9.         ErrorDocument: error.html
-10.     DeletionPolicy: Retain
-11.   BucketPolicy:
-12.     Type: 'AWS::S3::BucketPolicy'
-13.     Properties:
-14.       PolicyDocument:
-15.         Id: MyPolicy
-16.         Version: 2012-10-17
-17.         Statement:
-18.           - Sid: PublicReadForGetBucketObjects
-19.             Effect: Allow
-20.             Principal: '*'
-21.             Action: 's3:GetObject'
-22.             Resource: !Join 
-23.               - ''
-24.               - - 'arn:aws:s3:::'
-25.                 - !Ref S3Bucket
-26.                 - /*
-27.       Bucket: !Ref S3Bucket
-28. Outputs:
-29.   WebsiteURL:
-30.     Value: !GetAtt 
-31.       - S3Bucket
-32.       - WebsiteURL
-33.     Description: URL for website hosted on S3
-34.   S3BucketSecureURL:
-35.     Value: !Join 
-36.       - ''
-37.       - - 'https://'
-38.         - !GetAtt 
-39.           - S3Bucket
-40.           - DomainName
-41.     Description: Name of S3 bucket to hold website content
+ 6.       AccessControl: Private
+ 7.       PublicAccessBlockConfiguration:
+ 8.         BlockPublicPolicy: false
+ 9.       WebsiteConfiguration:
+10.         IndexDocument: index.html
+11.         ErrorDocument: error.html
+12.     DeletionPolicy: Retain
+13.   BucketPolicy:
+14.     Type: 'AWS::S3::BucketPolicy'
+15.     Properties:
+16.       PolicyDocument:
+17.         Id: MyPolicy
+18.         Version: 2012-10-17
+19.         Statement:
+20.           - Sid: PublicReadForGetBucketObjects
+21.             Effect: Allow
+22.             Principal: '*'
+23.             Action: 's3:GetObject'
+24.             Resource: !Join 
+25.               - ''
+26.               - - 'arn:aws:s3:::'
+27.                 - !Ref S3Bucket
+28.                 - /*
+29.       Bucket: !Ref S3Bucket
+30. Outputs:
+31.   WebsiteURL:
+32.     Value: !GetAtt 
+33.       - S3Bucket
+34.       - WebsiteURL
+35.     Description: URL for website hosted on S3
+36.   S3BucketSecureURL:
+37.     Value: !Join 
+38.       - ''
+39.       - - 'https://'
+40.         - !GetAtt 
+41.           - S3Bucket
+42.           - DomainName
+43.     Description: Name of S3 bucket to hold website content
 ```
 
 ## Creating a static website using a custom domain<a name="scenario-s3-bucket-website-customdomain"></a>
@@ -189,7 +194,10 @@ For more information about using a custom domain, see [Setting up a static websi
             "Type": "AWS::S3::Bucket",
             "Properties": {
                 "BucketName" : {"Ref":"RootDomainName"},                
-                "AccessControl": "PublicRead",
+                "AccessControl": "Private",
+                "PublicAccessBlockConfiguration": {
+                     "BlockPublicPolicy": false
+                },
                 "WebsiteConfiguration": {
                     "IndexDocument":"index.html",
                     "ErrorDocument":"404.html"
@@ -287,7 +295,9 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Ref RootDomainName
-      AccessControl: PublicRead
+      AccessControl: Private
+      PublicAccessBlockConfiguration:
+        BlockPublicPolicy: false
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: 404.html
