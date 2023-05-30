@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ProjectDescription](#cfn-sagemaker-project-projectdescription)" : String,
       "[ProjectName](#cfn-sagemaker-project-projectname)" : String,
+      "[ServiceCatalogProvisionedProductDetails](#cfn-sagemaker-project-servicecatalogprovisionedproductdetails)" : ServiceCatalogProvisionedProductDetails,
       "[ServiceCatalogProvisioningDetails](#cfn-sagemaker-project-servicecatalogprovisioningdetails)" : ServiceCatalogProvisioningDetails,
       "[Tags](#cfn-sagemaker-project-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,6 +28,8 @@ Type: AWS::SageMaker::Project
 Properties: 
   [ProjectDescription](#cfn-sagemaker-project-projectdescription): String
   [ProjectName](#cfn-sagemaker-project-projectname): String
+  [ServiceCatalogProvisionedProductDetails](#cfn-sagemaker-project-servicecatalogprovisionedproductdetails): 
+    ServiceCatalogProvisionedProductDetails
   [ServiceCatalogProvisioningDetails](#cfn-sagemaker-project-servicecatalogprovisioningdetails): 
     ServiceCatalogProvisioningDetails
   [Tags](#cfn-sagemaker-project-tags): 
@@ -51,6 +54,12 @@ The name of the project\.
 *Maximum*: `32`  
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,31}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ServiceCatalogProvisionedProductDetails`  <a name="cfn-sagemaker-project-servicecatalogprovisionedproductdetails"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ServiceCatalogProvisionedProductDetails](aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceCatalogProvisioningDetails`  <a name="cfn-sagemaker-project-servicecatalogprovisioningdetails"></a>
 The product ID and provisioning artifact ID to provision a service catalog\. For information, see [What is AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)\.  
@@ -84,15 +93,6 @@ The ID of the project\. This ID is prepended to all entities associated with thi
 
 `ProjectStatus`  <a name="ProjectStatus-fn::getatt"></a>
 The status of the project\.
-
-`ServiceCatalogProvisionedProductDetails`  <a name="ServiceCatalogProvisionedProductDetails-fn::getatt"></a>
-The product ID and status message of the projet as a service catalog provisioned product\. For information, see [What is AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)\.
-
-`ServiceCatalogProvisionedProductDetails.ProvisionedProductId`  <a name="ServiceCatalogProvisionedProductDetails.ProvisionedProductId-fn::getatt"></a>
-Property description not available\.
-
-`ServiceCatalogProvisionedProductDetails.ProvisionedProductStatusMessage`  <a name="ServiceCatalogProvisionedProductDetails.ProvisionedProductStatusMessage-fn::getatt"></a>
-Property description not available\.
 
 ## Examples<a name="aws-resource-sagemaker-project--examples"></a>
 

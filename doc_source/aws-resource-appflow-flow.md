@@ -77,10 +77,14 @@ Properties:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FlowStatus`  <a name="cfn-appflow-flow-flowstatus"></a>
- Indicates the current status of the flow\.   
+Sets the status of the flow\. You can specify one of the following values:    
+Active  
+The flow runs based on the trigger settings that you defined\. Active scheduled flows run as scheduled, and active event\-triggered flows run when the specified change event occurs\. However, active on\-demand flows run only when you manually start them by using Amazon AppFlow\.  
+Suspended  
+You can use this option to deactivate an active flow\. Scheduled and event\-triggered flows will cease to run until you reactive them\. This value only affects scheduled and event\-triggered flows\. It has no effect for on\-demand flows\.
+If you omit the FlowStatus parameter, Amazon AppFlow creates the flow with a default status\. The default status for on\-demand flows is Active\. The default status for scheduled and event\-triggered flows is Draft, which means they’re not yet active\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `Active | Deleted | Deprecated | Draft | Errored | Suspended`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KMSArn`  <a name="cfn-appflow-flow-kmsarn"></a>

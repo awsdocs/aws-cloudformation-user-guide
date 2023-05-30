@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ClientToken](#cfn-grafana-workspace-clienttoken)" : String,
       "[DataSources](#cfn-grafana-workspace-datasources)" : [ String, ... ],
       "[Description](#cfn-grafana-workspace-description)" : String,
+      "[GrafanaVersion](#cfn-grafana-workspace-grafanaversion)" : String,
       "[Name](#cfn-grafana-workspace-name)" : String,
       "[NetworkAccessControl](#cfn-grafana-workspace-networkaccesscontrol)" : NetworkAccessControl,
       "[NotificationDestinations](#cfn-grafana-workspace-notificationdestinations)" : [ String, ... ],
@@ -43,6 +44,7 @@ Properties:
   [DataSources](#cfn-grafana-workspace-datasources): 
     - String
   [Description](#cfn-grafana-workspace-description): String
+  [GrafanaVersion](#cfn-grafana-workspace-grafanaversion): String
   [Name](#cfn-grafana-workspace-name): String
   [NetworkAccessControl](#cfn-grafana-workspace-networkaccesscontrol): 
     NetworkAccessControl
@@ -95,6 +97,15 @@ The user\-defined description of the workspace\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `2048`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`GrafanaVersion`  <a name="cfn-grafana-workspace-grafanaversion"></a>
+Specifies the version of Grafana to support in the new workspace\.  
+Supported values are `8.4` and `9.4`\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-grafana-workspace-name"></a>
@@ -161,7 +172,8 @@ The name of the AWS CloudFormation stack set that is used to generate IAM roles 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcConfiguration`  <a name="cfn-grafana-workspace-vpcconfiguration"></a>
-The configuration for connecting to data sources in a private VPC \(Amazon Virtual Private Cloud\)\.  
+The configuration settings for an Amazon VPC that contains data sources for your Grafana workspace to connect to\.  
+Connecting to a private VPC is not yet available in the Asia Pacific \(Seoul\) Region \(ap\-northeast\-2\)\.
 *Required*: No  
 *Type*: [VpcConfiguration](aws-properties-grafana-workspace-vpcconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -193,7 +205,7 @@ The URL that users can use to access the Grafana console in the workspace\.
 Type: String
 
 `GrafanaVersion`  <a name="GrafanaVersion-fn::getatt"></a>
-The version of Grafana supported in this workspace\.  
+Specifies the version of Grafana supported by this workspace\.  
 Type: String
 
 `Id`  <a name="Id-fn::getatt"></a>
@@ -261,6 +273,7 @@ Create an Amazon Managed Grafana workspace using CloudFormation
                 "Description": "Amazon Grafana Workspace",
                 "AuthenticationProviders": ["SAML"],
                 "PermissionType": "CUSTOMER_MANAGED",
+                "GrafanaVersion": "9.4",
                 "RoleArn": {
                     "Fn::GetAtt": [
                         "AmazonGrafanaWorkspaceIAMRole",
@@ -352,6 +365,7 @@ Resources:
       AuthenticationProviders:
         - SAML
       PermissionType: CUSTOMER_MANAGED
+      GrafanaVersion: '9.4'
       RoleArn: !GetAtt 
         - AmazonGrafanaWorkspaceIAMRole
         - Arn

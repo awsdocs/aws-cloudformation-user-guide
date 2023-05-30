@@ -3,7 +3,7 @@
 Create a new pool of dedicated IP addresses\. A pool can include one or more dedicated IP addresses that are associated with your AWS account\. You can associate a pool with a configuration set\. When you send an email that uses that configuration set, the message is sent from one of the addresses in the associated pool\.
 
 **Important**  
-You can't delete dedicated IP pools that have a `STANDARD` scaling mode and one or more dedicated IP addresses\. This constraint doesn't apply to dedicated IP pools that have a `MANAGED` scaling mode\.
+You can't delete dedicated IP pools that have a `STANDARD` scaling mode with one or more dedicated IP addresses\. This constraint doesn't apply to dedicated IP pools that have a `MANAGED` scaling mode\.
 
 ## Syntax<a name="aws-resource-ses-dedicatedippool-syntax"></a>
 
@@ -42,11 +42,12 @@ The name of the dedicated IP pool that the IP address is associated with\.
 The type of scaling mode\.  
 The following options are available:  
 + `STANDARD` \- The customer controls which IPs are part of the dedicated IP pool\.
-+ `MANAGED` \- The reputation and number of IPs is automatically managed by Amazon SES\.
++ `MANAGED` \- The reputation and number of IPs are automatically managed by Amazon SES\.
 The `STANDARD` option is selected by default if no value is specified\.  
+Updating *ScalingMode* doesn't require a replacement if you're updating its value from `STANDARD` to `MANAGED`\. However, updating *ScalingMode* from `MANAGED` to `STANDARD` is not supported\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 ## Return values<a name="aws-resource-ses-dedicatedippool-return-values"></a>
 

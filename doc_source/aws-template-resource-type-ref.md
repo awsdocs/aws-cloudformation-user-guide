@@ -206,6 +206,7 @@ service-provider::service-name::data-type-name
 + [AWS Security Hub](AWS_SecurityHub.md)
 + [Amazon Simple Email Service](AWS_SES.md)
 + [Amazon SimpleDB](AWS_SDB.md)
++ [AWS Shield](AWS_Shield.md)
 + [AWS Signer](AWS_Signer.md)
 + [AWS SimSpace Weaver](AWS_SimSpaceWeaver.md)
 + [Amazon Simple Notification Service](AWS_SNS.md)

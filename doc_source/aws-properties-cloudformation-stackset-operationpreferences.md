@@ -73,7 +73,6 @@ Conditional: You must specify either `MaxConcurrentCount` or `MaxConcurrentPerce
 
 `RegionConcurrencyType`  <a name="cfn-cloudformation-stackset-operationpreferences-regionconcurrencytype"></a>
 The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time\.  
-*Allowed values*: `SEQUENTIAL` \| `PARALLEL`  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `PARALLEL | SEQUENTIAL`  

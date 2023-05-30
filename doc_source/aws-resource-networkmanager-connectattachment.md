@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CoreNetworkId](#cfn-networkmanager-connectattachment-corenetworkid)" : String,
       "[EdgeLocation](#cfn-networkmanager-connectattachment-edgelocation)" : String,
       "[Options](#cfn-networkmanager-connectattachment-options)" : ConnectAttachmentOptions,
+      "[ProposedSegmentChange](#cfn-networkmanager-connectattachment-proposedsegmentchange)" : ProposedSegmentChange,
       "[Tags](#cfn-networkmanager-connectattachment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TransportAttachmentId](#cfn-networkmanager-connectattachment-transportattachmentid)" : String
     }
@@ -32,6 +33,8 @@ Properties:
   [EdgeLocation](#cfn-networkmanager-connectattachment-edgelocation): String
   [Options](#cfn-networkmanager-connectattachment-options): 
     ConnectAttachmentOptions
+  [ProposedSegmentChange](#cfn-networkmanager-connectattachment-proposedsegmentchange): 
+    ProposedSegmentChange
   [Tags](#cfn-networkmanager-connectattachment-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransportAttachmentId](#cfn-networkmanager-connectattachment-transportattachmentid): String
@@ -59,6 +62,12 @@ Options for connecting an attachment\.
 *Required*: Yes  
 *Type*: [ConnectAttachmentOptions](aws-properties-networkmanager-connectattachment-connectattachmentoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ProposedSegmentChange`  <a name="cfn-networkmanager-connectattachment-proposedsegmentchange"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ProposedSegmentChange](aws-properties-networkmanager-connectattachment-proposedsegmentchange.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-networkmanager-connectattachment-tags"></a>
 Property description not available\.  
@@ -108,18 +117,6 @@ The timestamp when the Connect attachment was created\.
 
 `OwnerAccountId`  <a name="OwnerAccountId-fn::getatt"></a>
 The ID of the Connect attachment owner\.
-
-`ProposedSegmentChange`  <a name="ProposedSegmentChange-fn::getatt"></a>
-Property description not available\.
-
-`ProposedSegmentChange.AttachmentPolicyRuleNumber`  <a name="ProposedSegmentChange.AttachmentPolicyRuleNumber-fn::getatt"></a>
-Property description not available\.
-
-`ProposedSegmentChange.SegmentName`  <a name="ProposedSegmentChange.SegmentName-fn::getatt"></a>
-Property description not available\.
-
-`ProposedSegmentChange.Tags`  <a name="ProposedSegmentChange.Tags-fn::getatt"></a>
-Property description not available\.
 
 `ResourceArn`  <a name="ResourceArn-fn::getatt"></a>
 The resource ARN for the Connect attachment\.

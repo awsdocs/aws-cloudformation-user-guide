@@ -104,17 +104,17 @@ The following example creates a named query\.
 
 ```
 {
-  "Resources": {
-    "AthenaNamedQuery": {
-      "Type": "AWS::Athena::NamedQuery",
-      "Properties": {
-        "Database": "swfnetadata",
-        "Description": "A query that selects all aggregated data",
-        "Name": "MostExpensiveWorkflow",
-        "QueryString": "SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10"
-      }
+    "Resources": {
+        "AthenaNamedQuery": {
+            "Type": "AWS::Athena::NamedQuery",
+            "Properties": {
+                "Database": "swfmetadata",
+                "Description": "A query that selects all aggregated data",
+                "Name": "MostExpensiveWorkflow",
+                "QueryString": "SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10"
+            }
+        }
     }
-  }
 }
 ```
 
@@ -127,7 +127,7 @@ Resources:
   AthenaNamedQuery:
     Type: AWS::Athena::NamedQuery
     Properties:
-      Database: "swfnetadata"
+      Database: "swfmetadata"
       Description: "A query that selects all aggregated data"
       Name: "MostExpensiveWorkflow"
       QueryString: >

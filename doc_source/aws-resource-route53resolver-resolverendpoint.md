@@ -61,6 +61,7 @@ Indicates whether the Resolver endpoint allows inbound or outbound DNS queries:
 
 `IpAddresses`  <a name="cfn-route53resolver-resolverendpoint-ipaddresses"></a>
 The subnets and IP addresses in your VPC that DNS queries originate from \(for outbound endpoints\) or that you forward DNS queries to \(for inbound endpoints\)\. The subnet ID uniquely identifies a VPC\.   
+Even though the minimum is 1, Route 53 requires that you create at least two\.
 *Required*: Yes  
 *Type*: List of [IpAddressRequest](aws-properties-route53resolver-resolverendpoint-ipaddressrequest.md)  
 *Maximum*: `20`  

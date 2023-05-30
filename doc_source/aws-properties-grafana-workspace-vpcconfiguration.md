@@ -3,7 +3,8 @@
 The configuration settings for an Amazon VPC that contains data sources for your Grafana workspace to connect to\.
 
 **Note**  
-Provided `securityGroupIds` and `subnetIds` must be part of the same VPC\.
+Provided `securityGroupIds` and `subnetIds` must be part of the same VPC\.  
+Connecting to a private VPC is not yet available in the Asia Pacific \(Seoul\) Region \(ap\-northeast\-2\)\.
 
 ## Syntax<a name="aws-properties-grafana-workspace-vpcconfiguration-syntax"></a>
 

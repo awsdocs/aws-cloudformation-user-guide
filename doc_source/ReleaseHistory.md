@@ -4,6 +4,44 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added resource](AWS_Cognito.md) | The following resource was added: AWS::Cognito::IdentityPoolPrincipalTag 
+
+ [AWS::Cognito::IdentityPoolPrincipalTag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolprincipaltag.html)   
+AWS::Cognito::IdentityPoolPrincipalTag is a map of identity pool user claims to principal tags that you want to apply to your user's temporary session\.  | May 26, 2023 | 
+| [Updated resource](AWS_Grafana.md) | The following resource was updated: `AWS::Grafana::Workspace`\. 
+
+ [AWS::Grafana::Workspace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html)   
+Use the `GrafanaVersion` property of the `AWS::Grafana::Workspace` resource to configure the version of Grafana to support in your Amazon Managed Grafana workspace\.  | May 25, 2023 | 
+| [Updated resource](AWS_OpenSearchService.md) | The following resource was updated: AWS::OpenSearchService::Domain\. 
+
+ [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)   
+Use the `MultiAZWithStandbyEnabled` property within `ClusterConfig` to deploy a domain with the Multi\-AZ with Standby option\.  | May 25, 2023 | 
+| [Updated resource](AWS_SES.md) | The `ScalingMode` property was revised for the AWS::SES::DedicatedIpPool resource: 
+
+ [AWS::SES::DedicatedIpPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-dedicatedippool.html#cfn-ses-dedicatedippool-scalingmode)   
+The `ScalingMode` property changed its *Update requires:* definition from *Replacement* to *Some interruptions*\.  | May 25, 2023 | 
+| [New resources](AWS_AppSync.md) | The following resources were updated: AWS::AppSync::GraphQLApi 
+
+ [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)   
+Use the `ApiType` property to specify whether the type of a GraphQL API is standard or merged\.  
+Use the `MergedApiExecutionRoleArn` property to specify the service role ARN for a merged API\.  
+Use the `OwnerContact` property to specify the owner contact information for an API resource\. The following resources were added: AWS::AppSync::SourceApiAssociation 
+
+ [AWS::AppSync::SourceApiAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-sourceapiassociation.html)   
+Use the `AWS::AppSync::SourceApiAssociation` resource to describe the configuration of a source API\.  | May 25, 2023 | 
+| [New resources](AWS_Shield.md) | The following resources were added: `AWS::Shield::DRTAccess`, `AWS::Shield::ProactiveEngagement`, `AWS::Shield::Protection`, and `AWS::Shield::ProtectionGroup`\. 
+
+ [AWS::Shield::DRTAccess](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-drtaccess.html)   
+Use the `AWS::Shield::DRTAccess` resource to give permissions to the Shield response team \(SRT\) to access your account and your resource protections\. This permits them to help you mitigate distributed denial of service \(DDoS\) attacks\. 
+
+ [AWS::Shield::ProactiveEngagement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-proactiveengagement.html)   
+Use the `AWS::Shield::ProactiveEngagement` resource to enable and disable authorization for the the Shield Response Team \(SRT\) to contact you and to initiate proactive support for potential attacks\. 
+
+ [AWS::Shield::Protection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-protection.html)   
+Use the `AWS::Shield::Protection` resource to enable Shield Advanced protections for a specific AWS resource\.  
+
+ [AWS::Shield::ProtectionGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-protectiongroup.html)   
+Use the `AWS::Shield::ProtectionGroup` resource to combine the management of selected protected resources, to improve the accuracy of detection and reduce false positives\.   | May 25, 2023 | 
 | [Updated resources](AWS_NetworkFirewall.md) | The following resource was updated: AWS::NetworkFirewall::FirewallPolicy 
 
  [AWS::NetworkFirewall::FirewallPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)   
@@ -4302,6 +4340,10 @@ The `AWS::CodeGuruProfiler::ProfilingGroup.AgentPermissions` property shows the 
 
  [AWS::EC2::ClientVpnEndpoint ClientAuthenticationRequest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.html)   
 Use the `FederatedAuthentication` property to specify an IAM SAML identity provider for your Client VPN endpoint\.  | May 28, 2020 | 
+| [Updated resource](AWS_Glue.md) | The following resource was updated: AWS::Glue::DataQualityRuleset 
+
+ [AWS::Glue::Ruleset](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-dataqualityruleset.html)   
+Use `AWS::Glue::Ruleset` to specify data quality rulesets\.  | May 23, 2020 | 
 | [Updated resource](AWS_CodeBuild.md) | The following resource was updated: AWS::CodeBuild::ReportGroup 
 
  [AWS::CodeBuild::ReportGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html)   

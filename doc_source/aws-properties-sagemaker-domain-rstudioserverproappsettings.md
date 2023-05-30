@@ -1,6 +1,6 @@
 # AWS::SageMaker::Domain RStudioServerProAppSettings<a name="aws-properties-sagemaker-domain-rstudioserverproappsettings"></a>
 
-A collection of settings that configure user interaction with the `RStudioServerPro` app\. `RStudioServerProAppSettings` cannot be updated\. The `RStudioServerPro` app must be deleted and a new one created to make any changes\.
+A collection of settings that configure user interaction with the `RStudioServerPro` app\.
 
 ## Syntax<a name="aws-properties-sagemaker-domain-rstudioserverproappsettings-syntax"></a>
 

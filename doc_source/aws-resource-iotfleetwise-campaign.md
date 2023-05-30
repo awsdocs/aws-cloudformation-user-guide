@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Action](#cfn-iotfleetwise-campaign-action)" : String,
       "[CollectionScheme](#cfn-iotfleetwise-campaign-collectionscheme)" : CollectionScheme,
       "[Compression](#cfn-iotfleetwise-campaign-compression)" : String,
+      "[DataDestinationConfigs](#cfn-iotfleetwise-campaign-datadestinationconfigs)" : [ DataDestinationConfig, ... ],
       "[DataExtraDimensions](#cfn-iotfleetwise-campaign-dataextradimensions)" : [ String, ... ],
       "[Description](#cfn-iotfleetwise-campaign-description)" : String,
       "[DiagnosticsMode](#cfn-iotfleetwise-campaign-diagnosticsmode)" : String,
@@ -43,6 +44,8 @@ Properties:
   [CollectionScheme](#cfn-iotfleetwise-campaign-collectionscheme): 
     CollectionScheme
   [Compression](#cfn-iotfleetwise-campaign-compression): String
+  [DataDestinationConfigs](#cfn-iotfleetwise-campaign-datadestinationconfigs): 
+    - DataDestinationConfig
   [DataExtraDimensions](#cfn-iotfleetwise-campaign-dataextradimensions): 
     - String
   [Description](#cfn-iotfleetwise-campaign-description): String
@@ -80,6 +83,12 @@ Property description not available\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DataDestinationConfigs`  <a name="cfn-iotfleetwise-campaign-datadestinationconfigs"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [DataDestinationConfig](aws-properties-iotfleetwise-campaign-datadestinationconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataExtraDimensions`  <a name="cfn-iotfleetwise-campaign-dataextradimensions"></a>
 Property description not available\.  

@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineType](#cfn-m2-application-enginetype)" : String,
       "[KmsKeyId](#cfn-m2-application-kmskeyid)" : String,
       "[Name](#cfn-m2-application-name)" : String,
+      "[RoleArn](#cfn-m2-application-rolearn)" : String,
       "[Tags](#cfn-m2-application-tags)" : {Key: Value, ...}
     }
 }
@@ -35,6 +36,7 @@ Properties:
   [EngineType](#cfn-m2-application-enginetype): String
   [KmsKeyId](#cfn-m2-application-kmskeyid): String
   [Name](#cfn-m2-application-name): String
+  [RoleArn](#cfn-m2-application-rolearn): String
   [Tags](#cfn-m2-application-tags): 
     Key: Value
 ```
@@ -74,6 +76,12 @@ The name of the application\.
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `[A-Za-z0-9][A-Za-z0-9_\-]{1,59}`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`RoleArn`  <a name="cfn-m2-application-rolearn"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-m2-application-tags"></a>

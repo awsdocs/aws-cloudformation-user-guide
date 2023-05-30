@@ -215,7 +215,7 @@ The type of predefined worker that is allocated when a job runs\. Accepts a valu
 + For the `G.2X` worker type, each worker maps to 2 DPU \(8 vCPU, 32 GB of memory, 128 GB disk\), and provides 1 executor per worker\. We recommend this worker type for memory\-intensive jobs\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `G.025X | G.1X | G.2X | Standard`  
+*Allowed values*: `G.025X | G.1X | G.2X | G.4X | G.8X | Standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-glue-job-return-values"></a>

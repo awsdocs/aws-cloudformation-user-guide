@@ -13,11 +13,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppSync::GraphQLApi",
   "Properties" : {
       "[AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders)" : [ AdditionalAuthenticationProvider, ... ],
+      "[ApiType](#cfn-appsync-graphqlapi-apitype)" : String,
       "[AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype)" : String,
       "[LambdaAuthorizerConfig](#cfn-appsync-graphqlapi-lambdaauthorizerconfig)" : LambdaAuthorizerConfig,
       "[LogConfig](#cfn-appsync-graphqlapi-logconfig)" : LogConfig,
+      "[MergedApiExecutionRoleArn](#cfn-appsync-graphqlapi-mergedapiexecutionrolearn)" : String,
       "[Name](#cfn-appsync-graphqlapi-name)" : String,
       "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig)" : OpenIDConnectConfig,
+      "[OwnerContact](#cfn-appsync-graphqlapi-ownercontact)" : String,
       "[Tags](#cfn-appsync-graphqlapi-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig)" : UserPoolConfig,
       "[Visibility](#cfn-appsync-graphqlapi-visibility)" : String,
@@ -33,14 +36,17 @@ Type: AWS::AppSync::GraphQLApi
 Properties: 
   [AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders): 
     - AdditionalAuthenticationProvider
+  [ApiType](#cfn-appsync-graphqlapi-apitype): String
   [AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype): String
   [LambdaAuthorizerConfig](#cfn-appsync-graphqlapi-lambdaauthorizerconfig): 
     LambdaAuthorizerConfig
   [LogConfig](#cfn-appsync-graphqlapi-logconfig): 
     LogConfig
+  [MergedApiExecutionRoleArn](#cfn-appsync-graphqlapi-mergedapiexecutionrolearn): String
   [Name](#cfn-appsync-graphqlapi-name): String
   [OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig): 
     OpenIDConnectConfig
+  [OwnerContact](#cfn-appsync-graphqlapi-ownercontact): String
   [Tags](#cfn-appsync-graphqlapi-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig): 
@@ -56,6 +62,14 @@ A list of additional authentication providers for the `GraphqlApi` API\.
 *Required*: No  
 *Type*: List of [AdditionalAuthenticationProvider](aws-properties-appsync-graphqlapi-additionalauthenticationprovider.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ApiType`  <a name="cfn-appsync-graphqlapi-apitype"></a>
+The value that indicates whether the GraphQL API is a standard API \(`GRAPHQL`\) or merged API \(`MERGED`\)\.  
+The following values are valid:   
+`GRAPHQL | MERGED`  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AuthenticationType`  <a name="cfn-appsync-graphqlapi-authenticationtype"></a>
 Security configuration for your GraphQL API\. For allowed values \(such as `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, or `AWS_LAMBDA`\), see [Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html) in the *AWS AppSync Developer Guide*\.  
@@ -75,6 +89,12 @@ The Amazon CloudWatch Logs configuration\.
 *Type*: [LogConfig](aws-properties-appsync-graphqlapi-logconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MergedApiExecutionRoleArn`  <a name="cfn-appsync-graphqlapi-mergedapiexecutionrolearn"></a>
+The AWS Identity and Access Management service role ARN for a merged API\. The AppSync service assumes this role on behalf of the Merged API to validate access to source APIs at runtime and to prompt the `AUTO_MERGE` to update the merged API endpoint with the source API changes automatically\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-appsync-graphqlapi-name"></a>
 The API name\.  
 *Required*: Yes  
@@ -85,6 +105,13 @@ The API name\.
 The OpenID Connect configuration\.  
 *Required*: No  
 *Type*: [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OwnerContact`  <a name="cfn-appsync-graphqlapi-ownercontact"></a>
+The owner contact information for an API resource\.  
+This field accepts any string input with a length of 0 \- 256 characters\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appsync-graphqlapi-tags"></a>

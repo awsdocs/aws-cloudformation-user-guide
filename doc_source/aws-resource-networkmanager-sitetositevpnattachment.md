@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::NetworkManager::SiteToSiteVpnAttachment",
   "Properties" : {
       "[CoreNetworkId](#cfn-networkmanager-sitetositevpnattachment-corenetworkid)" : String,
+      "[ProposedSegmentChange](#cfn-networkmanager-sitetositevpnattachment-proposedsegmentchange)" : ProposedSegmentChange,
       "[Tags](#cfn-networkmanager-sitetositevpnattachment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpnConnectionArn](#cfn-networkmanager-sitetositevpnattachment-vpnconnectionarn)" : String
     }
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::NetworkManager::SiteToSiteVpnAttachment
 Properties: 
   [CoreNetworkId](#cfn-networkmanager-sitetositevpnattachment-corenetworkid): String
+  [ProposedSegmentChange](#cfn-networkmanager-sitetositevpnattachment-proposedsegmentchange): 
+    ProposedSegmentChange
   [Tags](#cfn-networkmanager-sitetositevpnattachment-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpnConnectionArn](#cfn-networkmanager-sitetositevpnattachment-vpnconnectionarn): String
@@ -37,6 +40,12 @@ Property description not available\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ProposedSegmentChange`  <a name="cfn-networkmanager-sitetositevpnattachment-proposedsegmentchange"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ProposedSegmentChange](aws-properties-networkmanager-sitetositevpnattachment-proposedsegmentchange.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-networkmanager-sitetositevpnattachment-tags"></a>
 Property description not available\.  
@@ -89,18 +98,6 @@ The Region where the core network edge is located\.
 
 `OwnerAccountId`  <a name="OwnerAccountId-fn::getatt"></a>
 The ID of the site\-to\-site VPN attachment owner\.
-
-`ProposedSegmentChange`  <a name="ProposedSegmentChange-fn::getatt"></a>
-Property description not available\.
-
-`ProposedSegmentChange.AttachmentPolicyRuleNumber`  <a name="ProposedSegmentChange.AttachmentPolicyRuleNumber-fn::getatt"></a>
-Property description not available\.
-
-`ProposedSegmentChange.SegmentName`  <a name="ProposedSegmentChange.SegmentName-fn::getatt"></a>
-Property description not available\.
-
-`ProposedSegmentChange.Tags`  <a name="ProposedSegmentChange.Tags-fn::getatt"></a>
-Property description not available\.
 
 `ResourceArn`  <a name="ResourceArn-fn::getatt"></a>
 The resource ARN for the site\-to\-site VPN attachment\.

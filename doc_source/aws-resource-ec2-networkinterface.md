@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::NetworkInterface",
   "Properties" : {
       "[Description](#cfn-ec2-networkinterface-description)" : String,
+      "[EnablePrimaryIpv6](#cfn-ec2-networkinterface-enableprimaryipv6)" : Boolean,
       "[GroupSet](#cfn-ec2-networkinterface-groupset)" : [ String, ... ],
       "[InterfaceType](#cfn-ec2-networkinterface-interfacetype)" : String,
       "[Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount)" : Integer,
@@ -33,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::NetworkInterface
 Properties: 
   [Description](#cfn-ec2-networkinterface-description): String
+  [EnablePrimaryIpv6](#cfn-ec2-networkinterface-enableprimaryipv6): Boolean
   [GroupSet](#cfn-ec2-networkinterface-groupset): 
     - String
   [InterfaceType](#cfn-ec2-networkinterface-interfacetype): String
@@ -56,6 +58,12 @@ A description for the network interface\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnablePrimaryIpv6`  <a name="cfn-ec2-networkinterface-enableprimaryipv6"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `GroupSet`  <a name="cfn-ec2-networkinterface-groupset"></a>
 The security group IDs associated with this network interface\.  
