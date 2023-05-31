@@ -34,14 +34,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  Type of compression to be used on the input coming from the imported table\.   
 *Required*: No  
 *Type*: String  
-*Allowed values*: `GZIP | NONE | ZSTD`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InputFormat`  <a name="cfn-dynamodb-table-importsourcespecification-inputformat"></a>
  The format of the source data\. Valid values for `ImportFormat` are `CSV`, `DYNAMODB_JSON` or `ION`\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `CSV | DYNAMODB_JSON | ION`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InputFormatOptions`  <a name="cfn-dynamodb-table-importsourcespecification-inputformatoptions"></a>

@@ -57,7 +57,7 @@ This property currently supports integer types\. Support for long values is plan
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomerContentEncryptionConfiguration`  <a name="cfn-athena-workgroup-workgroupconfiguration-customercontentencryptionconfiguration"></a>
-Specifies the KMS key that is used to encrypt the user's data stores in Athena\.  
+Specifies the KMS key that is used to encrypt the user's data stores in Athena\. This setting does not apply to Athena SQL workgroups\.  
 *Required*: No  
 *Type*: [CustomerContentEncryptionConfiguration](aws-properties-athena-workgroup-customercontentencryptionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

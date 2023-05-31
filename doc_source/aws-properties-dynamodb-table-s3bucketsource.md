@@ -30,20 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The S3 bucket that is being imported from\.   
 *Required*: Yes  
 *Type*: String  
-*Maximum*: `255`  
-*Pattern*: `^[a-z0-9A-Z]+[\.\-\w]*[a-z0-9A-Z]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3BucketOwner`  <a name="cfn-dynamodb-table-s3bucketsource-s3bucketowner"></a>
  The account number of the S3 bucket that is being imported from\. If the bucket is owned by the requester this is optional\.   
 *Required*: No  
 *Type*: String  
-*Pattern*: `[0-9]{12}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3KeyPrefix`  <a name="cfn-dynamodb-table-s3bucketsource-s3keyprefix"></a>
  The key prefix shared by all S3 Objects that are being imported\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

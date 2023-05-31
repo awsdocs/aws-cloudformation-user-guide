@@ -1,6 +1,6 @@
 # AWS::Athena::WorkGroup CustomerContentEncryptionConfiguration<a name="aws-properties-athena-workgroup-customercontentencryptionconfiguration"></a>
 
-Specifies the KMS key that is used to encrypt the user's data stores in Athena\.
+Specifies the KMS key that is used to encrypt the user's data stores in Athena\. This setting does not apply to Athena SQL workgroups\.
 
 ## Syntax<a name="aws-properties-athena-workgroup-customercontentencryptionconfiguration-syntax"></a>
 
