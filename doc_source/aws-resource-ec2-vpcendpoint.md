@@ -141,95 +141,392 @@ The ID of the VPC endpoint\.
 
 ### Create an interface endpoint<a name="aws-resource-ec2-vpcendpoint--examples--Create_an_interface_endpoint"></a>
 
-The following example specifies an interface endpoint that connects the specified VPC and Amazon CloudWatch Logs in the specified Region\.
+The following example creates an interface endpoint for Amazon CloudWatch Logs in the current Region\. Traffic to CloudWatch Logs from any subnet in the Availability Zones that contain `subnetA` and `subnetB` automatically traverses the interface endpoint\.
+
+You can customize the properties of `myVPC`, `subnetA`, `subnetB`, and `mySecurityGroup` as needed\. Alternatively, specify the IDs of existing resources in `VpcId`, `SubnetIds`, and `SecurityGroupIds`\.
+
+#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--Create_an_interface_endpoint--yaml"></a>
+
+```
+Resources:
+  CWLInterfaceEndpoint:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      VpcEndpointType: 'Interface'
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.logs'
+      VpcId: !Ref myVPC
+      SubnetIds: 
+        - !Ref subnetA
+        - !Ref subnetB
+      SecurityGroupIds:
+        - !Ref mySecurityGroup
+  myVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: 'Name'
+          Value: 'myVPC'
+  subnetA:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref myVPC
+      CidrBlock: '10.0.1.0/24'
+      AvailabilityZone: !Select [ 0, !GetAZs ]
+  subnetB: 
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref myVPC
+      CidrBlock: '10.0.2.0/24'
+      AvailabilityZone: !Select [ 1, !GetAZs ]
+  mySecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: 'Allow HTTPS traffic from the VPC'
+      VpcId: !Ref myVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: !GetAtt myVPC.CidrBlock
+```
 
 #### JSON<a name="aws-resource-ec2-vpcendpoint--examples--Create_an_interface_endpoint--json"></a>
 
 ```
 {
-   "cwlInterfaceEndpoint": {
-      "Type": "AWS::EC2::VPCEndpoint",
-      "Properties": {
-         "ServiceName": {"Fn::Sub": "com.amazonaws.${AWS::Region}.logs"},
-         "SecurityGroupIds": [
-            {"Ref": "mySecurityGroup"}
-         ],
-         "SubnetIds": [
-            {"Ref": "subnetA"},
-            {"Ref": "subnetB"}
-         ],
-         "VpcEndpointType": "Interface",
-         "VpcId": {"Ref": "myVPC"}
-      }
-   }
+    "Resources": {
+        "CWLInterfaceEndpoint": {
+            "Type": "AWS::EC2::VPCEndpoint",
+            "Properties": {
+                "VpcEndpointType": "Interface",
+                "ServiceName": {
+                    "Fn::Sub": "com.amazonaws.${AWS::Region}.logs"
+                },
+                "VpcId": {
+                    "Ref": "myVPC"
+                },
+                "SubnetIds": [
+                    {
+                        "Ref": "subnetA"
+                    },
+                    {
+                        "Ref": "subnetB"
+                    }
+                ],
+                "SecurityGroupIds": [
+                    {
+                        "Ref": "mySecurityGroup"
+                    }
+                ]
+            }
+        },
+        "myVPC": {
+            "Type": "AWS::EC2::VPC",
+            "Properties": {
+                "CidrBlock": "10.0.0.0/16",
+                "EnableDnsSupport": true,
+                "EnableDnsHostnames": true,
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "myVPC"
+                    }
+                ]
+            }
+        },
+        "subnetA": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "myVPC"
+                },
+                "CidrBlock": "10.0.1.0/24",
+                "AvailabilityZone": {
+                    "Fn::Select": [
+                        0,
+                        {
+                            "Fn::GetAZs": ""
+                        }
+                    ]
+                }
+            }
+        },
+        "subnetB": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "myVPC"
+                },
+                "CidrBlock": "10.0.2.0/24",
+                "AvailabilityZone": {
+                    "Fn::Select": [
+                        1,
+                        {
+                            "Fn::GetAZs": ""
+                        }
+                    ]
+                }
+            }
+        },
+        "mySecurityGroup": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "GroupDescription": "Allow HTTPS traffic from the VPC",
+                "VpcId": {
+                    "Ref": "myVPC"
+                },
+                "SecurityGroupIngress": [
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": 443,
+                        "ToPort": 443,
+                        "CidrIp": {
+                            "Fn::GetAtt": [
+                                "myVPC",
+                                "CidrBlock"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
 }
-```
-
-#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--Create_an_interface_endpoint--yaml"></a>
-
-```
-cwlInterfaceEndpoint:
-  Type: 'AWS::EC2::VPCEndpoint'
-  Properties:
-    VpcEndpointType: Interface
-    ServiceName: !Sub 'com.amazonaws.${AWS::Region}.logs'
-    VpcId: !Ref myVPC
-    SubnetIds: 
-      - !Ref subnetA
-      - !Ref subnetB
-    SecurityGroupIds:
-      - !Ref mySecurityGroup
 ```
 
 ### Create a gateway endpoint<a name="aws-resource-ec2-vpcendpoint--examples--Create_a_gateway_endpoint"></a>
 
-The following example specifies a gateway endpoint that connects the specified VPC and Amazon S3 in the specified Region\. The endpoint policy allows only the s3:GetObject action on the specified bucket\. Traffic to Amazon S3 from the subnets that are associated with the specified route tables is automatically routed through the gateway endpoint\.
+The following example creates a gateway endpoint that connects the VPC defined by `myVPC` with Amazon S3 in the current Region\. The endpoint policy allows only the `s3:GetObject` action on the specified bucket\. Traffic to Amazon S3 from the subnets that are associated with the route table specified in `RouteTableIds` is automatically routed through the gateway endpoint\.
+
+You can customize the properties of `myVPC`, `mySubnet`, `myRouteTable`, and `mySubnetRouteTableAssociation` as needed\. Alternatively, specify the IDs of existing resources in `VpcId` and `RouteTableIds`\.
+
+#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--Create_a_gateway_endpoint--yaml"></a>
+
+```
+Resources:
+  S3GatewayEndpoint:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      VpcEndpointType: 'Gateway'
+      VpcId: !Ref myVPC
+      ServiceName: !Sub 'com.amazonaws.${AWS::Region}.s3'
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action:
+              - 's3:GetObject'
+            Resource:
+              - 'arn:aws:s3:::mybucket/*'
+      RouteTableIds:
+        - !Ref myRouteTable
+  myVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: '10.0.0.0/16'
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: 'Name'
+          Value: 'myVPC'
+  mySubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref myVPC
+      CidrBlock: 10.0.0.0/24
+      AvailabilityZone: !Select [ 0, !GetAZs ]
+  myRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref myVPC
+  mySubnetRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties: 
+      SubnetId: !Ref mySubnet
+      RouteTableId: !Ref myRouteTable
+```
 
 #### JSON<a name="aws-resource-ec2-vpcendpoint--examples--Create_a_gateway_endpoint--json"></a>
 
 ```
 {
-   "S3GatewayEndpoint": {
-      "Type": "AWS::EC2::VPCEndpoint",
-      "Properties": { 
-         "PolicyDocument": {
-            "Version": "2012-10-17",
-            "Statement": [{
-               "Effect": "Allow",
-               "Principal": "*",
-               "Action": ["s3:GetObject"],
-               "Resource": ["arn:aws:s3:::examplebucket/*"]
-            }]
-         },
-         "RouteTableIds": [
-            {"Ref": "routetableA"}, 
-            {"Ref": "routetableB"}
-         ],
-         "ServiceName": {"Fn::Sub": "com.amazonaws.${AWS::Region}.s3"},
-         "VpcId": {"Ref": "VPCID"}
-      }
-   }
+    "Resources": {
+        "S3GatewayEndpoint": {
+            "Type": "AWS::EC2::VPCEndpoint",
+            "Properties": {
+                "VpcEndpointType": "Gateway",
+                "VpcId": {
+                    "Ref": "myVPC"
+                },
+                "ServiceName": {
+                    "Fn::Sub": "com.amazonaws.${AWS::Region}.s3"
+                },
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": "*",
+                            "Action": [
+                                "s3:GetObject"
+                            ],
+                            "Resource": [
+                                "arn:aws:s3:::mybucket/*"
+                            ]
+                        }
+                    ]
+                },
+                "RouteTableIds": [
+                    {
+                        "Ref": "myRouteTable"
+                    }
+                ]
+            }
+        },
+        "myVPC": {
+            "Type": "AWS::EC2::VPC",
+            "Properties": {
+                "CidrBlock": "10.0.0.0/16",
+                "EnableDnsSupport": true,
+                "EnableDnsHostnames": true,
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "myVPC"
+                    }
+                ]
+            }
+        },
+        "mySubnet": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "myVPC"
+                },
+                "CidrBlock": "10.0.0.0/24",
+                "AvailabilityZone": {
+                    "Fn::Select": [
+                        1,
+                        {
+                            "Fn::GetAZs": null
+                        }
+                    ]
+                }
+            }
+        },
+        "myRouteTable": {
+            "Type": "AWS::EC2::RouteTable",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "myVPC"
+                }
+            }
+        },
+        "mySubnetRouteTableAssociation": {
+            "Type": "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties": {
+                "SubnetId": {
+                    "Ref": "mySubnet"
+                },
+                "RouteTableId": {
+                    "Ref": "myRouteTable"
+                }
+            }
+        }
+    }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--Create_a_gateway_endpoint--yaml"></a>
+### Create a Gateway Load Balancer endpoint<a name="aws-resource-ec2-vpcendpoint--examples--Create_a_Gateway_Load_Balancer_endpoint"></a>
+
+The following example creates a Gateway Load Balancer endpoint that connects `myVPC` with the specified endpoint service in the current Region\.
+
+You can customize the properties of `myVPC` and `mySubnet` as needed\. Alternatively, specify the IDs of existing resources in `VpcId` and `SubnetIds`\.
+
+#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--Create_a_Gateway_Load_Balancer_endpoint--yaml"></a>
 
 ```
-S3GatewayEndpoint:
-  Type: 'AWS::EC2::VPCEndpoint'
-  Properties:
-    PolicyDocument:
-      Version: 2012-10-17
-      Statement:
-        - Effect: Allow
-          Principal: '*'
-          Action:
-            - 's3:GetObject'
-          Resource:
-            - 'arn:aws:s3:::examplebucket/*'
-    RouteTableIds:
-      - !Ref routetableA
-      - !Ref routetableB
-    ServiceName: !Sub 'com.amazonaws.${AWS::Region}.s3'
-    VpcId: !Ref VPCID
+Resources:
+  GWLBEndpoint:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      VpcEndpointType: 'GatewayLoadBalancer'
+      ServiceName: 'com.amazonaws.vpce.${AWS::Region}.vpce-svc-123123a1c43abc123'
+      VpcId: !Ref myVPC
+      SubnetIds: 
+        - !Ref mySubnet
+  myVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: '10.0.0.0/16'
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: 'Name'
+          Value: 'myVPC'
+  mySubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref myVPC
+      CidrBlock: '10.0.0.0/24'
+      AvailabilityZone: !Select [ 1, !GetAZs ]
+```
+
+#### JSON<a name="aws-resource-ec2-vpcendpoint--examples--Create_a_Gateway_Load_Balancer_endpoint--json"></a>
+
+```
+{
+    "Resources": {
+        "GWLBEndpoint": {
+            "Type": "AWS::EC2::VPCEndpoint",
+            "Properties": {
+                "VpcEndpointType": "GatewayLoadBalancer",
+                "ServiceName": "com.amazonaws.vpce.${AWS::Region}.vpce-svc-123123a1c43abc123",
+                "VpcId": {
+                    "Ref": "myVPC"
+                },
+                "SubnetIds": [
+                    {
+                        "Ref": "mySubnet"
+                    }
+                ]
+            }
+        },
+        "myVPC": {
+            "Type": "AWS::EC2::VPC",
+            "Properties": {
+                "CidrBlock": "10.0.0.0/16",
+                "EnableDnsSupport": true,
+                "EnableDnsHostnames": true,
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "myVPC"
+                    }
+                ]
+            }
+        },
+        "mySubnet": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "myVPC"
+                },
+                "CidrBlock": "10.0.0.0/24",
+                "AvailabilityZone": {
+                    "Fn::Select": [
+                        1,
+                        {
+                            "Fn::GetAZs": ""
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
 ```

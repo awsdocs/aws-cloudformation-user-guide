@@ -49,9 +49,9 @@ The parts of the headers to match with the rule inspection criteria\. If you spe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OversizeHandling`  <a name="cfn-wafv2-rulegroup-headers-oversizehandling"></a>
-What AWS WAF should do if the headers of the request are larger than AWS WAF can inspect\. AWS WAF does not support inspecting the entire contents of request headers when they exceed 8 KB \(8192 bytes\) or 200 total headers\. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to AWS WAF\.   
+What AWS WAF should do if the headers of the request are more numerous or larger than AWS WAF can inspect\. AWS WAF does not support inspecting the entire contents of request headers when they exceed 8 KB \(8192 bytes\) or 200 total headers\. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to AWS WAF\.   
 The options for oversize handling are the following:  
-+  `CONTINUE` \- Inspect the headers normally, according to the rule inspection criteria\. 
++  `CONTINUE` \- Inspect the available headers normally, according to the rule inspection criteria\. 
 +  `MATCH` \- Treat the web request as matching the rule statement\. AWS WAF applies the rule action to the request\.
 +  `NO_MATCH` \- Treat the web request as not matching the rule statement\.
 *Required*: Yes  

@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CloudTrail::EventDataStore",
   "Properties" : {
       "[AdvancedEventSelectors](#cfn-cloudtrail-eventdatastore-advancedeventselectors)" : [ AdvancedEventSelector, ... ],
+      "[IngestionEnabled](#cfn-cloudtrail-eventdatastore-ingestionenabled)" : Boolean,
       "[KmsKeyId](#cfn-cloudtrail-eventdatastore-kmskeyid)" : String,
       "[MultiRegionEnabled](#cfn-cloudtrail-eventdatastore-multiregionenabled)" : Boolean,
       "[Name](#cfn-cloudtrail-eventdatastore-name)" : String,
@@ -31,6 +32,7 @@ Type: AWS::CloudTrail::EventDataStore
 Properties: 
   [AdvancedEventSelectors](#cfn-cloudtrail-eventdatastore-advancedeventselectors): 
     - AdvancedEventSelector
+  [IngestionEnabled](#cfn-cloudtrail-eventdatastore-ingestionenabled): Boolean
   [KmsKeyId](#cfn-cloudtrail-eventdatastore-kmskeyid): String
   [MultiRegionEnabled](#cfn-cloudtrail-eventdatastore-multiregionenabled): Boolean
   [Name](#cfn-cloudtrail-eventdatastore-name): String
@@ -50,6 +52,12 @@ For more information about how to use advanced event selectors to include AWS Co
 For more information about how to use advanced event selectors to include non\-AWS events in your event data store, see [Create an integration to log events from outside AWS](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration) in the CloudTrail User Guide\.  
 *Required*: No  
 *Type*: List of [AdvancedEventSelector](aws-properties-cloudtrail-eventdatastore-advancedeventselector.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IngestionEnabled`  <a name="cfn-cloudtrail-eventdatastore-ingestionenabled"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-cloudtrail-eventdatastore-kmskeyid"></a>

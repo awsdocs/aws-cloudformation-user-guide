@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotfleetwise-decodermanifest-obdsignal-properties"></a>
 
 `BitMaskLength`  <a name="cfn-iotfleetwise-decodermanifest-obdsignal-bitmasklength"></a>
-The number of bits to mask in a message\.  
+\(Optional\) The number of bits to mask in a message\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -47,7 +47,7 @@ The number of bits to mask in a message\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BitRightShift`  <a name="cfn-iotfleetwise-decodermanifest-obdsignal-bitrightshift"></a>
-The number of positions to shift bits in the message\.  
+\(Optional\) The number of positions to shift bits in the message\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -62,7 +62,7 @@ The length of a message\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Offset`  <a name="cfn-iotfleetwise-decodermanifest-obdsignal-offset"></a>
-Indicates where data appears in the message\.  
+The offset used to calculate the signal value\. Combined with scaling, the calculation is `value = raw_value * scaling + offset`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

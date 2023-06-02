@@ -87,7 +87,7 @@ This parameter isn't applicable to jobs that are running on Fargate resources\. 
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `DesiredvCpus`  <a name="cfn-batch-computeenvironment-computeresources-desiredvcpus"></a>
-The desired number of Amazon EC2 vCPUS in the compute environment\. AWS Batch modifies this value between the minimum and maximum values based on job queue demand\.  
+The desired number of vCPUS in the compute environment\. AWS Batch modifies this value between the minimum and maximum values based on job queue demand\.  
 This parameter isn't applicable to jobs that are running on Fargate resources\. Don't specify it\.
  AWS Batch doesn't support changing the desired number of vCPUs of an existing compute environment\. Don't specify this parameter for compute environments using Amazon EKS clusters\.
 When you update the `desiredvCpus` setting, the value must be between the `minvCpus` and `maxvCpus` values\.   
@@ -156,7 +156,7 @@ With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` allocation strate
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinvCpus`  <a name="cfn-batch-computeenvironment-computeresources-minvcpus"></a>
-The minimum number of Amazon EC2 vCPUs that an environment should maintain \(even if the compute environment is `DISABLED`\)\.  
+The minimum number of vCPUs that an environment should maintain \(even if the compute environment is `DISABLED`\)\.  
 This parameter isn't applicable to jobs that are running on Fargate resources\. Don't specify it\.
 *Required*: No  
 *Type*: Integer  

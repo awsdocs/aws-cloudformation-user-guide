@@ -35,14 +35,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotfleetwise-decodermanifest-obdinterface-properties"></a>
 
 `DtcRequestIntervalSeconds`  <a name="cfn-iotfleetwise-decodermanifest-obdinterface-dtcrequestintervalseconds"></a>
-The maximum number message requests per diagnostic trouble code per second\.  
+\(Optional\) The maximum number message requests per diagnostic trouble code per second\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HasTransmissionEcu`  <a name="cfn-iotfleetwise-decodermanifest-obdinterface-hastransmissionecu"></a>
-Whether the vehicle has a transmission control module \(TCM\)\.  
+\(Optional\) Whether the vehicle has a transmission control module \(TCM\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -56,7 +56,7 @@ The name of the interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ObdStandard`  <a name="cfn-iotfleetwise-decodermanifest-obdinterface-obdstandard"></a>
-The standard OBD II PID\.  
+\(Optional\) The standard OBD II PID\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -64,7 +64,7 @@ The standard OBD II PID\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PidRequestIntervalSeconds`  <a name="cfn-iotfleetwise-decodermanifest-obdinterface-pidrequestintervalseconds"></a>
-The maximum number message requests per second\.  
+\(Optional\) The maximum number message requests per second\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -78,7 +78,7 @@ The ID of the message requesting vehicle data\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseExtendedIds`  <a name="cfn-iotfleetwise-decodermanifest-obdinterface-useextendedids"></a>
-Whether to use extended IDs in the message\.  
+\(Optional\) Whether to use extended IDs in the message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

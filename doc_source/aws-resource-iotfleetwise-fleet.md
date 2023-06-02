@@ -40,7 +40,7 @@ Properties:
 ## Properties<a name="aws-resource-iotfleetwise-fleet-properties"></a>
 
 `Description`  <a name="cfn-iotfleetwise-fleet-description"></a>
-A brief description of the fleet\.  
+\(Optional\) A brief description of the fleet\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -64,24 +64,33 @@ The ARN of the signal catalog associated with the fleet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-iotfleetwise-fleet-tags"></a>
-Property description not available\.  
+\(Optional\) Metadata that can be used to manage the fleet\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-iotfleetwise-fleet-return-values"></a>
 
 ### Ref<a name="aws-resource-iotfleetwise-fleet-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Id\.
+
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-iotfleetwise-fleet-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iotfleetwise-fleet-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Property description not available\.
+ The Amazon Resource Name \(ARN\) of the created fleet\. 
 
 `CreationTime`  <a name="CreationTime-fn::getatt"></a>
-Property description not available\.
+ The time the fleet was created in seconds since epoch \(January 1, 1970 at midnight UTC time\)\. 
 
 `LastModificationTime`  <a name="LastModificationTime-fn::getatt"></a>
-Property description not available\.
+ The time the fleet was last updated, in seconds since epoch \(January 1, 1970 at midnight UTC time\)\. 

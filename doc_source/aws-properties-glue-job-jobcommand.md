@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Name](#cfn-glue-job-jobcommand-name)" : String,
   "[PythonVersion](#cfn-glue-job-jobcommand-pythonversion)" : String,
+  "[Runtime](#cfn-glue-job-jobcommand-runtime)" : String,
   "[ScriptLocation](#cfn-glue-job-jobcommand-scriptlocation)" : String
 }
 ```
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Name](#cfn-glue-job-jobcommand-name): String
   [PythonVersion](#cfn-glue-job-jobcommand-pythonversion): String
+  [Runtime](#cfn-glue-job-jobcommand-runtime): String
   [ScriptLocation](#cfn-glue-job-jobcommand-scriptlocation): String
 ```
 
@@ -37,6 +39,12 @@ The Python version being used to execute a Python shell job\. Allowed values are
 *Required*: No  
 *Type*: String  
 *Pattern*: `^([2-3]|3[.]9)$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Runtime`  <a name="cfn-glue-job-jobcommand-runtime"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScriptLocation`  <a name="cfn-glue-job-jobcommand-scriptlocation"></a>

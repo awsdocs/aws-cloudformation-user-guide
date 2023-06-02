@@ -38,7 +38,7 @@ If set to `ACTIVE`, traffic is forwarded to this route’s service after the rou
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AppendSourcePath`  <a name="cfn-refactorspaces-route-uripathrouteinput-appendsourcepath"></a>
-Property description not available\.  
+If set to `true`, this option appends the source path to the service URL endpoint\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

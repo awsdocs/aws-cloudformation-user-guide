@@ -72,6 +72,7 @@ An operator that includes events that match the last few characters of the event
   +  `AWS::Cognito::IdentityPool` 
   +  `AWS::DynamoDB::Stream` 
   +  `AWS::EC2::Snapshot` 
+  +  `AWS::EMRWAL::Workspace` 
   +  `AWS::FinSpace::Environment` 
   +  `AWS::Glue::Table` 
   +  `AWS::GuardDuty::Detector` 
@@ -107,6 +108,9 @@ An operator that includes events that match the last few characters of the event
 
   When `resources.type` equals `AWS::EC2::Snapshot`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:ec2:<region>::snapshot/<snapshot_ID>` 
+
+  When `resources.type` equals `AWS::EMRWAL::Workspace`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:emrwal:<region>::workspace/<workspace_name>` 
 
   When `resources.type` equals `AWS::FinSpace::Environment`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:finspace:<region>:<account_ID>:environment/<environment_ID>` 

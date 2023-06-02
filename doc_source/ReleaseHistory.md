@@ -4,6 +4,30 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_CustomerProfiles.md) | The following resource was updated: AWS::CustomerProfiles::CalculatedAttributeDefinition\. 
+
+ [AWS::CustomerProfiles::CalculatedAttributeDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html)  
+Use the `AWS::CustomerProfiles::CalculatedAttributeDefinition` resource to create a new integration in Amazon Connect Customer Profiles Service\.  | June 1, 2023 | 
+| [Updated resource](AWS_Detective.md) | The following resource was added: AWS::Detective::Graph 
+
+[AWS::Detective::Graph](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)  
+`AutoEnableMembers` indicates whether to automatically enable new organization accounts as member accounts in the organization behavior graph\.  | June 1, 2023 | 
+| [Updated resource](AWS_IoTFleetWise.md) | The following resource was updated: AWS::IoTFleetWise::Campaign 
+
+ [AWS::IoTFleetWise::Campaign](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html)   
+The `AWS::IoTFleetWise::Campaign` resource now supports sending vehicle data to Amazon S3 or Amazon Timestream\.  | June 1, 2023 | 
+| [Updated resource](AWS_RefactorSpaces.md) | The following resource was updated: AWS::RefactorSpaces::Route\. 
+
+ [AWS::RefactorSpaces::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-route.html)   
+In the [UriPathRouteInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-route-uripathrouteinput.html) property type, use the `AppendSourcePath` property to specify whether to append the source path to the service URL endpoint\.  | June 1, 2023 | 
+| [Updated resource](AWS_WorkSpaces.md) | The following resource was updated: `AWS::WorkSpaces::ConnectionAlias` 
+
+ [AWS::WorkSpaces::ConnectionAlias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)   
+The `ConnectionAliasAssociation` property was removed from the `AWS::WorkSpaces::ConnectionAlias` resource\.  | June 1, 2023 | 
+| [New resource](AWS_Detective.md) | The following resource was updated: AWS::Detective::OrganizationAdmin 
+
+[AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)  
+Designates the Detective administrator account for the organization in the current region\.   | June 1, 2023 | 
 | [Added resource](AWS_Cognito.md) | The following resource was added: AWS::Cognito::IdentityPoolPrincipalTag 
 
  [AWS::Cognito::IdentityPoolPrincipalTag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolprincipaltag.html)   
@@ -190,7 +214,7 @@ Use the `AWS::FraudDetector::List` resource to create a list of input data\. Aft
 
  [AWS::RAM::Permission](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-permission.html)   
 Creates a customer managed permission that you can then assign to resource shares and applies to resources of the specified resource type that are included in the share\.  | April 19, 2023 | 
-| [Updated resource](AWS_GuardDuty.md) | The AWS:GuardDuty:Detector resource was updated\. | April 13, 2023 | 
+| [Updated resource](AWS_GuardDuty.md) | The AWS::GuardDuty::Detector resource was updated\. | April 13, 2023 | 
 | [Updated resource](AWS_MWAA.md) | The following resource was updated: AWS::MWAA::Environment 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path)   
@@ -1018,27 +1042,27 @@ The AWS::IoT::CACertificate resource adds RemoveAutoRegistration property\.  | S
 | [New resource](AWS_IoTFleetWise.md) | The following resource was added: AWS::IoTFleetWise::Campaign 
 
  [AWS::IoTFleetWise::Campaign](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html)   
-Use the `AWS::IoTFleetWise::Campaign` resource to specify a campaign in \.  | September 22, 2022 | 
+Use the `AWS::IoTFleetWise::Campaign` resource to specify a campaign in AWS IoT FleetWise\.  | September 22, 2022 | 
 | [New resource](AWS_IoTFleetWise.md) | The following resource was added: AWS::IoTFleetWise::DecoderManifest 
 
  [AWS::IoTFleetWise::DecoderManifest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html)   
-Use the `AWS::IoTFleetWise::DecoderManifest` resource to specify a decoder manifest in \.  | September 22, 2022 | 
+Use the `AWS::IoTFleetWise::DecoderManifest` resource to specify a decoder manifest in AWS IoT FleetWise\.  | September 22, 2022 | 
 | [New resource](AWS_IoTFleetWise.md) | The following resource was added: AWS::IoTFleetWise::Fleet 
 
  [AWS::IoTFleetWise::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html)   
-Use the `AWS::IoTFleetWise::Fleet` resource to specify a fleet in \.  | September 22, 2022 | 
+Use the `AWS::IoTFleetWise::Fleet` resource to specify a fleet in AWS IoT FleetWise\.  | September 22, 2022 | 
 | [New resource](AWS_IoTFleetWise.md) | The following resource was added: AWS::IoTFleetWise::ModelManifest 
 
  [AWS::IoTFleetWise::ModelManifest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html)   
-Use the `AWS::IoTFleetWise::ModelManifest` resource to specify a model manifest in \.  | September 22, 2022 | 
+Use the `AWS::IoTFleetWise::ModelManifest` resource to specify a model manifest in AWS IoT FleetWise\.  | September 22, 2022 | 
 | [New resource](AWS_IoTFleetWise.md) | The following resource was added: AWS::IoTFleetWise::SignalCatalog 
 
  [AWS::IoTFleetWise::SignalCatalog](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html)   
-Use the `AWS::IoTFleetWise::SignalCatalog` resource to specify a signal catalog in \.  | September 22, 2022 | 
+Use the `AWS::IoTFleetWise::SignalCatalog` resource to specify a signal catalog in AWS IoT FleetWise\.  | September 22, 2022 | 
 | [New resource](AWS_IoTFleetWise.md) | The following resource was added: AWS::IoTFleetWise::Vehicle 
 
  [AWS::IoTFleetWise::Vehicle](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html)   
-Use the `AWS::IoTFleetWise::Vehicle` resource to specify a vehicle in \.  | September 22, 2022 | 
+Use the `AWS::IoTFleetWise::Vehicle` resource to specify a vehicle in AWS IoT FleetWise\.  | September 22, 2022 | 
 | [Updated resource](AWS_Cognito.md) | The following resource was updated: AWS::Cognito::UserPoolClient 
 
  [AWS::Cognito::UserPoolClient](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html)   

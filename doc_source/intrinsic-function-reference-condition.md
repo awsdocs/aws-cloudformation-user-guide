@@ -12,7 +12,7 @@ When you are declaring a condition in a template and you need to use another con
 { "Condition" : "conditionName" }
 ```
 
-### YAML<a name="intrinsic-function-reference-condition-syntax-yaml.yaml"></a>
+### YAML<a name="intrinsic-function-reference-condition-syntax-yaml"></a>
 
 Syntax for the full function name:
 

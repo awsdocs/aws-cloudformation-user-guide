@@ -1,6 +1,6 @@
 # AWS::GuardDuty::Member<a name="aws-resource-guardduty-member"></a>
 
-You can use the `AWS::GuardDuty::Member` resource to add an AWS account as a member account to the current administrator account\. If the value of the `Status` property is not provided or is set to `Created`, a member account is created but not invited\. If the value of the `Status` property is set to `Invited`, a member account is created and invited\. An `AWS::GuardDuty::Member` resource must be created with the `Status` property set to `Invited` before the `AWS::GuardDuty::Master` resource can be created in a member account\.
+You can use the `AWS::GuardDuty::Member` resource to add an AWS account as a GuardDuty member account to the current GuardDuty administrator account\. If the value of the `Status` property is not provided or is set to `Created`, a member account is created but not invited\. If the value of the `Status` property is set to `Invited`, a member account is created and invited\. An `AWS::GuardDuty::Member` resource must be created with the `Status` property set to `Invited` before the `AWS::GuardDuty::Master` resource can be created in a GuardDuty member account\.
 
 ## Syntax<a name="aws-resource-guardduty-member-syntax"></a>
 
@@ -38,7 +38,7 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-member-properties"></a>
 
 `DetectorId`  <a name="cfn-guardduty-member-detectorid"></a>
-The ID of the detector associated with the service to add the member to\.  
+The ID of the detector associated with the GuardDuty service to add the member to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -77,7 +77,7 @@ You can use the `Status` property to update the status of the relationship betwe
 
 ### Ref<a name="aws-resource-guardduty-member-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique ID of the member account, such as 012345678901\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique ID of the GuardDuty member account, such as 012345678901\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -87,7 +87,7 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 
 ### Declare a Member Resource<a name="aws-resource-guardduty-member--examples--Declare_a_Member_Resource"></a>
 
-The following example shows how to declare a `Member` resource:
+The following example shows how to declare a GuardDuty `Member` resource:
 
 #### JSON<a name="aws-resource-guardduty-member--examples--Declare_a_Member_Resource--json"></a>
 

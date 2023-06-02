@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Arn](#cfn-quicksight-dataset-rowlevelpermissiondataset-arn)" : String,
   "[FormatVersion](#cfn-quicksight-dataset-rowlevelpermissiondataset-formatversion)" : String,
   "[Namespace](#cfn-quicksight-dataset-rowlevelpermissiondataset-namespace)" : String,
-  "[PermissionPolicy](#cfn-quicksight-dataset-rowlevelpermissiondataset-permissionpolicy)" : String
+  "[PermissionPolicy](#cfn-quicksight-dataset-rowlevelpermissiondataset-permissionpolicy)" : String,
+  "[Status](#cfn-quicksight-dataset-rowlevelpermissiondataset-status)" : String
 }
 ```
 
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [FormatVersion](#cfn-quicksight-dataset-rowlevelpermissiondataset-formatversion): String
   [Namespace](#cfn-quicksight-dataset-rowlevelpermissiondataset-namespace): String
   [PermissionPolicy](#cfn-quicksight-dataset-rowlevelpermissiondataset-permissionpolicy): String
+  [Status](#cfn-quicksight-dataset-rowlevelpermissiondataset-status): String
 ```
 
 ## Properties<a name="aws-properties-quicksight-dataset-rowlevelpermissiondataset-properties"></a>
@@ -57,4 +59,11 @@ The type of permissions to use when interpreting the permissions for RLS\. `DENY
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `DENY_ACCESS | GRANT_ACCESS`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Status`  <a name="cfn-quicksight-dataset-rowlevelpermissiondataset-status"></a>
+The status of the row\-level security permission dataset\. If enabled, the status is `ENABLED`\. If disabled, the status is `DISABLED`\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

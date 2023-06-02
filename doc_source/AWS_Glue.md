@@ -6,7 +6,6 @@
 + [AWS::Glue::Crawler](aws-resource-glue-crawler.md)
 + [AWS::Glue::Database](aws-resource-glue-database.md)
 + [AWS::Glue::DataCatalogEncryptionSettings](aws-resource-glue-datacatalogencryptionsettings.md)
-+ [AWS::Glue::DataQualityRuleset](aws-resource-glue-dataqualityruleset.md)
 + [AWS::Glue::DevEndpoint](aws-resource-glue-devendpoint.md)
 + [AWS::Glue::Job](aws-resource-glue-job.md)
 + [AWS::Glue::MLTransform](aws-resource-glue-mltransform.md)

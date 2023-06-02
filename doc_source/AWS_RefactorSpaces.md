@@ -1,4 +1,4 @@
-# Amazon Relational Database Service resource type reference<a name="AWS_RefactorSpaces"></a>
+# AWS Migration Hub Refactor Spaces resource type reference<a name="AWS_RefactorSpaces"></a>
 
 **Resource types**
 + [AWS::RefactorSpaces::Application](aws-resource-refactorspaces-application.md)

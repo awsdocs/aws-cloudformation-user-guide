@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudTrail::Trail",
   "Properties" : {
+      "[AdvancedEventSelectors](#cfn-cloudtrail-trail-advancedeventselectors)" : [ AdvancedEventSelector, ... ],
       "[CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn)" : String,
       "[CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn)" : String,
       "[EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation)" : Boolean,
@@ -36,6 +37,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CloudTrail::Trail
 Properties: 
+  [AdvancedEventSelectors](#cfn-cloudtrail-trail-advancedeventselectors): 
+    - AdvancedEventSelector
   [CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn): String
   [CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn): String
   [EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation): Boolean
@@ -57,6 +60,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-cloudtrail-trail-properties"></a>
+
+`AdvancedEventSelectors`  <a name="cfn-cloudtrail-trail-advancedeventselectors"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [AdvancedEventSelector](aws-properties-cloudtrail-trail-advancedeventselector.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloudWatchLogsLogGroupArn`  <a name="cfn-cloudtrail-trail-cloudwatchlogsloggrouparn"></a>
 Specifies a log group name using an Amazon Resource Name \(ARN\), a unique identifier that represents the log group to which CloudTrail logs are delivered\. You must use a log group that exists in your account\.  

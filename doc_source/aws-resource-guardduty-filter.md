@@ -106,7 +106,7 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 
 ### Declare a Filter Resource<a name="aws-resource-guardduty-filter--examples--Declare_a_Filter_Resource"></a>
 
-The following example shows how to declare a `Filter` resource:
+The following example shows how to declare a GuardDuty `Filter` resource:
 
 #### JSON<a name="aws-resource-guardduty-filter--examples--Declare_a_Filter_Resource--json"></a>
 

@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApiId](#cfn-apigatewayv2-routeresponse-apiid)" : String,
       "[ModelSelectionExpression](#cfn-apigatewayv2-routeresponse-modelselectionexpression)" : String,
       "[ResponseModels](#cfn-apigatewayv2-routeresponse-responsemodels)" : Json,
-      "[ResponseParameters](#cfn-apigatewayv2-routeresponse-responseparameters)" : Json,
+      "[ResponseParameters](#cfn-apigatewayv2-routeresponse-responseparameters)" : {Key: Value, ...},
       "[RouteId](#cfn-apigatewayv2-routeresponse-routeid)" : String,
       "[RouteResponseKey](#cfn-apigatewayv2-routeresponse-routeresponsekey)" : String
     }
@@ -30,7 +30,8 @@ Properties:
   [ApiId](#cfn-apigatewayv2-routeresponse-apiid): String
   [ModelSelectionExpression](#cfn-apigatewayv2-routeresponse-modelselectionexpression): String
   [ResponseModels](#cfn-apigatewayv2-routeresponse-responsemodels): Json
-  [ResponseParameters](#cfn-apigatewayv2-routeresponse-responseparameters): Json
+  [ResponseParameters](#cfn-apigatewayv2-routeresponse-responseparameters): 
+    Key: Value
   [RouteId](#cfn-apigatewayv2-routeresponse-routeid): String
   [RouteResponseKey](#cfn-apigatewayv2-routeresponse-routeresponsekey): String
 ```
@@ -58,7 +59,7 @@ The response models for the route response\.
 `ResponseParameters`  <a name="cfn-apigatewayv2-routeresponse-responseparameters"></a>
 The route response parameters\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of [ParameterConstraints](aws-properties-apigatewayv2-routeresponse-parameterconstraints.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RouteId`  <a name="cfn-apigatewayv2-routeresponse-routeid"></a>
@@ -80,6 +81,13 @@ The route response key\.
 When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Route Response resource ID, such as `abc123`\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-apigatewayv2-routeresponse-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-apigatewayv2-routeresponse-return-values-fn--getatt-fn--getatt"></a>
+
+`RouteResponseId`  <a name="RouteResponseId-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-apigatewayv2-routeresponse--examples"></a>
 

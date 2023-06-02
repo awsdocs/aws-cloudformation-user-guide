@@ -39,7 +39,7 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-ipset-properties"></a>
 
 `Activate`  <a name="cfn-guardduty-ipset-activate"></a>
-Indicates whether or not uses the `IPSet`\.  
+Indicates whether or not GuardDuty uses the `IPSet`\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -97,7 +97,7 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 
 ### Declare an IPSet Resource<a name="aws-resource-guardduty-ipset--examples--Declare_an_IPSet_Resource"></a>
 
-The following example shows how to declare a `IPSet` resource:
+The following example shows how to declare a GuardDuty `IPSet` resource:
 
 #### JSON<a name="aws-resource-guardduty-ipset--examples--Declare_an_IPSet_Resource--json"></a>
 

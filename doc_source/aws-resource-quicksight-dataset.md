@@ -16,6 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ColumnGroups](#cfn-quicksight-dataset-columngroups)" : [ ColumnGroup, ... ],
       "[ColumnLevelPermissionRules](#cfn-quicksight-dataset-columnlevelpermissionrules)" : [ ColumnLevelPermissionRule, ... ],
       "[DataSetId](#cfn-quicksight-dataset-datasetid)" : String,
+      "[DatasetParameters](#cfn-quicksight-dataset-datasetparameters)" : [ DatasetParameter, ... ],
+      "[DataSetRefreshProperties](#cfn-quicksight-dataset-datasetrefreshproperties)" : DataSetRefreshProperties,
       "[DataSetUsageConfiguration](#cfn-quicksight-dataset-datasetusageconfiguration)" : DataSetUsageConfiguration,
       "[FieldFolders](#cfn-quicksight-dataset-fieldfolders)" : {Key: Value, ...},
       "[ImportMode](#cfn-quicksight-dataset-importmode)" : String,
@@ -25,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Permissions](#cfn-quicksight-dataset-permissions)" : [ ResourcePermission, ... ],
       "[PhysicalTableMap](#cfn-quicksight-dataset-physicaltablemap)" : {Key: Value, ...},
       "[RowLevelPermissionDataSet](#cfn-quicksight-dataset-rowlevelpermissiondataset)" : RowLevelPermissionDataSet,
+      "[RowLevelPermissionTagConfiguration](#cfn-quicksight-dataset-rowlevelpermissiontagconfiguration)" : RowLevelPermissionTagConfiguration,
       "[Tags](#cfn-quicksight-dataset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -41,6 +44,10 @@ Properties:
   [ColumnLevelPermissionRules](#cfn-quicksight-dataset-columnlevelpermissionrules): 
     - ColumnLevelPermissionRule
   [DataSetId](#cfn-quicksight-dataset-datasetid): String
+  [DatasetParameters](#cfn-quicksight-dataset-datasetparameters): 
+    - DatasetParameter
+  [DataSetRefreshProperties](#cfn-quicksight-dataset-datasetrefreshproperties): 
+    DataSetRefreshProperties
   [DataSetUsageConfiguration](#cfn-quicksight-dataset-datasetusageconfiguration): 
     DataSetUsageConfiguration
   [FieldFolders](#cfn-quicksight-dataset-fieldfolders): 
@@ -57,6 +64,8 @@ Properties:
     Key: Value
   [RowLevelPermissionDataSet](#cfn-quicksight-dataset-rowlevelpermissiondataset): 
     RowLevelPermissionDataSet
+  [RowLevelPermissionTagConfiguration](#cfn-quicksight-dataset-rowlevelpermissiontagconfiguration): 
+    RowLevelPermissionTagConfiguration
   [Tags](#cfn-quicksight-dataset-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -90,6 +99,19 @@ An ID for the dataset that you want to create\. This ID is unique per AWS Region
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DatasetParameters`  <a name="cfn-quicksight-dataset-datasetparameters"></a>
+The parameters that are declared in a dataset\.  
+*Required*: No  
+*Type*: List of [DatasetParameter](aws-properties-quicksight-dataset-datasetparameter.md)  
+*Maximum*: `32`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DataSetRefreshProperties`  <a name="cfn-quicksight-dataset-datasetrefreshproperties"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DataSetRefreshProperties](aws-properties-quicksight-dataset-datasetrefreshproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataSetUsageConfiguration`  <a name="cfn-quicksight-dataset-datasetusageconfiguration"></a>
 The usage configuration to apply to child datasets that reference this dataset as a source\.  
@@ -147,6 +169,12 @@ Declares the physical tables that are available in the underlying data sources\.
 The row\-level security configuration for the data that you want to create\.  
 *Required*: No  
 *Type*: [RowLevelPermissionDataSet](aws-properties-quicksight-dataset-rowlevelpermissiondataset.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RowLevelPermissionTagConfiguration`  <a name="cfn-quicksight-dataset-rowlevelpermissiontagconfiguration"></a>
+The element you can use to define tags for row\-level security\.  
+*Required*: No  
+*Type*: [RowLevelPermissionTagConfiguration](aws-properties-quicksight-dataset-rowlevelpermissiontagconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-quicksight-dataset-tags"></a>

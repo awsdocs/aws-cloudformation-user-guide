@@ -1,6 +1,6 @@
 # AWS::GuardDuty::Detector<a name="aws-resource-guardduty-detector"></a>
 
-The `AWS::GuardDuty::Detector` resource specifies a new detector\. A detector is an object that represents the service\. A detector is required for to become operational\.
+The `AWS::GuardDuty::Detector` resource specifies a new GuardDuty detector\. A detector is an object that represents the GuardDuty service\. A detector is required for GuardDuty to become operational\.
 
 Make sure you use either `DataSources` or `Features` in a one request, and not both\.
 
@@ -87,7 +87,7 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 
 ### Declare a Detector Resource<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource"></a>
 
-The following example shows how to declare a `Detector` resource:
+The following example shows how to declare a GuardDuty `Detector` resource:
 
 #### JSON<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource--json"></a>
 

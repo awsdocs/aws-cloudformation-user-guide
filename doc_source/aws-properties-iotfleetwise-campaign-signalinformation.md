@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotfleetwise-campaign-signalinformation-properties"></a>
 
 `MaxSampleCount`  <a name="cfn-iotfleetwise-campaign-signalinformation-maxsamplecount"></a>
-The maximum number of samples to collect\.  
+\(Optional\) The maximum number of samples to collect\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinimumSamplingIntervalMs`  <a name="cfn-iotfleetwise-campaign-signalinformation-minimumsamplingintervalms"></a>
-The minimum duration of time \(in milliseconds\) between two triggering events to collect data\.  
+\(Optional\) The minimum duration of time \(in milliseconds\) between two triggering events to collect data\.  
 If a signal changes often, you might want to collect data at a slower rate\.
 *Required*: No  
 *Type*: Double  

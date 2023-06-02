@@ -184,7 +184,7 @@ service-provider::service-name::data-type-name
 + [Amazon Relational Database Service](AWS_RDS.md)
 + [Amazon Redshift](AWS_Redshift.md)
 + [Amazon Redshift Serverless](AWS_RedshiftServerless.md)
-+ [Amazon Relational Database Service](AWS_RefactorSpaces.md)
++ [AWS Migration Hub Refactor Spaces](AWS_RefactorSpaces.md)
 + [Amazon Rekognition](AWS_Rekognition.md)
 + [AWS Resilience Hub](AWS_ResilienceHub.md)
 + [AWS Resource Explorer](AWS_ResourceExplorer2.md)

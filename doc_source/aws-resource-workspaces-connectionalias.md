@@ -66,7 +66,7 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 The identifier of the connection alias, returned as a string\.
 
 `Associations`  <a name="Associations-fn::getatt"></a>
-The association status of the connection alias, returned as an array of `ConnectionAliasAssociation` objects\.
+Property description not available\.
 
 `ConnectionAliasState`  <a name="ConnectionAliasState-fn::getatt"></a>
 The current state of the connection alias, returned as a string\.

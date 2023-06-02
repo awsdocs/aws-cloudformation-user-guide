@@ -1,6 +1,6 @@
 # AWS::IoTFleetWise::Campaign TimestreamConfig<a name="aws-properties-iotfleetwise-campaign-timestreamconfig"></a>
 
-<a name="aws-properties-iotfleetwise-campaign-timestreamconfig-description"></a>The `TimestreamConfig` property type specifies Property description not available\. for an [AWS::IoTFleetWise::Campaign](aws-resource-iotfleetwise-campaign.md)\.
+The Amazon Timestream table where the AWS IoT FleetWise campaign sends data\. Timestream stores and organizes data to optimize query processing time and to reduce storage costs\. For more information, see [Data modeling](https://docs.aws.amazon.com/timestream/latest/developerguide/data-modeling.html) in the *Amazon Timestream Developer Guide*\.
 
 ## Syntax<a name="aws-properties-iotfleetwise-campaign-timestreamconfig-syntax"></a>
 
@@ -25,13 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotfleetwise-campaign-timestreamconfig-properties"></a>
 
 `ExecutionRoleArn`  <a name="cfn-iotfleetwise-campaign-timestreamconfig-executionrolearn"></a>
-Property description not available\.  
+The Amazon Resource Name \(ARN\) of the task execution role that grants AWS IoT FleetWise permission to deliver data to the Amazon Timestream table\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
+*Pattern*: `arn:(aws[a-zA-Z0-9-]*):iam::(\d{12})?:(role((\u002F)|(\u002F[\u0021-\u007F]+\u002F))[\w+=,.@-]+)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimestreamTableArn`  <a name="cfn-iotfleetwise-campaign-timestreamconfig-timestreamtablearn"></a>
-Property description not available\.  
+The Amazon Resource Name \(ARN\) of the Amazon Timestream table\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
+*Pattern*: `arn:(aws[a-zA-Z0-9-]*):timestream:[a-zA-Z0-9-]+:[0-9]{12}:database/[a-zA-Z0-9_.-]+/table/[a-zA-Z0-9_.-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
