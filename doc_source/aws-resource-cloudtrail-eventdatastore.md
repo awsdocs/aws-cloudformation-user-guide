@@ -77,7 +77,7 @@ Examples:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MultiRegionEnabled`  <a name="cfn-cloudtrail-eventdatastore-multiregionenabled"></a>
-Specifies whether the event data store includes events from all regions, or only from the region in which the event data store is created\.  
+Specifies whether the event data store includes events from all Regions, or only from the Region in which the event data store is created\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

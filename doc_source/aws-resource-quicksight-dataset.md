@@ -101,10 +101,9 @@ An ID for the dataset that you want to create\. This ID is unique per AWS Region
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DatasetParameters`  <a name="cfn-quicksight-dataset-datasetparameters"></a>
-The parameters that are declared in a dataset\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of [DatasetParameter](aws-properties-quicksight-dataset-datasetparameter.md)  
-*Maximum*: `32`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataSetRefreshProperties`  <a name="cfn-quicksight-dataset-datasetrefreshproperties"></a>

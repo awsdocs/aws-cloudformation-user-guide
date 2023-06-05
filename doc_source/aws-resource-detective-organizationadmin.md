@@ -2,8 +2,6 @@
 
 The `AWS::Detective::OrganizationAdmin` resource is an Amazon Detective resource type that designates the Detective administrator account for the organization in the current region\. If the account does not have Detective enabled, then this resource enables Detective for that account and creates a new behavior graph\.
 
-The `AWS::Detective::OrganizationAdmin` resource is currently not available in AWS GovCloud \(US\) PDT/OSU Regions\.
-
 ## Syntax<a name="aws-resource-detective-organizationadmin-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -43,10 +43,7 @@ The new name for the parameter\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParameterName`  <a name="cfn-quicksight-dataset-overridedatasetparameteroperation-parametername"></a>
-The name of the parameter to be overridden with different values\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `2048`  
-*Pattern*: `^[a-zA-Z0-9]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

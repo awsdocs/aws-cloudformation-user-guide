@@ -29,6 +29,8 @@ The name of the TTL attribute used to store the expiration time for items in the
 + To update this property, you must first disable TTL and then enable TTL with the new attribute name\.
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-dynamodb-table-timetolivespecification-enabled"></a>
