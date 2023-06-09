@@ -4,7 +4,32 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated resources](AWS_CustomerProfiles.md) | The following resource was updated: AWS::CustomerProfiles::CalculatedAttributeDefinition\. 
+| [Updated resource](AWS_CloudTrail.md) | The following resource was updated: AWS::CloudTrail::EventDataStore 
+
+ [AWS::CloudTrail::EventDataStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html)   
+Use the `IngestionEnabled` property to specify whether you want the event data store to ingest events\.  | June 8, 2023 | 
+| [Updated resource](AWS_CustomerProfiles.md) | The following resource was updated: AWS::CustomerProfiles::EventStream\. 
+
+ [AWS::CustomerProfiles::EventStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-eventstream.html)  
+Use the `AWS::CustomerProfiles::EventStream` resource to create a new event stream in Amazon Connect Customer Profiles Service\.  | June 8, 2023 | 
+| [New resource](AWS_Athena.md) | The following resource was added: AWS::Athena::CapacityReservation 
+
+ [AWS::Athena::CapacityReservation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-capacityreservation.html)   
+Use the `AWS::Athena::CapacityReservation` resource to specify dedicated processing capacity for the queries you run in Athena\. You can assign one or more workgroups to the reservation\. Capacity is fully managed by Athena and held for you as long as you require\.  | June 8, 2023 | 
+| [New Properties](AWS_Omics.md) | The following properties were added: AWS::Omics::Workflow\.Accelerators, AWS::Omics::RunGroup\.MaxGpus, AWS::Omics::AnnotationStore\.SchemaItem, and AWS::Omics::SequenceStore\.FallbackLocation\. 
+
+ [AWS::Omics::Workflow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html)   
+Use the `AWS::Omics::Workflow.Accelerators` property to specify the accelerator used for your workflow in Amazon Omics\. 
+
+ [AWS::Omics::RunGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html)   
+Use the `AWS::Omics::RunGroup.MaxGpus` property to specify the max GPUs for your run group in Amazon Omics\. 
+
+ [AWS::Omics::AnnotationStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html)   
+Use the `AWS::Omics::AnnotationStore.SchemaItem` property to specify a schema item\. Omics\. 
+
+ [AWS::Omics::SequenceStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html)   
+Use the `AWS::Omics::SequenceStore.FallbackLocation` property update to specify a fallback location for files that don't upload successfully\. Omics\.  | June 8, 2023 | 
+| [Updated resource](AWS_CustomerProfiles.md) | The following resource was updated: AWS::CustomerProfiles::CalculatedAttributeDefinition\. 
 
  [AWS::CustomerProfiles::CalculatedAttributeDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html)  
 Use the `AWS::CustomerProfiles::CalculatedAttributeDefinition` resource to create a new integration in Amazon Connect Customer Profiles Service\.  | June 1, 2023 | 
@@ -421,7 +446,7 @@ Use the `AWS::SageMaker::Space` resource to create a new shared space for use in
 Use the `TracingConfig` property vend X\-Ray segment data to a topic owner account\. Only supported on standard topics\.  | February 8, 2023 | 
 | [New resources](AWS_Omics.md) | The following resources were added: AWS::Omics::Workflow, AWS::Omics::RunGroup, AWS::Omics::AnnotationStore, AWS::Omics::ReferenceStore, AWS::Omics::VariantStore, and AWS::Omics::SequenceStore\. 
 
- [WS::Omics::Workflow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html)   
+ [AWS::Omics::Workflow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html)   
 Use the `AWS::Omics::Workflow` resource to specify a workflow in Amazon Omics\. 
 
  [AWS::Omics::RunGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html)   
@@ -430,13 +455,13 @@ Use the `AWS::Omics::RunGroup` resource to specify a run group in Amazon Omics\.
  [AWS::Omics::ReferenceStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-referencestore.html)   
 Use the `AWS::Omics::ReferenceStore` resource to specify a reference store in Amazon Omics\. 
 
- [AWS::Omics::RunGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html)   
+ [AWS::Omics::RunGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html)   
 Use the `AWS::Omics::SequenceStore` resource to specify a sequence store in Amazon Omics\. 
 
  [AWS::Omics::ReferenceStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-referencestore.html)   
 Use the `AWS::Omics::ReferenceStore` resource to specify a reference store in Amazon Omics\. 
 
- [AWS::Omics::RunGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html)   
+ [AWS::Omics::SequenceStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html)   
 Use the `AWS::Omics::SequenceStore` resource to specify a sequence store in Amazon Omics\.  | February 3, 2023 | 
 | [Updated resources](AWS_NetworkFirewall.md) | The following resources were updated: AWS::NetworkFirewall::FirewallPolicy and AWS::NetworkFirewall::RuleGroup 
 

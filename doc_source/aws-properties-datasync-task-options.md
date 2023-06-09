@@ -169,8 +169,7 @@ Copying SACLs requires granting additional permissions to the Windows user that 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskQueueing`  <a name="cfn-datasync-task-options-taskqueueing"></a>
-Specifies whether tasks should be queued before executing the tasks\. The default is `ENABLED`, which means the tasks will be queued\.  
-If you use the same agent to run multiple tasks, you can enable the tasks to run in series\. For more information, see [Queueing task executions](https://docs.aws.amazon.com/datasync/latest/userguide/run-task.html#queue-task-execution)\.  
+Specifies whether your transfer tasks should be put into a queue during certain scenarios when [running multiple tasks](https://docs.aws.amazon.com/datasync/latest/userguide/run-task.html#running-multiple-tasks)\. This is `ENABLED` by default\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  

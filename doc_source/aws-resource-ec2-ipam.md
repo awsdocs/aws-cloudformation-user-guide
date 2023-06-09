@@ -91,13 +91,13 @@ The ARN of the IPAM\.
 The ID of the IPAM\.
 
 `PrivateDefaultScopeId`  <a name="PrivateDefaultScopeId-fn::getatt"></a>
-The ID of the IPAM's default private scope\.
+The ID of the default private scope\.
 
 `PublicDefaultScopeId`  <a name="PublicDefaultScopeId-fn::getatt"></a>
-The ID of the IPAM's default public scope\.
+The ID of the default public scope\.
 
 `ResourceDiscoveryAssociationCount`  <a name="ResourceDiscoveryAssociationCount-fn::getatt"></a>
-Property description not available\.
+The number of resource discovery associations\.
 
 `ScopeCount`  <a name="ScopeCount-fn::getatt"></a>
-The number of scopes in the IPAM\. The scope quota is 5\.
+The number of scopes\.

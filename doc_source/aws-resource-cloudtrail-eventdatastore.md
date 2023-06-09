@@ -55,7 +55,7 @@ For more information about how to use advanced event selectors to include non\-A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IngestionEnabled`  <a name="cfn-cloudtrail-eventdatastore-ingestionenabled"></a>
-Property description not available\.  
+Specifies whether the event data store should start ingesting live events\. The default is true\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -181,6 +181,7 @@ The following example creates an event data store that logs events in all region
                     "Ref": "Name"
                 },
                 "MultiRegionEnabled": true,
+                "IngestionEnabled": true,
                 "RetentionPeriod": 30,
                 "OrganizationEnabled": {
                     "Fn::If": [
@@ -251,6 +252,7 @@ Resources:
       Name: !Ref Name
       
       MultiRegionEnabled: true
+      IngestionEnabled: true
       RetentionPeriod: 30
       OrganizationEnabled:
         Fn::If:

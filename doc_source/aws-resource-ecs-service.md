@@ -121,6 +121,7 @@ For existing services, if a desired count is not specified, it is omitted from t
 
 `EnableECSManagedTags`  <a name="cfn-ecs-service-enableecsmanagedtags"></a>
 Specifies whether to turn on Amazon ECS managed tags for the tasks within the service\. For more information, see [Tagging your Amazon ECS resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -178,6 +179,7 @@ The platform version that your tasks in the service are running on\. A platform 
 
 `PropagateTags`  <a name="cfn-ecs-service-propagatetags"></a>
 Specifies whether to propagate the tags from the task definition to the task\. If no value is specified, the tags aren't propagated\. Tags can only be propagated to the task during task creation\. To add tags to a task after task creation, use the [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.  
+The default is `NONE`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `NONE | SERVICE | TASK_DEFINITION`  

@@ -104,7 +104,7 @@ The following snippet creates a DB cluster parameter group for an Aurora MySQL D
         "Type": "AWS::RDS::DBClusterParameterGroup",
         "Properties": {
             "Description": "CloudFormation Sample Aurora Cluster Parameter Group",
-            "Family": "aurora5.6",
+            "Family": "aurora-mysql8.0",
             "Parameters": {
                 "time_zone": "US/Eastern",
                 "character_set_database": "utf32"

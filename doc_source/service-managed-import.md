@@ -9,7 +9,7 @@ In addition to the [Requirements for stack import](stacksets-import.md#stackset-
 + The target accounts are must be members of the AWS Organizations managed by the management account or delegated admin account\.
 + Target stack exists in one of the target OUs\.
 + The target account should be a member of AWS Organizations\.
-+ AWS Organizations access should be in the `ENABLED` state for the Organizations\.
++ AWS Organizations access should be in the `ACTIVATED` state for the Organizations\.
 + Stacks being imported should be present in any of the member accounts, and not the management account\.
 
 ## Import a service\-managed stack into a new stack set \(console\)<a name="import-service-managed-stack-to-new-stackset"></a>

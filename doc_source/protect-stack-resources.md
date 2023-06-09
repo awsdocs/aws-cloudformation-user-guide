@@ -203,13 +203,13 @@ For information about writing stack policies, see [Defining a stack policy](#sta
 **To set a stack policy on an existing stack \(AWS CLI only\)**
 + Use the `[aws cloudformation set\-stack\-policy](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/set-stack-policy.html)` command with the `--stack-policy-body` option to type in a modified policy or the `--stack-policy-url` option to specify a file containing the policy\.
 **Note**  
-To add a policy to an existing stack, you must have permission to the AWS CloudFormation `SetStackPolicy` action\.
+To add a policy to an existing stack, you must have permission to the AWS CloudFormation `[SetStackPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetStackPolicy.html)` action\.
 
 ## Updating protected resources<a name="protect-stack-resources-updating"></a>
 
 To update protected resources, create a temporary policy that overrides the stack policy and allows updates on those resources\. Specify the override policy when you update the stack\. The override policy doesn't permanently change the stack policy\.
 
-To update protected resources, you must have permission to use the AWS CloudFormation `SetStackPolicy` action\. For information about setting AWS CloudFormation permissions, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
+To update protected resources, you must have permission to use the AWS CloudFormation `[SetStackPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetStackPolicy.html)` action\. For information about setting AWS CloudFormation permissions, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
 
 **Note**  
 During a stack update, AWS CloudFormation automatically updates resources that depend on other updated resources\. For example, AWS CloudFormation updates a resource that references an updated resource\. AWS CloudFormation makes no physical changes, such as the resources' ID, to automatically updated resources, but if a stack policy is associated with those resources, you must have permission to update them\.
@@ -280,7 +280,7 @@ AWS CloudFormation applies the override policy only during this update\. The ove
 
 ## Modifying a stack policy<a name="protect-stack-resources-modifying"></a>
 
-To protect additional resources or to remove protection from resources, modify the stack policy\. For example, when you add a database that you want to protect to your stack, add a `Deny` statement for that database to the stack policy\. To modify the policy, you must have permission to use the `SetStackPolicy` action\.
+To protect additional resources or to remove protection from resources, modify the stack policy\. For example, when you add a database that you want to protect to your stack, add a `Deny` statement for that database to the stack policy\. To modify the policy, you must have permission to use the `[SetStackPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetStackPolicy.html)` action\.
 
 Use the AWS CLI to modify stack policies\.
 

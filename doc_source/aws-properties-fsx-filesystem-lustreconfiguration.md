@@ -45,13 +45,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-fsx-filesystem-lustreconfiguration-properties"></a>
 
 `AutoImportPolicy`  <a name="cfn-fsx-filesystem-lustreconfiguration-autoimportpolicy"></a>
- \(Optional\) Available with `Scratch` and `Persistent_1` deployment types\. When you create your file system, your existing S3 objects appear as file and directory listings\. Use this property to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket\. `AutoImportPolicy` can have the following values:  
+ \(Optional\) When you create your file system, your existing S3 objects appear as file and directory listings\. Use this property to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket\. `AutoImportPolicy` can have the following values:  
 +  `NONE` \- \(Default\) AutoImport is off\. Amazon FSx only updates file and directory listings from the linked S3 bucket when the file system is created\. FSx does not update file and directory listings for any new or changed objects after choosing this option\.
 +  `NEW` \- AutoImport is on\. Amazon FSx automatically imports directory listings of any new objects added to the linked S3 bucket that do not currently exist in the FSx file system\. 
 +  `NEW_CHANGED` \- AutoImport is on\. Amazon FSx automatically imports file and directory listings of any new objects added to the S3 bucket and any existing objects that are changed in the S3 bucket after you choose this option\.
 +  `NEW_CHANGED_DELETED` \- AutoImport is on\. Amazon FSx automatically imports file and directory listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any objects that were deleted in the S3 bucket\.
 For more information, see [ Automatically import updates from your S3 bucket](https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html)\.  
-This parameter is not supported for Lustre file systems using the `Persistent_2` deployment type\.
+This parameter is not supported for Lustre file systems with a data repository association\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `NEW | NEW_CHANGED | NEW_CHANGED_DELETED | NONE`  
@@ -106,9 +106,9 @@ This parameter is required when `StorageType` is set to `HDD` and `DeploymentTyp
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExportPath`  <a name="cfn-fsx-filesystem-lustreconfiguration-exportpath"></a>
-\(Optional\) Available with `Scratch` and `Persistent_1` deployment types\. Specifies the path in the Amazon S3 bucket where the root of your Amazon FSx file system is exported\. The path must use the same Amazon S3 bucket as specified in ImportPath\. You can provide an optional prefix to which new and changed data is to be exported from your Amazon FSx for Lustre file system\. If an `ExportPath` value is not provided, Amazon FSx sets a default export path, `s3://import-bucket/FSxLustre[creation-timestamp]`\. The timestamp is in UTC format, for example `s3://import-bucket/FSxLustre20181105T222312Z`\.  
+\(Optional\) Specifies the path in the Amazon S3 bucket where the root of your Amazon FSx file system is exported\. The path must use the same Amazon S3 bucket as specified in ImportPath\. You can provide an optional prefix to which new and changed data is to be exported from your Amazon FSx for Lustre file system\. If an `ExportPath` value is not provided, Amazon FSx sets a default export path, `s3://import-bucket/FSxLustre[creation-timestamp]`\. The timestamp is in UTC format, for example `s3://import-bucket/FSxLustre20181105T222312Z`\.  
 The Amazon S3 export bucket must be the same as the import bucket specified by `ImportPath`\. If you specify only a bucket name, such as `s3://import-bucket`, you get a 1:1 mapping of file system objects to S3 bucket objects\. This mapping means that the input data in S3 is overwritten on export\. If you provide a custom prefix in the export path, such as `s3://import-bucket/[custom-optional-prefix]`, Amazon FSx exports the contents of your file system to that export prefix in the Amazon S3 bucket\.  
-This parameter is not supported for file systems using the `Persistent_2` deployment type\.
+This parameter is not supported for file systems with a data repository association\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  
@@ -119,7 +119,7 @@ This parameter is not supported for file systems using the `Persistent_2` deploy
 `ImportedFileChunkSize`  <a name="cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize"></a>
 \(Optional\) For files imported from a data repository, this value determines the stripe count and maximum amount of data per file \(in MiB\) stored on a single physical disk\. The maximum number of disks that a single file can be striped across is limited by the total number of disks that make up the file system\.  
 The default chunk size is 1,024 MiB \(1 GiB\) and can go as high as 512,000 MiB \(500 GiB\)\. Amazon S3 objects have a maximum size of 5 TB\.  
-This parameter is not supported for Lustre file systems using the `Persistent_2` deployment type\.
+This parameter is not supported for Lustre file systems with a data repository association\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -128,7 +128,7 @@ This parameter is not supported for Lustre file systems using the `Persistent_2`
 
 `ImportPath`  <a name="cfn-fsx-filesystem-lustreconfiguration-importpath"></a>
 \(Optional\) The path to the Amazon S3 bucket \(including the optional prefix\) that you're using as the data repository for your Amazon FSx for Lustre file system\. The root of your FSx for Lustre file system will be mapped to the root of the Amazon S3 bucket you select\. An example is `s3://import-bucket/optional-prefix`\. If you specify a prefix after the Amazon S3 bucket name, only object keys with that prefix are loaded into the file system\.  
-This parameter is not supported for Lustre file systems using the `Persistent_2` deployment type\.
+This parameter is not supported for Lustre file systems with a data repository association\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  

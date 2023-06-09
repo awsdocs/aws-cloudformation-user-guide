@@ -219,7 +219,7 @@ The identifier of the function's [runtime](https://docs.aws.amazon.com/lambda/la
 The following list includes deprecated runtimes\. For more information, see [Runtime deprecation policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy)\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `dotnet6 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java17 | java8 | java8.al2 | nodejs | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | nodejs18.x | nodejs4.3 | nodejs4.3-edge | nodejs6.10 | nodejs8.10 | provided | provided.al2 | python2.7 | python3.10 | python3.6 | python3.7 | python3.8 | python3.9 | ruby2.5 | ruby2.7`  
+*Allowed values*: `dotnet6 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java17 | java8 | java8.al2 | nodejs | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | nodejs18.x | nodejs4.3 | nodejs4.3-edge | nodejs6.10 | nodejs8.10 | provided | provided.al2 | python2.7 | python3.10 | python3.6 | python3.7 | python3.8 | python3.9 | ruby2.5 | ruby2.7 | ruby3.2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuntimeManagementConfig`  <a name="cfn-lambda-function-runtimemanagementconfig"></a>
@@ -312,7 +312,7 @@ Create a Node\.js function\.
             "S3Bucket": "lambda-functions",
             "S3Key": "amilookup.zip"
         },
-        "Runtime": "nodejs12.x",
+        "Runtime": "nodejs18.x",
         "Timeout": 25,
         "TracingConfig": {
             "Mode": "Active"
@@ -323,45 +323,31 @@ Create a Node\.js function\.
 
 ### Inline Function<a name="aws-resource-lambda-function--examples--Inline_Function"></a>
 
-Inline Node\.js function that uses the cfn\-response library\.
+Inline Node\.js function that lists Amazon S3 buckets in `us-east-1`\. Before using this example, make sure that your execution role has Amazon S3 read permissions\.
 
 #### YAML<a name="aws-resource-lambda-function--examples--Inline_Function--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Lambda function with cfn-response.
+Description: Lambda function ListBucketsCommand.
 Resources:
   primer:
     Type: AWS::Lambda::Function
     Properties:
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Role: arn:aws:iam::123456789012:role/lambda-role
       Handler: index.handler
       Code:
         ZipFile: |
-          var aws = require('aws-sdk')
-          var response = require('cfn-response')
-          exports.handler = function(event, context) {
-              console.log("REQUEST RECEIVED:\n" + JSON.stringify(event))
-              // For Delete requests, immediately send a SUCCESS response.
-              if (event.RequestType == "Delete") {
-                  response.send(event, context, "SUCCESS")
-                  return
-              }
-              var responseStatus = "FAILED"
-              var responseData = {}
-              var functionName = event.ResourceProperties.FunctionName
-              var lambda = new aws.Lambda()
-              lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {
-                  if (err) {
-                      responseData = {Error: "Invoke call failed"}
-                      console.log(responseData.Error + ":\n", err)
-                  }
-                  else responseStatus = "SUCCESS"
-                  response.send(event, context, responseStatus, responseData)
-              })
-          }
-      Description: Invoke a function during stack creation.
+          const { S3Client, ListBucketsCommand } = require("@aws-sdk/client-s3");
+          const s3 = new S3Client({ region: "us-east-1" }); // replace "us-east-1" with your AWS region
+
+          exports.handler = async function(event) {
+            const command = new ListBucketsCommand({});
+            const response = await s3.send(command);
+            return response.Buckets;
+          };
+      Description: List Amazon S3 buckets in us-east-1.
       TracingConfig:
         Mode: Active
 ```
@@ -384,7 +370,7 @@ Resources:
       Code:
         S3Bucket: my-bucket
         S3Key: function.zip
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Timeout: 5
       TracingConfig:
         Mode: Active

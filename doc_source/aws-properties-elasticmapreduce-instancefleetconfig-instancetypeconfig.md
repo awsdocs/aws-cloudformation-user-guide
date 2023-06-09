@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig-properties"></a>
 
 `BidPrice`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidprice"></a>
-The bid price for each EC2 Spot Instance type as defined by `InstanceType`\. Expressed in USD\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.   
+The bid price for each Amazon EC2 Spot Instance type as defined by `InstanceType`\. Expressed in USD\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -49,7 +49,7 @@ The bid price for each EC2 Spot Instance type as defined by `InstanceType`\. Exp
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BidPriceAsPercentageOfOnDemandPrice`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidpriceaspercentageofondemandprice"></a>
-The bid price, as a percentage of On\-Demand price, for each EC2 Spot Instance as defined by `InstanceType`\. Expressed as a number \(for example, 20 specifies 20%\)\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.  
+The bid price, as a percentage of On\-Demand price, for each Amazon EC2 Spot Instance as defined by `InstanceType`\. Expressed as a number \(for example, 20 specifies 20%\)\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -77,7 +77,7 @@ The configuration of Amazon Elastic Block Store \(Amazon EBS\) attached to each 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-instancetype"></a>
-An EC2 instance type, such as `m3.xlarge`\.   
+An Amazon EC2 instance type, such as `m3.xlarge`\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

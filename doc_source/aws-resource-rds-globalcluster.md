@@ -457,9 +457,9 @@ The following template was used to create DB cluster that you want to add to the
                 "MasterUserPassword": {
                     "Ref": "password"
                 },
-                "DBClusterParameterGroupName": "default.aurora-mysql5.7",
+                "DBClusterParameterGroupName": "default.aurora-mysql8.0",
                 "Engine": "aurora-mysql",
-                "EngineVersion": "5.7.mysql_aurora.2.10.0"
+                "EngineVersion": "8.0.mysql_aurora.8.0.30"
             }
         },
         "RDSDBInstance": {
@@ -469,7 +469,7 @@ The following template was used to create DB cluster that you want to add to the
                     "DBClusterIdentifier": {
                         "Ref": "RDSCluster"
                 },
-                "DBParameterGroupName": "default.aurora-mysql5.7",
+                "DBParameterGroupName": "default.aurora-mysql8.0",
                 "PubliclyAccessible": "true",
                 "DBInstanceClass": "db.r5.xlarge"
             }
@@ -525,9 +525,9 @@ The following template adds the DB cluster created by the previous template to a
                 "MasterUserPassword": {
                     "Ref": "password"
                 },
-                "DBClusterParameterGroupName": "default.aurora-mysql5.7",
+                "DBClusterParameterGroupName": "default.aurora-mysql8.0",
                 "Engine": "aurora-mysql",
-                "EngineVersion": "5.7.mysql_aurora.2.10.0"
+                "EngineVersion": "8.0.mysql_aurora.8.0.30"
             }
         },
         "RDSDBInstance": {
@@ -537,7 +537,7 @@ The following template adds the DB cluster created by the previous template to a
                 "DBClusterIdentifier": {
                     "Ref": "RDSCluster"
                 },
-                "DBParameterGroupName": "default.aurora-mysql5.7",
+                "DBParameterGroupName": "default.aurora-mysql8.0",
                 "PubliclyAccessible": "true",
                 "DBInstanceClass": "db.r5.xlarge"
             }
@@ -574,15 +574,15 @@ Resources:
     Properties:
       MasterUsername: !Ref username
       MasterUserPassword: !Ref password
-      DBClusterParameterGroupName: default.aurora-mysql5.7
+      DBClusterParameterGroupName: default.aurora-mysql8.0
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.10.0
+      EngineVersion: 8.0.mysql_aurora.8.0.30
   RDSDBInstance:
     Type: 'AWS::RDS::DBInstance'
     Properties:
       Engine: aurora-mysql
       DBClusterIdentifier: !Ref RDSCluster
-      DBParameterGroupName: default.aurora-mysql5.7
+      DBParameterGroupName: default.aurora-mysql8.0
       PubliclyAccessible: 'true'
       DBInstanceClass: db.r5.xlarge
                 
@@ -619,15 +619,15 @@ Resources:
     Properties:
       MasterUsername: !Ref username
       MasterUserPassword: !Ref password
-      DBClusterParameterGroupName: default.aurora-mysql5.7
+      DBClusterParameterGroupName: default.aurora-mysql8.0
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.10.0
+      EngineVersion: 8.0.mysql_aurora.8.0.30
   RDSDBInstance:
     Type: 'AWS::RDS::DBInstance'
     Properties:
       Engine: aurora-mysql
       DBClusterIdentifier: !Ref RDSCluster
-      DBParameterGroupName: default.aurora-mysql5.7
+      DBParameterGroupName: default.aurora-mysql8.0
       PubliclyAccessible: 'true'
       DBInstanceClass: db.r5.xlarge
 ```

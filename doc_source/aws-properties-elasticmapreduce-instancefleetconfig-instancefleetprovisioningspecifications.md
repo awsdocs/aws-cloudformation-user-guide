@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `OnDemandSpecification`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-ondemandspecification"></a>
  The launch specification for On\-Demand Instances in the instance fleet, which determines the allocation strategy\.   
-The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\. On\-Demand Instances allocation strategy is available in Amazon EMR version 5\.12\.1 and later\.
+The instance fleet configuration is available only in Amazon EMR releases 4\.8\.0 and later, excluding 5\.0\.x versions\. On\-Demand Instances allocation strategy is available in Amazon EMR releases 5\.12\.1 and later\.
 *Required*: No  
 *Type*: [OnDemandProvisioningSpecification](aws-properties-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

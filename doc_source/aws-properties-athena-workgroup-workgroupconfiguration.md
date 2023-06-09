@@ -75,7 +75,7 @@ The engine version that all queries running on the workgroup use\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRole`  <a name="cfn-athena-workgroup-workgroupconfiguration-executionrole"></a>
-Role used in an Apache Spark session for accessing the user's resources\.  
+Role used to access user resources in an Athena for Apache Spark session\. This property applies only to Spark\-enabled workgroups in Athena\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

@@ -339,29 +339,24 @@ Valid for: Aurora DB clusters only
 
 `Engine`  <a name="cfn-rds-dbcluster-engine"></a>
 The name of the database engine to be used for this DB cluster\.  
-Valid Values:   
-+ `aurora` \(for MySQL 5\.6\-compatible Aurora\)
-+ `aurora-mysql` \(for MySQL 5\.7\-compatible and MySQL 8\.0\-compatible Aurora\)
-+ `aurora-postgresql`
-+ `mysql`
-+ `postgres`
+Valid Values:  
++  `aurora-mysql`
++  `aurora-postgresql` 
++  `mysql` 
++  `postgres` 
 Valid for: Aurora DB clusters and Multi\-AZ DB clusters  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
-The DB engine mode of the DB cluster, either `provisioned`, `serverless`, `parallelquery`, `global`, or `multimaster`\.  
-The `serverless` engine mode only applies for Aurora Serverless v1 DB clusters\.  
-The `parallelquery` engine mode isn't required for Aurora MySQL version 1\.23 and higher 1\.x versions, and version 2\.09 and higher 2\.x versions\.  
-The `global` engine mode isn't required for Aurora MySQL version 1\.22 and higher 1\.x versions, and `global` engine mode isn't required for any 2\.x versions\.  
-The `multimaster` engine mode only applies for DB clusters created with Aurora MySQL version 5\.6\.10a\.  
-For Aurora PostgreSQL, the `global` engine mode isn't required, and both the `parallelquery` and the `multimaster` engine modes currently aren't supported\.  
+The DB engine mode of the DB cluster, either `provisioned` or `serverless`\.  
+The `serverless` engine mode only supports Aurora Serverless v1\. Currently, AWS CloudFormation doesn't support Aurora Serverless v2\.  
 Limitations and requirements apply to some DB engine modes\. For more information, see the following sections in the *Amazon Aurora User Guide*:  
-+  [ Limitations of Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
-+  [ Limitations of Parallel Query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) 
-+  [ Limitations of Aurora Global Databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations) 
-+  [ Limitations of Multi\-Master Clusters](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations) 
++  [ Limitations of Aurora Serverless v1](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
++ [Requirements for Aurora Serverless v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html)
++  [ Limitations of parallel query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) 
++  [ Limitations of Aurora global databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations) 
 Valid for: Aurora DB clusters only  
 *Required*: No  
 *Type*: String  
@@ -369,12 +364,23 @@ Valid for: Aurora DB clusters only
 
 `EngineVersion`  <a name="cfn-rds-dbcluster-engineversion"></a>
 The version number of the database engine to use\.  
-To list all of the available engine versions for `aurora` \(for MySQL 5\.6\-compatible Aurora\), use the following command:  
-`aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"`  
-To list all of the available engine versions for `aurora-mysql` \(for MySQL 5\.7\-compatible Aurora\), use the following command:  
+To list all of the available engine versions for Aurora MySQL version 2 \(5\.7\-compatible\) and version 3 \(8\.0\-compatible\), use the following command:  
 `aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"`  
-To list all of the available engine versions for `aurora-postgresql`, use the following command:  
+You can supply either `5.7` or `8.0` to use the default engine version for Aurora MySQL version 2 or version 3, respectively\.  
+To list all of the available engine versions for Aurora PostgreSQL, use the following command:  
 `aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"`  
+To list all of the available engine versions for RDS for MySQL, use the following command:  
+`aws rds describe-db-engine-versions --engine mysql --query "DBEngineVersions[].EngineVersion"`  
+To list all of the available engine versions for RDS for PostgreSQL, use the following command:  
+`aws rds describe-db-engine-versions --engine postgres --query "DBEngineVersions[].EngineVersion"`  
+**Aurora MySQL**  
+For information, see [Database engine updates for Amazon Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) in the *Amazon Aurora User Guide*\.  
+**Aurora PostgreSQL**  
+For information, see [Amazon Aurora PostgreSQL releases and engine versions](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html) in the *Amazon Aurora User Guide*\.  
+**MySQL**  
+For information, see [Amazon RDS for MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt) in the *Amazon RDS User Guide*\.  
+**PostgreSQL**  
+For information, see [Amazon RDS for PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts) in the *Amazon RDS User Guide*\.  
 Valid for: Aurora DB clusters and Multi\-AZ DB clusters  
 *Required*: No  
 *Type*: String  
@@ -580,7 +586,6 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 The type of restore to be performed\. You can specify one of the following values:  
 +  `full-copy` \- The new DB cluster is restored as a full copy of the source DB cluster\.
 +  `copy-on-write` \- The new DB cluster is restored as a clone of the source DB cluster\.
-Constraints: You can't specify `copy-on-write` if the engine version of the source DB cluster is earlier than 1\.11\.  
 If you don't specify a `RestoreType` value, then the new DB cluster is restored as a full copy of the source DB cluster\.  
 Valid for: Aurora DB clusters and Multi\-AZ DB clusters  
 *Required*: No  

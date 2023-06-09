@@ -4,7 +4,7 @@ Because stack sets perform stack operations across multiple accounts, before you
 
 To set up the required permissions for creating a stack set with **self\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](#stacksets-opt-in-regions) and [Grant self\-managed permissions](stacksets-prereqs-self-managed.md)\.
 
-To set up the required permissions for creating a stack set with **service\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](#stacksets-opt-in-regions) and [Enable trusted access with AWS Organizations](stacksets-orgs-enable-trusted-access.md)\.
+To set up the required permissions for creating a stack set with **service\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](#stacksets-opt-in-regions) and [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)\.
 
 ## Performing stack set operations involving regions that are disabled by default<a name="stacksets-opt-in-regions"></a>
 
@@ -23,5 +23,5 @@ For more information about enabling and disabling regions, see [Managing AWS Reg
 **Topics**
 + [Performing stack set operations involving regions that are disabled by default](#stacksets-opt-in-regions)
 + [Grant self\-managed permissions](stacksets-prereqs-self-managed.md)
-+ [Enable trusted access with AWS Organizations](stacksets-orgs-enable-trusted-access.md)
++ [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)
 + [Register a delegated administrator](stacksets-orgs-delegated-admin.md)

@@ -79,7 +79,7 @@ The name of the FinSpace environment\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^[a-zA-Z0-9]+[a-zA-Z0-9-]*[a-zA-Z0-9]$`  
+*Pattern*: `^[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuperuserParameters`  <a name="cfn-finspace-environment-superuserparameters"></a>

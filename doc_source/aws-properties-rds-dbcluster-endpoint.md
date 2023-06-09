@@ -1,6 +1,6 @@
 # AWS::RDS::DBCluster Endpoint<a name="aws-properties-rds-dbcluster-endpoint"></a>
 
-Specifies the connection endpoint for the primary instance of the DB cluster\.
+The `Endpoint` return value specifies the connection endpoint for the primary instance of the DB cluster\.
 
 ## Syntax<a name="aws-properties-rds-dbcluster-endpoint-syntax"></a>
 

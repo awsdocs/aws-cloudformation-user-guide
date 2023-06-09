@@ -101,7 +101,7 @@ The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt Amazon 
 
 `LustreConfiguration`  <a name="cfn-fsx-filesystem-lustreconfiguration"></a>
 The Lustre configuration for the file system being created\.  
-The following parameters are not supported for file systems with the Lustre `Persistent_2` deployment type\.  
+The following parameters are not supported for file systems with a data repository association\.  
 +  `AutoImportPolicy` 
 +  `ExportPath` 
 +  `ImportedChunkSize` 

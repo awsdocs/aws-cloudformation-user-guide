@@ -5,6 +5,8 @@ Creates a grouping of protected resources so they can be handled as a collective
 **Note**  
 To configure this resource through AWS CloudFormation, you must be subscribed to AWS Shield Advanced\. You can subscribe through the [Shield Advanced console](https://console.aws.amazon.com/wafv2/shieldv2#/) and through the APIs\. For more information, see [Subscribe to AWS Shield Advanced](https://docs.aws.amazon.com/waf/latest/developerguide/enable-ddos-prem.html)\. 
 
+See example templates for Shield Advanced in AWS CloudFormation at [aws\-samples/aws\-shield\-advanced\-examples](https://github.com/aws-samples/aws-shield-advanced-examples)\. 
+
 ## Syntax<a name="aws-resource-shield-protectiongroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

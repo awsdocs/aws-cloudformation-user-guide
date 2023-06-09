@@ -32,7 +32,7 @@ The name of the output context\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `100`  
-*Pattern*: `^([0-9a-zA-Z][_-]?)+$`  
+*Pattern*: `^([0-9a-zA-Z][_-]?){1,100}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeToLiveInSeconds`  <a name="cfn-lex-bot-outputcontext-timetoliveinseconds"></a>

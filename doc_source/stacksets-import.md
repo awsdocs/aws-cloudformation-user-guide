@@ -10,7 +10,7 @@ Stack import is available wherever StackSets are supported\. For information abo
 
 Because stack sets perform stack operations across multiple accounts, before you can create your first stack set you need the necessary permissions defined in your AWS account\.
 + To set up the required permissions for creating a stack set with **self\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](stacksets-prereqs.md#stacksets-opt-in-regions) and [Grant self\-managed permissions](stacksets-prereqs-self-managed.md)\.
-+ To set up the required permissions for creating a stack set with **service\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](stacksets-prereqs.md#stacksets-opt-in-regions) and [Enable trusted access with AWS Organizations](stacksets-orgs-enable-trusted-access.md)\.
++ To set up the required permissions for creating a stack set with **service\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](stacksets-prereqs.md#stacksets-opt-in-regions) and [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)\.
 
 For more information on StackSets requirements, see [Prerequisites for stack set operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html)\.
 

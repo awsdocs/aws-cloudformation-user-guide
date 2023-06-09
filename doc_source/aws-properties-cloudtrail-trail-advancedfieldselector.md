@@ -69,6 +69,7 @@ An operator that includes events that match the last few characters of the event
   +  `AWS::Lambda::Function` 
   +  `AWS::S3::Object` 
   +  `AWS::CloudTrail::Channel` 
+  +  `AWS::CodeWhisperer::Profile` 
   +  `AWS::Cognito::IdentityPool` 
   +  `AWS::DynamoDB::Stream` 
   +  `AWS::EC2::Snapshot` 
@@ -99,6 +100,9 @@ An operator that includes events that match the last few characters of the event
 
   When resources\.type equals `AWS::CloudTrail::Channel`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:cloudtrail:<region>:<account_ID>:channel/<channel_UUID>` 
+
+  When resources\.type equals `AWS::CodeWhisperer::Profile`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:codewhisperer:<region>:<account_ID>:profile/<profile_ID>` 
 
   When resources\.type equals `AWS::Cognito::IdentityPool`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:cognito-identity:<region>:<account_ID>:identitypool/<identity_pool_ID>` 

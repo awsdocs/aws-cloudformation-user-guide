@@ -89,7 +89,7 @@ The identifier of the resource associated with the scalable target\. This string
 `RoleARN`  <a name="cfn-applicationautoscaling-scalabletarget-rolearn"></a>
 Specify the Amazon Resource Name \(ARN\) of an Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify the scalable target on your behalf\. This can be either an IAM service role that Application Auto Scaling can assume to make calls to other AWS resources on your behalf, or a service\-linked role for the specified service\. For more information, see [How Application Auto Scaling works with IAM](https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html) in the *Application Auto Scaling User Guide*\.  
 To automatically create a service\-linked role \(recommended\), specify the full ARN of the service\-linked role in your stack template\. To find the exact ARN of the service\-linked role for your AWS or custom resource, see the [Service\-linked roles](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-service-linked-roles.html) topic in the *Application Auto Scaling User Guide*\. Look for the ARN in the table at the bottom of the page\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -153,6 +153,13 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 CloudFormation uses the following format to generate the ID: `service/resource_ID|scalable_dimension|service_namespace `\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+
+### Fn::GetAtt<a name="aws-resource-applicationautoscaling-scalabletarget-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-applicationautoscaling-scalabletarget-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-applicationautoscaling-scalabletarget--examples"></a>
 

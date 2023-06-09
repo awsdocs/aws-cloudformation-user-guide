@@ -1,6 +1,6 @@
 # AWS::BillingConductor::PricingRule<a name="aws-resource-billingconductor-pricingrule"></a>
 
- Creates a pricing rule which can be associated with a pricing plan, or a set of pricing plans\.
+Creates a pricing rule which can be associated with a pricing plan, or a set of pricing plans\.
 
 ## Syntax<a name="aws-resource-billingconductor-pricingrule-syntax"></a>
 
@@ -50,45 +50,59 @@ Properties:
 ## Properties<a name="aws-resource-billingconductor-pricingrule-properties"></a>
 
 `BillingEntity`  <a name="cfn-billingconductor-pricingrule-billingentity"></a>
- The seller of services provided by AWS, their affiliates, or third\-party providers selling services via AWS Marketplace\.   
+The seller of services provided by AWS, their affiliates, or third\-party providers selling services via AWS Marketplace\.  
 *Required*: No  
 *Type*: String  
+*Pattern*: `[a-zA-Z0-9 ]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-billingconductor-pricingrule-description"></a>
- The pricing rule description\.   
+The pricing rule description\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ModifierPercentage`  <a name="cfn-billingconductor-pricingrule-modifierpercentage"></a>
- A percentage modifier applied on the public pricing rates\.   
+A percentage modifier applied on the public pricing rates\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-billingconductor-pricingrule-name"></a>
- The name of a pricing rule\.   
+The name of a pricing rule\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `[a-zA-Z0-9_\+=\.\-@]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Operation`  <a name="cfn-billingconductor-pricingrule-operation"></a>
-Operation is the specific AWS action covered by this line item\. This describes the specific usage of the line item\.  
+ Operation is the specific AWS action covered by this line item\. This describes the specific usage of the line item\.  
+ If the `Scope` attribute is set to `SKU`, this attribute indicates which operation the `PricingRule` is modifying\. For example, a value of `RunInstances:0202` indicates the operation of running an Amazon EC2 instance\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Pattern*: `\S+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Scope`  <a name="cfn-billingconductor-pricingrule-scope"></a>
- The scope of pricing rule that indicates if it is globally applicable, or if it is service\-specific\.   
+The scope of pricing rule that indicates if it's globally applicable or service\-specific\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `BILLING_ENTITY | GLOBAL | SERVICE | SKU`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Service`  <a name="cfn-billingconductor-pricingrule-service"></a>
- If the `Scope` attribute is `SERVICE`, this attribute indicates which service the `PricingRule` is applicable for\.   
+If the `Scope` attribute is `SERVICE`, this attribute indicates which service the `PricingRule` is applicable for\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `[a-zA-Z0-9]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-billingconductor-pricingrule-tags"></a>
@@ -104,9 +118,10 @@ The set of tiering configurations for the pricing rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-billingconductor-pricingrule-type"></a>
- The type of pricing rule\.   
+The type of pricing rule\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `DISCOUNT | MARKUP | TIERING`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UsageType`  <a name="cfn-billingconductor-pricingrule-usagetype"></a>
@@ -126,16 +141,16 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 #### <a name="aws-resource-billingconductor-pricingrule-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
- The Amazon Resource Name \(ARN\) used to uniquely identify a pricing rule\. 
+The Amazon Resource Name \(ARN\) used to uniquely identify a pricing rule\.
 
 `AssociatedPricingPlanCount`  <a name="AssociatedPricingPlanCount-fn::getatt"></a>
- The pricing plans count that this pricing rule is associated with\. 
+The pricing plans count that this pricing rule is associated with\.
 
 `CreationTime`  <a name="CreationTime-fn::getatt"></a>
- The time the pricing rule was created\. 
+The time the pricing rule was created\.
 
 `LastModifiedTime`  <a name="LastModifiedTime-fn::getatt"></a>
- The most recent time the pricing rule was modified\. 
+The most recent time the pricing rule was modified\.
 
 ## Examples<a name="aws-resource-billingconductor-pricingrule--examples"></a>
 

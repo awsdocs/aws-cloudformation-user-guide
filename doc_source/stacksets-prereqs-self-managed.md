@@ -10,7 +10,7 @@ With self\-managed permissions, you create the AWS Identity and Access Managemen
 
 ## Self\-managed permissions<a name="prereqs-self-managed-permissions"></a>
 
-To set up the required permissions for creating a **service\-managed** stack set, see [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.
+To set up the required permissions for creating a **service\-managed** stack set, see [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)\.
 
 Before you create a stack set with **self\-managed** permissions, you need to establish a trust relationship between the administrator and target accounts by creating IAM roles in each account\.
 

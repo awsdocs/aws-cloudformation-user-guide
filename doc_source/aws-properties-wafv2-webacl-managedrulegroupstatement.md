@@ -79,7 +79,7 @@ An optional nested statement that narrows the scope of the web requests that are
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VendorName`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-vendorname"></a>
-The name of the managed rule group vendor\. You use this, along with the rule group name, to identify the rule group\.  
+The name of the managed rule group vendor\. You use this, along with the rule group name, to identify a rule group\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

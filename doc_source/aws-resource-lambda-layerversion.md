@@ -95,6 +95,13 @@ The layer's software license\. It can be any of the following:
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-lambda-layerversion-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-lambda-layerversion-return-values-fn--getatt-fn--getatt"></a>
+
+`LayerVersionArn`  <a name="LayerVersionArn-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-lambda-layerversion--examples"></a>
 
 

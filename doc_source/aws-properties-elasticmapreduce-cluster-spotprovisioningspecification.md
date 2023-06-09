@@ -32,10 +32,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-spotprovisioningspecification-properties"></a>
 
 `AllocationStrategy`  <a name="cfn-elasticmapreduce-cluster-spotprovisioningspecification-allocationstrategy"></a>
- Specifies the strategy to use in launching Spot Instance fleets\. Currently, the only option is capacity\-optimized \(the default\), which launches instances from Spot Instance pools with optimal capacity for the number of instances that are launching\.   
+Specifies one of the following strategies to launch Spot Instance fleets: `price-capacity-optimized`, `capacity-optimized`, `lowest-price`, or `diversified`\. For more information on the provisioning strategies, see [Allocation strategies for Spot Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+When you launch a Spot Instance fleet with the old console, it automatically launches with the `capacity-optimized` strategy\. You can't change the allocation strategy from the old console\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `capacity-optimized`  
+*Allowed values*: `capacity-optimized | diversified | lowest-price | price-capacity-optimized`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BlockDurationMinutes`  <a name="cfn-elasticmapreduce-cluster-spotprovisioningspecification-blockdurationminutes"></a>

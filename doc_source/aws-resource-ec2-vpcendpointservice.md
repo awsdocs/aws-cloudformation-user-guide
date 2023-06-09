@@ -50,7 +50,7 @@ Indicates whether requests from service consumers to create an endpoint to your 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContributorInsightsEnabled`  <a name="cfn-ec2-vpcendpointservice-contributorinsightsenabled"></a>
-Indicates whether to enable the built\-in Contributor Insights rules\.  
+Indicates whether to enable the built\-in Contributor Insights rules provided by AWS PrivateLink\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
