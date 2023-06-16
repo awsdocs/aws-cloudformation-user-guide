@@ -84,6 +84,7 @@ An operator that includes events that match the last few characters of the event
   +  `AWS::S3::AccessPoint` 
   +  `AWS::S3ObjectLambda::AccessPoint` 
   +  `AWS::S3Outposts::Object` 
+  +  `AWS::VerifiedPermissions::PolicyStore` 
 
    You can have only one `resources.type` ﬁeld per selector\. To log data events on more than one resource type, add another selector\.
 +  ** `resources.ARN` ** \- You can use any operator with `resources.ARN`, but if you use `Equals` or `NotEquals`, the value must exactly match the ARN of a valid resource of the type you've speciﬁed in the template as the value of resources\.type\. For example, if resources\.type equals `AWS::S3::Object`, the ARN must be in one of the following formats\. To log all data events for all objects in a specific S3 bucket, use the `StartsWith` operator, and include only the bucket ARN as the matching value\.
@@ -146,6 +147,9 @@ An operator that includes events that match the last few characters of the event
 
   When `resources.type` equals `AWS::S3Outposts::Object`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:s3-outposts:<region>:<account_ID>:<object_path>` 
+
+  When resources\.type equals `AWS::VerifiedPermissions::PolicyStore`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:verifiedpermissions:<region>:<account_ID>:policy-store/<policy_store_UUID>` 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

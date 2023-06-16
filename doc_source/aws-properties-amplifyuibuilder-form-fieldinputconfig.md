@@ -79,13 +79,13 @@ The text to display to describe the field\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FileUploaderConfig`  <a name="cfn-amplifyuibuilder-form-fieldinputconfig-fileuploaderconfig"></a>
-Property description not available\.  
+The configuration for the file uploader field\.  
 *Required*: No  
 *Type*: [FileUploaderFieldConfig](aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsArray`  <a name="cfn-amplifyuibuilder-form-fieldinputconfig-isarray"></a>
-Property description not available\.  
+Specifies whether to render the field as an array\. This property is ignored if the `dataSourceType` for the form is a Data Store\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

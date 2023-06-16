@@ -1,6 +1,6 @@
 # AWS::Config::OrganizationConfigRule OrganizationManagedRuleMetadata<a name="aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata"></a>
 
-An object that specifies organization managed rule metadata such as resource type and ID of AWS resource along with the rule identifier\. It also provides the frequency with which you want AWS Config to run evaluations for the rule if the trigger type is periodic\.
+ organization managed rule metadata such as resource type and ID of AWS resource along with the rule identifier\. It also provides the frequency with which you want AWS Config to run evaluations for the rule if the trigger type is periodic\.
 
 ## Syntax<a name="aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata-syntax"></a>
 

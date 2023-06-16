@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InsecureIngest](#cfn-ivs-channel-insecureingest)" : Boolean,
       "[LatencyMode](#cfn-ivs-channel-latencymode)" : String,
       "[Name](#cfn-ivs-channel-name)" : String,
+      "[Preset](#cfn-ivs-channel-preset)" : String,
       "[RecordingConfigurationArn](#cfn-ivs-channel-recordingconfigurationarn)" : String,
       "[Tags](#cfn-ivs-channel-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-ivs-channel-type)" : String
@@ -35,6 +36,7 @@ Properties:
   [InsecureIngest](#cfn-ivs-channel-insecureingest): Boolean
   [LatencyMode](#cfn-ivs-channel-latencymode): String
   [Name](#cfn-ivs-channel-name): String
+  [Preset](#cfn-ivs-channel-preset): String
   [RecordingConfigurationArn](#cfn-ivs-channel-recordingconfigurationarn): String
   [Tags](#cfn-ivs-channel-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -75,6 +77,13 @@ Channel name\.
 *Minimum*: `0`  
 *Maximum*: `128`  
 *Pattern*: `^[a-zA-Z0-9-_]*$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Preset`  <a name="cfn-ivs-channel-preset"></a>
+An optional transcode preset for the channel\. This is selectable only for `ADVANCED_HD` and `ADVANCED_SD` channel types\. For those channel types, the default preset is `HIGHER_BANDWIDTH_DELIVERY`\. For other channel types \(`BASIC` and `STANDARD`\), `preset` is the empty string \(""\)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `CONSTRAINED_BANDWIDTH_DELIVERY | HIGHER_BANDWIDTH_DELIVERY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RecordingConfigurationArn`  <a name="cfn-ivs-channel-recordingconfigurationarn"></a>

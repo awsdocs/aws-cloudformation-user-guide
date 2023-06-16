@@ -62,20 +62,20 @@ Instead of this setting, provide your configuration under `AWSManagedRulesATPRul
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PasswordField`  <a name="cfn-wafv2-webacl-managedrulegroupconfig-passwordfield"></a>
-Instead of this setting, provide your configuration under `AWSManagedRulesATPRuleSet` `RequestInspection`\. 
+Instead of this setting, provide your configuration under the request inspection configuration for `AWSManagedRulesATPRuleSet` or `AWSManagedRulesACFPRuleSet`\. 
 *Required*: No  
 *Type*: [FieldIdentifier](aws-properties-wafv2-webacl-fieldidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PayloadType`  <a name="cfn-wafv2-webacl-managedrulegroupconfig-payloadtype"></a>
-Instead of this setting, provide your configuration under `AWSManagedRulesATPRuleSet` `RequestInspection`\. 
+Instead of this setting, provide your configuration under the request inspection configuration for `AWSManagedRulesATPRuleSet` or `AWSManagedRulesACFPRuleSet`\. 
 *Required*: No  
 *Type*: String  
 *Allowed values*: `FORM_ENCODED | JSON`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UsernameField`  <a name="cfn-wafv2-webacl-managedrulegroupconfig-usernamefield"></a>
-Instead of this setting, provide your configuration under `AWSManagedRulesATPRuleSet` `RequestInspection`\. 
+Instead of this setting, provide your configuration under the request inspection configuration for `AWSManagedRulesATPRuleSet` or `AWSManagedRulesACFPRuleSet`\. 
 *Required*: No  
 *Type*: [FieldIdentifier](aws-properties-wafv2-webacl-fieldidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -74,6 +74,7 @@ The password for the Elastic DocumentDB cluster administrator and can contain an
 The authentication type used to determine where to fetch the password used for accessing the elastic cluster\. Valid types are `PLAIN_TEXT` or `SECRET_ARN`\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `PLAIN_TEXT | SECRET_ARN`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterName`  <a name="cfn-docdbelastic-cluster-clustername"></a>

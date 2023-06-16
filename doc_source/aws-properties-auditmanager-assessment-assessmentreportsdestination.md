@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-auditmanager-assessment-assessmentreportsdestination-properties"></a>
 
 `Destination`  <a name="cfn-auditmanager-assessment-assessmentreportsdestination-destination"></a>
- The destination of the assessment report\.   
+ The destination bucket where Audit Manager stores assessment reports\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

@@ -33,6 +33,7 @@ service-provider::service-name::data-type-name
 + [AWS Budgets](AWS_Budgets.md)
 + [AWS Certificate Manager](AWS_CertificateManager.md)
 + [AWS Chatbot](AWS_Chatbot.md)
++ [AWS Clean Rooms](AWS_CleanRooms.md)
 + [AWS Cloud9](AWS_Cloud9.md)
 + [AWS CloudFormation](AWS_CloudFormation.md)
 + [Amazon CloudFront](AWS_CloudFront.md)

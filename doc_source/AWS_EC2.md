@@ -19,6 +19,7 @@
 + [AWS::EC2::GatewayRouteTableAssociation](aws-resource-ec2-gatewayroutetableassociation.md)
 + [AWS::EC2::Host](aws-resource-ec2-host.md)
 + [AWS::EC2::Instance](aws-properties-ec2-instance.md)
++ [AWS::EC2::InstanceConnectEndpoint](aws-resource-ec2-instanceconnectendpoint.md)
 + [AWS::EC2::InternetGateway](aws-resource-ec2-internetgateway.md)
 + [AWS::EC2::IPAM](aws-resource-ec2-ipam.md)
 + [AWS::EC2::IPAMAllocation](aws-resource-ec2-ipamallocation.md)

@@ -92,7 +92,7 @@ Specifies whether to perform a create or update action on the form\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LabelDecorator`  <a name="cfn-amplifyuibuilder-form-labeldecorator"></a>
-Property description not available\.  
+Specifies an icon or decoration to display on the form\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

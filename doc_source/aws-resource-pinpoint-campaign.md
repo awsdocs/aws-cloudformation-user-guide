@@ -87,7 +87,7 @@ Specifies the Lambda function to use as a code hook for a campaign\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomDeliveryConfiguration`  <a name="cfn-pinpoint-campaign-customdeliveryconfiguration"></a>
-Property description not available\.  
+The delivery configuration settings for sending the treatment through a custom channel\. This object is required if the `MessageConfiguration` object for the treatment specifies a `CustomMessage` object\.  
 *Required*: No  
 *Type*: [CustomDeliveryConfiguration](aws-properties-pinpoint-campaign-customdeliveryconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -160,7 +160,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateConfiguration`  <a name="cfn-pinpoint-campaign-templateconfiguration"></a>
-Property description not available\.  
+The message template to use for the treatment\.  
 *Required*: No  
 *Type*: [TemplateConfiguration](aws-properties-pinpoint-campaign-templateconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -4,6 +4,31 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_IVS.md) | The following resource was updated: AWS::IVS::Channel 
+
+ [AWS::IVS::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html)   
+Use the `preset` property to set a transcode preset, based on bandwidth delivery, for the channel\. Available only for advanced channel types\.   | June 15, 2023 | 
+| [Updated resource](AWS_S3.md) | The following resource was updated: AWS::S3::Bucket\. 
+
+ [AWS::S3::Bucket ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html)   
+Updated `SSEAlgorithm` to add a new allowed value: `DSSE-KMS`\. You can apply this setting to enable dual\-layer server\-side encryption with AWS KMS keys\.  | June 15, 2023 | 
+| [New resources](AWS_CleanRooms.md) | The following resources were added: AWS::CleanRooms::Collaboration, AWS::CleanRooms::ConfiguredTable, AWS::CleanRooms::ConfiguredTableAssociation, and AWS::CleanRooms::Membership\. 
+
+ [AWS::CleanRooms::Collaboration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html)   
+Use the `AWS::CleanRooms::Collaboration` resource to specify a new collaboration resource in AWS Clean Rooms\. 
+
+ [AWS::CleanRooms::ConfiguredTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html)   
+Use the `AWS::CleanRooms::ConfiguredTable` resource to specify a new configured table resource in AWS Clean Rooms\. 
+
+ [AWS::CleanRooms::ConfiguredTableAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtableassociation.html)   
+Use the `AWS::CleanRooms::ConfiguredTable` resource to specify a new configured association resource in AWS Clean Rooms\. 
+
+ [AWS::CleanRooms::Membership](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html)   
+Use the `AWS::CleanRooms::ConfiguredTable` resource to specify a membership for a specific collaboration identifier and join the collaboration in AWS Clean Rooms\.  | June 15, 2023 | 
+| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::InstanceConnectEndpoint\. 
+
+ [ AWS::EC2::InstanceConnectEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html)   
+Creates an EC2 Instance Connect Endpoint\.  | June 15, 2023 | 
 | [Updated resource](AWS_CloudTrail.md) | The following resource was updated: AWS::CloudTrail::EventDataStore 
 
  [AWS::CloudTrail::EventDataStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html)   
