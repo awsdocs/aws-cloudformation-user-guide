@@ -12,6 +12,9 @@ Because stack sets perform stack operations across multiple accounts, before you
 + To set up the required permissions for creating a stack set with **self\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](stacksets-prereqs.md#stacksets-opt-in-regions) and [Grant self\-managed permissions](stacksets-prereqs-self-managed.md)\.
 + To set up the required permissions for creating a stack set with **service\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](stacksets-prereqs.md#stacksets-opt-in-regions) and [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)\.
 
+**Important**  
+ The `NoEcho` property is not supported by StackSet import\. Stacks that contain `NoEcho` won't be imported into new stack sets through StackSet import\. 
+
 For more information on StackSets requirements, see [Prerequisites for stack set operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html)\.
 
 Before you import a stack into a stack set, make sure you understand the following requirements:

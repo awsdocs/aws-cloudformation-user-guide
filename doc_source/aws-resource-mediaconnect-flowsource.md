@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-mediaconnect-flowsource-description)" : String,
       "[EntitlementArn](#cfn-mediaconnect-flowsource-entitlementarn)" : String,
       "[FlowArn](#cfn-mediaconnect-flowsource-flowarn)" : String,
+      "[GatewayBridgeSource](#cfn-mediaconnect-flowsource-gatewaybridgesource)" : GatewayBridgeSource,
       "[IngestPort](#cfn-mediaconnect-flowsource-ingestport)" : Integer,
       "[MaxBitrate](#cfn-mediaconnect-flowsource-maxbitrate)" : Integer,
       "[MaxLatency](#cfn-mediaconnect-flowsource-maxlatency)" : Integer,
@@ -43,6 +44,8 @@ Properties:
   [Description](#cfn-mediaconnect-flowsource-description): String
   [EntitlementArn](#cfn-mediaconnect-flowsource-entitlementarn): String
   [FlowArn](#cfn-mediaconnect-flowsource-flowarn): String
+  [GatewayBridgeSource](#cfn-mediaconnect-flowsource-gatewaybridgesource): 
+    GatewayBridgeSource
   [IngestPort](#cfn-mediaconnect-flowsource-ingestport): Integer
   [MaxBitrate](#cfn-mediaconnect-flowsource-maxbitrate): Integer
   [MaxLatency](#cfn-mediaconnect-flowsource-maxlatency): Integer
@@ -82,6 +85,12 @@ The ARN of the entitlement that allows you to subscribe to the flow\. The entitl
 The Amazon Resource Name \(ARN\) of the flow this source is connected to\. The flow must have Failover enabled to add an additional source\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`GatewayBridgeSource`  <a name="cfn-mediaconnect-flowsource-gatewaybridgesource"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [GatewayBridgeSource](aws-properties-mediaconnect-flowsource-gatewaybridgesource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IngestPort`  <a name="cfn-mediaconnect-flowsource-ingestport"></a>
@@ -188,4 +197,4 @@ The IP address that the flow listens on for incoming content\.
 The ARN of the source\.
 
 `SourceIngestPort`  <a name="SourceIngestPort-fn::getatt"></a>
-Property description not available\.
+The port that the flow listens on for incoming content\. If the protocol of the source is Zixi, the port must be set to 2088\. 

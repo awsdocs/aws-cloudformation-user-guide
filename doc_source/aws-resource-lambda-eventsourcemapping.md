@@ -258,7 +258,7 @@ The position in a stream from which to start reading\. Required for Amazon Kines
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StartingPositionTimestamp`  <a name="cfn-lambda-eventsourcemapping-startingpositiontimestamp"></a>
-With `StartingPosition` set to `AT_TIMESTAMP`, the time from which to start reading, in Unix time seconds\.  
+With `StartingPosition` set to `AT_TIMESTAMP`, the time from which to start reading, in Unix time seconds\. `StartingPositionTimestamp` cannot be in the future\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

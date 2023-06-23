@@ -4,6 +4,30 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New resources](AWS_StepFunctions.md) | The following resources were added: `AWS::StepFunctions::StateMachineAlias` and `AWS::StepFunctions::StateMachineVersion`\. 
+
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachinealias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachinealias.html)  
+Use the `AWS::StepFunctions::StateMachineAlias` resource to create an alias that routes traffic to one or two versions of the same state machine\. 
+
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html)  
+Use the `AWS::StepFunctions::StateMachineVersion` resource to create multiple versions of a state machine\.  | June 22, 2023 | 
+| [New resource](AWS_AppRunner.md) | The following resource was added: AWS::AppRunner::AutoScalingConfiguration 
+
+ [AWS::AppRunner::AutoScalingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-autoscalingconfiguration.html)   
+Use the `AWS::AppRunner::AutoScalingConfiguration` resource to create or update an AWS App Runner automatic scaling configuration resource\.  | June 22, 2023 | 
+| [New resource](AWS_Organizations.md) | The following resource was added: `AWS::Organizations::Organization.` 
+
+ [AWS::Organizations::Organization](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-organization.html)   
+Use the `AWS::Organizations::Organization` resource to create an AWS organization\. The account you use to create the organization automatically becomes the [management account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#account) of the new organization\.  | June 22, 2023 | 
+| [New and updated resources](AWS_SecurityHub.md) | The following resource was updated: AWS::SecurityHub::Hub\. The following resource was added: AWS::SecurityHub::Standard\. 
+
+ [AWS::SecurityHub::Hub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-hub.html)   
+Use the `AutoEnableControls` property to specify whether you want Security Hub to automatically enable new controls as they are added to your enabled standards\. For more information, see [Enabling new controls in enabled standards automatically](https://docs.aws.amazon.com/securityhub/latest/userguide/controls-auto-enable.html)\.  
+Use the `ControlFindingGenerator` property to specify whether you want Security Hub to generate a single finding or separate findings when a control applies to multiple standards\. For more information, see [Consolidated control findings](https://docs.aws.amazon.com/securityhub/latest/userguide/controls-findings-create-update.html#consolidated-control-findings)\.  
+Use the `EnableDefaultStandards` property to specify whether you want to enable security standards that Security Hub has designated as default standards\. For more information, see [Automatically enabled security standards](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html#securityhub-auto-enabled-standards)\. 
+
+ [AWS::SecurityHub::Standard](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-standard.html)   
+Use the `AWS::SecurityHub::Standard` resource to enable a specified security standard in Security Hub\.  | June 22, 2023 | 
 | [Updated resource](AWS_IVS.md) | The following resource was updated: AWS::IVS::Channel 
 
  [AWS::IVS::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html)   
@@ -25,10 +49,35 @@ Use the `AWS::CleanRooms::ConfiguredTable` resource to specify a new configured 
 
  [AWS::CleanRooms::Membership](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html)   
 Use the `AWS::CleanRooms::ConfiguredTable` resource to specify a membership for a specific collaboration identifier and join the collaboration in AWS Clean Rooms\.  | June 15, 2023 | 
+| [New resources](AWS_MediaConnect.md) | The following resources were added: `AWS::MediaConnect::Bridge`, `AWS::MediaConnect::BridgeOutput`, `AWS::MediaConnect::BridgeSource`, and `AWS::MediaConnect::Gateway`\. 
+
+ [AWS::MediaConnect::Bridge](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html.html)   
+Use the `AWS::MediaConnect::Bridge` resource to create a connection between your data center instance and the cloud\. 
+
+ [AWS::MediaConnect::BridgeOutput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html)   
+Use the `AWS::MediaConnect::BridgeOutput` resource to add new outputs to an existing bridge\. 
+
+ [AWS::MediaConnect::BridgeSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html)   
+Use the `AWS::MediaConnect::BridgeSource` resource to add new sources to an existing bridge\. 
+
+ [AWS::MediaConnect::Gateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html)   
+Use the `AWS::MediaConnect::Gateway` resource to create a gateway\. The gateway is a logical grouping of Instances and Bridges\. Each gateway utilizes user\-defined IP information for communication between data centers and the cloud\.   | June 15, 2023 | 
 | [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::InstanceConnectEndpoint\. 
 
  [ AWS::EC2::InstanceConnectEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html)   
 Creates an EC2 Instance Connect Endpoint\.  | June 15, 2023 | 
+| [New resource](AWS_RDS.md) | The following resources were added AWS::RDS::CustomDBEngineVersion 
+
+ [AWS::RDS::CustomDBEngineVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html)   
+The `DatabaseInstallationFilesS3BucketName` property is the name of an Amazon S3 bucket that contains database installation files for your CEV\.  
+The `DatabaseInstallationFilesS3Prefix` property is the Amazon S3 directory that contains the database installation files for your CEV\.  
+Use `Description` property to provide an optional description of your CEV\.  
+Use `Engine` property to indicate the database engine to use for your custom engine version \(CEV\)\.  
+Use `EngineVersion` property to indicate the name of your CEV in the format `19.customized_string`\.  
+Use `KMSKeyId` property for the AWS KMS key identifier for an encrypted CEV\.  
+The `Manifest` property is the CEV manifest, which is a JSON document that describes the installation \.zip files stored in Amazon S3\.  
+The `Status` property provides the status of a custom engine version \(CEV\)\.  
+The `Tags` property allows you to add metadata to your RDS resource\.  | June 15, 2023 | 
 | [Updated resource](AWS_CloudTrail.md) | The following resource was updated: AWS::CloudTrail::EventDataStore 
 
  [AWS::CloudTrail::EventDataStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html)   
@@ -54,6 +103,13 @@ Use the `AWS::Omics::AnnotationStore.SchemaItem` property to specify a schema it
 
  [AWS::Omics::SequenceStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html)   
 Use the `AWS::Omics::SequenceStore.FallbackLocation` property update to specify a fallback location for files that don't upload successfully\. Omics\.  | June 8, 2023 | 
+| [Updated resource](AWS_GroundStation.md) | The following resource was updated: AWS::GroundStation::DataflowEndpointGroup\. 
+
+ [ContactPostPassDurationSeconds property](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds)   
+Updated description of the ContactPostPassDurationSeconds property\. 
+
+ [ContactPrePassDurationSeconds property](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds)   
+Updated description of the ContactPrePassDurationSeconds property\.  | June 2, 2023 | 
 | [Updated resource](AWS_CustomerProfiles.md) | The following resource was updated: AWS::CustomerProfiles::CalculatedAttributeDefinition\. 
 
  [AWS::CustomerProfiles::CalculatedAttributeDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html)  
@@ -116,6 +172,10 @@ Use the `AWS::Shield::Protection` resource to enable Shield Advanced protections
 
  [AWS::Shield::ProtectionGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-protectiongroup.html)   
 Use the `AWS::Shield::ProtectionGroup` resource to combine the management of selected protected resources, to improve the accuracy of detection and reduce false positives\.   | May 25, 2023 | 
+| [Updated resource](AWS_Glue.md) | The following resource was added: AWS::Glue::DataQualityRuleset 
+
+ [AWS::Glue::Ruleset](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-dataqualityruleset.html)   
+Use `AWS::Glue::DataQualityRuleset` to specify data quality rulesets\.  | May 23, 2023 | 
 | [Updated resources](AWS_NetworkFirewall.md) | The following resource was updated: AWS::NetworkFirewall::FirewallPolicy 
 
  [AWS::NetworkFirewall::FirewallPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)   
@@ -144,6 +204,14 @@ Use the `ResourcePolicy` resource to specify a resource\-based policy which enab
 
  [AWS::XRay::SamplingRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html)   
 Use the `AWS::XRay::SamplingRule` resource to specify an X\-Ray sampling rule\.  | May 11, 2023 | 
+| [Updated resource](AWS_AppRunner.md) | The following resource was updated: AWS::AppRunner::Service 
+
+ [AWS::AppRunner::Service\.ImageConfiguration\.RuntimeEnvironmentSecrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentsecrets)   
+New property\. Runtime environment secrets that can be reference when creating the App Runner service using an image configuration\.  | May 11, 2023 | 
+| [Updated resource](AWS_AppRunner.md) | The following resource was updated: AWS::AppRunner::Service 
+
+ [AWS::AppRunner::Service\.CodeConfigurationValues\.RuntimeEnvironmentSecrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentsecrets)   
+New property\. Runtime environment secrets that can be reference when creating the App Runner service using a code configuration\.  | May 11, 2023 | 
 | [New resources](AWS_LakeFormation.md) | The following resources were added:AWS::LakeFormation::DataLakeSettings\.CreateDatabaseDefaultPermissions, AWS::LakeFormation::DataLakeSettings\.CreateTableDefaultPermissions, AWS::LakeFormation::DataLakeSettings\.DataLakePrincipal, AWS::LakeFormation::DataLakeSettings ExternalDataFilteringAllowList, AWS::LakeFormation::DataLakeSettings Permissions, AWS::LakeFormation::DataLakeSettings PrincipalPermissions  
 
  [AWS::LakeFormation::DataLakeSettings CreateDatabaseDefaultPermissions ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-createdatabasedefaultpermissions.html)   
@@ -230,6 +298,10 @@ Use the `ConnectivityInfo.VpcConnectivity` property to get details for VPC conne
 
 [AWS::DataSync::StorageSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-storagesystem.html)  
 Use the `AWS::DataSync::StorageSystem` resource to create an AWS resource for an on\-premises storage system that DataSync Discovery can collect information about\.  | April 27, 2023 | 
+| [New resource](AWS_IoT.md) | The following resource was added: AWS::IoT::DomainConfiguration TlsConfig\. 
+
+ [AWS::IoT::DomainConfiguration TlsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-tlsconfig.html)   
+Use AWS::IoT::DomainConfiguration TlsConfig resource to specify security policy settings in domain configuration\.  | April 27, 2023 | 
 | [New resource](AWS_MSK.md) | The following resources were added: AWS::MSK::ClusterPolicy and AWS::MSK::VpcConnection\. 
 
  [AWS::MSK::ClusterPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-clusterpolicy.html)   
@@ -1663,6 +1735,10 @@ Use the `Parameters` property to specify criteria used to identify target resour
 
  [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html)   
 Use the `AWS::AutoScaling::ScalingPolicy` property to specify custom metrics when you create predictive scaling policies\. You can also use metric math to further customize the metrics that you include in your policy\.  | March 10, 2022 | 
+| [Updated resource](AWS_StepFunctions.md) | The following resource was updated: `AWS::StepFunctions::StateMachine` 
+
+ [AWS::StepFunctions::StateMachine](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)   
+The `StateMachineType` attribute is now `IMMUTABLE`\.   | March 10, 2022 | 
 | [New resources](AWS_Personalize.md) | The following resources were added: `AWS::Personalize::Dataset`, `AWS::Personalize::Dataset DatasetImportJob`, `AWS::Personalize::DatasetGroup`, `AWS::Personalize::Schema`, `AWS::Personalize::Solution`, and `AWS::Personalize::Solution SolutionConfig`\. 
 
  [AWS::Personalize::Dataset](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html)   
@@ -4414,10 +4490,6 @@ The `AWS::CodeGuruProfiler::ProfilingGroup.AgentPermissions` property shows the 
 
  [AWS::EC2::ClientVpnEndpoint ClientAuthenticationRequest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.html)   
 Use the `FederatedAuthentication` property to specify an IAM SAML identity provider for your Client VPN endpoint\.  | May 28, 2020 | 
-| [Updated resource](AWS_Glue.md) | The following resource was updated: AWS::Glue::DataQualityRuleset 
-
- [AWS::Glue::Ruleset](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-dataqualityruleset.html)   
-Use `AWS::Glue::Ruleset` to specify data quality rulesets\.  | May 23, 2020 | 
 | [Updated resource](AWS_CodeBuild.md) | The following resource was updated: AWS::CodeBuild::ReportGroup 
 
  [AWS::CodeBuild::ReportGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html)   

@@ -1,15 +1,15 @@
 # AWS::WAFv2::WebACL ResponseInspection<a name="aws-properties-wafv2-webacl-responseinspection"></a>
 
-The criteria for inspecting responses to login requests and account creation requests, used by the ATP and ACFP rule groups to track login and account creation success and failure rates\. 
+The criteria for inspecting responses to login requests, used by the ATP rule group to track login failure rates\. 
+
+The ATP rule group evaluates the responses that your protected resources send back to client login attempts, keeping count of successful and failed attempts from each IP address and client session\. Using this information, the rule group labels and mitigates requests from client sessions and IP addresses that submit too many failed login attempts in a short amount of time\. 
 
 **Note**  
 Response inspection is available only in web ACLs that protect Amazon CloudFront distributions\.
 
-The rule groups evaluates the responses that your protected resources send back to client login and account creation attempts, keeping count of successful and failed attempts from each IP address and client session\. Using this information, the rule group labels and mitigates requests from client sessions and IP addresses with too much suspicious activity in a short amount of time\. 
+This is part of the `AWSManagedRulesATPRuleSet` configuration in `ManagedRuleGroupConfig`\.
 
-This is part of the `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet` configurations in `ManagedRuleGroupConfig`\.
-
-Enable response inspection by configuring exactly one component of the response to inspect, for example, `Header` or `StatusCode`\. You can't configure more than one component for inspection\. If you don't configure any of the response inspection options, response inspection is disabled\. 
+Enable login response inspection by configuring exactly one component of the response to inspect\. You can't configure more than one\. If you don't configure any of the response inspection options, response inspection is disabled\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-responseinspection-syntax"></a>
 
@@ -42,25 +42,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-responseinspection-properties"></a>
 
 `BodyContains`  <a name="cfn-wafv2-webacl-responseinspection-bodycontains"></a>
-Configures inspection of the response body for success and failure indicators\. AWS WAF can inspect the first 65,536 bytes \(64 KB\) of the response body\.   
+Configures inspection of the response body\. AWS WAF can inspect the first 65,536 bytes \(64 KB\) of the response body\.   
 *Required*: No  
 *Type*: [ResponseInspectionBodyContains](aws-properties-wafv2-webacl-responseinspectionbodycontains.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Header`  <a name="cfn-wafv2-webacl-responseinspection-header"></a>
-Configures inspection of the response header for success and failure indicators\.   
+Configures inspection of the response header\.   
 *Required*: No  
 *Type*: [ResponseInspectionHeader](aws-properties-wafv2-webacl-responseinspectionheader.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Json`  <a name="cfn-wafv2-webacl-responseinspection-json"></a>
-Configures inspection of the response JSON for success and failure indicators\. AWS WAF can inspect the first 65,536 bytes \(64 KB\) of the response JSON\.   
+Configures inspection of the response JSON\. AWS WAF can inspect the first 65,536 bytes \(64 KB\) of the response JSON\.   
 *Required*: No  
 *Type*: [ResponseInspectionJson](aws-properties-wafv2-webacl-responseinspectionjson.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatusCode`  <a name="cfn-wafv2-webacl-responseinspection-statuscode"></a>
-Configures inspection of the response status code for success and failure indicators\.   
+Configures inspection of the response status code\.   
 *Required*: No  
 *Type*: [ResponseInspectionStatusCode](aws-properties-wafv2-webacl-responseinspectionstatuscode.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

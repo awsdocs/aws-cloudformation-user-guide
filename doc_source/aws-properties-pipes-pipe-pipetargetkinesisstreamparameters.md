@@ -1,6 +1,6 @@
 # AWS::Pipes::Pipe PipeTargetKinesisStreamParameters<a name="aws-properties-pipes-pipe-pipetargetkinesisstreamparameters"></a>
 
-The parameters for using a Kinesis stream as a source\.
+The parameters for using a Kinesis stream as a target\.
 
 ## Syntax<a name="aws-properties-pipes-pipe-pipetargetkinesisstreamparameters-syntax"></a>
 

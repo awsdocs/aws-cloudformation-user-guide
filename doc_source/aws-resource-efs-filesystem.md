@@ -119,20 +119,21 @@ Amazon EFS requires that each `LifecyclePolicy` object have only a single transi
 `PerformanceMode`  <a name="cfn-efs-filesystem-performancemode"></a>
 The performance mode of the file system\. We recommend `generalPurpose` performance mode for most file systems\. File systems using the `maxIO` performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations\. The performance mode can't be changed after the file system has been created\.  
 The `maxIO` mode is not supported on file systems using One Zone storage classes\.
+Default is `generalPurpose`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `generalPurpose | maxIO`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProvisionedThroughputInMibps`  <a name="cfn-efs-filesystem-provisionedthroughputinmibps"></a>
-The throughput, measured in MiB/s, that you want to provision for a file system that you're creating\. Valid values are 1\-1024\. Required if `ThroughputMode` is set to `provisioned`\. The upper limit for throughput is 1024 MiB/s\. To increase this limit, contact AWS Support\. For more information, see [Amazon EFS quotas that you can increase](https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits) in the *Amazon EFS User Guide*\.  
+The throughput, measured in mebibytes per second \(MiBps\), that you want to provision for a file system that you're creating\. Required if `ThroughputMode` is set to `provisioned`\. Valid values are 1\-3414 MiBps, with the upper limit depending on Region\. To increase this limit, contact AWS Support\. For more information, see [Amazon EFS quotas that you can increase](https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits) in the *Amazon EFS User Guide*\.  
 *Required*: Conditional  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThroughputMode`  <a name="cfn-efs-filesystem-throughputmode"></a>
 Specifies the throughput mode for the file system\. The mode can be `bursting`, `provisioned`, or `elastic`\. If you set `ThroughputMode` to `provisioned`, you must also set a value for `ProvisionedThroughputInMibps`\. After you create the file system, you can decrease your file system's throughput in Provisioned Throughput mode or change between the throughput modes, with certain time restrictions\. For more information, see [Specifying throughput with provisioned mode](https://docs.aws.amazon.com/efs/latest/ug/performance.html#provisioned-throughput) in the *Amazon EFS User Guide*\.   
-Default is `bursting`\.  
+Default is `elastic`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `bursting | elastic | provisioned`  

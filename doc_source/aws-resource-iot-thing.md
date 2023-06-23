@@ -61,13 +61,17 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 
 ### Fn::GetAtt<a name="aws-resource-iot-thing-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-iot-thing-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Property description not available\.
+The Amazon Resource Name \(ARN\) of the AWS IoT thing, such as `arn:aws:iot:us-east-2:123456789012:thing/MyThing`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-Property description not available\.
+The Id of this thing\.
 
 ## Examples<a name="aws-resource-iot-thing--examples"></a>
 
@@ -78,79 +82,23 @@ The following example declares a thing and the values of its attributes\.
 #### JSON<a name="aws-resource-iot-thing--examples----json"></a>
 
 ```
-{
-   "AWSTemplateFormatVersion":"2010-09-09",
-   "Resources":{
-      "MyThing":{
-         "Type":"AWS::IoT::Thing",
-         "Properties":{
-            "ThingName":{
-               "Ref":"NameParameter"
-            },
-            "AttributePayload":{
-               "Attributes":{
-                  "myAttributeA":{
-                     "Ref":"MyAttributeValueA"
-                  },
-                  "myAttributeB":{
-                     "Ref":"MyAttributeValueB"
-                  },
-                  "myAttributeC":{
-                     "Ref":"MyAttributeValueC"
-                  }
-               }
-            }
-         }
-      }
-   },
-   "Parameters":{
-      "NameParameter":{
-         "Type":"String"
-      },
-      "MyAttributeValueA":{
-         "Type":"String",
-         "Default":"myStringA123"
-      },
-      "MyAttributeValueB":{
-         "Type":"String",
-         "Default":"myStringB123"
-      },
-      "MyAttributeValueC":{
-         "Type":"String",
-         "Default":"myStringC123"
-      }
-   }
-}
+{ "AWSTemplateFormatVersion":"2010-09-09", "Resources":{
+            "MyThing":{ "Type":"AWS::IoT::Thing", "Properties":{ "ThingName":{ "Ref":"NameParameter"
+            }, "AttributePayload":{ "Attributes":{ "myAttributeA":{ "Ref":"MyAttributeValueA" },
+            "myAttributeB":{ "Ref":"MyAttributeValueB" }, "myAttributeC":{ "Ref":"MyAttributeValueC"
+            } } } } } }, "Parameters":{ "NameParameter":{ "Type":"String" }, "MyAttributeValueA":{
+            "Type":"String", "Default":"myStringA123" }, "MyAttributeValueB":{ "Type":"String",
+            "Default":"myStringB123" }, "MyAttributeValueC":{ "Type":"String",
+            "Default":"myStringC123" } } }
 ```
 
 #### YAML<a name="aws-resource-iot-thing--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  MyThing:
-    Type: AWS::IoT::Thing
-    Properties:
-      ThingName:
-        Ref: NameParameter
-      AttributePayload:
-        Attributes:
-          myAttributeA:
-            Ref: MyAttributeValueA
-          myAttributeB:
-            Ref: MyAttributeValueB
-          myAttributeC:
-            Ref: MyAttributeValueC
-Parameters:
-  NameParameter:
-    Type: String
-  MyAttributeValueA:
-    Type: String
-    Default: myStringA123
-  MyAttributeValueB:
-    Type: String
-    Default: myStringB123
-  MyAttributeValueC:
-    Type: String
-    Default: myStringC123
+AWSTemplateFormatVersion: '2010-09-09' Resources: MyThing: Type:
+            AWS::IoT::Thing Properties: ThingName: Ref: NameParameter AttributePayload: Attributes:
+            myAttributeA: Ref: MyAttributeValueA myAttributeB: Ref: MyAttributeValueB myAttributeC:
+            Ref: MyAttributeValueC Parameters: NameParameter: Type: String MyAttributeValueA: Type:
+            String Default: myStringA123 MyAttributeValueB: Type: String Default: myStringB123
+            MyAttributeValueC: Type: String Default: myStringC123
 ```

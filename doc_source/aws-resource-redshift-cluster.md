@@ -365,7 +365,7 @@ The value must be either \-1 or an integer between 1 and 3,653\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterUsername`  <a name="cfn-redshift-cluster-masterusername"></a>
-The user name associated with the admin user for the cluster that is being created\.  
+The user name associated with the admin user account for the cluster that is being created\.  
 Constraints:  
 + Must be 1 \- 128 alphanumeric characters or hyphens\. The user name can't be `PUBLIC`\.
 + Must contain only lowercase letters, numbers, underscore, plus sign, period \(dot\), at symbol \(@\), or hyphen\.
@@ -378,7 +378,7 @@ Constraints:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterUserPassword`  <a name="cfn-redshift-cluster-masteruserpassword"></a>
-The password associated with the admin user for the cluster that is being created\.  
+The password associated with the admin user account for the cluster that is being created\.  
 Constraints:  
 + Must be between 8 and 64 characters in length\.
 + Must contain at least one uppercase letter\.

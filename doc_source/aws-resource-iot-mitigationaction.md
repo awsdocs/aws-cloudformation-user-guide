@@ -90,38 +90,22 @@ The ID of the mitigation action\.
 #### JSON<a name="aws-resource-iot-mitigationaction--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon Web Services IoT MitigationAction Sample Template",
-  "Resources": {
-    "PublishToSnsMitigationAction": {
-      "Type": "AWS::IoT::MitigationAction",
-      "Properties": {
-        "ActionName": "PublishToSns",
-        "RoleArn": "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions",
-        "ActionParams": {
-          "PublishFindingToSnsParams": {
-            "TopicArn": "arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications"
-          }
-        }
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "Amazon
+            Web Services IoT MitigationAction Sample Template", "Resources": {
+            "PublishToSnsMitigationAction": { "Type": "AWS::IoT::MitigationAction", "Properties": {
+            "ActionName": "PublishToSns", "RoleArn":
+            "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions", "ActionParams": {
+            "PublishFindingToSnsParams": { "TopicArn":
+            "arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications" } } } } } }
 ```
 
 #### YAML<a name="aws-resource-iot-mitigationaction--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Description: Amazon Web Services IoT MitigationAction Sample Template
-Resources:
-  'PublishToSnsMitigationAction':
-    Type: AWS::IoT::MitigationAction
-    Properties:
-      ActionName: PublishToSns
-      RoleArn: arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions
-      ActionParams:
-        PublishFindingToSnsParams:
-          TopicArn: arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications
+AWSTemplateFormatVersion: '2010-09-09' Description: Amazon Web
+            Services IoT MitigationAction Sample Template Resources: 'PublishToSnsMitigationAction':
+            Type: AWS::IoT::MitigationAction Properties: ActionName: PublishToSns RoleArn:
+            arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions ActionParams:
+            PublishFindingToSnsParams: TopicArn:
+            arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications
 ```

@@ -142,8 +142,12 @@ To do this, you define an EC2 security group and then use the intrinsic Ref func
 "DBSecurityGroup": {
    "Type": "AWS::RDS::DBSecurityGroup",
    "Properties": {
-      "DBSecurityGroupIngress": { "EC2SecurityGroupName": { "Ref": "WebServerSecurityGroup" } },
-      "GroupDescription"      : "Frontend Access"
+      "DBSecurityGroupIngress": {
+         "EC2SecurityGroupName": {
+            "Fn::GetAtt": ["WebServerSecurityGroup", "GroupName"]
+         }
+      },
+      "GroupDescription" : "Frontend Access"
    }
 },
 

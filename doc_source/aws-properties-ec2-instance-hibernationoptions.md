@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-instance-hibernationoptions-properties"></a>
 
 `Configured`  <a name="cfn-ec2-instance-hibernationoptions-configured"></a>
-If you set this parameter to `true`, your instance is enabled for hibernation\.  
+Set to `true` to enable your instance for hibernation\.  
 Default: `false`   
 *Required*: No  
 *Type*: Boolean  

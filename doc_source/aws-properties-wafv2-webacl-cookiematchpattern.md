@@ -4,7 +4,7 @@ The filter to use to identify the subset of cookies to inspect in a web request\
 
 You must specify exactly one setting: either `All`, `IncludedCookies`, or `ExcludedCookies`\.
 
-Example JSON: `"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }` 
+Example JSON: `"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }` 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-cookiematchpattern-syntax"></a>
 

@@ -100,6 +100,9 @@ The name of the application\.
 *Pattern*: `^[A-Za-z0-9._\\/#-]+$`  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Pattern*: `[A-Za-z0-9._/#-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NetworkConfiguration`  <a name="cfn-emrserverless-application-networkconfiguration"></a>
@@ -115,6 +118,9 @@ The EMR release version associated with the application\.
 *Pattern*: `^[A-Za-z0-9._/-]+$`  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Pattern*: `[A-Za-z0-9._/-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-emrserverless-application-tags"></a>
@@ -127,6 +133,8 @@ The tags assigned to the application\.
 The type of application, such as Spark or Hive\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WorkerTypeSpecifications`  <a name="cfn-emrserverless-application-workertypespecifications"></a>

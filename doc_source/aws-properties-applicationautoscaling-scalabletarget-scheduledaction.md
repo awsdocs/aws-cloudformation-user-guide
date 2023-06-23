@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime)" : String,
+  "[EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime)" : Timestamp,
   "[ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction)" : ScalableTargetAction,
   "[Schedule](#cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule)" : String,
   "[ScheduledActionName](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname)" : String,
-  "[StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime)" : String,
+  "[StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime)" : Timestamp,
   "[Timezone](#cfn-applicationautoscaling-scalabletarget-scheduledaction-timezone)" : String
 }
 ```
@@ -24,12 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction-syntax.yaml"></a>
 
 ```
-  [EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime): String
+  [EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime): Timestamp
   [ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction): 
     ScalableTargetAction
   [Schedule](#cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule): String
   [ScheduledActionName](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname): String
-  [StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime): String
+  [StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime): Timestamp
   [Timezone](#cfn-applicationautoscaling-scalabletarget-scheduledaction-timezone): String
 ```
 
@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `EndTime`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime"></a>
 The date and time that the action is scheduled to end, in UTC\.  
 *Required*: No  
-*Type*: String  
+*Type*: Timestamp  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScalableTargetAction`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction"></a>
@@ -75,7 +75,7 @@ The name of the scheduled action\. This name must be unique among all other sche
 `StartTime`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime"></a>
 The date and time that the action is scheduled to begin, in UTC\.  
 *Required*: No  
-*Type*: String  
+*Type*: Timestamp  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Timezone`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-timezone"></a>

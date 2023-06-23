@@ -62,7 +62,7 @@ Stops the specified fleet before the update\.
 Starts the specified fleet after the update\.  
 *Required*: No
 
-## AutoScalingReplacing update policy<a name="cfn-attributes-updatepolicy-replacingupdate"></a>
+## AutoScalingReplacingUpdate policy<a name="cfn-attributes-updatepolicy-replacingupdate"></a>
 
 To specify how AWS CloudFormation handles replacement updates for an Auto Scaling group, use the `AutoScalingReplacingUpdate` policy\. This policy enables you to specify whether AWS CloudFormation replaces an Auto Scaling group with a new one or replaces only the instances in the Auto Scaling group\.
 

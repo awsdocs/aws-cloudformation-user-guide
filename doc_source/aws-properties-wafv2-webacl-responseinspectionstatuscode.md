@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL ResponseInspectionStatusCode<a name="aws-properties-wafv2-webacl-responseinspectionstatuscode"></a>
 
-Configures inspection of the response status code\. This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet`\. 
+Configures inspection of the response status code\. This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet`\. 
 
 **Note**  
 Response inspection is available only in web ACLs that protect Amazon CloudFront distributions\.
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-responseinspectionstatuscode-properties"></a>
 
 `FailureCodes`  <a name="cfn-wafv2-webacl-responseinspectionstatuscode-failurecodes"></a>
-Status codes in the response that indicate a failed login or account creation attempt\. To be counted as a failure, the response status code must match one of these\. Each code must be unique among the success and failure status codes\.   
+Status codes in the response that indicate a failed login attempt\. To be counted as a failed login, the response status code must match one of these\. Each code must be unique among the success and failure status codes\.   
 JSON example: `"FailureCodes": [ 400, 404 ]`   
 *Required*: Yes  
 *Type*: List of Integer  
@@ -38,7 +38,7 @@ JSON example: `"FailureCodes": [ 400, 404 ]`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuccessCodes`  <a name="cfn-wafv2-webacl-responseinspectionstatuscode-successcodes"></a>
-Status codes in the response that indicate a successful login or account creation attempt\. To be counted as a success, the response status code must match one of these\. Each code must be unique among the success and failure status codes\.   
+Status codes in the response that indicate a successful login attempt\. To be counted as a successful login, the response status code must match one of these\. Each code must be unique among the success and failure status codes\.   
 JSON example: `"SuccessCodes": [ 200, 201 ]`   
 *Required*: Yes  
 *Type*: List of Integer  

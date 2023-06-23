@@ -61,6 +61,8 @@ This parameter is not supported for Lustre file systems with a data repository a
 The number of days to retain automatic backups\. Setting this property to `0` disables automatic backups\. You can retain automatic backups for a maximum of 90 days\. The default is `0`\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `90`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CopyTagsToBackups`  <a name="cfn-fsx-filesystem-lustreconfiguration-copytagstobackups"></a>

@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `MatchPattern`  <a name="cfn-wafv2-rulegroup-headers-matchpattern"></a>
 The filter to use to identify the subset of headers to inspect in a web request\.   
 You must specify exactly one setting: either `All`, `IncludedHeaders`, or `ExcludedHeaders`\.  
-Example JSON: `"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }`   
+Example JSON: `"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }`   
 *Required*: Yes  
 *Type*: [HeaderMatchPattern](aws-properties-wafv2-rulegroup-headermatchpattern.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

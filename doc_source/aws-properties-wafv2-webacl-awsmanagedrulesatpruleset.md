@@ -43,8 +43,8 @@ The criteria for inspecting login requests, used by the ATP rule group to valida
 
 `ResponseInspection`  <a name="cfn-wafv2-webacl-awsmanagedrulesatpruleset-responseinspection"></a>
 The criteria for inspecting responses to login requests, used by the ATP rule group to track login failure rates\.   
+The ATP rule group evaluates the responses that your protected resources send back to client login attempts, keeping count of successful and failed attempts from each IP address and client session\. Using this information, the rule group labels and mitigates requests from client sessions and IP addresses that submit too many failed login attempts in a short amount of time\.   
 Response inspection is available only in web ACLs that protect Amazon CloudFront distributions\.
-The ATP rule group evaluates the responses that your protected resources send back to client login attempts, keeping count of successful and failed attempts for each IP address and client session\. Using this information, the rule group labels and mitigates requests from client sessions and IP addresses that have had too many failed login attempts in a short amount of time\.   
 *Required*: No  
 *Type*: [ResponseInspection](aws-properties-wafv2-webacl-responseinspection.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProtocolDetails](#cfn-transfer-server-protocoldetails)" : ProtocolDetails,
       "[Protocols](#cfn-transfer-server-protocols)" : [ Protocol, ... ],
       "[SecurityPolicyName](#cfn-transfer-server-securitypolicyname)" : String,
+      "[StructuredLogDestinations](#cfn-transfer-server-structuredlogdestinations)" : [ StructuredLogDestination, ... ],
       "[Tags](#cfn-transfer-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[WorkflowDetails](#cfn-transfer-server-workflowdetails)" : WorkflowDetails
     }
@@ -51,6 +52,8 @@ Properties:
   [Protocols](#cfn-transfer-server-protocols): 
     - Protocol
   [SecurityPolicyName](#cfn-transfer-server-securitypolicyname): String
+  [StructuredLogDestinations](#cfn-transfer-server-structuredlogdestinations): 
+    - StructuredLogDestination
   [Tags](#cfn-transfer-server-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [WorkflowDetails](#cfn-transfer-server-workflowdetails): 
@@ -171,6 +174,18 @@ Specifies the name of the security policy that is attached to the server\.
 *Type*: String  
 *Maximum*: `100`  
 *Pattern*: `TransferSecurityPolicy-.+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StructuredLogDestinations`  <a name="cfn-transfer-server-structuredlogdestinations"></a>
+Specifies the log groups to which your server logs are sent\.  
+To specify a log group, you must provide the ARN for an existing log group\. In this case, the format of the log group is as follows:  
+ `arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*`   
+For example, `arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*`   
+If you have previously specified a log group for a server, you can clear it, and in effect turn off structured logging, by providing an empty value for this parameter in an `update-server` call\. For example:  
+ `update-server --server-id s-1234567890abcdef0 --structured-log-destinations`   
+*Required*: No  
+*Type*: List of [StructuredLogDestination](aws-properties-transfer-server-structuredlogdestination.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-transfer-server-tags"></a>

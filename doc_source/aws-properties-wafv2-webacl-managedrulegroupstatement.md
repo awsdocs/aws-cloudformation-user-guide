@@ -50,10 +50,8 @@ Instead of this option, use `RuleActionOverrides`\. It accepts any valid action 
 
 `ManagedRuleGroupConfigs`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-managedrulegroupconfigs"></a>
 Additional information that's used by a managed rule group\. Many managed rule groups don't require this\.  
-The rule groups used for intelligent threat mitigation require additional configuration:   
-+ Use the `AWSManagedRulesACFPRuleSet` configuration object to configure the account creation fraud prevention managed rule group\. The configuration includes the registration and sign\-up pages of your application and the locations in the account creation request payload of data, such as the user email and phone number fields\. 
-+ Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account takeover prevention managed rule group\. The configuration includes the sign\-in page of your application and the locations in the login request payload of data such as the username and password\. 
-+ Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection level that you want the Bot Control rule group to use\. 
+Use the `AWSManagedRulesATPRuleSet` configuration object for the account takeover prevention managed rule group, to provide information such as the sign\-in page of your application and the type of content to accept or reject from the client\.   
+Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection level that you want the Bot Control rule group to use\.   
 *Required*: No  
 *Type*: List of [ManagedRuleGroupConfig](aws-properties-wafv2-webacl-managedrulegroupconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -52,7 +52,7 @@ Properties:
 ## Properties<a name="aws-resource-stepfunctions-statemachine-properties"></a>
 
 `Definition`  <a name="cfn-stepfunctions-statemachine-definition"></a>
-The Amazon States Language definition of the state machine\. The state machine definition must be in JSON or YAML, and the format of the object must match the format of your AWS Step Functions template file\. See [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)\.  
+The Amazon States Language definition of the state machine\. The state machine definition must be in JSON or YAML, and the format of the object must match the format of your CloudFormation template file\. See [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,6 +71,7 @@ The Amazon States Language definition of the state machine\. The state machine d
 
 `DefinitionSubstitutions`  <a name="cfn-stepfunctions-statemachine-definitionsubstitutions"></a>
 A map \(string to string\) that specifies the mappings for placeholder variables in the state machine definition\. This enables the customer to inject values obtained at runtime, for example from intrinsic functions, in the state machine definition\. Variables can be template parameter names, resource logical IDs, resource attributes, or a variable in a key\-value map\.   
+Substitutions must follow the syntax: `${key_name}` or `${variable_1,variable_2,...}`\.  
 *Required*: No  
 *Type*: Map of Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -141,7 +142,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-stepfunctions-statemachine-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Property description not available\.
+Returns the ARN of the resource\.
 
 `Name`  <a name="Name-fn::getatt"></a>
 Returns the name of the state machine\. For example:  
@@ -153,7 +154,7 @@ If you did not specify the name it will be similar to the following:
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 `StateMachineRevisionId`  <a name="StateMachineRevisionId-fn::getatt"></a>
-Property description not available\.
+Identifier for a state machine revision, which is an immutable, read\-only snapshot of a state machine’s definition and configuration\.
 
 ## Examples<a name="aws-resource-stepfunctions-statemachine--examples"></a>
 

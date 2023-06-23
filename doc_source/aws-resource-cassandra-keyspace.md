@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Cassandra::Keyspace",
   "Properties" : {
       "[KeyspaceName](#cfn-cassandra-keyspace-keyspacename)" : String,
+      "[ReplicationSpecification](#cfn-cassandra-keyspace-replicationspecification)" : ReplicationSpecification,
       "[Tags](#cfn-cassandra-keyspace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cassandra::Keyspace
 Properties: 
   [KeyspaceName](#cfn-cassandra-keyspace-keyspacename): String
+  [ReplicationSpecification](#cfn-cassandra-keyspace-replicationspecification): 
+    ReplicationSpecification
   [Tags](#cfn-cassandra-keyspace-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -36,6 +39,12 @@ The name of the keyspace to be created\. The keyspace name is case sensitive\. I
 *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`  
 *Required*: No  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ReplicationSpecification`  <a name="cfn-cassandra-keyspace-replicationspecification"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ReplicationSpecification](aws-properties-cassandra-keyspace-replicationspecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-cassandra-keyspace-tags"></a>

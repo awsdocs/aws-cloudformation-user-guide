@@ -35,5 +35,4 @@ A policy that describes the associated data usage limitations\.
 The type of analysis rule\. Valid values are `AGGREGATION` and `LIST`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `AGGREGATION | DIFFERENTIAL_PRIVACY | LIST`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

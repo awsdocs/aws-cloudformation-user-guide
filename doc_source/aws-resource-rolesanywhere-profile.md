@@ -1,8 +1,6 @@
 # AWS::RolesAnywhere::Profile<a name="aws-resource-rolesanywhere-profile"></a>
 
-Creates a *profile*, a list of the roles that Roles Anywhere service is trusted to assume\. You use profiles to intersect permissions with IAM managed policies\.
-
-**Required permissions: **`rolesanywhere:CreateProfile`\. 
+ Creates a Profile\. 
 
 ## Syntax<a name="aws-resource-rolesanywhere-profile-syntax"></a>
 
@@ -47,26 +45,26 @@ Properties:
 ## Properties<a name="aws-resource-rolesanywhere-profile-properties"></a>
 
 `DurationSeconds`  <a name="cfn-rolesanywhere-profile-durationseconds"></a>
- Sets the maximum number of seconds that vended temporary credentials through [CreateSession](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html) will be valid for, between 900 and 3600\.   
+ The number of seconds vended session credentials will be valid for   
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-rolesanywhere-profile-enabled"></a>
-Indicates whether the profile is enabled\.  
+ The enabled status of the resource\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManagedPolicyArns`  <a name="cfn-rolesanywhere-profile-managedpolicyarns"></a>
-A list of managed policy ARNs that apply to the vended session credentials\.   
+ A list of managed policy ARNs\. Managed policies identified by this list will be applied to the vended session credentials\.   
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-rolesanywhere-profile-name"></a>
-The name of the profile\.  
+ The customer specified name of the resource\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -75,42 +73,39 @@ The name of the profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequireInstanceProperties`  <a name="cfn-rolesanywhere-profile-requireinstanceproperties"></a>
-Specifies whether instance properties are required in temporary credential requests with this profile\.   
+ Specifies whether instance properties are required in CreateSession requests with this profile\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArns`  <a name="cfn-rolesanywhere-profile-rolearns"></a>
-A list of IAM role ARNs\. During `CreateSession`, if a matching role ARN is provided, the properties in this profile will be applied to the intersection session policy\.  
+ A list of IAM role ARNs that can be assumed when this profile is specified in a CreateSession request\.   
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SessionPolicy`  <a name="cfn-rolesanywhere-profile-sessionpolicy"></a>
-A session policy that applies to the trust boundary of the vended session credentials\.   
+ A session policy that will applied to the trust boundary of the vended session credentials\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-rolesanywhere-profile-tags"></a>
-The tags to attach to the profile\.  
+ A list of Tags\.   
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-rolesanywhere-profile-return-values"></a>
 
 ### Ref<a name="aws-resource-rolesanywhere-profile-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns `ProfileId`\.
+ The name of the Profile
 
 ### Fn::GetAtt<a name="aws-resource-rolesanywhere-profile-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+ 
 
 #### <a name="aws-resource-rolesanywhere-profile-return-values-fn--getatt-fn--getatt"></a>
 

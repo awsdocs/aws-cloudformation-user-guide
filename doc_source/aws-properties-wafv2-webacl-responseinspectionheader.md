@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL ResponseInspectionHeader<a name="aws-properties-wafv2-webacl-responseinspectionheader"></a>
 
-Configures inspection of the response header\. This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet`\. 
+Configures inspection of the response header\. This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet`\. 
 
 **Note**  
 Response inspection is available only in web ACLs that protect Amazon CloudFront distributions\.
@@ -32,8 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-responseinspectionheader-properties"></a>
 
 `FailureValues`  <a name="cfn-wafv2-webacl-responseinspectionheader-failurevalues"></a>
-Values in the response header with the specified name that indicate a failed login or account creation attempt\. To be counted as a failure, the value must be an exact match, including case\. Each value must be unique among the success and failure values\.   
-JSON examples: `"FailureValues": [ "LoginFailed", "Failed login" ]` and `"FailureValues": [ "AccountCreationFailed" ]`   
+Values in the response header with the specified name that indicate a failed login attempt\. To be counted as a failed login, the value must be an exact match, including case\. Each value must be unique among the success and failure values\.   
+JSON example: `"FailureValues": [ "LoginFailed", "Failed login" ]`   
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `3`  
@@ -41,7 +41,7 @@ JSON examples: `"FailureValues": [ "LoginFailed", "Failed login" ]` and `"Failur
 
 `Name`  <a name="cfn-wafv2-webacl-responseinspectionheader-name"></a>
 The name of the header to match against\. The name must be an exact match, including case\.  
-JSON example: `"Name": [ "RequestResult" ]`   
+JSON example: `"Name": [ "LoginResult" ]`   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -50,8 +50,8 @@ JSON example: `"Name": [ "RequestResult" ]`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuccessValues`  <a name="cfn-wafv2-webacl-responseinspectionheader-successvalues"></a>
-Values in the response header with the specified name that indicate a successful login or account creation attempt\. To be counted as a success, the value must be an exact match, including case\. Each value must be unique among the success and failure values\.   
-JSON examples: `"SuccessValues": [ "LoginPassed", "Successful login" ]` and `"SuccessValues": [ "AccountCreated", "Successful account creation" ]`   
+Values in the response header with the specified name that indicate a successful login attempt\. To be counted as a successful login, the value must be an exact match, including case\. Each value must be unique among the success and failure values\.   
+JSON example: `"SuccessValues": [ "LoginPassed", "Successful login" ]`   
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `3`  

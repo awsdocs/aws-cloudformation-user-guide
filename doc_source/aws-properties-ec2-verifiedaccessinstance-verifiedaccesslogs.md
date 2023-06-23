@@ -1,6 +1,6 @@
 # AWS::EC2::VerifiedAccessInstance VerifiedAccessLogs<a name="aws-properties-ec2-verifiedaccessinstance-verifiedaccesslogs"></a>
 
-Describes the destinations for Verified Access logs\.
+Describes the options for Verified Access logs\.
 
 ## Syntax<a name="aws-properties-ec2-verifiedaccessinstance-verifiedaccesslogs-syntax"></a>
 

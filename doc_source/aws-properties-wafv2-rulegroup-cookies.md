@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `MatchPattern`  <a name="cfn-wafv2-rulegroup-cookies-matchpattern"></a>
 The filter to use to identify the subset of cookies to inspect in a web request\.   
 You must specify exactly one setting: either `All`, `IncludedCookies`, or `ExcludedCookies`\.  
-Example JSON: `"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }`   
+Example JSON: `"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }`   
 *Required*: Yes  
 *Type*: [CookieMatchPattern](aws-properties-wafv2-rulegroup-cookiematchpattern.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

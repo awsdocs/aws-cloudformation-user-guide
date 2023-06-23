@@ -95,7 +95,7 @@ To remove an input template, specify an empty string\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisStreamParameters`  <a name="cfn-pipes-pipe-pipetargetparameters-kinesisstreamparameters"></a>
-The parameters for using a Kinesis stream as a source\.  
+The parameters for using a Kinesis stream as a target\.  
 *Required*: No  
 *Type*: [PipeTargetKinesisStreamParameters](aws-properties-pipes-pipe-pipetargetkinesisstreamparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -119,7 +119,7 @@ The parameters for using a SageMaker pipeline as a target\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqsQueueParameters`  <a name="cfn-pipes-pipe-pipetargetparameters-sqsqueueparameters"></a>
-The parameters for using a Amazon SQS stream as a source\.  
+The parameters for using a Amazon SQS stream as a target\.  
 *Required*: No  
 *Type*: [PipeTargetSqsQueueParameters](aws-properties-pipes-pipe-pipetargetsqsqueueparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
