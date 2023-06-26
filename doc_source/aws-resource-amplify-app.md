@@ -120,6 +120,7 @@ Automatically disconnect a branch in Amplify Hosting when you delete a branch fr
 
 `EnvironmentVariables`  <a name="cfn-amplify-app-environmentvariables"></a>
  The environment variables map for an Amplify app\.   
+For a list of the environment variables that are accessible to Amplify by default, see [Amplify Environment variables](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-console-environment-variables.html) in the *Amplify Hosting User Guide*\.  
 *Required*: No  
 *Type*: List of [EnvironmentVariable](aws-properties-amplify-app-environmentvariable.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

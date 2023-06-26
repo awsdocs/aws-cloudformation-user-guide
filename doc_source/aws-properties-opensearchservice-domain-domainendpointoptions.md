@@ -58,7 +58,7 @@ True to require that all traffic to the domain arrive over HTTPS\. Required if y
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `TLSSecurityPolicy`  <a name="cfn-opensearchservice-domain-domainendpointoptions-tlssecuritypolicy"></a>
-The minimum TLS version required for traffic to the domain\. Valid values are TLS 1\.0 \(default\) or 1\.2:  
+The minimum TLS version required for traffic to the domain\. Valid values are TLS 1\.3 \(recommended\) or 1\.2:  
 + `Policy-Min-TLS-1-0-2019-07`
 + `Policy-Min-TLS-1-2-2019-07`
 *Required*: No  

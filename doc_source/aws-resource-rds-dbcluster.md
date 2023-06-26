@@ -168,8 +168,8 @@ Properties:
 
 `AllocatedStorage`  <a name="cfn-rds-dbcluster-allocatedstorage"></a>
 The amount of storage in gibibytes \(GiB\) to allocate to each DB instance in the Multi\-AZ DB cluster\.  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
 This setting is required to create a Multi\-AZ DB cluster\.  
-Valid for: Multi\-AZ DB clusters only  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -182,8 +182,8 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoMinorVersionUpgrade`  <a name="cfn-rds-dbcluster-autominorversionupgrade"></a>
-A value that indicates whether minor engine upgrades are applied automatically to the DB cluster during the maintenance window\. By default, minor engine upgrades are applied automatically\.  
-Valid for: Multi\-AZ DB clusters only  
+Specifies whether minor engine upgrades are applied automatically to the DB cluster during the maintenance window\. By default, minor engine upgrades are applied automatically\.  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -243,10 +243,10 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DBClusterInstanceClass`  <a name="cfn-rds-dbcluster-dbclusterinstanceclass"></a>
-The compute and memory capacity of each DB instance in the Multi\-AZ DB cluster, for example db\.m6gd\.xlarge\. Not all DB instance classes are available in all AWS Regions, or for all database engines\.  
+The compute and memory capacity of each DB instance in the Multi\-AZ DB cluster, for example `db.m6gd.xlarge`\. Not all DB instance classes are available in all AWS Regions, or for all database engines\.  
 For the full list of DB instance classes and availability for your engine, see [DB instance class](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in the *Amazon RDS User Guide*\.  
 This setting is required to create a Multi\-AZ DB cluster\.  
-Valid for: Multi\-AZ DB clusters only  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -400,8 +400,9 @@ Valid for: Aurora DB clusters only
 The amount of Provisioned IOPS \(input/output operations per second\) to be initially allocated for each DB instance in the Multi\-AZ DB cluster\.  
 For information about valid IOPS values, see [Provisioned IOPS storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS) in the *Amazon RDS User Guide*\.  
 This setting is required to create a Multi\-AZ DB cluster\.  
-Constraints: Must be a multiple between \.5 and 50 of the storage amount for the DB cluster\.  
-Valid for: Multi\-AZ DB clusters only  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
+Constraints:  
++ Must be a multiple between \.5 and 50 of the storage amount for the DB cluster\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -415,11 +416,11 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ManageMasterUserPassword`  <a name="cfn-rds-dbcluster-managemasteruserpassword"></a>
-A value that indicates whether to manage the master user password with AWS Secrets Manager\.  
+Specifies whether to manage the master user password with AWS Secrets Manager\.  
 For more information, see [Password management with AWS Secrets Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the *Amazon RDS User Guide* and [Password management with AWS Secrets Manager](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-secrets-manager.html) in the *Amazon Aurora User Guide\.*   
+Valid for Cluster Type: Aurora DB clusters and Multi\-AZ DB clusters  
 Constraints:  
 + Can't manage the master user password with AWS Secrets Manager if `MasterUserPassword` is specified\.
-Valid for: Aurora DB clusters and Multi\-AZ DB clusters  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -441,25 +442,26 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterUserSecret`  <a name="cfn-rds-dbcluster-masterusersecret"></a>
-Contains the secret managed by RDS in AWS Secrets Manager for the master user password\.  
+The secret managed by RDS in AWS Secrets Manager for the master user password\.  
 For more information, see [Password management with AWS Secrets Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the *Amazon RDS User Guide* and [Password management with AWS Secrets Manager](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-secrets-manager.html) in the *Amazon Aurora User Guide\.*   
 *Required*: No  
 *Type*: [MasterUserSecret](aws-properties-rds-dbcluster-masterusersecret.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MonitoringInterval`  <a name="cfn-rds-dbcluster-monitoringinterval"></a>
-The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster\. To turn off collecting Enhanced Monitoring metrics, specify 0\. The default is 0\.  
-If `MonitoringRoleArn` is specified, also set `MonitoringInterval` to a value other than 0\.  
-Valid Values: `0, 1, 5, 10, 15, 30, 60`   
-Valid for: Multi\-AZ DB clusters only  
+The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster\. To turn off collecting Enhanced Monitoring metrics, specify `0`\.  
+If `MonitoringRoleArn` is specified, also set `MonitoringInterval` to a value other than `0`\.  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
+Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`   
+Default: `0`   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MonitoringRoleArn`  <a name="cfn-rds-dbcluster-monitoringrolearn"></a>
 The Amazon Resource Name \(ARN\) for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch Logs\. An example is `arn:aws:iam:123456789012:role/emaccess`\. For information on creating a monitoring role, see [Setting up and enabling Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling) in the *Amazon RDS User Guide*\.  
-If `MonitoringInterval` is set to a value other than 0, supply a `MonitoringRoleArn` value\.  
-Valid for: Multi\-AZ DB clusters only  
+If `MonitoringInterval` is set to a value other than `0`, supply a `MonitoringRoleArn` value\.  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -477,9 +479,9 @@ Valid for: Aurora DB clusters only
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PerformanceInsightsEnabled`  <a name="cfn-rds-dbcluster-performanceinsightsenabled"></a>
-A value that indicates whether to turn on Performance Insights for the DB cluster\.  
+Specifies whether to turn on Performance Insights for the DB cluster\.  
 For more information, see [ Using Amazon Performance Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the *Amazon RDS User Guide*\.  
-Valid for: Multi\-AZ DB clusters only  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -488,23 +490,20 @@ Valid for: Multi\-AZ DB clusters only
 The AWS KMS key identifier for encryption of Performance Insights data\.  
 The AWS KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key\.  
 If you don't specify a value for `PerformanceInsightsKMSKeyId`, then Amazon RDS uses your default KMS key\. There is a default KMS key for your AWS account\. Your AWS account has a different default KMS key for each AWS Region\.  
-Valid for: Multi\-AZ DB clusters only  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PerformanceInsightsRetentionPeriod`  <a name="cfn-rds-dbcluster-performanceinsightsretentionperiod"></a>
-The number of days to retain Performance Insights data\. The default is 7 days\. The following values are valid:  
-+ 7
-+  *month* \* 31, where *month* is a number of months from 1\-23
-+ 731
-For example, the following values are valid:  
-+ 93 \(3 months \* 31\)
-+ 341 \(11 months \* 31\)
-+ 589 \(19 months \* 31\)
-+ 731
-If you specify a retention period such as 94, which isn't a valid value, RDS issues an error\.  
-Valid for: Multi\-AZ DB clusters only  
+The number of days to retain Performance Insights data\.  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
+Valid Values:  
++  `7` 
++  *month* \* 31, where *month* is a number of months from 1\-23\. Examples: `93` \(3 months \* 31\), `341` \(11 months \* 31\), `589` \(19 months \* 31\)
++  `731` 
+Default: `7` days  
+If you specify a retention period that isn't valid, such as `94`, Amazon RDS issues an error\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -546,9 +545,10 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PubliclyAccessible`  <a name="cfn-rds-dbcluster-publiclyaccessible"></a>
-A value that indicates whether the DB cluster is publicly accessible\.  
+Specifies whether the DB cluster is publicly accessible\.  
 When the DB cluster is publicly accessible, its Domain Name System \(DNS\) endpoint resolves to the private IP address from within the DB cluster's virtual private cloud \(VPC\)\. It resolves to the public IP address from outside of the DB cluster's VPC\. Access to the DB cluster is ultimately controlled by the security group it uses\. That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it\.  
 When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name that resolves to a private IP address\.  
+Valid for Cluster Type: Multi\-AZ DB clusters only  
 Default: The default behavior varies depending on whether `DBSubnetGroupName` is specified\.  
 If `DBSubnetGroupName` isn't specified, and `PubliclyAccessible` isn't specified, the following applies:  
 + If the default VPC in the target Region doesn’t have an internet gateway attached to it, the DB cluster is private\.
@@ -556,7 +556,6 @@ If `DBSubnetGroupName` isn't specified, and `PubliclyAccessible` isn't specified
 If `DBSubnetGroupName` is specified, and `PubliclyAccessible` isn't specified, the following applies:  
 + If the subnets are part of a VPC that doesn’t have an internet gateway attached to it, the DB cluster is private\.
 + If the subnets are part of a VPC that has an internet gateway attached to it, the DB cluster is public\.
-Valid for: Multi\-AZ DB clusters only  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -657,13 +656,17 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageType`  <a name="cfn-rds-dbcluster-storagetype"></a>
-Specifies the storage type to be associated with the DB cluster\.  
+The storage type to associate with the DB cluster\.  
+For information on storage types for Aurora DB clusters, see [Storage configurations for Amazon Aurora DB clusters](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html#aurora-storage-type)\. For information on storage types for Multi\-AZ DB clusters, see [Settings for creating Multi\-AZ DB clusters](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html#create-multi-az-db-cluster-settings)\.  
 This setting is required to create a Multi\-AZ DB cluster\.  
 When specified for a Multi\-AZ DB cluster, a value for the `Iops` parameter is required\.  
-Valid values: `aurora`, `aurora-iopt1` \(Aurora DB clusters\); `io1` \(Multi\-AZ DB clusters\)  
-Default: `aurora` \(Aurora DB clusters\); `io1` \(Multi\-AZ DB clusters\)  
-Valid for: Aurora DB clusters and Multi\-AZ DB clusters  
-For more information on storage types for Aurora DB clusters, see [Storage configurations for Amazon Aurora DB clusters](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html#aurora-storage-type)\. For more information on storage types for Multi\-AZ DB clusters, see [Settings for creating Multi\-AZ DB clusters](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html#create-multi-az-db-cluster-settings)\.  
+Valid for Cluster Type: Aurora DB clusters and Multi\-AZ DB clusters  
+Valid Values:  
++ Aurora DB clusters \- `aurora | aurora-iopt1` 
++ Multi\-AZ DB clusters \- `io1` 
+Default:  
++ Aurora DB clusters \- `aurora` 
++ Multi\-AZ DB clusters \- `io1` 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

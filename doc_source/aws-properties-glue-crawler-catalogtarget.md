@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-crawler-catalogtarget-properties"></a>
 
 `ConnectionName`  <a name="cfn-glue-crawler-catalogtarget-connectionname"></a>
-Property description not available\.  
+The name of the connection for an Amazon S3\-backed Data Catalog table to be a target of the crawl when using a `Catalog` connection type paired with a `NETWORK` Connection type\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -47,13 +47,13 @@ The name of the database to be synchronized\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DlqEventQueueArn`  <a name="cfn-glue-crawler-catalogtarget-dlqeventqueuearn"></a>
-Property description not available\.  
+A valid Amazon dead\-letter SQS ARN\. For example, `arn:aws:sqs:region:account:deadLetterQueue`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventQueueArn`  <a name="cfn-glue-crawler-catalogtarget-eventqueuearn"></a>
-Property description not available\.  
+A valid Amazon SQS ARN\. For example, `arn:aws:sqs:region:account:sqs`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

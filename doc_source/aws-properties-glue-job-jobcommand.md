@@ -42,7 +42,7 @@ The Python version being used to execute a Python shell job\. Allowed values are
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Runtime`  <a name="cfn-glue-job-jobcommand-runtime"></a>
-Property description not available\.  
+In Ray jobs, Runtime is used to specify the versions of Ray, Python and additional libraries available in your environment\. This field is not used in other job types\. For supported runtime environment values, see [Working with Ray jobs](https://docs.aws.amazon.com/glue/latest/dg/ray-jobs-section.html) in the AWS Glue Developer Guide\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
