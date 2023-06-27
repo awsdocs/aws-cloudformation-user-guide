@@ -52,7 +52,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Criteria`  <a name="cfn-securityhub-automationrule-criteria"></a>
- A set of [AWS Security Finding Format](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html) finding field attributes and corresponding expected values that Security Hub uses to filter findings\. If a finding matches the conditions specified in this parameter, Security Hub applies the rule action to the finding\.   
+ A set of [AWS Security Finding Format](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html) finding field attributes and corresponding expected values that Security Hub uses to filter findings\. If a rule is enabled and a finding matches the conditions specified in this parameter, Security Hub applies the rule action to the finding\.   
 *Required*: No  
 *Type*: [AutomationRulesFindingFilters](aws-properties-securityhub-automationrule-automationrulesfindingfilters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -65,7 +65,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsTerminal`  <a name="cfn-securityhub-automationrule-isterminal"></a>
-Specifies whether a rule is the last to be applied with respect to a finding that matches the rule criteria\. This is useful when a finding matches the criteria for multiple rules, and each rule has different actions\. If the value of this field is set to `true` for a rule, Security Hub applies the rule action to a finding that matches the rule criteria and won't evaluate other rules for the finding\.  The default value of this field is `false`\.   
+Specifies whether a rule is the last to be applied with respect to a finding that matches the rule criteria\. This is useful when a finding matches the criteria for multiple rules, and each rule has different actions\. If the value of this field is set to `true` for a rule, Security Hub applies the rule action to a finding that matches the rule criteria and doesn't evaluate other rules for the finding\.  The default value of this field is `false`\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

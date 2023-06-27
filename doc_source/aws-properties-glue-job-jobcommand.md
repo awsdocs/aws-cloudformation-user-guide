@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-job-jobcommand-properties"></a>
 
 `Name`  <a name="cfn-glue-job-jobcommand-name"></a>
-The name of the job command\. For an Apache Spark ETL job, this must be `glueetl`\. For a Python shell job, it must be `pythonshell`\. For an Apache Spark streaming ETL job, this must be `gluestreaming`\.  
+The name of the job command\. For an Apache Spark ETL job, this must be `glueetl`\. For a Python shell job, it must be `pythonshell`\. For an Apache Spark streaming ETL job, this must be `gluestreaming`\. For a Ray job, this must be `glueray`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

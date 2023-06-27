@@ -1,6 +1,6 @@
 # AWS::SecurityHub::AutomationRule AutomationRulesFindingFieldsUpdate<a name="aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate"></a>
 
- Identifies the finding fields that the automation rule action will update when a finding matches the defined criteria\. 
+ Identifies the finding fields that the automation rule action updates when a finding matches the defined criteria\. 
 
 ## Syntax<a name="aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate-syntax"></a>
 
@@ -45,7 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate-properties"></a>
 
 `Confidence`  <a name="cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-confidence"></a>
- The rule action will update the `Confidence` field of a finding\.   
+ The rule action updates the `Confidence` field of a finding\.   
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -53,7 +53,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Criticality`  <a name="cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-criticality"></a>
- The rule action will update the `Criticality` field of a finding\.   
+ The rule action updates the `Criticality` field of a finding\.   
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -79,19 +79,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Types`  <a name="cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-types"></a>
- The rule action will update the `Types` field of a finding\.   
+ The rule action updates the `Types` field of a finding\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserDefinedFields`  <a name="cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-userdefinedfields"></a>
- The rule action will update the `UserDefinedFields` field of a finding\.   
+ The rule action updates the `UserDefinedFields` field of a finding\.   
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VerificationState`  <a name="cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-verificationstate"></a>
- The rule action will update the `VerificationState` field of a finding\.   
+ The rule action updates the `VerificationState` field of a finding\.   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `BENIGN_POSITIVE | FALSE_POSITIVE | TRUE_POSITIVE | UNKNOWN`  

@@ -4,6 +4,10 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_Cassandra.md) | The following resource was updated: `AWS::Cassandra::Keyspace`\. 
+
+ [AWS::Cassandra::Keyspace\.ReplicationSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-keyspace-replicationspecification.html)   
+Use the `AWS::Cassandra::Keyspace.ReplicationSpecification` property to create a multi\-Region keyspace in Amazon Keyspaces \(for Apache Cassandra\)\.  | June 26, 2023 | 
 | [New resources](AWS_StepFunctions.md) | The following resources were added: `AWS::StepFunctions::StateMachineAlias` and `AWS::StepFunctions::StateMachineVersion`\. 
 
 [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachinealias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachinealias.html)  
@@ -28,6 +32,10 @@ Use the `EnableDefaultStandards` property to specify whether you want to enable 
 
  [AWS::SecurityHub::Standard](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-standard.html)   
 Use the `AWS::SecurityHub::Standard` resource to enable a specified security standard in Security Hub\.  | June 22, 2023 | 
+| [Updated resources](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACLAssociation\. 
+
+ [AWS::WAFv2::WebACLAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html)   
+The `ResourceArn` property now accepts `AWS` Verified Access instance ARNs\.   | June 17, 2023 | 
 | [Updated resource](AWS_IVS.md) | The following resource was updated: AWS::IVS::Channel 
 
  [AWS::IVS::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html)   
@@ -862,6 +870,10 @@ Use the `AWS::ECS::Service ServiceConnectConfiguration` resource to specify the 
 
  [AWS::Pipes::Pipe](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html)   
 Use the `AWS::Pipes::Pipe` resource to specify a new Amazon EventBridge Pipes pipe\.  | December 2, 2022 | 
+| [New resources](AWS_Oam.md) | The following resources were added: AWS::Oam::Sink and AWS::Oam::Link\. 
+
+ [AWS::Oam::Sink](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-sink.html)   
+Use the `AWS::Oam::Sink` resource to specify a sink, which is an attachment point in a monitoring account that source accounts can create links to\. Use the `AWS::Oam::Link` resource to specify a link from a source account to a monitoring account sink\. For more information, see [CloudWatch cross\-account observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html)\.  | December 2, 2022 | 
 | [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::NetworkPerformanceMetricSubscription\. 
 
  [ AWS::EC2::NetworkPerformanceMetricSubscription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkperformancemetricsubscription.html)   

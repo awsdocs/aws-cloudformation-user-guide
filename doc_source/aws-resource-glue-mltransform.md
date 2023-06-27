@@ -158,7 +158,7 @@ The type of predefined worker that is allocated when a task of this transform ru
 + `MaxCapacity` and `NumberOfWorkers` must both be at least 1\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `G.025X | G.1X | G.2X | G.4X | G.8X | Standard`  
+*Allowed values*: `G.025X | G.1X | G.2X | G.4X | G.8X | Standard | Z.2X`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-glue-mltransform-return-values"></a>

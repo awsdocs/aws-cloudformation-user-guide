@@ -165,6 +165,7 @@ service-provider::service-name::data-type-name
 + [AWS Network Firewall](AWS_NetworkFirewall.md)
 + [AWS Network Manager](AWS_NetworkManager.md)
 + [Amazon Nimble Studio](AWS_NimbleStudio.md)
++ [Observability Access Manager \(OAM\)](AWS_Oam.md)
 + [Amazon Omics](AWS_Omics.md)
 + [Amazon OpenSearch Ingestion](AWS_OSIS.md)
 + [Amazon OpenSearch Service](AWS_OpenSearchService.md)
