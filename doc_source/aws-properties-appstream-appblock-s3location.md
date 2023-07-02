@@ -32,6 +32,7 @@ The S3 bucket of the app block\.
 
 `S3Key`  <a name="cfn-appstream-appblock-s3location-s3key"></a>
 The S3 key of the S3 object of the virtual hard disk\.  
-*Required*: Yes  
+This is required when it's used by `SetupScriptDetails` and `PostSetupScriptDetails`\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

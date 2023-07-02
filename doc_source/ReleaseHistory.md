@@ -4,6 +4,38 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_AppStream.md) | The following resource was updated: `AWS::AppStream::AppBlock` 
+
+ [AWS::AppStream::AppBlock](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html)   
+Use the `PackagingType` property to specify the packaging type of the app block\. 
+
+ [AWS::AppStream::AppBlock](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html)   
+Use the `PostSetupScriptDetails` property to specify the post setup script details of the app block\.  | June 29, 2023 | 
+| [Updated resource](AWS_EC2.md) | The following resource was updated: AWS::EC2::KeyPair\. 
+
+ [ AWS::EC2::KeyPair](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-keypair.html)   
+Use the `KeyFormat` property to specify the format for the key pair\.  | June 29, 2023 | 
+| [Updated resource](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACL\. 
+
+ [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
+Use the `AssociationConfig` property to increase the body inspection size limit for CloudFront distributions beyond the new default size limit of 16 KB\. This update doesn't affect protections for regional resources\.   | June 29, 2023 | 
+| [New resources](AWS_AppStream.md) | The following resource was added: `AWS::AppStream::AppBlockBuilder` 
+
+ [AWS::AppStream::AppBlockBuilder](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applockbuilder.html)   
+Use the `AWS::AppStream::AppBlockBuilder` resource to create an app block builder\.  | June 29, 2023 | 
+| [New resources](AWS_VerifiedPermissions.md) | The following resources were added: AWS::VerifiedPermissions::IdentitySource, AWS::VerifiedPermissions::Policy, AWS::VerifiedPermissions::PolicyStore, and AWS::VerifiedPermissions::PolicyTemplate\. 
+
+ [AWS::VerifiedPermissions::IdentitySource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html)   
+Use the `AWS::VerifiedPermissions::IdentitySource` resource to specify an identity source in Amazon Verified Permissions\. 
+
+ [AWS::VerifiedPermissions::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policy.html)   
+Use the `AWS::VerifiedPermissions::policy` resource to specify a static or template\-linked policy in Amazon Verified Permissions\. 
+
+ [AWS::VerifiedPermissions::PolicyStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html)   
+Use the `AWS::VerifiedPermissions::PolicyStore` resource to specify a policy store in Amazon Verified Permissions\. 
+
+ [AWS::VerifiedPermissions::PolicyTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policytemplate.html)   
+Use the `AWS::VerifiedPermissions::PolicyTemplate` resource to specify a policy template in Amazon Verified Permissions\.  | June 29, 2023 | 
 | [Updated resource](AWS_Cassandra.md) | The following resource was updated: `AWS::Cassandra::Keyspace`\. 
 
  [AWS::Cassandra::Keyspace\.ReplicationSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-keyspace-replicationspecification.html)   
@@ -70,10 +102,6 @@ Use the `AWS::MediaConnect::BridgeSource` resource to add new sources to an exis
 
  [AWS::MediaConnect::Gateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html)   
 Use the `AWS::MediaConnect::Gateway` resource to create a gateway\. The gateway is a logical grouping of Instances and Bridges\. Each gateway utilizes user\-defined IP information for communication between data centers and the cloud\.   | June 15, 2023 | 
-| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::InstanceConnectEndpoint\. 
-
- [ AWS::EC2::InstanceConnectEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html)   
-Creates an EC2 Instance Connect Endpoint\.  | June 15, 2023 | 
 | [New resource](AWS_RDS.md) | The following resources were added AWS::RDS::CustomDBEngineVersion 
 
  [AWS::RDS::CustomDBEngineVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html)   
@@ -495,7 +523,7 @@ The MessagesPerSecond field minimum values was changed from 50 to 1\.  | March 9
  [AWS::ServiceCatalog::CloudFormationProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html)   
 Use the `ProvisioningArtifactProperties` property to specify information about a provisioning artifact \(also known as a version\) for a product\.  
 Use the `SourceConnection` property to specify details about the product’s connection\.  | March 9, 2023 | 
-| [Updated resources](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACLAssociation\. 
+| [Updated resource](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACLAssociation\. 
 
  [AWS::WAFv2::WebACLAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html)   
 The `ResourceArn` property now accepts `AWS::AppRunner::Service` ARNs\.   | March 6, 2023 | 

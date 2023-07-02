@@ -115,19 +115,19 @@ The block device mapping\.
 `CapacityReservationSpecification`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification"></a>
 The Capacity Reservation targeting option\. If you do not specify this parameter, the instance's Capacity Reservation preference defaults to `open`, which enables it to run in any open Capacity Reservation that has matching attributes \(instance type, platform, Availability Zone\)\.  
 *Required*: No  
-*Type*: [CapacityReservationSpecification](aws-properties-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification.md)  
+*Type*: [CapacityReservationSpecification](aws-properties-ec2-launchtemplate-capacityreservationspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CpuOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions"></a>
 The CPU options for the instance\. For more information, see [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
-*Type*: [CpuOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-cpuoptions.md)  
+*Type*: [CpuOptions](aws-properties-ec2-launchtemplate-cpuoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CreditSpecification`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-creditspecification"></a>
 The credit option for CPU usage of the instance\. Valid only for T instances\.  
 *Required*: No  
-*Type*: [CreditSpecification](aws-properties-ec2-launchtemplate-launchtemplatedata-creditspecification.md)  
+*Type*: [CreditSpecification](aws-properties-ec2-launchtemplate-creditspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableApiStop`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-disableapistop"></a>
@@ -164,19 +164,19 @@ An elastic GPU to associate with the instance\.
 Indicates whether the instance is enabled for AWS Nitro Enclaves\. For more information, see [ What is AWS Nitro Enclaves?](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html) in the * AWS Nitro Enclaves User Guide*\.  
 You can't enable AWS Nitro Enclaves and hibernation on the same instance\.  
 *Required*: No  
-*Type*: [EnclaveOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-enclaveoptions.md)  
+*Type*: [EnclaveOptions](aws-properties-ec2-launchtemplate-enclaveoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HibernationOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions"></a>
 Indicates whether an instance is enabled for hibernation\. This parameter is valid only if the instance meets the [hibernation prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)\. For more information, see [Hibernate your instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
-*Type*: [HibernationOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-hibernationoptions.md)  
+*Type*: [HibernationOptions](aws-properties-ec2-launchtemplate-hibernationoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamInstanceProfile`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile"></a>
 The name or Amazon Resource Name \(ARN\) of an IAM instance profile\.  
 *Required*: No  
-*Type*: [IamInstanceProfile](aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile.md)  
+*Type*: [IamInstanceProfile](aws-properties-ec2-launchtemplate-iaminstanceprofile.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-imageid"></a>
@@ -202,14 +202,14 @@ Default: `stop`
 `InstanceMarketOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions"></a>
 The market \(purchasing\) option for the instances\.  
 *Required*: No  
-*Type*: [InstanceMarketOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.md)  
+*Type*: [InstanceMarketOptions](aws-properties-ec2-launchtemplate-instancemarketoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceRequirements`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements"></a>
 The attributes for the instance types\. When you specify instance attributes, Amazon EC2 will identify instance types with these attributes\.  
 If you specify `InstanceRequirements`, you can't specify `InstanceType`\.  
 *Required*: No  
-*Type*: [InstanceRequirements](aws-properties-ec2-launchtemplate-launchtemplatedata-instancerequirements.md)  
+*Type*: [InstanceRequirements](aws-properties-ec2-launchtemplate-instancerequirements.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancetype"></a>
@@ -243,19 +243,19 @@ The license configurations\.
 `MaintenanceOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-maintenanceoptions"></a>
 The maintenance options of your instance\.  
 *Required*: No  
-*Type*: [MaintenanceOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-maintenanceoptions.md)  
+*Type*: [MaintenanceOptions](aws-properties-ec2-launchtemplate-maintenanceoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetadataOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions"></a>
 The metadata options for the instance\. For more information, see [Instance metadata and user data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
-*Type*: [MetadataOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions.md)  
+*Type*: [MetadataOptions](aws-properties-ec2-launchtemplate-metadataoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Monitoring`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-monitoring"></a>
 The monitoring for the instance\.  
 *Required*: No  
-*Type*: [Monitoring](aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring.md)  
+*Type*: [Monitoring](aws-properties-ec2-launchtemplate-monitoring.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInterfaces`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces"></a>
@@ -267,13 +267,13 @@ One or more network interfaces\. If you specify a network interface, you must sp
 `Placement`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-placement"></a>
 The placement for the instance\.  
 *Required*: No  
-*Type*: [Placement](aws-properties-ec2-launchtemplate-launchtemplatedata-placement.md)  
+*Type*: [Placement](aws-properties-ec2-launchtemplate-placement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateDnsNameOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-privatednsnameoptions"></a>
 The hostname type for EC2 instances launched into this subnet and how DNS A and AAAA record queries should be handled\. For more information, see [Amazon EC2 instance hostname types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
-*Type*: [PrivateDnsNameOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-privatednsnameoptions.md)  
+*Type*: [PrivateDnsNameOptions](aws-properties-ec2-launchtemplate-privatednsnameoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RamDiskId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid"></a>

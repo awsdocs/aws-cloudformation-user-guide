@@ -46,14 +46,14 @@ A descriptive label that is associated with a build\. Build names do not need to
 
 `OperatingSystem`  <a name="cfn-gamelift-build-operatingsystem"></a>
 The operating system that your game server binaries run on\. This value determines the type of fleet resources that you use for this build\. If your game build contains multiple executables, they all must run on the same operating system\. You must specify a valid operating system in this request\. There is no default value\. You can't change a build's operating system later\.  
-If you have active fleets using the Windows Server 2012 operating system, you can continue to create new builds using this OS until October 10, 2023, when Microsoft ends its support\. All others must use Windows Server 2016 when creating new Windows\-based builds\.
+Support is ending in 2023 for the Windows Server 2012 and Amazon Linux \(AL1\) operating systems\. If you have active fleets using these operating systems, you can continue to create new builds using these until their end of support\. All other users must use Windows Server 2016, Amazon Linux 2, or Amazon Linux 2023\. For more information, including specific end\-of\-support dates, see the Amazon GameLift FAQs for [Windows Server](http://aws.amazon.com/gamelift/faq/win2012/) and [Linux Server](http://aws.amazon.com/gamelift/faq/al1/)\. 
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | WINDOWS_2012 | WINDOWS_2016`  
+*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | AMAZON_LINUX_2023 | WINDOWS_2012 | WINDOWS_2016`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServerSdkVersion`  <a name="cfn-gamelift-build-serversdkversion"></a>
-A server SDK version you used when integrating your game server build with Amazon GameLift\. For more information see [Integrate games with custom game servers](https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html)\. By default Amazon GameLift sets this value to `4.0.2`\.  
+The Amazon GameLift Server SDK version used to develop your game server\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `128`  

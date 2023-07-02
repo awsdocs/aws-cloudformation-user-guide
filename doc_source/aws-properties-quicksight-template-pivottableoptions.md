@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CellStyle](#cfn-quicksight-template-pivottableoptions-cellstyle)" : TableCellStyle,
+  "[CollapsedRowDimensionsVisibility](#cfn-quicksight-template-pivottableoptions-collapsedrowdimensionsvisibility)" : String,
   "[ColumnHeaderStyle](#cfn-quicksight-template-pivottableoptions-columnheaderstyle)" : TableCellStyle,
   "[ColumnNamesVisibility](#cfn-quicksight-template-pivottableoptions-columnnamesvisibility)" : String,
   "[MetricPlacement](#cfn-quicksight-template-pivottableoptions-metricplacement)" : String,
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CellStyle](#cfn-quicksight-template-pivottableoptions-cellstyle): 
     TableCellStyle
+  [CollapsedRowDimensionsVisibility](#cfn-quicksight-template-pivottableoptions-collapsedrowdimensionsvisibility): String
   [ColumnHeaderStyle](#cfn-quicksight-template-pivottableoptions-columnheaderstyle): 
     TableCellStyle
   [ColumnNamesVisibility](#cfn-quicksight-template-pivottableoptions-columnnamesvisibility): String
@@ -47,6 +49,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The table cell style of cells\.  
 *Required*: No  
 *Type*: [TableCellStyle](aws-properties-quicksight-template-tablecellstyle.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CollapsedRowDimensionsVisibility`  <a name="cfn-quicksight-template-pivottableoptions-collapsedrowdimensionsvisibility"></a>
+The visibility setting of a pivot table's collapsed row dimension fields\. If the value of this structure is `HIDDEN`, all collapsed columns in a pivot table are automatically hidden\. The default value is `VISIBLE`\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `HIDDEN | VISIBLE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ColumnHeaderStyle`  <a name="cfn-quicksight-template-pivottableoptions-columnheaderstyle"></a>

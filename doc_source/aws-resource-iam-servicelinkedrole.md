@@ -36,7 +36,7 @@ Properties:
 `AWSServiceName`  <a name="cfn-iam-servicelinkedrole-awsservicename"></a>
 The service principal for the AWS service to which this role is attached\. You use a string similar to a URL but without the http:// in front\. For example: `elasticbeanstalk.amazonaws.com`\.   
 Service principals are unique and case\-sensitive\. To find the exact service principal for your service\-linked role, see [AWS services that work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\. Look for the services that have **Yes **in the **Service\-Linked Role** column\. Choose the **Yes** link to view the service\-linked role documentation for that service\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -66,9 +66,20 @@ The description of the role\.
 
 ### Ref<a name="aws-resource-iam-servicelinkedrole-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `RoleName` created for the service\-linked role appended with an underscore followed by the `CustomSuffix`\. For example: `AWSServiceRoleForAutoScaling_TestSuffix`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `RoleName` created for the service\-linked role\. The `CustomSuffix` is appended to the service\-provided prefix with an underscore followed by the `CustomSuffix` to form the complete role name\. For example, `AWSServiceRoleForAutoScaling` or `AWSServiceRoleForAutoScaling_TestSuffix` if a `CustomSuffix` is specified\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-iam-servicelinkedrole-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-iam-servicelinkedrole-return-values-fn--getatt-fn--getatt"></a>
+
+`RoleName`  <a name="RoleName-fn::getatt"></a>
+Returns the friendly name that identifies the role\. For example, `AWSServiceRoleForAutoScaling` or `AWSServiceRoleForAutoScaling_TestSuffix` if a `CustomSuffix` is specified\.
 
 ## Examples<a name="aws-resource-iam-servicelinkedrole--examples"></a>
 

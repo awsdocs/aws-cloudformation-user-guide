@@ -18,8 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ImageDigest](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-imagedigest)" : String,
   "[ModelDataUrl](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modeldataurl)" : String,
   "[ModelInput](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modelinput)" : ModelInput,
-  "[NearestModelName](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-nearestmodelname)" : String,
-  "[ProductId](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-productid)" : String
+  "[NearestModelName](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-nearestmodelname)" : String
 }
 ```
 
@@ -37,7 +36,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ModelInput](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modelinput): 
     ModelInput
   [NearestModelName](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-nearestmodelname): String
-  [ProductId](#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-productid): String
 ```
 
 ## Properties<a name="aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition-properties"></a>
@@ -107,12 +105,4 @@ A structure with Model Input details\.
 The name of a pre\-trained machine learning benchmarked by Amazon SageMaker Inference Recommender model that matches your model\. You can find a list of benchmarked models by calling `ListModelMetadata`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
-
-`ProductId`  <a name="cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-productid"></a>
-The AWS Marketplace product ID of the model package\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `256`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*$`  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

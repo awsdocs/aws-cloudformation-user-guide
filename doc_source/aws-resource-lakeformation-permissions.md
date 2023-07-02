@@ -44,7 +44,7 @@ Properties:
 The AWS Lake Formation principal\.  
 *Required*: Yes  
 *Type*: [DataLakePrincipal](aws-properties-lakeformation-permissions-datalakeprincipal.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Permissions`  <a name="cfn-lakeformation-permissions-permissions"></a>
 The permissions granted or revoked\.  
@@ -62,4 +62,4 @@ Indicates the ability to grant permissions \(as a subset of permissions granted\
 A structure for the resource\.  
 *Required*: Yes  
 *Type*: [Resource](aws-properties-lakeformation-permissions-resource.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

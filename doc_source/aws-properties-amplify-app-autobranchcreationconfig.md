@@ -98,7 +98,7 @@ Environment variables for the auto created branch\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Framework`  <a name="cfn-amplify-app-autobranchcreationconfig-framework"></a>
- The framework for the autocreated branch\.   
+The framework for the autocreated branch\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

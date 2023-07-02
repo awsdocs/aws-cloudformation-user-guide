@@ -103,9 +103,6 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 `Latest`  <a name="Latest-fn::getatt"></a>
  It's set to true for the configuration with the highest `Revision` among all configurations that share the same `AutoScalingConfigurationName`\. It's set to false otherwise\. App Runner temporarily doubles the number of provisioned instances during deployments, to maintain the same capacity for both old and new code\. 
 
-`Status`  <a name="Status-fn::getatt"></a>
- The current state of the auto scaling configuration\. If the status of the configuration revision is `ACTIVE`, your auto scaling configuration exists\. If the status of a configuration revision is `INACTIVE`, your auto scaling configuration was deleted and can't be used\. Inactive configuration revisions are permanently removed some time after they are deleted\. 
-
 ## Examples<a name="aws-resource-apprunner-autoscalingconfiguration--examples"></a>
 
 ### Auto Scaling configuration<a name="aws-resource-apprunner-autoscalingconfiguration--examples--Auto_Scaling_configuration"></a>

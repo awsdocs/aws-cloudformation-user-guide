@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[FieldId](#cfn-quicksight-dashboard-pivottablecellconditionalformatting-fieldid)" : String,
   "[Scope](#cfn-quicksight-dashboard-pivottablecellconditionalformatting-scope)" : PivotTableConditionalFormattingScope,
+  "[Scopes](#cfn-quicksight-dashboard-pivottablecellconditionalformatting-scopes)" : [ PivotTableConditionalFormattingScope, ... ],
   "[TextFormat](#cfn-quicksight-dashboard-pivottablecellconditionalformatting-textformat)" : TextConditionalFormat
 }
 ```
@@ -22,6 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [FieldId](#cfn-quicksight-dashboard-pivottablecellconditionalformatting-fieldid): String
   [Scope](#cfn-quicksight-dashboard-pivottablecellconditionalformatting-scope): 
     PivotTableConditionalFormattingScope
+  [Scopes](#cfn-quicksight-dashboard-pivottablecellconditionalformatting-scopes): 
+    - PivotTableConditionalFormattingScope
   [TextFormat](#cfn-quicksight-dashboard-pivottablecellconditionalformatting-textformat): 
     TextConditionalFormat
 ```
@@ -40,6 +43,13 @@ The field ID of the cell for conditional formatting\.
 The scope of the cell for conditional formatting\.  
 *Required*: No  
 *Type*: [PivotTableConditionalFormattingScope](aws-properties-quicksight-dashboard-pivottableconditionalformattingscope.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Scopes`  <a name="cfn-quicksight-dashboard-pivottablecellconditionalformatting-scopes"></a>
+A list of cell scopes for conditional formatting\.  
+*Required*: No  
+*Type*: List of [PivotTableConditionalFormattingScope](aws-properties-quicksight-dashboard-pivottableconditionalformattingscope.md)  
+*Maximum*: `3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextFormat`  <a name="cfn-quicksight-dashboard-pivottablecellconditionalformatting-textformat"></a>

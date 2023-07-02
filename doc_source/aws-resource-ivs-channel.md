@@ -76,7 +76,7 @@ Channel name\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9-_]*$`  
+*Pattern*: `[a-zA-Z0-9-_]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Preset`  <a name="cfn-ivs-channel-preset"></a>
@@ -93,7 +93,7 @@ The ARN of a RecordingConfiguration resource\. An empty string indicates that re
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `128`  
-*Pattern*: `^$|^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+$`  
+*Pattern*: `$|^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ivs-channel-tags"></a>

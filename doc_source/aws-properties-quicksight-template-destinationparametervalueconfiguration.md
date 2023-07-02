@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CustomValuesConfiguration](#cfn-quicksight-template-destinationparametervalueconfiguration-customvaluesconfiguration)" : CustomValuesConfiguration,
   "[SelectAllValueOptions](#cfn-quicksight-template-destinationparametervalueconfiguration-selectallvalueoptions)" : String,
+  "[SourceColumn](#cfn-quicksight-template-destinationparametervalueconfiguration-sourcecolumn)" : ColumnIdentifier,
   "[SourceField](#cfn-quicksight-template-destinationparametervalueconfiguration-sourcefield)" : String,
   "[SourceParameterName](#cfn-quicksight-template-destinationparametervalueconfiguration-sourceparametername)" : String
 }
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CustomValuesConfiguration](#cfn-quicksight-template-destinationparametervalueconfiguration-customvaluesconfiguration): 
     CustomValuesConfiguration
   [SelectAllValueOptions](#cfn-quicksight-template-destinationparametervalueconfiguration-selectallvalueoptions): String
+  [SourceColumn](#cfn-quicksight-template-destinationparametervalueconfiguration-sourcecolumn): 
+    ColumnIdentifier
   [SourceField](#cfn-quicksight-template-destinationparametervalueconfiguration-sourcefield): String
   [SourceParameterName](#cfn-quicksight-template-destinationparametervalueconfiguration-sourceparametername): String
 ```
@@ -42,6 +45,12 @@ The configuration that selects all options\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ALL_VALUES`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceColumn`  <a name="cfn-quicksight-template-destinationparametervalueconfiguration-sourcecolumn"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ColumnIdentifier](aws-properties-quicksight-template-columnidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceField`  <a name="cfn-quicksight-template-destinationparametervalueconfiguration-sourcefield"></a>

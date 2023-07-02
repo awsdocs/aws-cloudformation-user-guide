@@ -37,7 +37,7 @@ Properties:
 The Amazon Resource Name \(ARN\) of the resource\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-lakeformation-resource-rolearn"></a>
 The IAM role that registered a resource\.  
@@ -49,7 +49,7 @@ The IAM role that registered a resource\.
 Designates a trusted caller, an IAM principal, by registering this caller with the Data Catalog\.  
 *Required*: Yes  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `WithFederation`  <a name="cfn-lakeformation-resource-withfederation"></a>
 Allows Lake Formation to assume a role to access tables in a federated database\.  

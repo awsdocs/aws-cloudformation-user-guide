@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ClusterMarkerConfiguration](#cfn-quicksight-dashboard-geospatialpointstyleoptions-clustermarkerconfiguration)" : ClusterMarkerConfiguration,
+  "[HeatmapConfiguration](#cfn-quicksight-dashboard-geospatialpointstyleoptions-heatmapconfiguration)" : GeospatialHeatmapConfiguration,
   "[SelectedPointStyle](#cfn-quicksight-dashboard-geospatialpointstyleoptions-selectedpointstyle)" : String
 }
 ```
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ClusterMarkerConfiguration](#cfn-quicksight-dashboard-geospatialpointstyleoptions-clustermarkerconfiguration): 
     ClusterMarkerConfiguration
+  [HeatmapConfiguration](#cfn-quicksight-dashboard-geospatialpointstyleoptions-heatmapconfiguration): 
+    GeospatialHeatmapConfiguration
   [SelectedPointStyle](#cfn-quicksight-dashboard-geospatialpointstyleoptions-selectedpointstyle): String
 ```
 
@@ -29,6 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The cluster marker configuration of the geospatial point style\.  
 *Required*: No  
 *Type*: [ClusterMarkerConfiguration](aws-properties-quicksight-dashboard-clustermarkerconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HeatmapConfiguration`  <a name="cfn-quicksight-dashboard-geospatialpointstyleoptions-heatmapconfiguration"></a>
+The heatmap configuration of the geospatial point style\.  
+*Required*: No  
+*Type*: [GeospatialHeatmapConfiguration](aws-properties-quicksight-dashboard-geospatialheatmapconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelectedPointStyle`  <a name="cfn-quicksight-dashboard-geospatialpointstyleoptions-selectedpointstyle"></a>

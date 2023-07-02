@@ -6,20 +6,11 @@ For Amazon RDS master user credentials, see [AWS::RDS::DBCluster MasterUserSecre
 
 To retrieve a secret in a CloudFormation template, use a *dynamic reference*\. For more information, see [ Retrieve a secret in an AWS CloudFormation resource](https://docs.aws.amazon.com/secretsmanager/latest/userguide/cfn-example_reference-secret.html)\.
 
-A common scenario is to first create a secret with `GenerateSecretString`, which generates a password, and then use a dynamic reference to retrieve the username and password from the secret to use as credentials for a new database\. Follow these steps, as shown in the examples below:
-
-1. Define the secret without referencing the service or database\. You can't reference the service or database because it doesn't exist yet\. The secret must contain a username and password\.
-
-1. Next, define the service or database\. Include the reference to the secret to use stored credentials to define the database admin user and password\.
-
-1. Finally, define a `SecretTargetAttachment` resource type to finish configuring the secret with the required database engine type and the connection details of the service or database\. The rotation function requires the details, if you attach one later by defining a [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type\.
+A common scenario is to first create a secret with `GenerateSecretString`, which generates a password, and then use a dynamic reference to retrieve the username and password from the secret to use as credentials for a new database\. See the example *Creating a Redshift cluster and a secret for the admin credentials*\.
 
 For information about creating a secret in the console, see [Create a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html)\. For information about creating a secret using the CLI or SDK, see [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html)\.
 
 For information about retrieving a secret in code, see [Retrieve secrets from Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html)\.
-
-**Note**  
-Do not create a dynamic reference using a backslash `(\)` as the final value\. AWS CloudFormation cannot resolve those references, which causes a resource failure\. 
 
 ## Syntax<a name="aws-resource-secretsmanager-secret-syntax"></a>
 
@@ -283,6 +274,50 @@ MyReplicatedSecret:
     - Region: us-east-1
       KmsKeyId: alias/exampleAlias
     - Region: us-east-2
+```
+
+### Creating a Redshift cluster and a secret for the admin credentials<a name="aws-resource-secretsmanager-secret--examples--Creating_a_Redshift_cluster_and_a_secret_for_the_admin_credentials"></a>
+
+The following example creates a secret and an Amazon Redshift resource as defined by the `TargetType` using the credentials found in the secret as the new Amazon Redshift user and password\. Then the code updates the secret with the connection details of the AWS resource by defining the `SecretTargetAttachment` object\.
+
+1. Define the secret without referencing the service or database\. You can't reference the service or database because it doesn't exist yet\. The secret must contain a username and password\.
+
+1. Next, define the service or database\. Include the reference to the secret to use stored credentials to define the database admin user and password\.
+
+1. Finally, define a `SecretTargetAttachment` resource type to finish configuring the secret with the required database engine type and the connection details of the service or database\. The rotation function requires the details, if you attach one later by defining a [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type\.
+
+#### YAML<a name="aws-resource-secretsmanager-secret--examples--Creating_a_Redshift_cluster_and_a_secret_for_the_admin_credentials--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyRedshiftSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: This is a Secrets Manager secret for a Redshift cluster
+      GenerateSecretString:
+        SecretStringTemplate: '{"username": "admin"}'
+        GenerateStringKey: password
+        PasswordLength: 16
+        ExcludeCharacters: "\"'@/\\"
+  MyRedshiftCluster:
+    Type: AWS::Redshift::Cluster
+    Properties:
+      DBName: myjsondb
+      MasterUsername:
+        Fn::Sub: "{{resolve:secretsmanager:${MyRedshiftSecret}::username}}"
+      MasterUserPassword:
+        Fn::Sub: "{{resolve:secretsmanager:${MyRedshiftSecret}::password}}"
+      NodeType: ds2.xlarge
+      ClusterType: single-node
+  SecretRedshiftAttachment:
+    Type: AWS::SecretsManager::SecretTargetAttachment
+    Properties:
+      SecretId:
+        Ref: MyRedshiftSecret
+      TargetId:
+        Ref: MyRedshiftCluster
+      TargetType: AWS::Redshift::Cluster
 ```
 
 ## See also<a name="aws-resource-secretsmanager-secret--seealso"></a>

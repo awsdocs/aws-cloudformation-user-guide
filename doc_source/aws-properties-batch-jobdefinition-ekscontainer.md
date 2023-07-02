@@ -90,7 +90,7 @@ The type and amount of resources to assign to a container\. The supported resour
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityContext`  <a name="cfn-batch-jobdefinition-ekscontainer-securitycontext"></a>
-The security context for a job\. For more information, see [Configure a security context for a pod or container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) in the *Kubernetes documentation*\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [EksContainerSecurityContext](aws-properties-batch-jobdefinition-ekscontainersecuritycontext.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

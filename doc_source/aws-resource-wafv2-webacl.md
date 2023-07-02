@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFv2::WebACL",
   "Properties" : {
+      "[AssociationConfig](#cfn-wafv2-webacl-associationconfig)" : AssociationConfig,
       "[CaptchaConfig](#cfn-wafv2-webacl-captchaconfig)" : CaptchaConfig,
       "[ChallengeConfig](#cfn-wafv2-webacl-challengeconfig)" : ChallengeConfig,
       "[CustomResponseBodies](#cfn-wafv2-webacl-customresponsebodies)" : {Key: Value, ...},
@@ -35,6 +36,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::WAFv2::WebACL
 Properties: 
+  [AssociationConfig](#cfn-wafv2-webacl-associationconfig): 
+    AssociationConfig
   [CaptchaConfig](#cfn-wafv2-webacl-captchaconfig): 
     CaptchaConfig
   [ChallengeConfig](#cfn-wafv2-webacl-challengeconfig): 
@@ -57,6 +60,14 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-wafv2-webacl-properties"></a>
+
+`AssociationConfig`  <a name="cfn-wafv2-webacl-associationconfig"></a>
+Specifies custom configurations for the associations between the web ACL and protected resources\.   
+Use this to customize the maximum size of the request body that your protected CloudFront distributions forward to AWS WAF for inspection\. The default is 16 KB \(16,384 kilobytes\)\.   
+You are charged additional fees when your protected resources forward body sizes that are larger than the default\. For more information, see [AWS WAF Pricing](http://aws.amazon.com/waf/pricing/)\.
+*Required*: No  
+*Type*: [AssociationConfig](aws-properties-wafv2-webacl-associationconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CaptchaConfig`  <a name="cfn-wafv2-webacl-captchaconfig"></a>
 Specifies how AWS WAF should handle `CAPTCHA` evaluations for rules that don't have their own `CaptchaConfig` settings\. If you don't specify this, AWS WAF uses its default settings for `CaptchaConfig`\.   

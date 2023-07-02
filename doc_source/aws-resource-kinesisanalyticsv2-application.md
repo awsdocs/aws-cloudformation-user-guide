@@ -269,7 +269,7 @@ The following example shows how to create a simple Studio application with an Am
             "Type": "AWS::KinesisAnalyticsV2::Application",
             "Properties": {
                 "ApplicationMode": "INTERACTIVE",
-                "RuntimeEnvironment": "ZEPPELIN-FLINK-2_0",
+                "RuntimeEnvironment": "ZEPPELIN-FLINK-3_0",
                 "ServiceExecutionRole": {
                     "Fn::GetAtt": [
                         "ServiceExecutionRole",
@@ -295,17 +295,25 @@ The following example shows how to create a simple Studio application with an Am
                             {
                                 "ArtifactType": "DEPENDENCY_JAR",
                                 "MavenReference": {
-                                    "GroupId": "software.amazon.kinesis",
-                                    "ArtifactId": "amazon-kinesis-sql-connector-flink",
-                                    "Version": "2.0.3"
+                                    "GroupId": "org.apache.flink",
+                                    "ArtifactId": "flink-sql-connector-kinesis",
+                                    "Version": "1.15.4"
                                 }
                             },
                             {
                                 "ArtifactType": "DEPENDENCY_JAR",
                                 "MavenReference": {
                                     "GroupId": "org.apache.flink",
-                                    "ArtifactId": "flink-sql-connector-kafka_2.12",
-                                    "Version": "1.15.2"
+                                    "ArtifactId": "flink-connector-kafka",
+                                    "Version": "1.15.4"
+                                }
+                            },
+                            {
+                                "ArtifactType": "DEPENDENCY_JAR",
+                                "MavenReference": {
+                                    "GroupId": "software.amazon.msk",
+                                    "ArtifactId": "aws-msk-iam-auth",
+                                    "Version": "1.1.6"
                                 }
                             }
                         ]
@@ -410,7 +418,7 @@ Resources:
     Type: AWS::KinesisAnalyticsV2::Application
     Properties:
       ApplicationMode: INTERACTIVE
-      RuntimeEnvironment: ZEPPELIN-FLINK-2_0
+      RuntimeEnvironment: ZEPPELIN-FLINK-3_0
       ServiceExecutionRole: !GetAtt ServiceExecutionRole.Arn
       ApplicationConfiguration:
         FlinkApplicationConfiguration:
@@ -424,14 +432,19 @@ Resources:
           CustomArtifactsConfiguration:
             - ArtifactType: DEPENDENCY_JAR
               MavenReference:
-                GroupId: software.amazon.kinesis
-                ArtifactId: amazon-kinesis-sql-connector-flink
-                Version: 2.0.3
+                GroupId: org.apache.flink
+                ArtifactId: flink-sql-connector-kinesis
+                Version: 1.15.4
             - ArtifactType: DEPENDENCY_JAR
               MavenReference:
                 GroupId: org.apache.flink
-                ArtifactId: flink-sql-connector-kafka_2.12
-                Version: 1.15.2
+                ArtifactId: flink-connector-kafka
+                Version: 1.15.4
+            - ArtifactType: DEPENDENCY_JAR
+              MavenReference:
+                GroupId: software.amazon.msk
+                ArtifactId: aws-msk-iam-auth
+                Version: 1.1.6
 
   GlueDatabase:
     Type: AWS::Glue::Database

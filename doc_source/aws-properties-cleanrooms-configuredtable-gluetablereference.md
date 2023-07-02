@@ -30,7 +30,7 @@ The name of the database the AWS Glue table belongs to\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `128`  
-*Pattern*: `[a-zA-Z0-9_](([a-zA-Z0-9_ ]+-)*([a-zA-Z0-9_ ]+))?`  
+*Pattern*: `[a-zA-Z0-9_](([a-zA-Z0-9_]+-)*([a-zA-Z0-9_]+))?`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TableName`  <a name="cfn-cleanrooms-configuredtable-gluetablereference-tablename"></a>

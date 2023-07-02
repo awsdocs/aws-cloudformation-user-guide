@@ -24,6 +24,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DataLakePrincipalIdentifier`  <a name="cfn-lakeformation-datalakesettings-datalakeprincipal-datalakeprincipalidentifier"></a>
 An identifier for the Lake Formation principal\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

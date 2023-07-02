@@ -220,6 +220,7 @@ service-provider::service-name::data-type-name
 + [AWS Systems Manager for SAP](AWS_SystemsManagerSAP.md)
 + [Amazon Timestream](AWS_Timestream.md)
 + [AWS Transfer Family](AWS_Transfer.md)
++ [Amazon Verified Permissions](AWS_VerifiedPermissions.md)
 + [Amazon Connect Voice ID](AWS_VoiceID.md)
 + [Amazon VPC Lattice](AWS_VpcLattice.md)
 + [AWS WAF](AWS_WAF.md)

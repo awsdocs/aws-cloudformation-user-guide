@@ -15,12 +15,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApplicationInstanceIdToReplace](#cfn-panorama-applicationinstance-applicationinstanceidtoreplace)" : String,
       "[DefaultRuntimeContextDevice](#cfn-panorama-applicationinstance-defaultruntimecontextdevice)" : String,
       "[Description](#cfn-panorama-applicationinstance-description)" : String,
-      "[DeviceId](#cfn-panorama-applicationinstance-deviceid)" : String,
       "[ManifestOverridesPayload](#cfn-panorama-applicationinstance-manifestoverridespayload)" : ManifestOverridesPayload,
       "[ManifestPayload](#cfn-panorama-applicationinstance-manifestpayload)" : ManifestPayload,
       "[Name](#cfn-panorama-applicationinstance-name)" : String,
       "[RuntimeRoleArn](#cfn-panorama-applicationinstance-runtimerolearn)" : String,
-      "[StatusFilter](#cfn-panorama-applicationinstance-statusfilter)" : String,
       "[Tags](#cfn-panorama-applicationinstance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -34,14 +32,12 @@ Properties:
   [ApplicationInstanceIdToReplace](#cfn-panorama-applicationinstance-applicationinstanceidtoreplace): String
   [DefaultRuntimeContextDevice](#cfn-panorama-applicationinstance-defaultruntimecontextdevice): String
   [Description](#cfn-panorama-applicationinstance-description): String
-  [DeviceId](#cfn-panorama-applicationinstance-deviceid): String
   [ManifestOverridesPayload](#cfn-panorama-applicationinstance-manifestoverridespayload): 
     ManifestOverridesPayload
   [ManifestPayload](#cfn-panorama-applicationinstance-manifestpayload): 
     ManifestPayload
   [Name](#cfn-panorama-applicationinstance-name): String
   [RuntimeRoleArn](#cfn-panorama-applicationinstance-runtimerolearn): String
-  [StatusFilter](#cfn-panorama-applicationinstance-statusfilter): String
   [Tags](#cfn-panorama-applicationinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -75,15 +71,6 @@ A description for the application instance\.
 *Pattern*: `.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`DeviceId`  <a name="cfn-panorama-applicationinstance-deviceid"></a>
-A device's ID\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[a-zA-Z0-9\-\_]+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `ManifestOverridesPayload`  <a name="cfn-panorama-applicationinstance-manifestoverridespayload"></a>
 Setting overrides for the application manifest\.  
 *Required*: No  
@@ -113,13 +100,6 @@ The ARN of a runtime role for the application instance\.
 *Maximum*: `255`  
 *Pattern*: `arn:[a-z0-9][-.a-z0-9]{0,62}:iam::[0-9]{12}:role/.+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`StatusFilter`  <a name="cfn-panorama-applicationinstance-statusfilter"></a>
-Only include instances with a specific status\.  
-*Required*: No  
-*Type*: String  
-*Allowed values*: `DEPLOYMENT_ERROR | DEPLOYMENT_FAILED | DEPLOYMENT_SUCCEEDED | PROCESSING_DEPLOYMENT | PROCESSING_REMOVAL | REMOVAL_FAILED | REMOVAL_SUCCEEDED`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-panorama-applicationinstance-tags"></a>
 Tags for the application instance\.  
