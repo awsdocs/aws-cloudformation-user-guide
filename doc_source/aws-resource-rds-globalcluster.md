@@ -44,7 +44,7 @@ Properties:
 ## Properties<a name="aws-resource-rds-globalcluster-properties"></a>
 
 `DeletionProtection`  <a name="cfn-rds-globalcluster-deletionprotection"></a>
-The deletion protection setting for the new global database\. The global database can't be deleted when deletion protection is enabled\.  
+Specifies whether to enable deletion protection for the new global database cluster\. The global database can't be deleted when deletion protection is enabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -58,7 +58,9 @@ If the `SourceDBClusterIdentifier` property isn't specified, this property is re
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-rds-globalcluster-engineversion"></a>
-The engine version of the Aurora global database\.  
+The engine version to use for this global database cluster\.  
+Constraints:  
++ Can't be specified if `SourceDBClusterIdentifier` is specified\. In this case, Amazon Aurora uses the engine version of the source DB cluster\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

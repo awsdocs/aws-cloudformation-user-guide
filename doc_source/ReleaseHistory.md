@@ -4,6 +4,10 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New resource](AWS_Transfer.md) | The following resource was added: AWS::Transfer::Server StructuredLogDestination 
+
+ [AWS::Transfer::Server StructuredLogDestinations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-structuredlogdestinations.html)   
+Use the `StructuredLogDestination` resource to specify the log groups to which your AWS Transfer Family server logs are sent\.  | July 6, 2023 | 
 | [Updated resources](AWS_AppStream.md) | The following resource was updated: `AWS::AppStream::AppBlock` 
 
  [AWS::AppStream::AppBlock](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html)   
@@ -36,6 +40,7 @@ Use the `AWS::VerifiedPermissions::PolicyStore` resource to specify a policy sto
 
  [AWS::VerifiedPermissions::PolicyTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policytemplate.html)   
 Use the `AWS::VerifiedPermissions::PolicyTemplate` resource to specify a policy template in Amazon Verified Permissions\.  | June 29, 2023 | 
+| [New resource](AWS_Comprehend.md) | The following new resource was added: AWS::Comprehend::DocumentClassifier\.Use the [ AWS::Comprehend::DocumentClassifier](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-documentclassifier.html) resource to create and train custom document classifiers in Amazon Comprehend\. | June 29, 2023 | 
 | [Updated resource](AWS_Cassandra.md) | The following resource was updated: `AWS::Cassandra::Keyspace`\. 
 
  [AWS::Cassandra::Keyspace\.ReplicationSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-keyspace-replicationspecification.html)   

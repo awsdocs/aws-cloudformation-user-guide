@@ -186,7 +186,7 @@ Your Amazon ECS container instances require at least version 1\.26\.0 of the con
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RequiresCompatibilities`  <a name="cfn-ecs-taskdefinition-requirescompatibilities"></a>
-The task launch types the task definition was validated against\. For more information, see [Amazon ECS launch types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The task launch types the task definition was validated against\. The valid values are `EC2`, `FARGATE`, and `git diff`\. For more information, see [Amazon ECS launch types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

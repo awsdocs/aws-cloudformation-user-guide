@@ -86,7 +86,7 @@ Specifies whether a rule is the last to be applied with respect to a finding tha
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleStatus`  <a name="cfn-securityhub-automationrule-rulestatus"></a>
- Whether the rule is active after it is created\. If this parameter is equal to `ENABLED`, Security Hub will apply the rule to findings and finding updates after the rule is created\.   
+ Whether the rule is active after it is created\. If this parameter is equal to `ENABLED`, Security Hub applies the rule to findings and finding updates after the rule is created\.   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  

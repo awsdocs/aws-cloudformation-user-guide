@@ -46,5 +46,5 @@ The name of the endpoint\.
  The status of the endpoint\. For possible values of the status of an endpoint, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)\.   
 *Required*: No  
 *Type*: String  
-*Allowed values*: `Creating | Deleting | Failed | InService | OutOfService | RollingBack | SystemUpdating | Updating`  
+*Allowed values*: `Creating | Deleting | Failed | InService | OutOfService | RollingBack | SystemUpdating | UpdateRollbackFailed | Updating`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

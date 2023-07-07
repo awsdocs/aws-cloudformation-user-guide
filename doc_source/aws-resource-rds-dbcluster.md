@@ -351,7 +351,7 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
 The DB engine mode of the DB cluster, either `provisioned` or `serverless`\.  
-The `serverless` engine mode only supports Aurora Serverless v1\. Currently, AWS CloudFormation doesn't support Aurora Serverless v2\.  
+The `serverless` engine mode only supports Aurora Serverless v1\.  
 Limitations and requirements apply to some DB engine modes\. For more information, see the following sections in the *Amazon Aurora User Guide*:  
 +  [ Limitations of Aurora Serverless v1](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
 + [Requirements for Aurora Serverless v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html)

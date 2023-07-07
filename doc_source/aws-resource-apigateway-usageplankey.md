@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-usageplankey-properties"></a>
 
 `KeyId`  <a name="cfn-apigateway-usageplankey-keyid"></a>
-The Id of the UsagePlanKey resource to be deleted\.  
+The Id of the UsagePlanKey resource\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -44,7 +44,7 @@ The type of a UsagePlanKey resource for a plan customer\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UsagePlanId`  <a name="cfn-apigateway-usageplankey-usageplanid"></a>
-The Id of the UsagePlan resource representing the usage plan containing the to\-be\-deleted UsagePlanKey resource representing a plan customer\.  
+The Id of the UsagePlan resource representing the usage plan containing the UsagePlanKey resource representing a plan customer\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

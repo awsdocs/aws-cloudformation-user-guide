@@ -324,7 +324,7 @@ Not applicable\. The character set is managed by the DB cluster\. For more infor
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CopyTagsToSnapshot`  <a name="cfn-rds-dbinstance-copytagstosnapshot"></a>
-Spcifies whether to copy tags from the DB instance to snapshots of the DB instance\. By default, tags are not copied\.  
+Specifies whether to copy tags from the DB instance to snapshots of the DB instance\. By default, tags are not copied\.  
 This setting doesn't apply to Amazon Aurora DB instances\. Copying tags to snapshots is managed by the DB cluster\. Setting this value for an Aurora DB instance has no effect on the DB cluster setting\.  
 *Required*: No  
 *Type*: Boolean  

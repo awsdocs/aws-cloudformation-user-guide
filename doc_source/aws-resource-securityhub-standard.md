@@ -35,10 +35,9 @@ Properties:
 ## Properties<a name="aws-resource-securityhub-standard-properties"></a>
 
 `DisabledStandardsControls`  <a name="cfn-securityhub-standard-disabledstandardscontrols"></a>
- Specifies whether a control is enabled or disabled in a specified standard\.   
+ Specifies which controls are to be disabled in a standard\.   
 *Required*: No  
 *Type*: List of [StandardsControl](aws-properties-securityhub-standard-standardscontrol.md)  
-*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StandardsArn`  <a name="cfn-securityhub-standard-standardsarn"></a>
@@ -117,7 +116,7 @@ Outputs:
 
 ### Enabling a standard with some controls disabled<a name="aws-resource-securityhub-standard--examples--Enabling_a_standard_with_some_controls_disabled"></a>
 
-The following example enables the FSBP standard\. The controls specified in the example are disabled in this standard\. Other controls are enabled in this standard\.
+The following example enables the FSBP standard\. The controls specified in the example are disabled in this standard, and all other controls are enabled in this standard\.
 
 #### JSON<a name="aws-resource-securityhub-standard--examples--Enabling_a_standard_with_some_controls_disabled--json"></a>
 

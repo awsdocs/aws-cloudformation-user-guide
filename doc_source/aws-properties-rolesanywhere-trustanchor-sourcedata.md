@@ -1,6 +1,6 @@
 # AWS::RolesAnywhere::TrustAnchor SourceData<a name="aws-properties-rolesanywhere-trustanchor-sourcedata"></a>
 
- A union object representing the data field of the TrustAnchor depending on its type 
+The data field of the trust anchor depending on its type\. 
 
 ## Syntax<a name="aws-properties-rolesanywhere-trustanchor-sourcedata-syntax"></a>
 

@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::InternetMonitor::Monitor",
   "Properties" : {
+      "[HealthEventsConfig](#cfn-internetmonitor-monitor-healtheventsconfig)" : HealthEventsConfig,
       "[InternetMeasurementsLogDelivery](#cfn-internetmonitor-monitor-internetmeasurementslogdelivery)" : InternetMeasurementsLogDelivery,
       "[MaxCityNetworksToMonitor](#cfn-internetmonitor-monitor-maxcitynetworkstomonitor)" : Integer,
       "[MonitorName](#cfn-internetmonitor-monitor-monitorname)" : String,
@@ -34,6 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::InternetMonitor::Monitor
 Properties: 
+  [HealthEventsConfig](#cfn-internetmonitor-monitor-healtheventsconfig): 
+    HealthEventsConfig
   [InternetMeasurementsLogDelivery](#cfn-internetmonitor-monitor-internetmeasurementslogdelivery): 
     InternetMeasurementsLogDelivery
   [MaxCityNetworksToMonitor](#cfn-internetmonitor-monitor-maxcitynetworkstomonitor): Integer
@@ -51,6 +54,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-internetmonitor-monitor-properties"></a>
+
+`HealthEventsConfig`  <a name="cfn-internetmonitor-monitor-healtheventsconfig"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [HealthEventsConfig](aws-properties-internetmonitor-monitor-healtheventsconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InternetMeasurementsLogDelivery`  <a name="cfn-internetmonitor-monitor-internetmeasurementslogdelivery"></a>
 Publish internet measurements for a monitor for all city\-networks \(up to the 500,000 service limit\) to another location, such as an Amazon S3 bucket\. Measurements are also published to Amazon CloudWatch Logs for the first 500 \(by traffic volume\) city\-networks \(client locations and ASNs, typically internet service providers or ISPs\)\.  

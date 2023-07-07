@@ -44,7 +44,7 @@ Note that Bulk API 2\.0 does not transfer Salesforce compound fields\.
 REST\_SYNC  
 Amazon AppFlow uses only Salesforce REST API\. By choosing this option, you ensure that your flow writes consistent output, but you decrease performance for large data transfers that are better suited for Bulk API 2\.0\. In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a timed out error\.
 *Required*: No  
-*Type*: String  
+*Type*: [String](aws-properties-appflow-flow-datatransferapi.md)  
 *Allowed values*: `AUTOMATIC | BULKV2 | REST_SYNC`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

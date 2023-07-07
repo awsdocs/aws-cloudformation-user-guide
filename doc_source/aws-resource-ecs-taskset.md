@@ -106,7 +106,7 @@ The details of the service discovery registries to assign to this task set\. For
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TaskDefinition`  <a name="cfn-ecs-taskset-taskdefinition"></a>
-The task definition for the tasks in the task set to use\.  
+The task definition for the tasks in the task set to use\. If a revision isn't specified, the latest `ACTIVE` revision is used\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-securityhub-standard-standardscontrol-properties"></a>
 
 `Reason`  <a name="cfn-securityhub-standard-standardscontrol-reason"></a>
-A user\-defined reason for changing a control's enablement status in a specified standard\.  
+A user\-defined reason for changing a control's enablement status in a specified standard\. If you are disabling a control, then this property is required\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `.*\S.*`  

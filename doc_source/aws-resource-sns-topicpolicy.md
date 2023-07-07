@@ -1,12 +1,12 @@
-# AWS::SNS::TopicPolicy<a name="aws-properties-sns-policy"></a>
+# AWS::SNS::TopicPolicy<a name="aws-resource-sns-topicpolicy"></a>
 
 The `AWS::SNS::TopicPolicy` resource associates Amazon SNS topics with a policy\. For an example snippet, see [Declaring an Amazon SNS policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-sns-policy) in the *AWS CloudFormation User Guide*\.
 
-## Syntax<a name="aws-properties-sns-policy-syntax"></a>
+## Syntax<a name="aws-resource-sns-topicpolicy-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-properties-sns-policy-syntax.json"></a>
+### JSON<a name="aws-resource-sns-topicpolicy-syntax.json"></a>
 
 ```
 {
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 }
 ```
 
-### YAML<a name="aws-properties-sns-policy-syntax.yaml"></a>
+### YAML<a name="aws-resource-sns-topicpolicy-syntax.yaml"></a>
 
 ```
 Type: AWS::SNS::TopicPolicy
@@ -28,7 +28,7 @@ Properties:
     - String
 ```
 
-## Properties<a name="aws-properties-sns-policy-properties"></a>
+## Properties<a name="aws-resource-sns-topicpolicy-properties"></a>
 
 `PolicyDocument`  <a name="cfn-sns-topicpolicy-policydocument"></a>
 A policy document that contains permissions to add to the specified SNS topics\.  
@@ -41,3 +41,12 @@ The Amazon Resource Names \(ARN\) of the topics to which you want to add the pol
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-sns-topicpolicy-return-values"></a>
+
+### Fn::GetAtt<a name="aws-resource-sns-topicpolicy-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-sns-topicpolicy-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Property description not available\.

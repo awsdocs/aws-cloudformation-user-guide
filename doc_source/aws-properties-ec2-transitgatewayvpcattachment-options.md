@@ -27,21 +27,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-transitgatewayvpcattachment-options-properties"></a>
 
 `ApplianceModeSupport`  <a name="cfn-ec2-transitgatewayvpcattachment-options-appliancemodesupport"></a>
-Indicates whether appliance mode support is enabled\.  
+Enable or disable appliance mode support\. The default is `disable`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `disable | enable`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DnsSupport`  <a name="cfn-ec2-transitgatewayvpcattachment-options-dnssupport"></a>
-Indicates whether DNS support is enabled\.  
+Enable or disable DNS support\. The default is `disable`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `disable | enable`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ipv6Support`  <a name="cfn-ec2-transitgatewayvpcattachment-options-ipv6support"></a>
-Indicates whether IPv6 support is disabled\.  
+Enable or disable IPv6 support\. The default is `disable`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `disable | enable`  

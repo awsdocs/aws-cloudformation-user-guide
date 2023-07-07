@@ -67,15 +67,16 @@ Property description not available\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Documents`  <a name="cfn-comprehend-documentclassifier-documentclassifierinputdataconfig-documents"></a>
-Property description not available\.  
+The S3 location of the training documents\. This parameter is required in a request to create a native document model\.  
 *Required*: No  
 *Type*: [DocumentClassifierDocuments](aws-properties-comprehend-documentclassifier-documentclassifierdocuments.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DocumentType`  <a name="cfn-comprehend-documentclassifier-documentclassifierinputdataconfig-documenttype"></a>
-Property description not available\.  
+The type of input documents for training the model\. Provide plain\-text documents to create a plain\-text model, and provide semi\-structured documents to create a native document model\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `PLAIN_TEXT_DOCUMENT | SEMI_STRUCTURED_DOCUMENT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LabelDelimiter`  <a name="cfn-comprehend-documentclassifier-documentclassifierinputdataconfig-labeldelimiter"></a>
