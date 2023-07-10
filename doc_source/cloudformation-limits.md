@@ -9,7 +9,9 @@ Your AWS account has AWS CloudFormation quotas that you might need to know when 
 | --- | --- | --- | --- | 
 |  [cfn\-signal wait condition data](cfn-signal.md)  |  Maximum amount of data that cfn\-signal can pass\.  |  4,096 bytes  |  To pass a larger amount, send the data to an Amazon S3 bucket, and then use cfn\-signal to pass the Amazon S3 URL to that bucket\.  | 
 |  [Custom resource response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)  |  Maximum amount of data that a custom resource provider can pass\.  |  4,096 bytes  |    | 
-| [Hook configuration](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/hooks-structure.html#hook-configuration-schema) |  Maximum amount of data that a hook's configuration can store\.  | 300 KB |  | 
+| Hooks per account |  Maximum amount of hooks per account\.  | 100 hooks |  | 
+| Hooks per resource |  Maximum amount of hooks per resource\.  | 100 hooks |  | 
+| [Hook configuration size](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/hooks-structure.html#hook-configuration-schema) |  Maximum amount of data that a hook's configuration can store\.  | 300 KB |  | 
 |  [Mappings](template-anatomy.md)  |  Maximum number of mappings that you can declare in your AWS CloudFormation template\.  |  200 mappings  |  To specify more mappings, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\.  | 
 |  [Mapping attributes](template-anatomy.md)  | Maximum number of mapping attributes for each mapping that you can declare in your AWS CloudFormation template\. |  200 attributes  |  To specify more mapping attributes, separate the attributes into multiple mappings\.  | 
 |  [Mapping name and mapping attribute name](template-anatomy.md)  |  Maximum size of each mapping name\.  |  255 characters  |    | 
@@ -35,6 +37,10 @@ Your AWS account has AWS CloudFormation quotas that you might need to know when 
 |  [Template body size in a request](template-anatomy.md)  |  Maximum size of a template body that you can pass in a `CreateStack`, `UpdateStack`, or `ValidateTemplate` request\.  |  51,200 bytes  |  To use a larger template body, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\. Or upload the template to an Amazon S3 bucket\.  | 
 |  [Template body size in an Amazon S3 object](template-anatomy.md)  |  Maximum size of a template body that you can pass in an Amazon S3 object for a `CreateStack`, `UpdateStack`, `ValidateTemplate` request with an Amazon S3 template URL\.  |  1 MB  |  To use a larger template body, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\. Or use minification to reduce the CloudFormation template size\.  | 
 |  [Template description](template-anatomy.md)  |  Maximum size of a template description\.  |  1,024 bytes  |    | 
+|  Versions per hook  |  Maximum number of versions per hook\.  |  100 versions  |    | 
+
+**Note**  
+The maximum amount of data that a hook’s configuration can store is 300 KB\. This is in addition to all the constraints imposed on `Configuration` request parameter of [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html) operation\.
 
 ## Feature availability<a name="stacksets-availability"></a>
 

@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet LookbackWindow<a name="aws-properties-quicksight-dataset-lookbackwindow"></a>
 
-The lookback window setup of an incremental refresh configuration\.
+<a name="aws-properties-quicksight-dataset-lookbackwindow-description"></a>The `LookbackWindow` property type specifies Property description not available\. for an [AWS::QuickSight::DataSet](aws-resource-quicksight-dataset.md)\.
 
 ## Syntax<a name="aws-properties-quicksight-dataset-lookbackwindow-syntax"></a>
 
@@ -27,20 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-dataset-lookbackwindow-properties"></a>
 
 `ColumnName`  <a name="cfn-quicksight-dataset-lookbackwindow-columnname"></a>
-The name of the lookback window column\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Size`  <a name="cfn-quicksight-dataset-lookbackwindow-size"></a>
-The lookback window column size\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SizeUnit`  <a name="cfn-quicksight-dataset-lookbackwindow-sizeunit"></a>
-The size unit that is used for the lookback window column\. Valid values for this structure are `HOUR`, `DAY`, and `WEEK`\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `DAY | HOUR | WEEK`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

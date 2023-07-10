@@ -6,7 +6,7 @@ The following table describes important changes in each release of the AWS Cloud
 | --- |--- |--- |
 | [New resource](AWS_Transfer.md) | The following resource was added: AWS::Transfer::Server StructuredLogDestination 
 
- [AWS::Transfer::Server StructuredLogDestinations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-structuredlogdestinations.html)   
+ [AWS::Transfer::Server StructuredLogDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-structuredlogdestination.html)   
 Use the `StructuredLogDestination` resource to specify the log groups to which your AWS Transfer Family server logs are sent\.  | July 6, 2023 | 
 | [Updated resources](AWS_AppStream.md) | The following resource was updated: `AWS::AppStream::AppBlock` 
 
@@ -119,6 +119,10 @@ Use `KMSKeyId` property for the AWS KMS key identifier for an encrypted CEV\.
 The `Manifest` property is the CEV manifest, which is a JSON document that describes the installation \.zip files stored in Amazon S3\.  
 The `Status` property provides the status of a custom engine version \(CEV\)\.  
 The `Tags` property allows you to add metadata to your RDS resource\.  | June 15, 2023 | 
+| [New resource](AWS_SecurityHub.md) | The following resource was added: AWS::SecurityHub::AutomationRule\. 
+
+ [AWS::SecurityHub::AutomationRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html)   
+Use the `AWS::SecurityHub::AutomationRule` resource to specify an automation rule based on criteria that you define\.  | June 15, 2023 | 
 | [Updated resource](AWS_CloudTrail.md) | The following resource was updated: AWS::CloudTrail::EventDataStore 
 
  [AWS::CloudTrail::EventDataStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html)   

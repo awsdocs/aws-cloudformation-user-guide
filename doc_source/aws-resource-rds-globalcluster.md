@@ -50,9 +50,10 @@ Specifies whether to enable deletion protection for the new global database clus
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engine`  <a name="cfn-rds-globalcluster-engine"></a>
-The name of the database engine to be used for this DB cluster\.  
-If this property isn't specified, the database engine is derived from the source DB cluster specified by the `SourceDBClusterIdentifier` property\.  
-If the `SourceDBClusterIdentifier` property isn't specified, this property is required\. If the `SourceDBClusterIdentifier` property is specified, make sure this property isn't specified\.
+The database engine to use for this global database cluster\.  
+Valid Values: `aurora-mysql | aurora-postgresql`   
+Constraints:  
++ Can't be specified if `SourceDBClusterIdentifier` is specified\. In this case, Amazon Aurora uses the engine of the source DB cluster\.
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -66,20 +67,26 @@ Constraints:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalClusterIdentifier`  <a name="cfn-rds-globalcluster-globalclusteridentifier"></a>
-The cluster identifier of the global database cluster\.  
+The cluster identifier for this global database cluster\. This parameter is stored as a lowercase string\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceDBClusterIdentifier`  <a name="cfn-rds-globalcluster-sourcedbclusteridentifier"></a>
-The DB cluster identifier or Amazon Resource Name \(ARN\) to use as the primary cluster of the global database\.   
-If the `Engine` property isn't specified, this property is required\. If the `Engine` property is specified, make sure this property isn't specified\.
+The Amazon Resource Name \(ARN\) to use as the primary cluster of the global database\.  
+If you provide a value for this parameter, don't specify values for the following settings because Amazon Aurora uses the values from the specified source DB cluster:  
++  `DatabaseName` 
++  `Engine` 
++  `EngineVersion` 
++  `StorageEncrypted` 
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageEncrypted`  <a name="cfn-rds-globalcluster-storageencrypted"></a>
-The storage encryption setting for the global database cluster\.   
+Specifies whether to enable storage encryption for the new global database cluster\.  
+Constraints:  
++ Can't be specified if `SourceDBClusterIdentifier` is specified\. In this case, Amazon Aurora uses the setting from the source DB cluster\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

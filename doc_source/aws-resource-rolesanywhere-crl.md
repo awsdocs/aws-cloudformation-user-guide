@@ -1,8 +1,6 @@
 # AWS::RolesAnywhere::CRL<a name="aws-resource-rolesanywhere-crl"></a>
 
-Imports the certificate revocation list \(CRL\)\. A CRL is a list of certificates that have been revoked by the issuing certificate Authority \(CA\)\. IAM Roles Anywhere validates against the CRL before issuing credentials\. 
-
-**Required permissions: **`rolesanywhere:ImportCrl`\. 
+ Creates a Crl\. 
 
 ## Syntax<a name="aws-resource-rolesanywhere-crl-syntax"></a>
 
@@ -39,31 +37,27 @@ Properties:
 ## Properties<a name="aws-resource-rolesanywhere-crl-properties"></a>
 
 `CrlData`  <a name="cfn-rolesanywhere-crl-crldata"></a>
-The x509 v3 specified certificate revocation list \(CRL\)\.  
+ x509 v3 Certificate Revocation List to revoke auth for corresponding certificates presented in CreateSession operations  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-rolesanywhere-crl-enabled"></a>
-Specifies whether the certificate revocation list \(CRL\) is enabled\.  
+ The enabled status of the resource\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-rolesanywhere-crl-name"></a>
-The name of the certificate revocation list \(CRL\)\.  
+ The customer specified name of the resource\.   
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `^[ a-zA-Z0-9-_]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-rolesanywhere-crl-tags"></a>
-A list of tags to attach to the certificate revocation list \(CRL\)\.  
+ A list of Tags\.   
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrustAnchorArn`  <a name="cfn-rolesanywhere-crl-trustanchorarn"></a>
@@ -79,13 +73,11 @@ The ARN of the TrustAnchor the certificate revocation list \(CRL\) will provide 
 
 ### Ref<a name="aws-resource-rolesanywhere-crl-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns `CrlId`\.
+ The name of the CRL\. 
 
 ### Fn::GetAtt<a name="aws-resource-rolesanywhere-crl-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+ 
 
 #### <a name="aws-resource-rolesanywhere-crl-return-values-fn--getatt-fn--getatt"></a>
 

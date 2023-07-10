@@ -39,7 +39,7 @@ The following example stack policy prevents updates to the `ProductionDatabase` 
 
 When you set a stack policy, all resources are protected by default\. To allow updates on all resources, we add an `Allow` statement that allows all actions on all resources\. Although the `Allow` statement specifies all resources, the explicit `Deny` statement overrides it for the resource with the `ProductionDatabase` logical ID\. This `Deny` statement prevents all update actions, such as replacement or deletion, on the `ProductionDatabase` resource\.
 
-The `Principal` element is required, but supports only the wild card \(`*`\), which means that the statement applies to all [principals](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#principal)\.
+The `Principal` element is required, but supports only the wild card \(`*`\), which means that the statement applies to all [principals](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html#principal)\.
 
 **Note**  
 During a stack update, AWS CloudFormation automatically updates resources that depend on other updated resources\. For example, AWS CloudFormation updates a resource that references an updated resource\. AWS CloudFormation makes no physical changes, such as the resource's ID, to automatically updated resources, but if a stack policy is associated with those resources, you must have permission to update them\.
@@ -108,7 +108,7 @@ To allow all update actions except for one, use `NotAction`\. For example, to al
 For more information about stack updates, see [AWS CloudFormation stack updates](using-cfn-updating-stacks.md)\.
 
 Principal  
-The `Principal` element specifies the entity that the policy applies to\. This element is required but supports only the wild card \(`*`\), which means that the policy applies to all [principals](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#principal)\.
+The `Principal` element specifies the entity that the policy applies to\. This element is required but supports only the wild card \(`*`\), which means that the policy applies to all [principals](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html#principal)\.
 
 Resource  
 Specifies the logical IDs of the resources that the policy applies to\. To specify [types of resources](aws-template-resource-type-ref.md), use the `Condition` element\.  
