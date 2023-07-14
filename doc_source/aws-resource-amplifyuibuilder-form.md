@@ -92,7 +92,7 @@ Specifies whether to perform a create or update action on the form\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LabelDecorator`  <a name="cfn-amplifyuibuilder-form-labeldecorator"></a>
-Property description not available\.  
+Specifies an icon or decoration to display on the form\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -129,13 +129,7 @@ One or more key\-value pairs to use when tagging the form data\.
 
 ## Return values<a name="aws-resource-amplifyuibuilder-form-return-values"></a>
 
-### Ref<a name="aws-resource-amplifyuibuilder-form-return-values-ref"></a>
-
 ### Fn::GetAtt<a name="aws-resource-amplifyuibuilder-form-return-values-fn--getatt"></a>
-
-The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-amplifyuibuilder-form-return-values-fn--getatt-fn--getatt"></a>
 

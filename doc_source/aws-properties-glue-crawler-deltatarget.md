@@ -1,6 +1,6 @@
 # AWS::Glue::Crawler DeltaTarget<a name="aws-properties-glue-crawler-deltatarget"></a>
 
-<a name="aws-properties-glue-crawler-deltatarget-description"></a>The `DeltaTarget` property type specifies Property description not available\. for an [AWS::Glue::Crawler](aws-resource-glue-crawler.md)\.
+Specifies a Delta data store to crawl one or more Delta tables\.
 
 ## Syntax<a name="aws-properties-glue-crawler-deltatarget-syntax"></a>
 
@@ -30,25 +30,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-crawler-deltatarget-properties"></a>
 
 `ConnectionName`  <a name="cfn-glue-crawler-deltatarget-connectionname"></a>
-Property description not available\.  
+The name of the connection to use to connect to the Delta table target\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CreateNativeDeltaTable`  <a name="cfn-glue-crawler-deltatarget-createnativedeltatable"></a>
-Property description not available\.  
+Specifies whether the crawler will create native tables, to allow integration with query engines that support querying of the Delta transaction log directly\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeltaTables`  <a name="cfn-glue-crawler-deltatarget-deltatables"></a>
-Property description not available\.  
+A list of the Amazon S3 paths to the Delta tables\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WriteManifest`  <a name="cfn-glue-crawler-deltatarget-writemanifest"></a>
-Property description not available\.  
+Specifies whether to write the manifest files to the Delta table path\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

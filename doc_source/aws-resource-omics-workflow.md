@@ -65,7 +65,7 @@ The parameter's description\.
 An engine for the workflow\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `NEXTFLOW | WDL`  
+*Allowed values*: `CWL | NEXTFLOW | WDL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Main`  <a name="cfn-omics-workflow-main"></a>

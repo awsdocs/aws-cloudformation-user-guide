@@ -57,7 +57,7 @@ The ID of the AWS account where you want to store the new theme\.
 
 `BaseThemeId`  <a name="cfn-quicksight-theme-basethemeid"></a>
 The ID of the theme that a custom theme will inherit from\. All themes inherit from one of the starting themes defined by Amazon QuickSight\. For a list of the starting themes, use `ListThemes` or choose **Themes** from within an analysis\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `512`  
@@ -66,13 +66,13 @@ The ID of the theme that a custom theme will inherit from\. All themes inherit f
 
 `Configuration`  <a name="cfn-quicksight-theme-configuration"></a>
 The theme configuration, which contains the theme display properties\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [ThemeConfiguration](aws-properties-quicksight-theme-themeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-quicksight-theme-name"></a>
 A display name for the theme\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  

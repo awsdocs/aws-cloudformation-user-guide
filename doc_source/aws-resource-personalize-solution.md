@@ -78,7 +78,7 @@ Whether to perform hyperparameter optimization \(HPO\) on the chosen recipe\. Th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RecipeArn`  <a name="cfn-personalize-solution-recipearn"></a>
-The ARN of the recipe used to create the solution\.  
+The ARN of the recipe used to create the solution\. This is required when `performAutoML` is false\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `256`  

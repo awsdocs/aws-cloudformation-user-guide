@@ -221,6 +221,10 @@ If you specify `HTTPS` for the value of `Type`, the endpoint must support TLS v1
 +  **HTTPS\_STR\_MATCH**: Route 53 tries to establish a TCP connection\. If successful, Route 53 submits an `HTTPS` request and searches the first 5,120 bytes of the response body for the string that you specify in `SearchString`\.
 +  **TCP**: Route 53 tries to establish a TCP connection\.
 +  **CLOUDWATCH\_METRIC**: The health check is associated with a CloudWatch alarm\. If the state of the alarm is `OK`, the health check is considered healthy\. If the state is `ALARM`, the health check is considered unhealthy\. If CloudWatch doesn't have sufficient data to determine whether the state is `OK` or `ALARM`, the health check status depends on the setting for `InsufficientDataHealthStatus`: `Healthy`, `Unhealthy`, or `LastKnownStatus`\. 
+**Note**  
+Route 53 supports CloudWatch alarms with the following features:  
+Standard\-resolution metrics\. High\-resolution metrics aren't supported\. For more information, see [High\-Resolution Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/publishingMetrics.html#high-resolution-metrics) in the *Amazon CloudWatch User Guide*\.
+Statistics: Average, Minimum, Maximum, Sum, and SampleCount\. Extended statistics aren't supported\.
 +  **CALCULATED**: For health checks that monitor the status of other health checks, Route 53 adds up the number of health checks that Route 53 health checkers consider to be healthy and compares that number with the value of `HealthThreshold`\. 
 +  **RECOVERY\_CONTROL**: The health check is assocated with a Route53 Application Recovery Controller routing control\. If the routing control state is `ON`, the health check is considered healthy\. If the state is `OFF`, the health check is considered unhealthy\. 
 For more information, see [How Route 53 Determines Whether an Endpoint Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) in the *Amazon Route 53 Developer Guide*\.  

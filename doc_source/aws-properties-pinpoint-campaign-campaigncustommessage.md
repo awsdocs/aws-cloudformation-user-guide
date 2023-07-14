@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign CampaignCustomMessage<a name="aws-properties-pinpoint-campaign-campaigncustommessage"></a>
 
-<a name="aws-properties-pinpoint-campaign-campaigncustommessage-description"></a>The `CampaignCustomMessage` property type specifies Property description not available\. for an [AWS::Pinpoint::Campaign](aws-resource-pinpoint-campaign.md)\.
+Specifies the contents of a message that's sent through a custom channel to recipients of a campaign\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-campaigncustommessage-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-campaigncustommessage-properties"></a>
 
 `Data`  <a name="cfn-pinpoint-campaign-campaigncustommessage-data"></a>
-Property description not available\.  
+The raw, JSON\-formatted string to use as the payload for the message\. The maximum size is 5 KB\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

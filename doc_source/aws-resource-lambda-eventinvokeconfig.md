@@ -120,7 +120,7 @@ Resources:
               };
               return response;
           };
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       TracingConfig:
         Mode: Active
   version:

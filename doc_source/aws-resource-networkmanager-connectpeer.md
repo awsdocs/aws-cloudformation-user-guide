@@ -66,7 +66,7 @@ The IP address of a core network\.
 
 `InsideCidrBlocks`  <a name="cfn-networkmanager-connectpeer-insidecidrblocks"></a>
 The inside IP addresses used for a Connect peer configuration\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

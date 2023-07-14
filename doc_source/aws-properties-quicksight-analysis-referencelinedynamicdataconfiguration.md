@@ -43,6 +43,6 @@ The column that the dynamic data targets\.
 
 `MeasureAggregationFunction`  <a name="cfn-quicksight-analysis-referencelinedynamicdataconfiguration-measureaggregationfunction"></a>
 The aggregation function that is used in the dynamic data\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [AggregationFunction](aws-properties-quicksight-analysis-aggregationfunction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

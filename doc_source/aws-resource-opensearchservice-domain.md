@@ -674,3 +674,86 @@ Outputs:
     Value:
       Ref: subnet
 ```
+
+### Create a domain with fine\-grained access control<a name="aws-resource-opensearchservice-domain--examples--Create_a_domain_with_fine-grained_access_control"></a>
+
+The following example creates a domain with fine\-grained access control\.
+
+#### JSON<a name="aws-resource-opensearchservice-domain--examples--Create_a_domain_with_fine-grained_access_control--json"></a>
+
+```
+{
+  "OpenSearchServiceDomain": {
+    "Type": "AWS::OpenSearchService::Domain",
+    "Properties": {
+      "DomainName": "my-domain-logs",
+      "EngineVersion": "OpenSearch_1.0",
+      "ClusterConfig": {
+        "InstanceCount": 2,
+        "InstanceType": "r6g.xlarge.search",
+        "DedicatedMasterEnabled": true,
+        "DedicatedMasterCount": 3,
+        "DedicatedMasterType": "r6g.xlarge.search"
+      },
+      "EBSOptions": {
+        "EBSEnabled": true,
+        "VolumeSize": 10,
+        "VolumeType": "gp2"
+      },
+      "AccessPolicies": {
+        "Version": "2012-10-17",
+        "Statement": {
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::478253424788:role/Admin"
+          },
+          "Action": "es:*",
+          "Resource": "arn:aws:es:us-east-1:478253424788:domain/my-domain-logs/*"
+        }
+      }
+    },
+    "AdvancedSecurityOptions": {
+      "Enabled": true,
+      "InternalUserDatabaseEnabled": true,
+      "MasterUserOptions": {
+        "MasterUserName": "<username>",
+        "MasterUserPassword": "<password>"
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-opensearchservice-domain--examples--Create_a_domain_with_fine-grained_access_control--yaml"></a>
+
+```
+OpenSearchServiceDomain:
+  Type: 'AWS::OpenSearchService::Domain'
+  Properties:
+    DomainName: my-domain-logs
+    EngineVersion: OpenSearch_1.0
+    ClusterConfig:
+      InstanceCount: 2
+      InstanceType: r6g.xlarge.search
+      DedicatedMasterEnabled: true
+      DedicatedMasterCount: 3
+      DedicatedMasterType: r6g.xlarge.search
+    EBSOptions:
+      EBSEnabled: true
+      VolumeSize: 10
+      VolumeType: gp2
+    AccessPolicies:
+      Version: '2012-10-17'
+      Statement:
+        Effect: Allow
+        Principal:
+          AWS: 'arn:aws:iam::478253424788:role/Admin'
+        Action: 'es:*'
+        Resource: 'arn:aws:es:us-east-1:478253424788:domain/my-domain-logs/*'
+  AdvancedSecurityOptions:
+    Enabled: true
+    InternalUserDatabaseEnabled: true
+    MasterUserOptions:
+      MasterUserName: <username>
+      MasterUserPassword: <password>
+```

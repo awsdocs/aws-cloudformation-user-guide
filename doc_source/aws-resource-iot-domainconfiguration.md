@@ -95,7 +95,7 @@ For the cli\-input\-json file use format: "tags": "key1=value1&key2=value2\.\.\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TlsConfig`  <a name="cfn-iot-domainconfiguration-tlsconfig"></a>
-Property description not available\.  
+An object that specifies the TLS configuration for a domain\.  
 *Required*: No  
 *Type*: [TlsConfig](aws-properties-iot-domainconfiguration-tlsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

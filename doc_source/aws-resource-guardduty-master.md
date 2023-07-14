@@ -1,6 +1,6 @@
 # AWS::GuardDuty::Master<a name="aws-resource-guardduty-master"></a>
 
-You can use the `AWS::GuardDuty::Master` resource in a member account to accept an invitation from a administrator account\. The invitation to the member account must be sent prior to using the `AWS::GuardDuty::Master` resource to accept the administrator account's invitation\. You can invite a member account by using the `InviteMembers` operation of the API, or by creating an `AWS::GuardDuty::Member` resource\.
+You can use the `AWS::GuardDuty::Master` resource in a GuardDuty member account to accept an invitation from a GuardDuty administrator account\. The invitation to the member account must be sent prior to using the `AWS::GuardDuty::Master` resource to accept the administrator account's invitation\. You can invite a member account by using the `InviteMembers` operation of the GuardDuty API, or by creating an `AWS::GuardDuty::Member` resource\.
 
 ## Syntax<a name="aws-resource-guardduty-master-syntax"></a>
 
@@ -40,13 +40,13 @@ The unique ID of the detector of the GuardDuty member account\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InvitationId`  <a name="cfn-guardduty-master-invitationid"></a>
-The ID of the invitation that is sent to the account designated as a member account\. You can find the invitation ID by using the ListInvitation action of the API\.  
+The ID of the invitation that is sent to the account designated as a member account\. You can find the invitation ID by using the ListInvitation action of the GuardDuty API\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterId`  <a name="cfn-guardduty-master-masterid"></a>
-The AWS account ID of the account designated as the administrator account\.  
+The AWS account ID of the account designated as the GuardDuty administrator account\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -55,7 +55,7 @@ The AWS account ID of the account designated as the administrator account\.
 
 ### Ref<a name="aws-resource-guardduty-master-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique ID of the administrator account, such as 012345678901\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique ID of the GuardDuty administrator account, such as 012345678901\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -65,7 +65,7 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 
 ### Declare a Master Resource<a name="aws-resource-guardduty-master--examples--Declare_a_Master_Resource"></a>
 
-To declare a `Master` resource:
+To declare a GuardDuty `Master` resource:
 
 #### JSON<a name="aws-resource-guardduty-master--examples--Declare_a_Master_Resource--json"></a>
 

@@ -169,7 +169,7 @@ The following snippet creates an option group that specifies two option settings
         "Type": "AWS::RDS::OptionGroup",
         "Properties": {
             "EngineName": "mysql",
-            "MajorEngineVersion": "5.6",
+            "MajorEngineVersion": "8.0",
             "OptionGroupDescription": "A test option group",
             "OptionConfigurations": [
                 {
@@ -202,7 +202,7 @@ The following snippet creates an option group that specifies two option settings
 SQLOptionGroup: 
   Properties: 
     EngineName: mysql
-    MajorEngineVersion: "5.6"
+    MajorEngineVersion: "8.0"
     OptionConfigurations: 
       - 
         OptionName: MEMCACHED

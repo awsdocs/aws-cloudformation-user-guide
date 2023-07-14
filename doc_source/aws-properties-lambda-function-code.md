@@ -75,33 +75,19 @@ If you specify a function that interacts with an AWS CloudFormation custom resou
 
 ### Inline Function<a name="aws-properties-lambda-function-code--examples--Inline_Function"></a>
 
-Inline Node\.js function that uses the cfn\-response library\.
+Inline Node\.js function that lists Amazon S3 buckets in `us-east-1`\. This example uses the [AWS SDK for JavaScript v3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html), which is available in the `nodejs18.x` runtime\. Before using this example, make sure that your function's execution role has Amazon S3 read permissions\.
 
 #### YAML<a name="aws-properties-lambda-function-code--examples--Inline_Function--yaml"></a>
 
 ```
       Code:
         ZipFile: |
-          var aws = require('aws-sdk')
-          var response = require('cfn-response')
-          exports.handler = function(event, context) {
-              console.log("REQUEST RECEIVED:\n" + JSON.stringify(event))
-              // For Delete requests, immediately send a SUCCESS response.
-              if (event.RequestType == "Delete") {
-                  response.send(event, context, "SUCCESS")
-                  return
-              }
-              var responseStatus = "FAILED"
-              var responseData = {}
-              var functionName = event.ResourceProperties.FunctionName
-              var lambda = new aws.Lambda()
-              lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {
-                  if (err) {
-                      responseData = {Error: "Invoke call failed"}
-                      console.log(responseData.Error + ":\n", err)
-                  }
-                  else responseStatus = "SUCCESS"
-                  response.send(event, context, responseStatus, responseData)
-              })
-          }
+          const { S3Client, ListBucketsCommand } = require("@aws-sdk/client-s3");
+          const s3 = new S3Client({ region: "us-east-1" }); // replace "us-east-1" with your AWS region
+
+          exports.handler = async function(event) {
+            const command = new ListBucketsCommand({});
+            const response = await s3.send(command);
+            return response.Buckets;
+          };
 ```

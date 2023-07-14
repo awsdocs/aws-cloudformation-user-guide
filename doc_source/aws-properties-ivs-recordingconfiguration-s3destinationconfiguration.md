@@ -28,5 +28,5 @@ Location \(S3 bucket name\) where recorded videos will be stored\.
 *Type*: String  
 *Minimum*: `3`  
 *Maximum*: `63`  
-*Pattern*: `^[a-z0-9-.]+$`  
+*Pattern*: `[a-z0-9-.]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

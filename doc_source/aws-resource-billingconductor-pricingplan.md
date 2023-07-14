@@ -1,6 +1,6 @@
 # AWS::BillingConductor::PricingPlan<a name="aws-resource-billingconductor-pricingplan"></a>
 
-Creates a pricing plan that is used for computing AWS charges for billing groups\. 
+Creates a pricing plan that is used for computing AWS charges for billing groups\.
 
 ## Syntax<a name="aws-resource-billingconductor-pricingplan-syntax"></a>
 
@@ -36,19 +36,24 @@ Properties:
 ## Properties<a name="aws-resource-billingconductor-pricingplan-properties"></a>
 
 `Description`  <a name="cfn-billingconductor-pricingplan-description"></a>
-The pricing plan description\.   
+The pricing plan description\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-billingconductor-pricingplan-name"></a>
-The name of a pricing plan\.   
+The name of a pricing plan\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `[a-zA-Z0-9_\+=\.\-@]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PricingRuleArns`  <a name="cfn-billingconductor-pricingplan-pricingrulearns"></a>
- The `PricingRuleArns` that are associated with the Pricing Plan\.   
+The `PricingRuleArns` that are associated with the Pricing Plan\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -73,13 +78,13 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 The Amazon Resource Name \(ARN\) of the created pricing plan\.
 
 `CreationTime`  <a name="CreationTime-fn::getatt"></a>
- The time the pricing plan was created\. 
+The time the pricing plan was created\.
 
 `LastModifiedTime`  <a name="LastModifiedTime-fn::getatt"></a>
- The most recent time the pricing plan was modified\. 
+The most recent time the pricing plan was modified\.
 
 `Size`  <a name="Size-fn::getatt"></a>
- The pricing rules count currently associated with this pricing plan list element\. 
+The pricing rules count currently associated with this pricing plan list element\.
 
 ## Examples<a name="aws-resource-billingconductor-pricingplan--examples"></a>
 

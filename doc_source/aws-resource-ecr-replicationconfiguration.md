@@ -89,12 +89,9 @@ Resources:
     Properties:
       ReplicationConfiguration: 
           Rules:
-            - 
-              Destinations:
-                - 
-                  Region: "us-east-2"
+            - Destinations:
+                - Region: "us-east-2"
                   RegistryId: "123456789012"
-                -
-                  Region: "us-west-1"
+                - Region: "us-west-1"
                   RegistryId: "123456789012"
 ```

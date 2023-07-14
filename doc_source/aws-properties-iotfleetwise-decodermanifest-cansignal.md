@@ -1,6 +1,6 @@
 # AWS::IoTFleetWise::DecoderManifest CanSignal<a name="aws-properties-iotfleetwise-decodermanifest-cansignal"></a>
 
-Information about a single controller area network \(CAN\) signal and the messages it receives and transmits\.
+\(Optional\) Information about a single controller area network \(CAN\) signal and the messages it receives and transmits\.
 
 ## Syntax<a name="aws-properties-iotfleetwise-decodermanifest-cansignal-syntax"></a>
 
@@ -69,7 +69,7 @@ The ID of the message\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotfleetwise-decodermanifest-cansignal-name"></a>
-The name of the signal\.  
+\(Optional\) The name of the signal\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -77,7 +77,7 @@ The name of the signal\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Offset`  <a name="cfn-iotfleetwise-decodermanifest-cansignal-offset"></a>
-Indicates where data appears in the CAN message\.  
+The offset used to calculate the signal value\. Combined with factor, the calculation is `value = raw_value * factor + offset`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

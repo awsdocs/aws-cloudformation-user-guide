@@ -16,7 +16,7 @@ We strongly recommend that you never put confidential or sensitive information, 
 
 Following the AWS shared responsibility model, AWS CloudFormation stores your data encrypted at rest\. Customers are responsible for setting encryption and storage policies for data stored in their accounts\. For example, we recommend enabling at\-rest encryption for templates and other data stored in S3 buckets or SNS topics\. Customers similarly define encryption settings for any data storage systems provisioned by CloudFormation\.
 
-## Encryption in transit<a name="security-data-protection-encryption-in-trainsit"></a>
+## Encryption in transit<a name="security-data-protection-encryption-in-transit"></a>
 
 AWS CloudFormation uses encrypted channels for service communications under the shared responsibility model\.
 

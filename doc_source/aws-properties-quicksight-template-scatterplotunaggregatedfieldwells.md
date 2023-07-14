@@ -10,6 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Category](#cfn-quicksight-template-scatterplotunaggregatedfieldwells-category)" : [ DimensionField, ... ],
+  "[Label](#cfn-quicksight-template-scatterplotunaggregatedfieldwells-label)" : [ DimensionField, ... ],
   "[Size](#cfn-quicksight-template-scatterplotunaggregatedfieldwells-size)" : [ MeasureField, ... ],
   "[XAxis](#cfn-quicksight-template-scatterplotunaggregatedfieldwells-xaxis)" : [ DimensionField, ... ],
   "[YAxis](#cfn-quicksight-template-scatterplotunaggregatedfieldwells-yaxis)" : [ DimensionField, ... ]
@@ -19,6 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-quicksight-template-scatterplotunaggregatedfieldwells-syntax.yaml"></a>
 
 ```
+  [Category](#cfn-quicksight-template-scatterplotunaggregatedfieldwells-category): 
+    - DimensionField
+  [Label](#cfn-quicksight-template-scatterplotunaggregatedfieldwells-label): 
+    - DimensionField
   [Size](#cfn-quicksight-template-scatterplotunaggregatedfieldwells-size): 
     - MeasureField
   [XAxis](#cfn-quicksight-template-scatterplotunaggregatedfieldwells-xaxis): 
@@ -28,6 +34,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-quicksight-template-scatterplotunaggregatedfieldwells-properties"></a>
+
+`Category`  <a name="cfn-quicksight-template-scatterplotunaggregatedfieldwells-category"></a>
+The category field well of a scatter plot\.  
+*Required*: No  
+*Type*: List of [DimensionField](aws-properties-quicksight-template-dimensionfield.md)  
+*Maximum*: `200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Label`  <a name="cfn-quicksight-template-scatterplotunaggregatedfieldwells-label"></a>
+The label field well of a scatter plot\.  
+*Required*: No  
+*Type*: List of [DimensionField](aws-properties-quicksight-template-dimensionfield.md)  
+*Maximum*: `200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Size`  <a name="cfn-quicksight-template-scatterplotunaggregatedfieldwells-size"></a>
 The size field well of a scatter plot\.  

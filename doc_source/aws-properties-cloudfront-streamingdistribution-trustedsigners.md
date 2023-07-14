@@ -32,7 +32,7 @@ An AWS account number that contains active CloudFront key pairs that CloudFront 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-cloudfront-streamingdistribution-trustedsigners-enabled"></a>
-This field is `true` if any of the AWS accounts have public keys that CloudFront can use to verify the signatures of signed URLs and signed cookies\. If not, this field is `false`\.  
+This field is `true` if any of the AWS accounts in the list are configured as trusted signers\. If not, this field is `false`\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

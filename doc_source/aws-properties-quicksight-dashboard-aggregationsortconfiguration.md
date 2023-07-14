@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AggregationFunction`  <a name="cfn-quicksight-dashboard-aggregationsortconfiguration-aggregationfunction"></a>
 The function that aggregates the values in `Column`\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [AggregationFunction](aws-properties-quicksight-dashboard-aggregationfunction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

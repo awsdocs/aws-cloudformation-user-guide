@@ -87,44 +87,20 @@ The Amazon Resource Name \(ARN\) of the dimension\.
 #### JSON<a name="aws-resource-iot-dimension--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon Web Services IoT Dimension Sample Template",
-  "Resources": {
-    "TopicFilterForAuthMessagesDimension": {
-      "Type": "AWS::IoT::Dimension",
-      "Properties": {
-        "Name": "TopicFilterForAuthMessages",
-        "Type": "TOPIC_FILTER",
-        "StringValues": [
-          "device/+/auth"
-        ],
-        "Tags": [
-          {
-            "Key": "Application",
-            "Value": "SmartHome"
-          }
-        ]
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "Amazon
+            Web Services IoT Dimension Sample Template", "Resources": {
+            "TopicFilterForAuthMessagesDimension": { "Type": "AWS::IoT::Dimension", "Properties": {
+            "Name": "TopicFilterForAuthMessages", "Type": "TOPIC_FILTER", "StringValues": [
+            "device/+/auth" ], "Tags": [ { "Key": "Application", "Value": "SmartHome" } ] } } }
+            }
 ```
 
 #### YAML<a name="aws-resource-iot-dimension--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: Amazon Web Services IoT Dimension Sample Template
-Resources:
-  TopicFilterForAuthMessagesDimension:
-    Type: 'AWS::IoT::Dimension'
-    Properties:
-      Name: TopicFilterForAuthMessages
-      Type: TOPIC_FILTER
-      StringValues:
-        - device/+/auth
-      Tags:
-        - Key: Application
-          Value: SmartHome
+AWSTemplateFormatVersion: 2010-09-09 Description: Amazon Web
+            Services IoT Dimension Sample Template Resources: TopicFilterForAuthMessagesDimension:
+            Type: 'AWS::IoT::Dimension' Properties: Name: TopicFilterForAuthMessages Type:
+            TOPIC_FILTER StringValues: - device/+/auth Tags: - Key: Application Value:
+            SmartHome
 ```

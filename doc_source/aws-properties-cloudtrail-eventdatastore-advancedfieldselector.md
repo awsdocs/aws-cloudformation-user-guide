@@ -69,19 +69,24 @@ An operator that includes events that match the last few characters of the event
   +  `AWS::Lambda::Function` 
   +  `AWS::S3::Object` 
   +  `AWS::CloudTrail::Channel` 
+  +  `AWS::CodeWhisperer::Profile` 
   +  `AWS::Cognito::IdentityPool` 
   +  `AWS::DynamoDB::Stream` 
   +  `AWS::EC2::Snapshot` 
+  +  `AWS::EMRWAL::Workspace` 
   +  `AWS::FinSpace::Environment` 
   +  `AWS::Glue::Table` 
   +  `AWS::GuardDuty::Detector` 
   +  `AWS::KendraRanking::ExecutionPlan` 
+  +  `AWS::ManagedBlockchain::Network` 
   +  `AWS::ManagedBlockchain::Node` 
   +  `AWS::SageMaker::ExperimentTrialComponent` 
   +  `AWS::SageMaker::FeatureGroup` 
   +  `AWS::S3::AccessPoint` 
   +  `AWS::S3ObjectLambda::AccessPoint` 
   +  `AWS::S3Outposts::Object` 
+  +  `AWS::SSMMessages::ControlChannel` 
+  +  `AWS::VerifiedPermissions::PolicyStore` 
 
    You can have only one `resources.type` ﬁeld per selector\. To log data events on more than one resource type, add another selector\.
 +  ** `resources.ARN` ** \- You can use any operator with `resources.ARN`, but if you use `Equals` or `NotEquals`, the value must exactly match the ARN of a valid resource of the type you've speciﬁed in the template as the value of resources\.type\. For example, if resources\.type equals `AWS::S3::Object`, the ARN must be in one of the following formats\. To log all data events for all objects in a specific S3 bucket, use the `StartsWith` operator, and include only the bucket ARN as the matching value\.
@@ -99,6 +104,9 @@ An operator that includes events that match the last few characters of the event
   When resources\.type equals `AWS::CloudTrail::Channel`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:cloudtrail:<region>:<account_ID>:channel/<channel_UUID>` 
 
+  When resources\.type equals `AWS::CodeWhisperer::Profile`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:codewhisperer:<region>:<account_ID>:profile/<profile_ID>` 
+
   When resources\.type equals `AWS::Cognito::IdentityPool`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:cognito-identity:<region>:<account_ID>:identitypool/<identity_pool_ID>` 
 
@@ -107,6 +115,9 @@ An operator that includes events that match the last few characters of the event
 
   When `resources.type` equals `AWS::EC2::Snapshot`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:ec2:<region>::snapshot/<snapshot_ID>` 
+
+  When `resources.type` equals `AWS::EMRWAL::Workspace`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:emrwal:<region>::workspace/<workspace_name>` 
 
   When `resources.type` equals `AWS::FinSpace::Environment`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:finspace:<region>:<account_ID>:environment/<environment_ID>` 
@@ -119,6 +130,9 @@ An operator that includes events that match the last few characters of the event
 
   When `resources.type` equals `AWS::KendraRanking::ExecutionPlan`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:kendra-ranking:<region>:<account_ID>:rescore-execution-plan/<rescore_execution_plan_ID>` 
+
+  When `resources.type` equals `AWS::ManagedBlockchain::Network`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:managedblockchain:<region>::networks/<network_ID>` 
 
   When `resources.type` equals `AWS::ManagedBlockchain::Node`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:managedblockchain:<region>:<account_ID>:nodes/<node_ID>` 
@@ -138,6 +152,12 @@ An operator that includes events that match the last few characters of the event
 
   When `resources.type` equals `AWS::S3Outposts::Object`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:s3-outposts:<region>:<account_ID>:<object_path>` 
+
+  When `resources.type` equals `AWS::SSMMessages::ControlChannel`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:ssmmessages:<region>:<account_ID>:control-channel/<channel_ID>` 
+
+  When resources\.type equals `AWS::VerifiedPermissions::PolicyStore`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:verifiedpermissions:<region>:<account_ID>:policy-store/<policy_store_UUID>` 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

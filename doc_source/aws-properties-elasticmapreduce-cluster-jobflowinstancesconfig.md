@@ -93,7 +93,7 @@ Describes the EC2 instances and instance configurations for core instance groups
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ec2KeyName`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname"></a>
-The name of the EC2 key pair that can be used to connect to the master node using SSH as the user called "hadoop\."  
+The name of the Amazon EC2 key pair that can be used to connect to the master node using SSH as the user called "hadoop\."  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -111,8 +111,8 @@ Applies to clusters that use the uniform instance group configuration\. To launc
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ec2SubnetIds`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids"></a>
-Applies to clusters that use the instance fleet configuration\. When multiple EC2 subnet IDs are specified, Amazon EMR evaluates them and launches instances in the optimal subnet\.  
-The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
+Applies to clusters that use the instance fleet configuration\. When multiple Amazon EC2 subnet IDs are specified, Amazon EMR evaluates them and launches instances in the optimal subnet\.  
+The instance fleet configuration is available only in Amazon EMR releases 4\.8\.0 and later, excluding 5\.0\.x versions\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

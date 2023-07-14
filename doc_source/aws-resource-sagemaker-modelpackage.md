@@ -12,19 +12,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::ModelPackage",
   "Properties" : {
-      "[AdditionalInferenceSpecificationDefinition](#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition)" : AdditionalInferenceSpecificationDefinition,
       "[AdditionalInferenceSpecifications](#cfn-sagemaker-modelpackage-additionalinferencespecifications)" : [ AdditionalInferenceSpecificationDefinition, ... ],
       "[AdditionalInferenceSpecificationsToAdd](#cfn-sagemaker-modelpackage-additionalinferencespecificationstoadd)" : [ AdditionalInferenceSpecificationDefinition, ... ],
       "[ApprovalDescription](#cfn-sagemaker-modelpackage-approvaldescription)" : String,
       "[CertifyForMarketplace](#cfn-sagemaker-modelpackage-certifyformarketplace)" : Boolean,
       "[ClientToken](#cfn-sagemaker-modelpackage-clienttoken)" : String,
-      "[CreatedBy](#cfn-sagemaker-modelpackage-createdby)" : UserContext,
       "[CustomerMetadataProperties](#cfn-sagemaker-modelpackage-customermetadataproperties)" : {Key: Value, ...},
       "[Domain](#cfn-sagemaker-modelpackage-domain)" : String,
       "[DriftCheckBaselines](#cfn-sagemaker-modelpackage-driftcheckbaselines)" : DriftCheckBaselines,
-      "[Environment](#cfn-sagemaker-modelpackage-environment)" : {Key: Value, ...},
       "[InferenceSpecification](#cfn-sagemaker-modelpackage-inferencespecification)" : InferenceSpecification,
-      "[LastModifiedBy](#cfn-sagemaker-modelpackage-lastmodifiedby)" : UserContext,
       "[LastModifiedTime](#cfn-sagemaker-modelpackage-lastmodifiedtime)" : String,
       "[MetadataProperties](#cfn-sagemaker-modelpackage-metadataproperties)" : MetadataProperties,
       "[ModelApprovalStatus](#cfn-sagemaker-modelpackage-modelapprovalstatus)" : String,
@@ -33,7 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ModelPackageGroupName](#cfn-sagemaker-modelpackage-modelpackagegroupname)" : String,
       "[ModelPackageName](#cfn-sagemaker-modelpackage-modelpackagename)" : String,
       "[ModelPackageStatusDetails](#cfn-sagemaker-modelpackage-modelpackagestatusdetails)" : ModelPackageStatusDetails,
-      "[ModelPackageStatusItem](#cfn-sagemaker-modelpackage-modelpackagestatusitem)" : ModelPackageStatusItem,
       "[ModelPackageVersion](#cfn-sagemaker-modelpackage-modelpackageversion)" : Integer,
       "[SamplePayloadUrl](#cfn-sagemaker-modelpackage-samplepayloadurl)" : String,
       "[SourceAlgorithmSpecification](#cfn-sagemaker-modelpackage-sourcealgorithmspecification)" : SourceAlgorithmSpecification,
@@ -49,8 +44,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::ModelPackage
 Properties: 
-  [AdditionalInferenceSpecificationDefinition](#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition): 
-    AdditionalInferenceSpecificationDefinition
   [AdditionalInferenceSpecifications](#cfn-sagemaker-modelpackage-additionalinferencespecifications): 
     - AdditionalInferenceSpecificationDefinition
   [AdditionalInferenceSpecificationsToAdd](#cfn-sagemaker-modelpackage-additionalinferencespecificationstoadd): 
@@ -58,19 +51,13 @@ Properties:
   [ApprovalDescription](#cfn-sagemaker-modelpackage-approvaldescription): String
   [CertifyForMarketplace](#cfn-sagemaker-modelpackage-certifyformarketplace): Boolean
   [ClientToken](#cfn-sagemaker-modelpackage-clienttoken): String
-  [CreatedBy](#cfn-sagemaker-modelpackage-createdby): 
-    UserContext
   [CustomerMetadataProperties](#cfn-sagemaker-modelpackage-customermetadataproperties): 
     Key: Value
   [Domain](#cfn-sagemaker-modelpackage-domain): String
   [DriftCheckBaselines](#cfn-sagemaker-modelpackage-driftcheckbaselines): 
     DriftCheckBaselines
-  [Environment](#cfn-sagemaker-modelpackage-environment): 
-    Key: Value
   [InferenceSpecification](#cfn-sagemaker-modelpackage-inferencespecification): 
     InferenceSpecification
-  [LastModifiedBy](#cfn-sagemaker-modelpackage-lastmodifiedby): 
-    UserContext
   [LastModifiedTime](#cfn-sagemaker-modelpackage-lastmodifiedtime): String
   [MetadataProperties](#cfn-sagemaker-modelpackage-metadataproperties): 
     MetadataProperties
@@ -82,8 +69,6 @@ Properties:
   [ModelPackageName](#cfn-sagemaker-modelpackage-modelpackagename): String
   [ModelPackageStatusDetails](#cfn-sagemaker-modelpackage-modelpackagestatusdetails): 
     ModelPackageStatusDetails
-  [ModelPackageStatusItem](#cfn-sagemaker-modelpackage-modelpackagestatusitem): 
-    ModelPackageStatusItem
   [ModelPackageVersion](#cfn-sagemaker-modelpackage-modelpackageversion): Integer
   [SamplePayloadUrl](#cfn-sagemaker-modelpackage-samplepayloadurl): String
   [SourceAlgorithmSpecification](#cfn-sagemaker-modelpackage-sourcealgorithmspecification): 
@@ -96,12 +81,6 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-sagemaker-modelpackage-properties"></a>
-
-`AdditionalInferenceSpecificationDefinition`  <a name="cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition"></a>
-A structure of additional Inference Specification\. Additional Inference Specification specifies details about inference jobs that can be run with models based on this model package  
-*Required*: No  
-*Type*: [AdditionalInferenceSpecificationDefinition](aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdditionalInferenceSpecifications`  <a name="cfn-sagemaker-modelpackage-additionalinferencespecifications"></a>
 An array of additional Inference Specification objects\.  
@@ -136,12 +115,6 @@ A unique token that guarantees that the call to this API is idempotent\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`CreatedBy`  <a name="cfn-sagemaker-modelpackage-createdby"></a>
-Information about the user who created or modified an experiment, trial, trial component, lineage group, or project\.  
-*Required*: No  
-*Type*: [UserContext](aws-properties-sagemaker-modelpackage-usercontext.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `CustomerMetadataProperties`  <a name="cfn-sagemaker-modelpackage-customermetadataproperties"></a>
 The metadata properties for the model package\.   
 *Required*: No  
@@ -160,23 +133,11 @@ Represents the drift check baselines that can be used when the model monitor is 
 *Type*: [DriftCheckBaselines](aws-properties-sagemaker-modelpackage-driftcheckbaselines.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`Environment`  <a name="cfn-sagemaker-modelpackage-environment"></a>
-The environment variables to set in the Docker container\. Each key and value in the `Environment` string to string map can have length of up to 1024\. We support up to 16 entries in the map\.  
-*Required*: No  
-*Type*: Map of String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `InferenceSpecification`  <a name="cfn-sagemaker-modelpackage-inferencespecification"></a>
 Defines how to perform inference generation after a training job is run\.  
 *Required*: No  
 *Type*: [InferenceSpecification](aws-properties-sagemaker-modelpackage-inferencespecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`LastModifiedBy`  <a name="cfn-sagemaker-modelpackage-lastmodifiedby"></a>
-Information about the user who created or modified an experiment, trial, trial component, lineage group, or project\.  
-*Required*: No  
-*Type*: [UserContext](aws-properties-sagemaker-modelpackage-usercontext.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LastModifiedTime`  <a name="cfn-sagemaker-modelpackage-lastmodifiedtime"></a>
 The last time the model package was modified\.  
@@ -236,12 +197,6 @@ The name of the model\.
 Specifies the validation and image scan statuses of the model package\.  
 *Required*: No  
 *Type*: [ModelPackageStatusDetails](aws-properties-sagemaker-modelpackage-modelpackagestatusdetails.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`ModelPackageStatusItem`  <a name="cfn-sagemaker-modelpackage-modelpackagestatusitem"></a>
-Represents the overall status of a model package\.  
-*Required*: No  
-*Type*: [ModelPackageStatusItem](aws-properties-sagemaker-modelpackage-modelpackagestatusitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ModelPackageVersion`  <a name="cfn-sagemaker-modelpackage-modelpackageversion"></a>

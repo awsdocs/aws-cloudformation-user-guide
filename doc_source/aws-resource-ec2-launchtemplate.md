@@ -96,6 +96,9 @@ The default version of a launch template cannot be specified in AWS CloudFormati
 `LatestVersionNumber`  <a name="LatestVersionNumber-fn::getatt"></a>
 The latest version of the launch template, such as `5`\.
 
+`LaunchTemplateId`  <a name="LaunchTemplateId-fn::getatt"></a>
+The ID of the launch template\.
+
 ## Examples<a name="aws-resource-ec2-launchtemplate--examples"></a>
 
 ### Launch template with an IAM instance profile<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_an_IAM_instance_profile"></a>

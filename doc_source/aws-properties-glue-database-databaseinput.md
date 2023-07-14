@@ -53,7 +53,7 @@ A description of the database\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FederatedDatabase`  <a name="cfn-glue-database-databaseinput-federateddatabase"></a>
-Property description not available\.  
+A `FederatedDatabase` structure that references an entity outside the AWS Glue Data Catalog\.  
 *Required*: No  
 *Type*: [FederatedDatabase](aws-properties-glue-database-databaseinput-federateddatabase.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

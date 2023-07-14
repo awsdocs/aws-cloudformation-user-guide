@@ -65,6 +65,17 @@ When you pass the logical ID of this resource to the intrinsic `Ref`function, `R
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigatewayv2-apimapping-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigatewayv2-apimapping-return-values-fn--getatt-fn--getatt"></a>
+
+`ApiMappingId`  <a name="ApiMappingId-fn::getatt"></a>
+The API mapping resource ID\.
+
 ## Examples<a name="aws-resource-apigatewayv2-apimapping--examples"></a>
 
 

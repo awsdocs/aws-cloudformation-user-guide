@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-instancefleetconfig-properties"></a>
 
 `InstanceTypeConfigs`  <a name="cfn-elasticmapreduce-cluster-instancefleetconfig-instancetypeconfigs"></a>
-The instance type configurations that define the EC2 instances in the instance fleet\.  
+The instance type configurations that define the Amazon EC2 instances in the instance fleet\.  
 *Required*: No  
 *Type*: List of [InstanceTypeConfig](aws-properties-elasticmapreduce-cluster-instancetypeconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

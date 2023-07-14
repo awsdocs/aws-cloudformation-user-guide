@@ -40,13 +40,13 @@ Properties:
 ## Properties<a name="aws-resource-groundstation-dataflowendpointgroup-properties"></a>
 
 `ContactPostPassDurationSeconds`  <a name="cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds"></a>
-Property description not available\.  
+ Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be in a `POSTPASS` state\. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the Dataflow Endpoint Group enters and exits the `POSTPASS` state\.   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContactPrePassDurationSeconds`  <a name="cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds"></a>
-Property description not available\.  
+ Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will be in a `PREPASS` state\. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the Dataflow Endpoint Group enters and exits the `PREPASS` state\.   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

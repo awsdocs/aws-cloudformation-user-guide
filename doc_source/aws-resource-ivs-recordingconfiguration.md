@@ -50,7 +50,7 @@ Recording\-configuration name\. The value does not need to be unique\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9-_]*$`  
+*Pattern*: `[a-zA-Z0-9-_]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RecordingReconnectWindowSeconds`  <a name="cfn-ivs-recordingconfiguration-recordingreconnectwindowseconds"></a>

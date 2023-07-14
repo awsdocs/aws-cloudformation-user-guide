@@ -152,7 +152,7 @@ The ARN of the public, private, or shared image to use\.
 The name of the image used to create the fleet\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
+*Pattern*: `^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,100}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-appstream-fleet-instancetype"></a>

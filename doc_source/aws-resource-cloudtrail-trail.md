@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudTrail::Trail",
   "Properties" : {
+      "[AdvancedEventSelectors](#cfn-cloudtrail-trail-advancedeventselectors)" : [ AdvancedEventSelector, ... ],
       "[CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn)" : String,
       "[CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn)" : String,
       "[EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation)" : Boolean,
@@ -36,6 +37,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CloudTrail::Trail
 Properties: 
+  [AdvancedEventSelectors](#cfn-cloudtrail-trail-advancedeventselectors): 
+    - AdvancedEventSelector
   [CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn): String
   [CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn): String
   [EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation): Boolean
@@ -57,6 +60,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-cloudtrail-trail-properties"></a>
+
+`AdvancedEventSelectors`  <a name="cfn-cloudtrail-trail-advancedeventselectors"></a>
+ Specifies the settings for advanced event selectors\. You can add advanced event selectors, and conditions for your advanced event selectors, up to a maximum of 500 values for all conditions and selectors on a trail\. You can use either `AdvancedEventSelectors` or `EventSelectors`, but not both\. If you apply `AdvancedEventSelectors` to a trail, any existing `EventSelectors` are overwritten\. For more information about advanced event selectors, see [Logging data events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html) in the * AWS CloudTrail User Guide*\.   
+*Required*: No  
+*Type*: List of [AdvancedEventSelector](aws-properties-cloudtrail-trail-advancedeventselector.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloudWatchLogsLogGroupArn`  <a name="cfn-cloudtrail-trail-cloudwatchlogsloggrouparn"></a>
 Specifies a log group name using an Amazon Resource Name \(ARN\), a unique identifier that represents the log group to which CloudTrail logs are delivered\. You must use a log group that exists in your account\.  
@@ -107,7 +116,7 @@ Whether the CloudTrail trail is currently logging AWS API calls\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsMultiRegionTrail`  <a name="cfn-cloudtrail-trail-ismultiregiontrail"></a>
-Specifies whether the trail applies only to the current region or to all regions\. The default is false\. If the trail exists only in the current region and this value is set to true, shadow trails \(replications of the trail\) will be created in the other regions\. If the trail exists in all regions and this value is set to false, the trail will remain in the region where it was created, and its shadow trails in other regions will be deleted\. As a best practice, consider using trails that log events in all regions\.  
+Specifies whether the trail applies only to the current Region or to all Regions\. The default is false\. If the trail exists only in the current Region and this value is set to true, shadow trails \(replications of the trail\) will be created in the other Regions\. If the trail exists in all Regions and this value is set to false, the trail will remain in the Region where it was created, and its shadow trails in other Regions will be deleted\. As a best practice, consider using trails that log events in all Regions\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

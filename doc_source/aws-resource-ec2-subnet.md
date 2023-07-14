@@ -153,11 +153,16 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 #### <a name="aws-resource-ec2-subnet-return-values-fn--getatt-fn--getatt"></a>
 
 `AvailabilityZone`  <a name="AvailabilityZone-fn::getatt"></a>
-The Availability Zone of this subnet\. For example:  
- `{ "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] } ` 
+The Availability Zone of this subnet\. For example, `us-east-1a`\.
+
+`AvailabilityZoneId`  <a name="AvailabilityZoneId-fn::getatt"></a>
+The Availability Zone ID of this subnet\. For example, `use1-az1`\.
+
+`CidrBlock`  <a name="CidrBlock-fn::getatt"></a>
+The IPv4 CIDR blocks that are associated with the subnet\.
 
 `Ipv6CidrBlocks`  <a name="Ipv6CidrBlocks-fn::getatt"></a>
-The IPv6 CIDR blocks that are associated with the subnet, such as `[ 2001:db8:1234:1a00::/64 ]`\.
+The IPv6 CIDR blocks that are associated with the subnet\.
 
 `NetworkAclAssociationId`  <a name="NetworkAclAssociationId-fn::getatt"></a>
 The ID of the network ACL that is associated with the subnet's VPC, such as `acl-5fb85d36`\.

@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign TemplateConfiguration<a name="aws-properties-pinpoint-campaign-templateconfiguration"></a>
 
-<a name="aws-properties-pinpoint-campaign-templateconfiguration-description"></a>The `TemplateConfiguration` property type specifies Property description not available\. for an [AWS::Pinpoint::Campaign](aws-resource-pinpoint-campaign.md)\.
+Specifies the message template to use for the message, for each type of channel\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-templateconfiguration-syntax"></a>
 
@@ -33,25 +33,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-templateconfiguration-properties"></a>
 
 `EmailTemplate`  <a name="cfn-pinpoint-campaign-templateconfiguration-emailtemplate"></a>
-Property description not available\.  
+The email template to use for the message\.  
 *Required*: No  
 *Type*: [Template](aws-properties-pinpoint-campaign-template.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PushTemplate`  <a name="cfn-pinpoint-campaign-templateconfiguration-pushtemplate"></a>
-Property description not available\.  
+The push notification template to use for the message\.  
 *Required*: No  
 *Type*: [Template](aws-properties-pinpoint-campaign-template.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SMSTemplate`  <a name="cfn-pinpoint-campaign-templateconfiguration-smstemplate"></a>
-Property description not available\.  
+The SMS template to use for the message\.  
 *Required*: No  
 *Type*: [Template](aws-properties-pinpoint-campaign-template.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VoiceTemplate`  <a name="cfn-pinpoint-campaign-templateconfiguration-voicetemplate"></a>
-Property description not available\.  
+The voice template to use for the message\. This object isn't supported for campaigns\.  
 *Required*: No  
 *Type*: [Template](aws-properties-pinpoint-campaign-template.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

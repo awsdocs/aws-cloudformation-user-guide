@@ -96,7 +96,7 @@ A common usage pattern is to use cfn\-init and cfn\-signal together\. The cfn\-s
                 }
             },
             "Properties": {
-                "ImageId": "ami-a4c7edb2",
+                "ImageId": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2}}",
                 "InstanceType": "t2.micro",
                 "UserData": {
                     "Fn::Base64": {
@@ -106,6 +106,7 @@ A common usage pattern is to use cfn\-init and cfn\-signal together\. The cfn\-s
                                 "#!/bin/bash -x\n",
                                 "# Install the files and packages from the metadata\n",
                                 "yum install -y aws-cfn-bootstrap",
+                                "\n",
                                 "/opt/aws/bin/cfn-init -v ",
                                 "         --stack ",
                                 {
@@ -162,7 +163,7 @@ Resources:
               owner: root
               group: root
     Properties:
-      ImageId: ami-a4c7edb2
+      ImageId: {{resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2}}
       InstanceType: t2.micro
       UserData: !Base64 
         'Fn::Join':
@@ -172,6 +173,9 @@ Resources:
             - |
               # Install the files and packages from the metadata
             - yum install -y aws-cfn-bootstrap
+            - |+
+            
+            - |
             - '/opt/aws/bin/cfn-init -v '
             - '         --stack '
             - !Ref 'AWS::StackName'

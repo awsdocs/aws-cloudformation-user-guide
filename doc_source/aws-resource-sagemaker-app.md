@@ -65,7 +65,7 @@ The domain ID\.
 Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type that the version runs on\.  
 *Required*: No  
 *Type*: [ResourceSpec](aws-properties-sagemaker-app-resourcespec.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-app-tags"></a>
 An array of key\-value pairs to apply to this resource\.  

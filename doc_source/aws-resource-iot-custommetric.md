@@ -87,32 +87,18 @@ The Amazon Resource Number \(ARN\) of the custom metric; for example, `arn:aws-p
 #### JSON<a name="aws-resource-iot-custommetric--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon Web Services IoT CustomMetric Sample Template",
-  "Resources": {
-    "BatteryPercentageMetric": {
-      "Type": "AWS::IoT::CustomMetric",
-      "Properties": {
-        "MetricName": "batteryPercentage",
-        "DisplayName": "Remaining battery percentage",
-        "MetricType": "number"
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "Amazon
+            Web Services IoT CustomMetric Sample Template", "Resources": {
+            "BatteryPercentageMetric": { "Type": "AWS::IoT::CustomMetric", "Properties": {
+            "MetricName": "batteryPercentage", "DisplayName": "Remaining battery percentage",
+            "MetricType": "number" } } } }
 ```
 
 #### YAML<a name="aws-resource-iot-custommetric--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Description: Amazon Web Services IoT CustomMetric Sample Template
-Resources:
-  BatteryPercentageMetric:
-    Type: AWS::IoT::CustomMetric
-    Properties:
-      MetricName: batteryPercentage
-      DisplayName: Remaining battery percentage
-      MetricType: number
+AWSTemplateFormatVersion: '2010-09-09' Description: Amazon Web
+            Services IoT CustomMetric Sample Template Resources: BatteryPercentageMetric: Type:
+            AWS::IoT::CustomMetric Properties: MetricName: batteryPercentage DisplayName: Remaining
+            battery percentage MetricType: number
 ```

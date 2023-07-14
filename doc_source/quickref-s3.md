@@ -2,7 +2,7 @@
 
 **Topics**
 + [Creating an Amazon S3 bucket with defaults](#scenario-s3-bucket)
-+ [Creating an Amazon S3 bucket for website hosting and with a DeletionPolicy](#scenario-s3-bucket-website)
++ [Creating an Amazon S3 bucket for website hosting and with a `DeletionPolicy`](#scenario-s3-bucket-website)
 + [Creating a static website using a custom domain](#scenario-s3-bucket-website-customdomain)
 
 ## Creating an Amazon S3 bucket with defaults<a name="scenario-s3-bucket"></a>
@@ -24,9 +24,9 @@ This example uses a [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormat
 2.     Type: AWS::S3::Bucket
 ```
 
-## Creating an Amazon S3 bucket for website hosting and with a DeletionPolicy<a name="scenario-s3-bucket-website"></a>
+## Creating an Amazon S3 bucket for website hosting and with a `DeletionPolicy`<a name="scenario-s3-bucket-website"></a>
 
-This example creates a bucket as a website\. The AccessControl property is set to Private, otherwise the BucketPolicy will fail to be created\. Because this bucket resource has a [DeletionPolicy attribute](aws-attribute-deletionpolicy.md) set to `Retain`, AWS CloudFormation will not delete this bucket when it deletes the stack\. The Output section uses `Fn::GetAtt` to retrieve the WebsiteURL attribute and DomainName attribute of the S3Bucket resource\.
+This example creates a bucket as a website\. The `AccessControl` property is set to the canned ACL Private, otherwise the `BucketPolicy` will fail to be created\. Because this bucket resource has a [DeletionPolicy attribute](aws-attribute-deletionpolicy.md) set to `Retain`, AWS CloudFormation will not delete this bucket when it deletes the stack\. The Output section uses `Fn::GetAtt` to retrieve the `WebsiteURL` attribute and `DomainName` attribute of the `S3Bucket` resource\.
 
 ### JSON<a name="quickref-s3-example-2.json"></a>
 
@@ -46,70 +46,71 @@ This example creates a bucket as a website\. The AccessControl property is set t
 13.                     "ErrorDocument": "error.html"
 14.                 }
 15.             },
-16.             "DeletionPolicy": "Retain"
-17.         },
-18.         "BucketPolicy": {
-19.             "Type": "AWS::S3::BucketPolicy",
-20.             "Properties": {
-21.                 "PolicyDocument": {
-22.                     "Id": "MyPolicy",
-23.                     "Version": "2012-10-17",
-24.                     "Statement": [
-25.                         {
-26.                             "Sid": "PublicReadForGetBucketObjects",
-27.                             "Effect": "Allow",
-28.                             "Principal": "*",
-29.                             "Action": "s3:GetObject",
-30.                             "Resource": {
-31.                                 "Fn::Join": [
-32.                                     "",
-33.                                     [
-34.                                         "arn:aws:s3:::",
-35.                                         {
-36.                                             "Ref": "S3Bucket"
-37.                                         },
-38.                                         "/*"
-39.                                     ]
-40.                                 ]
-41.                             }
-42.                         }
-43.                     ]
-44.                 },
-45.                 "Bucket": {
-46.                     "Ref": "S3Bucket"
-47.                 }
-48.             }
-49.         }
-50.     },
-51.     "Outputs": {
-52.         "WebsiteURL": {
-53.             "Value": {
-54.                 "Fn::GetAtt": [
-55.                     "S3Bucket",
-56.                     "WebsiteURL"
-57.                 ]
-58.             },
-59.             "Description": "URL for website hosted on S3"
-60.         },
-61.         "S3BucketSecureURL": {
-62.             "Value": {
-63.                 "Fn::Join": [
-64.                     "",
-65.                     [
-66.                         "https://",
-67.                         {
-68.                             "Fn::GetAtt": [
-69.                                 "S3Bucket",
-70.                                 "DomainName"
-71.                             ]
-72.                         }
-73.                     ]
-74.                 ]
-75.             },
-76.             "Description": "Name of S3 bucket to hold website content"
-77.         }
-78.     }
-79. }
+16.             "DeletionPolicy": "Retain",
+17.             "UpdateReplacePolicy": "Retain"
+18.         },
+19.         "BucketPolicy": {
+20.             "Type": "AWS::S3::BucketPolicy",
+21.             "Properties": {
+22.                 "PolicyDocument": {
+23.                     "Id": "MyPolicy",
+24.                     "Version": "2012-10-17",
+25.                     "Statement": [
+26.                         {
+27.                             "Sid": "PublicReadForGetBucketObjects",
+28.                             "Effect": "Allow",
+29.                             "Principal": "*",
+30.                             "Action": "s3:GetObject",
+31.                             "Resource": {
+32.                                 "Fn::Join": [
+33.                                     "",
+34.                                     [
+35.                                         "arn:aws:s3:::",
+36.                                         {
+37.                                             "Ref": "S3Bucket"
+38.                                         },
+39.                                         "/*"
+40.                                     ]
+41.                                 ]
+42.                             }
+43.                         }
+44.                     ]
+45.                 },
+46.                 "Bucket": {
+47.                     "Ref": "S3Bucket"
+48.                 }
+49.             }
+50.         }
+51.     },
+52.     "Outputs": {
+53.         "WebsiteURL": {
+54.             "Value": {
+55.                 "Fn::GetAtt": [
+56.                     "S3Bucket",
+57.                     "WebsiteURL"
+58.                 ]
+59.             },
+60.             "Description": "URL for website hosted on S3"
+61.         },
+62.         "S3BucketSecureURL": {
+63.             "Value": {
+64.                 "Fn::Join": [
+65.                     "",
+66.                     [
+67.                         "https://",
+68.                         {
+69.                             "Fn::GetAtt": [
+70.                                 "S3Bucket",
+71.                                 "DomainName"
+72.                             ]
+73.                         }
+74.                     ]
+75.                 ]
+76.             },
+77.             "Description": "Name of S3 bucket to hold website content"
+78.         }
+79.     }
+80. }
 ```
 
 ### YAML<a name="quickref-s3-example-2.yaml"></a>
@@ -127,42 +128,43 @@ This example creates a bucket as a website\. The AccessControl property is set t
 10.         IndexDocument: index.html
 11.         ErrorDocument: error.html
 12.     DeletionPolicy: Retain
-13.   BucketPolicy:
-14.     Type: 'AWS::S3::BucketPolicy'
-15.     Properties:
-16.       PolicyDocument:
-17.         Id: MyPolicy
-18.         Version: 2012-10-17
-19.         Statement:
-20.           - Sid: PublicReadForGetBucketObjects
-21.             Effect: Allow
-22.             Principal: '*'
-23.             Action: 's3:GetObject'
-24.             Resource: !Join 
-25.               - ''
-26.               - - 'arn:aws:s3:::'
-27.                 - !Ref S3Bucket
-28.                 - /*
-29.       Bucket: !Ref S3Bucket
-30. Outputs:
-31.   WebsiteURL:
-32.     Value: !GetAtt 
-33.       - S3Bucket
-34.       - WebsiteURL
-35.     Description: URL for website hosted on S3
-36.   S3BucketSecureURL:
-37.     Value: !Join 
-38.       - ''
-39.       - - 'https://'
-40.         - !GetAtt 
-41.           - S3Bucket
-42.           - DomainName
-43.     Description: Name of S3 bucket to hold website content
+13.     UpdateReplacePolicy: Retain
+14.   BucketPolicy:
+15.     Type: 'AWS::S3::BucketPolicy'
+16.     Properties:
+17.       PolicyDocument:
+18.         Id: MyPolicy
+19.         Version: 2012-10-17
+20.         Statement:
+21.           - Sid: PublicReadForGetBucketObjects
+22.             Effect: Allow
+23.             Principal: '*'
+24.             Action: 's3:GetObject'
+25.             Resource: !Join 
+26.               - ''
+27.               - - 'arn:aws:s3:::'
+28.                 - !Ref S3Bucket
+29.                 - /*
+30.       Bucket: !Ref S3Bucket
+31. Outputs:
+32.   WebsiteURL:
+33.     Value: !GetAtt 
+34.       - S3Bucket
+35.       - WebsiteURL
+36.     Description: URL for website hosted on S3
+37.   S3BucketSecureURL:
+38.     Value: !Join 
+39.       - ''
+40.       - - 'https://'
+41.         - !GetAtt 
+42.           - S3Bucket
+43.           - DomainName
+44.     Description: Name of S3 bucket to hold website content
 ```
 
 ## Creating a static website using a custom domain<a name="scenario-s3-bucket-website-customdomain"></a>
 
-You can use Route 53 with a registered domain\. The following sample assumes that you have already created a hosted zone in Route 53 for your domain\. The example creates two buckets for website hosting\. The root bucket hosts the content, and the other bucket redirects `www.domainname.com` requests to the root bucket\. The record sets map your domain name to Amazon S3 endpoints\. You will also need to add a bucket policy, as shown in the examples above\.
+You can use Route 53 with a registered domain\. The following sample assumes that you have already created a hosted zone in Route 53 for your domain\. The example creates two buckets for website hosting\. The root bucket hosts the content, and the other bucket redirects `www.domainname.com` requests to the root bucket\. The record sets map your domain name to Amazon S3 endpoints\. You will also need to add a bucket policy, as shown in the examples above\.
 
 For more information about using a custom domain, see [Setting up a static website using a custom domain](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html) in the *Amazon Simple Storage Service User Guide*\.
 
@@ -193,7 +195,7 @@ For more information about using a custom domain, see [Setting up a static websi
         "RootBucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-                "BucketName" : {"Ref":"RootDomainName"},                
+                "BucketName" : {"Ref":"RootDomainName"},
                 "AccessControl": "Private",
                 "PublicAccessBlockConfiguration": {
                      "BlockPublicPolicy": false

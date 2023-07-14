@@ -51,10 +51,7 @@ The IDs of one or more subnets to add\. You can specify at most one subnet per A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Options`  <a name="cfn-ec2-transitgatewayvpcattachment-options"></a>
-The VPC attachment options, in JSON or YAML\.  
-+ `ApplianceModeSupport` \- Set to `enable` or `disable`\. The default is `disable`\.
-+ `DnsSupport` \- Set to `enable` or `disable`\. The default is `enable`\.
-+ `Ipv6Support` \- Set to `enable` or `disable`\. The default is `disable`\.
+The VPC attachment options\.  
 *Required*: No  
 *Type*: [Options](aws-properties-ec2-transitgatewayvpcattachment-options.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

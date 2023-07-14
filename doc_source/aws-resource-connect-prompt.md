@@ -55,8 +55,8 @@ The name of the prompt\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Uri`  <a name="cfn-connect-prompt-s3uri"></a>
-The URI for the S3 bucket where the prompt is stored\.  
-*Required*: No  
+The URI for the S3 bucket where the prompt is stored\. This property is required when you create a prompt\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

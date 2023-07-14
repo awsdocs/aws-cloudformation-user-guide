@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AlternateBandColorsVisibility](#cfn-quicksight-dashboard-radarchartconfiguration-alternatebandcolorsvisibility)" : String,
   "[AlternateBandEvenColor](#cfn-quicksight-dashboard-radarchartconfiguration-alternatebandevencolor)" : String,
   "[AlternateBandOddColor](#cfn-quicksight-dashboard-radarchartconfiguration-alternatebandoddcolor)" : String,
+  "[AxesRangeScale](#cfn-quicksight-dashboard-radarchartconfiguration-axesrangescale)" : String,
   "[BaseSeriesSettings](#cfn-quicksight-dashboard-radarchartconfiguration-baseseriessettings)" : RadarChartSeriesSettings,
   "[CategoryAxis](#cfn-quicksight-dashboard-radarchartconfiguration-categoryaxis)" : AxisDisplayOptions,
   "[CategoryLabelOptions](#cfn-quicksight-dashboard-radarchartconfiguration-categorylabeloptions)" : ChartAxisLabelOptions,
@@ -33,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AlternateBandColorsVisibility](#cfn-quicksight-dashboard-radarchartconfiguration-alternatebandcolorsvisibility): String
   [AlternateBandEvenColor](#cfn-quicksight-dashboard-radarchartconfiguration-alternatebandevencolor): String
   [AlternateBandOddColor](#cfn-quicksight-dashboard-radarchartconfiguration-alternatebandoddcolor): String
+  [AxesRangeScale](#cfn-quicksight-dashboard-radarchartconfiguration-axesrangescale): String
   [BaseSeriesSettings](#cfn-quicksight-dashboard-radarchartconfiguration-baseseriessettings): 
     RadarChartSeriesSettings
   [CategoryAxis](#cfn-quicksight-dashboard-radarchartconfiguration-categoryaxis): 
@@ -76,6 +78,13 @@ The color of the odd\-numbered alternate bands of a radar chart\.
 *Required*: No  
 *Type*: String  
 *Pattern*: `^#[A-F0-9]{6}$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AxesRangeScale`  <a name="cfn-quicksight-dashboard-radarchartconfiguration-axesrangescale"></a>
+The axis behavior options of a radar chart\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `AUTO | INDEPENDENT | SHARED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BaseSeriesSettings`  <a name="cfn-quicksight-dashboard-radarchartconfiguration-baseseriessettings"></a>

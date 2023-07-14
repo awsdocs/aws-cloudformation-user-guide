@@ -10,7 +10,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ColorsConfiguration](#cfn-quicksight-analysis-columnconfiguration-colorsconfiguration)" : ColorsConfiguration,
   "[Column](#cfn-quicksight-analysis-columnconfiguration-column)" : ColumnIdentifier,
   "[FormatConfiguration](#cfn-quicksight-analysis-columnconfiguration-formatconfiguration)" : FormatConfiguration,
   "[Role](#cfn-quicksight-analysis-columnconfiguration-role)" : String
@@ -20,8 +19,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-quicksight-analysis-columnconfiguration-syntax.yaml"></a>
 
 ```
-  [ColorsConfiguration](#cfn-quicksight-analysis-columnconfiguration-colorsconfiguration): 
-    ColorsConfiguration
   [Column](#cfn-quicksight-analysis-columnconfiguration-column): 
     ColumnIdentifier
   [FormatConfiguration](#cfn-quicksight-analysis-columnconfiguration-formatconfiguration): 
@@ -30,12 +27,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-quicksight-analysis-columnconfiguration-properties"></a>
-
-`ColorsConfiguration`  <a name="cfn-quicksight-analysis-columnconfiguration-colorsconfiguration"></a>
-Property description not available\.  
-*Required*: No  
-*Type*: [ColorsConfiguration](aws-properties-quicksight-analysis-colorsconfiguration.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Column`  <a name="cfn-quicksight-analysis-columnconfiguration-column"></a>
 The column\.  

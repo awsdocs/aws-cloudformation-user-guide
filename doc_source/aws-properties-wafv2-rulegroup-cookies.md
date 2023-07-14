@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `MatchPattern`  <a name="cfn-wafv2-rulegroup-cookies-matchpattern"></a>
 The filter to use to identify the subset of cookies to inspect in a web request\.   
 You must specify exactly one setting: either `All`, `IncludedCookies`, or `ExcludedCookies`\.  
-Example JSON: `"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }`   
+Example JSON: `"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }`   
 *Required*: Yes  
 *Type*: [CookieMatchPattern](aws-properties-wafv2-rulegroup-cookiematchpattern.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -47,9 +47,9 @@ The parts of the cookies to inspect with the rule inspection criteria\. If you s
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OversizeHandling`  <a name="cfn-wafv2-rulegroup-cookies-oversizehandling"></a>
-What AWS WAF should do if the cookies of the request are larger than AWS WAF can inspect\. AWS WAF does not support inspecting the entire contents of request cookies when they exceed 8 KB \(8192 bytes\) or 200 total cookies\. The underlying host service forwards a maximum of 200 cookies and at most 8 KB of cookie contents to AWS WAF\.   
+What AWS WAF should do if the cookies of the request are more numerous or larger than AWS WAF can inspect\. AWS WAF does not support inspecting the entire contents of request cookies when they exceed 8 KB \(8192 bytes\) or 200 total cookies\. The underlying host service forwards a maximum of 200 cookies and at most 8 KB of cookie contents to AWS WAF\.   
 The options for oversize handling are the following:  
-+  `CONTINUE` \- Inspect the cookies normally, according to the rule inspection criteria\. 
++  `CONTINUE` \- Inspect the available cookies normally, according to the rule inspection criteria\. 
 +  `MATCH` \- Treat the web request as matching the rule statement\. AWS WAF applies the rule action to the request\.
 +  `NO_MATCH` \- Treat the web request as not matching the rule statement\.
 *Required*: Yes  

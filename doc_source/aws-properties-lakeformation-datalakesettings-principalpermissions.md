@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Permissions](#cfn-lakeformation-datalakesettings-principalpermissions-permissions)" : Permissions,
+  "[Permissions](#cfn-lakeformation-datalakesettings-principalpermissions-permissions)" : [ String, ... ],
   "[Principal](#cfn-lakeformation-datalakesettings-principalpermissions-principal)" : DataLakePrincipal
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Permissions](#cfn-lakeformation-datalakesettings-principalpermissions-permissions): 
-    Permissions
+    - String
   [Principal](#cfn-lakeformation-datalakesettings-principalpermissions-principal): 
     DataLakePrincipal
 ```
@@ -28,12 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Permissions`  <a name="cfn-lakeformation-datalakesettings-principalpermissions-permissions"></a>
 The permissions that are granted to the principal\.  
-*Required*: No  
-*Type*: [Permissions](aws-properties-lakeformation-datalakesettings-permissions.md)  
+*Required*: Yes  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Principal`  <a name="cfn-lakeformation-datalakesettings-principalpermissions-principal"></a>
 The principal who is granted permissions\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [DataLakePrincipal](aws-properties-lakeformation-datalakesettings-datalakeprincipal.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

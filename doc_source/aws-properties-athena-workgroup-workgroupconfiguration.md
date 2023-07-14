@@ -42,9 +42,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-athena-workgroup-workgroupconfiguration-properties"></a>
 
 `AdditionalConfiguration`  <a name="cfn-athena-workgroup-workgroupconfiguration-additionalconfiguration"></a>
-Property description not available\.  
+Specifies a user defined JSON string that is passed to the session engine\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BytesScannedCutoffPerQuery`  <a name="cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery"></a>
@@ -55,7 +57,7 @@ This property currently supports integer types\. Support for long values is plan
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomerContentEncryptionConfiguration`  <a name="cfn-athena-workgroup-workgroupconfiguration-customercontentencryptionconfiguration"></a>
-Property description not available\.  
+Specifies the KMS key that is used to encrypt the user's data stores in Athena\. This setting does not apply to Athena SQL workgroups\.  
 *Required*: No  
 *Type*: [CustomerContentEncryptionConfiguration](aws-properties-athena-workgroup-customercontentencryptionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -67,15 +69,18 @@ If set to "true", the settings for the workgroup override client\-side settings\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-athena-workgroup-workgroupconfiguration-engineversion"></a>
-Property description not available\.  
+The engine version that all queries running on the workgroup use\.  
 *Required*: No  
 *Type*: [EngineVersion](aws-properties-athena-workgroup-engineversion.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRole`  <a name="cfn-athena-workgroup-workgroupconfiguration-executionrole"></a>
-Property description not available\.  
+Role used to access user resources in an Athena for Apache Spark session\. This property applies only to Spark\-enabled workgroups in Athena\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
+*Pattern*: `^arn:aws[a-z\-]*:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublishCloudWatchMetricsEnabled`  <a name="cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled"></a>

@@ -10,3 +10,4 @@
 + [AWS::AppSync::GraphQLApi](aws-resource-appsync-graphqlapi.md)
 + [AWS::AppSync::GraphQLSchema](aws-resource-appsync-graphqlschema.md)
 + [AWS::AppSync::Resolver](aws-resource-appsync-resolver.md)
++ [AWS::AppSync::SourceApiAssociation](aws-resource-appsync-sourceapiassociation.md)

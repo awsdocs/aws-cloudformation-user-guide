@@ -5,7 +5,7 @@
 + [Creating or adding stacks to the stack set](#w4ab1c27c28b8)
 + [Updating stacks in a stack set](#w4ab1c27c28c10)
 
-Review the [AWS CloudFormation best practices](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html)\.
+Review the [AWS CloudFormation best practices](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html)\.
 
 ## Defining the template<a name="w4ab1c27c28b6"></a>
 + Define the template that you want to standardize in multiple accounts, within multiple regions\.

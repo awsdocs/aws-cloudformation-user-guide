@@ -56,7 +56,7 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 #### <a name="aws-resource-ec2-subnet-network-acl-assoc-return-values-fn--getatt-fn--getatt"></a>
 
 `AssociationId`  <a name="AssociationId-fn::getatt"></a>
-Returns the value of this object's [SubnetId](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html) property\.
+Returns the value of this object's AssociationId property\.
 
 ## Examples<a name="aws-resource-ec2-subnet-network-acl-assoc--examples"></a>
 

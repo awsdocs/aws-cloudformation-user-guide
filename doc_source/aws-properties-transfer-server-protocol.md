@@ -12,3 +12,13 @@ If `Protocol` includes either `FTP` or `FTPS`, then the `EndpointType` must be `
 If `Protocol` includes `FTP`, then `AddressAllocationIds` cannot be associated\.
 If `Protocol` is set only to `SFTP`, the `EndpointType` can be set to `PUBLIC` and the `IdentityProviderType` can be set any of the supported identity types: `SERVICE_MANAGED`, `AWS_DIRECTORY_SERVICE`, `AWS_LAMBDA`, or `API_GATEWAY`\.
 If `Protocol` includes `AS2`, then the `EndpointType` must be `VPC`, and domain must be Amazon S3\.
+
+The `Protocols` parameter is an array of `Protocol` strings\.
+
+*Required*: No
+
+*Type*: String
+
+*Allowed values*: One or more of `SFTP`, `FTPS`, `FTP`, `AS2`
+
+Update requires: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

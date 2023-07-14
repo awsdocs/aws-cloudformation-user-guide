@@ -41,7 +41,8 @@ The Amazon Resource Name \(ARN\) of the instance\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Key`  <a name="cfn-connect-securitykey-key"></a>
-A valid security key in PEM format\.  
+A valid security key in PEM format\. For example:  
+`"-----BEGIN PUBLIC KEY-----\ [a lot of characters] ----END PUBLIC KEY-----"`  
 *Minimum*: `1`  
 *Maximum*: `1024`  
 *Required*: Yes  

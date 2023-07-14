@@ -90,7 +90,7 @@ To create the Lambda function, you declare the `AWS::Lambda::Function` resource,
       "S3Key": { "Ref": "S3Key" }
     },
     "Handler": { "Fn::Join" : [ "", [{ "Ref": "ModuleName" },".handler"] ] },
-    "Runtime": "nodejs8.10",
+    "Runtime": "nodejs18.x",
     "Timeout": "30",
     "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] }
   }
@@ -107,12 +107,12 @@ AMIInfoFunction:
       S3Bucket: !Ref S3Bucket
       S3Key: !Ref S3Key
     Handler: !Sub "${ModuleName}.handler"
-    Runtime: nodejs8.10
+    Runtime: nodejs18.x
     Timeout: 30
     Role: !GetAtt LambdaExecutionRole.Arn
 ```
 
-The `Code` property specifies the Amazon S3 location \(bucket name and file name\) where you uploaded the sample package\. The sample template uses input parameters \(`"Ref": "S3Bucket"` and `"Ref": "S3Key"`\) to set the bucket and file names so that you are able to specify the names when you create the stack\. Similarly, the handler name, which corresponds to the name of the source file \(the JavaScript file\) in the `.zip` package, also uses an input parameter \(`"Ref": "ModuleName"`\)\. Because the source file is JavaScript code, the runtime is specified as `nodejs8.10`\.
+The `Code` property specifies the Amazon S3 location \(bucket name and file name\) where you uploaded the sample package\. The sample template uses input parameters \(`"Ref": "S3Bucket"` and `"Ref": "S3Key"`\) to set the bucket and file names so that you are able to specify the names when you create the stack\. Similarly, the handler name, which corresponds to the name of the source file \(the JavaScript file\) in the `.zip` package, also uses an input parameter \(`"Ref": "ModuleName"`\)\. Because the source file is JavaScript code, the runtime is specified as `nodejs18.x`\.
 
 For this walkthrough, the execution time for the function exceeds the default value of `3` seconds, so the timeout is set to `30` seconds\. If you don't specify a sufficiently long timeout, Lambda might cause a timeout before the function can complete, causing stack creation to fail\.
 

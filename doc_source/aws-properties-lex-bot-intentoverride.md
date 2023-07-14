@@ -31,7 +31,7 @@ The name of the intent\. Only required when you're switching intents\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `100`  
-*Pattern*: `^([0-9a-zA-Z][_-]?)+$`  
+*Pattern*: `^([0-9a-zA-Z][_-]?){1,100}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Slots`  <a name="cfn-lex-bot-intentoverride-slots"></a>

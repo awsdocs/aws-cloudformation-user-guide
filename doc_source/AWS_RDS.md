@@ -1,6 +1,7 @@
 # Amazon Relational Database Service resource type reference<a name="AWS_RDS"></a>
 
 **Resource types**
++ [AWS::RDS::CustomDBEngineVersion](aws-resource-rds-customdbengineversion.md)
 + [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)
 + [AWS::RDS::DBClusterParameterGroup](aws-resource-rds-dbclusterparametergroup.md)
 + [AWS::RDS::DBInstance](aws-resource-rds-dbinstance.md)

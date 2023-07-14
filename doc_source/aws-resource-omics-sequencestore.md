@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Omics::SequenceStore",
   "Properties" : {
       "[Description](#cfn-omics-sequencestore-description)" : String,
+      "[FallbackLocation](#cfn-omics-sequencestore-fallbacklocation)" : String,
       "[Name](#cfn-omics-sequencestore-name)" : String,
       "[SseConfig](#cfn-omics-sequencestore-sseconfig)" : SseConfig,
       "[Tags](#cfn-omics-sequencestore-tags)" : {Key: Value, ...}
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Omics::SequenceStore
 Properties: 
   [Description](#cfn-omics-sequencestore-description): String
+  [FallbackLocation](#cfn-omics-sequencestore-fallbacklocation): String
   [Name](#cfn-omics-sequencestore-name): String
   [SseConfig](#cfn-omics-sequencestore-sseconfig): 
     SseConfig
@@ -37,6 +39,12 @@ Properties:
 
 `Description`  <a name="cfn-omics-sequencestore-description"></a>
 A description for the store\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FallbackLocation`  <a name="cfn-omics-sequencestore-fallbacklocation"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

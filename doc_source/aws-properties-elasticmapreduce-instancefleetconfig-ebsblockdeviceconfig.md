@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-properties"></a>
 
 `VolumeSpecification`  <a name="cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification"></a>
-EBS volume specifications such as volume type, IOPS, size \(GiB\) and throughput \(MiB/s\) that are requested for the EBS volume attached to an EC2 instance in the cluster\.  
+EBS volume specifications such as volume type, IOPS, size \(GiB\) and throughput \(MiB/s\) that are requested for the EBS volume attached to an Amazon EC2 instance in the cluster\.  
 *Required*: Yes  
 *Type*: [VolumeSpecification](aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

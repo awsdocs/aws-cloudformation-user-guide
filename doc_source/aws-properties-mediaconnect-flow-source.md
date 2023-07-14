@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Decryption](#cfn-mediaconnect-flow-source-decryption)" : Encryption,
   "[Description](#cfn-mediaconnect-flow-source-description)" : String,
   "[EntitlementArn](#cfn-mediaconnect-flow-source-entitlementarn)" : String,
+  "[GatewayBridgeSource](#cfn-mediaconnect-flow-source-gatewaybridgesource)" : GatewayBridgeSource,
   "[IngestIp](#cfn-mediaconnect-flow-source-ingestip)" : String,
   "[IngestPort](#cfn-mediaconnect-flow-source-ingestport)" : Integer,
   "[MaxBitrate](#cfn-mediaconnect-flow-source-maxbitrate)" : Integer,
@@ -47,6 +48,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     Encryption
   [Description](#cfn-mediaconnect-flow-source-description): String
   [EntitlementArn](#cfn-mediaconnect-flow-source-entitlementarn): String
+  [GatewayBridgeSource](#cfn-mediaconnect-flow-source-gatewaybridgesource): 
+    GatewayBridgeSource
   [IngestIp](#cfn-mediaconnect-flow-source-ingestip): String
   [IngestPort](#cfn-mediaconnect-flow-source-ingestport): Integer
   [MaxBitrate](#cfn-mediaconnect-flow-source-maxbitrate): Integer
@@ -83,6 +86,12 @@ A description of the source\. This description is not visible outside of the cur
 The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account\. The entitlement is set by the content originator and the ARN is generated as part of the originator’s flow\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`GatewayBridgeSource`  <a name="cfn-mediaconnect-flow-source-gatewaybridgesource"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [GatewayBridgeSource](aws-properties-mediaconnect-flow-gatewaybridgesource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IngestIp`  <a name="cfn-mediaconnect-flow-source-ingestip"></a>
@@ -146,7 +155,7 @@ The ARN of the source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceIngestPort`  <a name="cfn-mediaconnect-flow-source-sourceingestport"></a>
-The port that the flow will be listening on for incoming content\.  
+The port that the flow listens on for incoming content\. If the protocol of the source is Zixi, the port must be set to 2088\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

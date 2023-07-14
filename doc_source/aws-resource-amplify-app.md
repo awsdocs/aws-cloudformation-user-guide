@@ -77,7 +77,7 @@ Existing Amplify apps deployed from a GitHub repository using OAuth continue to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BasicAuthConfig`  <a name="cfn-amplify-app-basicauthconfig"></a>
- The credentials for basic authorization for an Amplify app\. You must base64\-encode the authorization credentials and provide them in the format `user:password`\.  
+The credentials for basic authorization for an Amplify app\. You must base64\-encode the authorization credentials and provide them in the format `user:password`\.  
 *Required*: No  
 *Type*: [BasicAuthConfig](aws-properties-amplify-app-basicauthconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -99,7 +99,7 @@ The custom HTTP headers for an Amplify app\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomRules`  <a name="cfn-amplify-app-customrules"></a>
- The custom rewrite and redirect rules for an Amplify app\.   
+The custom rewrite and redirect rules for an Amplify app\.   
 *Required*: No  
 *Type*: List of [CustomRule](aws-properties-amplify-app-customrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -119,7 +119,8 @@ Automatically disconnect a branch in Amplify Hosting when you delete a branch fr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnvironmentVariables`  <a name="cfn-amplify-app-environmentvariables"></a>
- The environment variables map for an Amplify app\.   
+The environment variables map for an Amplify app\.   
+For a list of the environment variables that are accessible to Amplify by default, see [Amplify Environment variables](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-console-environment-variables.html) in the *Amplify Hosting User Guide*\.  
 *Required*: No  
 *Type*: List of [EnvironmentVariable](aws-properties-amplify-app-environmentvariable.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -152,7 +153,7 @@ Existing Amplify apps deployed from a GitHub repository using OAuth continue to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Platform`  <a name="cfn-amplify-app-platform"></a>
- The platform for the Amplify app\. For a static app, set the platform type to `WEB`\. For a dynamic server\-side rendered \(SSR\) app, set the platform type to `WEB_COMPUTE`\. For an app requiring Amplify Hosting's original SSR support only, set the platform type to `WEB_DYNAMIC`\.  
+The platform for the Amplify app\. For a static app, set the platform type to `WEB`\. For a dynamic server\-side rendered \(SSR\) app, set the platform type to `WEB_COMPUTE`\. For an app requiring Amplify Hosting's original SSR support only, set the platform type to `WEB_DYNAMIC`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -165,7 +166,7 @@ Existing Amplify apps deployed from a GitHub repository using OAuth continue to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-amplify-app-tags"></a>
- The tag for an Amplify app\.   
+The tag for an Amplify app\.   
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

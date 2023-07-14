@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CloudTrail::EventDataStore",
   "Properties" : {
       "[AdvancedEventSelectors](#cfn-cloudtrail-eventdatastore-advancedeventselectors)" : [ AdvancedEventSelector, ... ],
+      "[IngestionEnabled](#cfn-cloudtrail-eventdatastore-ingestionenabled)" : Boolean,
       "[KmsKeyId](#cfn-cloudtrail-eventdatastore-kmskeyid)" : String,
       "[MultiRegionEnabled](#cfn-cloudtrail-eventdatastore-multiregionenabled)" : Boolean,
       "[Name](#cfn-cloudtrail-eventdatastore-name)" : String,
@@ -31,6 +32,7 @@ Type: AWS::CloudTrail::EventDataStore
 Properties: 
   [AdvancedEventSelectors](#cfn-cloudtrail-eventdatastore-advancedeventselectors): 
     - AdvancedEventSelector
+  [IngestionEnabled](#cfn-cloudtrail-eventdatastore-ingestionenabled): Boolean
   [KmsKeyId](#cfn-cloudtrail-eventdatastore-kmskeyid): String
   [MultiRegionEnabled](#cfn-cloudtrail-eventdatastore-multiregionenabled): Boolean
   [Name](#cfn-cloudtrail-eventdatastore-name): String
@@ -52,6 +54,12 @@ For more information about how to use advanced event selectors to include non\-A
 *Type*: List of [AdvancedEventSelector](aws-properties-cloudtrail-eventdatastore-advancedeventselector.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IngestionEnabled`  <a name="cfn-cloudtrail-eventdatastore-ingestionenabled"></a>
+Specifies whether the event data store should start ingesting live events\. The default is true\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `KmsKeyId`  <a name="cfn-cloudtrail-eventdatastore-kmskeyid"></a>
 Specifies the AWS KMS key ID to use to encrypt the events delivered by CloudTrail\. The value can be an alias name prefixed by `alias/`, a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier\.  
 Disabling or deleting the KMS key, or removing CloudTrail permissions on the key, prevents CloudTrail from logging events to the event data store, and prevents users from querying the data in the event data store that was encrypted with the key\. After you associate an event data store with a KMS key, the KMS key cannot be removed or changed\. Before you disable or delete a KMS key that you are using with an event data store, delete or back up your event data store\.
@@ -69,7 +77,7 @@ Examples:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MultiRegionEnabled`  <a name="cfn-cloudtrail-eventdatastore-multiregionenabled"></a>
-Specifies whether the event data store includes events from all regions, or only from the region in which the event data store is created\.  
+Specifies whether the event data store includes events from all Regions, or only from the Region in which the event data store is created\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -173,6 +181,7 @@ The following example creates an event data store that logs events in all region
                     "Ref": "Name"
                 },
                 "MultiRegionEnabled": true,
+                "IngestionEnabled": true,
                 "RetentionPeriod": 30,
                 "OrganizationEnabled": {
                     "Fn::If": [
@@ -243,6 +252,7 @@ Resources:
       Name: !Ref Name
       
       MultiRegionEnabled: true
+      IngestionEnabled: true
       RetentionPeriod: 30
       OrganizationEnabled:
         Fn::If:

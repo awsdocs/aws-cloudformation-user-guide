@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CoreNetworkId](#cfn-networkmanager-vpcattachment-corenetworkid)" : String,
       "[Options](#cfn-networkmanager-vpcattachment-options)" : VpcOptions,
+      "[ProposedSegmentChange](#cfn-networkmanager-vpcattachment-proposedsegmentchange)" : ProposedSegmentChange,
       "[SubnetArns](#cfn-networkmanager-vpcattachment-subnetarns)" : [ String, ... ],
       "[Tags](#cfn-networkmanager-vpcattachment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcArn](#cfn-networkmanager-vpcattachment-vpcarn)" : String
@@ -29,6 +30,8 @@ Properties:
   [CoreNetworkId](#cfn-networkmanager-vpcattachment-corenetworkid): String
   [Options](#cfn-networkmanager-vpcattachment-options): 
     VpcOptions
+  [ProposedSegmentChange](#cfn-networkmanager-vpcattachment-proposedsegmentchange): 
+    ProposedSegmentChange
   [SubnetArns](#cfn-networkmanager-vpcattachment-subnetarns): 
     - String
   [Tags](#cfn-networkmanager-vpcattachment-tags): 
@@ -48,6 +51,12 @@ The core network ID\.
 Options for creating the VPC attachment\.  
 *Required*: No  
 *Type*: [VpcOptions](aws-properties-networkmanager-vpcattachment-vpcoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ProposedSegmentChange`  <a name="cfn-networkmanager-vpcattachment-proposedsegmentchange"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ProposedSegmentChange](aws-properties-networkmanager-vpcattachment-proposedsegmentchange.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetArns`  <a name="cfn-networkmanager-vpcattachment-subnetarns"></a>
@@ -104,18 +113,6 @@ The Region where the core network edge is located\.
 
 `OwnerAccountId`  <a name="OwnerAccountId-fn::getatt"></a>
 The ID of the VPC attachment owner\.
-
-`ProposedSegmentChange`  <a name="ProposedSegmentChange-fn::getatt"></a>
-Property description not available\.
-
-`ProposedSegmentChange.AttachmentPolicyRuleNumber`  <a name="ProposedSegmentChange.AttachmentPolicyRuleNumber-fn::getatt"></a>
-Property description not available\.
-
-`ProposedSegmentChange.SegmentName`  <a name="ProposedSegmentChange.SegmentName-fn::getatt"></a>
-Property description not available\.
-
-`ProposedSegmentChange.Tags`  <a name="ProposedSegmentChange.Tags-fn::getatt"></a>
-Property description not available\.
 
 `ResourceArn`  <a name="ResourceArn-fn::getatt"></a>
 The resource ARN for the VPC attachment\.

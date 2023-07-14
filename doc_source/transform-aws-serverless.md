@@ -11,7 +11,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs18.x
       CodeUri: 's3://testBucket/mySourceCode.zip'
 ```
 
@@ -31,7 +31,7 @@ When creating a change set from the template, CloudFormation expands the AWS SAM
         "Role": {
           "Fn::GetAtt": ["FunctionNameRole", "Arn"]
         },
-        "Runtime": "nodejs8.10"
+        "Runtime": "nodejs18.x"
       }
     },
     "FunctionNameRole": {

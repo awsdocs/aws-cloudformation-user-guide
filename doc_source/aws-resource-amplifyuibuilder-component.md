@@ -61,7 +61,7 @@ Properties:
 ## Properties<a name="aws-resource-amplifyuibuilder-component-properties"></a>
 
 `AppId`  <a name="cfn-amplifyuibuilder-component-appid"></a>
-Property description not available\.  
+The unique ID of the Amplify app associated with the component\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,7 +92,7 @@ The type of the component\. This can be an Amplify custom UI component or anothe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnvironmentName`  <a name="cfn-amplifyuibuilder-component-environmentname"></a>
-Property description not available\.  
+The name of the backend environment that is a part of the Amplify app\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -147,13 +147,7 @@ A list of the component's variants\. A variant is a unique style configuration o
 
 ## Return values<a name="aws-resource-amplifyuibuilder-component-return-values"></a>
 
-### Ref<a name="aws-resource-amplifyuibuilder-component-return-values-ref"></a>
-
 ### Fn::GetAtt<a name="aws-resource-amplifyuibuilder-component-return-values-fn--getatt"></a>
-
-The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-amplifyuibuilder-component-return-values-fn--getatt-fn--getatt"></a>
 

@@ -40,7 +40,7 @@ AWS Organizations integrates with CloudFormation and helps you centrally manage 
 + Delegated administrator – a compatible AWS service can register an AWS member account in the organization as an administrator for the organization's accounts in that service\. For more information, see [AWS services that you can use with AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html)\.
 
 For more information about creating and managing stack sets with service\-managed permissions, see the following topics:
-+ [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)
++ [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)
 + [Register a delegated administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin)
 + [Create a stack set with service\-managed permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started-create.html#stacksets-orgs-associate-stackset-with-org)
 
@@ -131,9 +131,10 @@ The following table describes status codes for stack instances within StackSets\
 | --- | --- | 
 |  `CURRENT`  |  The stack is up to date with the stack set\.  | 
 |  `OUTDATED`  |  The stack isn't up to date with the stack set for one of the following reasons\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html)  | 
-|  `INOPERABLE`  |  A `DeleteStackInstances` operation has failed and left the stack in an unstable state\. Stacks in this state are excluded from further `UpdateStackSet` operations\. You might need to perform a `DeleteStackInstances` operation, with `RetainStacks` set to `true`, to delete the stack instance, and then delete the stack manually\.  | 
+|  `INOPERABLE`  |  A `[DeleteStackInstances](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStackInstances.html)` operation has failed and left the stack in an unstable state\. Stacks in this state are excluded from further `[UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html)` operations\. You might need to perform a `[DeleteStackInstances](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStackInstances.html)` operation, with `RetainStacks` set to `true`, to delete the stack instance, and then delete the stack manually\.  | 
 |  `CANCELLED`  |  The operation in the specified account and Region has been canceled\. This happens because a user has stopped the stack set operation, or because the stack set operations exceed the failure tolerance\.  | 
 |  `FAILED`  |  The operation in the specified account and Region failed\. If the stack set operation fails in enough accounts within a Region, the failure tolerance for the stack set operation as a whole might be exceeded\.  | 
 |  `PENDING`  |  The operation in the specified account and Region has yet to start\.  | 
 |  `RUNNING`  |  The operation in the specified account and Region is currently in progress\.  | 
+|  `SKIPPED_SUSPENDED_ACCOUNT`  |  The operation in the specified account and Region has been skipped because the account was suspended at the time of the operation\.  | 
 |  `SUCCEEDED`  |  The operation in the specified account and Region completed successfully\.  | 

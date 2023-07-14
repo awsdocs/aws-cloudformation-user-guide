@@ -97,7 +97,7 @@ GetAtt returns a value for a specified attribute of this type\. For more informa
 #### <a name="aws-resource-osis-pipeline-return-values-fn--getatt-fn--getatt"></a>
 
 `IngestEndpointUrls`  <a name="IngestEndpointUrls-fn::getatt"></a>
-The ingestion endpoints for the pipeline that you can send data to\. For example, `my-pipeline-123456789012.us-east-1.osis.amazonaws.com`\.
+A list of the ingestion endpoints for the pipeline that you can send data to\. Currently, only a single ingestion endpoint is supported for a pipeline\. For example, `my-pipeline-123456789012.us-east-1.osis.amazonaws.com`\.
 
 `PipelineArn`  <a name="PipelineArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the pipeline\.

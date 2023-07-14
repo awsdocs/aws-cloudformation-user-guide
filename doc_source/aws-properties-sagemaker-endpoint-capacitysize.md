@@ -1,6 +1,8 @@
 # AWS::SageMaker::Endpoint CapacitySize<a name="aws-properties-sagemaker-endpoint-capacitysize"></a>
 
-Specifies the endpoint capacity to activate for production\.
+Specifies the type and size of the endpoint capacity to activate for a blue/green deployment, a rolling deployment, or a rollback strategy\. You can specify your batches as either instance count or the overall percentage or your fleet\.
+
+For a rollback strategy, if you don't specify the fields in this object, or if you set the `Value` to 100%, then SageMaker uses a blue/green rollback strategy and rolls all traffic back to the blue fleet\.
 
 ## Syntax<a name="aws-properties-sagemaker-endpoint-capacitysize-syntax"></a>
 

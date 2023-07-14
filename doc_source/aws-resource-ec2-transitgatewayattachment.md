@@ -45,10 +45,7 @@ Properties:
 ## Properties<a name="aws-resource-ec2-transitgatewayattachment-properties"></a>
 
 `Options`  <a name="cfn-ec2-transitgatewayattachment-options"></a>
-The VPC attachment options, in JSON or YAML\.  
-+ `ApplianceModeSupport` \- Set to `enable` or `disable`\. The default is `disable`\.
-+ `DnsSupport` \- Set to `enable` or `disable`\. The default is `enable`\.
-+ `Ipv6Support` \- Set to `enable` or `disable`\. The default is `disable`\.
+The VPC attachment options\.  
 *Required*: No  
 *Type*: [Options](aws-properties-ec2-transitgatewayattachment-options.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

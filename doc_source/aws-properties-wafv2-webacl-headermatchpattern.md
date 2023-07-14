@@ -4,7 +4,7 @@ The filter to use to identify the subset of headers to inspect in a web request\
 
 You must specify exactly one setting: either `All`, `IncludedHeaders`, or `ExcludedHeaders`\.
 
-Example JSON: `"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }` 
+Example JSON: `"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }` 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-headermatchpattern-syntax"></a>
 

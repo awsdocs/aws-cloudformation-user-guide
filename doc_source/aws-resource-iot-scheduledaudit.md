@@ -118,65 +118,37 @@ In this ScheduledAudit example, all audit checks are enabled, the frequency of t
 #### JSON<a name="aws-resource-iot-scheduledaudit--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon Web Services IoT ScheduledAudit Sample Template",
-  "Resources": {
-    "MyScheduledAudit": {
-      "Type": "AWS::IoT::ScheduledAudit",
-      "Properties": {
-        "ScheduledAuditName": "MyScheduledAudit",
-        "DayOfWeek" : "MON",
-        "Frequency" : "WEEKLY",
-        "TargetCheckNames": [
-           "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
-           "CA_CERTIFICATE_EXPIRING_CHECK",
-           "CA_CERTIFICATE_KEY_QUALITY_CHECK",
-           "CONFLICTING_CLIENT_IDS_CHECK",
-           "DEVICE_CERTIFICATE_EXPIRING_CHECK",
-           "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
-           "DEVICE_CERTIFICATE_SHARED_CHECK",
-           "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
-           "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
-           "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK",
-           "LOGGING_DISABLED_CHECK",
-           "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
-           "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
-           "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK" 
-        ]
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "Amazon
+            Web Services IoT ScheduledAudit Sample Template", "Resources": { "MyScheduledAudit": {
+            "Type": "AWS::IoT::ScheduledAudit", "Properties": { "ScheduledAuditName":
+            "MyScheduledAudit", "DayOfWeek" : "MON", "Frequency" : "WEEKLY", "TargetCheckNames": [
+            "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK", "CA_CERTIFICATE_EXPIRING_CHECK",
+            "CA_CERTIFICATE_KEY_QUALITY_CHECK", "CONFLICTING_CLIENT_IDS_CHECK",
+            "DEVICE_CERTIFICATE_EXPIRING_CHECK", "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
+            "DEVICE_CERTIFICATE_SHARED_CHECK", "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
+            "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
+            "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK", "LOGGING_DISABLED_CHECK",
+            "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
+            "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
+            "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK" ] } } } }
 ```
 
 #### YAML<a name="aws-resource-iot-scheduledaudit--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Description: Amazon Web Services IoT ScheduledAudit Sample Template
-Resources:
-  MyScheduledAudit:
-    Type: AWS::IoT::ScheduledAudit
-    Properties:
-      ScheduledAuditName: MyScheduledAudit
-      DayOfWeek: 'MON'
-      Frequency: WEEKLY
-      TargetCheckNames:
-      - AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK
-      - CA_CERTIFICATE_EXPIRING_CHECK
-      - CA_CERTIFICATE_KEY_QUALITY_CHECK
-      - CONFLICTING_CLIENT_IDS_CHECK
-      - DEVICE_CERTIFICATE_EXPIRING_CHECK
-      - DEVICE_CERTIFICATE_KEY_QUALITY_CHECK
-      - DEVICE_CERTIFICATE_SHARED_CHECK
-      - IOT_POLICY_OVERLY_PERMISSIVE_CHECK
-      - IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK
-      - IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK
-      - LOGGING_DISABLED_CHECK
-      - REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK
-      - REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK
-      - UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK
+AWSTemplateFormatVersion: '2010-09-09' Description: Amazon Web
+            Services IoT ScheduledAudit Sample Template Resources: MyScheduledAudit: Type:
+            AWS::IoT::ScheduledAudit Properties: ScheduledAuditName: MyScheduledAudit DayOfWeek:
+            'MON' Frequency: WEEKLY TargetCheckNames: -
+            AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK - CA_CERTIFICATE_EXPIRING_CHECK -
+            CA_CERTIFICATE_KEY_QUALITY_CHECK - CONFLICTING_CLIENT_IDS_CHECK -
+            DEVICE_CERTIFICATE_EXPIRING_CHECK - DEVICE_CERTIFICATE_KEY_QUALITY_CHECK -
+            DEVICE_CERTIFICATE_SHARED_CHECK - IOT_POLICY_OVERLY_PERMISSIVE_CHECK -
+            IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK -
+            IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK - LOGGING_DISABLED_CHECK -
+            REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK -
+            REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK -
+            UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK
 ```
 
 ## See also<a name="aws-resource-iot-scheduledaudit--seealso"></a>

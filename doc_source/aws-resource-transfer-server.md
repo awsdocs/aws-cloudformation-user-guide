@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProtocolDetails](#cfn-transfer-server-protocoldetails)" : ProtocolDetails,
       "[Protocols](#cfn-transfer-server-protocols)" : [ Protocol, ... ],
       "[SecurityPolicyName](#cfn-transfer-server-securitypolicyname)" : String,
+      "[StructuredLogDestinations](#cfn-transfer-server-structuredlogdestinations)" : [ StructuredLogDestination, ... ],
       "[Tags](#cfn-transfer-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[WorkflowDetails](#cfn-transfer-server-workflowdetails)" : WorkflowDetails
     }
@@ -51,6 +52,8 @@ Properties:
   [Protocols](#cfn-transfer-server-protocols): 
     - Protocol
   [SecurityPolicyName](#cfn-transfer-server-securitypolicyname): String
+  [StructuredLogDestinations](#cfn-transfer-server-structuredlogdestinations): 
+    - StructuredLogDestination
   [Tags](#cfn-transfer-server-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [WorkflowDetails](#cfn-transfer-server-workflowdetails): 
@@ -145,6 +148,10 @@ The protocol settings that are configured for your server\.
 + To ignore the error that is generated when the client attempts to use the `SETSTAT` command on a file that you are uploading to an Amazon S3 bucket, use the `SetStatOption` parameter\. To have the AWS Transfer Family server ignore the `SETSTAT` command and upload files without needing to make any changes to your SFTP client, set the value to `ENABLE_NO_OP`\. If you set the `SetStatOption` parameter to `ENABLE_NO_OP`, Transfer Family generates a log entry to Amazon CloudWatch Logs, so that you can determine when the client is making a `SETSTAT` call\.
 + To determine whether your AWS Transfer Family server resumes recent, negotiated sessions through a unique session ID, use the `TlsSessionResumptionMode` parameter\.
 +  `As2Transports` indicates the transport method for the AS2 messages\. Currently, only HTTP is supported\.
+
+  The `Protocols` parameter is an array of strings\.
+
+  *Allowed values*: One or more of `SFTP`, `FTPS`, `FTP`, `AS2`
 *Required*: No  
 *Type*: [ProtocolDetails](aws-properties-transfer-server-protocoldetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -160,6 +167,8 @@ Specifies the file transfer protocol or protocols over which your file transfer 
 + If `Protocol` includes `FTP`, then `AddressAllocationIds` cannot be associated\.
 + If `Protocol` is set only to `SFTP`, the `EndpointType` can be set to `PUBLIC` and the `IdentityProviderType` can be set any of the supported identity types: `SERVICE_MANAGED`, `AWS_DIRECTORY_SERVICE`, `AWS_LAMBDA`, or `API_GATEWAY`\.
 + If `Protocol` includes `AS2`, then the `EndpointType` must be `VPC`, and domain must be Amazon S3\.
+The `Protocols` parameter is an array of strings\.  
+*Allowed values*: One or more of `SFTP`, `FTPS`, `FTP`, `AS2`  
 *Required*: No  
 *Type*: List of [Protocol](aws-properties-transfer-server-protocol.md)  
 *Maximum*: `4`  
@@ -171,6 +180,18 @@ Specifies the name of the security policy that is attached to the server\.
 *Type*: String  
 *Maximum*: `100`  
 *Pattern*: `TransferSecurityPolicy-.+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StructuredLogDestinations`  <a name="cfn-transfer-server-structuredlogdestinations"></a>
+Specifies the log groups to which your server logs are sent\.  
+To specify a log group, you must provide the ARN for an existing log group\. In this case, the format of the log group is as follows:  
+ `arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*`   
+For example, `arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*`   
+If you have previously specified a log group for a server, you can clear it, and in effect turn off structured logging, by providing an empty value for this parameter in an `update-server` call\. For example:  
+ `update-server --server-id s-1234567890abcdef0 --structured-log-destinations`   
+*Required*: No  
+*Type*: List of [StructuredLogDestination](aws-properties-transfer-server-structuredlogdestination.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-transfer-server-tags"></a>

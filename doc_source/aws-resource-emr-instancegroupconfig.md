@@ -70,7 +70,7 @@ If specified, indicates that the instance group uses Spot Instances\. This is th
 
 `Configurations`  <a name="cfn-emr-instancegroupconfig-configurations"></a>
 Amazon EMR releases 4\.x or later\.
-The list of configurations supplied for an EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.  
+The list of configurations supplied for an Amazon EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.  
 *Required*: No  
 *Type*: List of [Configuration](aws-properties-emr-cluster-configuration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -104,7 +104,7 @@ The role of the instance group in the cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-emr-instancegroupconfig-instancetype"></a>
-The EC2 instance type for all instances in the instance group\.  
+The Amazon EC2 instance type for all instances in the instance group\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -119,7 +119,7 @@ The ID of an Amazon EMR cluster that you want to associate this instance group w
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Market`  <a name="cfn-emr-instancegroupconfig-market"></a>
-Market type of the EC2 instances used to create a cluster node\.  
+Market type of the Amazon EC2 instances used to create a cluster node\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ON_DEMAND | SPOT`  

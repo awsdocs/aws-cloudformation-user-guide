@@ -266,11 +266,12 @@ A value that indicates whether minor engine upgrades are applied automatically t
 
 `AvailabilityZone`  <a name="cfn-rds-dbinstance-availabilityzone"></a>
 The Availability Zone \(AZ\) where the database will be created\. For information on AWS Regions and Availability Zones, see [Regions and Availability Zones](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\.  
- **Amazon Aurora**   
-Each Aurora DB cluster hosts copies of its storage in three separate Availability Zones\. Specify one of these Availability Zones\. Aurora automatically chooses an appropriate Availability Zone if you don't specify one\.  
+For Amazon Aurora, each Aurora DB cluster hosts copies of its storage in three separate Availability Zones\. Specify one of these Availability Zones\. Aurora automatically chooses an appropriate Availability Zone if you don't specify one\.  
 Default: A random, system\-chosen Availability Zone in the endpoint's AWS Region\.  
+Constraints:  
++ The `AvailabilityZone` parameter can't be specified if the DB instance is a Multi\-AZ deployment\.
++ The specified Availability Zone must be in the same AWS Region as the current endpoint\.
 Example: `us-east-1d`   
-Constraint: The `AvailabilityZone` parameter can't be specified if the DB instance is a Multi\-AZ deployment\. The specified Availability Zone must be in the same AWS Region as the current endpoint\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -303,13 +304,13 @@ The details of the DB instance's server certificate\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CertificateRotationRestart`  <a name="cfn-rds-dbinstance-certificaterotationrestart"></a>
-A value that indicates whether the DB instance is restarted when you rotate your SSL/TLS certificate\.  
+Specifies whether the DB instance is restarted when you rotate your SSL/TLS certificate\.  
 By default, the DB instance is restarted when you rotate your SSL/TLS certificate\. The certificate is not updated until the DB instance is restarted\.  
 Set this parameter only if you are *not* using SSL/TLS to connect to the DB instance\.
 If you are using SSL/TLS to connect to the DB instance, follow the appropriate instructions for your DB engine to rotate your SSL/TLS certificate:  
 + For more information about rotating your SSL/TLS certificate for RDS DB engines, see [ Rotating Your SSL/TLS Certificate\.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL-certificate-rotation.html) in the *Amazon RDS User Guide\.* 
 + For more information about rotating your SSL/TLS certificate for Aurora DB engines, see [ Rotating Your SSL/TLS Certificate](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html) in the *Amazon Aurora User Guide*\.
-This setting doesn't apply to RDS Custom\.  
+This setting doesn't apply to RDS Custom DB instances\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -323,20 +324,20 @@ Not applicable\. The character set is managed by the DB cluster\. For more infor
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CopyTagsToSnapshot`  <a name="cfn-rds-dbinstance-copytagstosnapshot"></a>
-A value that indicates whether to copy tags from the DB instance to snapshots of the DB instance\. By default, tags are not copied\.  
- **Amazon Aurora**   
-Not applicable\. Copying tags to snapshots is managed by the DB cluster\. Setting this value for an Aurora DB instance has no effect on the DB cluster setting\.  
+Specifies whether to copy tags from the DB instance to snapshots of the DB instance\. By default, tags are not copied\.  
+This setting doesn't apply to Amazon Aurora DB instances\. Copying tags to snapshots is managed by the DB cluster\. Setting this value for an Aurora DB instance has no effect on the DB cluster setting\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomIAMInstanceProfile`  <a name="cfn-rds-dbinstance-customiaminstanceprofile"></a>
-The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance\. The instance profile must meet the following requirements:  
+The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance\.  
+This setting is required for RDS Custom\.  
+Constraints:  
 + The profile must exist in your account\.
 + The profile must have an IAM role that Amazon EC2 has permissions to assume\.
 + The instance profile name and the associated IAM role name must start with the prefix `AWSRDSCustom`\.
 For the list of permissions required for the IAM role, see [ Configure IAM and your VPC](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc) in the *Amazon RDS User Guide*\.  
-This setting is required for RDS Custom\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -508,10 +509,10 @@ For more information, see [ Kerberos Authentication](https://docs.aws.amazon.com
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainIAMRoleName`  <a name="cfn-rds-dbinstance-domainiamrolename"></a>
-Specify the name of the IAM role to be used when making API calls to the Directory Service\.  
-This setting doesn't apply to RDS Custom\.  
- **Amazon Aurora**   
-Not applicable\. The domain is managed by the DB cluster\.  
+The name of the IAM role to use when making API calls to the Directory Service\.  
+This setting doesn't apply to the following DB instances:  
++ Amazon Aurora \(The domain is managed by the DB cluster\.\)
++ RDS Custom
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -544,15 +545,15 @@ Not applicable\. Mapping AWS IAM accounts to database accounts is managed by the
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnablePerformanceInsights`  <a name="cfn-rds-dbinstance-enableperformanceinsights"></a>
-A value that indicates whether to enable Performance Insights for the DB instance\. For more information, see [Using Amazon Performance Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the *Amazon RDS User Guide*\.  
-This setting doesn't apply to RDS Custom\.  
+Specifies whether to enable Performance Insights for the DB instance\. For more information, see [Using Amazon Performance Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the *Amazon RDS User Guide*\.  
+This setting doesn't apply to RDS Custom DB instances\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Endpoint`  <a name="cfn-rds-dbinstance-endpoint"></a>
-Specifies the connection endpoint\.  
-The endpoint might not be shown for instances whose status is `creating`\.
+The connection endpoint for the DB instance\.  
+The endpoint might not be shown for instances with the status of `creating`\.
 *Required*: No  
 *Type*: [Endpoint](aws-properties-rds-dbinstance-endpoint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -561,14 +562,13 @@ The endpoint might not be shown for instances whose status is `creating`\.
 The name of the database engine that you want to use for this DB instance\.  
 When you are creating a DB instance, the `Engine` property is required\.
 Valid Values:  
-+ `aurora` \(for MySQL 5\.6\-compatible Aurora\)
-+ `aurora-mysql` \(for MySQL 5\.7\-compatible and MySQL 8\.0\-compatible Aurora\)
-+ `aurora-postgresql`
-+ `custom-oracle-ee`
-+ `custom-oracle-ee-cdb`
-+ `custom-sqlserver-ee`
-+ `custom-sqlserver-se`
-+ `custom-sqlserver-web`
++ `aurora-mysql` \(for Aurora MySQL DB instances\)
++ `aurora-postgresql` \(for Aurora PostgreSQL DB instances\)
++ `custom-oracle-ee` \(for RDS Custom for Oracle DB instances\)
++ `custom-oracle-ee-cdb` \(for RDS Custom for Oracle DB instances\)
++ `custom-sqlserver-ee` \(for RDS Custom for SQL Server DB instances\)
++ `custom-sqlserver-se` \(for RDS Custom for SQL Server DB instances\)
++ `custom-sqlserver-web` \(for RDS Custom for SQL Server DB instances\)
 + `mariadb`
 + `mysql`
 + `oracle-ee`
@@ -640,7 +640,7 @@ If you've specified `DBSecurityGroups` and then you update the license model, AW
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManageMasterUserPassword`  <a name="cfn-rds-dbinstance-managemasteruserpassword"></a>
-A value that indicates whether to manage the master user password with AWS Secrets Manager\.  
+Specifies whether to manage the master user password with AWS Secrets Manager\.  
 For more information, see [Password management with AWS Secrets Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the *Amazon RDS User Guide\.*   
 Constraints:  
 + Can't manage the master user password with AWS Secrets Manager if `MasterUserPassword` is specified\.
@@ -705,7 +705,7 @@ Constraints: Must contain from 8 to 128 characters\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterUserSecret`  <a name="cfn-rds-dbinstance-masterusersecret"></a>
-Contains the secret managed by RDS in AWS Secrets Manager for the master user password\.  
+The secret managed by RDS in AWS Secrets Manager for the master user password\.  
 For more information, see [Password management with AWS Secrets Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the *Amazon RDS User Guide\.*   
 *Required*: No  
 *Type*: [MasterUserSecret](aws-properties-rds-dbinstance-masterusersecret.md)  
@@ -714,9 +714,9 @@ For more information, see [Password management with AWS Secrets Manager](https:/
 `MaxAllocatedStorage`  <a name="cfn-rds-dbinstance-maxallocatedstorage"></a>
 The upper limit in gibibytes \(GiB\) to which Amazon RDS can automatically scale the storage of the DB instance\.  
 For more information about this setting, including limitations that apply to it, see [ Managing capacity automatically with Amazon RDS storage autoscaling](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling) in the *Amazon RDS User Guide*\.  
-This setting doesn't apply to RDS Custom\.  
- **Amazon Aurora**   
-Not applicable\. Storage is managed by the DB cluster\.  
+This setting doesn't apply to the following DB instances:  
++ Amazon Aurora \(Storage is managed by the DB cluster\.\)
++ RDS Custom
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -732,8 +732,8 @@ Valid Values: `0, 1, 5, 10, 15, 30, 60`
 
 `MonitoringRoleArn`  <a name="cfn-rds-dbinstance-monitoringrolearn"></a>
 The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to Amazon CloudWatch Logs\. For example, `arn:aws:iam:123456789012:role/emaccess`\. For information on creating a monitoring role, see [Setting Up and Enabling Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling) in the *Amazon RDS User Guide*\.  
-If `MonitoringInterval` is set to a value other than 0, then you must supply a `MonitoringRoleArn` value\.  
-This setting doesn't apply to RDS Custom\.  
+If `MonitoringInterval` is set to a value other than `0`, then you must supply a `MonitoringRoleArn` value\.  
+This setting doesn't apply to RDS Custom DB instances\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -749,7 +749,7 @@ Not applicable\. Amazon Aurora storage is replicated across all of the Availabil
 
 `NcharCharacterSetName`  <a name="cfn-rds-dbinstance-ncharcharactersetname"></a>
 The name of the NCHAR character set for the Oracle DB instance\.  
-This parameter doesn't apply to RDS Custom\.  
+This setting doesn't apply to RDS Custom DB instances\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -782,17 +782,14 @@ For information about enabling Performance Insights, see [ EnablePerformanceInsi
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `PerformanceInsightsRetentionPeriod`  <a name="cfn-rds-dbinstance-performanceinsightsretentionperiod"></a>
-The number of days to retain Performance Insights data\. The default is 7 days\. The following values are valid:  
-+ 7
-+  *month* \* 31, where *month* is a number of months from 1\-23
-+ 731
-For example, the following values are valid:  
-+ 93 \(3 months \* 31\)
-+ 341 \(11 months \* 31\)
-+ 589 \(19 months \* 31\)
-+ 731
-If you specify a retention period such as 94, which isn't a valid value, RDS issues an error\.  
-This setting doesn't apply to RDS Custom\.  
+The number of days to retain Performance Insights data\.  
+This setting doesn't apply to RDS Custom DB instances\.  
+Valid Values:  
++  `7` 
++  *month* \* 31, where *month* is a number of months from 1\-23\. Examples: `93` \(3 months \* 31\), `341` \(11 months \* 31\), `589` \(19 months \* 31\)
++  `731` 
+Default: `7` days  
+If you specify a retention period that isn't valid, such as `94`, Amazon RDS returns an error\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -830,18 +827,16 @@ Constraints: Minimum 30\-minute window\.
 
 `ProcessorFeatures`  <a name="cfn-rds-dbinstance-processorfeatures"></a>
 The number of CPU cores and the number of threads per core for the DB instance class of the DB instance\.  
-This setting doesn't apply to RDS Custom\.  
- **Amazon Aurora**   
-Not applicable\.  
+This setting doesn't apply to Amazon Aurora or RDS Custom DB instances\.  
 *Required*: No  
 *Type*: List of [ProcessorFeature](aws-properties-rds-dbinstance-processorfeature.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PromotionTier`  <a name="cfn-rds-dbinstance-promotiontier"></a>
-A value that specifies the order in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance\. For more information, see [ Fault Tolerance for an Aurora DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance) in the *Amazon Aurora User Guide*\.  
-This setting doesn't apply to RDS Custom\.  
-Default: 1  
-Valid Values: 0 \- 15  
+The order of priority in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance\. For more information, see [ Fault Tolerance for an Aurora DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html#Aurora.Managing.FaultTolerance) in the *Amazon Aurora User Guide*\.  
+This setting doesn't apply to RDS Custom DB instances\.  
+Default: `1`   
+Valid Values: `0 - 15`   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -962,8 +957,8 @@ The time zone of the DB instance\. The time zone parameter is currently supporte
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UseDefaultProcessorFeatures`  <a name="cfn-rds-dbinstance-usedefaultprocessorfeatures"></a>
-A value that indicates whether the DB instance class of the DB instance uses its default processor features\.  
-This setting doesn't apply to RDS Custom\.  
+Specifies whether the DB instance class of the DB instance uses its default processor features\.  
+This setting doesn't apply to RDS Custom DB instances\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -88,59 +88,19 @@ The following example declares an AWS IoT rule\.
 #### JSON<a name="aws-resource-iot-topicrule--examples----json"></a>
 
 ```
-{
-	"AWSTemplateFormatVersion": "2010-09-09",
-	"Resources": {
-		"MyTopicRule": {
-			"Type": "AWS::IoT::TopicRule",
-			"Properties": {
-				"RuleName": {
-					"Ref": "NameParameter"
-				},
-				"TopicRulePayload": {
-					"RuleDisabled": "true",
-					"Sql": "SELECT temp FROM 'SomeTopic' WHERE temp > 60",
-					"Actions": [{
-						"S3": {
-							"BucketName": {
-								"Ref": "MyBucket"
-							},
-							"RoleArn": {
-								"Fn::GetAtt": [
-									"MyRole",
-									"Arn"
-								]
-							},
-							"Key": "MyKey.txt"
-						}
-					}]
-				}
-			}
-		}
-	}
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+            "MyTopicRule": { "Type": "AWS::IoT::TopicRule", "Properties": { "RuleName": { "Ref":
+            "NameParameter" }, "TopicRulePayload": { "RuleDisabled": "true", "Sql": "SELECT temp
+            FROM 'SomeTopic' WHERE temp > 60", "Actions": [{ "S3": { "BucketName": { "Ref":
+            "MyBucket" }, "RoleArn": { "Fn::GetAtt": [ "MyRole", "Arn" ] }, "Key": "MyKey.txt" } }]
+            } } } } }
 ```
 
 #### YAML<a name="aws-resource-iot-topicrule--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  MyTopicRule:
-    Type: AWS::IoT::TopicRule
-    Properties:
-      RuleName:
-        Ref: NameParameter
-      TopicRulePayload:
-        RuleDisabled: 'true'
-        Sql: SELECT temp FROM 'SomeTopic' WHERE temp > 60
-        Actions:
-        - S3:
-            BucketName:
-              Ref: MyBucket
-            RoleArn:
-              Fn::GetAtt:
-              - MyRole
-              - Arn
-            Key: MyKey.txt
+AWSTemplateFormatVersion: '2010-09-09' Resources: MyTopicRule:
+            Type: AWS::IoT::TopicRule Properties: RuleName: Ref: NameParameter TopicRulePayload:
+            RuleDisabled: 'true' Sql: SELECT temp FROM 'SomeTopic' WHERE temp > 60 Actions: - S3:
+            BucketName: Ref: MyBucket RoleArn: Fn::GetAtt: - MyRole - Arn Key: MyKey.txt
 ```

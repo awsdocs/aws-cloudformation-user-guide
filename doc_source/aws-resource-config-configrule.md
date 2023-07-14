@@ -1,5 +1,8 @@
 # AWS::Config::ConfigRule<a name="aws-resource-config-configrule"></a>
 
+**Note**  
+You must first create and start the AWS Config configuration recorder in order to create AWS Config managed rules with AWS CloudFormation\. For more information, see [Managing the Configuration Recorder](https://docs.aws.amazon.com/config/latest/developerguide/stop-start-recorder.html)\.
+
 Adds or updates an AWS Config rule to evaluate if your AWS resources comply with your desired configurations\. For information on how many AWS Config rules you can have per account, see [https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html](https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html) in the *AWS Config Developer Guide*\.
 
 There are two types of rules: *AWS Config Managed Rules* and *AWS Config Custom Rules*\. You can use the `ConfigRule` resource to create both AWS Config Managed Rules and AWS Config Custom Rules\.

@@ -442,7 +442,7 @@ The StackSet instance status\. StackSet instance statuses can be `CURRENT`, `OUT
 `status-reason`  
 Status reason of the StackSet instance\.  
 `detailed-status`  
-The detailed StackSet instance detailed status\. StackSet instance detailed statuses can be `CANCELLED`, `FAILED`, `INOPERABLE`, `PENDING`, `RUNNING`, or `SUCCEEDED`\.
+The detailed StackSet instance detailed status\. StackSet instance detailed statuses can be `CANCELLED`, `FAILED`, `INOPERABLE`, `PENDING`, `RUNNING`, `SKIPPED_SUSPENDED_ACCOUNT`, or `SUCCEEDED`\.
 
 **Example StackSet stack instance status event**  <a name="schema-stackset-stack-instance-status.example"></a>
 The following is an example response for StackSet stack instance status event\.  

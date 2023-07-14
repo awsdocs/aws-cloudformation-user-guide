@@ -1,6 +1,6 @@
 # AWS::Pinpoint::InAppTemplate<a name="aws-resource-pinpoint-inapptemplate"></a>
 
-Creates a message template that you can use to send in\-app messages\. A message template is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\.
+Creates a message template that you can use to send in\-app messages\. A message template is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\. The In\-App channel is unavailable in AWS GovCloud \(US\)\.
 
 ## Syntax<a name="aws-resource-pinpoint-inapptemplate-syntax"></a>
 

@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MeasureLabelVisibility](#cfn-quicksight-analysis-datalabeloptions-measurelabelvisibility)" : String,
   "[Overlap](#cfn-quicksight-analysis-datalabeloptions-overlap)" : String,
   "[Position](#cfn-quicksight-analysis-datalabeloptions-position)" : String,
+  "[TotalsVisibility](#cfn-quicksight-analysis-datalabeloptions-totalsvisibility)" : String,
   "[Visibility](#cfn-quicksight-analysis-datalabeloptions-visibility)" : String
 }
 ```
@@ -35,6 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MeasureLabelVisibility](#cfn-quicksight-analysis-datalabeloptions-measurelabelvisibility): String
   [Overlap](#cfn-quicksight-analysis-datalabeloptions-overlap): String
   [Position](#cfn-quicksight-analysis-datalabeloptions-position): String
+  [TotalsVisibility](#cfn-quicksight-analysis-datalabeloptions-totalsvisibility): String
   [Visibility](#cfn-quicksight-analysis-datalabeloptions-visibility): String
 ```
 
@@ -93,6 +95,13 @@ Determines the position of the data labels\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `BOTTOM | INSIDE | LEFT | OUTSIDE | RIGHT | TOP`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TotalsVisibility`  <a name="cfn-quicksight-analysis-datalabeloptions-totalsvisibility"></a>
+Determines the visibility of the total\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `HIDDEN | VISIBLE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Visibility`  <a name="cfn-quicksight-analysis-datalabeloptions-visibility"></a>

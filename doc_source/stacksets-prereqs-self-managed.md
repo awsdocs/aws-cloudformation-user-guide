@@ -10,7 +10,7 @@ With self\-managed permissions, you create the AWS Identity and Access Managemen
 
 ## Self\-managed permissions<a name="prereqs-self-managed-permissions"></a>
 
-To set up the required permissions for creating a **service\-managed** stack set, see [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.
+To set up the required permissions for creating a **service\-managed** stack set, see [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)\.
 
 Before you create a stack set with **self\-managed** permissions, you need to establish a trust relationship between the administrator and target accounts by creating IAM roles in each account\.
 
@@ -386,7 +386,7 @@ Similarly, the user can also specify a customized execution role\. If they speci
    }
    ```
 
-1. Create a customized administrator role in your administrator account, as detailed in [Set up advanced permissions options for stack set operationsSet up permissions to control target account accessSet up permissions for which users and groups can perform stack set operations in specific target accounts](#stacksets-prereqs-multiadmin)\. Include a trust relationship between the customized administrator role and the customized execution roles which you want it to use\.
+1. Create a customized administrator role in your administrator account, as detailed in [Set up permissions to control target account accessSet up permissions for which users and groups can perform stack set operations in specific target accounts](#stacksets-prereqs-multiadmin)\. Include a trust relationship between the customized administrator role and the customized execution roles which you want it to use\.
 
    The following example includes an `sts::AssumeRole` policy for both the **AWSCloudFormationStackSetExecutionRole** defined for the target account, in addition to a customized execution role\.
 

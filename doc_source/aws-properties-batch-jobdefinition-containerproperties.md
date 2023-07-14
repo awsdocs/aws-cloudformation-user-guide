@@ -89,7 +89,7 @@ Environment variables cannot start with "`AWS_BATCH`"\. This naming convention i
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EphemeralStorage`  <a name="cfn-batch-jobdefinition-containerproperties-ephemeralstorage"></a>
-Property description not available\.  
+The amount of ephemeral storage to allocate for the task\. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate\.  
 *Required*: No  
 *Type*: [EphemeralStorage](aws-properties-batch-jobdefinition-containerproperties-ephemeralstorage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

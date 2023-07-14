@@ -1,6 +1,6 @@
 # AWS::FSx::StorageVirtualMachine SelfManagedActiveDirectoryConfiguration<a name="aws-properties-fsx-storagevirtualmachine-activedirectoryconfiguration-selfmanagedactivedirectoryconfiguration"></a>
 
-The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or an ONTAP storage virtual machine \(SVM\) to a self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\. For more information, see [ Using Amazon FSx with your self\-managed Microsoft Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or [Managing SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html)\.
+The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine \(SVM\) to a self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\. For more information, see [ Using Amazon FSx for Windows with your self\-managed Microsoft Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or [Managing FSx for ONTAP SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html)\.
 
 ## Syntax<a name="aws-properties-fsx-storagevirtualmachine-activedirectoryconfiguration-selfmanagedactivedirectoryconfiguration-syntax"></a>
 
@@ -47,7 +47,7 @@ The fully qualified domain name of the self\-managed AD directory, such as `corp
 *Minimum*: `1`  
 *Maximum*: `255`  
 *Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{1,255}$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FileSystemAdministratorsGroup`  <a name="cfn-fsx-storagevirtualmachine-activedirectoryconfiguration-selfmanagedactivedirectoryconfiguration-filesystemadministratorsgroup"></a>
 \(Optional\) The name of the domain group whose members are granted administrative privileges for the file system\. Administrative privileges include taking ownership of files and folders, setting audit controls \(audit ACLs\) on files and folders, and administering the file system remotely by using the FSx Remote PowerShell\. The group that you specify must already exist in your domain\. If you don't provide one, your AD domain's Domain Admins group is used\.  
@@ -56,7 +56,7 @@ The fully qualified domain name of the self\-managed AD directory, such as `corp
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{1,256}$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OrganizationalUnitDistinguishedName`  <a name="cfn-fsx-storagevirtualmachine-activedirectoryconfiguration-selfmanagedactivedirectoryconfiguration-organizationalunitdistinguishedname"></a>
 \(Optional\) The fully qualified distinguished name of the organizational unit within your self\-managed AD directory\. Amazon FSx only accepts OU as the direct parent of the file system\. An example is `OU=FSx,DC=yourdomain,DC=corp,DC=com`\. To learn more, see [RFC 2253](https://tools.ietf.org/html/rfc2253)\. If none is provided, the FSx file system is created in the default location of your self\-managed AD directory\.   
@@ -66,7 +66,7 @@ Only Organizational Unit \(OU\) objects can be the direct parent of the file sys
 *Minimum*: `1`  
 *Maximum*: `2000`  
 *Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{1,2000}$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Password`  <a name="cfn-fsx-storagevirtualmachine-activedirectoryconfiguration-selfmanagedactivedirectoryconfiguration-password"></a>
 The password for the service account on your self\-managed AD domain that Amazon FSx will use to join to your AD domain\.  

@@ -56,7 +56,7 @@ The authorizer name\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableCachingForHttp`  <a name="cfn-iot-authorizer-enablecachingforhttp"></a>
-Property description not available\.  
+When `true`, the result from the authorizer's Lambda function is cached for clients that use persistent HTTP connections\. The results are cached for the time specified by the Lambda function in `refreshAfterInSeconds`\. This value doesn't affect authorization of clients that use MQTT connections\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -16,7 +16,7 @@ A module can contain:
 
 For information on developing module types, see [Developing module types](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-develop.html) in the *CloudFormation Command Line Interface User Guide*\.
 
-## Using modules in a template<a name="modules-using.title"></a>
+## Using modules in a template<a name="modules-using"></a>
 
 To use a module, make sure it's [registered](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register) in the account and region in which you want to use it\. You register modules in the CloudFormation registry as private extensions\. Then, treat it much as you would an individual resource:
 + Include it in the `[Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html)` section of your template\.

@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CustomProperties](#cfn-appflow-flow-customconnectorsourceproperties-customproperties)" : {Key: Value, ...},
+  "[DataTransferApi](#cfn-appflow-flow-customconnectorsourceproperties-datatransferapi)" : DataTransferApi,
   "[EntityName](#cfn-appflow-flow-customconnectorsourceproperties-entityname)" : String
 }
 ```
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CustomProperties](#cfn-appflow-flow-customconnectorsourceproperties-customproperties): 
     Key: Value
+  [DataTransferApi](#cfn-appflow-flow-customconnectorsourceproperties-datatransferapi): 
+    DataTransferApi
   [EntityName](#cfn-appflow-flow-customconnectorsourceproperties-entityname): String
 ```
 
@@ -29,6 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Custom properties that are required to use the custom connector as a source\.  
 *Required*: No  
 *Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DataTransferApi`  <a name="cfn-appflow-flow-customconnectorsourceproperties-datatransferapi"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DataTransferApi](aws-properties-appflow-flow-datatransferapi.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EntityName`  <a name="cfn-appflow-flow-customconnectorsourceproperties-entityname"></a>

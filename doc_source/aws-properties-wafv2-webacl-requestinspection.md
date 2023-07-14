@@ -33,14 +33,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-requestinspection-properties"></a>
 
 `PasswordField`  <a name="cfn-wafv2-webacl-requestinspection-passwordfield"></a>
-Details about your login page password field\.   
-How you specify this depends on the payload type\.  
+The name of the field in the request payload that contains your customer's password\.   
+How you specify this depends on the request inspection payload type\.  
 + For JSON payloads, specify the field name in JSON pointer syntax\. For information about the JSON Pointer syntax, see the Internet Engineering Task Force \(IETF\) documentation [JavaScript Object Notation \(JSON\) Pointer](https://tools.ietf.org/html/rfc6901)\. 
 
-  For example, for the JSON payload `{ "login": { "username": "THE_USERNAME", "password": "THE_PASSWORD" } }`, the username field specification is `/login/username` and the password field specification is `/login/password`\.
+  For example, for the JSON payload `{ "form": { "password": "THE_PASSWORD" } }`, the password field specification is `/form/password`\.
 + For form encoded payload types, use the HTML form names\.
 
-  For example, for an HTML form with input elements named `username1` and `password1`, the username field specification is `username1` and the password field specification is `password1`\.
+  For example, for an HTML form with the input element named `password1`, the password field specification is `password1`\.
 *Required*: Yes  
 *Type*: [FieldIdentifier](aws-properties-wafv2-webacl-fieldidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -53,14 +53,14 @@ The payload type for your login endpoint, either JSON or form encoded\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UsernameField`  <a name="cfn-wafv2-webacl-requestinspection-usernamefield"></a>
-Details about your login page username field\.   
-How you specify this depends on the payload type\.  
+The name of the field in the request payload that contains your customer's username\.   
+How you specify this depends on the request inspection payload type\.  
 + For JSON payloads, specify the field name in JSON pointer syntax\. For information about the JSON Pointer syntax, see the Internet Engineering Task Force \(IETF\) documentation [JavaScript Object Notation \(JSON\) Pointer](https://tools.ietf.org/html/rfc6901)\. 
 
-  For example, for the JSON payload `{ "login": { "username": "THE_USERNAME", "password": "THE_PASSWORD" } }`, the username field specification is `/login/username` and the password field specification is `/login/password`\.
+  For example, for the JSON payload `{ "form": { "username": "THE_USERNAME" } }`, the username field specification is `/form/username`\. 
 + For form encoded payload types, use the HTML form names\.
 
-  For example, for an HTML form with input elements named `username1` and `password1`, the username field specification is `username1` and the password field specification is `password1`\.
+  For example, for an HTML form with the input element named `username1`, the username field specification is `username1` 
 *Required*: Yes  
 *Type*: [FieldIdentifier](aws-properties-wafv2-webacl-fieldidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

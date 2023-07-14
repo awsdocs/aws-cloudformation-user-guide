@@ -104,7 +104,8 @@ You can use the AWS Management Console, AWS SDK, or AWS CLI to get the failure c
 To get the number of failed stack instances, call `describe-stack-set-operation` or `list-stack-set-operations` and see `StatusDetails`\.
 
 ```
-aws cloudformation describe-stack-set-operation --stack-set-name ss1 --operation-id 5550e62f-c822-4331-88fa-21c1d7bafc60
+$ aws cloudformation describe-stack-set-operation --stack-set-name ss1 \
+    --operation-id 5550e62f-c822-4331-88fa-21c1d7bafc60
 ```
 
 ```

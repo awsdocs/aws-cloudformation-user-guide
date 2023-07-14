@@ -31,7 +31,8 @@ Properties:
 ## Properties<a name="aws-resource-detective-graph-properties"></a>
 
 `AutoEnableMembers`  <a name="cfn-detective-graph-autoenablemembers"></a>
-Property description not available\.  
+Indicates whether to automatically enable new organization accounts as member accounts in the organization behavior graph\.  
+By default, this property is set to `false`\. If you want to change the value of this property, you must be the Detective administrator for the organization\. For more information on setting a Detective administrator account, see [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

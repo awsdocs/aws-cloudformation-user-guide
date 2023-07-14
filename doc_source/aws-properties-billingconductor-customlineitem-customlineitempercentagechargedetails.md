@@ -1,6 +1,6 @@
 # AWS::BillingConductor::CustomLineItem CustomLineItemPercentageChargeDetails<a name="aws-properties-billingconductor-customlineitem-customlineitempercentagechargedetails"></a>
 
- A representation of the charge details associated with a percentage custom line item\. 
+A representation of the charge details associated with a percentage custom line item\.
 
 ## Syntax<a name="aws-properties-billingconductor-customlineitem-customlineitempercentagechargedetails-syntax"></a>
 
@@ -32,7 +32,7 @@ A list of resource ARNs to associate to the percentage custom line item\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PercentageValue`  <a name="cfn-billingconductor-customlineitem-customlineitempercentagechargedetails-percentagevalue"></a>
- The custom line item's percentage value\. This will be multiplied against the combined value of its associated resources to determine its charge value\.   
+The custom line item's percentage value\. This will be multiplied against the combined value of its associated resources to determine its charge value\.  
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

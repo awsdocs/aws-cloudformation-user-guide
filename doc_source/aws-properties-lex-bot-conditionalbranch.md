@@ -43,7 +43,7 @@ The name of the branch\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `100`  
-*Pattern*: `^([0-9a-zA-Z][_-]?)+$`  
+*Pattern*: `^([0-9a-zA-Z][_-]?){1,100}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NextStep`  <a name="cfn-lex-bot-conditionalbranch-nextstep"></a>

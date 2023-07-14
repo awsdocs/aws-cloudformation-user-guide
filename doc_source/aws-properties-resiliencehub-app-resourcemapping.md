@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[EksSourceName](#cfn-resiliencehub-app-resourcemapping-ekssourcename)" : String,
   "[LogicalStackName](#cfn-resiliencehub-app-resourcemapping-logicalstackname)" : String,
   "[MappingType](#cfn-resiliencehub-app-resourcemapping-mappingtype)" : String,
   "[PhysicalResourceId](#cfn-resiliencehub-app-resourcemapping-physicalresourceid)" : PhysicalResourceId,
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-resiliencehub-app-resourcemapping-syntax.yaml"></a>
 
 ```
+  [EksSourceName](#cfn-resiliencehub-app-resourcemapping-ekssourcename): String
   [LogicalStackName](#cfn-resiliencehub-app-resourcemapping-logicalstackname): String
   [MappingType](#cfn-resiliencehub-app-resourcemapping-mappingtype): String
   [PhysicalResourceId](#cfn-resiliencehub-app-resourcemapping-physicalresourceid): 
@@ -30,6 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-resiliencehub-app-resourcemapping-properties"></a>
+
+`EksSourceName`  <a name="cfn-resiliencehub-app-resourcemapping-ekssourcename"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogicalStackName`  <a name="cfn-resiliencehub-app-resourcemapping-logicalstackname"></a>
 The name of the CloudFormation stack this resource is mapped to\.  

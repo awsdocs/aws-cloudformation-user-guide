@@ -90,4 +90,4 @@ The IP address that the flow listens on for incoming content\.
 The ARN of the source\.
 
 `Source.SourceIngestPort`  <a name="Source.SourceIngestPort-fn::getatt"></a>
-The port that the flow will be listening on for incoming content\.
+The port that the flow listens on for incoming content\. If the protocol of the source is Zixi, the port must be set to 2088\.

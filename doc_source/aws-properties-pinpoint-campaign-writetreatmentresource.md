@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-writetreatmentresource-properties"></a>
 
 `CustomDeliveryConfiguration`  <a name="cfn-pinpoint-campaign-writetreatmentresource-customdeliveryconfiguration"></a>
-Property description not available\.  
+The delivery configuration settings for sending the treatment through a custom channel\. This object is required if the `MessageConfiguration` object for the treatment specifies a `CustomMessage` object\.  
 *Required*: No  
 *Type*: [CustomDeliveryConfiguration](aws-properties-pinpoint-campaign-customdeliveryconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -63,7 +63,7 @@ The allocated percentage of users \(segment members\) to send the treatment to\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateConfiguration`  <a name="cfn-pinpoint-campaign-writetreatmentresource-templateconfiguration"></a>
-Property description not available\.  
+The message template to use for the treatment\.  
 *Required*: No  
 *Type*: [TemplateConfiguration](aws-properties-pinpoint-campaign-templateconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

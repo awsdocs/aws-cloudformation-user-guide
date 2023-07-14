@@ -15,6 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-appstream-appblock-description)" : String,
       "[DisplayName](#cfn-appstream-appblock-displayname)" : String,
       "[Name](#cfn-appstream-appblock-name)" : String,
+      "[PackagingType](#cfn-appstream-appblock-packagingtype)" : String,
+      "[PostSetupScriptDetails](#cfn-appstream-appblock-postsetupscriptdetails)" : ScriptDetails,
       "[SetupScriptDetails](#cfn-appstream-appblock-setupscriptdetails)" : ScriptDetails,
       "[SourceS3Location](#cfn-appstream-appblock-sources3location)" : S3Location,
       "[Tags](#cfn-appstream-appblock-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -30,6 +32,9 @@ Properties:
   [Description](#cfn-appstream-appblock-description): String
   [DisplayName](#cfn-appstream-appblock-displayname): String
   [Name](#cfn-appstream-appblock-name): String
+  [PackagingType](#cfn-appstream-appblock-packagingtype): String
+  [PostSetupScriptDetails](#cfn-appstream-appblock-postsetupscriptdetails): 
+    ScriptDetails
   [SetupScriptDetails](#cfn-appstream-appblock-setupscriptdetails): 
     ScriptDetails
   [SourceS3Location](#cfn-appstream-appblock-sources3location): 
@@ -62,9 +67,22 @@ The name of the app block\.
 *Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`PackagingType`  <a name="cfn-appstream-appblock-packagingtype"></a>
+The packaging type of the app block\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `APPSTREAM2 | CUSTOM`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PostSetupScriptDetails`  <a name="cfn-appstream-appblock-postsetupscriptdetails"></a>
+The post setup script details of the app block\.  
+*Required*: No  
+*Type*: [ScriptDetails](aws-properties-appstream-appblock-scriptdetails.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `SetupScriptDetails`  <a name="cfn-appstream-appblock-setupscriptdetails"></a>
 The setup script details of the app block\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [ScriptDetails](aws-properties-appstream-appblock-scriptdetails.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

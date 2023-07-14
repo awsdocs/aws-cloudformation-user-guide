@@ -58,7 +58,7 @@ The location of a GraphQL schema file in an Amazon S3 bucket\. Use this if you w
 
 ### Ref<a name="aws-resource-appsync-graphqlschema-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::AppSync::GraphQLSchema` resource to the intrinsic `Ref` function, the function returns the GraphQL API id with the literal String GraphQLSchema attached to it\. 
+When you pass the logical ID of an `AWS::AppSync::GraphQLSchema` resource to the intrinsic `Ref` function, the function returns the GraphQL API ID with the literal String GraphQLSchema attached to it\. 
 
 ## Examples<a name="aws-resource-appsync-graphqlschema--examples"></a>
 

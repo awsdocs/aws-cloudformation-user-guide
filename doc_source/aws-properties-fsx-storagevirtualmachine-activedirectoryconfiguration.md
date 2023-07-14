@@ -32,7 +32,7 @@ The NetBIOS name of the Active Directory computer object that will be created fo
 *Minimum*: `1`  
 *Maximum*: `15`  
 *Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{1,255}$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelfManagedActiveDirectoryConfiguration`  <a name="cfn-fsx-storagevirtualmachine-activedirectoryconfiguration-selfmanagedactivedirectoryconfiguration"></a>
 The configuration that Amazon FSx uses to join the ONTAP storage virtual machine \(SVM\) to your self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\.  

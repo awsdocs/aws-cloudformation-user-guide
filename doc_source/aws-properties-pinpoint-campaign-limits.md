@@ -49,7 +49,7 @@ The maximum number of messages that a campaign can send each second\. The minimu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Session`  <a name="cfn-pinpoint-campaign-limits-session"></a>
-Property description not available\.  
+The maximum number of messages that the campaign can send per user session\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

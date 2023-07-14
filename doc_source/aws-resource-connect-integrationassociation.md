@@ -82,7 +82,7 @@ Resources:
   IntegrationAssociation:
     Type: AWS::Connect::IntegrationAssociation
     Properties:
-      InstanceId: arn:aws:connect:region-name:aws-account-id:instance/instance-arn
+      InstanceId: arn:aws:connect:region-name:aws-account-id:instance/instance-id
       IntegrationType: LEX_BOT
       IntegrationArn: arn:aws:lex:region-name:aws-account-id:bot/bot-name
 ```
@@ -100,7 +100,7 @@ Resources:
   IntegrationAssociation:
     Type: AWS::Connect::IntegrationAssociation
     Properties:
-      InstanceId: arn:aws:connect:region-name:aws-account-id:instance/instance-arn
+      InstanceId: arn:aws:connect:region-name:aws-account-id:instance/instance-id
       IntegrationType: LEX_BOT
       IntegrationArn: arn:aws:lex:region-name:aws-account-id:bot-alias/bot-id/alias-id
 ```
@@ -118,7 +118,7 @@ Resources:
   IntegrationAssociation:
     Type: AWS::Connect::IntegrationAssociation
     Properties:
-      InstanceId: arn:aws:connect:region-name:aws-account-id:instance/instance-arn
+      InstanceId: arn:aws:connect:region-name:aws-account-id:instance/instance-id
       IntegrationType: LAMBDA_FUNCTION
       IntegrationArn: arn:aws:lambda:region-name:aws-account-id:function:function-arn
 ```

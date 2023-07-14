@@ -37,7 +37,7 @@ The time to wait until beginning the next stage\. The duration can only be set t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotationIds`  <a name="cfn-ssmcontacts-contact-stage-rotationids"></a>
-Property description not available\.  
+The Amazon Resource Names \(ARNs\) of the on\-call rotations associated with the plan\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

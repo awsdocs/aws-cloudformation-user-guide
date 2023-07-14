@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-synthetics-canary-basescreenshot-properties"></a>
 
 `IgnoreCoordinates`  <a name="cfn-synthetics-canary-basescreenshot-ignorecoordinates"></a>
-Coordinates that define the part of a screen to ignore during screenshot comparisons\. To obtain the coordinates to use here, use the CloudWatch Logs console to draw the boundaries on the screen\. For more information, see \{LINK\}  
+Coordinates that define the part of a screen to ignore during screenshot comparisons\. To obtain the coordinates to use here, use the CloudWatch console to draw the boundaries on the screen\. For more information, see [ Edit or delete a canary](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/synthetics_canaries_deletion.html)\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

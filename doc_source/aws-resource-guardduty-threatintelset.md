@@ -1,6 +1,6 @@
 # AWS::GuardDuty::ThreatIntelSet<a name="aws-resource-guardduty-threatintelset"></a>
 
-The `AWS::GuardDuty::ThreatIntelSet` resource specifies a new `ThreatIntelSet`\. A `ThreatIntelSet` consists of known malicious IP addresses\. generates findings based on the `ThreatIntelSet` when it is activated\.
+The `AWS::GuardDuty::ThreatIntelSet` resource specifies a new `ThreatIntelSet`\. A `ThreatIntelSet` consists of known malicious IP addresses\. GuardDuty generates findings based on the `ThreatIntelSet` when it is activated\.
 
 ## Syntax<a name="aws-resource-guardduty-threatintelset-syntax"></a>
 
@@ -96,7 +96,7 @@ For more information about using the `Ref`function, see [Ref](https://docs.aws.a
 
 ### Declare a ThreatIntelSet Resource<a name="aws-resource-guardduty-threatintelset--examples--Declare_a_ThreatIntelSet_Resource"></a>
 
-The following example shows how to declare a `ThreatIntelSet` resource:
+The following example shows how to declare a GuardDuty `ThreatIntelSet` resource:
 
 #### JSON<a name="aws-resource-guardduty-threatintelset--examples--Declare_a_ThreatIntelSet_Resource--json"></a>
 

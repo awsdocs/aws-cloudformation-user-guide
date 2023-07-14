@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotfleetwise-signalcatalog-branch-properties"></a>
 
 `Description`  <a name="cfn-iotfleetwise-signalcatalog-branch-description"></a>
-A brief description of the branch\.  
+\(Optional\) A brief description of the branch\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

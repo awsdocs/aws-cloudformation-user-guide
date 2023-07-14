@@ -2,6 +2,8 @@
 
 IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts throughout your AWS Organization\. For more information, see [What is IPAM?](https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.
 
+There are AWS Identity and Access Management \(IAM\) permissions required to fully manage an IPAM in CloudFormation\. For more information, see [Example policy](https://docs.aws.amazon.com/vpc/latest/ipam/iam-ipam-policy-examples.html) in the *Amazon VPC IPAM User Guide*\.
+
 ## Syntax<a name="aws-resource-ec2-ipam-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -91,13 +93,13 @@ The ARN of the IPAM\.
 The ID of the IPAM\.
 
 `PrivateDefaultScopeId`  <a name="PrivateDefaultScopeId-fn::getatt"></a>
-The ID of the IPAM's default private scope\.
+The ID of the default private scope\.
 
 `PublicDefaultScopeId`  <a name="PublicDefaultScopeId-fn::getatt"></a>
-The ID of the IPAM's default public scope\.
+The ID of the default public scope\.
 
 `ResourceDiscoveryAssociationCount`  <a name="ResourceDiscoveryAssociationCount-fn::getatt"></a>
-Property description not available\.
+The number of resource discovery associations\.
 
 `ScopeCount`  <a name="ScopeCount-fn::getatt"></a>
-The number of scopes in the IPAM\. The scope quota is 5\.
+The number of scopes\.

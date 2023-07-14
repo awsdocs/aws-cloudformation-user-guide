@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Category](#cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-category)" : [ DimensionField, ... ],
+  "[Label](#cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-label)" : [ DimensionField, ... ],
   "[Size](#cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-size)" : [ MeasureField, ... ],
   "[XAxis](#cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-xaxis)" : [ MeasureField, ... ],
   "[YAxis](#cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-yaxis)" : [ MeasureField, ... ]
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Category](#cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-category): 
+    - DimensionField
+  [Label](#cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-label): 
     - DimensionField
   [Size](#cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-size): 
     - MeasureField
@@ -34,6 +37,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Category`  <a name="cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-category"></a>
 The category field well of a scatter plot\.  
+*Required*: No  
+*Type*: List of [DimensionField](aws-properties-quicksight-template-dimensionfield.md)  
+*Maximum*: `200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Label`  <a name="cfn-quicksight-template-scatterplotcategoricallyaggregatedfieldwells-label"></a>
+The label field well of a scatter plot\.  
 *Required*: No  
 *Type*: List of [DimensionField](aws-properties-quicksight-template-dimensionfield.md)  
 *Maximum*: `200`  

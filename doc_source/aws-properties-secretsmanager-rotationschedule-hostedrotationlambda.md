@@ -101,7 +101,12 @@ The rotation template to base the rotation function on, one of the following:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Runtime`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-runtime"></a>
-The Python runtime version associated with the Lambda function\.  
+By default, CloudFormation deploys Python 3\.9 binaries for the rotation function\. To use a different version of Python, you must do the following two steps:  
+
+1. Deploy the matching version Python binaries with your rotation function\.
+
+1. Set the version number in this field\. For example, for Python 3\.7, enter **python3\.7**
+If you only do one of the steps, your rotation function will be incompatible with the binaries\. For more information, see [Why did my Lambda rotation function fail with a "pg module not found" error](https://repost.aws/knowledge-center/secrets-manager-lambda-rotation)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

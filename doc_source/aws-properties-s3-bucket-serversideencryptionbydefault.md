@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `KMSMasterKeyID`  <a name="cfn-s3-bucket-serversideencryptionbydefault-kmsmasterkeyid"></a>
 KMS key ID to use for the default encryption\. This parameter is allowed if SSEAlgorithm is aws:kms\.  
-You can specify the key ID or the Amazon Resource Name \(ARN\) of the CMK\. However, if you are using encryption with cross\-account operations, you must use a fully qualified CMK ARN\. For more information, see [Using encryption for cross\-account operations](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html#bucket-encryption-update-bucket-policy)\.  
+You can specify the key ID, key alias, or the Amazon Resource Name \(ARN\) of the CMK\. However, if you are using encryption with cross\-account operations, you must use a fully qualified CMK ARN\. For more information, see [Using encryption for cross\-account operations](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html#bucket-encryption-update-bucket-policy)\.  
 For example:  
 + Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 + Key ARN: `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
@@ -39,14 +39,14 @@ Amazon S3 only supports symmetric KMS keys and not asymmetric KMS keys\. For mor
 Server\-side encryption algorithm to use for the default encryption\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `AES256 | aws:kms`  
+*Allowed values*: `AES256 | aws:kms | aws:kms:dsse`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-s3-bucket-serversideencryptionbydefault--examples"></a>
 
 ### Create a bucket with default encryption<a name="aws-properties-s3-bucket-serversideencryptionbydefault--examples--Create_a_bucket_with_default_encryption"></a>
 
-The following example creates a bucket with server\-side bucket encryption configured\. This example uses encryption with AWS KMS keys \(SSE\-KMS\)\. You can use server\-side encryption with S3\-managed keys \(SSE\-S3\) by modifying the [Amazon S3 Bucket ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html) property to specify `AES256` for `SSEAlgorithm`\. For more information, see [Using SSE\-S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingServerSideEncryption.html) in the *Amazon S3 User Guide*\.
+The following example creates a bucket with server\-side bucket encryption configured\. This example uses encryption with AWS KMS keys \(SSE\-KMS\)\. You can use dual\-layer server\-side encryption with AWS KMS keys \(DSSE\-KMS\) by specifying `aws:kms:dsse` for `SSEAlgorithm`\. You can also use server\-side encryption with S3\-managed keys \(SSE\-S3\) by modifying the [Amazon S3 Bucket ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html) property to specify `AES256` for `SSEAlgorithm`\. For more information, see [Using SSE\-S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingServerSideEncryption.html) in the *Amazon S3 User Guide*\.
 
 #### JSON<a name="aws-properties-s3-bucket-serversideencryptionbydefault--examples--Create_a_bucket_with_default_encryption--json"></a>
 

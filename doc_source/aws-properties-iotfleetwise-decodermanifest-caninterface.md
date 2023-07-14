@@ -35,7 +35,7 @@ The unique name of the interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProtocolName`  <a name="cfn-iotfleetwise-decodermanifest-caninterface-protocolname"></a>
-The name of the communication protocol for the interface\.  
+\(Optional\) The name of the communication protocol for the interface\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -43,7 +43,7 @@ The name of the communication protocol for the interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProtocolVersion`  <a name="cfn-iotfleetwise-decodermanifest-caninterface-protocolversion"></a>
-The version of the communication protocol for the interface\.  
+\(Optional\) The version of the communication protocol for the interface\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

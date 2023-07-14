@@ -45,7 +45,7 @@ Specifies AWS Glue Data Catalog targets\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeltaTargets`  <a name="cfn-glue-crawler-targets-deltatargets"></a>
-Property description not available\.  
+Specifies an array of Delta data store targets\.  
 *Required*: No  
 *Type*: List of [DeltaTarget](aws-properties-glue-crawler-deltatarget.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
