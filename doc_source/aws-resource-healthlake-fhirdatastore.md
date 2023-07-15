@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DatastoreName](#cfn-healthlake-fhirdatastore-datastorename)" : String,
       "[DatastoreTypeVersion](#cfn-healthlake-fhirdatastore-datastoretypeversion)" : String,
+      "[IdentityProviderConfiguration](#cfn-healthlake-fhirdatastore-identityproviderconfiguration)" : IdentityProviderConfiguration,
       "[PreloadDataConfig](#cfn-healthlake-fhirdatastore-preloaddataconfig)" : PreloadDataConfig,
       "[SseConfiguration](#cfn-healthlake-fhirdatastore-sseconfiguration)" : SseConfiguration,
       "[Tags](#cfn-healthlake-fhirdatastore-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -31,6 +32,8 @@ Type: AWS::HealthLake::FHIRDatastore
 Properties: 
   [DatastoreName](#cfn-healthlake-fhirdatastore-datastorename): String
   [DatastoreTypeVersion](#cfn-healthlake-fhirdatastore-datastoretypeversion): String
+  [IdentityProviderConfiguration](#cfn-healthlake-fhirdatastore-identityproviderconfiguration): 
+    IdentityProviderConfiguration
   [PreloadDataConfig](#cfn-healthlake-fhirdatastore-preloaddataconfig): 
     PreloadDataConfig
   [SseConfiguration](#cfn-healthlake-fhirdatastore-sseconfiguration): 
@@ -55,6 +58,12 @@ The FHIR version of the Data Store\. The only supported version is R4\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `R4`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`IdentityProviderConfiguration`  <a name="cfn-healthlake-fhirdatastore-identityproviderconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [IdentityProviderConfiguration](aws-properties-healthlake-fhirdatastore-identityproviderconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PreloadDataConfig`  <a name="cfn-healthlake-fhirdatastore-preloaddataconfig"></a>

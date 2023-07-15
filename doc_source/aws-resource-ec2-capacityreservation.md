@@ -128,7 +128,7 @@ The Amazon Resource Name \(ARN\) of the Outpost on which to create the Capacity 
 The Amazon Resource Name \(ARN\) of the cluster placement group in which to create the Capacity Reservation\. For more information, see [ Capacity Reservations for cluster placement groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html) in the *Amazon EC2 User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^arn:aws([a-z-]+)?:ec2:[a-z\d-]+:\d{12}:placement-group/([^\s].+[^\s]){1,255}$`  
+*Pattern*: `^arn:aws([a-z-]+)?:ec2:[a-z\d-]+:\d{12}:placement-group/^.{1,255}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TagSpecifications`  <a name="cfn-ec2-capacityreservation-tagspecifications"></a>

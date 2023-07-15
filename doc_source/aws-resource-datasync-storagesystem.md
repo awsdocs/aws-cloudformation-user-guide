@@ -44,7 +44,7 @@ Properties:
 ## Properties<a name="aws-resource-datasync-storagesystem-properties"></a>
 
 `AgentArns`  <a name="cfn-datasync-storagesystem-agentarns"></a>
-Specifies the Amazon Resource Name \(ARN\) of the DataSync agent that connects to and reads from your on\-premises storage system's management interface\.  
+Specifies the Amazon Resource Name \(ARN\) of the DataSync agent that connects to and reads from your on\-premises storage system's management interface\. You can only specify one ARN\.  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `1`  

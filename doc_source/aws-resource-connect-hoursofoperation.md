@@ -55,7 +55,7 @@ The description for the hours of operation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceArn`  <a name="cfn-connect-hoursofoperation-instancearn"></a>
-The Amazon Resource Name \(ARN\) for the instance\.  
+The Amazon Resource Name \(ARN\) of the instance\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -99,7 +99,7 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 #### <a name="aws-resource-connect-hoursofoperation-return-values-fn--getatt-fn--getatt"></a>
 
 `HoursOfOperationArn`  <a name="HoursOfOperationArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) for the hours of operation\.
+The Amazon Resource Name \(ARN\) of the hours of operation\.
 
 ## Examples<a name="aws-resource-connect-hoursofoperation--examples"></a>
 

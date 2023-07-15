@@ -195,7 +195,7 @@ When updating a compute environment, changing the VPC subnets requires an infras
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Tags`  <a name="cfn-batch-computeenvironment-computeresources-tags"></a>
-Key\-value pair tags to be applied to EC2 resources that are launched in the compute environment\. For AWS Batch, these take the form of `"String1": "String2"`, where `String1` is the tag key and `String2` is the tag value\-for example, `{ "Name": "Batch Instance - C4OnDemand" }`\. This is helpful for recognizing your AWS Batch instances in the Amazon EC2 console\. These tags aren't seen when using the AWS Batch `ListTagsForResource` API operation\.  
+Key\-value pair tags to be applied to EC2 resources that are launched in the compute environment\. For AWS Batch, these take the form of `"String1": "String2"`, where `String1` is the tag key and `String2` is the tag value\-for example, `{ "Name": "Batch Instance - C4OnDemand" }`\. This is helpful for recognizing your Batch instances in the Amazon EC2 console\. These tags aren't seen when using the AWS Batch `ListTagsForResource` API operation\.  
 When updating a compute environment, changing this setting requires an infrastructure update of the compute environment\. For more information, see [Updating compute environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html) in the * AWS Batch User Guide*\.  
 This parameter isn't applicable to jobs that are running on Fargate resources\. Don't specify it\.
 *Required*: No  

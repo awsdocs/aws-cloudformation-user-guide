@@ -68,7 +68,7 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 #### <a name="aws-resource-connect-userhierarchygroup-return-values-fn--getatt-fn--getatt"></a>
 
 `UserHierarchyGroupArn`  <a name="UserHierarchyGroupArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) for the user hierarchy group\.
+The Amazon Resource Name \(ARN\) of the user hierarchy group\.
 
 ## Examples<a name="aws-resource-connect-userhierarchygroup--examples"></a>
 

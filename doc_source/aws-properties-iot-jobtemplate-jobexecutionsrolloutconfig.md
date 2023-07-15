@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig-properties"></a>
 
 `ExponentialRolloutRate`  <a name="cfn-iot-jobtemplate-jobexecutionsrolloutconfig-exponentialrolloutrate"></a>
-Property description not available\.  
+The rate of increase for a job rollout\. This parameter allows you to define an exponential rate for a job rollout\.  
 *Required*: No  
 *Type*: [ExponentialRolloutRate](aws-properties-iot-jobtemplate-exponentialrolloutrate.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

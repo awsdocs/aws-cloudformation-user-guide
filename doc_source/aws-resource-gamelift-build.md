@@ -53,7 +53,7 @@ Support is ending in 2023 for the Windows Server 2012 and Amazon Linux \(AL1\) o
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServerSdkVersion`  <a name="cfn-gamelift-build-serversdkversion"></a>
-A server SDK version you used when integrating your game server build with Amazon GameLift\. For more information see [Integrate games with custom game servers](https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html)\. By default Amazon GameLift sets this value to `4.0.2`\.  
+The Amazon GameLift Server SDK version used to develop your game server\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `128`  

@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ApplicationHostUrl](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-applicationhosturl)" : String,
   "[ApplicationServicePath](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-applicationservicepath)" : String,
   "[ClientNumber](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-clientnumber)" : String,
+  "[DisableSSO](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-disablesso)" : Boolean,
   "[LogonLanguage](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-logonlanguage)" : String,
   "[OAuthProperties](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-oauthproperties)" : OAuthProperties,
   "[PortNumber](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-portnumber)" : Integer,
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ApplicationHostUrl](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-applicationhosturl): String
   [ApplicationServicePath](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-applicationservicepath): String
   [ClientNumber](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-clientnumber): String
+  [DisableSSO](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-disablesso): Boolean
   [LogonLanguage](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-logonlanguage): String
   [OAuthProperties](#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-oauthproperties): 
     OAuthProperties
@@ -58,6 +60,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Minimum*: `3`  
 *Maximum*: `3`  
 *Pattern*: `^\d{3}$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DisableSSO`  <a name="cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-disablesso"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogonLanguage`  <a name="cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-logonlanguage"></a>

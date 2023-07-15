@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AuditLogDestination`  <a name="cfn-fsx-filesystem-windowsconfiguration-auditlogconfiguration-auditlogdestination"></a>
 The Amazon Resource Name \(ARN\) for the destination of the audit logs\. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN\.  
-The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix\. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the `aws-fsx` prefix\.  
+The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix\. The name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx` prefix\.  
 The destination ARN \(either CloudWatch Logs log group or Kinesis Data Firehose delivery stream\) must be in the same AWS partition, AWS Region, and AWS account as your Amazon FSx file system\.  
 *Required*: No  
 *Type*: String  

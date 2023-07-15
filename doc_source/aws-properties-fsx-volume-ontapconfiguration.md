@@ -75,11 +75,11 @@ Specifies the security style for the volume\. If a volume's security style is no
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SizeInMegabytes`  <a name="cfn-fsx-volume-ontapconfiguration-sizeinmegabytes"></a>
-Specifies the size of the volume, in megabytes \(MB\), that you are creating\. Provide any whole number in the range of 20–104857600 to specify the size of the volume\.  
+Specifies the size of the volume, in megabytes \(MB\), that you are creating\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `2147483647`  
+*Maximum*: `314572800`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotPolicy`  <a name="cfn-fsx-volume-ontapconfiguration-snapshotpolicy"></a>

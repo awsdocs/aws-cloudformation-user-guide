@@ -4,6 +4,22 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_IoT.md) | The following resource was updated: AWS::IoT::JobTemplate\. 
+
+ [AWS::IoT::JobTemplate JobExecutionsRetryConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsretryconfig.html)   
+The AWS::IoT::JobTemplate JobExecutionsRetryConfig resource adds a description for the RetryCriteriaList parameter\.  | July 20, 2023 | 
+| [Updated resource](AWS_IoT.md) | The following resource was updated: AWS::IoT::JobTemplate\. 
+
+ [AWS::IoT::JobTemplate JobExecutionsRolloutConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html)   
+The AWS::IoT::JobTemplate JobExecutionsRolloutConfig resource adds a description for the ExponentialRolloutRate parameter\.  | July 20, 2023 | 
+| [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::RoutingProfile 
+
+ [AWS::Connect::RoutingProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html)   
+Use the `AWS::Connect::RoutingProfile` resource to create a routing profile for the specified Amazon Connect instance\.   | July 13, 2023 | 
+| [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::Queue 
+
+ [AWS::Connect::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html)   
+Use the `AWS::Connect::Queue` resource to create a queue for the specified Amazon Connect instance\.   | July 13, 2023 | 
 | [New resource](AWS_Transfer.md) | The following resource was added: AWS::Transfer::Server StructuredLogDestination 
 
  [AWS::Transfer::Server StructuredLogDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-structuredlogdestination.html)   

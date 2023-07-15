@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AggregateColumns](#cfn-cleanrooms-configuredtable-analysisruleaggregation-aggregatecolumns)" : [ AggregateColumn, ... ],
+  "[AllowedJoinOperators](#cfn-cleanrooms-configuredtable-analysisruleaggregation-allowedjoinoperators)" : [ String, ... ],
   "[DimensionColumns](#cfn-cleanrooms-configuredtable-analysisruleaggregation-dimensioncolumns)" : [ String, ... ],
   "[JoinColumns](#cfn-cleanrooms-configuredtable-analysisruleaggregation-joincolumns)" : [ String, ... ],
   "[JoinRequired](#cfn-cleanrooms-configuredtable-analysisruleaggregation-joinrequired)" : String,
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AggregateColumns](#cfn-cleanrooms-configuredtable-analysisruleaggregation-aggregatecolumns): 
     - AggregateColumn
+  [AllowedJoinOperators](#cfn-cleanrooms-configuredtable-analysisruleaggregation-allowedjoinoperators): 
+    - String
   [DimensionColumns](#cfn-cleanrooms-configuredtable-analysisruleaggregation-dimensioncolumns): 
     - String
   [JoinColumns](#cfn-cleanrooms-configuredtable-analysisruleaggregation-joincolumns): 
@@ -41,6 +44,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The columns that query runners are allowed to use in aggregation queries\.  
 *Required*: Yes  
 *Type*: List of [AggregateColumn](aws-properties-cleanrooms-configuredtable-aggregatecolumn.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AllowedJoinOperators`  <a name="cfn-cleanrooms-configuredtable-analysisruleaggregation-allowedjoinoperators"></a>
+Which logical operators \(if any\) are to be used in an INNER JOIN match condition\. Default is `AND`\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DimensionColumns`  <a name="cfn-cleanrooms-configuredtable-analysisruleaggregation-dimensioncolumns"></a>

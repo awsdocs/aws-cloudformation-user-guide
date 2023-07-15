@@ -4,7 +4,7 @@ Amazon Verified Permissions is a permissions management service from AWS\. You c
 
 Verified Permissions uses Cedar as the policy language to express your permission requirements\. Cedar supports both role\-based access control \(RBAC\) and attribute\-based access control \(ABAC\) authorization models\.
 
-For more information about configuring, administering, and using Amazon Verified Permissions in your applications, see the [Amazon Verified Permissions User Guide](https://docs.aws.amazon.com/verified-permissions/latest/userguide)\.
+For more information about configuring, administering, and using Amazon Verified Permissions in your applications, see the [Amazon Verified Permissions User Guide](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide)\.
 
 For more information about the Cedar policy language, see the [Cedar Language Reference Guide](https://docs.cedarpolicy.com)\.
 
