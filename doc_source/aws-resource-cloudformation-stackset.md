@@ -138,7 +138,7 @@ The input parameters for the stack set template\.
 `PermissionModel`  <a name="cfn-cloudformation-stackset-permissionmodel"></a>
 Describes how the IAM roles required for stack set operations are created\.  
 + With `SELF_MANAGED` permissions, you must create the administrator and execution roles required to deploy to target accounts\. For more information, see [Grant Self\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)\.
-+ With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required to deploy to accounts managed by AWS Organizations\. For more information, see [Grant Service\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html)\.
++ With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required to deploy to accounts managed by AWS Organizations\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `SELF_MANAGED | SERVICE_MANAGED`  

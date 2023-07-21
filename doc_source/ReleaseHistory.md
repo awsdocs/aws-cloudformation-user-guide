@@ -4,22 +4,48 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated resource](AWS_IoT.md) | The following resource was updated: AWS::IoT::JobTemplate\. 
+| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::Volume 
 
- [AWS::IoT::JobTemplate JobExecutionsRetryConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsretryconfig.html)   
-The AWS::IoT::JobTemplate JobExecutionsRetryConfig resource adds a description for the RetryCriteriaList parameter\.  | July 20, 2023 | 
-| [Updated resource](AWS_IoT.md) | The following resource was updated: AWS::IoT::JobTemplate\. 
+[AWS::FSx::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html)  
+Use the `SnapLock Configuration` resource to create an ONTAP SnapLock volume\.  | July 20, 2023 | 
+| [New resources](AWS_IAM.md) | The following resources were added: `AWS::IAM::GroupPolicy`, `AWS::IAM::RolePolicy`, and `AWS::IAM::UserPolicy`\. 
 
- [AWS::IoT::JobTemplate JobExecutionsRolloutConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html)   
-The AWS::IoT::JobTemplate JobExecutionsRolloutConfig resource adds a description for the ExponentialRolloutRate parameter\.  | July 20, 2023 | 
+ [AWS::IAM::GroupPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html)   
+Use the `AWS::IAM::GroupPolicy` resource to specify an inline policy document that is embedded in the IAM group\. 
+
+ [AWS::IAM::RolePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html)   
+Use the `AWS::IAM::RolePolicy` resource to specify an inline policy document that is embedded in the IAM role\. 
+
+ [AWS::IAM::UserPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html)   
+Use the `AWS::IAM::UserPolicy` resource to specify an inline policy document that is embedded in the IAM user\.  | July 20, 2023 | 
+| [New resource](AWS_Logs.md) | The following resource was added: AWS::Logs::AccountPolicy\. 
+
+ [AWS::Logs::AccountPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html)   
+Use the AWS::Logs::AccountPolicy resource to create or update an account\-level data protection policy that applies to all log groups in the account\. A data protection policy can help safeguard sensitive data that's ingested by your log groups by auditing and masking the sensitive log data\.\. For more information, see [Protect sensitive log data with masking](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html)\.  | July 20, 2023 | 
 | [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::RoutingProfile 
 
  [AWS::Connect::RoutingProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html)   
-Use the `AWS::Connect::RoutingProfile` resource to create a routing profile for the specified Amazon Connect instance\.   | July 13, 2023 | 
+Use the `AWS::Connect::RoutingProfile` resource to create a routing profile for the specified Amazon Connect instance\.   | July 20, 2023 | 
 | [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::Queue 
 
  [AWS::Connect::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html)   
-Use the `AWS::Connect::Queue` resource to create a queue for the specified Amazon Connect instance\.   | July 13, 2023 | 
+Use the `AWS::Connect::Queue` resource to create a queue for the specified Amazon Connect instance\.   | July 20, 2023 | 
+| [Updated resource](AWS_InternetMonitor.md) | The following resource was updated: `AWS::InternetMonitor::Monitor`\. 
+
+ [AWS::InternetMonitor::Monitor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html)   
+Use `Monitor.HealthEventsConfig` to set the threshold for when Internet Monitor creates a health event\. You can set the threshold for the availability score, performance score, or both\.  | July 13, 2023 | 
+| [Updated resource](AWS_IoT.md) | The following resource was updated: AWS::IoT::JobTemplate\. 
+
+ [AWS::IoT::JobTemplate JobExecutionsRetryConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsretryconfig.html)   
+The AWS::IoT::JobTemplate JobExecutionsRetryConfig resource adds a description for the RetryCriteriaList parameter\.  | July 13, 2023 | 
+| [Updated resource](AWS_IoT.md) | The following resource was updated: AWS::IoT::JobTemplate\. 
+
+ [AWS::IoT::JobTemplate JobExecutionsRolloutConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html)   
+The AWS::IoT::JobTemplate JobExecutionsRolloutConfig resource adds a description for the ExponentialRolloutRate parameter\.  | July 13, 2023 | 
+| [Updated resource](AWS_SageMaker.md) | The following resource was updated: AWS::SageMaker::Endpoint\. 
+
+ [AWS::SageMaker::Endpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html)   
+Use the `RollingUpdatePolicy` in the `AWS::SageMaker::Endpoint` resource to create a new rolling deployment for updating a SageMaker endpoint\.  | July 13, 2023 | 
 | [New resource](AWS_Transfer.md) | The following resource was added: AWS::Transfer::Server StructuredLogDestination 
 
  [AWS::Transfer::Server StructuredLogDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-structuredlogdestination.html)   
@@ -164,6 +190,16 @@ Use the `AWS::Omics::AnnotationStore.SchemaItem` property to specify a schema it
 
  [AWS::Omics::SequenceStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html)   
 Use the `AWS::Omics::SequenceStore.FallbackLocation` property update to specify a fallback location for files that don't upload successfully\. Omics\.  | June 8, 2023 | 
+| [AWS CloudFormation StackSets APIs to control AWS Organizations trust access](#ReleaseHistory) | AWS CloudFormation StackSets provides customers with the following APIs for managing AWS Organizations trust access: 
+
+ [ActivateOrganizationsAccess](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateOrganizationsAccess.html)   
+Activate trusted access with AWS Organizations\. With trusted access between StackSets and Organizations activated, the management account has permissions to create and manage StackSets for your organization\. 
+
+ [DeactivateOrganizationsAccess](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeactivateOrganizationsAccess.html)   
+Deactivates trusted access with AWS Organizations\. If trusted access is deactivated, the management account does not have permissions to create and manage service\-managed StackSets for your organization\. 
+
+ [DescribeOrganizationsAccess](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeOrganizationsAccess.html)   
+Retrieves information about the account's `OrganizationAccess` status\. This API can be called either by the management account or the delegated administrator by using the `CallAs` parameter\. This API can also be called without the `CallAs` parameter by the management account\.  | June 5, 2023 | 
 | [Updated resource](AWS_GroundStation.md) | The following resource was updated: AWS::GroundStation::DataflowEndpointGroup\. 
 
  [ContactPostPassDurationSeconds property](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds)   
@@ -679,6 +715,7 @@ Use the `AWS::Connect::SecurityKey` resource to associate Security Key with an i
 
  [AWS::SimSpaceWeaver::Simulation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-simspaceweaver-simulation.html)   
 Use the `AWS::SimSpaceWeaver::Simulation` resource to specify a simulation in the AWS Cloud, in your AWS account\.  | February 2, 2023 | 
+| [DescribeStackSet API](#ReleaseHistory) | The DescribeStackSet API has a new parameter to the list of Regions where a given stack set is deployed\.For more information, see [DescribeStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackSet.html)\. | February 1, 2023 | 
 | [Updated resource](AWS_Lambda.md) | The following resource was updated: AWS::Lambda::Function\. 
 
  [AWS::Lambda::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)   
@@ -717,6 +754,7 @@ The `MasterUserSecret` property 4has the secret managed by RDS in AWS Secrets Ma
  [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html)   
 The `ManageMasterUserPassword` property indicates whether to manage the master user password with AWS Secrets Manager\.  
 The `MasterUserSecret` property 4has the secret managed by RDS in AWS Secrets Manager for the master user password\.  | January 12, 2023 | 
+| [Fn::FindInMap enhancements](#ReleaseHistory) | Adding the AWS::LanguageExtensions transform in a AWS CloudFormation template allows you to use intrinsic functions to define the fields of Fn::FindInMap\. You can also use a new optional field to return a default value if a mapping isn't found\.For more information, see [Fn::FindInMap enhancements](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-findinmap-enhancements.html)\. | January 11, 2023 | 
 | [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::ResponseHeadersPolicy\. 
 
  [AWS::CloudFront::ResponseHeadersPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-responseheaderspolicy.html)   
@@ -1022,6 +1060,7 @@ Use the `ResourcePolicy` resource to specify a resource\-based policy which enab
  [AWS::CloudFront::ContinuousDeploymentPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html)   
 Use the `AWS::CloudFront::ContinuousDeploymentPolicy` resource in a CloudFront continuous deployment workflow\.  
 For more information, see [Using CloudFront continuous deployment to safely test CDN configuration changes](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/continuous-deployment.html) in the *Amazon CloudFront Developer Guide*\.  | November 17, 2022 | 
+| [Managing StackSets events with AWS CloudFormation and Amazon EventBridge](#ReleaseHistory) | AWS CloudFormation StackSets launch event notifications via Amazon EventBridge\. You can trigger event\-driven actions after creating, updating, or deleting your CloudFormation stack setsFor more information, see [Managing events with AWS CloudFormation and Amazon EventBridge](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks-event-bridge.html)\. | November 16, 2022 | 
 | [New property](AWS_GreengrassV2.md) | The following property was added: AWS::GreengrassV2::Deployment\.ParentTargetArn\. 
 
  [AWS::GreengrassV2::Deployment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrassv2-deployment.html)   
@@ -1083,6 +1122,13 @@ Use the `AWS::ResourceExplorer2::View` resource to create a view that your users
 
  [AWS::ResourceExplorer2::DefaultViewAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resource-explorer-defaultviewassociation.html)   
 Use the `AWS::ResourceExplorer2::DefaultViewAssociation` resource to designate a view as the default for its AWS Region in the account\.  | November 7, 2022 | 
+| [Improved insights on stack instances for stack set operations](#ReleaseHistory) | AWS CloudFormation StackSets provides more detailed information on stack instances for stack set operations: 
+
+ [DescribeStackSetOperation](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackSetOperation.html)   
+You can now use `DescribeStackSetOperation` to provide the count of failed stack instances for stack set operations during deployment\. 
+
+ [ListStackInstances](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListStackInstances.html)   
+You can now use the filtering option `LastOperationID` to list stack instances for stack set operations\.  | November 4, 2022 | 
 | [Updated resource](AWS_RDS.md) | The following resource was updated: AWS::RDS::DBCluster 
 
  [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)   
@@ -3009,7 +3055,7 @@ Use the `AWS::IoTFleetHub::Application` resource to create a Fleet Hub for AWS I
 
  [AWS::SES::ContactList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html)   
 Use the `AWS::SES::ContactList` resource to create a list that contains contacts that have subscribed to a particular topic or topics\.  | April 29, 2021 | 
-| [Updated resource](AWS_IAM.md) | The following resources were updated: AWS::IAM::InstanceProfile and AWS::IAM::ManagedPolicy\. 
+| [Updated resources](AWS_IAM.md) | The following resources were updated: `AWS::IAM::InstanceProfile` and `AWS::IAM::ManagedPolicy`\. 
 
  [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)   
 Use the `Tags` property to specify a list of tags that you want to attach to the newly created instance profile\. 
@@ -3354,18 +3400,7 @@ Use the `AWS::EMR::Studio` resource to create a new Amazon EMR Studio\.
 
  [AWS::EMR::StudioSessionMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studiosessionmapping.html)   
 Use the `AWS::EMR::StudioSessionMapping` resource to assign a user or group to an Amazon EMR Studio, and apply an IAM session policy to refine Studio permissions for that user or group\.  | February 25, 2021 | 
-| [New resources](AWS_SageMaker.md) | The following resources were added: AWS::SageMaker::Image, AWS::SageMaker::ImageVersion\. 
-
- [AWS::SageMaker::Image](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-image.html)   
-Use the `AWS::SageMaker::Image` resource to create a new Image in Amazon SageMaker\. 
-
- [AWS::SageMaker::ImageVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html)   
-Use the `AWS::SageMaker::ImageVersion` resource to create a new ImageVersion in Amazon SageMaker\.  | February 25, 2021 | 
-| [New resource](AWS_EKS.md) | The following resource was added: `AWS::EKS::Addon`\. 
-
- [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html)   
-Use the `AWS::EKS::Addon` resource to create an Amazon EKS add\-on\.  | February 25, 2021 | 
-| [New resource](AWS_IAM.md) | The following resources were added: AWS::IAM::OIDCProvider, AWS::IAM::SAMLProvider, AWS::IAM::ServerCertificate, and AWS::IAM::VirtualMFADevice\. 
+| [New resources](AWS_IAM.md) | The following resources were added: `AWS::IAM::OIDCProvider`, `AWS::IAM::SAMLProvider`, `AWS::IAM::ServerCertificate`, and `AWS::IAM::VirtualMFADevice`\. 
 
  [AWS::IAM::OIDCProvider](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html)   
 Use the `AWS::IAM::OIDCProvider` resource to create an IAM entity to describe an identity provider \(IdP\) that supports OpenID Connect \(OIDC\)\. 
@@ -3378,6 +3413,17 @@ Use the `AWS::IAM::ServerCertificate` resource to retrieve information about the
 
  [AWS::IAM::VirtualMFADevice](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html)   
 Use the `AWS::IAM::VirtualMFADevice` resource to create a new virtual MFA device for the AWS account\.  | February 25, 2021 | 
+| [New resources](AWS_SageMaker.md) | The following resources were added: AWS::SageMaker::Image, AWS::SageMaker::ImageVersion\. 
+
+ [AWS::SageMaker::Image](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-image.html)   
+Use the `AWS::SageMaker::Image` resource to create a new Image in Amazon SageMaker\. 
+
+ [AWS::SageMaker::ImageVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html)   
+Use the `AWS::SageMaker::ImageVersion` resource to create a new ImageVersion in Amazon SageMaker\.  | February 25, 2021 | 
+| [New resource](AWS_EKS.md) | The following resource was added: `AWS::EKS::Addon`\. 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html)   
+Use the `AWS::EKS::Addon` resource to create an Amazon EKS add\-on\.  | February 25, 2021 | 
 | [New attributes](AWS_Pinpoint.md) | The following parameters were added for 10DLC support: EntityId, TemplateId, OriginationNumber\. 
 
  [AWS::Pinpoint::Campaign CampaignSmsMessage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignsmsmessage.html)   
@@ -5958,7 +6004,7 @@ Use the `AWS::AppMesh::VirtualNode` resource to specify a virtual node within a 
  [AWS::AppMesh::VirtualRouter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html)   
 Use the `AWS::AppMesh::VirtualRouter` resource to specify a virtual router within a service mesh\. 
 
- [AWS::AppMesh::VirtualService](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html.html)   
+ [AWS::AppMesh::VirtualService](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html)   
 Use the `AWS::AppMesh::VirtualService` resource to specify a virtual service within a service mesh\.  | March 27, 2019 | 
 | [New resources](#ReleaseHistory) | The following resources were added: AWS::Greengrass::ConnectorDefinition, AWS::Greengrass::ConnectorDefinitionVersion, AWS::Greengrass::CoreDefinition, AWS::Greengrass::CoreDefinitionVersion, AWS::Greengrass::DeviceDefinition, AWS::Greengrass::DeviceDefinitionVersion, AWS::Greengrass::FunctionDefinition, AWS::Greengrass::FunctionDefinitionVersion, AWS::Greengrass::Group, AWS::Greengrass::GroupVersion, AWS::Greengrass::LoggerDefinition, AWS::Greengrass::LoggerDefinitionVersion, AWS::Greengrass::ResourceDefinition, AWS::Greengrass::ResourceDefinitionVersion, AWS::Greengrass::SubscriptionDefinition, and AWS::Greengrass::SubscriptionDefinitionVersion\. 
 
@@ -7022,7 +7068,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  New feature  |  February 2, 2012  |  You can now update properties for the following resources in an existing stack: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html) For a complete list of updatable resources and details about what to consider when updating a stack, see [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.  |  2010\-05\-15  | 
 |  Restructured guide  |  February 2, 2012  |  Reorganized existing sections into new sections: [Working with AWS CloudFormation Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-guide.html) and **Managing Stacks**\. Moved [Template Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-reference.html) to the top level of the Table of Contents\. Moved [Estimating the Cost of Your AWS CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-paying.html) to the Getting Started section\.  |  2010\-05\-15  | 
 |  New content  |  February 2, 2012  |  Added three new sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
-|  New feature  |  May 26, 2011  |  AWS CloudFormation now provides the `aws cloudformation list-stacks` command, which enables you to list stacks filtered by stack status\. Deleted stacks can be listed for up to 90 days after they have been deleted\. For more information, see [Describing and Listing Your Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html)\.  |  2010\-05\-15  | 
-|  New features  |  May 26, 2011  |  The `aws cloudformation describe-stack-resources` and `aws cloudformation get-template` commands now enable you to get information from stacks that have been deleted for 90 days after they have been deleted\. For more information, see [Listing Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-listing-stack-resources.html) and [Retrieving a Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-get-template.html)\.  |  2010\-05\-15  | 
+|  New feature  |  May 26, 2011  |  AWS CloudFormation now provides the `aws cloudformation list-stacks` command, which enables you to list stacks filtered by stack status\. Deleted stacks can be listed for up to 90 days after they have been deleted\.  For more information, see [Describing and Listing Your Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html)\.  |  2010\-05\-15  | 
+|  New features  |  May 26, 2011  |  The `aws cloudformation describe-stack-resources` and `aws cloudformation get-template` commands now enable you to get information from stacks that have been deleted for 90 days after they have been deleted\.  For more information, see [Listing Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-listing-stack-resources.html) and [Retrieving a Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-get-template.html)\.  |  2010\-05\-15  | 
 |  New link  |  March 1, 2011  |  AWS CloudFormation endpoint information is now located in the AWS General Reference\. For more information, go to Regions and Endpoints in [Amazon Web Services General Reference](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html)\.  |  2010\-05\-15  | 
 |  Initial release  |  February 25, 2011  |  The initial public release of AWS CloudFormation\.  |  2010\-05\-15  | 

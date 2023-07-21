@@ -78,7 +78,7 @@ Application Insights can create applications based on a resource group or on an 
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ACCOUNT_BASED`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogPatternSets`  <a name="cfn-applicationinsights-application-logpatternsets"></a>
 The log pattern sets\.  

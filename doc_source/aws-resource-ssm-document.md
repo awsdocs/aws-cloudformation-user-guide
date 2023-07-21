@@ -56,7 +56,7 @@ A list of key\-value pairs that describe attachments to a version of a document\
 *Required*: No  
 *Type*: List of [AttachmentsSource](aws-properties-ssm-document-attachmentssource.md)  
 *Maximum*: `20`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Content`  <a name="cfn-ssm-document-content"></a>
 The content for the new SSM document in JSON or YAML\. For more information about the schemas for SSM document content, see [SSM document schema features and examples](https://docs.aws.amazon.com/systems-manager/latest/userguide/document-schemas-features.html) in the *AWS Systems Manager User Guide*\.  
@@ -64,14 +64,14 @@ This parameter also supports `String` data types\.
 *Required*: Yes  
 *Type*: Json  
 *Minimum*: `1`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `DocumentFormat`  <a name="cfn-ssm-document-documentformat"></a>
 Specify the document format for the request\. JSON is the default format\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `JSON | TEXT | YAML`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `DocumentType`  <a name="cfn-ssm-document-documenttype"></a>
 The type of document to create\.  
@@ -95,7 +95,7 @@ You can't use the following strings as document name prefixes\. These are reserv
 A list of SSM documents required by a document\. This parameter is used exclusively by AWS AppConfig\. When a user creates an AWS AppConfig configuration in an SSM document, the user must also specify a required document for validation purposes\. In this case, an `ApplicationConfiguration` document requires an `ApplicationConfigurationSchema` document for validation purposes\. For more information, see [What is AWS AppConfig?](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) in the * AWS AppConfig User Guide*\.  
 *Required*: No  
 *Type*: List of [DocumentRequires](aws-properties-ssm-document-documentrequires.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Tags`  <a name="cfn-ssm-document-tags"></a>
 AWS CloudFormation resource tags to apply to the document\. Use tags to help you identify and categorize resources\.   
@@ -110,7 +110,7 @@ Specify a target type to define the kinds of resources the document can run on\.
 *Type*: String  
 *Maximum*: `200`  
 *Pattern*: `^\/[\w\.\-\:\/]*$`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `UpdateMethod`  <a name="cfn-ssm-document-updatemethod"></a>
 If the document resource you specify in your template already exists, this parameter determines whether a new version of the existing document is created, or the existing document is replaced\. `Replace` is the default method\. If you specify `NewVersion` for the `UpdateMethod` parameter, and the `Name` of the document does not match an existing resource, a new document is created\. When you specify `NewVersion`, the default version of the document is changed to the newly created version\.  
@@ -123,7 +123,7 @@ An optional field specifying the version of the artifact you are creating with t
 *Required*: No  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9_\-.]{1,128}$`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 ## Return values<a name="aws-resource-ssm-document-return-values"></a>
 

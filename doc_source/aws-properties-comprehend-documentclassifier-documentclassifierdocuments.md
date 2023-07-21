@@ -1,6 +1,6 @@
 # AWS::Comprehend::DocumentClassifier DocumentClassifierDocuments<a name="aws-properties-comprehend-documentclassifier-documentclassifierdocuments"></a>
 
-The location of the training documents\. This parameter is required in a request to create a native document model\.
+The location of the training documents\. This parameter is required in a request to create a semi\-structured document classification model\.
 
 ## Syntax<a name="aws-properties-comprehend-documentclassifier-documentclassifierdocuments-syntax"></a>
 

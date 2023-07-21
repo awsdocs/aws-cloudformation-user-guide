@@ -18,7 +18,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ContainerName](#cfn-ecs-taskset-loadbalancer-containername)" : String,
   "[ContainerPort](#cfn-ecs-taskset-loadbalancer-containerport)" : Integer,
-  "[LoadBalancerName](#cfn-ecs-taskset-loadbalancer-loadbalancername)" : String,
   "[TargetGroupArn](#cfn-ecs-taskset-loadbalancer-targetgrouparn)" : String
 }
 ```
@@ -28,7 +27,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ContainerName](#cfn-ecs-taskset-loadbalancer-containername): String
   [ContainerPort](#cfn-ecs-taskset-loadbalancer-containerport): Integer
-  [LoadBalancerName](#cfn-ecs-taskset-loadbalancer-loadbalancername): String
   [TargetGroupArn](#cfn-ecs-taskset-loadbalancer-targetgrouparn): String
 ```
 
@@ -44,13 +42,6 @@ The name of the container \(as it appears in a container definition\) to associa
 The port on the container to associate with the load balancer\. This port must correspond to a `containerPort` in the task definition the tasks in the service are using\. For tasks that use the EC2 launch type, the container instance they're launched on must allow ingress traffic on the `hostPort` of the port mapping\.  
 *Required*: No  
 *Type*: Integer  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`LoadBalancerName`  <a name="cfn-ecs-taskset-loadbalancer-loadbalancername"></a>
-The name of the load balancer to associate with the Amazon ECS service or task set\.  
-A load balancer name is only specified when using a Classic Load Balancer\. If you are using an Application Load Balancer or a Network Load Balancer the load balancer name parameter should be omitted\.  
-*Required*: No  
-*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetGroupArn`  <a name="cfn-ecs-taskset-loadbalancer-targetgrouparn"></a>

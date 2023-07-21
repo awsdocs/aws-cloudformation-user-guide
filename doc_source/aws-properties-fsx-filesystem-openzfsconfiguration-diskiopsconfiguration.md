@@ -28,11 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The total number of SSD IOPS provisioned for the file system\.  
 *Required*: No  
 *Type*: Integer  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Mode`  <a name="cfn-fsx-filesystem-openzfsconfiguration-diskiopsconfiguration-mode"></a>
 Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS of 3 IOPS per GB of storage capacity, , or if it using a `USER_PROVISIONED` value\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AUTOMATIC | USER_PROVISIONED`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

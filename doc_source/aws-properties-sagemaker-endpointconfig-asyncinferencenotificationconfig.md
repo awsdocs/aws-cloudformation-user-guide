@@ -34,9 +34,11 @@ Amazon SNS topic to post a notification to when an inference fails\. If no topic
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IncludeInferenceResponseIn`  <a name="cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-includeinferenceresponsein"></a>
-Property description not available\.  
+The Amazon SNS topics where you want the inference response to be included\.  
+The inference response is included only if the response size is less than or equal to 128 KB\.
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `2`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SuccessTopic`  <a name="cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-successtopic"></a>

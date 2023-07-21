@@ -101,7 +101,7 @@ The user\-defined description of the workspace\.
 
 `GrafanaVersion`  <a name="cfn-grafana-workspace-grafanaversion"></a>
 Specifies the version of Grafana to support in the new workspace\.  
-Supported values are `8.4` and `9.4`\.  
+To get a list of supported version, use the `ListVersions` operation\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

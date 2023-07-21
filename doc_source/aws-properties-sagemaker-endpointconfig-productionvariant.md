@@ -57,7 +57,7 @@ Property description not available\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableSSMAccess`  <a name="cfn-sagemaker-endpointconfig-productionvariant-enablessmaccess"></a>
-Property description not available\.  
+ You can use this parameter to turn on native AWS Systems Manager \(SSM\) access for a production variant behind an endpoint\. By default, SSM access is disabled for all production variants behind an endpoint\. You can turn on or turn off SSM access for a production variant behind an existing endpoint by creating a new endpoint configuration and calling `UpdateEndpoint`\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

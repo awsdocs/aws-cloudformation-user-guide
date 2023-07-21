@@ -88,7 +88,7 @@ Indicates whether the data stored on the user volume is encrypted\.
 *Update requires*: Updates are not supported\.
 
 `VolumeEncryptionKey`  <a name="cfn-workspaces-workspace-volumeencryptionkey"></a>
-The symmetric AWS KMS key used to encrypt data stored on your WorkSpace\. Amazon WorkSpaces does not support asymmetric KMS keys\.  
+The ARN of the symmetric AWS KMS key used to encrypt data stored on your WorkSpace\. Amazon WorkSpaces does not support asymmetric KMS keys\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.

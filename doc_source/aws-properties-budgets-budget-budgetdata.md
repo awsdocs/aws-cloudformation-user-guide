@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-budgets-budget-budgetdata-properties"></a>
 
 `AutoAdjustData`  <a name="cfn-budgets-budget-budgetdata-autoadjustdata"></a>
-Property description not available\.  
+Determine the budget amount for an auto\-adjusting budget\.  
 *Required*: No  
 *Type*: [AutoAdjustData](aws-properties-budgets-budget-autoadjustdata.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

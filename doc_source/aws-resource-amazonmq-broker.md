@@ -34,6 +34,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade)" : Boolean,
       "[BrokerName](#cfn-amazonmq-broker-brokername)" : String,
       "[Configuration](#cfn-amazonmq-broker-configuration)" : ConfigurationId,
+      "[DataReplicationMode](#cfn-amazonmq-broker-datareplicationmode)" : String,
+      "[DataReplicationPrimaryBrokerArn](#cfn-amazonmq-broker-datareplicationprimarybrokerarn)" : String,
       "[DeploymentMode](#cfn-amazonmq-broker-deploymentmode)" : String,
       "[EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions)" : EncryptionOptions,
       "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
@@ -62,6 +64,8 @@ Properties:
   [BrokerName](#cfn-amazonmq-broker-brokername): String
   [Configuration](#cfn-amazonmq-broker-configuration): 
     ConfigurationId
+  [DataReplicationMode](#cfn-amazonmq-broker-datareplicationmode): String
+  [DataReplicationPrimaryBrokerArn](#cfn-amazonmq-broker-datareplicationprimarybrokerarn): String
   [DeploymentMode](#cfn-amazonmq-broker-deploymentmode): String
   [EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions): 
     EncryptionOptions
@@ -112,6 +116,18 @@ A list of information about the configuration\. Does not apply to RabbitMQ broke
 *Required*: No  
 *Type*: [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
+`DataReplicationMode`  <a name="cfn-amazonmq-broker-datareplicationmode"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DataReplicationPrimaryBrokerArn`  <a name="cfn-amazonmq-broker-datareplicationprimarybrokerarn"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentMode`  <a name="cfn-amazonmq-broker-deploymentmode"></a>
 The deployment mode of the broker\. Available values:  

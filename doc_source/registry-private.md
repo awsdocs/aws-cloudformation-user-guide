@@ -9,7 +9,7 @@ There are two kinds of private extensions:
 Any use of private extensions in your account is analogous to using it in a sandbox environment\. This is because extensions are version\-controlled, and provisioning behavior is version\-specific, which means that private extensions behave the same as if they were made public\.
 
 **Note**  
-Private extensions, and activated public extensions from third\-party publishers, may implement event handlers that runs during create, read, update, list, and delete operations\. Because of this, using these extensions in your CloudFormation stacks incurs charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](https://aws.amazon.com/cloudformation/pricing/)\.
+Private extensions, and activated public extensions from third\-party publishers, may implement event handlers that runs during create, read, update, list, and delete operations\. Because of this, using these extensions in your CloudFormation stacks incurs charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](http://aws.amazon.com/cloudformation/pricing/)\.
 
 For information about developing private extensions of your own, see [CloudFormation Command Line Interface User Guide](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html)\.
 

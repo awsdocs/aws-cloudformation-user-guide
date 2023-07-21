@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Privileged](#cfn-batch-jobdefinition-containerproperties-privileged)" : Boolean,
   "[ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem)" : Boolean,
   "[ResourceRequirements](#cfn-batch-jobdefinition-containerproperties-resourcerequirements)" : [ ResourceRequirement, ... ],
+  "[RuntimePlatform](#cfn-batch-jobdefinition-containerproperties-runtimeplatform)" : RuntimePlatform,
   "[Secrets](#cfn-batch-jobdefinition-containerproperties-secrets)" : [ Secret, ... ],
   "[Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits)" : [ Ulimit, ... ],
   "[User](#cfn-batch-jobdefinition-containerproperties-user)" : String,
@@ -62,6 +63,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem): Boolean
   [ResourceRequirements](#cfn-batch-jobdefinition-containerproperties-resourcerequirements): 
     - ResourceRequirement
+  [RuntimePlatform](#cfn-batch-jobdefinition-containerproperties-runtimeplatform): 
+    RuntimePlatform
   [Secrets](#cfn-batch-jobdefinition-containerproperties-secrets): 
     - Secret
   [Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits): 
@@ -182,6 +185,12 @@ When this parameter is true, the container is given read\-only access to its roo
 The type and amount of resources to assign to a container\. The supported resources include `GPU`, `MEMORY`, and `VCPU`\.  
 *Required*: No  
 *Type*: List of [ResourceRequirement](aws-properties-batch-jobdefinition-resourcerequirement.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RuntimePlatform`  <a name="cfn-batch-jobdefinition-containerproperties-runtimeplatform"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [RuntimePlatform](aws-properties-batch-jobdefinition-containerproperties-runtimeplatform.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Secrets`  <a name="cfn-batch-jobdefinition-containerproperties-secrets"></a>

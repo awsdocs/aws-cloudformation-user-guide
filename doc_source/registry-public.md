@@ -11,7 +11,7 @@ There are two kinds of public extensions:
   You can publish your own third\-party extensions to make them available to general CloudFormation users\. For more information, see [Publishing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish.html) in the *CloudFormation Command Line Interface User Guide*\.
 
 **Note**  
-As with private extensions, public extensions from third\-party publishers may implement event handlers that runs during resource create, read, update, list, and delete stack operations\. Because of this, using these extensions in your CloudFormation stacks may incur charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](https://aws.amazon.com/cloudformation/pricing/)\.
+As with private extensions, public extensions from third\-party publishers may implement event handlers that runs during resource create, read, update, list, and delete stack operations\. Because of this, using these extensions in your CloudFormation stacks may incur charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](http://aws.amazon.com/cloudformation/pricing/)\.
 
 ## Activating public extensions for use in your AWS account<a name="registry-public-enable"></a>
 
@@ -279,7 +279,7 @@ The following sections show how to deactivate public extensions in your account\
 
 #### To deactivate a public extension in your account using the AWS CLI<a name="registry-public-deactivate-extension-cli"></a>
 
-To deactivate a public extension in your account, specify the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/deactivate-type.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/deactivate-type.html)\. The following is an example of an AWS CLI deactivate command\.
+To deactivate a public extension in your account, specify the [deactivate\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/deactivate-type.html)\. The following is an example of an AWS CLI deactivate command\.
 
 ```
 aws cloudformation deactivate-type \

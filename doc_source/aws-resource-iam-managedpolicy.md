@@ -256,4 +256,8 @@ CreateTestDBPolicy:
 
 ## See also<a name="aws-resource-iam-managedpolicy--seealso"></a>
 +  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [CreatePolicyVersion](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicyVersion.html) in the *AWS Identity and Access Management API Reference* 
++  [AttachGroupPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachGroupPolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [AttachRolePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachRolePolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [AttachUserPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachUserPolicy.html) in the *AWS Identity and Access Management API Reference* 
 

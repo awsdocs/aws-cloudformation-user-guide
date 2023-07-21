@@ -12,7 +12,7 @@ To limit the list of instance types from which Amazon EC2 can identify matching 
 
 **Note**  
 If you specify `InstanceRequirements`, you can't specify `InstanceType`\.  
-Attribute\-based instance type selection is only supported when using Auto Scaling groups, EC2 Fleet, and Spot Fleet to launch instances\. If you plan to use the launch template in the [launch instance wizard](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html) or with the [RunInstances API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html), you can't specify `InstanceRequirements`\.
+Attribute\-based instance type selection is only supported when using Auto Scaling groups, EC2 Fleet, and Spot Fleet to launch instances\. If you plan to use the launch template in the [launch instance wizard](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html), or with the [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) API or [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) AWS CloudFormation resource, you can't specify `InstanceRequirements`\.
 
 For more information, see [Attribute\-based instance type selection for EC2 Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html), [Attribute\-based instance type selection for Spot Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html), and [Spot placement score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the *Amazon EC2 User Guide*\.
 
@@ -254,7 +254,7 @@ The minimum and maximum amount of memory, in MiB\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NetworkBandwidthGbps`  <a name="cfn-ec2-spotfleet-instancerequirementsrequest-networkbandwidthgbps"></a>
-The minimum and maximum amount of network bandwidth, in gigabits per second \(Gbps\)\.  
+The minimum and maximum amount of baseline network bandwidth, in gigabits per second \(Gbps\)\. For more information, see [Amazon EC2 instance network bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html) in the *Amazon EC2 User Guide*\.  
 Default: No minimum or maximum limits  
 *Required*: No  
 *Type*: [NetworkBandwidthGbpsRequest](aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.md)  

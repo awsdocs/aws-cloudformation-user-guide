@@ -6,7 +6,7 @@ The intrinsic function `Ref` returns the value of the specified *parameter* or *
 
 When you are declaring a resource in a template and you need to specify another template resource by name, you can use the `Ref` to refer to that other resource\. In general, `Ref` returns the name of the resource\. For example, a reference to an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) returns the name of that Auto Scaling group resource\.
 
-For some resources, an identifier is returned that has another significant meaning in the context of the resource\. An [AWS::EC2::EIP](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html) resource, for instance, returns the IP address, and an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) returns the instance ID\.
+For some resources, an identifier is returned that has another significant meaning in the context of the resource\. An [AWS::EC2::EIP](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html) resource, for instance, returns the IP address, and an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) returns the instance ID\.
 
 **Tip**  
 You can also use `Ref` to add values to Output messages\.

@@ -52,13 +52,15 @@ Properties:
 ## Properties<a name="aws-resource-appstream-appblockbuilder-properties"></a>
 
 `AccessEndpoints`  <a name="cfn-appstream-appblockbuilder-accessendpoints"></a>
-Property description not available\.  
+The access endpoints of the app block builder\.  
 *Required*: No  
 *Type*: List of [AccessEndpoint](aws-properties-appstream-appblockbuilder-accessendpoint.md)  
+*Maximum*: `4`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AppBlockArns`  <a name="cfn-appstream-appblockbuilder-appblockarns"></a>
-Property description not available\.  
+The ARN of the app block\.  
+*Maximum*: `1`  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -106,14 +108,13 @@ The name of the app block builder\.
 
 `Platform`  <a name="cfn-appstream-appblockbuilder-platform"></a>
 The platform of the app block builder\.  
- `WINDOWS_SERVER_2019` is the only valid value\.  
+*Allowed values*: `WINDOWS_SERVER_2019`  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `WINDOWS_SERVER_2019`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appstream-appblockbuilder-tags"></a>
-Property description not available\.  
+The tags of the app block builder\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -128,12 +129,20 @@ The VPC configuration for the app block builder\.
 
 ### Ref<a name="aws-resource-appstream-appblockbuilder-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `Name` of the app block builder, such as `abcdefAppBlockBuilder`\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-appstream-appblockbuilder-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-appstream-appblockbuilder-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Property description not available\.
+The ARN of the app block builder\.
 
 `CreatedTime`  <a name="CreatedTime-fn::getatt"></a>
-Property description not available\.
+The time when the app block builder was created\.

@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-datasourcetoindexfieldmapping-properties"></a>
 
 `DataSourceFieldName`  <a name="cfn-kendra-datasource-datasourcetoindexfieldmapping-datasourcefieldname"></a>
-The name of the column or attribute in the data source\.  
+The name of the field in the data source\. You must first create the index field using the `UpdateIndex` API\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -36,7 +36,7 @@ The name of the column or attribute in the data source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DateFieldFormat`  <a name="cfn-kendra-datasource-datasourcetoindexfieldmapping-datefieldformat"></a>
-The type of data stored in the column or attribute\.  
+The format for date fields in the data source\. If the field specified in `DataSourceFieldName` is a date field, you must specify the date format\. If the field is not a date field, an exception is thrown\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `4`  
@@ -45,7 +45,7 @@ The type of data stored in the column or attribute\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IndexFieldName`  <a name="cfn-kendra-datasource-datasourcetoindexfieldmapping-indexfieldname"></a>
-The name of the field in the index\.  
+The name of the index field to map to the data source field\. The index field type must match the data source field type\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

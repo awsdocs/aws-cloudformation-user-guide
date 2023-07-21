@@ -23,9 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-m2-environment-highavailabilityconfig-properties"></a>
 
 `DesiredCapacity`  <a name="cfn-m2-environment-highavailabilityconfig-desiredcapacity"></a>
-The number of instances in a high availability configuration\.  
+The number of instances in a high availability configuration\. The minimum possible value is 1 and the maximum is 100\.  
 *Required*: Yes  
 *Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -99,7 +99,7 @@ This parameter is required if you set `DataFormat` to `COMPREHEND_CSV`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TestS3Uri`  <a name="cfn-comprehend-documentclassifier-documentclassifierinputdataconfig-tests3uri"></a>
-This specifies the Amazon S3 location where the test annotations for an entity recognizer are located\. The URI must be in the same AWS Region as the API endpoint that you are calling\.   
+This specifies the Amazon S3 location that contains the test annotations for the document classifier\. The URI must be in the same AWS Region as the API endpoint that you are calling\.   
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  

@@ -1,6 +1,6 @@
 # AWS::IAM::Policy<a name="aws-resource-iam-policy"></a>
 
-Adds or updates an inline policy document that is embedded in the specified IAM user, group, or role\.
+Adds or updates an inline policy document that is embedded in the specified IAM group, user or role\.
 
 An IAM user can also have a managed policy attached to it\. For information about policies, see [Managed Policies and Inline Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the *IAM User Guide*\.
 
@@ -9,6 +9,12 @@ The Groups, Roles, and Users properties are optional\. However, you must specify
 For information about policy documents see [Creating IAM policies ](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html) in the *IAM User Guide*\.
 
 For information about limits on the number of inline policies that you can embed in an identity, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.
+
+**Important**  
+This resource does not support [ drift detection ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html)\. The following inline policy resource types support drift detection:  
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html)
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html)
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html)
 
 ## Syntax<a name="aws-resource-iam-policy-syntax"></a>
 
@@ -206,5 +212,10 @@ Properties:
 ```
 
 ## See also<a name="aws-resource-iam-policy--seealso"></a>
-+  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [AWS::IAM::GroupPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html) 
++  [AWS::IAM::RolePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html) 
++  [AWS::IAM::UserPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html) 
++  [PutGroupPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutGroupPolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [PutRolePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutRolePolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [PutUserPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutUserPolicy.html) in the *AWS Identity and Access Management API Reference* 
 

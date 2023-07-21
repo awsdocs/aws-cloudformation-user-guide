@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[OntapVolumeType](#cfn-fsx-volume-ontapconfiguration-ontapvolumetype)" : String,
   "[SecurityStyle](#cfn-fsx-volume-ontapconfiguration-securitystyle)" : String,
   "[SizeInMegabytes](#cfn-fsx-volume-ontapconfiguration-sizeinmegabytes)" : String,
+  "[SnaplockConfiguration](#cfn-fsx-volume-ontapconfiguration-snaplockconfiguration)" : SnaplockConfiguration,
   "[SnapshotPolicy](#cfn-fsx-volume-ontapconfiguration-snapshotpolicy)" : String,
   "[StorageEfficiencyEnabled](#cfn-fsx-volume-ontapconfiguration-storageefficiencyenabled)" : String,
   "[StorageVirtualMachineId](#cfn-fsx-volume-ontapconfiguration-storagevirtualmachineid)" : String,
@@ -30,6 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OntapVolumeType](#cfn-fsx-volume-ontapconfiguration-ontapvolumetype): String
   [SecurityStyle](#cfn-fsx-volume-ontapconfiguration-securitystyle): String
   [SizeInMegabytes](#cfn-fsx-volume-ontapconfiguration-sizeinmegabytes): String
+  [SnaplockConfiguration](#cfn-fsx-volume-ontapconfiguration-snaplockconfiguration): 
+    SnaplockConfiguration
   [SnapshotPolicy](#cfn-fsx-volume-ontapconfiguration-snapshotpolicy): String
   [StorageEfficiencyEnabled](#cfn-fsx-volume-ontapconfiguration-storageefficiencyenabled): String
   [StorageVirtualMachineId](#cfn-fsx-volume-ontapconfiguration-storagevirtualmachineid): String
@@ -80,6 +83,12 @@ Specifies the size of the volume, in megabytes \(MB\), that you are creating\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `314572800`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SnaplockConfiguration`  <a name="cfn-fsx-volume-ontapconfiguration-snaplockconfiguration"></a>
+The SnapLock configuration object for an FSx for ONTAP SnapLock volume\.   
+*Required*: No  
+*Type*: [SnaplockConfiguration](aws-properties-fsx-volume-ontapconfiguration-snaplockconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotPolicy`  <a name="cfn-fsx-volume-ontapconfiguration-snapshotpolicy"></a>

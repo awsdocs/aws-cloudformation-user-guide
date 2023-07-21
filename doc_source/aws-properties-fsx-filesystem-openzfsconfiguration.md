@@ -81,7 +81,7 @@ For more information, see: [Deployment type availability](https://docs.aws.amazo
 The SSD IOPS \(input/output operations per second\) configuration for an Amazon FSx for NetApp ONTAP or FSx for OpenZFS file system\. By default, Amazon FSx automatically provisions 3 IOPS per GB of storage capacity\. You can provision additional IOPS per GB of storage\. The configuration consists of the total number of provisioned SSD IOPS and how it is was provisioned, or the mode \(by the customer or by Amazon FSx\)\.  
 *Required*: No  
 *Type*: [DiskIopsConfiguration](aws-properties-fsx-filesystem-openzfsconfiguration-diskiopsconfiguration.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Options`  <a name="cfn-fsx-filesystem-openzfsconfiguration-options"></a>
 To delete a file system if there are child volumes present below the root volume, use the string `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS`\. If your file system has child volumes and you don't use this option, the delete request will fail\.  

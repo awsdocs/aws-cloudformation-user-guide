@@ -42,9 +42,11 @@ Specifies the configuration for notifications of inference results for asynchron
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3FailurePath`  <a name="cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3failurepath"></a>
-Property description not available\.  
+The Amazon S3 location to upload failure inference responses to\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `^(https|s3)://([^/])/?(.*)$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3OutputPath`  <a name="cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3outputpath"></a>

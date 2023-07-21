@@ -53,7 +53,7 @@ The ID of the application\.
 The type of the application\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `HANA`  
+*Allowed values*: `HANA | SAP_ABAP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Credentials`  <a name="cfn-systemsmanagersap-application-credentials"></a>

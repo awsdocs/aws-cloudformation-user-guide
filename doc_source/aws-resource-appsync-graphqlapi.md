@@ -64,7 +64,8 @@ A list of additional authentication providers for the `GraphqlApi` API\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApiType`  <a name="cfn-appsync-graphqlapi-apitype"></a>
-The value that indicates whether the GraphQL API is a standard API \(`GRAPHQL`\) or merged API \(`MERGED`\)\.  
+The value that indicates whether the GraphQL API is a standard API \(`GRAPHQL`\) or merged API \(`MERGED`\)\.   
+**WARNING**: If the `ApiType` has not been defined, **explicitly** setting it to `GRAPHQL` in a template/stack update will result in an API replacement and new DNS values\.  
 The following values are valid:   
 `GRAPHQL | MERGED`  
 *Required*: No  
@@ -128,6 +129,7 @@ Optional authorization configuration for using Amazon Cognito user pools with yo
 
 `Visibility`  <a name="cfn-appsync-graphqlapi-visibility"></a>
 Sets the scope of the GraphQL API to public \(`GLOBAL`\) or private \(`PRIVATE`\)\. By default, the scope is set to `Global` if no value is provided\.  
+**WARNING**: If `Visibility` has not been defined, **explicitly** setting it to `GLOBAL` in a template/stack update will result in an API replacement and new DNS values\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

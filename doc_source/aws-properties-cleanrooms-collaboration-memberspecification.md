@@ -47,6 +47,7 @@ The member's display name\.
 
 `MemberAbilities`  <a name="cfn-cleanrooms-collaboration-memberspecification-memberabilities"></a>
 The abilities granted to the collaboration member\.  
+*Allowed Values*: `CAN_QUERY` \| `CAN_RECEIVE_RESULTS`  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

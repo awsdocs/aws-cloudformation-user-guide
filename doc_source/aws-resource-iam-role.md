@@ -349,7 +349,8 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-iam-role--seealso"></a>
-+  [CreateRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) in the *AWS Identity and Access Management API Reference* 
++ To view `AWS::IAM::User` template example snippets, see [IAM role template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenarios-iamroles)\. 
 +  [AWS Identity and Access Management Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html) 
++  [CreateRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) in the *AWS Identity and Access Management API Reference* 
 +  [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) 
 

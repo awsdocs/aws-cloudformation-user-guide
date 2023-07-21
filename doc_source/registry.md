@@ -94,7 +94,7 @@ The value of `aws:SourceArn` must use the extension's ARN\.
 The most effective way to protect against the confused deputy problem is to use the `aws:SourceArn` global condition context key with the full ARN of the resource\. If you don't know the full ARN of the extension or if you are specifying multiple extensions, use the `aws:SourceArn` global context condition key with wildcards \(`*`\) for the unknown portions of the ARN\. For example, `arn:aws:cloudformation:*:123456789012:*`\.
 
 **Note**  
-For registry services, CloudFormation makes calls to AWS Security Token Service \(AWS STS\) to assume a role in your account\. This role is configured for `ExecutionRoleArn` in the [RegisterType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html) operation and `LogRoleArn` set in the [LoggingConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html) operation\.
+For registry services, CloudFormation makes calls to AWS Security Token Service \(AWS STS\) to assume a role in your account\. This role is configured for `ExecutionRoleArn` in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html) operation and `LogRoleArn` set in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html) operation\.
 
 The following example shows how you can use the `aws:SourceArn` and `aws:SourceAccount` global condition context keys in AWS CloudFormation to prevent the confused deputy problem\.
 

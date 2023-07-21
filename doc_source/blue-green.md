@@ -38,7 +38,7 @@ In order to perform ECS blue/green deployment using CodeDeploy through CloudForm
 | Two target groups | [AWS::ElasticLoadBalancingV2::TargetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html) | Required\. | No | 
 | Amazon ECS task definition  | [AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html) | Required\. | Yes | 
 | Container for your Amazon ECS application | [AWS::ECS::TaskDefinition ContainerDefinition Name](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-name.html) | Required\. | No | 
-| Port for your replacement task set | [AWS::ECS::TaskDefinition PortMapping ContainerPort](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.html#cfn-ecs-taskdefinition-containerdefinition-portmappings-containerport.html) | Required\. | No | 
+| Port for your replacement task set | [AWS::ECS::TaskDefinition PortMapping ContainerPort](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-portmapping.html#cfn-ecs-taskdefinition-portmapping-containerport) | Required\. | No | 
 
 ## Resource updates that trigger green deployments<a name="blue-green-resources"></a>
 
