@@ -58,9 +58,9 @@ While performing gradual deployments, you can only provide a single state machin
 
 `Type`  <a name="cfn-stepfunctions-statemachinealias-deploymentpreference-type"></a>
 The type of deployment you want to perform\. You can specify one of the following types:  
-+ `LINEAR` \- Shifts traffic to the new version in equal increments with an equal number of seconds between each increment\.
++ `LINEAR` \- Shifts traffic to the new version in equal increments with an equal number of minutes between each increment\.
 
-  For example, if you specify the increment percent as `20` with an interval of `600` seconds, this deployment increases traffic by 20 percent every 600 seconds until the new version receives 100 percent of the traffic\. This deployment immediately rolls back the new version if any CloudWatch alarms are triggered\.
+  For example, if you specify the increment percent as `20` with an interval of `600` minutes, this deployment increases traffic by 20 percent every 600 minutes until the new version receives 100 percent of the traffic\. This deployment immediately rolls back the new version if any CloudWatch alarms are triggered\.
 + `ALL_AT_ONCE` \- Shifts 100 percent of traffic to the new version immediately\. CloudFormation monitors the new version and rolls it back automatically to the previous version if any CloudWatch alarms are triggered\.
 + `CANARY` \- Shifts traffic in two increments\.
 

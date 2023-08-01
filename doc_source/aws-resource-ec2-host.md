@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::Host",
   "Properties" : {
+      "[AssetId](#cfn-ec2-host-assetid)" : String,
       "[AutoPlacement](#cfn-ec2-host-autoplacement)" : String,
       "[AvailabilityZone](#cfn-ec2-host-availabilityzone)" : String,
       "[HostMaintenance](#cfn-ec2-host-hostmaintenance)" : String,
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::Host
 Properties: 
+  [AssetId](#cfn-ec2-host-assetid): String
   [AutoPlacement](#cfn-ec2-host-autoplacement): String
   [AvailabilityZone](#cfn-ec2-host-availabilityzone): String
   [HostMaintenance](#cfn-ec2-host-hostmaintenance): String
@@ -38,6 +40,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-ec2-host-properties"></a>
+
+`AssetId`  <a name="cfn-ec2-host-assetid"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoPlacement`  <a name="cfn-ec2-host-autoplacement"></a>
 Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID\. For more information, see [ Understanding auto\-placement and affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding) in the *Amazon EC2 User Guide*\.  

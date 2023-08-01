@@ -80,6 +80,7 @@ An operator that includes events that match the last few characters of the event
   +  `AWS::KendraRanking::ExecutionPlan` 
   +  `AWS::ManagedBlockchain::Network` 
   +  `AWS::ManagedBlockchain::Node` 
+  +  `AWS::MedicalImaging::Datastore` 
   +  `AWS::SageMaker::ExperimentTrialComponent` 
   +  `AWS::SageMaker::FeatureGroup` 
   +  `AWS::S3::AccessPoint` 
@@ -132,10 +133,13 @@ An operator that includes events that match the last few characters of the event
   +  `arn:<partition>:kendra-ranking:<region>:<account_ID>:rescore-execution-plan/<rescore_execution_plan_ID>` 
 
   When `resources.type` equals `AWS::ManagedBlockchain::Network`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
-  +  `arn:<partition>:managedblockchain:<region>::networks/<network_ID>` 
+  +  `arn:<partition>:managedblockchain:::networks/<network_name>` 
 
   When `resources.type` equals `AWS::ManagedBlockchain::Node`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:managedblockchain:<region>:<account_ID>:nodes/<node_ID>` 
+
+  When `resources.type` equals `AWS::MedicalImaging::Datastore`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:medical-imaging:<region>:<account_ID>:datastore/<data_store_ID>` 
 
   When `resources.type` equals `AWS::SageMaker::ExperimentTrialComponent`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:sagemaker:<region>:<account_ID>:experiment-trial-component/<experiment_trial_component_name>` 

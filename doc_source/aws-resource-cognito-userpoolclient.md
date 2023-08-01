@@ -104,7 +104,13 @@ Issue the access token from the `/oauth2/token` endpoint directly to a non\-pers
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowedOAuthFlowsUserPoolClient`  <a name="cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient"></a>
-Set to true if the client is allowed to follow the OAuth protocol when interacting with Amazon Cognito user pools\.  
+Set to `true` to use OAuth 2\.0 features in your user pool app client\.  
+ `AllowedOAuthFlowsUserPoolClient` must be `true` before you can configure the following features in your app client\.  
++  `CallBackURLs`: Callback URLs\.
++  `LogoutURLs`: Sign\-out redirect URLs\.
++  `AllowedOAuthScopes`: OAuth 2\.0 scopes\.
++  `AllowedOAuthFlows`: Support for authorization code, implicit, and client credentials OAuth 2\.0 grants\.
+To use OAuth 2\.0 features, configure one of these features in the Amazon Cognito console or set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or `UpdateUserPoolClient` API request\. If you don't set a value for `AllowedOAuthFlowsUserPoolClient` in a request with the AWS CLI or SDKs, it defaults to `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

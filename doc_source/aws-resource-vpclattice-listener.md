@@ -40,7 +40,7 @@ Properties:
 ## Properties<a name="aws-resource-vpclattice-listener-properties"></a>
 
 `DefaultAction`  <a name="cfn-vpclattice-listener-defaultaction"></a>
-The action for the default rule\. Each listener has a default rule\. Each rule consists of a priority, one or more actions, and one or more conditions\. The default rule is the rule that's used if no other rules match\. Each rule must include exactly one of the following types of actions: `forward `or `fixed-response`, and it must be the last action to be performed\.   
+The action for the default rule\. Each listener has a default rule\. Each rule consists of a priority, one or more actions, and one or more conditions\. The default rule is the rule that's used if no other rules match\. Each rule must include exactly one of the following types of actions: `forward` or `fixed-response`, and it must be the last action to be performed\.  
 *Required*: Yes  
 *Type*: [DefaultAction](aws-properties-vpclattice-listener-defaultaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -53,7 +53,7 @@ If you don't specify a name, CloudFormation generates one\. However, if you spec
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Port`  <a name="cfn-vpclattice-listener-port"></a>
-The listener port\. You can specify a value from `1` to `65535`\. For HTTP, the default is `80`\. For HTTPS, the default is `443`\.  
+The listener port\. You can specify a value from 1 to 65535\. For HTTP, the default is 80\. For HTTPS, the default is 443\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

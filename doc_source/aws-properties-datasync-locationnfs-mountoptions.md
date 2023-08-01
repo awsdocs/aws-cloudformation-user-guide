@@ -1,6 +1,6 @@
 # AWS::DataSync::LocationNFS MountOptions<a name="aws-properties-datasync-locationnfs-mountoptions"></a>
 
-Specifies the mount options that DataSync can use to mount your NFS share\.
+Specifies the options that DataSync can use to mount your NFS file server\.
 
 ## Syntax<a name="aws-properties-datasync-locationnfs-mountoptions-syntax"></a>
 

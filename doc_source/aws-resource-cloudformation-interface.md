@@ -38,7 +38,7 @@ Metadata:
 `ParameterGroups`  <a name="cfn-cloudformation-interface-parametergroups"></a>
 A list of parameter group types, where you specify group names, the parameters in each group, and the order in which the parameters are shown\.  
 *Required*: No  
-*Type*: [AWS::CloudFormation::Interface ParameterGroup](aws-properties-cloudformation-interface-parametergroup.md)  
+*Type*: [`AWS::CloudFormation::Interface` ParameterGroup](aws-properties-cloudformation-interface-parametergroup.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ParameterLabels`  <a name="cfn-cloudformation-interface-parameterlabels"></a>

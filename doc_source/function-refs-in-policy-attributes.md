@@ -1,9 +1,9 @@
-# Intrinsic function references in DeletionPolicy and UpdateReplacePolicy attributes<a name="function-refs-in-policy-attributes"></a>
+# Intrinsic function references in `DeletionPolicy` and `UpdateReplacePolicy` attributes<a name="function-refs-in-policy-attributes"></a>
 
-When you add the `AWS::LanguageExtensions` transform in a AWS CloudFormation template, you can use intrinsic functions to define the `DeletionPolicy` and `UpdateReplacePolicy` resource attributes\.
+When you add the `AWS::LanguageExtensions` transform in a AWS CloudFormation template, you can use intrinsic functions to define the ``DeletionPolicy` attribute` and ``UpdateReplacePolicy` attribute` resource attributes\.
 
 **Note**  
-The intrinsic function must resolve to valid [`DeletionPolicy` options](aws-attribute-deletionpolicy.md) or [`UpdateReplacePolicy` options](aws-attribute-updatereplacepolicy.md)\.
+The intrinsic function must resolve to valid ``DeletionPolicy` options` or ``UpdateReplacePolicy` options`\.
 
 ## Declaration<a name="function-refs-in-policy-attributes-declaration"></a>
 
@@ -30,13 +30,13 @@ UpdateReplacePolicy: IntrinsicFunction
 ## Parameters<a name="function-refs-in-policy-attributes-parameters"></a>
 
 `IntrinsicFunction`  
-The intrinsic function that resolves to a valid DeletionPolicy or UpdateReplacePolicy option\.
+The intrinsic function that resolves to a valid ``DeletionPolicy` attribute` or ``UpdateReplacePolicy` attribute` option\.
 
 ## Examples<a name="function-refs-in-policy-attributes-examples"></a>
 
-### Define the DeletionPolicy and UpdateReplacePolicy using the Fn:If intrinsic function<a name="function-refs-in-policy-attributes-example1"></a>
+### Define the `DeletionPolicy` and `UpdateReplacePolicy` using the `Fn:If` intrinsic function<a name="function-refs-in-policy-attributes-example1"></a>
 
-The following example sets the `DeletionPolicy` and `UpdateReplacePolicy` attributes based on the condition defined in the `Fn::If` intrinsic function\. If the `Stage` parameter is `Prod`, the `DeletionPolicy` and `UpdateReplacePolicy` attributes will be set to `Retain`\.
+The following example sets the ``DeletionPolicy` attribute` and ``UpdateReplacePolicy` attribute` attributes based on the condition defined in the ``Fn::If`` intrinsic function\. If the `Stage` parameter is `Prod`, the `DeletionPolicy` and `UpdateReplacePolicy` attributes will be set to `Retain`\.
 
 #### JSON<a name="function-refs-in-policy-attributes-example1.json"></a>
 
@@ -132,9 +132,9 @@ The following example sets the `DeletionPolicy` and `UpdateReplacePolicy` attrib
 31.       - Delete
 ```
 
-### Define the DeletionPolicy and UpdateReplacePolicy attributes using the Ref intrinsic function<a name="function-refs-in-policy-attributes-example2"></a>
+### Define the `DeletionPolicy` and `UpdateReplacePolicy` attributes using the `Ref` intrinsic function<a name="function-refs-in-policy-attributes-example2"></a>
 
-The following example sets the `DeletionPolicy` and `UpdateReplacePolicy` attributes based on the value resolved by the `Ref` intrinsic function\. If the `DeletionPolicyParam` and `UpdateReplacePolicyParam` parameters are both set to `Retain`, the `DeletionPolicy` and `UpdateReplacePolicy` attributes are also set to `Retain`\.
+The following example sets the ``DeletionPolicy` attribute` and ``UpdateReplacePolicy` attribute` attributes based on the value resolved by the ``Ref`` intrinsic function\. If the `DeletionPolicyParam` and `UpdateReplacePolicyParam` parameters are both set to `Retain`, the `DeletionPolicy` and `UpdateReplacePolicy` attributes are also set to `Retain`\.
 
 #### JSON<a name="function-refs-in-policy-attributes-example2.json"></a>
 
@@ -224,9 +224,9 @@ The following example sets the `DeletionPolicy` and `UpdateReplacePolicy` attrib
 ## Supported functions<a name="function-refs-in-policy-attributes-supported-functions"></a>
 
 Within the `DeletionPolicy` or `UpdateReplacePolicy` attributes, you can use the following functions:
-+ `Fn::FindInMap`
-+ `Fn::If`
-+ `Ref`
++ ``Fn::FindInMap``
++ ``Fn::If``
++ ``Ref``
 
 You can also use the following [Pseudo parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html):
 + `AWS::AccountId`

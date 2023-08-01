@@ -51,6 +51,8 @@ The client ID for the client app\. You can specify the UI customization settings
 The CSS values in the UI customization\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `131072`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolId`  <a name="cfn-cognito-userpooluicustomizationattachment-userpoolid"></a>

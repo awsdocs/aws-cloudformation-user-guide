@@ -243,7 +243,8 @@ You can choose to set case sensitivity on the username input for the selected si
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolAddOns`  <a name="cfn-cognito-userpool-userpooladdons"></a>
-Enables advanced security risk detection\. Set the key `AdvancedSecurityMode` to the value "AUDIT"\.  
+User pool add\-ons\. Contains settings for activation of advanced security features\. To log user security information but take no action, set to `AUDIT`\. To configure automatic security responses to risky traffic to your user pool, set to `ENFORCED`\.  
+For more information, see [Adding advanced security to a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)\.  
 *Required*: No  
 *Type*: [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

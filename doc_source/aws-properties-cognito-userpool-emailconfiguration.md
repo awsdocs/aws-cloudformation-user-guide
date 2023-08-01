@@ -70,7 +70,7 @@ The destination to which the receiver of the email should reply\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceArn`  <a name="cfn-cognito-userpool-emailconfiguration-sourcearn"></a>
-The ARN of a verified email address in Amazon SES\. Amazon Cognito uses this email address in one of the following ways, depending on the value that you specify for the `EmailSendingAccount` parameter:  
+The ARN of a verified email address or an address from a verified domain in Amazon SES\. You can set a `SourceArn` email from a verified domain only with an API request\. You can set a verified email address, but not an address in a verified domain, in the Amazon Cognito console\. Amazon Cognito uses the email address that you provide in one of the following ways, depending on the value that you specify for the `EmailSendingAccount` parameter:  
 + If you specify `COGNITO_DEFAULT`, Amazon Cognito uses this address as the custom FROM address when it emails your users using its built\-in email account\.
 + If you specify `DEVELOPER`, Amazon Cognito emails your users with this address by calling Amazon SES on your behalf\.
 The Region value of the `SourceArn` parameter must indicate a supported AWS Region of your user pool\. Typically, the Region in the `SourceArn` and the user pool Region are the same\. For more information, see [Amazon SES email configuration regions](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping) in the [Amazon Cognito Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html)\.  

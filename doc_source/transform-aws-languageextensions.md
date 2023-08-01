@@ -1,11 +1,12 @@
-# AWS::LanguageExtensions transform<a name="transform-aws-languageextensions"></a>
+# `AWS::LanguageExtensions` transform<a name="transform-aws-languageextensions"></a>
 
-The `AWS::LanguageExtensions` transform is a macro hosted by AWS CloudFormation that lets you use intrinsic functions and other functionalities not included by default in AWS CloudFormation\. When a template references `AWS::LanguageExtensions`, and you're creating or updating stacks using change sets, AWS CloudFormation updates any intrinsic function defined by the transform to its resolved value within the template\. 
+The `AWS::LanguageExtensions` transform is a macro hosted by AWS CloudFormation that lets you use intrinsic functions and other functionalities not included by default in AWS CloudFormation\. When a template references `AWS::LanguageExtensions`, and you're creating or updating stacks using change sets, AWS CloudFormation updates any intrinsic function defined by the transform to its resolved value within the template\. When you add the `AWS::LanguageExtensions` transform in a AWS CloudFormation template, you can use intrinsic functions as a parameter to [`Ref`](intrinsic-function-reference-ref.md) and [`Fn::GetAtt`](intrinsic-function-reference-getatt.md)\.
 
 The `AWS::LanguageExtensions` transform supports the following functions and attributes:
++ [`Fn::ForEach`](intrinsic-function-reference-foreach.md)
 + [`Fn::Length`](intrinsic-function-reference-length.md)
 + [`Fn::ToJsonString`](intrinsic-function-reference-ToJsonString.md)
-+ [Intrinsic function references in DeletionPolicy and UpdateReplacePolicy attributes](function-refs-in-policy-attributes.md)
++ [Intrinsic function references in `DeletionPolicy` and `UpdateReplacePolicy` attributes](function-refs-in-policy-attributes.md)
 + [`Fn::FindInMap enhancements`](intrinsic-function-reference-findinmap-enhancements.md)
 
 ## Usage<a name="transform-aws-languageextensions-usage"></a>

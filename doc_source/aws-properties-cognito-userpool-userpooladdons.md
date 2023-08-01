@@ -1,6 +1,8 @@
 # AWS::Cognito::UserPool UserPoolAddOns<a name="aws-properties-cognito-userpool-userpooladdons"></a>
 
-The user pool add\-ons type\.
+User pool add\-ons\. Contains settings for activation of advanced security features\. To log user security information but take no action, set to `AUDIT`\. To configure automatic security responses to risky traffic to your user pool, set to `ENFORCED`\.
+
+For more information, see [Adding advanced security to a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-userpooladdons-syntax"></a>
 
@@ -23,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpool-userpooladdons-properties"></a>
 
 `AdvancedSecurityMode`  <a name="cfn-cognito-userpool-userpooladdons-advancedsecuritymode"></a>
-The advanced security mode\.  
+The operating mode of advanced security features in your user pool\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AUDIT | ENFORCED | OFF`  

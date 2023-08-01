@@ -40,36 +40,23 @@ If you perform drift detection [directly on a stack](https://docs.aws.amazon.com
 
    The **Stack name** column lists the name of the stack associated with each stack instance, and the **Drift status** column lists the drift status of that stack\. A stack is considered to have drifted if one or more of its resources have drifted\.
 
-1. To review the drift detection results for the stack associated with a specific stack instances:
+1. To review the drift detection results for the stack associated with a specific stack instance:
 
-   1. Note the **AWS account**, **Stack name**, and **AWS region** for the stack instance\.
+   1. Choose the **Operations** tab\.
 
-   1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
+   1. Select the drift operation you want to view drift detection results for\. A split panel will display the stack instance status and reason for the selected operation\. For a drift operation, the status reason column shows the drift status of a stack instance\.
 
-      Log into the AWS account containing the stack instance\.
+   1. Choose the stack instance you want to view drift details for, and choose **View resource drifts**\. In the **Resource drift status** table on the **Resource Drifts** page, each stack resource is listed with its drift status and the last time drift detection was initiated on the resource\. The logical ID and physical ID of each resource is displayed to help you identify them\.
 
-   1. Select the AWS region containing the stack instance\.
+1. You can sort the resources based on their drift status using the **Drift status** column\.
 
-   1. From the left\-hand navigation pane, select **Stacks**\.
+   To view the details on a modified resource:
 
-   1. Select the stack you wish to view, and then select **Drifts**\.
+   1. With the resource selected, choose **View drift details**\.
 
-      CloudFormation displays the **Drifts** page for the stack associated with the specified stack instance\.
-
-   In the **Resource drift status** section, CloudFormation lists each stack resource, its drift status, and the last time drift detection was initiated on the resource\. The logical ID and physical ID of each resource is displayed to help you identify them\. In addition, for resources with a status of **MODIFIED**, CloudFormation displays resource drift details\.
-
-   You can sort the resources based on their drift status using the **Drift status** column\.
-
-   1. To view the details on a modified resource\.
-
-     1. With the modified resource selected, select **View drift details**\.
-
-       CloudFormation displays the drift detail page for that resource\. This page lists the resource's expected and current property values, and any differences between the two\.
-
-       To highlight a difference, in the **Differences** section select the property name\.
-       + Added properties are highlighted in green in the **Current** column of the **Details** section\.
-       + Deleted properties are highlighted in red in the **Expected** column of the **Details** section\.
-       + Properties whose value have been changed are highlighted in blue in the both **Expected** and **Current** columns\.  
+     CloudFormation displays the drift detail page for that particular resource\. This page lists the resource's differences\. It also lists the resource's expected and current property values\.
+**Note**  
+If the stack belongs to a different Region and account than the one you're currently signed into, the **Detect drift** button will be disabled and you will be unable to view the details\.  
 ![\[The Resource drift status section of the Drift Details page, which contains drift information for each resource in the stack that supports drift detection. Details include drift status and expected and current property values.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-drifts-drift-details-differences-1.png)
 
 **To detect drift on a stack set using the AWS CLI**
@@ -81,6 +68,8 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
   + Use `[describe\-stack\-set](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-set.html)` to return detailed information about the stack set, including detailed information about the last *completed* drift operation performed on the stack set\. \(Information about drift operations that are in progress isn't included\.\)
   + Use `[list\-stack\-instances](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stack-instances.html)` to return a list of stack instances belonging to the stack set, including the drift status and last drift time checked of each instance\.
   + Use `[describe\-stack\-instance](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-instance.html)` to return detailed information about a specific stack instance, including its drift status and last drift time checked\.
+  + Use `[list\-stack\-instance\-resource\-drifts](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stack-instance-resource-drifts.html)` to return detailed information about the drift status of each resource in a stack instance\.
+  + Use `[stack\-instance\-resource\-drifts\-summary](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/stack-instance-resource-drifts-summary.html)` to return summary information about resource drifts for a stack instance\.
 
 1. Use `detect-stack-set-drift` to detect drift on an entire stack set and its associated stack instances\.
 
@@ -96,7 +85,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
 
 1. Because stack set drift detection operations can be a long\-running operation, use `describe-stack-set-operation` to monitor the status of drift operation\. This command takes the stack set operation ID returned by the `detect-stack-set-drift` command\.
 
-   The following examples uses the operation ID from the previous example to return information on the stack set drift detection operation\. In this example, the operation is still running\. Of the seven stack instances associated with this stack set, one stack instance has already been found to have drifted, two instances are in synch, and drift detection for the remaining four stack instances is still in progress\. Because one instance has drifted, the drift status of the stack set itself is now `DRIFTED`\.
+   The following examples uses the operation ID from the previous example to return information on the stack set drift detection operation\. In this example, the operation is still running\. Of the seven stack instances associated with this stack set, one stack instance has already been found to have drifted, two instances are in sync , and drift detection for the remaining four stack instances is still in progress\. Because one instance has drifted, the drift status of the stack set itself is now `DRIFTED`\.
 
    ```
     1. aws cloudformation describe-stack-set-operation --stack-set-name stack-set-drift-example --operation-id c36e44aa-3a83-411a-b503-cb611example
@@ -104,7 +93,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
     3. {
     4.     "StackSetOperation": {
     5.         "Status": "RUNNING",
-    6.         "AdministrationRoleARN": "arn:aws:iam::012345678910:role/AWSCloudFormationStackSetAdministrationRole",
+    6.         "AdministrationRoleARN": "arn:aws:iam::123456789012:role/AWSCloudFormationStackSetAdministrationRole",
     7.         "OperationPreferences": {
     8.             "RegionOrder": []
     9.         },
@@ -134,7 +123,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
     3. {
     4.     "StackSetOperation": {
     5.         "Status": "SUCCEEDED",
-    6.         "AdministrationRoleARN": "arn:aws:iam::012345678910:role/AWSCloudFormationStackSetAdministrationRole",
+    6.         "AdministrationRoleARN": "arn:aws:iam::123456789012:role/AWSCloudFormationStackSetAdministrationRole",
     7.         "OperationPreferences": {
     8.             "RegionOrder": []
     9.         } 
@@ -157,7 +146,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
    26. }
    ```
 
-1. When the stack set drift detection operation is complete, use the `describe-stack-set`, `list-stackinstances`, and `describe-stack-instance` commands to review the results\.
+1. When the stack set drift detection operation is complete, use the `describe-stack-set`, `list-stack-instances`, `describe-stack-instance`, and `list-stack-instance-resource-drifts` commands to review the results\.
 
    The `describe-stack-set` command includes the same detailed drift information returned by the `describe-stack-set-operation` command\.
 
@@ -177,7 +166,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
            ], 
            "ExecutionRoleName": "AWSCloudFormationStackSetExecutionRole",
            "Capabilities": [],
-           "AdministrationRoleARN": "arn:aws:iam::012345678910:role/AWSCloudFormationStackSetAdministrationRole",
+           "AdministrationRoleARN": "arn:aws:iam::123456789012:role/AWSCloudFormationStackSetAdministrationRole",
            "StackSetDriftDetectionDetails": {
                "DriftedStackInstancesCount": 2,
                "TotalStackInstancesCount": 7,
@@ -188,7 +177,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
                "InSyncStackInstancesCount": 5,
                "FailedStackInstancesCount": 0
            },
-           "StackSetARN": "arn:aws:cloudformation:us-east-1:012345678910:stackset/stack-set-drift-example:bd1f4017-d4f9-432e-a73f-8c22example",
+           "StackSetARN": "arn:aws:cloudformation:us-east-1:123456789012:stackset/stack-set-drift-example:bd1f4017-d4f9-432e-a73f-8c22example",
            "TemplateBody": [details omitted],
            "StackSetId": "stack-set-drift-example:bd1f4017-d4f9-432e-a73f-8c22ebexample",
            "StackSetName": "stack-set-drift-example"
@@ -198,39 +187,32 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
 
    You can use the `list-stack-instances` command to return summary information about the stack instances associated with a stack set, including the drift status of each stack instance\.
 
-   In this example, executing `list-stack-instances` on the example stack set enables us to identify which two stack instances have a drift status of `DRIFTED`\.
+   In this example, executing `list-stack-instances` on the example stack set with the drift status filter set to `DRIFTED` enables you to identify which two stack instances have a drift status of `DRIFTED`\.
 
    ```
-   aws cloudformation list-stack-instances --stack-set-name stack-set-drift-example
+   aws cloudformation list-stack-instances --stack-set-name stack-set-drift-example --filters Name=DRIFT_STATUS,Values=DRIFTED
    
    {
-       "Summaries": [
+   "Summaries": [
            {
-               "StackId": "arn:aws:cloudformation:ap-northeast-1:012345678910:stack/StackSet-stack-set-drift-example-29168cdd-e587-4709-8a1f-90f752ec65e1/1a8a98f0-16d4-11ea-9844-060a5example", 
-               "Status": "CURRENT", 
-               "Account": "012345678910",
-               "Region": "ap-northeast-1",
-               "LastDriftCheckTimestamp": "2019-12-04T20:36:18.481Z",
-               "DriftStatus": "IN_SYNC",
-               "StackSetId": "stack-set-drift-example:bd1f4017-d4f9-432e-a73f-8c22eexample"
-           },
-           {
-               "StackId": "arn:aws:cloudformation:eu-west-1:012345678910:stack/StackSet-stack-set-drift-example-b0fb6083-60c0-4e39-af15-2f071e0db90c/0e4f0940-16d4-11ea-93d8-0641cexample",
+   "StackId": "arn:aws:cloudformation:eu-west-1:123456789012:stack/StackSet-stack-set-drift-example-b0fb6083-60c0-4e39-af15-2f071e0db90c/0e4f0940-16d4-11ea-93d8-0641cexample",
                "Status": "CURRENT",
                "Account": "012345678910",
                "Region": "eu-west-1",
                "LastDriftCheckTimestamp": "2019-12-04T20:37:32.687Z",
                "DriftStatus": "DRIFTED",
                "StackSetId": "stack-set-drift-example:bd1f4017-d4f9-432e-a73f-8c22eexample
+               "LastOperationId": "c36e44aa-3a83-411a-b503-cb611example"
            },
            {
-               "StackId": "arn:aws:cloudformation:us-east-1:012345678910:stack/StackSet-stack-set-drift-example-b7fde68e-e541-44c2-b33d-ef2e2988071a/008e6030-16d4-11ea-8090-12f89example",
+               "StackId": "arn:aws:cloudformation:us-east-1:123456789012:stack/StackSet-stack-set-drift-example-b7fde68e-e541-44c2-b33d-ef2e2988071a/008e6030-16d4-11ea-8090-12f89example",
                "Status": "CURRENT",
-               "Account": "012345678910",
+               "Account": "123456789012",
                "Region": "us-east-1",
                "LastDriftCheckTimestamp": "2019-12-04T20:34:28.275Z",
                "DriftStatus": "DRIFTED",
                "StackSetId": "stack-set-drift-example:bd1f4017-d4f9-432e-a73f-8c22eexample"
+               "LastOperationId": "c36e44aa-3a83-411a-b503-cb611example"
            },
            
            [additional stack instances omitted]
@@ -246,49 +228,48 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
                
    {
        "StackInstance": {
-           "StackId": "arn:aws:cloudformation:us-east-1:012345678910:stack/StackSet-stack-set-drift-example-b7fde68e-e541-44c2-b33d-ef2e2988071a/008e6030-16d4-11ea-8090-12f89example",
+           "StackId": "arn:aws:cloudformation:us-east-1:123456789012:stack/StackSet-stack-set-drift-example-b7fde68e-e541-44c2-b33d-ef2e2988071a/008e6030-16d4-11ea-8090-12f89example",
            "Status": "CURRENT",
-           "Account": "012345678910",
+           "Account": "123456789012",
            "Region": "us-east-1",
            "ParameterOverrides": [],
            "DriftStatus": "DRIFTED",
            "LastDriftCheckTimestamp": "2019-12-04T20:34:28.275Z",
            "StackSetId": "stack-set-drift-example:bd1f4017-d4f9-432e-a73f-8c22eexample"
+           "LastOperationId": "c36e44aa-3a83-411a-b503-cb611example"
        }
    }
    ```
 
-1. Once you've identified which stack instances have drifted, you can use the information about the stack instances that is returned by the `list-stack-instances` or `describe-stack-instance` commands to execute the [describe\-stack\-resource\-drifts](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource-drifts.html)\. This command returns detailed information about which resources in the stack have drifted\.
+1. Once you've identified which stack instances have drifted, you can use the information about the stack instances that is returned by the `list-stack-instances` or `describe-stack-instance` commands to execute [list\-stack\-instance\-resource\-drifts](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stack-instance-resource-drifts.html)\. This command returns detailed information about which resources in the stack have drifted for a particular drift operation\.
 
-   The following example uses the stack ID of one of the drifted stacks, returned by the `list-stack-instances` command in the example above, to return detailed information about the resources that have been modified or deleted outside of CloudFormation\. In this stack, two properties on an `AWS::SQS::Queue` resource, `DelaySeconds` and `maxReceiveCount`, have been modified\.
+   The following example uses the `stack-instance-resource-drift-statuses` parameter to request stack drift information for the resources that have been modified or deleted in the previous drift operation example\. The request returns information on the one resource that has been modified, including details about two of its properties and their changed values\. No resources have been deleted\.
 
    ```
-   aws cloudformation describe-stack-resource-drifts --stack-name arn:aws:cloudformation:us-east-1:012345678910:stack/StackSet-stack-set-drift-example-b7fde68e-e541-44c2-b33d-ef2e2988071a/008e6030-16d4-11ea-8090-12f89example --stack-resource-drift-status-filters "MODIFIED" "DELETED"
+   aws cloudformation list-stack-instance-resource-drifts --stack-set-name my-stack-set-with-resource-drift --stack-instance-account 123456789012 --stack-instance-region us-east-1 --operation-id c36e44aa-3a83-411a-b503-cb611example --stack-instance-resource-drift-statuses MODIFIED DELETED
    
    {
-       "StackResourceDrifts": [
+       "Summaries": [
            {
-               "StackId": "arn:aws:cloudformation:us-east-1:012345678910:stack/StackSet-stack-set-drift-example-b7fde68e-e541-44c2-b33d-ef2e2988071a/008e6030-16d4-11ea-8090-12f8925a37c4", 
-               "ActualProperties": "{\"DelaySeconds\":10,\"RedrivePolicy\":{\"deadLetterTargetArn\":\"arn:aws:sqs:us-east-1:012345678910:StackSet-stack-set-drift-example-b7fde68e-e541-44c2-b33d-ef2e2-DLQ-1H0SQCOKALBDJ\",\"maxReceiveCount\":20},\"VisibilityTimeout\":60}", 
+               "StackId": "arn:aws:cloudformation:us-east-1:123456789012:stack/my-stack-set-with-resource-drift/489e5570-df85-11e7-a7d9-50example",
                "ResourceType": "AWS::SQS::Queue",
-               "Timestamp": "2019-12-04T20:33:57.261Z",
-               "PhysicalResourceId": "https://sqs.us-east-1.amazonaws.com/012345678910/StackSet-stack-set-drift-example-b7fde68e-e541-44c2-b33d-ef2-Queue-6FNDEY4AUEPV", 
+               "Timestamp": "2018-03-26T17:23:34.489Z",
+               "PhysicalResourceId": "https://sqs.us-east-1.amazonaws.com/123456789012/my-stack-with-resource-drift-Queue-494PBHCO76H4",
                "StackResourceDriftStatus": "MODIFIED",
-               "ExpectedProperties": "{\"DelaySeconds\":20,\"RedrivePolicy\":{\"deadLetterTargetArn\":\"arn:aws:sqs:us-east-1:012345678910:StackSet-stack-set-drift-example-b7fde68e-e541-44c2-b33d-ef2e2-DLQ-1H0SQCOKALBDJ\",\"maxReceiveCount\":10},\"VisibilityTimeout\":60}", 
                "PropertyDifferences": [
                    {
                        "PropertyPath": "/DelaySeconds",
-                       "ActualValue": "10",
+                       "ActualValue": "120",
                        "ExpectedValue": "20",
                        "DifferenceType": "NOT_EQUAL"
                    },
                    {
                        "PropertyPath": "/RedrivePolicy/maxReceiveCount",
-                       "ActualValue": "20",
+                       "ActualValue": "12",
                        "ExpectedValue": "10",
                        "DifferenceType": "NOT_EQUAL"
                    }
-               ], 
+               ],
                "LogicalResourceId": "Queue"
            }
        ]

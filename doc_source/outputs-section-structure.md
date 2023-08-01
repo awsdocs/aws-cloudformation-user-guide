@@ -47,7 +47,7 @@ The `Outputs` section can include the following fields\.
 An identifier for the current output\. The logical ID must be alphanumeric \(`a–z`, `A–Z`, `0–9`\) and unique within the template\.
 
 **Description \(optional\)**  
-A `String` type that describes the output value\. The value for the description declaration must be a literal string that's between 0 and 1024 bytes in length\. You can't use a parameter or function to specify the description\. The description can be a maximum of 4 K in length\.
+A `String` type that describes the output value\. The value for the description declaration must be a literal string that's between 0 and 1024 bytes in length\. You can't use a parameter or function to specify the description\. 
 
 **Value \(required\)**  
 The value of the property returned by the `aws cloudformation describe-stacks` command\. The value of an output can include literals, parameter references, pseudo\-parameters, a mapping value, or intrinsic functions\.
@@ -62,7 +62,7 @@ The following restrictions apply to cross\-stack references:
   Similarly, the `ImportValue` function can't include `Ref` or `GetAtt` functions that depend on a resource\.
 + You can't delete a stack if another stack references one of its outputs\.
 + You can't modify or remove an output value that is referenced by another stack\.
-You can use intrinsic functions to customize the `Name` value of an export\. The following examples use the `Fn::Join` function\.  
+You can use intrinsic functions to customize the `Name` value of an export\. The following examples use the ``Fn::Join`` function\.  
 JSON  
 
 ```

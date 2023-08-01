@@ -3,8 +3,8 @@
 Macros enable you to perform custom processing on templates, from simple actions like find\-and\-replace operations to extensive transformations of entire templates\.
 
 To get an idea of the breadth of possibilities, consider the `AWS::Include` and `AWS::Serverless` transforms, which are macros hosted by AWS CloudFormation:
-+ `AWS::Include transform` enables you to insert boilerplate template snippets into your templates\.
-+ `AWS::Serverless transform` takes an entire template written in the AWS Serverless Application Model \(AWS SAM\) syntax and transforms and expands it into a compliant AWS CloudFormation template\. \(For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.\)
++ ``AWS::Include` transform` enables you to insert boilerplate template snippets into your templates\.
++ ``AWS::Serverless` transform` takes an entire template written in the AWS Serverless Application Model \(AWS SAM\) syntax and transforms and expands it into a compliant AWS CloudFormation template\. \(For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.\)
 
 ## How AWS CloudFormation macros work<a name="template-macros-overview"></a>
 
@@ -119,7 +119,7 @@ To create a macro definition, the user must have permissions to create a stack o
 
 In order for AWS CloudFormation to successfully run a macro included in a template, the user must have `Invoke` permissions for the underlying Lambda function\. To prevent potential escalation of permissions, AWS CloudFormation impersonates the user while running the macro\. For more information, see [Lambda permissions model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) in the *AWS Lambda Developer Guide* and [Actions and condition context keys for AWS Lambda](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_lambda.html) in the *IAM User Guide*\.
 
-The [AWS::Serverless transform](transform-aws-serverless.md) and [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) transforms are macros hosted by AWS CloudFormation\. No special permissions are necessary to use them, and they're available from within any account in AWS CloudFormation\.
+The [`AWS::Serverless` transform](transform-aws-serverless.md) and [`AWS::Include` transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) transforms are macros hosted by AWS CloudFormation\. No special permissions are necessary to use them, and they're available from within any account in AWS CloudFormation\.
 
 ### Debugging AWS CloudFormation macros<a name="template-macros-debug"></a>
 
@@ -129,7 +129,7 @@ To aid in debugging, you can also specify the `LogGroupName` and `LogRoleArn` pr
 
 When a macro runs, the owner of the Lambda function is billed for any charges related to the execution of that function\.
 
-The [AWS::Serverless transform](transform-aws-serverless.md) and [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) transforms are macros hosted by AWS CloudFormation\. There is no charge for using them\.
+The [`AWS::Serverless` transform](transform-aws-serverless.md) and [`AWS::Include` transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) transforms are macros hosted by AWS CloudFormation\. There is no charge for using them\.
 
 ### Considerations when creating AWS CloudFormation macro definitions<a name="template-macros-considerations"></a>
 
@@ -167,7 +167,7 @@ After AWS CloudFormation has successfully created the stacks that contain the ma
 
 ### AWS CloudFormation macro evaluation order<a name="template-macros-order"></a>
 
-You can reference multiple macros in a given template, including transforms hosted by AWS CloudFormation, such as [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) and [AWS::Serverless transform](transform-aws-serverless.md)\.
+You can reference multiple macros in a given template, including transforms hosted by AWS CloudFormation, such as [`AWS::Include` transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) and [`AWS::Serverless` transform](transform-aws-serverless.md)\.
 
 Macros are evaluated in order, based on their location in the template, from the most deeply nested outward to the most general\. Macros at the same location in the template are evaluated serially based on the order in which they're listed\.
 
@@ -289,6 +289,6 @@ In addition to the [Macro example: Creating and using a macro](macros-example.md
 
 [`Fn::Transform`](intrinsic-function-reference-transform.md)
 
-[AWS::Serverless transform](transform-aws-serverless.md)
+[`AWS::Serverless` transform](transform-aws-serverless.md)
 
-[AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md)
+[`AWS::Include` transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md)

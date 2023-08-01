@@ -1,4 +1,4 @@
-# AWS::ServiceCatalog transform<a name="transform-aws-servicecatalog"></a>
+# `AWS::ServiceCatalog` transform<a name="transform-aws-servicecatalog"></a>
 
 The `AWS::ServiceCatalog` transform enables Service Catalog users to reference outputs from an existing Service Catalog provisioned product in their CloudFormation template\.
 

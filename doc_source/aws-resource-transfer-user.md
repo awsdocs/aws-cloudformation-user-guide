@@ -59,10 +59,12 @@ A `HomeDirectory` example is `/bucket_name/home/mydirectory`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeDirectoryMappings`  <a name="cfn-transfer-user-homedirectorymappings"></a>
-Logical directory mappings that specify what Amazon S3 paths and keys should be visible to your user and how you want to make them visible\. You will need to specify the "`Entry`" and "`Target`" pair, where `Entry` shows how the path is made visible and `Target` is the actual Amazon S3 path\. If you only specify a target, it will be displayed as is\. You will need to also make sure that your IAM role provides access to paths in `Target`\. The following is an example\.  
- `'[ { "Entry": "/", "Target": "/bucket3/customized-reports/" } ]'`   
-In most cases, you can use this value instead of the session policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.  
-If the target of a logical directory entry does not exist in Amazon S3, the entry will be ignored\. As a workaround, you can use the Amazon S3 API to create 0 byte objects as place holders for your directory\. If using the CLI, use the `s3api` call instead of `s3` so you can use the put\-object operation\. For example, you use the following: `AWS s3api put-object --bucket bucketname --key path/to/folder/`\. Make sure that the end of the key name ends in a '/' for it to be considered a folder\.
+Logical directory mappings that specify what Amazon S3 or Amazon EFS paths and keys should be visible to your user and how you want to make them visible\. You must specify the `Entry` and `Target` pair, where `Entry` shows how the path is made visible and `Target` is the actual Amazon S3 or Amazon EFS path\. If you only specify a target, it is displayed as is\. You also must ensure that your AWS Identity and Access Management \(IAM\) role provides access to paths in `Target`\. This value can be set only when `HomeDirectoryType` is set to *LOGICAL*\.  
+The following is an `Entry` and `Target` pair example\.  
+ `[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]`   
+In most cases, you can use this value instead of the session policy to lock your user down to the designated home directory \("`chroot`"\)\. To do this, you can set `Entry` to `/` and set `Target` to the value the user should see for their home directory when they log in\.  
+The following is an `Entry` and `Target` pair example for `chroot`\.  
+ `[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]`   
 *Required*: No  
 *Type*: List of [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md)  
 *Maximum*: `50`  

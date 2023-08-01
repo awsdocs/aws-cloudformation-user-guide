@@ -1,6 +1,6 @@
 # AWS::HealthLake::FHIRDatastore PreloadDataConfig<a name="aws-properties-healthlake-fhirdatastore-preloaddataconfig"></a>
 
-Optional parameter to preload data upon creation of the Data Store\. Currently, the only supported preloaded data is synthetic data generated from Synthea\.
+Optional parameter to preload data upon creation of the data store\. Currently, the only supported preloaded data is synthetic data generated from Synthea\.
 
 ## Syntax<a name="aws-properties-healthlake-fhirdatastore-preloaddataconfig-syntax"></a>
 

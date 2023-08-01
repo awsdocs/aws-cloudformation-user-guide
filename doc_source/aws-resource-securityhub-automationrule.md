@@ -65,7 +65,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsTerminal`  <a name="cfn-securityhub-automationrule-isterminal"></a>
-Specifies whether a rule is the last to be applied with respect to a finding that matches the rule criteria\. This is useful when a finding matches the criteria for multiple rules, and each rule has different actions\. If the value of this field is set to `true` for a rule, Security Hub applies the rule action to a finding that matches the rule criteria and doesn't evaluate other rules for the finding\.  The default value of this field is `false`\.   
+Specifies whether a rule is the last to be applied with respect to a finding that matches the rule criteria\. This is useful when a finding matches the criteria for multiple rules, and each rule has different actions\. If a rule is terminal, Security Hub applies the rule action to a finding that matches the rule criteria and doesn't evaluate other rules for the finding\. By default, a rule isn't terminal\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

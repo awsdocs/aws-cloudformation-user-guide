@@ -45,7 +45,7 @@ Properties:
 ## Properties<a name="aws-resource-healthlake-fhirdatastore-properties"></a>
 
 `DatastoreName`  <a name="cfn-healthlake-fhirdatastore-datastorename"></a>
-The user generated name for the Data Store\.  
+The user generated name for the data store\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -54,7 +54,7 @@ The user generated name for the Data Store\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DatastoreTypeVersion`  <a name="cfn-healthlake-fhirdatastore-datastoretypeversion"></a>
-The FHIR version of the Data Store\. The only supported version is R4\.  
+The FHIR version of the data store\. The only supported version is R4\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `R4`  
@@ -67,13 +67,13 @@ Property description not available\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PreloadDataConfig`  <a name="cfn-healthlake-fhirdatastore-preloaddataconfig"></a>
-The preloaded data configuration for the Data Store\. Only data preloaded from Synthea is supported\.  
+The preloaded data configuration for the data store\. Only data preloaded from Synthea is supported\.  
 *Required*: No  
 *Type*: [PreloadDataConfig](aws-properties-healthlake-fhirdatastore-preloaddataconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SseConfiguration`  <a name="cfn-healthlake-fhirdatastore-sseconfiguration"></a>
- The server\-side encryption key configuration for a customer provided encryption key specified for creating a Data Store\.   
+ The server\-side encryption key configuration for a customer provided encryption key specified for creating a data store\.   
 *Required*: No  
 *Type*: [SseConfiguration](aws-properties-healthlake-fhirdatastore-sseconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

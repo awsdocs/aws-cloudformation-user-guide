@@ -115,44 +115,52 @@ The following example creates an OpenSearch Ingestion pipeline running version 2
 
 ```
 {
-  "Parameters": {
-    "PipelineConfigurationBody": {
-      "Type": "String"
-    }
-  },
-  "Resources": {
-    "OpenSearchIngestionPipeline": {
-      "Type": "AWS::OSIS::Pipeline",
-      "Properties": {
-        "LogPublishingOptions": {
-          "IsLoggingEnabled": true,
-          "CloudWatchLogDestination": {
-            "LogGroup": "/aws/OpenSearchService/IngestionService/test-pipeline"
-          }
-        },
-        "MinUnits": 3,
-        "MaxUnits": 9,
-        "PipelineConfigurationBody": {
-          "Value": {
-            "Ref": "PipelineConfigurationBody"
-          }
-        },
-        "PipelineName": "test-pipeline"
+   "Parameters": {
+      "PipelineConfigurationBody": {
+         "Type": "String"
       }
-    }
-  },
-  "Outputs": {
-    "PipelineArn": {
-      "Value": {
-        "Ref": "OpenSearchIngestionPipeline"
+   },
+   "Resources": {
+      "OpenSearchIngestionPipeline": {
+         "Type": "AWS::OSIS::Pipeline",
+         "Properties": {
+            "LogPublishingOptions": {
+               "IsLoggingEnabled": true,
+               "CloudWatchLogDestination": {
+                  "LogGroup": "/aws/OpenSearchService/IngestionService/test-pipeline"
+               }
+            },
+            "MinUnits": 3,
+            "MaxUnits": 9,
+            "PipelineConfigurationBody": {
+               "Value": {
+                  "Ref": "PipelineConfigurationBody"
+               }
+            },
+            "PipelineName": "test-pipeline"
+         }
       }
-    },
-    "IngestEndpointUrls": {
-      "Value": {
-        "Ref": "OpenSearchIngestionPipeline"
+   },
+   "Outputs": {
+      "PipelineArn": {
+         "Value": {
+            "Ref": "OpenSearchIngestionPipeline"
+         }
+      },
+      "IngestEndpointUrls": {
+         "Value": {
+            "Fn::Select": [
+               0,
+               {
+                  "Fn::GetAtt": [
+                     "OpenSearchIngestionPipeline",
+                     "IngestEndpointUrls"
+                  ]
+               }
+            ]
+         }
       }
-    }
-  }
+   }
 }
 ```
 
@@ -164,12 +172,12 @@ Parameters:
     Type: String
 Resources:
   OpenSearchIngestionPipeline:
-    Type: AWS::OSIS::Pipeline
+    Type: 'AWS::OSIS::Pipeline'
     Properties:
       LogPublishingOptions:
         IsLoggingEnabled: true
         CloudWatchLogDestination:
-          LogGroup: "/aws/vendedlogs/test-pipeline"
+          LogGroup: /aws/vendedlogs/test-pipeline
       MinUnits: 3
       MaxUnits: 9
       PipelineConfigurationBody:
@@ -181,6 +189,5 @@ Outputs:
     Value:
       Ref: OpenSearchIngestionPipeline
   IngestEndpointUrls:
-    Value:
-      Ref: OpenSearchIngestionPipeline
+    Value: !Select [0, !GetAtt OpenSearchIngestionPipeline.IngestEndpointUrls]
 ```

@@ -17,8 +17,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::ImageVersion",
   "Properties" : {
+      "[Alias](#cfn-sagemaker-imageversion-alias)" : String,
+      "[Aliases](#cfn-sagemaker-imageversion-aliases)" : [ String, ... ],
       "[BaseImage](#cfn-sagemaker-imageversion-baseimage)" : String,
-      "[ImageName](#cfn-sagemaker-imageversion-imagename)" : String
+      "[Horovod](#cfn-sagemaker-imageversion-horovod)" : Boolean,
+      "[ImageName](#cfn-sagemaker-imageversion-imagename)" : String,
+      "[JobType](#cfn-sagemaker-imageversion-jobtype)" : String,
+      "[MLFramework](#cfn-sagemaker-imageversion-mlframework)" : String,
+      "[Processor](#cfn-sagemaker-imageversion-processor)" : String,
+      "[ProgrammingLang](#cfn-sagemaker-imageversion-programminglang)" : String,
+      "[ReleaseNotes](#cfn-sagemaker-imageversion-releasenotes)" : String,
+      "[VendorGuidance](#cfn-sagemaker-imageversion-vendorguidance)" : String
     }
 }
 ```
@@ -28,11 +37,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::ImageVersion
 Properties: 
+  [Alias](#cfn-sagemaker-imageversion-alias): String
+  [Aliases](#cfn-sagemaker-imageversion-aliases): 
+    - String
   [BaseImage](#cfn-sagemaker-imageversion-baseimage): String
+  [Horovod](#cfn-sagemaker-imageversion-horovod): Boolean
   [ImageName](#cfn-sagemaker-imageversion-imagename): String
+  [JobType](#cfn-sagemaker-imageversion-jobtype): String
+  [MLFramework](#cfn-sagemaker-imageversion-mlframework): String
+  [Processor](#cfn-sagemaker-imageversion-processor): String
+  [ProgrammingLang](#cfn-sagemaker-imageversion-programminglang): String
+  [ReleaseNotes](#cfn-sagemaker-imageversion-releasenotes): String
+  [VendorGuidance](#cfn-sagemaker-imageversion-vendorguidance): String
 ```
 
 ## Properties<a name="aws-resource-sagemaker-imageversion-properties"></a>
+
+`Alias`  <a name="cfn-sagemaker-imageversion-alias"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Aliases`  <a name="cfn-sagemaker-imageversion-aliases"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BaseImage`  <a name="cfn-sagemaker-imageversion-baseimage"></a>
 The container image that the SageMaker image version is based on\.  
@@ -42,6 +73,12 @@ The container image that the SageMaker image version is based on\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Horovod`  <a name="cfn-sagemaker-imageversion-horovod"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ImageName`  <a name="cfn-sagemaker-imageversion-imagename"></a>
 The name of the parent image\.  
 *Length Constraints*: Minimum length of 1\. Maximum length of 63\.  
@@ -49,6 +86,42 @@ The name of the parent image\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`JobType`  <a name="cfn-sagemaker-imageversion-jobtype"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MLFramework`  <a name="cfn-sagemaker-imageversion-mlframework"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Processor`  <a name="cfn-sagemaker-imageversion-processor"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ProgrammingLang`  <a name="cfn-sagemaker-imageversion-programminglang"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ReleaseNotes`  <a name="cfn-sagemaker-imageversion-releasenotes"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`VendorGuidance`  <a name="cfn-sagemaker-imageversion-vendorguidance"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-sagemaker-imageversion-return-values"></a>
 

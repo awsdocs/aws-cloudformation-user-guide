@@ -22,7 +22,7 @@ Define the inputs that you want your conditions to evaluate\. The conditions eva
 Define conditions by using the intrinsic condition functions\. These conditions determine when AWS CloudFormation creates the associated resources\.
 
 `Resources` and `Outputs` sections  
-Associate conditions with the resources or outputs that you want to conditionally create\. AWS CloudFormation creates entities that are associated with a true condition and ignores entities that are associated with a false condition\. Use the `Condition` key and a condition's logical ID to associate it with a resource or output\. To conditionally specify a property, use the `Fn::If` function\. For more information, see [Condition functions](intrinsic-function-reference-conditions.md)\.
+Associate conditions with the resources or outputs that you want to conditionally create\. AWS CloudFormation creates entities that are associated with a true condition and ignores entities that are associated with a false condition\. Use the `Condition` key and a condition's logical ID to associate it with a resource or output\. To conditionally specify a property, use the ``Fn::If`` function\. For more information, see [Condition functions](intrinsic-function-reference-conditions.md)\.
 
 ## Syntax<a name="conditions-section-structure-syntax"></a>
 
@@ -48,11 +48,12 @@ Conditions:
 #### Condition intrinsic functions<a name="conditions-section-structure-functions"></a>
 
 You can use the following intrinsic functions to define conditions:
-+ `Fn::And`
-+ `Fn::Equals`
-+ `Fn::If`
-+ `Fn::Not`
-+ `Fn::Or`
++ ``Fn::And``
++ ``Fn::Equals``
++ ``Fn::ForEach``
++ ``Fn::If``
++ ``Fn::Not``
++ ``Fn::Or``
 
 For the syntax and information about each function, see [Condition functions](intrinsic-function-reference-conditions.md)\.
 

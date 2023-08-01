@@ -40,13 +40,13 @@ The health check configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IpAddressType`  <a name="cfn-vpclattice-targetgroup-targetgroupconfig-ipaddresstype"></a>
-The type of IP address used for the target group\. The possible values are `ipv4` and `ipv6`\. This is an optional parameter\. If not specified, the IP address type defaults to `ipv4`\.  
+The type of IP address used for the target group\. The possible values are `ipv4` and `ipv6`\. This is an optional parameter\. If not specified, the default is `ipv4`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Port`  <a name="cfn-vpclattice-targetgroup-targetgroupconfig-port"></a>
-The port on which the targets are listening\. For HTTP, the default is `80`\. For HTTPS, the default is `443`  
+The port on which the targets are listening\. For HTTP, the default is 80\. For HTTPS, the default is 443\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

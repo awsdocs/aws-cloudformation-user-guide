@@ -101,7 +101,8 @@ A regular expression that represents the patterns to allow for `String` or `Comm
 
 `AllowedValues`  
 An array containing the list of values allowed for the parameter\. When applied to a parameter of type `String`, the parameter value must be one of the allowed values\. When applied to a parameter of type `CommaDelimitedList`, each value in the list must be one of the specified allowed values\.  
-*Required*: No
+*Required*: No  
+If you're using YAML and you want to use `Yes` and `No` strings for `AllowedValues`, use single\-quotes to prevent the YAML parser from considering these boolean values\.
 
 `ConstraintDescription`  
 A string that explains a constraint when the constraint is violated\. For example, without a constraint description, a parameter that has an allowed pattern of `[A-Za-z0-9]+` displays the following error message when the user specifies an invalid value:  
@@ -409,7 +410,7 @@ Parameters:
 
 #### Return a value from a comma\-delimited list parameter<a name="parameters-section-structure-examples-return-value"></a>
 
-To refer to a specific value in a list, use the `Fn::Select` intrinsic function in the `Resources` section of your template\. You pass the index value of the object that you want and a list of objects, as shown in the following snippet:
+To refer to a specific value in a list, use the ``Fn::Select`` intrinsic function in the `Resources` section of your template\. You pass the index value of the object that you want and a list of objects, as shown in the following snippet:
 
 ##### JSON<a name="parameters-section-structure-examples-example4.json"></a>
 

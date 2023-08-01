@@ -324,7 +324,7 @@ You can use the `files` key to create files on the EC2 instance\. The content ca
 
 | Key | Description | 
 | --- | --- | 
-|  content  |  Either a string or a properly formatted JSON object\. If you use a JSON object as your content, the JSON will be written to a file on disk\. Any intrinsic functions such as Fn::GetAtt or Ref are evaluated before the JSON object is written to disk\. When you create a symlink, specify the symlink target as the content\.  If you create a symlink, the helper script modifies the permissions of the target file\. Currently, you can't create a symlink without modifying the permissions of the target file\.   | 
+|  content  |  Either a string or a properly formatted JSON object\. If you use a JSON object as your content, the JSON will be written to a file on disk\. Any intrinsic functions such as `Fn::GetAtt` or `Ref` are evaluated before the JSON object is written to disk\. When you create a symlink, specify the symlink target as the content\.  If you create a symlink, the helper script modifies the permissions of the target file\. Currently, you can't create a symlink without modifying the permissions of the target file\.   | 
 |  source  |  A URL to load the file from\. This option can't be specified with the content key\.  | 
 |  encoding  |  The encoding format\. Only used if the content is a string\. Encoding isn't applied if you are using a source\. Valid values: `plain` \| `base64`  | 
 |  group  |  The name of the owning group for this file\. Not supported for Windows systems\.  | 

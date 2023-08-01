@@ -13,11 +13,11 @@ You can only reference other conditions and values from the Parameters and Mappi
 
 **Topics**
 + [Associating a condition](#associating-a-condition)
-+ [Fn::And](#intrinsic-function-reference-conditions-and)
-+ [Fn::Equals](#intrinsic-function-reference-conditions-equals)
-+ [Fn::If](#intrinsic-function-reference-conditions-if)
-+ [Fn::Not](#intrinsic-function-reference-conditions-not)
-+ [Fn::Or](#intrinsic-function-reference-conditions-or)
++ [`Fn::And`](#intrinsic-function-reference-conditions-and)
++ [`Fn::Equals`](#intrinsic-function-reference-conditions-equals)
++ [`Fn::If`](#intrinsic-function-reference-conditions-if)
++ [`Fn::Not`](#intrinsic-function-reference-conditions-not)
++ [`Fn::Or`](#intrinsic-function-reference-conditions-or)
 + [Supported functions](#w4ab1c33c28c21c29)
 + [Sample templates](conditions-sample-templates.md)
 + [Condition](intrinsic-function-reference-condition.md)
@@ -49,7 +49,7 @@ NewVolume:
     AvailabilityZone: !GetAtt EC2Instance.AvailabilityZone
 ```
 
-### Fn::If<a name="fn-if-examples"></a>
+### `Fn::If`<a name="fn-if-examples"></a>
 
 For the `Fn::If` function, you only need to specify the condition name\. The following snippet shows how to use `Fn::If` to conditionally specify a resource property\. If the `CreateLargeSize` condition is true, CloudFormation sets the volume size to `100`\. If the condition is false, CloudFormation sets the volume size to `10`\.
 
@@ -120,7 +120,7 @@ MyAndCondition: !And
   - !Condition SomeOtherCondition
 ```
 
-## Fn::And<a name="intrinsic-function-reference-conditions-and"></a>
+## `Fn::And`<a name="intrinsic-function-reference-conditions-and"></a>
 
 Returns `true` if all the specified conditions evaluate to true, or returns `false` if any one of the conditions evaluates to false\. `Fn::And` acts as an AND operator\. The minimum number of conditions that you can include is 2, and the maximum is 10\.
 
@@ -174,7 +174,7 @@ MyAndCondition: !And
   - !Condition SomeOtherCondition
 ```
 
-## Fn::Equals<a name="intrinsic-function-reference-conditions-equals"></a>
+## `Fn::Equals`<a name="intrinsic-function-reference-conditions-equals"></a>
 
 Compares if two values are equal\. Returns `true` if the two values are equal or `false` if they aren't\.
 
@@ -227,7 +227,7 @@ UseProdCondition:
   !Equals [!Ref EnvironmentType, prod]
 ```
 
-## Fn::If<a name="intrinsic-function-reference-conditions-if"></a>
+## `Fn::If`<a name="intrinsic-function-reference-conditions-if"></a>
 
 Returns one value if the specified condition evaluates to `true` and another value if the specified condition evaluates to `false`\. Currently, CloudFormation supports the `Fn::If` intrinsic function in the metadata attribute, update policy attribute, and property values in the Resources section and Outputs sections of a template\. You can use the `AWS::NoValue` pseudo parameter as a return value to remove the corresponding property\.
 
@@ -404,7 +404,7 @@ UpdatePolicy:
       - !Ref "AWS::NoValue"
 ```
 
-## Fn::Not<a name="intrinsic-function-reference-conditions-not"></a>
+## `Fn::Not`<a name="intrinsic-function-reference-conditions-not"></a>
 
 Returns `true` for a condition that evaluates to `false` or returns `false` for a condition that evaluates to `true`\. `Fn::Not` acts as a NOT operator\.
 
@@ -459,7 +459,7 @@ MyNotCondition:
   !Not [!Equals [!Ref EnvironmentType, prod]]
 ```
 
-## Fn::Or<a name="intrinsic-function-reference-conditions-or"></a>
+## `Fn::Or`<a name="intrinsic-function-reference-conditions-or"></a>
 
 Returns `true` if any one of the specified conditions evaluate to true, or returns `false` if all the conditions evaluates to false\. `Fn::Or` acts as an OR operator\. The minimum number of conditions that you can include is 2, and the maximum is 10\.
 

@@ -42,9 +42,9 @@ The settings that enable gradual state machine deployments\. These settings incl
 CloudFormation automatically shifts traffic from the version an alias currently points to, to a new state machine version that you specify\.  
 `RoutingConfiguration` and `DeploymentPreference` are mutually exclusive properties\. You must define only one of these properties\.
 Based on the type of deployment you want to perform, you can specify one of the following settings:  
-+ `LINEAR` \- Shifts traffic to the new version in equal increments with an equal number of seconds between each increment\.
++ `LINEAR` \- Shifts traffic to the new version in equal increments with an equal number of minutes between each increment\.
 
-  For example, if you specify the increment percent as `20` with an interval of `600` seconds, this deployment increases traffic by 20 percent every 600 seconds until the new version receives 100 percent of the traffic\. This deployment immediately rolls back the new version if any Amazon CloudWatch alarms are triggered\.
+  For example, if you specify the increment percent as `20` with an interval of `600` minutes, this deployment increases traffic by 20 percent every 600 minutes until the new version receives 100 percent of the traffic\. This deployment immediately rolls back the new version if any Amazon CloudWatch alarms are triggered\.
 + `ALL_AT_ONCE` \- Shifts 100 percent of traffic to the new version immediately\. CloudFormation monitors the new version and rolls it back automatically to the previous version if any CloudWatch alarms are triggered\.
 + `CANARY` \- Shifts traffic in two increments\.
 
@@ -102,11 +102,11 @@ Returns the ARN of the state machine alias\. For example, `arn:aws:states:us-eas
 
 ## Examples<a name="aws-resource-stepfunctions-statemachinealias--examples"></a>
 
-The following are examples of `LINEAR` deployment that show how you can use an alias to shift traffic to a new version\. The first example snippet shows an alias named `PROD` that shifts 20 percent of traffic to the version B every five minutes\.
-
-The second example shows how you can publish multiple versions of the same state machine with the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html) resource, create an alias with the `AWS::StepFunctions::Alias` resource, and use the alias to deploy a new version\.
+The following are examples of `LINEAR` deployment that show how you can use an alias to shift traffic to a new version\. 
 
 ### Shifting traffic to a new version with an alias<a name="aws-resource-stepfunctions-statemachinealias--examples--Shifting_traffic_to_a_new_version_with_an_alias"></a>
+
+The following example shows an alias named `PROD` that shifts 20 percent of traffic to the version B every five minutes\.
 
 #### YAML<a name="aws-resource-stepfunctions-statemachinealias--examples--Shifting_traffic_to_a_new_version_with_an_alias--yaml"></a>
 
@@ -129,13 +129,15 @@ PROD:
 
 ### Complete example to publish and deploy a new version with an alias<a name="aws-resource-stepfunctions-statemachinealias--examples--Complete_example_to_publish_and_deploy_a_new_version_with_an_alias"></a>
 
+The following example publishes multiple versions of the same state machine with the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html) resource\. The example also creates an alias with the `AWS::StepFunctions::StateMachineAlias` resource and uses that alias to deploy a new state machine version\.
+
 #### YAML<a name="aws-resource-stepfunctions-statemachinealias--examples--Complete_example_to_publish_and_deploy_a_new_version_with_an_alias--yaml"></a>
 
 ```
 MyStateMachine:
   Type: AWS::StepFunctions::StateMachine
   Properties:
-    Type: STANDARD
+    StateMachineType: STANDARD
     StateMachineName: MyStateMachine
     RoleArn: arn:aws:iam::12345678912:role/myIamRole
     Definition:
@@ -164,7 +166,50 @@ PROD:
     Name: PROD
     Description: The PROD state machine alias taking production traffic.
     DeploymentPreference:
-      VersionArn: !Ref MyStateMachineVersionB
+      StateMachineVersionArn: !Ref MyStateMachineVersionB
+      Type: LINEAR
+      Percentage: 20
+      Interval: 5
+      Alarms:
+        - !Ref CloudWatchAlarm1
+        - !Ref CloudWatchAlarm2
+```
+
+### Publish and deploy a version that always points to the most recent state machine revision<a name="aws-resource-stepfunctions-statemachinealias--examples--Publish_and_deploy_a_version_that_always_points_to_the_most_recent_state_machine_revision"></a>
+
+The following example demonstrates the use of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html#cfn-stepfunctions-statemachineversion-statemachinerevisionid](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html#cfn-stepfunctions-statemachineversion-statemachinerevisionid) property to return the value of revision ID for the state machine resource\. CloudFormation automatically detects if this property's value is different from the value in previous stack and publishes a new version that always points to the most recent revision of your state machine\. The example then creates an alias named PROD to deploy this new version\.
+
+#### YAML<a name="aws-resource-stepfunctions-statemachinealias--examples--Publish_and_deploy_a_version_that_always_points_to_the_most_recent_state_machine_revision--yaml"></a>
+
+```
+MyStateMachine:
+  Type: AWS::StepFunctions::StateMachine
+  Properties:
+    StateMachineType: STANDARD
+    StateMachineName: MyStateMachine
+    RoleArn: arn:aws:iam::12345678912:role/myIamRole
+    Definition:
+      StartAt: PassState
+      States:
+        PassState:
+          Type: Pass
+          Result: Result
+          End: true
+
+MyStateMachineVersion:
+  Type: AWS::StepFunctions::StateMachineVersion
+  Properties:
+    Description: Version referencing 
+    StateMachineArn: !Ref MyStateMachine
+    StateMachineRevisionId: !GetAtt MyStateMachine.StateMachineRevisionId
+
+PROD:
+  Type: AWS::StepFunctions::StateMachineAlias
+  Properties:
+    Name: PROD
+    Description: The PROD state machine alias taking production traffic.
+    DeploymentPreference:
+      StateMachineVersionArn: !Ref MyStateMachineVersionB
       Type: LINEAR
       Percentage: 20
       Interval: 5

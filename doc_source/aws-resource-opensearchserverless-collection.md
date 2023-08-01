@@ -62,7 +62,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-opensearchserverless-collection-type"></a>
-The type of collection\. Possible values are `SEARCH` and `TIMESERIES`\. For more information, see [Choosing a collection type](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-usecase)\.  
+The type of collection\. Possible values are `SEARCH`, `TIMESERIES`, and `VECTORSEARCH`\. For more information, see [Choosing a collection type](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-usecase)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

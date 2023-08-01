@@ -2,7 +2,7 @@
 
 When you add the `AWS::LanguageExtensions` transform in a AWS CloudFormation template, you can use intrinsic functions to define the fields of `Fn::FindInMap`\. You can also use a new optional field to return a default value if a mapping is not found\.
 
-For more information about the `AWS::LanguageExtensions` transform, see [AWS::LanguageExtensions transform](transform-aws-languageextensions.md)\.
+For more information about the `AWS::LanguageExtensions` transform, see [`AWS::LanguageExtensions` transform](transform-aws-languageextensions.md)\.
 
 For more information about the `Fn::FindInMap` intrinsic function, see [`Fn::FindInMap`](intrinsic-function-reference-findinmap.md)\.
 

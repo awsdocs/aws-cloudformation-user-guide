@@ -1,4 +1,4 @@
-# AWS::SecretsManager transform<a name="transform-aws-secretsmanager"></a>
+# `AWS::SecretsManager` transform<a name="transform-aws-secretsmanager"></a>
 
 Use the `AWS::SecretsManager` transform, which is a macro hosted by AWS CloudFormation, to specify a AWS Lambda function to perform secrets rotation\. When [Creating a change set](using-cfn-updating-stacks-changesets-create.md) or [Updating stacks using change sets](using-cfn-updating-stacks-changesets.md), and the templates references `AWS::SecretsManager`, AWS CloudFormation generates a AWS Lambda function to perform secrets rotation\. Use the `[HostedRotationLambda](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html)` property type of the `[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)` resource to specify the attributes of the desired AWS Lambda function\.
 

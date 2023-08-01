@@ -1,22 +1,22 @@
-# AWS Rule Functions<a name="intrinsic-function-reference-rules"></a>
+# AWS rule functions<a name="intrinsic-function-reference-rules"></a>
 
 In the condition or assertions of a rule, you can use intrinsic functions, such as `Fn::Equals`, `Fn::Not`, and `Fn::RefAll`\. The condition property determines if AWS CloudFormation applies the assertions\. If the condition evaluates to `true`, CloudFormation evaluates the assertions to verify whether a parameter value is valid when a provisioned product is created or updated\. If a parameter value isn't valid, CloudFormation doesn't create or update the stack\. If the condition evaluates to `false`, CloudFormation doesn't check the parameter value and proceeds with the stack operation\.
 
 **Topics**
-+ [Fn::And](#fn-and)
-+ [Fn::Contains](#fn-contains)
-+ [Fn::EachMemberEquals](#fn-eachmemberequals)
-+ [Fn::EachMemberIn](#fn-eachmemberin)
-+ [Fn::Equals](#fn-equals)
-+ [Fn::Not](#fn-not)
-+ [Fn::Or](#fn-or)
-+ [Fn::RefAll](#fn-refall)
-+ [Fn::ValueOf](#fn-valueof)
-+ [Fn::ValueOfAll](#fn-valueofall)
-+ [Supported Functions](#supported-rule-functions)
-+ [Supported Attributes](#rules-parameter-attributes)
++ [`Fn::And`](#fn-and)
++ [`Fn::Contains`](#fn-contains)
++ [`Fn::EachMemberEquals`](#fn-eachmemberequals)
++ [`Fn::EachMemberIn`](#fn-eachmemberin)
++ [`Fn::Equals`](#fn-equals)
++ [`Fn::Not`](#fn-not)
++ [`Fn::Or`](#fn-or)
++ [`Fn::RefAll`](#fn-refall)
++ [`Fn::ValueOf`](#fn-valueof)
++ [`Fn::ValueOfAll`](#fn-valueofall)
++ [Supported functions](#supported-rule-functions)
++ [Supported attributes](#rules-parameter-attributes)
 
-## Fn::And<a name="fn-and"></a>
+## `Fn::And`<a name="fn-and"></a>
 
 Returns `true` if all the specified conditions evaluate to `true`; returns `false` if any one of the conditions evaluates to `false`\. `Fn::And` acts as an AND operator\. The minimum number of conditions that you can include is two, and the maximum is ten\.
 
@@ -36,13 +36,26 @@ A rule\-specific intrinsic function that evaluates to `true` or `false`\.
 The following example evaluates to `true` if the referenced security group name is equal to `sg-mysggroup` and if the `InstanceType` parameter value is either `m1.large` or `m1.small`:
 
 ```
-"Fn::And" : [
-  {"Fn::Equals" : ["sg-mysggroup", {"Ref" : "ASecurityGroup"}]},
-  {"Fn::Contains" : [["m1.large", "m1.small"], {"Ref" : "InstanceType"}]}
+"Fn::And": [
+  {
+    "Fn::Equals": [
+      "sg-mysggroup",
+      {"Ref": "ASecurityGroup"}
+    ]
+  },
+  {
+    "Fn::Contains": [
+      [
+        "m1.large",
+        "m1.small"
+      ],
+      {"Ref": "InstanceType"}
+    ]
+  }
 ]
 ```
 
-## Fn::Contains<a name="fn-contains"></a>
+## `Fn::Contains`<a name="fn-contains"></a>
 
 Returns `true` if a specified string matches at least one value in a list of strings\.
 
@@ -70,7 +83,7 @@ The following function evaluates to `true` if the `InstanceType` parameter value
 ]
 ```
 
-## Fn::EachMemberEquals<a name="fn-eachmemberequals"></a>
+## `Fn::EachMemberEquals`<a name="fn-eachmemberequals"></a>
 
 Returns `true` if a specified string matches all values in a list\.
 
@@ -98,7 +111,7 @@ The following function returns `true` if the `Department` tag for all parameters
 ]
 ```
 
-## Fn::EachMemberIn<a name="fn-eachmemberin"></a>
+## `Fn::EachMemberIn`<a name="fn-eachmemberin"></a>
 
 Returns `true` if each member in a list of strings matches at least one value in a second list of strings\.
 
@@ -126,7 +139,7 @@ The following function checks whether users specify a subnet that's in a valid v
 ]
 ```
 
-## Fn::Equals<a name="fn-equals"></a>
+## `Fn::Equals`<a name="fn-equals"></a>
 
 Compares two values to determine whether they're equal\. Returns `true` if the two values are equal and `false` if they aren't\.
 
@@ -149,7 +162,7 @@ The following example evaluates to `true` if the value for the `EnvironmentType`
 "Fn::Equals" : [{"Ref" : "EnvironmentType"}, "prod"]
 ```
 
-## Fn::Not<a name="fn-not"></a>
+## `Fn::Not`<a name="fn-not"></a>
 
 Returns `true` for a condition that evaluates to `false`, and returns `false` for a condition that evaluates to `true`\. `Fn::Not` acts as a NOT operator\.
 
@@ -172,7 +185,7 @@ The following example evaluates to `true` if the value for the `EnvironmentType`
 "Fn::Not" : [{"Fn::Equals" : [{"Ref" : "EnvironmentType"}, "prod"]}]
 ```
 
-## Fn::Or<a name="fn-or"></a>
+## `Fn::Or`<a name="fn-or"></a>
 
 Returns `true` if any one of the specified conditions evaluates to `true`; returns `false` if all the conditions evaluate to `false`\. `Fn::Or` acts as an OR operator\. The minimum number of conditions that you can include is two, and the maximum is ten\.
 
@@ -198,7 +211,7 @@ The following example evaluates to `true` if the referenced security group name 
 ]
 ```
 
-## Fn::RefAll<a name="fn-refall"></a>
+## `Fn::RefAll`<a name="fn-refall"></a>
 
 Returns all values for a specified parameter type\.
 
@@ -221,7 +234,7 @@ The following function returns a list of all VPC IDs for the region and AWS acco
 "Fn::RefAll" : "AWS::EC2::VPC::Id"
 ```
 
-## Fn::ValueOf<a name="fn-valueof"></a>
+## `Fn::ValueOf`<a name="fn-valueof"></a>
 
 Returns an attribute value or list of values for a specific parameter and attribute\.
 
@@ -234,7 +247,7 @@ Returns an attribute value or list of values for a specific parameter and attrib
 ### Parameters<a name="fn-valueof-parameters"></a>
 
 *attribute*  
-The name of an attribute from which you want to retrieve a value\. For more information about attributes, see [Supported Attributes](#rules-parameter-attributes)\.
+The name of an attribute from which you want to retrieve a value\. For more information about attributes, see [Supported attributes](#rules-parameter-attributes)\.
 
 *parameter\_logical\_id*  
 The name of a parameter for which you want to retrieve attribute values\. The parameter must be declared in the `Parameters` section of the template\.
@@ -253,7 +266,7 @@ If you specify multiple values for a parameter, the Fn::ValueOf function can ret
 "Fn::ValueOf" : ["ListOfElbSubnets", "AvailabilityZone"]
 ```
 
-## Fn::ValueOfAll<a name="fn-valueofall"></a>
+## `Fn::ValueOfAll`<a name="fn-valueofall"></a>
 
 Returns a list of all attribute values for a given parameter type and attribute\.
 
@@ -266,7 +279,7 @@ Returns a list of all attribute values for a given parameter type and attribute\
 ### Parameters<a name="fn-valueofall-parameters"></a>
 
 *attribute*  
-The name of an attribute from which you want to retrieve a value\. For more information about attributes, see [Supported Attributes](#rules-parameter-attributes)\.
+The name of an attribute from which you want to retrieve a value\. For more information about attributes, see [Supported attributes](#rules-parameter-attributes)\.
 
 *parameter\_type*  
 An AWS\-specific parameter type, such as `AWS::EC2::SecurityGroup::Id` or `AWS::EC2::VPC::Id`\. For more information, see [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) in the *AWS CloudFormation User Guide*\.
@@ -279,13 +292,13 @@ In the following example, the `Fn::ValueOfAll` function returns a list of values
 "Fn::ValueOfAll" : ["AWS::EC2::VPC::Id", "Tags.Department"]
 ```
 
-## Supported Functions<a name="supported-rule-functions"></a>
+## Supported functions<a name="supported-rule-functions"></a>
 
 You can't use another function within the `Fn::ValueOf` and `Fn::ValueOfAll` functions\. However, you can use the following functions within all other rule\-specific intrinsic functions:
 + `Ref`
 + Other rule\-specific intrinsic functions
 
-## Supported Attributes<a name="rules-parameter-attributes"></a>
+## Supported attributes<a name="rules-parameter-attributes"></a>
 
 The following list describes the attribute values that you can retrieve for specific resources and parameter types:
 

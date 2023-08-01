@@ -41,7 +41,7 @@ Properties:
 ## Properties<a name="aws-resource-vpclattice-targetgroup-properties"></a>
 
 `Config`  <a name="cfn-vpclattice-targetgroup-config"></a>
-The target group configuration\. If `type` is set to `LAMBDA`, this parameter doesn't apply\.  
+The target group configuration\. If the target group type is `LAMBDA`, this parameter doesn't apply\.  
 *Required*: No  
 *Type*: [TargetGroupConfig](aws-properties-vpclattice-targetgroup-targetgroupconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

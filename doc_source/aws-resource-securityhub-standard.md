@@ -36,6 +36,7 @@ Properties:
 
 `DisabledStandardsControls`  <a name="cfn-securityhub-standard-disabledstandardscontrols"></a>
  Specifies which controls are to be disabled in a standard\.   
+*Maximum*: `100`  
 *Required*: No  
 *Type*: List of [StandardsControl](aws-properties-securityhub-standard-standardscontrol.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

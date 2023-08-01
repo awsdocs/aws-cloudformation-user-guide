@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-healthlake-fhirdatastore-kmsencryptionconfig-kmskeyid"></a>
- The KMS encryption key id/alias used to encrypt the Data Store contents at rest\.   
+ The KMS encryption key id/alias used to encrypt the data store contents at rest\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

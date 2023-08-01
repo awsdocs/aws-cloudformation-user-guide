@@ -15,17 +15,17 @@ A rule can include a `RuleCondition` property and must include an `Assertions` p
 To define a rule condition and assertions, use *rule\-specific intrinsic functions*, which are functions that can only be used in the `Rules` section of a template\. You can nest functions, but the final result of a rule condition or assertion must be either true or false\.
 
 You can use the following rule\-specific intrinsic functions to define rule conditions and assertions:
-+ `[Fn::And](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-and)`
-+ `[Fn::Contains](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-Contains)`
-+ `[Fn::EachMemberEquals](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-EachMemberEquals)`
-+ `[Fn::EachMemberIn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-EachMemberIn)`
-+ `[Fn::Equals](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-equals)`
-+ `[Fn::If](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-if)`
-+ `[Fn::Not](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-not)`
-+ `[Fn::Or](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-or)`
-+ `[Fn::RefAll](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-refall)`
-+ `[Fn::ValueOf](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-valueof)`
-+ `[Fn::ValueOfAll](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-valueofall)`
++ ``Fn::And``
++ ``Fn::Contains``
++ ``Fn::EachMemberEquals``
++ ``Fn::EachMemberIn``
++ ``Fn::Equals``
++ ``Fn::If``
++ ``Fn::Not``
++ ``Fn::Or``
++ ``Fn::RefAll``
++ ``Fn::ValueOf``
++ ``Fn::ValueOfAll``
 
 Rule\-specific intrinsic functions are used in the condition or assertions of a rule\. The condition property determines if AWS CloudFormation applies the assertions\. If the condition evaluates to `true`, AWS CloudFormation evaluates the assertions to verify whether a parameter value is valid when a provisioned product is created or updated\. If a parameter value is invalid, AWS CloudFormation does not create or update the stack\. If the condition evaluates to `false`, AWS CloudFormation doesn't check the parameter value and proceeds with the stack operation\.
 

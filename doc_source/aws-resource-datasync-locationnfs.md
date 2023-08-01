@@ -39,22 +39,20 @@ Properties:
 ## Properties<a name="aws-resource-datasync-locationnfs-properties"></a>
 
 `MountOptions`  <a name="cfn-datasync-locationnfs-mountoptions"></a>
-Specifies the mount options that DataSync can use to mount your NFS share\.  
+Specifies the options that DataSync can use to mount your NFS file server\.  
 *Required*: No  
 *Type*: [MountOptions](aws-properties-datasync-locationnfs-mountoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnPremConfig`  <a name="cfn-datasync-locationnfs-onpremconfig"></a>
-Specifies the Amazon Resource Names \(ARNs\) of agents that DataSync uses to connect to your NFS file server\.   
-If you are copying data to or from your AWS Snowcone device, see [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone) for more information\.  
+Specifies the Amazon Resource Name \(ARN\) of the DataSync agent that want to connect to your NFS file server\.  
+You can specify more than one agent\. For more information, see [Using multiple agents for transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html)\.  
 *Required*: Yes  
 *Type*: [OnPremConfig](aws-properties-datasync-locationnfs-onpremconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerHostname`  <a name="cfn-datasync-locationnfs-serverhostname"></a>
-Specifies the IP address or domain name of your NFS file server\. An agent that is installed on\-premises uses this hostname to mount the NFS server in a network\.   
-If you are copying data to or from your AWS Snowcone device, see [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone) for more information\.  
-You must specify be an IP version 4 address or Domain Name System \(DNS\)\-compliant name\.
+Specifies the Domain Name System \(DNS\) name or IP version 4 address of the NFS file server that your DataSync agent connects to\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `255`  
@@ -62,10 +60,8 @@ You must specify be an IP version 4 address or Domain Name System \(DNS\)\-compl
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subdirectory`  <a name="cfn-datasync-locationnfs-subdirectory"></a>
-Specifies the subdirectory in the NFS file server that DataSync transfers to or from\. The NFS path should be a path that's exported by the NFS server, or a subdirectory of that path\. The path should be such that it can be mounted by other NFS clients in your network\.   
-To see all the paths exported by your NFS server, run "`showmount -e nfs-server-name`" from an NFS client that has access to your server\. You can specify any directory that appears in the results, and any subdirectory of that directory\. Ensure that the NFS export is accessible without Kerberos authentication\.   
-To transfer all the data in the folder you specified, DataSync needs to have permissions to read all the data\. To ensure this, either configure the NFS export with `no_root_squash,` or ensure that the permissions for all of the files that you want DataSync allow read access for all users\. Doing either enables the agent to read the files\. For the agent to access directories, you must additionally enable all execute access\.  
-If you are copying data to or from your AWS Snowcone device, see [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone) for more information\.  
+Specifies the export path in your NFS file server that you want DataSync to mount\.  
+This path \(or a subdirectory of the path\) is where DataSync transfers data to or from\. For information on configuring an export for DataSync, see [Accessing NFS file servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#accessing-nfs)\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `4096`  

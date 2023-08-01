@@ -737,7 +737,7 @@ Resources:
           SourceSecurityGroupName: !GetAtt myELB.SourceSecurityGroup.GroupName
 ```
 
-## Using AWS::EC2::SecurityGroupIngress to create mutually referencing Amazon EC2 security group resources<a name="scenario-ec2-security-group-ingress"></a>
+## Using `AWS::EC2::SecurityGroupIngress` to create mutually referencing Amazon EC2 security group resources<a name="scenario-ec2-security-group-ingress"></a>
 
 This snippet shows two AWS::EC2::SecurityGroupIngress resources that add mutual ingress rules to the EC2 security groups SGroup1 and SGroup2\. The SGroup1Ingress resource enables ingress from SGroup2 through TCP/IP port 80 to SGroup1\. The SGroup2Ingress resource enables ingress from SGroup1 through TCP/IP port 80 to SGroup2\.
 

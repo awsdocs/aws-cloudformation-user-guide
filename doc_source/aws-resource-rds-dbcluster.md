@@ -748,78 +748,92 @@ The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL,
 
 ```
 {
-    "RDSCluster": {
-        "Type": "AWS::RDS::DBCluster",
-        "Properties": {
-            "MasterUsername": {
-                "Ref": "username"
-            },
-            "MasterUserPassword": {
-                "Ref": "password"
-            },
-            "Engine": "aurora",
-            "DBSubnetGroupName": {
-                "Ref": "DBSubnetGroup"
-            },
-            "DBClusterParameterGroupName": {
-                "Ref": "RDSDBClusterParameterGroup"
+    "Parameters": {
+        "Username": {
+            "NoEcho": "true",
+            "Description": "Username for Aurora MySQL database access",
+            "Type": "String",
+            "MinLength": "1",
+            "MaxLength": "16",
+            "Default": "bevelvoerder",
+            "AllowedPattern": "[a-zA-Z][a-zA-Z0-9]*",
+            "ConstraintDescription": "must begin with a letter and contain only alphanumeric characters."
+        },
+        "Password": {
+            "NoEcho": "true",
+            "Description": "Password for Aurora MySQL database access",
+            "Type": "String",
+            "MinLength": "8",
+            "MaxLength": "41",
+            "Default": "Passw0rd",
+            "AllowedPattern": "[a-zA-Z0-9]*",
+            "ConstraintDescription": "must contain only alphanumeric characters."
+        }
+    },
+    "Resources": {
+        "RDSCluster": {
+            "Type": "AWS::RDS::DBCluster",
+            "Properties": {
+                "MasterUsername": {
+                    "Ref": "Username"
+                },
+                "MasterUserPassword": {
+                    "Ref": "Password"
+                },
+                "Engine": "aurora-mysql",
+                "DBClusterParameterGroupName": {
+                    "Ref": "RDSDBClusterParameterGroup"
+                }
             }
-        }
-    },
-    "RDSDBInstance1": {
-        "Type": "AWS::RDS::DBInstance",
-        "Properties": {
-            "DBSubnetGroupName": {
-                "Ref": "DBSubnetGroup"
-            },
-            "DBParameterGroupName": {
-                "Ref": "RDSDBParameterGroup"
-            },
-            "Engine": "aurora",
-            "DBClusterIdentifier": {
-                "Ref": "RDSCluster"
-            },
-            "PubliclyAccessible": "true",
-            "DBInstanceClass": "db.r3.xlarge"
-       }
-   },    
-             
-    "RDSDBInstance2": {
-        "Type": "AWS::RDS::DBInstance",
-        "Properties": {
-            "DBSubnetGroupName": {
-                "Ref": "DBSubnetGroup"
-            },
-            "DBParameterGroupName": {
-                "Ref": "RDSDBParameterGroup"
-            },
-            "Engine": "aurora",
-            "DBClusterIdentifier": {
-                "Ref": "RDSCluster"
-            },
-            "PubliclyAccessible": "true",
-            "DBInstanceClass": "db.r3.xlarge"
-        }
-    },
-    "RDSDBClusterParameterGroup": {
-        "Type": "AWS::RDS::DBClusterParameterGroup",
-        "Properties": {
-            "Description": "CloudFormation Sample Aurora Cluster Parameter Group",
-            "Family": "aurora5.6",
-            "Parameters": {
-                "time_zone": "US/Eastern"
+        },
+        "RDSDBInstance1": {
+            "Type": "AWS::RDS::DBInstance",
+            "Properties": {
+                "DBParameterGroupName": {
+                    "Ref": "RDSDBParameterGroup"
+                },
+                "Engine": "aurora-mysql",
+                "DBClusterIdentifier": {
+                    "Ref": "RDSCluster"
+                },
+                "PubliclyAccessible": "true",
+                "DBInstanceClass": "db.r3.xlarge"
             }
-        }
-    },
-    "RDSDBParameterGroup": {
-        "Type": "AWS::RDS::DBParameterGroup",
-        "Properties": {
-            "Description": "CloudFormation Sample Aurora Parameter Group",
-            "Family": "aurora5.6",
-            "Parameters": {
-                "sql_mode": "IGNORE_SPACE",
-                "max_allowed_packet": 1024,
-                "innodb_buffer_pool_size": "{DBInstanceClassMemory*3/4}"
+        },
+        "RDSDBInstance2": {
+            "Type": "AWS::RDS::DBInstance",
+            "Properties": {
+                "DBParameterGroupName": {
+                    "Ref": "RDSDBParameterGroup"
+                },
+                "Engine": "aurora-mysql",
+                "DBClusterIdentifier": {
+                    "Ref": "RDSCluster"
+                },
+                "PubliclyAccessible": "true",
+                "DBInstanceClass": "db.r3.xlarge"
+            }
+        },
+        "RDSDBClusterParameterGroup": {
+            "Type": "AWS::RDS::DBClusterParameterGroup",
+            "Properties": {
+                "Description": "CloudFormation Sample Aurora Cluster Parameter Group",
+                "Family": "aurora5.6",
+                "Parameters": {
+                    "time_zone": "US/Eastern"
+                }
+            }
+        },
+        "RDSDBParameterGroup": {
+            "Type": "AWS::RDS::DBParameterGroup",
+            "Properties": {
+                "Description": "CloudFormation Sample Aurora Parameter Group",
+                "Family": "aurora5.6",
+                "Parameters": {
+                    "sql_mode": "IGNORE_SPACE",
+                    "max_allowed_packet": 1024,
+                    "innodb_buffer_pool_size": "{DBInstanceClassMemory*3/4}"
+                }
             }
         }
     }
@@ -829,58 +843,72 @@ The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL,
 #### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_with_two_DB_instances--yaml"></a>
 
 ```
-RDSCluster: 
-  Properties: 
-    DBClusterParameterGroupName: 
-      Ref: RDSDBClusterParameterGroup
-    DBSubnetGroupName: 
-      Ref: DBSubnetGroup
-    Engine: aurora
-    MasterUserPassword: 
-      Ref: password
-    MasterUsername: 
-      Ref: username
-  Type: "AWS::RDS::DBCluster"
-RDSDBClusterParameterGroup: 
-  Properties: 
-    Description: "CloudFormation Sample Aurora Cluster Parameter Group"
-    Family: aurora5.6
-    Parameters: 
-      time_zone: US/Eastern
-  Type: "AWS::RDS::DBClusterParameterGroup"
-RDSDBInstance1: 
-  Properties: 
-    DBClusterIdentifier: 
-      Ref: RDSCluster
-    DBInstanceClass: db.r3.xlarge
-    DBParameterGroupName: 
-      Ref: RDSDBParameterGroup
-    DBSubnetGroupName: 
-      Ref: DBSubnetGroup
-    Engine: aurora
-    PubliclyAccessible: "true"
-  Type: "AWS::RDS::DBInstance"
-RDSDBInstance2: 
-  Properties: 
-    DBClusterIdentifier: 
-      Ref: RDSCluster
-    DBInstanceClass: db.r3.xlarge
-    DBParameterGroupName: 
-      Ref: RDSDBParameterGroup
-    DBSubnetGroupName: 
-      Ref: DBSubnetGroup
-    Engine: aurora
-    PubliclyAccessible: "true"
-  Type: "AWS::RDS::DBInstance"
-RDSDBParameterGroup:
-  Type: 'AWS::RDS::DBParameterGroup'
-  Properties:
-    Description: CloudFormation Sample Aurora Parameter Group
-    Family: aurora5.6
-    Parameters:
-      sql_mode: IGNORE_SPACE
-      max_allowed_packet: 1024
-      innodb_buffer_pool_size: '{DBInstanceClassMemory*3/4}'
+Parameters:
+  Username:
+    NoEcho: 'true'
+    Description: Username for Aurora MySQL database access
+    Type: String
+    MinLength: '1'
+    MaxLength: '16'
+    Default: "bevelvoerder"
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
+  Password:
+    NoEcho: 'true'
+    Description: Password for Aurora MySQL database access
+    Type: String
+    MinLength: '8'
+    MaxLength: '41'
+    Default: "Passw0rd"
+    AllowedPattern: '[a-zA-Z0-9]*'
+    ConstraintDescription: must contain only alphanumeric characters.
+Resources:
+  RDSCluster:
+    Type: 'AWS::RDS::DBCluster'
+    Properties:
+      MasterUsername:
+        Ref: Username
+      MasterUserPassword:
+        Ref: Password
+      Engine: aurora-mysql
+      DBClusterParameterGroupName:
+        Ref: RDSDBClusterParameterGroup
+  RDSDBInstance1:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      DBParameterGroupName:
+        Ref: RDSDBParameterGroup
+      Engine: aurora-mysql
+      DBClusterIdentifier:
+        Ref: RDSCluster
+      PubliclyAccessible: 'true'
+      DBInstanceClass: db.r3.xlarge
+  RDSDBInstance2:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      DBParameterGroupName:
+        Ref: RDSDBParameterGroup
+      Engine: aurora-mysql
+      DBClusterIdentifier:
+        Ref: RDSCluster
+      PubliclyAccessible: 'true'
+      DBInstanceClass: db.r3.xlarge
+  RDSDBClusterParameterGroup:
+    Type: 'AWS::RDS::DBClusterParameterGroup'
+    Properties:
+      Description: CloudFormation Sample Aurora Cluster Parameter Group
+      Family: aurora5.6
+      Parameters:
+        time_zone: US/Eastern
+  RDSDBParameterGroup:
+    Type: 'AWS::RDS::DBParameterGroup'
+    Properties:
+      Description: CloudFormation Sample Aurora Parameter Group
+      Family: aurora5.6
+      Parameters:
+        sql_mode: IGNORE_SPACE
+        max_allowed_packet: 1024
+        innodb_buffer_pool_size: '{DBInstanceClassMemory*3/4}'
 ```
 
 ### Creating an Amazon Aurora DB cluster that exports logs to Amazon CloudWatch Logs<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_that_exports_logs_to_Amazon_CloudWatch_Logs"></a>

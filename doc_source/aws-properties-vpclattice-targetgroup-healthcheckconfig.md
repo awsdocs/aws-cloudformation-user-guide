@@ -1,6 +1,6 @@
 # AWS::VpcLattice::TargetGroup HealthCheckConfig<a name="aws-properties-vpclattice-targetgroup-healthcheckconfig"></a>
 
-The health check configuration of a target group\. Health check configurations aren't used for `LAMBDA` and `ALB` target groups\.
+The health check configuration of a target group\. Health check configurations aren't used for target groups of type `LAMBDA` or `ALB`\.
 
 ## Syntax<a name="aws-properties-vpclattice-targetgroup-healthcheckconfig-syntax"></a>
 

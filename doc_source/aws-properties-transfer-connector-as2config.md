@@ -1,6 +1,6 @@
 # AWS::Transfer::Connector As2Config<a name="aws-properties-transfer-connector-as2config"></a>
 
-A structure that contains the parameters for a connector object\.
+A structure that contains the parameters for an AS2 connector object\.
 
 ## Syntax<a name="aws-properties-transfer-connector-as2config-syntax"></a>
 

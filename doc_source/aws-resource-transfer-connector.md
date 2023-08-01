@@ -1,6 +1,9 @@
 # AWS::Transfer::Connector<a name="aws-resource-transfer-connector"></a>
 
-Creates the connector, which captures the parameters for an outbound connection for the AS2 protocol\. The connector is required for sending files to an externally hosted AS2 server\. For more details about connectors, see [Create AS2 connectors](https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector)\.
+Creates the connector, which captures the parameters for an outbound connection for the AS2 or SFTP protocol\. The connector is required for sending files to an externally hosted AS2 or SFTP server\. For more details about AS2 connectors, see [Create AS2 connectors](https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector)\.
+
+**Note**  
+You must specify exactly one configuration object: either for AS2 \(`As2Config`\) or SFTP \(`SftpConfig`\)\.
 
 ## Syntax<a name="aws-resource-transfer-connector-syntax"></a>
 
@@ -48,7 +51,7 @@ If you are using Basic authentication for your AS2 connector, the access role re
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `As2Config`  <a name="cfn-transfer-connector-as2config"></a>
-A structure that contains the parameters for a connector object\.  
+A structure that contains the parameters for an AS2 connector object\.  
 *Required*: Yes  
 *Type*: [As2Config](aws-properties-transfer-connector-as2config.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -70,7 +73,7 @@ Key\-value pairs that can be used to group and search for connectors\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-transfer-connector-url"></a>
-The URL of the partner's AS2 endpoint\.  
+The URL of the partner's AS2 or SFTP endpoint\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `255`  

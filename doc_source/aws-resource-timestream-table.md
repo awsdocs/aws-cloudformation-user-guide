@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DatabaseName](#cfn-timestream-table-databasename)" : String,
       "[MagneticStoreWriteProperties](#cfn-timestream-table-magneticstorewriteproperties)" : MagneticStoreWriteProperties,
       "[RetentionProperties](#cfn-timestream-table-retentionproperties)" : RetentionProperties,
+      "[Schema](#cfn-timestream-table-schema)" : Schema,
       "[TableName](#cfn-timestream-table-tablename)" : String,
       "[Tags](#cfn-timestream-table-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -31,6 +32,8 @@ Properties:
     MagneticStoreWriteProperties
   [RetentionProperties](#cfn-timestream-table-retentionproperties): 
     RetentionProperties
+  [Schema](#cfn-timestream-table-schema): 
+    Schema
   [TableName](#cfn-timestream-table-tablename): String
   [Tags](#cfn-timestream-table-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -136,6 +139,12 @@ Properties:
 ```
 *Required*: No  
 *Type*: [RetentionProperties](aws-properties-timestream-table-retentionproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Schema`  <a name="cfn-timestream-table-schema"></a>
+ The schema of the table\.   
+*Required*: No  
+*Type*: [Schema](aws-properties-timestream-table-schema.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-timestream-table-tablename"></a>

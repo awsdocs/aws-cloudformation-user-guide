@@ -1,6 +1,6 @@
 # Infrastructure security in AWS CloudFormation<a name="infrastructure-security"></a>
 
-As a managed service, AWS CloudFormation is protected by the AWS global network security\. For information about AWS security services and how AWS protects infrastructure, see [AWS Cloud Security](http://aws.amazon.com/security/)\. To design your AWS environment using the best practices for infrastructure security, see [Infrastructure Protection](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/infrastructure-protection.html) in *Security Pillar AWS Well‐Architected Framework*\.
+As a managed service, AWS CloudFormation is protected by AWS global network security\. For information about AWS security services and how AWS protects infrastructure, see [AWS Cloud Security](http://aws.amazon.com/security/)\. To design your AWS environment using the best practices for infrastructure security, see [Infrastructure Protection](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/infrastructure-protection.html) in *Security Pillar AWS Well‐Architected Framework*\.
 
 You use AWS published API calls to access AWS CloudFormation through the network\. Clients must support the following:
 + Transport Layer Security \(TLS\)\. We require TLS 1\.2 and recommend TLS 1\.3\.

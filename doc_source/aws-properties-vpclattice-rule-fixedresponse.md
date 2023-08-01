@@ -1,6 +1,6 @@
 # AWS::VpcLattice::Rule FixedResponse<a name="aws-properties-vpclattice-rule-fixedresponse"></a>
 
-Information about an action that returns a custom HTTP response\. 
+Information about an action that returns a custom HTTP response\.
 
 ## Syntax<a name="aws-properties-vpclattice-rule-fixedresponse-syntax"></a>
 

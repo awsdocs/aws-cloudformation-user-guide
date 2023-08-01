@@ -64,7 +64,7 @@ An identifier for an object in IAM Identity Center, such as a user or group\. Pr
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `47`  
-*Pattern*: `^([0-9a-f]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$`  
+*Pattern*: `([0-9a-f]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrincipalType`  <a name="cfn-sso-assignment-principaltype"></a>

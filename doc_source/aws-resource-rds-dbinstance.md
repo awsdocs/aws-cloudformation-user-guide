@@ -916,8 +916,8 @@ The ID of the region that contains the source DB instance for the read replica\.
 A value that indicates whether the DB instance is encrypted\. By default, it isn't encrypted\.  
 If you specify the `KmsKeyId` property, then you must enable encryption\.  
 If you specify the `SourceDBInstanceIdentifier` property, don't specify this property\. The value is inherited from the source DB instance, and if the DB instance is encrypted, the specified `KmsKeyId` property is used\.  
-If you specify the `SnapshotIdentifier` and the specified snapshot is encrypted, don't specify this property\. The value is inherited from the snapshot, and the specified `KmsKeyId` property is used\.  
-If you specify the `SnapshotIdentifier` and the specified snapshot isn't encrypted, you can use this property to specify that the restored DB instance is encrypted\. Specify the `KmsKeyId` property for the KMS key to use for encryption\. If you don't want the restored DB instance to be encrypted, then don't set this property or set it to `false`\.  
+If you specify the `DBSnapshotIdentifier` and the specified snapshot is encrypted, don't specify this property\. The value is inherited from the snapshot, and the specified `KmsKeyId` property is used\.  
+If you specify the `DBSnapshotIdentifier` and the specified snapshot isn't encrypted, you can use this property to specify that the restored DB instance is encrypted\. Specify the `KmsKeyId` property for the KMS key to use for encryption\. If you don't want the restored DB instance to be encrypted, then don't set this property or set it to `false`\.  
 **Amazon Aurora**  
 Not applicable\. The encryption for DB instances is managed by the DB cluster\.  
 *Required*: No  

@@ -10,6 +10,7 @@ You can use intrinsic functions only in specific parts of a template\. Currently
 + [`Fn::Cidr`](intrinsic-function-reference-cidr.md)
 + [Condition functions](intrinsic-function-reference-conditions.md)
 + [`Fn::FindInMap`](intrinsic-function-reference-findinmap.md)
++ [`Fn::ForEach`](intrinsic-function-reference-foreach.md)
 + [`Fn::GetAtt`](intrinsic-function-reference-getatt.md)
 + [`Fn::GetAZs`](intrinsic-function-reference-getavailabilityzones.md)
 + [`Fn::ImportValue`](intrinsic-function-reference-importvalue.md)

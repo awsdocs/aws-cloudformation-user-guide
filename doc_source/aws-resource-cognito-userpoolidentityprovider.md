@@ -92,9 +92,9 @@ The IdP details\. The following list describes the provider detail keys for each
 The IdP name\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `3`  
+*Minimum*: `1`  
 *Maximum*: `32`  
-*Pattern*: `[^_][\p{L}\p{M}\p{S}\p{N}\p{P}][^_]+`  
+*Pattern*: `[^_\p{Z}][\p{L}\p{M}\p{S}\p{N}\p{P}][^_\p{Z}]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProviderType`  <a name="cfn-cognito-userpoolidentityprovider-providertype"></a>

@@ -39,6 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KeySpec](#cfn-kms-key-keyspec)" : String,
       "[KeyUsage](#cfn-kms-key-keyusage)" : String,
       "[MultiRegion](#cfn-kms-key-multiregion)" : Boolean,
+      "[Origin](#cfn-kms-key-origin)" : String,
       "[PendingWindowInDays](#cfn-kms-key-pendingwindowindays)" : Integer,
       "[Tags](#cfn-kms-key-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -57,6 +58,7 @@ Properties:
   [KeySpec](#cfn-kms-key-keyspec): String
   [KeyUsage](#cfn-kms-key-keyusage): String
   [MultiRegion](#cfn-kms-key-multiregion): Boolean
+  [Origin](#cfn-kms-key-origin): String
   [PendingWindowInDays](#cfn-kms-key-pendingwindowindays): Integer
   [Tags](#cfn-kms-key-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -160,6 +162,12 @@ To create a replica of this primary key in a different AWS Region , create an [A
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Origin`  <a name="cfn-kms-key-origin"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PendingWindowInDays`  <a name="cfn-kms-key-pendingwindowindays"></a>
 Specifies the number of days in the waiting period before AWS KMS deletes a KMS key that has been removed from a CloudFormation stack\. Enter a value between 7 and 30 days\. The default value is 30 days\.  

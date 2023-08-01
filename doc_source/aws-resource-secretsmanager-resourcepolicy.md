@@ -1,10 +1,8 @@
 # AWS::SecretsManager::ResourcePolicy<a name="aws-resource-secretsmanager-resourcepolicy"></a>
 
-Attaches a resource\-based permission policy to a secret\. A resource\-based policy is optional\. For more information, see [Authentication and access control for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html) 
+Attaches a resource\-based permission policy to a secret\. A resource\-based policy is optional\. If a secret already has a resource policy attached, you must first remove it before attaching a new policy using this CloudFormation resource\. You can remove the policy using the [console](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-policies.html), [CLI](https://docs.aws.amazon.com/cli/latest/reference/secretsmanager/delete-resource-policy.html), or [API](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_DeleteResourcePolicy.html)\. For more information, see [Authentication and access control for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html)\. 
 
-For information about attaching a policy in the console, see [Attach a permissions policy to a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html)\.
-
- **Required permissions: ** `secretsmanager:PutResourcePolicy`\. For more information, see [ IAM policy actions for Secrets Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions) and [Authentication and access control in Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html)\. 
+ **Required permissions: ** `secretsmanager:PutResourcePolicy`, `secretsmanager:GetResourcePolicy`\. For more information, see [ IAM policy actions for Secrets Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions) and [Authentication and access control in Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html)\. 
 
 ## Syntax<a name="aws-resource-secretsmanager-resourcepolicy-syntax"></a>
 
