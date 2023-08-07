@@ -1,32 +1,32 @@
-# AWS::Config::ConfigRule SourceDetail<a name="aws-properties-config-configrule-source-sourcedetails"></a>
+# AWS::Config::ConfigRule SourceDetail<a name="aws-properties-config-configrule-sourcedetail"></a>
 
 Provides the source and the message types that trigger AWS Config to evaluate your AWS resources against a rule\. It also provides the frequency with which you want AWS Config to run evaluations for the rule if the trigger type is periodic\. You can specify the parameter values for `SourceDetail` only for custom rules\. 
 
-## Syntax<a name="aws-properties-config-configrule-source-sourcedetails-syntax"></a>
+## Syntax<a name="aws-properties-config-configrule-sourcedetail-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-properties-config-configrule-source-sourcedetails-syntax.json"></a>
+### JSON<a name="aws-properties-config-configrule-sourcedetail-syntax.json"></a>
 
 ```
 {
-  "[EventSource](#cfn-config-configrule-source-sourcedetail-eventsource)" : String,
+  "[EventSource](#cfn-config-configrule-sourcedetail-eventsource)" : String,
   "[MaximumExecutionFrequency](#cfn-config-configrule-sourcedetail-maximumexecutionfrequency)" : String,
-  "[MessageType](#cfn-config-configrule-source-sourcedetail-messagetype)" : String
+  "[MessageType](#cfn-config-configrule-sourcedetail-messagetype)" : String
 }
 ```
 
-### YAML<a name="aws-properties-config-configrule-source-sourcedetails-syntax.yaml"></a>
+### YAML<a name="aws-properties-config-configrule-sourcedetail-syntax.yaml"></a>
 
 ```
-  [EventSource](#cfn-config-configrule-source-sourcedetail-eventsource): String
+  [EventSource](#cfn-config-configrule-sourcedetail-eventsource): String
   [MaximumExecutionFrequency](#cfn-config-configrule-sourcedetail-maximumexecutionfrequency): String
-  [MessageType](#cfn-config-configrule-source-sourcedetail-messagetype): String
+  [MessageType](#cfn-config-configrule-sourcedetail-messagetype): String
 ```
 
-## Properties<a name="aws-properties-config-configrule-source-sourcedetails-properties"></a>
+## Properties<a name="aws-properties-config-configrule-sourcedetail-properties"></a>
 
-`EventSource`  <a name="cfn-config-configrule-source-sourcedetail-eventsource"></a>
+`EventSource`  <a name="cfn-config-configrule-sourcedetail-eventsource"></a>
 The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources\.  
 *Required*: Yes  
 *Type*: String  
@@ -42,7 +42,7 @@ Based on the valid value you choose, AWS Config runs evaluations once for each v
 *Allowed values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`MessageType`  <a name="cfn-config-configrule-source-sourcedetail-messagetype"></a>
+`MessageType`  <a name="cfn-config-configrule-sourcedetail-messagetype"></a>
 The type of notification that triggers AWS Config to run an evaluation for a rule\. You can specify the following notification types:  
 +  `ConfigurationItemChangeNotification` \- Triggers an evaluation when AWS Config delivers a configuration item as a result of a resource change\.
 +  `OversizedConfigurationItemChangeNotification` \- Triggers an evaluation when AWS Config delivers an oversized configuration item\. AWS Config may generate this notification type when a resource changes and the notification exceeds the maximum size allowed by Amazon SNS\.

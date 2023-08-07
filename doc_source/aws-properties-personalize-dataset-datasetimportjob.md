@@ -1,9 +1,11 @@
 # AWS::Personalize::Dataset DatasetImportJob<a name="aws-properties-personalize-dataset-datasetimportjob"></a>
 
-Describes a job that imports training data from a data source \(Amazon S3 bucket\) to an Amazon Personalize dataset\. For more information, see [CreateDatasetImportJob](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html)\.
+Describes a job that imports training data from a data source \(Amazon S3 bucket\) to an Amazon Personalize dataset\. 
 
 A dataset import job can be in one of the following states:
 + CREATE PENDING > CREATE IN\_PROGRESS > ACTIVE \-or\- CREATE FAILED
+
+If you specify a dataset import job as part of a dataset, all dataset import job fields are required\.
 
 ## Syntax<a name="aws-properties-personalize-dataset-datasetimportjob-syntax"></a>
 

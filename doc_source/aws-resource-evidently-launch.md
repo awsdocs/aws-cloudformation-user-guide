@@ -54,6 +54,9 @@ Properties:
 An optional description for the launch\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `160`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionStatus`  <a name="cfn-evidently-launch-executionstatus"></a>
@@ -72,24 +75,34 @@ An array of structures that contains the feature and variations that are to be u
 An array of structures that define the metrics that will be used to monitor the launch performance\. You can have up to three metric monitors in the array\.  
 *Required*: No  
 *Type*: List of [MetricDefinitionObject](aws-properties-evidently-launch-metricdefinitionobject.md)  
+*Maximum*: `3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-evidently-launch-name"></a>
 The name for the launch\. It can include up to 127 characters\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `127`  
+*Pattern*: `[-a-zA-Z0-9._]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Project`  <a name="cfn-evidently-launch-project"></a>
 The name or ARN of the project that you want to create the launch in\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `.*(^[a-zA-Z0-9._-]*$)|(arn:[^:]*:[^:]*:[^:]*:[^:]*:project/[a-zA-Z0-9._-]*).*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RandomizationSalt`  <a name="cfn-evidently-launch-randomizationsalt"></a>
 When Evidently assigns a particular user session to a launch, it must use a randomization ID to determine which variation the user session is served\. This randomization ID is a combination of the entity ID and `randomizationSalt`\. If you omit `randomizationSalt`, Evidently uses the launch name as the `randomizationsSalt`\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `127`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduledSplitsConfig`  <a name="cfn-evidently-launch-scheduledsplitsconfig"></a>

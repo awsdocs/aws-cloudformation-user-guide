@@ -1,6 +1,6 @@
 # AWS::Transfer::Connector<a name="aws-resource-transfer-connector"></a>
 
-Creates the connector, which captures the parameters for an outbound connection for the AS2 or SFTP protocol\. The connector is required for sending files to an externally hosted AS2 or SFTP server\. For more details about AS2 connectors, see [Create AS2 connectors](https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector)\.
+Creates the connector, which captures the parameters for a connection for the AS2 or SFTP protocol\. For AS2, the connector is required for sending files to an externally hosted AS2 server\. For SFTP, the connector is required when sending files to an SFTP server or receiving files from an SFTP server\. For more details about connectors, see [Create AS2 connectors](https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector) and [Create SFTP connectors](https://docs.aws.amazon.com/transfer/latest/userguide/configure-sftp-connector.html)\.
 
 **Note**  
 You must specify exactly one configuration object: either for AS2 \(`As2Config`\) or SFTP \(`SftpConfig`\)\.
@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AccessRole](#cfn-transfer-connector-accessrole)" : String,
       "[As2Config](#cfn-transfer-connector-as2config)" : As2Config,
       "[LoggingRole](#cfn-transfer-connector-loggingrole)" : String,
+      "[SftpConfig](#cfn-transfer-connector-sftpconfig)" : SftpConfig,
       "[Tags](#cfn-transfer-connector-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Url](#cfn-transfer-connector-url)" : String
     }
@@ -33,6 +34,8 @@ Properties:
   [As2Config](#cfn-transfer-connector-as2config): 
     As2Config
   [LoggingRole](#cfn-transfer-connector-loggingrole): String
+  [SftpConfig](#cfn-transfer-connector-sftpconfig): 
+    SftpConfig
   [Tags](#cfn-transfer-connector-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Url](#cfn-transfer-connector-url): String
@@ -41,8 +44,12 @@ Properties:
 ## Properties<a name="aws-resource-transfer-connector-properties"></a>
 
 `AccessRole`  <a name="cfn-transfer-connector-accessrole"></a>
+Connectors are used to send files using either the AS2 or SFTP protocol\. For the access role, provide the Amazon Resource Name \(ARN\) of the AWS Identity and Access Management role to use\.  
+ **For AS2 connectors**   
 With AS2, you can send files by calling `StartFileTransfer` and specifying the file paths in the request parameter, `SendFilePaths`\. We use the file’s parent directory \(for example, for `--send-file-paths /bucket/dir/file.txt`, parent directory is `/bucket/dir/`\) to temporarily store a processed AS2 message file, store the MDN when we receive them from the partner, and write a final JSON file containing relevant metadata of the transmission\. So, the `AccessRole` needs to provide read and write access to the parent directory of the file location used in the `StartFileTransfer` request\. Additionally, you need to provide read and write access to the parent directory of the files that you intend to send with `StartFileTransfer`\.  
 If you are using Basic authentication for your AS2 connector, the access role requires the `secretsmanager:GetSecretValue` permission for the secret\. If the secret is encrypted using a customer\-managed key instead of the AWS managed key in Secrets Manager, then the role also needs the `kms:Decrypt` permission for that key\.  
+ **For SFTP connectors**   
+Make sure that the access role provides read and write access to the parent directory of the file location that's used in the `StartFileTransfer` request\. Additionally, make sure that the role provides `secretsmanager:GetSecretValue` permission to AWS Secrets Manager\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
@@ -52,7 +59,7 @@ If you are using Basic authentication for your AS2 connector, the access role re
 
 `As2Config`  <a name="cfn-transfer-connector-as2config"></a>
 A structure that contains the parameters for an AS2 connector object\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [As2Config](aws-properties-transfer-connector-as2config.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -63,6 +70,12 @@ The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `arn:.*role/.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SftpConfig`  <a name="cfn-transfer-connector-sftpconfig"></a>
+A structure that contains the parameters for an SFTP connector object\.  
+*Required*: No  
+*Type*: [SftpConfig](aws-properties-transfer-connector-sftpconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-transfer-connector-tags"></a>

@@ -50,12 +50,18 @@ This variation must also be listed in the `Variations` structure\.
 If you omit `DefaultVariation`, the first variation listed in the `Variations` structure is used as the default variation\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `127`  
+*Pattern*: `[-a-zA-Z0-9._]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-evidently-feature-description"></a>
 An optional description of the feature\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `160`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EntityOverrides`  <a name="cfn-evidently-feature-entityoverrides"></a>
@@ -68,18 +74,25 @@ Specify users that should always be served a specific variation of a feature\. E
 Specify `ALL_RULES` to activate the traffic allocation specified by any ongoing launches or experiments\. Specify `DEFAULT_VARIATION` to serve the default variation to all users instead\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ALL_RULES | DEFAULT_VARIATION`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-evidently-feature-name"></a>
 The name for the feature\. It can include up to 127 characters\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `127`  
+*Pattern*: `[-a-zA-Z0-9._]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Project`  <a name="cfn-evidently-feature-project"></a>
 The name or ARN of the project that is to contain the new feature\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `.*arn:[^:]*:[^:]*:[^:]*:[^:]*:project/[-a-zA-Z0-9._]*.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-evidently-feature-tags"></a>

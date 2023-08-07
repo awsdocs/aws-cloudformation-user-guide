@@ -42,7 +42,7 @@ Properties:
 ## Properties<a name="aws-resource-vpclattice-servicenetworkserviceassociation-properties"></a>
 
 `DnsEntry`  <a name="cfn-vpclattice-servicenetworkserviceassociation-dnsentry"></a>
-Property description not available\.  
+The DNS information of the service\.  
 *Required*: No  
 *Type*: [DnsEntry](aws-properties-vpclattice-servicenetworkserviceassociation-dnsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

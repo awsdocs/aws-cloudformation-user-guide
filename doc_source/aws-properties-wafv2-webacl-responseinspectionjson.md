@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-responseinspectionjson-properties"></a>
 
 `FailureValues`  <a name="cfn-wafv2-webacl-responseinspectionjson-failurevalues"></a>
-Values for the specified identifier in the response JSON that indicate a failed login attempt\. To be counted as a failed login, the value must be an exact match, including case\. Each value must be unique among the success and failure values\.   
+Values for the specified identifier in the response JSON that indicate a failed login attempt\. To be counted as a failure, the value must be an exact match, including case\. Each value must be unique among the success and failure values\.   
 JSON example: `"FailureValues": [ "False", "Failed" ]`   
 *Required*: Yes  
 *Type*: List of String  
@@ -50,7 +50,7 @@ JSON example: `"Identifier": [ "/login/success" ]`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuccessValues`  <a name="cfn-wafv2-webacl-responseinspectionjson-successvalues"></a>
-Values for the specified identifier in the response JSON that indicate a successful login attempt\. To be counted as a successful login, the value must be an exact match, including case\. Each value must be unique among the success and failure values\.   
+Values for the specified identifier in the response JSON that indicate a successful login attempt\. To be counted as a success, the value must be an exact match, including case\. Each value must be unique among the success and failure values\.   
 JSON example: `"SuccessValues": [ "True", "Succeeded" ]`   
 *Required*: Yes  
 *Type*: List of String  

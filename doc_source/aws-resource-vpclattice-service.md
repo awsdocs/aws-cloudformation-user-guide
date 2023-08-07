@@ -62,7 +62,7 @@ The custom domain name of the service\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DnsEntry`  <a name="cfn-vpclattice-service-dnsentry"></a>
-Property description not available\.  
+The DNS information of the service\.  
 *Required*: No  
 *Type*: [DnsEntry](aws-properties-vpclattice-service-dnsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

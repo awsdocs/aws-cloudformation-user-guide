@@ -85,3 +85,38 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 
 `DatasetGroupArn`  <a name="DatasetGroupArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the dataset group\.
+
+## Examples<a name="aws-resource-personalize-datasetgroup--examples"></a>
+
+
+
+### Creating a dataset group<a name="aws-resource-personalize-datasetgroup--examples--Creating_a_dataset_group"></a>
+
+The following example creates an Amazon Personalize dataset group\.
+
+#### JSON<a name="aws-resource-personalize-datasetgroup--examples--Creating_a_dataset_group--json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Resources":{
+      "MyDatasetGroup": {
+            "Type": "AWS::Personalize::DatasetGroup",
+            "Properties": {
+               "Name": "my-dataset-group-name"
+            }
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-personalize-datasetgroup--examples--Creating_a_dataset_group--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyDatasetGroup:
+    Type: 'AWS::Personalize::DatasetGroup'
+    Properties:
+      Name: my-dataset-group-name
+```

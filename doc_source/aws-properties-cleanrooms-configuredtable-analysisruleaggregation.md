@@ -1,6 +1,6 @@
 # AWS::CleanRooms::ConfiguredTable AnalysisRuleAggregation<a name="aws-properties-cleanrooms-configuredtable-analysisruleaggregation"></a>
 
-Enables query structure and specified queries that produce aggregate statistics\.
+A type of analysis rule that enables query structure and specified queries that produce aggregate statistics\.
 
 ## Syntax<a name="aws-properties-cleanrooms-configuredtable-analysisruleaggregation-syntax"></a>
 

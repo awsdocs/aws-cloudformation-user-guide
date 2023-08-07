@@ -60,6 +60,8 @@ Before Amazon Cognito can email your users, it requires additional permissions t
 Identifies either the sender's email address or the sender's name with their email address\. For example, `testuser@example.com` or `Test User <testuser@example.com>`\. This address appears before the body of the email\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `131072`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplyToEmailAddress`  <a name="cfn-cognito-userpool-emailconfiguration-replytoemailaddress"></a>

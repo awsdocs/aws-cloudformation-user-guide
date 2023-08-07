@@ -52,4 +52,5 @@ Action settings to use in the place of the rule actions that are configured insi
 You can use overrides for testing, for example you can override all of rule actions to `Count` and then monitor the resulting count metrics to understand how the rule group would handle your web traffic\. You can also permanently override some or all actions, to modify how the rule group manages your web traffic\.  
 *Required*: No  
 *Type*: List of [RuleActionOverride](aws-properties-wafv2-webacl-ruleactionoverride.md)  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

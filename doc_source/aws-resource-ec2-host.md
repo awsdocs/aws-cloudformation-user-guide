@@ -42,7 +42,7 @@ Properties:
 ## Properties<a name="aws-resource-ec2-host-properties"></a>
 
 `AssetId`  <a name="cfn-ec2-host-assetid"></a>
-Property description not available\.  
+The ID of the Outpost hardware asset on which the Dedicated Host is allocated\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

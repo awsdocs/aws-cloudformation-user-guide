@@ -11,7 +11,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AllowSingleColumn](#cfn-glue-classifier-csvclassifier-allowsinglecolumn)" : Boolean,
+  "[ContainsCustomDatatype](#cfn-glue-classifier-csvclassifier-containscustomdatatype)" : [ String, ... ],
   "[ContainsHeader](#cfn-glue-classifier-csvclassifier-containsheader)" : String,
+  "[CustomDatatypeConfigured](#cfn-glue-classifier-csvclassifier-customdatatypeconfigured)" : Boolean,
   "[Delimiter](#cfn-glue-classifier-csvclassifier-delimiter)" : String,
   "[DisableValueTrimming](#cfn-glue-classifier-csvclassifier-disablevaluetrimming)" : Boolean,
   "[Header](#cfn-glue-classifier-csvclassifier-header)" : [ String, ... ],
@@ -24,7 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AllowSingleColumn](#cfn-glue-classifier-csvclassifier-allowsinglecolumn): Boolean
+  [ContainsCustomDatatype](#cfn-glue-classifier-csvclassifier-containscustomdatatype): 
+    - String
   [ContainsHeader](#cfn-glue-classifier-csvclassifier-containsheader): String
+  [CustomDatatypeConfigured](#cfn-glue-classifier-csvclassifier-customdatatypeconfigured): Boolean
   [Delimiter](#cfn-glue-classifier-csvclassifier-delimiter): String
   [DisableValueTrimming](#cfn-glue-classifier-csvclassifier-disablevaluetrimming): Boolean
   [Header](#cfn-glue-classifier-csvclassifier-header): 
@@ -41,6 +46,12 @@ Enables the processing of files that contain only one column\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ContainsCustomDatatype`  <a name="cfn-glue-classifier-csvclassifier-containscustomdatatype"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ContainsHeader`  <a name="cfn-glue-classifier-csvclassifier-containsheader"></a>
 Indicates whether the CSV file contains a header\.  
 A value of `UNKNOWN` specifies that the classifier will detect whether the CSV file contains headings\.  
@@ -49,6 +60,12 @@ A value of `ABSENT` specifies that the CSV file does not contain headings\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ABSENT | PRESENT | UNKNOWN`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomDatatypeConfigured`  <a name="cfn-glue-classifier-csvclassifier-customdatatypeconfigured"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Delimiter`  <a name="cfn-glue-classifier-csvclassifier-delimiter"></a>

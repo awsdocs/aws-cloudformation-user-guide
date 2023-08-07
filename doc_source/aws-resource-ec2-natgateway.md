@@ -87,7 +87,7 @@ Secondary EIP allocation IDs\. For more information, see [Create a NAT gateway](
 
 `SecondaryPrivateIpAddressCount`  <a name="cfn-ec2-natgateway-secondaryprivateipaddresscount"></a>
 \[Private NAT gateway only\] The number of secondary private IPv4 addresses you want to assign to the NAT gateway\. For more information about secondary addresses, see [Create a NAT gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating) in the *Amazon Virtual Private Cloud User Guide*\.  
-`SecondaryPrivateIpAddressCount` and `SecondaryPrivateIpAddresses` cannot be set at the same time\.
+`SecondaryPrivateIpAddressCount` and `SecondaryPrivateIpAddresses` cannot be set at the same time\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -96,7 +96,7 @@ Secondary EIP allocation IDs\. For more information, see [Create a NAT gateway](
 
 `SecondaryPrivateIpAddresses`  <a name="cfn-ec2-natgateway-secondaryprivateipaddresses"></a>
 Secondary private IPv4 addresses\. For more information about secondary addresses, see [Create a NAT gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating) in the *Amazon Virtual Private Cloud User Guide*\.  
-`SecondaryPrivateIpAddressCount` and `SecondaryPrivateIpAddresses` cannot be set at the same time\.
+`SecondaryPrivateIpAddressCount` and `SecondaryPrivateIpAddresses` cannot be set at the same time\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

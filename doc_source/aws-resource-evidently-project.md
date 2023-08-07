@@ -57,12 +57,18 @@ You can't specify both `CloudWatchLogs` and `S3Destination` in the same operatio
 An optional description of the project\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `160`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-evidently-project-name"></a>
 The name for the project\. It can include up to 127 characters\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `127`  
+*Pattern*: `[-a-zA-Z0-9._]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-evidently-project-tags"></a>

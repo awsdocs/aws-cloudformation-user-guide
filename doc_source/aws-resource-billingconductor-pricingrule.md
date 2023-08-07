@@ -158,7 +158,7 @@ The most recent time the pricing rule was modified\.
 
 ### Simple pricing rule<a name="aws-resource-billingconductor-pricingrule--examples--Simple_pricing_rule"></a>
 
-The following example shows a pricing rule that applies a %10 global markup\.
+The following example shows a pricing rule that applies a 10% global markup\.
 
 #### JSON<a name="aws-resource-billingconductor-pricingrule--examples--Simple_pricing_rule--json"></a>
 

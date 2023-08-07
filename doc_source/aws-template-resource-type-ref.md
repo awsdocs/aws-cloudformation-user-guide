@@ -105,7 +105,7 @@ service-provider::service-name::data-type-name
 + [Amazon Managed Grafana](AWS_Grafana.md)
 + [AWS Ground Station](AWS_GroundStation.md)
 + [Amazon GuardDuty](AWS_GuardDuty.md)
-+ [Amazon HealthLake](AWS_HealthLake.md)
++ [AWS HealthLake](AWS_HealthLake.md)
 + [AWS Identity and Access Management](AWS_IAM.md)
 + [Identity Store](AWS_IdentityStore.md)
 + [AWS Identity and Access Management Access Analyzer](AWS_AccessAnalyzer.md)

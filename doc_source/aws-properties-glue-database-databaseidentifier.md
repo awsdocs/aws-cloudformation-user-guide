@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CatalogId](#cfn-glue-database-databaseidentifier-catalogid)" : String,
-  "[DatabaseName](#cfn-glue-database-databaseidentifier-databasename)" : String
+  "[DatabaseName](#cfn-glue-database-databaseidentifier-databasename)" : String,
+  "[Region](#cfn-glue-database-databaseidentifier-region)" : String
 }
 ```
 
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CatalogId](#cfn-glue-database-databaseidentifier-catalogid): String
   [DatabaseName](#cfn-glue-database-databaseidentifier-databasename): String
+  [Region](#cfn-glue-database-databaseidentifier-region): String
 ```
 
 ## Properties<a name="aws-properties-glue-database-databaseidentifier-properties"></a>
@@ -32,6 +34,12 @@ The ID of the Data Catalog in which the database resides\.
 
 `DatabaseName`  <a name="cfn-glue-database-databaseidentifier-databasename"></a>
 The name of the catalog database\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Region`  <a name="cfn-glue-database-databaseidentifier-region"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

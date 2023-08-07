@@ -161,7 +161,7 @@ The amount of time to wait \(in milliseconds\) before timing out of operations p
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MapBooleanAsBoolean`  <a name="cfn-dms-endpoint-redshiftsettings-mapbooleanasboolean"></a>
-Property description not available\.  
+When true, lets Redshift migrate the boolean type as boolean\. By default, Redshift migrates booleans as `varchar(1)`\. You must set this setting on both the source and target endpoints for it to take effect\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

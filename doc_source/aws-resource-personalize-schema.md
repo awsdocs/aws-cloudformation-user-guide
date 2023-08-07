@@ -81,3 +81,44 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 
 `SchemaArn`  <a name="SchemaArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the schema\.
+
+## Examples<a name="aws-resource-personalize-schema--examples"></a>
+
+
+
+### Creating a schema<a name="aws-resource-personalize-schema--examples--Creating_a_schema"></a>
+
+The following example creates an Amazon Personalize schema for an Interactions dataset\.
+
+#### JSON<a name="aws-resource-personalize-schema--examples--Creating_a_schema--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MySchema": {
+            "Type": "AWS::Personalize::Schema",
+            "Properties": {
+                "Name": "my-schema-name",
+                "Schema": "{\"type\": \"record\",\"name\": \"Interactions\", \"namespace\": \"com.amazonaws.personalize.schema\", \"fields\": [ { \"name\": \"USER_ID\", \"type\": \"string\" }, { \"name\": \"ITEM_ID\", \"type\": \"string\" }, { \"name\": \"TIMESTAMP\", \"type\": \"long\"}], \"version\": \"1.0\"}"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-personalize-schema--examples--Creating_a_schema--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MySchema:
+    Type: AWS::Personalize::Schema
+    Properties: 
+      Name: "my-schema-name"
+      Schema: >-
+        {"type": "record","name": "Interactions", "namespace":
+        "com.amazonaws.personalize.schema", "fields": [ { "name": "USER_ID",
+        "type": "string" }, { "name": "ITEM_ID", "type": "string" }, { "name":
+        "TIMESTAMP", "type": "long"}], "version": "1.0"}
+```

@@ -21,7 +21,6 @@ You should be aware of the following behaviors when working with DynamoDB global
   + `dynamodb:UpdateContributorInsights`
   + `dynamodb:UpdateContinuousBackups`
   + `dynamodb:ListTagsOfResource`
-  + `dynamodb:TableClass`
   + `dynamodb:TagResource`
   + `dynamodb:UntagResource`
   + `dynamodb:BatchWriteItem`

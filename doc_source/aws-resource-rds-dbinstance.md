@@ -602,7 +602,7 @@ See [Oracle Database Engine Release Notes](https://docs.aws.amazon.com/AmazonRDS
 See [Supported PostgreSQL Database Versions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts.General.DBVersions) in the *Amazon RDS User Guide\.*  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Iops`  <a name="cfn-rds-dbinstance-iops"></a>
 The number of I/O operations per second \(IOPS\) that the database provisions\. The value must be equal to or greater than 1000\.   

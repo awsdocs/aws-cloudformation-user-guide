@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Omics::Workflow",
   "Properties" : {
+      "[Accelerators](#cfn-omics-workflow-accelerators)" : String,
       "[DefinitionUri](#cfn-omics-workflow-definitionuri)" : String,
       "[Description](#cfn-omics-workflow-description)" : String,
       "[Engine](#cfn-omics-workflow-engine)" : String,
@@ -29,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Omics::Workflow
 Properties: 
+  [Accelerators](#cfn-omics-workflow-accelerators): String
   [DefinitionUri](#cfn-omics-workflow-definitionuri): String
   [Description](#cfn-omics-workflow-description): String
   [Engine](#cfn-omics-workflow-engine): String
@@ -42,6 +44,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-omics-workflow-properties"></a>
+
+`Accelerators`  <a name="cfn-omics-workflow-accelerators"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefinitionUri`  <a name="cfn-omics-workflow-definitionuri"></a>
 The URI of a definition for the workflow\.  

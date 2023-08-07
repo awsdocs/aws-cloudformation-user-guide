@@ -32,7 +32,7 @@ A policy that describes the associated data usage limitations\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-cleanrooms-configuredtable-analysisrule-type"></a>
-The type of analysis rule\. Valid values are `AGGREGATION` and `LIST`\.  
+The type of analysis rule\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -64,7 +64,7 @@ The name of the policy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-resiliencehub-resiliencypolicy-tags"></a>
-The tags assigned to the resource\. A tag is a label that you assign to an AWS resource\. Each tag consists of a key/value pair\.  
+Tags assigned to the resource\. A tag is a label that you assign to an AWS resource\. Each tag consists of a key/value pair\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

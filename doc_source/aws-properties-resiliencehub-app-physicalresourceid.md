@@ -41,7 +41,7 @@ The AWS Region that the physical resource is located in\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Identifier`  <a name="cfn-resiliencehub-app-physicalresourceid-identifier"></a>
-The identifier of the physical resource\.  
+Identifier of the physical resource\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

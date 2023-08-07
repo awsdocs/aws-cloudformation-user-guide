@@ -59,7 +59,7 @@ Properties:
 Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `JobDefinitionName`  <a name="cfn-sagemaker-modelqualityjobdefinition-jobdefinitionname"></a>
 The name of the monitoring job definition\.  

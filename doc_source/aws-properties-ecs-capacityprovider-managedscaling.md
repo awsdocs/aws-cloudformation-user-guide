@@ -43,7 +43,7 @@ The period of time, in seconds, after a newly launched Amazon EC2 instance can c
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumScalingStepSize`  <a name="cfn-ecs-capacityprovider-managedscaling-maximumscalingstepsize"></a>
-The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time\. The scale in process is not affected by this parameter\. If this parameter is omitted, the default value of `1` is used\.  
+The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time\. The scale in process is not affected by this parameter\. If this parameter is omitted, the default value of `10000` is used\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

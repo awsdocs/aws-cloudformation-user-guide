@@ -206,7 +206,7 @@ The maximum number of concurrent sessions that can be run on an Elastic fleet\. 
 
 `MaxUserDurationInSeconds`  <a name="cfn-appstream-fleet-maxuserdurationinseconds"></a>
 The maximum amount of time that a streaming session can remain active, in seconds\. If users are still connected to a streaming instance five minutes before this limit is reached, they are prompted to save any open documents before being disconnected\. After this time elapses, the instance is terminated and replaced by a new instance\.  
-Specify a value between 600 and 360000\.  
+Specify a value between 600 and 432000\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

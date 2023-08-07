@@ -157,6 +157,7 @@ exports.send = function(event, context, responseStatus, responseData, physicalRe
     };
  
     var request = https.request(options, function(response) {
+        console.log("Status code: " + parseInt(response.statusCode));
         context.done();
     });
  

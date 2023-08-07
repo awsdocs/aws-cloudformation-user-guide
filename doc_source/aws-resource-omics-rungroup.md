@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MaxCpus](#cfn-omics-rungroup-maxcpus)" : Double,
       "[MaxDuration](#cfn-omics-rungroup-maxduration)" : Double,
+      "[MaxGpus](#cfn-omics-rungroup-maxgpus)" : Double,
       "[MaxRuns](#cfn-omics-rungroup-maxruns)" : Double,
       "[Name](#cfn-omics-rungroup-name)" : String,
       "[Tags](#cfn-omics-rungroup-tags)" : {Key: Value, ...}
@@ -28,6 +29,7 @@ Type: AWS::Omics::RunGroup
 Properties: 
   [MaxCpus](#cfn-omics-rungroup-maxcpus): Double
   [MaxDuration](#cfn-omics-rungroup-maxduration): Double
+  [MaxGpus](#cfn-omics-rungroup-maxgpus): Double
   [MaxRuns](#cfn-omics-rungroup-maxruns): Double
   [Name](#cfn-omics-rungroup-name): String
   [Tags](#cfn-omics-rungroup-tags): 
@@ -46,6 +48,14 @@ The group's maximum CPU count setting\.
 
 `MaxDuration`  <a name="cfn-omics-rungroup-maxduration"></a>
 The group's maximum duration setting in minutes\.  
+*Required*: No  
+*Type*: Double  
+*Minimum*: `1`  
+*Maximum*: `100000`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MaxGpus`  <a name="cfn-omics-rungroup-maxgpus"></a>
+ The maximum GPUs that can be used by a run group\.   
 *Required*: No  
 *Type*: Double  
 *Minimum*: `1`  

@@ -71,8 +71,10 @@ AWS Batch selects an instance type that best fits the needs of the jobs with a p
 BEST\_FIT\_PROGRESSIVE  
  AWS Batch will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types with a lower cost per unit vCPU\. If additional instances of the previously selected instance types aren't available, AWS Batch will select new instance types\.  
 SPOT\_CAPACITY\_OPTIMIZED  
- AWS Batch will select one or more instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types that are less likely to be interrupted\. This allocation strategy is only available for Spot Instance compute resources\.
-With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` allocation strategies using On\-Demand or Spot Instances, and the `BEST_FIT` strategy using Spot Instances, AWS Batch might need to go above `maxvCpus` to meet your capacity requirements\. In this event, AWS Batch never exceeds `maxvCpus` by more than a single instance\.  
+ AWS Batch will select one or more instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types that are less likely to be interrupted\. This allocation strategy is only available for Spot Instance compute resources\.  
+SPOT\_PRICE\_CAPACITY\_OPTIMIZED  
+The price and capacity optimized allocation strategy looks at both price and capacity to select the Spot Instance pools that are the least likely to be interrupted and have the lowest possible price\. This allocation strategy is only available for Spot Instance compute resources\.
+With `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED`, and `SPOT_PRICE_CAPACITY_OPTIMIZED` \(recommended\) allocation strategies using On\-Demand or Spot Instances, and the `BEST_FIT` strategy using Spot Instances, AWS Batch might need to go above `maxvCpus` to meet your capacity requirements\. In this event, AWS Batch never exceeds `maxvCpus` by more than a single instance\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `BEST_FIT_PROGRESSIVE | SPOT_CAPACITY_OPTIMIZED`  
@@ -123,7 +125,7 @@ The AMI that you choose for a compute environment must match the architecture of
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `InstanceRole`  <a name="cfn-batch-computeenvironment-computeresources-instancerole"></a>
-The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment\. You can specify the short name or full Amazon Resource Name \(ARN\) of an instance profile\. For example, ` ecsInstanceRole ` or `arn:aws:iam::<aws_account_id>:instance-profile/ecsInstanceRole `\. For more information, see [Amazon ECS instance role](https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html) in the * AWS Batch User Guide*\.  
+The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment\. Required for Amazon EC2 instances\. You can specify the short name or full Amazon Resource Name \(ARN\) of an instance profile\. For example, ` ecsInstanceRole ` or `arn:aws:iam::<aws_account_id>:instance-profile/ecsInstanceRole `\. For more information, see [Amazon ECS instance role](https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html) in the * AWS Batch User Guide*\.  
 When updating a compute environment, changing this setting requires an infrastructure update of the compute environment\. For more information, see [Updating compute environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html) in the * AWS Batch User Guide*\.  
 This parameter isn't applicable to jobs that are running on Fargate resources\. Don't specify it\.
 *Required*: No  
@@ -150,7 +152,7 @@ This parameter isn't applicable to jobs running on Fargate resources, and should
 
 `MaxvCpus`  <a name="cfn-batch-computeenvironment-computeresources-maxvcpus"></a>
 The maximum number of Amazon EC2 vCPUs that an environment can reach\.  
-With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` allocation strategies using On\-Demand or Spot Instances, and the `BEST_FIT` strategy using Spot Instances, AWS Batch might need to exceed `maxvCpus` to meet your capacity requirements\. In this event, AWS Batch never exceeds `maxvCpus` by more than a single instance\. That is, no more than a single instance from among those specified in your compute environment\.
+With `BEST_FIT_PROGRESSIVE`,`SPOT_CAPACITY_OPTIMIZED` and `SPOT_PRICE_CAPACITY_OPTIMIZED` \(recommended\) strategies using On\-Demand or Spot Instances, and the `BEST_FIT` strategy using Spot Instances, AWS Batch might need to exceed `maxvCpus` to meet your capacity requirements\. In this event, AWS Batch never exceeds `maxvCpus` by more than a single instance\.
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

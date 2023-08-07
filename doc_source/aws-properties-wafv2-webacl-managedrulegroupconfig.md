@@ -2,7 +2,9 @@
 
 Additional information that's used by a managed rule group\. Many managed rule groups don't require this\.
 
-Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection level that you want the Bot Control rule group to use\. 
+The rule groups used for intelligent threat mitigation require additional configuration: 
++ Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account takeover prevention managed rule group\. The configuration includes the sign\-in page of your application and the locations in the login request payload of data such as the username and password\. 
++ Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection level that you want the Bot Control rule group to use\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-managedrulegroupconfig-syntax"></a>
 
@@ -12,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AWSManagedRulesACFPRuleSet](#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesacfpruleset)" : AWSManagedRulesACFPRuleSet,
   "[AWSManagedRulesATPRuleSet](#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesatpruleset)" : AWSManagedRulesATPRuleSet,
   "[AWSManagedRulesBotControlRuleSet](#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesbotcontrolruleset)" : AWSManagedRulesBotControlRuleSet,
   "[LoginPath](#cfn-wafv2-webacl-managedrulegroupconfig-loginpath)" : String,
@@ -24,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-wafv2-webacl-managedrulegroupconfig-syntax.yaml"></a>
 
 ```
+  [AWSManagedRulesACFPRuleSet](#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesacfpruleset): 
+    AWSManagedRulesACFPRuleSet
   [AWSManagedRulesATPRuleSet](#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesatpruleset): 
     AWSManagedRulesATPRuleSet
   [AWSManagedRulesBotControlRuleSet](#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesbotcontrolruleset): 
@@ -37,6 +42,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-managedrulegroupconfig-properties"></a>
+
+`AWSManagedRulesACFPRuleSet`  <a name="cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesacfpruleset"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [AWSManagedRulesACFPRuleSet](aws-properties-wafv2-webacl-awsmanagedrulesacfpruleset.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AWSManagedRulesATPRuleSet`  <a name="cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesatpruleset"></a>
 Additional configuration for using the account takeover prevention \(ATP\) managed rule group, `AWSManagedRulesATPRuleSet`\. Use this to provide login request information to the rule group\. For web ACLs that protect CloudFront distributions, use this to also provide the information about how your distribution responds to login requests\.   
@@ -62,20 +73,20 @@ Instead of this setting, provide your configuration under `AWSManagedRulesATPRul
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PasswordField`  <a name="cfn-wafv2-webacl-managedrulegroupconfig-passwordfield"></a>
-Instead of this setting, provide your configuration under `AWSManagedRulesATPRuleSet` `RequestInspection`\. 
+Instead of this setting, provide your configuration under the request inspection configuration for `AWSManagedRulesATPRuleSet`\. 
 *Required*: No  
 *Type*: [FieldIdentifier](aws-properties-wafv2-webacl-fieldidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PayloadType`  <a name="cfn-wafv2-webacl-managedrulegroupconfig-payloadtype"></a>
-Instead of this setting, provide your configuration under `AWSManagedRulesATPRuleSet` `RequestInspection`\. 
+Instead of this setting, provide your configuration under the request inspection configuration for `AWSManagedRulesATPRuleSet`\. 
 *Required*: No  
 *Type*: String  
 *Allowed values*: `FORM_ENCODED | JSON`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UsernameField`  <a name="cfn-wafv2-webacl-managedrulegroupconfig-usernamefield"></a>
-Instead of this setting, provide your configuration under `AWSManagedRulesATPRuleSet` `RequestInspection`\. 
+Instead of this setting, provide your configuration under the request inspection configuration for `AWSManagedRulesATPRuleSet`\. 
 *Required*: No  
 *Type*: [FieldIdentifier](aws-properties-wafv2-webacl-fieldidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

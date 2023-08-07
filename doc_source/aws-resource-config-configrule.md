@@ -29,8 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::ConfigRule",
   "Properties" : {
+      "[Compliance](#cfn-config-configrule-compliance)" : Compliance,
       "[ConfigRuleName](#cfn-config-configrule-configrulename)" : String,
       "[Description](#cfn-config-configrule-description)" : String,
+      "[EvaluationModes](#cfn-config-configrule-evaluationmodes)" : [ EvaluationModeConfiguration, ... ],
       "[InputParameters](#cfn-config-configrule-inputparameters)" : Json,
       "[MaximumExecutionFrequency](#cfn-config-configrule-maximumexecutionfrequency)" : String,
       "[Scope](#cfn-config-configrule-scope)" : Scope,
@@ -44,8 +46,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Config::ConfigRule
 Properties: 
+  [Compliance](#cfn-config-configrule-compliance): 
+    Compliance
   [ConfigRuleName](#cfn-config-configrule-configrulename): String
   [Description](#cfn-config-configrule-description): String
+  [EvaluationModes](#cfn-config-configrule-evaluationmodes): 
+    - EvaluationModeConfiguration
   [InputParameters](#cfn-config-configrule-inputparameters): Json
   [MaximumExecutionFrequency](#cfn-config-configrule-maximumexecutionfrequency): String
   [Scope](#cfn-config-configrule-scope): 
@@ -55,6 +61,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-config-configrule-properties"></a>
+
+`Compliance`  <a name="cfn-config-configrule-compliance"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [Compliance](aws-properties-config-configrule-compliance.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConfigRuleName`  <a name="cfn-config-configrule-configrulename"></a>
 A name for the AWS Config rule\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.   
@@ -71,6 +83,12 @@ The description that you provide for the AWS Config rule\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EvaluationModes`  <a name="cfn-config-configrule-evaluationmodes"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [EvaluationModeConfiguration](aws-properties-config-configrule-evaluationmodeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputParameters`  <a name="cfn-config-configrule-inputparameters"></a>

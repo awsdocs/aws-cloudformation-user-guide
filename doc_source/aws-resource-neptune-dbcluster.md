@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname)" : String,
       "[DBInstanceParameterGroupName](#cfn-neptune-dbcluster-dbinstanceparametergroupname)" : String,
+      "[DBPort](#cfn-neptune-dbcluster-dbport)" : Integer,
       "[DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname)" : String,
       "[DeletionProtection](#cfn-neptune-dbcluster-deletionprotection)" : Boolean,
       "[EnableCloudwatchLogsExports](#cfn-neptune-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
@@ -61,6 +62,7 @@ Properties:
   [DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname): String
   [DBInstanceParameterGroupName](#cfn-neptune-dbcluster-dbinstanceparametergroupname): String
+  [DBPort](#cfn-neptune-dbcluster-dbport): Integer
   [DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname): String
   [DeletionProtection](#cfn-neptune-dbcluster-deletionprotection): Boolean
   [EnableCloudwatchLogsExports](#cfn-neptune-dbcluster-enablecloudwatchlogsexports): 
@@ -133,6 +135,12 @@ Note that when you apply a parameter group using `DBInstanceParameterGroupName`,
 + The `DBInstanceParameterGroupName` parameter is only valid for major engine version upgrades\.
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DBPort`  <a name="cfn-neptune-dbcluster-dbport"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBSubnetGroupName`  <a name="cfn-neptune-dbcluster-dbsubnetgroupname"></a>

@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CatalogId](#cfn-glue-table-tableidentifier-catalogid)" : String,
   "[DatabaseName](#cfn-glue-table-tableidentifier-databasename)" : String,
-  "[Name](#cfn-glue-table-tableidentifier-name)" : String
+  "[Name](#cfn-glue-table-tableidentifier-name)" : String,
+  "[Region](#cfn-glue-table-tableidentifier-region)" : String
 }
 ```
 
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CatalogId](#cfn-glue-table-tableidentifier-catalogid): String
   [DatabaseName](#cfn-glue-table-tableidentifier-databasename): String
   [Name](#cfn-glue-table-tableidentifier-name): String
+  [Region](#cfn-glue-table-tableidentifier-region): String
 ```
 
 ## Properties<a name="aws-properties-glue-table-tableidentifier-properties"></a>
@@ -40,6 +42,12 @@ The name of the catalog database that contains the target table\.
 
 `Name`  <a name="cfn-glue-table-tableidentifier-name"></a>
 The name of the target table\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Region`  <a name="cfn-glue-table-tableidentifier-region"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

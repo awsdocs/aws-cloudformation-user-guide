@@ -2,7 +2,7 @@
 
 Specifies custom configurations for the associations between the web ACL and protected resources\. 
 
-Use this to customize the maximum size of the request body that your protected CloudFront distributions forward to AWS WAF for inspection\. The default is 16 KB \(16,384 kilobytes\)\. 
+Use this to customize the maximum size of the request body that your protected CloudFront distributions forward to AWS WAF for inspection\. The default is 16 KB \(16,384 bytes\)\. 
 
 **Note**  
 You are charged additional fees when your protected resources forward body sizes that are larger than the default\. For more information, see [AWS WAF Pricing](http://aws.amazon.com/waf/pricing/)\.
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-associationconfig-properties"></a>
 
 `RequestBody`  <a name="cfn-wafv2-webacl-associationconfig-requestbody"></a>
-Customizes the maximum size of the request body that your protected CloudFront distributions forward to AWS WAF for inspection\. The default size is 16 KB \(16,384 kilobytes\)\.   
+Customizes the maximum size of the request body that your protected CloudFront distributions forward to AWS WAF for inspection\. The default size is 16 KB \(16,384 bytes\)\.   
 You are charged additional fees when your protected resources forward body sizes that are larger than the default\. For more information, see [AWS WAF Pricing](http://aws.amazon.com/waf/pricing/)\.
 *Required*: No  
 *Type*: Map of [RequestBodyAssociatedResourceTypeConfig](aws-properties-wafv2-webacl-requestbodyassociatedresourcetypeconfig.md)  

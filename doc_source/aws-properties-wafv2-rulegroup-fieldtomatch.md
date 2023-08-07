@@ -62,7 +62,7 @@ Inspect all query arguments\.
 
 `Body`  <a name="cfn-wafv2-rulegroup-fieldtomatch-body"></a>
 Inspect the request body as plain text\. The request body immediately follows the request headers\. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form\.   
-A limited amount of the request body is forwarded to AWS WAF for inspection by the underlying host service\. For regional resources, the limit is 8 KB \(8,192 kilobytes\) and for CloudFront distributions, the limit is 16 KB \(16,384 kilobytes\)\. For CloudFront distributions, you can increase the limit in the web ACL's `AssociationConfig`, for additional processing fees\.   
+A limited amount of the request body is forwarded to AWS WAF for inspection by the underlying host service\. For regional resources, the limit is 8 KB \(8,192 bytes\) and for CloudFront distributions, the limit is 16 KB \(16,384 bytes\)\. For CloudFront distributions, you can increase the limit in the web ACL's `AssociationConfig`, for additional processing fees\.   
 For information about how to handle oversized request bodies, see the `Body` object configuration\.   
 *Required*: No  
 *Type*: [Body](aws-properties-wafv2-rulegroup-body.md)  
@@ -84,7 +84,7 @@ Only the first 8 KB \(8192 bytes\) of a request's headers and only the first 200
 
 `JsonBody`  <a name="cfn-wafv2-rulegroup-fieldtomatch-jsonbody"></a>
 Inspect the request body as JSON\. The request body immediately follows the request headers\. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form\.   
-A limited amount of the request body is forwarded to AWS WAF for inspection by the underlying host service\. For regional resources, the limit is 8 KB \(8,192 kilobytes\) and for CloudFront distributions, the limit is 16 KB \(16,384 kilobytes\)\. For CloudFront distributions, you can increase the limit in the web ACL's `AssociationConfig`, for additional processing fees\.   
+A limited amount of the request body is forwarded to AWS WAF for inspection by the underlying host service\. For regional resources, the limit is 8 KB \(8,192 bytes\) and for CloudFront distributions, the limit is 16 KB \(16,384 bytes\)\. For CloudFront distributions, you can increase the limit in the web ACL's `AssociationConfig`, for additional processing fees\.   
 For information about how to handle oversized request bodies, see the `JsonBody` object configuration\.   
 *Required*: No  
 *Type*: [JsonBody](aws-properties-wafv2-rulegroup-jsonbody.md)  

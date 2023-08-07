@@ -59,7 +59,7 @@ Properties:
 Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `JobDefinitionName`  <a name="cfn-sagemaker-modelbiasjobdefinition-jobdefinitionname"></a>
 The name of the bias job definition\. The name must be unique within an AWS Region in the AWS account\.  

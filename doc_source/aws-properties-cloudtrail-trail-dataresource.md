@@ -1,9 +1,10 @@
 # AWS::CloudTrail::Trail DataResource<a name="aws-properties-cloudtrail-trail-dataresource"></a>
 
-The Amazon S3 buckets, AWS Lambda functions, or Amazon DynamoDB tables that you specify in event selectors in your AWS CloudFormation template for your trail to log data events\. Data events provide information about the resource operations performed on or within a resource itself\. These are also known as data plane operations\. You can specify up to 250 data resources for a trail\. Currently, advanced event selectors for data events are not supported in AWS CloudFormation templates\.
+The Amazon S3 buckets, AWS Lambda functions, or Amazon DynamoDB tables that you specify in your event selectors for your trail to log data events\. Data events provide information about the resource operations performed on or within a resource itself\. These are also known as data plane operations\. You can specify up to 250 data resources for a trail\.
 
 **Note**  
-The total number of allowed data resources is 250\. This number can be distributed between 1 and 5 event selectors, but the total cannot exceed 250 across all selectors\.
+The total number of allowed data resources is 250\. This number can be distributed between 1 and 5 event selectors, but the total cannot exceed 250 across all selectors for the trail\.  
+If you are using advanced event selectors, the maximum total number of values for all conditions, across all advanced event selectors for the trail, is 500\.
 
 The following example demonstrates how logging works when you configure logging of all data events for an S3 bucket named `bucket-1`\. In this example, the CloudTrail user specified an empty prefix, and the option to log both `Read` and `Write` data events\.
 
@@ -48,9 +49,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Type`  <a name="cfn-cloudtrail-trail-dataresource-type"></a>
 The resource type in which you want to log data events\. You can specify the following *basic* event selector resource types:  
-+  `AWS::S3::Object` 
-+  `AWS::Lambda::Function` 
 +  `AWS::DynamoDB::Table` 
++  `AWS::Lambda::Function` 
++  `AWS::S3::Object` 
+The following resource types are also available through *advanced* event selectors\. Basic event selector resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in basic event selectors\. For more information, see [AdvancedFieldSelector](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html)\.  
++  `AWS::CloudTrail::Channel` 
++  `AWS::CodeWhisperer::Profile` 
++  `AWS::Cognito::IdentityPool` 
++  `AWS::DynamoDB::Stream` 
++  `AWS::EC2::Snapshot` 
++  `AWS::EMRWAL::Workspace` 
++  `AWS::FinSpace::Environment` 
++  `AWS::Glue::Table` 
++  `AWS::GuardDuty::Detector` 
++  `AWS::KendraRanking::ExecutionPlan` 
++  `AWS::ManagedBlockchain::Network` 
++  `AWS::ManagedBlockchain::Node` 
++  `AWS::MedicalImaging::Datastore` 
++  `AWS::SageMaker::ExperimentTrialComponent` 
++  `AWS::SageMaker::FeatureGroup` 
++  `AWS::S3::AccessPoint` 
++  `AWS::S3ObjectLambda::AccessPoint` 
++  `AWS::S3Outposts::Object` 
++  `AWS::SSMMessages::ControlChannel` 
++  `AWS::VerifiedPermissions::PolicyStore` 
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -60,7 +82,7 @@ An array of Amazon Resource Name \(ARN\) strings or partial ARN strings for the 
 + To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as `arn:aws:s3`\.
 **Note**  
 This also enables logging of data event activity performed by any user or role in your AWS account, even if that activity is performed on a bucket that belongs to another AWS account\.
-+  To log data events for all objects in an S3 bucket, specify the bucket and an empty object prefix such as `arn:aws:s3:::bucket-1/`\. The trail logs data events for all objects in this S3 bucket\. 
++ To log data events for all objects in an S3 bucket, specify the bucket and an empty object prefix such as `arn:aws:s3:::bucket-1/`\. The trail logs data events for all objects in this S3 bucket\.
 + To log data events for specific objects, specify the S3 bucket and object prefix such as `arn:aws:s3:::bucket-1/example-images`\. The trail logs data events for objects in this S3 bucket that match the prefix\.
 + To log data events for all Lambda functions in your AWS account, specify the prefix as `arn:aws:lambda`\.
 **Note**  

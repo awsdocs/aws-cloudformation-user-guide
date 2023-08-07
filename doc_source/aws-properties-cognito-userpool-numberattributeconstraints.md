@@ -28,10 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The maximum value of an attribute that is of the number data type\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `131072`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinValue`  <a name="cfn-cognito-userpool-numberattributeconstraints-minvalue"></a>
 The minimum value of an attribute that is of the number data type\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `131072`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

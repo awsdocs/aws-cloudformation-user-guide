@@ -41,7 +41,7 @@ Properties:
 ## Properties<a name="aws-resource-billingconductor-billinggroup-properties"></a>
 
 `AccountGrouping`  <a name="cfn-billingconductor-billinggroup-accountgrouping"></a>
-The set of accounts that will be under the billing group\. The set of accounts resemble the linked accounts in a consolidated family\.  
+The set of accounts that will be under the billing group\. The set of accounts resemble the linked accounts in a consolidated billing family\.  
 *Required*: Yes  
 *Type*: [AccountGrouping](aws-properties-billingconductor-billinggroup-accountgrouping.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -77,7 +77,7 @@ The account ID that serves as the main account in a billing group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-billingconductor-billinggroup-tags"></a>
-Property description not available\.  
+A map that contains tag keys and tag values that are attached to a billing group\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

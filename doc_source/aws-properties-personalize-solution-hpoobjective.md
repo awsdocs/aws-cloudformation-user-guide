@@ -1,6 +1,9 @@
 # AWS::Personalize::Solution HpoObjective<a name="aws-properties-personalize-solution-hpoobjective"></a>
 
-<a name="aws-properties-personalize-solution-hpoobjective-description"></a>The `HpoObjective` property type specifies Property description not available\. for an [AWS::Personalize::Solution](aws-resource-personalize-solution.md)\.
+The metric to optimize during hyperparameter optimization \(HPO\)\.
+
+**Note**  
+Amazon Personalize doesn't support configuring the `hpoObjective` at this time\.
 
 ## Syntax<a name="aws-properties-personalize-solution-hpoobjective-syntax"></a>
 
@@ -27,19 +30,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-personalize-solution-hpoobjective-properties"></a>
 
 `MetricName`  <a name="cfn-personalize-solution-hpoobjective-metricname"></a>
-Property description not available\.  
+The name of the metric\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MetricRegex`  <a name="cfn-personalize-solution-hpoobjective-metricregex"></a>
-Property description not available\.  
+A regular expression for finding the metric in the training job logs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-personalize-solution-hpoobjective-type"></a>
-Property description not available\.  
+The type of the metric\. Valid values are `Maximize` and `Minimize`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

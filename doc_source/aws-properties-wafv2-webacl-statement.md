@@ -104,8 +104,9 @@ The label match statement provides the label or namespace string to search for\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManagedRuleGroupStatement`  <a name="cfn-wafv2-webacl-statement-managedrulegroupstatement"></a>
-A rule statement used to run the rules that are defined in a managed rule group\. To use this, provide the vendor name and the name of the rule group in this statement\.   
+A rule statement used to run the rules that are defined in a managed rule group\. To use this, provide the vendor name and the name of the rule group in this statement\. You can retrieve the required names through the API call `ListAvailableManagedRuleGroups`\.  
 You cannot nest a `ManagedRuleGroupStatement`, for example for use inside a `NotStatement` or `OrStatement`\. It can only be referenced as a top\-level statement within a rule\.  
+You are charged additional fees when you use the AWS WAF Bot Control managed rule group `AWSManagedRulesBotControlRuleSet` or the AWS WAF Fraud Control account takeover prevention \(ATP\) managed rule group `AWSManagedRulesATPRuleSet`\. For more information, see [AWS WAF Pricing](http://aws.amazon.com/waf/pricing/)\.
 *Required*: No  
 *Type*: [ManagedRuleGroupStatement](aws-properties-wafv2-webacl-managedrulegroupstatement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -174,7 +175,7 @@ You cannot nest a `RuleGroupReferenceStatement`, for example for use inside a `N
 
 `SizeConstraintStatement`  <a name="cfn-wafv2-webacl-statement-sizeconstraintstatement"></a>
 A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than \(>\) or less than \(<\)\. For example, you can use a size constraint statement to look for query strings that are longer than 100 bytes\.   
-If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of bytes of the body up to the limit for the web ACL\. By default, for regional web ACLs, this limit is 8 KB \(8,192 kilobytes\) and for CloudFront web ACLs, this limit is 16 KB \(16,384 kilobytes\)\. For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig`, for additional fees\. If you know that the request body for your web requests should never exceed the inspection limit, you could use a size constraint statement to block requests that have a larger request body size\.  
+If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of bytes of the body up to the limit for the web ACL\. By default, for regional web ACLs, this limit is 8 KB \(8,192 bytes\) and for CloudFront web ACLs, this limit is 16 KB \(16,384 bytes\)\. For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig`, for additional fees\. If you know that the request body for your web requests should never exceed the inspection limit, you could use a size constraint statement to block requests that have a larger request body size\.  
 If you choose URI for the value of Part of the request to filter on, the slash \(/\) in the URI counts as one character\. For example, the URI `/logo.jpg` is nine characters long\.  
 *Required*: No  
 *Type*: [SizeConstraintStatement](aws-properties-wafv2-webacl-sizeconstraintstatement.md)  

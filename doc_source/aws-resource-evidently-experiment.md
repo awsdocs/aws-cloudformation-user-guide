@@ -60,18 +60,25 @@ Properties:
 An optional description of the experiment\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `160`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricGoals`  <a name="cfn-evidently-experiment-metricgoals"></a>
 An array of structures that defines the metrics used for the experiment, and whether a higher or lower value for each metric is the goal\. You can use up to three metrics in an experiment\.  
 *Required*: Yes  
 *Type*: List of [MetricGoalObject](aws-properties-evidently-experiment-metricgoalobject.md)  
+*Maximum*: `3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-evidently-experiment-name"></a>
 A name for the new experiment\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `127`  
+*Pattern*: `[-a-zA-Z0-9._]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OnlineAbConfig`  <a name="cfn-evidently-experiment-onlineabconfig"></a>
@@ -84,12 +91,18 @@ A structure that contains the configuration of which variation to use as the "co
 The name or the ARN of the project where this experiment is to be created\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `.*arn:[^:]*:[^:]*:[^:]*:[^:]*:project/[-a-zA-Z0-9._]*.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RandomizationSalt`  <a name="cfn-evidently-experiment-randomizationsalt"></a>
 When Evidently assigns a particular user session to an experiment, it must use a randomization ID to determine which variation the user session is served\. This randomization ID is a combination of the entity ID and `randomizationSalt`\. If you omit `randomizationSalt`, Evidently uses the experiment name as the `randomizationSalt`\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `127`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemoveSegment`  <a name="cfn-evidently-experiment-removesegment"></a>
@@ -132,6 +145,7 @@ For more information, see [Tagging AWS resources](https://docs.aws.amazon.com/ge
 An array of structures that describe the configuration of each feature variation used in the experiment\.  
 *Required*: Yes  
 *Type*: List of [TreatmentObject](aws-properties-evidently-experiment-treatmentobject.md)  
+*Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-evidently-experiment-return-values"></a>

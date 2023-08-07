@@ -61,7 +61,8 @@ Specifies how AWS WAF should handle `Challenge` evaluations\. If you don't speci
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-rulegroup-rule-name"></a>
-The name of the rule\. You can't change the name of a `Rule` after you create it\.   
+The name of the rule\.   
+If you change the name of a `Rule` after you create it and you want the rule's metric name to reflect the change, update the metric name in the rule's `VisibilityConfig` settings\. AWS WAF doesn't automatically update the metric name when you update the rule name\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -97,6 +98,7 @@ The AWS WAF processing statement for the rule, for example [ByteMatchStatement](
 
 `VisibilityConfig`  <a name="cfn-wafv2-rulegroup-rule-visibilityconfig"></a>
 Defines and enables Amazon CloudWatch metrics and web request sample collection\.   
+If you change the name of a `Rule` after you create it and you want the rule's metric name to reflect the change, update the metric name as well\. AWS WAF doesn't automatically update the metric name\.   
 *Required*: Yes  
 *Type*: [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -4,6 +4,42 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_SQS.md) | The following resource was updated: AWS::SQS::QueueInlinePolicy 
+
+ [AWS::SQS::QueueInlinePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queueinlinepolicy.html)   
+You can now associate one Amazon SQS policy with one queue\.  | August 10, 2023 | 
+| [Updated resource](AWS_BillingConductor.md) | The following resource was updated: AWS::BillingConductor::BillingGroup AccountGrouping\. 
+
+ [AWS::BillingConductor::BillingGroup AccountGrouping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-billinggroup-accountgrouping.html)   
+You can use `AutoAssociate` so that your billing group will automatically associate newly added AWS accounts that join your consolidated billing family\.  | August 3, 2023 | 
+| [Updated resource](AWS_DMS.md) | The following resources were added: `AWS::DMS::ReplicationConfig`, `AWS::DMS::ComputeConfig`\. The following resources were updated: `AWS::DMS::RedshiftSettings`, `AWS::DMS::ComputeConfig`\. 
+
+ [AWS::DMS::Endpoint\.ReplicationConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html)   
+Added `ReplicationConfig`\. Use `ReplicationConfig` to configure a serverless replication\.  
+
+ [AWS::DMS::Endpoint\.ReplicationConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-replicationconfig-computeconfig.html)   
+Added `ComputeConfig`\. Use `ComputeConfig` to configure provisioning for a serverless replication\.  
+
+ [AWS::DMS::Endpoint\.MongoDbSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html)   
+Added `MapBooleanAsBoolean` attributes to `RedshiftSettings`\. Use `MapBooleanAsBoolean` to configure how DMS migrates boolean values\. 
+
+ [AWS::DMS::Endpoint\.MongoDbSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html)   
+Added `MapBooleanAsBoolean` to `PostgreSQLSettings`\. Use `MapBooleanAsBoolean` to configure how DMS migrates boolean values\.  | August 3, 2023 | 
+| [Updated resource](AWS_EC2.md) | The following resource was updated: AWS::EC2::NetworkInterface\. 
+
+ [ AWS::EC2::NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html)   
+Use the `EnablePrimaryIpv6` property to enable a primary IPv6 address on a network interface\.  | August 3, 2023 | 
+| [New and updated resources](AWS_Transfer.md) | The AWS::Transfer::Connector As2Config resource has been updated with several new parameters\. Also, the AWS::Transfer::Connector Sftp2Config resource has been added\. 
+
+ [AWS::Transfer::Connector As2Config](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-as2config.html)   
+Multiple parameters have been added for this resource\. See the linked documentation for details\.  
+
+ [AWS::Transfer::Connector SftpConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html)   
+Use the `SftpConfig` resource to specify values for a connector\. The connector establishes a relationship between your AWS storage and a partner's SFTP server\.  | August 3, 2023 | 
+| [New resource](AWS_SNS.md) | The following resource was added: AWS::SNS::TopicInlinePolicy\. 
+
+ [AWS::SNS::TopicInlinePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html)   
+Use the `AWS::SNS::TopicInlinePolicy` resource to associate one Amazon SNS topic with one policy\.  | August 2, 2023 | 
 | [Updated resources](AWS_WAFv2.md) | The following resources were updated: AWS::WAFv2::WebACL and AWS::WAFv2::RuleGroup\. 
 
  [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   

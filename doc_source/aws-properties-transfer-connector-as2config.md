@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[BasicAuthSecretId](#cfn-transfer-connector-as2config-basicauthsecretid)" : String,
   "[Compression](#cfn-transfer-connector-as2config-compression)" : String,
   "[EncryptionAlgorithm](#cfn-transfer-connector-as2config-encryptionalgorithm)" : String,
   "[LocalProfileId](#cfn-transfer-connector-as2config-localprofileid)" : String,
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-transfer-connector-as2config-syntax.yaml"></a>
 
 ```
+  [BasicAuthSecretId](#cfn-transfer-connector-as2config-basicauthsecretid): String
   [Compression](#cfn-transfer-connector-as2config-compression): String
   [EncryptionAlgorithm](#cfn-transfer-connector-as2config-encryptionalgorithm): String
   [LocalProfileId](#cfn-transfer-connector-as2config-localprofileid): String
@@ -35,6 +37,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-transfer-connector-as2config-properties"></a>
+
+`BasicAuthSecretId`  <a name="cfn-transfer-connector-as2config-basicauthsecretid"></a>
+Provides Basic authentication support to the AS2 Connectors API\. To use Basic authentication, you must provide the name or Amazon Resource Name \(ARN\) of a secret in AWS Secrets Manager\.  
+The default value for this parameter is `null`, which indicates that Basic authentication is not enabled for the connector\.  
+If the connector should use Basic authentication, the secret needs to be in the following format:  
+ `{ "Username": "user-name", "Password": "user-password" }`   
+Replace `user-name` and `user-password` with the credentials for the actual user that is being authenticated\.  
+Note the following:  
++ You are storing these credentials in Secrets Manager, *not passing them directly* into this API\.
++ If you are using the API, SDKs, or CloudFormation to configure your connector, then you must create the secret before you can enable Basic authentication\. However, if you are using the AWS management console, you can have the system create the secret for you\.
+If you have previously enabled Basic authentication for a connector, you can disable it by using the `UpdateConnector` API call\. For example, if you are using the CLI, you can run the following command to remove Basic authentication:  
+ `update-connector --connector-id my-connector-id --as2-config 'BasicAuthSecretId=""'`   
+*Required*: No  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Compression`  <a name="cfn-transfer-connector-as2config-compression"></a>
 Specifies whether the AS2 file is compressed\.  

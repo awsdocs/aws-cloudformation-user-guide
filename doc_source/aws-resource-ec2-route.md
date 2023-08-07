@@ -72,7 +72,7 @@ The IPv4 CIDR address block used for the destination match\. Routing decisions a
 The IPv6 CIDR block used for the destination match\. Routing decisions are based on the most specific match\.  
 *Required*: Conditional  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EgressOnlyInternetGatewayId`  <a name="cfn-ec2-route-egressonlyinternetgatewayid"></a>
 \[IPv6 traffic only\] The ID of an egress\-only internet gateway\.  
@@ -141,6 +141,17 @@ The ID of a VPC peering connection\.
 When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the route\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-ec2-route-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-route-return-values-fn--getatt-fn--getatt"></a>
+
+`CidrBlock`  <a name="CidrBlock-fn::getatt"></a>
+The IPv4 CIDR block\.
 
 ## Examples<a name="aws-resource-ec2-route--examples"></a>
 

@@ -56,7 +56,7 @@ For update operations, the following considerations apply:
 + If a resource is updated such that a new physical resource is created to replace the old resource, then the old resource is completely deleted, including from CloudFormation's scope\.
 
 RetainExceptOnCreate  
-CloudFormation deletes newly created resources, but retains existing resources, when a stack operation is rolled back\. This ensures new, empty, and unused resources are deleted, while critical resources and their data are retained\. `RetainExceptOnCreate` behaves similar to `Retain` during forward stack operations and stack deletions\. `RetainExceptOnCreate` can be specified for any resource that supports the `DeletionPolicy` attribute\.
+`RetainExceptOnCreate` behaves like `Retain` for stack operations, except for the stack operation that initially created the resource\. If the stack operation that created the resource is rolled back, CloudFormation deletes the resource\. For all other stack operations, such as stack deletion, CloudFormation retains the resource and its contents\. The result is that new, empty, and unused resources are deleted, while in\-use resources and their data are retained\.
 
 Snapshot  
 For resources that support snapshots, CloudFormation creates a snapshot for the resource before deleting it\. When CloudFormation completes the stack deletion, the stack will be in the `Delete_Complete` state; however, the snapshots that are created with this policy continue to exist and continue to incur applicable charges until you delete those snapshots\.  

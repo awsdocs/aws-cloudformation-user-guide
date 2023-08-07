@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CatalogId](#cfn-glue-table-catalogid)" : String,
       "[DatabaseName](#cfn-glue-table-databasename)" : String,
+      "[OpenTableFormatInput](#cfn-glue-table-opentableformatinput)" : OpenTableFormatInput,
       "[TableInput](#cfn-glue-table-tableinput)" : TableInput
     }
 }
@@ -26,6 +27,8 @@ Type: AWS::Glue::Table
 Properties: 
   [CatalogId](#cfn-glue-table-catalogid): String
   [DatabaseName](#cfn-glue-table-databasename): String
+  [OpenTableFormatInput](#cfn-glue-table-opentableformatinput): 
+    OpenTableFormatInput
   [TableInput](#cfn-glue-table-tableinput): 
     TableInput
 ```
@@ -49,6 +52,12 @@ The name of the database where the table metadata resides\. For Hive compatibili
 *Maximum*: `255`  
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OpenTableFormatInput`  <a name="cfn-glue-table-opentableformatinput"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [OpenTableFormatInput](aws-properties-glue-table-opentableformatinput.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableInput`  <a name="cfn-glue-table-tableinput"></a>
 A structure used to define a table\.  

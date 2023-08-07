@@ -1,8 +1,11 @@
 # AWS::WAFv2::WebACL ManagedRuleGroupStatement<a name="aws-properties-wafv2-webacl-managedrulegroupstatement"></a>
 
-A rule statement used to run the rules that are defined in a managed rule group\. To use this, provide the vendor name and the name of the rule group in this statement\. 
+A rule statement used to run the rules that are defined in a managed rule group\. To use this, provide the vendor name and the name of the rule group in this statement\. You can retrieve the required names through the API call `ListAvailableManagedRuleGroups`\.
 
 You cannot nest a `ManagedRuleGroupStatement`, for example for use inside a `NotStatement` or `OrStatement`\. It can only be referenced as a top\-level statement within a rule\.
+
+**Note**  
+You are charged additional fees when you use the AWS WAF Bot Control managed rule group `AWSManagedRulesBotControlRuleSet` or the AWS WAF Fraud Control account takeover prevention \(ATP\) managed rule group `AWSManagedRulesATPRuleSet`\. For more information, see [AWS WAF Pricing](http://aws.amazon.com/waf/pricing/)\.
 
 ## Syntax<a name="aws-properties-wafv2-webacl-managedrulegroupstatement-syntax"></a>
 
@@ -50,8 +53,9 @@ Instead of this option, use `RuleActionOverrides`\. It accepts any valid action 
 
 `ManagedRuleGroupConfigs`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-managedrulegroupconfigs"></a>
 Additional information that's used by a managed rule group\. Many managed rule groups don't require this\.  
-Use the `AWSManagedRulesATPRuleSet` configuration object for the account takeover prevention managed rule group, to provide information such as the sign\-in page of your application and the type of content to accept or reject from the client\.   
-Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection level that you want the Bot Control rule group to use\.   
+The rule groups used for intelligent threat mitigation require additional configuration:   
++ Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account takeover prevention managed rule group\. The configuration includes the sign\-in page of your application and the locations in the login request payload of data such as the username and password\. 
++ Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection level that you want the Bot Control rule group to use\. 
 *Required*: No  
 *Type*: List of [ManagedRuleGroupConfig](aws-properties-wafv2-webacl-managedrulegroupconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -70,6 +74,7 @@ Action settings to use in the place of the rule actions that are configured insi
 You can use overrides for testing, for example you can override all of rule actions to `Count` and then monitor the resulting count metrics to understand how the rule group would handle your web traffic\. You can also permanently override some or all actions, to modify how the rule group manages your web traffic\.  
 *Required*: No  
 *Type*: List of [RuleActionOverride](aws-properties-wafv2-webacl-ruleactionoverride.md)  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScopeDownStatement`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement"></a>

@@ -76,6 +76,13 @@ An account ID, or `*` to grant layer usage permission to all accounts in an orga
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-lambda-layerversionpermission-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-lambda-layerversionpermission-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-lambda-layerversionpermission--examples"></a>
 
 

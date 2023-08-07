@@ -39,6 +39,7 @@ To learn more about resource provider schemas, including schema format and defin
 |  Europe \(Spain\)  |  [https://schema.cloudformation.eu-south-2.amazonaws.com/CloudformationSchema.zip](https://schema.cloudformation.eu-south-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Europe \(Stockholm\)  |  [https://schema.cloudformation.eu-north-1.amazonaws.com/CloudformationSchema.zip](https://schema.cloudformation.eu-north-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Europe \(Zurich\)  |  [https://schema.cloudformation.eu-central-2.amazonaws.com/CloudformationSchema.zip](https://schema.cloudformation.eu-central-2.amazonaws.com/CloudformationSchema.zip)  | 
+|  Israel \(Tel Aviv\)  |  [https://schema.cloudformation.il-central-1.amazonaws.com/CloudformationSchema.zip](https://schema.cloudformation.il-central-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Middle East \(Bahrain\)  |  [https://schema.cloudformation.me-south-1.amazonaws.com/CloudformationSchema.zip](https://schema.cloudformation.me-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Middle East \(UAE\)  |  [https://schema.cloudformation.me-central-1.amazonaws.com/CloudformationSchema.zip](https://schema.cloudformation.me-central-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  South America \(São Paulo\)  |  [https://schema.cloudformation.sa-east-1.amazonaws.com/CloudformationSchema.zip](https://schema.cloudformation.sa-east-1.amazonaws.com/CloudformationSchema.zip)  | 

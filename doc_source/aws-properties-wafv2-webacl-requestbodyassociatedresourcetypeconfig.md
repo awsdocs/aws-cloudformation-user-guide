@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL RequestBodyAssociatedResourceTypeConfig<a name="aws-properties-wafv2-webacl-requestbodyassociatedresourcetypeconfig"></a>
 
-Customizes the maximum size of the request body that your protected CloudFront distributions forward to AWS WAF for inspection\. The default size is 16 KB \(16,384 kilobytes\)\. 
+Customizes the maximum size of the request body that your protected CloudFront distributions forward to AWS WAF for inspection\. The default size is 16 KB \(16,384 bytes\)\. 
 
 **Note**  
 You are charged additional fees when your protected resources forward body sizes that are larger than the default\. For more information, see [AWS WAF Pricing](http://aws.amazon.com/waf/pricing/)\.
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DefaultSizeInspectionLimit`  <a name="cfn-wafv2-webacl-requestbodyassociatedresourcetypeconfig-defaultsizeinspectionlimit"></a>
 Specifies the maximum size of the web request body component that an associated CloudFront distribution should send to AWS WAF for inspection\. This applies to statements in the web ACL that inspect the body or JSON body\.   
-Default: `16 KB (16,384 kilobytes)`   
+Default: `16 KB (16,384 bytes)`   
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `KB_16 | KB_32 | KB_48 | KB_64`  

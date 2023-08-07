@@ -169,7 +169,7 @@ The dead\-letter queue of a FIFO queue must also be a FIFO queue\. Similarly, th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqsManagedSseEnabled`  <a name="cfn-sqs-queue-sqsmanagedsseenabled"></a>
- Enables server\-side queue encryption using SQS owned encryption keys\. Only one server\-side encryption option is supported per queue \(for example, [SSE\-KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html) or [SSE\-SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html)\)\.  
+Enables server\-side queue encryption using SQS owned encryption keys\. Only one server\-side encryption option is supported per queue \(for example, [SSE\-KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html) or [SSE\-SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html)\)\. When `SqsManagedSseEnabled` is not defined, `SSE-SQS` encryption is enabled by default\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

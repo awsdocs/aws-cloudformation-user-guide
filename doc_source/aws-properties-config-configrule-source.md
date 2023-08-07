@@ -49,7 +49,7 @@ Indicates whether AWS or the customer owns and manages the AWS Config rule\.
 Provides the source and the message types that cause AWS Config to evaluate your AWS resources against a rule\. It also provides the frequency with which you want AWS Config to run evaluations for the rule if the trigger type is periodic\.  
 If the owner is set to `CUSTOM_POLICY`, the only acceptable values for the AWS Config rule trigger message type are `ConfigurationItemChangeNotification` and `OversizedConfigurationItemChangeNotification`\.  
 *Required*: No  
-*Type*: List of [SourceDetail](aws-properties-config-configrule-source-sourcedetails.md)  
+*Type*: List of [SourceDetail](aws-properties-config-configrule-sourcedetail.md)  
 *Maximum*: `25`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

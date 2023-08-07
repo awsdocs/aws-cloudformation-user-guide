@@ -109,3 +109,48 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 
 `SolutionArn`  <a name="SolutionArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the solution\.
+
+## Examples<a name="aws-resource-personalize-solution--examples"></a>
+
+
+
+### Creating a solution<a name="aws-resource-personalize-solution--examples--Creating_a_solution"></a>
+
+The following example creates an Amazon Personalize solution with the User\-Personalization recipe and an event value threshold\.
+
+#### JSON<a name="aws-resource-personalize-solution--examples--Creating_a_solution--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MySolution": {
+            "Type": "AWS::Personalize::Solution",
+            "Properties": {
+               "Name": "my-solution-name",
+               "DatasetGroupArn": "arn:aws:personalize:us-west-2:123456789012:dataset-group/my-dataset-group-name",
+               "RecipeArn": "arn:aws:personalize:::recipe/aws-user-personalization",
+               "SolutionConfig": {
+                  "EventValueThreshold" : ".05"
+                }
+            }
+         }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-personalize-solution--examples--Creating_a_solution--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MySolution:
+    Type: 'AWS::Personalize::Solution'
+    Properties:
+      Name: my-solution-name
+      DatasetGroupArn: >-
+        arn:aws:personalize:us-west-2:123456789012:dataset-group/my-dataset-group-name
+      RecipeArn: 'arn:aws:personalize:::recipe/aws-user-personalization'
+      SolutionConfig:
+        EventValueThreshold: '.05'
+```

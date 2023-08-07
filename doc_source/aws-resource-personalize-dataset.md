@@ -64,7 +64,7 @@ The Amazon Resource Name \(ARN\) of the dataset group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DatasetImportJob`  <a name="cfn-personalize-dataset-datasetimportjob"></a>
-Describes a job that imports training data from a data source \(Amazon S3 bucket\) to an Amazon Personalize dataset\.  
+Describes a job that imports training data from a data source \(Amazon S3 bucket\) to an Amazon Personalize dataset\. If you specify a dataset import job as part of a dataset, all dataset import job fields are required\.   
 *Required*: No  
 *Type*: [DatasetImportJob](aws-properties-personalize-dataset-datasetimportjob.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -114,3 +114,56 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 
 `DatasetArn`  <a name="DatasetArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the dataset\.
+
+## Examples<a name="aws-resource-personalize-dataset--examples"></a>
+
+
+
+### Creating a dataset<a name="aws-resource-personalize-dataset--examples--Creating_a_dataset"></a>
+
+The following example creates an Amazon Personalize dataset and a dataset import job\. The dataset import job imports data from an Amazon S3 bucket into the dataset\.
+
+#### JSON<a name="aws-resource-personalize-dataset--examples--Creating_a_dataset--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "MyDataset": {
+      "Type": "AWS::Personalize::Dataset",
+      "Properties": {
+        "Name": "my-dataset-name",
+        "DatasetType": "Interactions",
+        "DatasetGroupArn": "arn:aws:personalize:us-west-2:123456789012:dataset-group/dataset-group-name",
+        "SchemaArn": "arn:aws:personalize:us-west-2:123456789012:schema/schema-name",
+        "DatasetImportJob": {
+          "JobName": "my-import-job-name",
+          "DataSource": {
+            "DataLocation": "s3://bucket-name/file-name.csv"
+          },
+          "RoleArn": "arn:aws:iam::123456789012:role/personalize-role"
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-personalize-dataset--examples--Creating_a_dataset--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyDataset:
+    Type: 'AWS::Personalize::Dataset'
+    Properties:
+      Name: my-dataset-name
+      DatasetType: Interactions
+      DatasetGroupArn: 'arn:aws:personalize:us-west-2:123456789012:dataset-group/dataset-group-name'
+      SchemaArn: 'arn:aws:personalize:us-west-2:123456789012:schema/schema-name'
+      DatasetImportJob:
+        JobName: my-import-job-name
+        DataSource:
+          DataLocation: 's3://bucket-name/file-name.csv'
+        RoleArn: 'arn:aws:iam::123456789012:role/personalize-role'
+```

@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-iam-managedpolicy-description)" : String,
       "[Groups](#cfn-iam-managedpolicy-groups)" : [ String, ... ],
       "[ManagedPolicyName](#cfn-iam-managedpolicy-managedpolicyname)" : String,
-      "[Path](#cfn-iam-managedpolicy-path)" : String,
+      "[Path](#cfn-ec2-dhcpoptions-path)" : String,
       "[PolicyDocument](#cfn-iam-managedpolicy-policydocument)" : Json,
       "[Roles](#cfn-iam-managedpolicy-roles)" : [ String, ... ],
       "[Users](#cfn-iam-managedpolicy-users)" : [ String, ... ]
@@ -38,7 +38,7 @@ Properties:
   [Groups](#cfn-iam-managedpolicy-groups): 
     - String
   [ManagedPolicyName](#cfn-iam-managedpolicy-managedpolicyname): String
-  [Path](#cfn-iam-managedpolicy-path): String
+  [Path](#cfn-ec2-dhcpoptions-path): String
   [PolicyDocument](#cfn-iam-managedpolicy-policydocument): Json
   [Roles](#cfn-iam-managedpolicy-roles): 
     - String
@@ -76,7 +76,7 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`Path`  <a name="cfn-iam-managedpolicy-path"></a>
+`Path`  <a name="cfn-ec2-dhcpoptions-path"></a>
 The path for the policy\.  
 For more information about paths, see [IAM identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
@@ -134,34 +134,6 @@ In the following sample, the `Ref` function returns the ARN of the `CreateTestDB
  `{ "Ref": "CreateTestDBPolicy" }` 
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
-### Fn::GetAtt<a name="aws-resource-iam-managedpolicy-return-values-fn--getatt"></a>
-
-#### <a name="aws-resource-iam-managedpolicy-return-values-fn--getatt-fn--getatt"></a>
-
-`AttachmentCount`  <a name="AttachmentCount-fn::getatt"></a>
-Property description not available\.
-
-`CreateDate`  <a name="CreateDate-fn::getatt"></a>
-Property description not available\.
-
-`DefaultVersionId`  <a name="DefaultVersionId-fn::getatt"></a>
-Property description not available\.
-
-`IsAttachable`  <a name="IsAttachable-fn::getatt"></a>
-Property description not available\.
-
-`PermissionsBoundaryUsageCount`  <a name="PermissionsBoundaryUsageCount-fn::getatt"></a>
-Property description not available\.
-
-`PolicyArn`  <a name="PolicyArn-fn::getatt"></a>
-Property description not available\.
-
-`PolicyId`  <a name="PolicyId-fn::getatt"></a>
-Property description not available\.
-
-`UpdateDate`  <a name="UpdateDate-fn::getatt"></a>
-Property description not available\.
 
 ## Examples<a name="aws-resource-iam-managedpolicy--examples"></a>
 

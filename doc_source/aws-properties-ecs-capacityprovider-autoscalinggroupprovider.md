@@ -28,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-capacityprovider-autoscalinggroupprovider-properties"></a>
 
 `AutoScalingGroupArn`  <a name="cfn-ecs-capacityprovider-autoscalinggroupprovider-autoscalinggrouparn"></a>
-The Amazon Resource Name \(ARN\) that identifies the Auto Scaling group\.  
+The Amazon Resource Name \(ARN\) that identifies the Auto Scaling group, or the Auto Scaling group name\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ManagedScaling`  <a name="cfn-ecs-capacityprovider-autoscalinggroupprovider-managedscaling"></a>
-The managed scaling settings for the Auto Scaling group capacity provider\.  
+he managed scaling settings for the Auto Scaling group capacity provider\.  
 *Required*: No  
 *Type*: [ManagedScaling](aws-properties-ecs-capacityprovider-managedscaling.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

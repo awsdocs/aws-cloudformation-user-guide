@@ -61,13 +61,13 @@ The resource is mapped to a resource group\. The name of the resource group is c
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PhysicalResourceId`  <a name="cfn-resiliencehub-app-resourcemapping-physicalresourceid"></a>
-The identifier of this resource\.  
+Identifier of the physical resource\.  
 *Required*: Yes  
 *Type*: [PhysicalResourceId](aws-properties-resiliencehub-app-physicalresourceid.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceName`  <a name="cfn-resiliencehub-app-resourcemapping-resourcename"></a>
-The name of the resource this resource is mapped to\.  
+Name of the resource that the resource is mapped to\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
