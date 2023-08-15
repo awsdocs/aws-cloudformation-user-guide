@@ -129,3 +129,62 @@ Example: `arn:aws:cleanrooms:us-east-1:111122223333:collaboration/a1b2c3d4-5678-
 `CollaborationIdentifier`  <a name="CollaborationIdentifier-fn::getatt"></a>
 Returns the unique identifier of the specified collaboration\.  
 Example: `a1b2c3d4-5678-90ab-cdef-EXAMPLE11111`
+
+## Examples<a name="aws-resource-cleanrooms-collaboration--examples"></a>
+
+
+
+### Create a collaboration<a name="aws-resource-cleanrooms-collaboration--examples--Create_a_collaboration"></a>
+
+The following example creates a collaboration with the collaboration creator\.
+
+#### JSON<a name="aws-resource-cleanrooms-collaboration--examples--Create_a_collaboration--json"></a>
+
+```
+"ExampleCollaboration": {
+  {
+    "Type": "AWS::CleanRooms::Collaboration",
+    "Properties": {
+      "Name": "Example Collaboration",
+      "Description": "Example AWS Clean Rooms collaboration",
+      "CreatorDisplayName": "Member 1",
+      "CreatorMemberAbilities": ["CAN_QUERY", "CAN_RECEIVE_RESULTS"],
+      "Members": [
+        {
+          "AccountId": "111122223333",
+          "DisplayName": "Member 2",
+          "MemberAbilities": []
+        },
+        {
+          "AccountId": "444455556666",
+          "DisplayName": "Member 3",
+          "MemberAbilities": []
+        }
+      ],
+      "QueryLogStatus": "ENABLED"
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-cleanrooms-collaboration--examples--Create_a_collaboration--yaml"></a>
+
+```
+ExampleCollaboration:
+  Type: AWS::CleanRooms::Collaboration
+  Properties:
+    Name: Example Collaboration
+    Description: Example AWS Clean Rooms collaboration
+    CreatorDisplayName: Member 1
+    CreatorMemberAbilities:
+      - CAN_QUERY
+      - CAN_RECEIVE_RESULTS
+    Members:
+      - AccountId: 111122223333
+        DisplayName: Member 2
+        MemberAbilities: []
+      - AccountId: 444455556666
+        DisplayName: Member 3
+        MemberAbilities: []
+    QueryLogStatus: ENABLED
+```

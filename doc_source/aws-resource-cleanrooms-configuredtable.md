@@ -118,3 +118,76 @@ Example: `arn:aws:cleanrooms:us-east-1:111122223333:configuredtable/a1b2c3d4-567
 `ConfiguredTableIdentifier`  <a name="ConfiguredTableIdentifier-fn::getatt"></a>
 Returns the unique identifier of the specified configured table\.  
 Example: `a1b2c3d4-5678-90ab-cdef-EXAMPLE33333`
+
+## Examples<a name="aws-resource-cleanrooms-configuredtable--examples"></a>
+
+
+
+### A configured table using a list analysis rule<a name="aws-resource-cleanrooms-configuredtable--examples--A_configured_table_using_a_list_analysis_rule_"></a>
+
+The following is an example of a configured table with a list analysis rule applied\.
+
+#### JSON<a name="aws-resource-cleanrooms-configuredtable--examples--A_configured_table_using_a_list_analysis_rule_--json"></a>
+
+```
+"ListConfiguredTable": {
+  {
+    "Type" : "AWS::CleanRooms::ConfiguredTable",
+    "Properties" : {
+        "Name" : "List Table",
+        "Description" : "Example configured table with list AR",
+        "AllowedColumns" : ["column1", "column2", "column4"],
+        "AnalysisMethod" : "DIRECT_QUERY",
+        "AnalysisRules" : [
+          "Type": "LIST",
+          "Policy": {
+            "V1": {
+              "List": {
+                "JoinColumns": [
+                  "column1"
+                ],
+                "ListColumns": [
+                  "column2"
+                ]
+              }
+            }
+          }
+        ],
+        "TableReference" : {
+          "Glue": {
+            "DatabaseName": "ExampleDB",
+            "TableName": "ExampleTable"
+          }
+        }
+      }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-cleanrooms-configuredtable--examples--A_configured_table_using_a_list_analysis_rule_--yaml"></a>
+
+```
+ListConfiguredTable:
+  Type: AWS::CleanRooms::ConfiguredTable
+  Properties:
+    Name: List Table
+    Description: Example configured table with list AR
+    AllowedColumns:
+      - column1
+      - column2
+      - column4
+    AnalysisMethod: DIRECT_QUERY
+    AnalysisRules:
+      - Type: LIST
+        Policy:
+          V1:
+            List:
+              JoinColumns:
+                - column1
+              ListColumns:
+                - column2
+    TableReference:
+      Glue:
+        DatabaseName: ExampleDB
+        TableName: ExampleTable
+```

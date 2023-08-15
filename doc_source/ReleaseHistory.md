@@ -4,10 +4,35 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated resource](AWS_SQS.md) | The following resource was updated: AWS::SQS::QueueInlinePolicy 
+| [Updated resource](AWS_EC2.md) | The following resource was updated: AWS::EC2::LaunchTemplate NetworkInterface\. 
 
- [AWS::SQS::QueueInlinePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queueinlinepolicy.html)   
-You can now associate one Amazon SQS policy with one queue\.  | August 10, 2023 | 
+ [ AWS::EC2::LaunchTemplate NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)   
+Use the `PrimaryIpv6` property to specify a primary IPv6 address on a network interface\.  | August 10, 2023 | 
+| [Updated resource](AWS_IVS.md) | The following resource was updated: AWS::IVS::RecordingConfiguration 
+
+ [AWS::IVS::RecordingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html)   
+Use the `RenditionConfiguration` property to indicate which renditions are recoreded for a stream\. Relevant only for advanced channel types\.  | August 10, 2023 | 
+| [Updated resource](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACL\. 
+
+ [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
+Use the `AWSManagedRulesACFPRuleSet` property to configure your use of the account creation fraud prevention \(ACFP\) managed rule group, in a managed rule group reference statement\. For protected CloudFront distributions, in addition to inspecting account registration and account creation requests, you can also use ACFP to block new account creation attempts from clients that have recently submitted too many failed account creation attempts\.  
+Use the `EnableRegexInPath` setting in the `AWSManagedRulesATPRuleSet` property to enable the use of regex in the login page path specification\.   | August 10, 2023 | 
+| [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::TrafficDistributionGroup 
+
+ [AWS::Connect::TrafficDistributionGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-trafficdistributiongroup.html)   
+Use the `AWS::Connect::TrafficDistributionGroup` resource to get information about a traffic distribution group\.   | August 10, 2023 | 
+| [New resource](AWS_DataSync.md) | The following resource was added: AWS::DataSync::LocationAzureBlob\. 
+
+[AWS::DataSync::LocationAzureBlob](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationazureblob.html)  
+Use the `AWS::DataSync::LocationAzureBlob` resource to create a transfer location for a Microsoft Azure Blob Storage container\.  | August 10, 2023 | 
+| [Updated resource](AWS_MWAA.md) | The following resource was updated: AWS::MWAA::Environment 
+
+ [AirflowVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)   
+The `AirflowVersion` property has been updated to include a new valid value for Apache Airflow version 2\.6\.3\.  | August 9, 2023 | 
+| [New resources](AWS_Batch.md) | The following resource was added: AWS::Batch:JobDefinition RuntimePlatform\. 
+
+ [AWS::Batch::JobDefinition RuntimePlatform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-runtimeplatform.html#cfn-batch-jobdefinition-containerproperties-runtimeplatform-cpuarchitecture)   
+Use the `AWS::Batch::JobDefinition RuntimePlatform` resource to specify the `CpuArchitecture` and `OperatingSystemFamily` for Batch jobs on Fargate\.  | August 8, 2023 | 
 | [Updated resource](AWS_BillingConductor.md) | The following resource was updated: AWS::BillingConductor::BillingGroup AccountGrouping\. 
 
  [AWS::BillingConductor::BillingGroup AccountGrouping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-billinggroup-accountgrouping.html)   
@@ -29,6 +54,10 @@ Added `MapBooleanAsBoolean` to `PostgreSQLSettings`\. Use `MapBooleanAsBoolean` 
 
  [ AWS::EC2::NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html)   
 Use the `EnablePrimaryIpv6` property to enable a primary IPv6 address on a network interface\.  | August 3, 2023 | 
+| [Updated resource](AWS_SQS.md) | The following resource was updated: AWS::SQS::QueueInlinePolicy 
+
+ [AWS::SQS::QueueInlinePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queueinlinepolicy.html)   
+You can now associate one Amazon SQS policy with one queue\.  | August 3, 2023 | 
 | [New and updated resources](AWS_Transfer.md) | The AWS::Transfer::Connector As2Config resource has been updated with several new parameters\. Also, the AWS::Transfer::Connector Sftp2Config resource has been added\. 
 
  [AWS::Transfer::Connector As2Config](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-as2config.html)   
@@ -397,7 +426,7 @@ Use the `Visibility` property to specify the scoping of the GraphQL API\.  | May
 | [Updated resource](AWS_CloudWatch.md) | The following resource was updated: AWS::CloudWatch::MetricStreamFilter 
 
  [AWS::CloudWatch::MetricStream MetricSTreamFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-metricstream.html)   
-In the [MetricStreamFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html.html) resource, use `MetricNames` to specify individual metrics to include or exclude from a metric stream\.  | May 4, 2023 | 
+In the [MetricStreamFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html) resource, use `MetricNames` to specify individual metrics to include or exclude from a metric stream\.  | May 4, 2023 | 
 | [New resources](AWS_BackupGateway.md) | The following resource was added: AWS::BackupGateway::Hypervisor\. 
 
 [AWS::BackupGateway::Hypervisor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backupgateway-hypervisor.html)  
@@ -688,7 +717,7 @@ Use the `AWS::SageMaker::Space` resource to create a new shared space for use in
 | [Updated resource](AWS_SNS.md) | The following resource was updated: AWS::SNS::Topic\. 
 
  [AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)   
-Use the `TracingConfig` property vend X\-Ray segment data to a topic owner account\. Only supported on standard topics\.  | February 8, 2023 | 
+Use the `TracingConfig` property send X\-Ray segment data to a topic owner account\. Only supported on standard topics\.  | February 8, 2023 | 
 | [New resources](AWS_Omics.md) | The following resources were added: AWS::Omics::Workflow, AWS::Omics::RunGroup, AWS::Omics::AnnotationStore, AWS::Omics::ReferenceStore, AWS::Omics::VariantStore, and AWS::Omics::SequenceStore\. 
 
  [AWS::Omics::Workflow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html)   
@@ -2632,6 +2661,7 @@ Use the `AWS::OpenSearchService::Domain` resource to create an Amazon OpenSearch
 
  [AWS::APS::Workspace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html)   
 Use the AWS::APS::Workspace resource to create an Amazon Managed Service for Prometheus workspace\. For more information, see [ Create a workspace](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html)\.  | September 16, 2021 | 
+| [Updated resource](AWS_SQS.md) | The following resource was updated: AWS::SQS::Queue`RedriveAllowPolicy` includes the parameters for the dead\-letter queue redrive permission\. It defines which source queues can specify dead\-letter queues as a JSON object\. | September 9, 2021 | 
 | [Updated resource](AWS_Cassandra.md) | The following resource was updated: `AWS::Cassandra::Table`\. 
 
  [AWS::Cassandra::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html)   

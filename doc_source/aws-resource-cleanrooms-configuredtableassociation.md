@@ -112,3 +112,39 @@ Example: `arn:aws:cleanrooms:us-east-1:111122223333:configuredtable/a1b2c3d4-567
 `ConfiguredTableAssociationIdentifier`  <a name="ConfiguredTableAssociationIdentifier-fn::getatt"></a>
 Returns the unique identifier of the specified configured table association\.  
 Example: `a1b2c3d4-5678-90ab-cdef-EXAMPLE33333`
+
+## Examples<a name="aws-resource-cleanrooms-configuredtableassociation--examples"></a>
+
+
+
+### A configured table association<a name="aws-resource-cleanrooms-configuredtableassociation--examples--A_configured_table_association"></a>
+
+The following is an example of a configured table association which associates a configured table to a collaboration\.
+
+#### JSON<a name="aws-resource-cleanrooms-configuredtableassociation--examples--A_configured_table_association--json"></a>
+
+```
+"ExampleAssociation": {
+  "Type" : "AWS::CleanRooms::ConfiguredTableAssociation",
+  "Properties" : {
+    "Name" : "Example Table",
+    "Description" : "Example associated configured table",
+    "ConfiguredTableIdentifier" : "a1b2c3d4-5678-90ab-cdef-EXAMPLE22222",
+    "MembershipIdentifier" : "a1b2c3d4-5678-90ab-cdef-EXAMPLE33333",
+    "RoleArn" : "arn:aws:iam::123456789012:role/service-role/cleanrooms-association-example"
+  }
+}
+```
+
+#### YAML<a name="aws-resource-cleanrooms-configuredtableassociation--examples--A_configured_table_association--yaml"></a>
+
+```
+ExampleAssociation:
+  Type: AWS::CleanRooms::ConfiguredTableAssociation
+  Properties:
+    Name: Example Table
+    Description: Example associated configured table
+    ConfiguredTableIdentifier: a1b2c3d4-5678-90ab-cdef-EXAMPLE22222"
+    MembershipIdentifier: a1b2c3d4-5678-90ab-cdef-EXAMPLE33333
+    RoleArn: arn:aws:iam::123456789012:role/service-role/cleanrooms-association-example
+```

@@ -394,8 +394,10 @@ The valid values are 2\-120 seconds\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SystemControls`  <a name="cfn-ecs-taskdefinition-containerdefinition-systemcontrols"></a>
-A list of namespaced kernel parameters to set in the container\. This parameter maps to `Sysctls` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--sysctl` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
+A list of namespaced kernel parameters to set in the container\. This parameter maps to `Sysctls` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--sysctl` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer lived connections\.  
 We don't recommended that you specify network\-related `systemControls` parameters for multiple containers in a single task that also uses either the `awsvpc` or `host` network modes\. For tasks that use the `awsvpc` network mode, the container that's started last determines which `systemControls` parameters take effect\. For tasks that use the `host` network mode, it changes the container instance's namespaced kernel parameters as well as the containers\.
+This parameter is not supported for Windows containers\.
+This parameter is only supported for tasks that are hosted on AWS Fargate if the tasks are using platform version `1.4.0` or later \(Linux\)\. This isn't supported for Windows containers on Fargate\.
 *Required*: No  
 *Type*: List of [SystemControl](aws-properties-ecs-taskdefinition-systemcontrol.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

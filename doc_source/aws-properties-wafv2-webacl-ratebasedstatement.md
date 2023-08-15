@@ -120,3 +120,392 @@ An optional nested statement that narrows the scope of the web requests that are
 *Required*: No  
 *Type*: [Statement](aws-properties-wafv2-webacl-statement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples"></a>
+
+The following rate\-based rule examples are also listed in a web ACL example, under `AWS::WAFv2::WebACL`\. 
+
+### Rate limit all requests that match a scope\-down statement<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_all_requests_that_match_a_scope-down_statement"></a>
+
+The following example listing shows a rate\-based rule statement that counts and rate limits all requests that match a scope\-down statement\. Rate\-based rules that count all requests together are required to include a scope\-down statement\. In this example, the rule counts all requests coming from a specific country, and limits those requests to 100,000 for any five minute period\.
+
+#### YAML<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_all_requests_that_match_a_scope-down_statement--yaml"></a>
+
+```
+Rules:
+- Name: rbrCountAll
+  Priority: 0
+  Statement:
+    RateBasedStatement:
+      Limit: 100000
+      AggregateKeyType: CONSTANT
+      ScopeDownStatement:
+        GeoMatchStatement:
+          CountryCodes:
+          - GB
+          ForwardedIPConfig:
+            HeaderName: X-Forwarded-For
+            FallbackBehavior: MATCH
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrCountAll
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_all_requests_that_match_a_scope-down_statement--json"></a>
+
+```
+ "Rules": [
+    {
+      "Name": "rbrCountAll",
+      "Priority": 0,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 100000,
+          "AggregateKeyType": "CONSTANT",
+          "ScopeDownStatement": {
+            "GeoMatchStatement": {
+              "CountryCodes": [
+                "GB"
+              ],
+              "ForwardedIPConfig": {
+                "HeaderName": "X-Forwarded-For",
+                "FallbackBehavior": "MATCH"
+              }
+            }
+          }
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrCountAll"
+      }
+    }
+ ]
+```
+
+### Rate limit requests based on an IP address<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_based_on_an_IP_address"></a>
+
+The following example listing shows a rate\-based rule statement that uses the value in a forwarded IP address to aggregate and rate limit requests\. The forwarded IP address used in this example is the one in the header `X-Forwarded-For`\.
+
+When you rate limit on only the IP address or only a forwarded IP address, you specify the aggregation in the aggregate key type and you don't use custom aggregation keys\. 
+
+#### YAML<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_based_on_an_IP_address--yaml"></a>
+
+```
+Rules:
+- Name: rbrNoCustomKeys
+  Priority: 1
+  Statement:
+    RateBasedStatement:
+      Limit: 1000
+      AggregateKeyType: FORWARDED_IP
+      ForwardedIPConfig:
+        HeaderName: X-Forwarded-For
+        FallbackBehavior: MATCH
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrNoCustomKeys
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_based_on_an_IP_address--json"></a>
+
+```
+ "Rules": [
+    {
+      "Name": "rbrNoCustomKeys",
+      "Priority": 1,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 1000,
+          "AggregateKeyType": "FORWARDED_IP",
+          "ForwardedIPConfig": {
+            "HeaderName": "X-Forwarded-For",
+            "FallbackBehavior": "MATCH"
+          }
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrNoCustomKeys"
+      }
+    }
+ ]
+```
+
+### Rate limit requests based on an IP address and a header<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_based_on_an_IP_address_and_a_header_"></a>
+
+The following example listing shows a rate\-based rule statement that aggregates and rate limits requests based on the paired values of a forwarded IP address and a header\. The IP address used is the one in the header `X-Forwarded-For` and the header value used is in the header `Content-Type`\.
+
+To rate limit using a combination of an IP address with one or more other keys, you provide all key specifications in the custom aggregation key settings\. Anytime you use a forwarded IP address, you specify the header name of the address in the rate\-based statement's `ForwardedIPConfig` setting\. 
+
+#### YAML<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_based_on_an_IP_address_and_a_header_--yaml"></a>
+
+```
+Rules:
+- Name: rbrCustomKeysA
+  Priority: 2
+  Statement:
+    RateBasedStatement:
+      Limit: 2000
+      AggregateKeyType: CUSTOM_KEYS
+      ForwardedIPConfig:
+        HeaderName: X-Forwarded-For
+        FallbackBehavior: MATCH
+      CustomKeys:
+      - Header:
+          Name: Content-Type
+          TextTransformations:
+          - Priority: 0
+            Type: NONE
+      - ForwardedIP: {}
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrCustomKeysA
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_based_on_an_IP_address_and_a_header_--json"></a>
+
+```
+ "Rules": [
+    {
+      "Name": "rbrCustomKeysA",
+      "Priority": 2,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 2000,
+          "AggregateKeyType": "CUSTOM_KEYS",
+          "ForwardedIPConfig": {
+            "HeaderName": "X-Forwarded-For",
+            "FallbackBehavior": "MATCH"
+          },
+          "CustomKeys": [
+            {
+              "Header": {
+                "Name": "Content-Type",
+                "TextTransformations": [
+                  {
+                    "Priority": 0,
+                    "Type": "NONE"
+                  }
+                ]
+              }
+            },
+            {
+              "ForwardedIP": {}
+            }
+          ]
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrCustomKeysA"
+      }
+    }
+ ]
+```
+
+### Rate limit requests based on three custom aggregate keys<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_based_on_three_custom_aggregate_keys_"></a>
+
+The following example listing shows a rate\-based rule statement that aggregates and rate limits requests based on the trio of values from the query string, the HTTP method, and the URI path\. 
+
+#### YAML<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_based_on_three_custom_aggregate_keys_--yaml"></a>
+
+```
+Rules:
+- Name: rbrCustomKeysB
+  Priority: 3
+  Statement:
+    RateBasedStatement:
+      Limit: 3000
+      AggregateKeyType: CUSTOM_KEYS
+      CustomKeys:
+      - QueryString:
+          TextTransformations:
+          - Priority: 0
+            Type: NONE
+      - HTTPMethod: {}
+      - UriPath:
+          TextTransformations:
+          - Priority: 0
+            Type: NONE
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrCustomKeysB
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_based_on_three_custom_aggregate_keys_--json"></a>
+
+```
+ "Rules": [
+    {
+      "Name": "rbrCustomKeysB",
+      "Priority": 3,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 3000,
+          "AggregateKeyType": "CUSTOM_KEYS",
+          "CustomKeys": [
+            {
+              "QueryString": {
+                "TextTransformations": [
+                  {
+                    "Priority": 0,
+                    "Type": "NONE"
+                  }
+                ]
+              }
+            },
+            {
+              "HTTPMethod": {}
+            },
+            {
+              "UriPath": {
+                "TextTransformations": [
+                  {
+                    "Priority": 0,
+                    "Type": "NONE"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrCustomKeysB"
+      }
+    }
+ ]
+```
+
+### Rate limit requests from individual states in a country<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_from_individual_states_in_a_country_"></a>
+
+The following example listing combines a geo match statement with a rate based rule, to limit the number of requests coming from any individual U\.S\. state\. 
+
+The geo match statement matches on all requests coming from the U\.S\. and it has its rule action set to Count\. For all matching requets, the geo match statement adds a country label and a region label, so after being evaluated by this rule, requests from the U\.S\. are labeled by state\. For more information, see the `AWS::WAFv2::WebACL` `GeoMatchStatement` property\. 
+
+Following the geo match statement, the rate\-based rule uses a scope\-down statement to also only match on requests from the U\.S\.\. The rate\-based rule aggregates on values for the geo match region label namespace, so the requests from each state are counted in their own aggregation instance\. The rate\-based rule limits each state to 500 requests in any five minute period\. 
+
+#### YAML<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_from_individual_states_in_a_country_--yaml"></a>
+
+```
+Rules:
+- Name: labelUSStates
+  Priority: 4
+  Statement:
+    GeoMatchStatement:
+      CountryCodes:
+      - US
+  Action:
+    Count: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: labelUSStates
+- Name: rbrRequestsFromUSStates
+  Priority: 5
+  Statement:
+    RateBasedStatement:
+      Limit: 500
+      AggregateKeyType: CUSTOM_KEYS
+      ScopeDownStatement:
+        GeoMatchStatement:
+          CountryCodes:
+          - US
+      CustomKeys:
+      - LabelNamespace:
+          Namespace: 'awswaf:clientip:geo:region:'
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrRequestsFromUSStates
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-ratebasedstatement--examples--Rate_limit_requests_from_individual_states_in_a_country_--json"></a>
+
+```
+ "Rules": [
+    {
+      "Name": "labelUSStates",
+      "Priority": 4,
+      "Statement": {
+        "GeoMatchStatement": {
+          "CountryCodes": [
+            "US"
+          ]
+        }
+      },
+      "Action": {
+        "Count": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "labelUSStates"
+      }
+    },
+    {
+      "Name": "rbrRequestsFromUSStates",
+      "Priority": 5,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 500,
+          "AggregateKeyType": "CUSTOM_KEYS",
+          "ScopeDownStatement": {
+            "GeoMatchStatement": {
+              "CountryCodes": [
+                "US"
+              ]
+            }
+          },
+          "CustomKeys": [
+            {
+              "LabelNamespace": {
+                "Namespace": "awswaf:clientip:geo:region:"
+              }
+            }
+          ]
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrRequestsFromUSStates"
+      }
+    }
+ ]
+```

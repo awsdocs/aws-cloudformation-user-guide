@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CertificateTransparencyLoggingPreference](#cfn-certificatemanager-certificate-certificatetransparencyloggingpreference)" : String,
       "[DomainName](#cfn-certificatemanager-certificate-domainname)" : String,
       "[DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions)" : [ DomainValidationOption, ... ],
+      "[KeyAlgorithm](#cfn-certificatemanager-certificate-keyalgorithm)" : String,
       "[SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames)" : [ String, ... ],
       "[Tags](#cfn-certificatemanager-certificate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[ValidationMethod](#cfn-certificatemanager-certificate-validationmethod)" : String
@@ -37,6 +38,7 @@ Properties:
   [DomainName](#cfn-certificatemanager-certificate-domainname): String
   [DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions): 
     - DomainValidationOption
+  [KeyAlgorithm](#cfn-certificatemanager-certificate-keyalgorithm): String
   [SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames): 
     - String
   [Tags](#cfn-certificatemanager-certificate-tags): 
@@ -80,6 +82,12 @@ In order for a AWS::CertificateManager::Certificate to be provisioned and valida
 *Required*: No  
 *Type*: List of [DomainValidationOption](aws-properties-certificatemanager-certificate-domainvalidationoption.md)  
 *Maximum*: `100`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`KeyAlgorithm`  <a name="cfn-certificatemanager-certificate-keyalgorithm"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubjectAlternativeNames`  <a name="cfn-certificatemanager-certificate-subjectalternativenames"></a>

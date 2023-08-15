@@ -68,7 +68,7 @@ The tags used to organize, track, or control access for this resource\. For exam
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetArn`  <a name="cfn-connect-phonenumber-targetarn"></a>
-The Amazon Resource Name \(ARN\) of Amazon Connect instances or traffic distribution group that phone numbers are claimed to\.  
+The Amazon Resource Name \(ARN\) for Amazon Connect instances or traffic distribution group that phone numbers are claimed to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -77,7 +77,7 @@ The Amazon Resource Name \(ARN\) of Amazon Connect instances or traffic distribu
 The type of phone number\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `DID | TOLL_FREE`  
+*Allowed values*: `DID | SHARED | THIRD_PARTY_DID | THIRD_PARTY_TF | TOLL_FREE | UIFN`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-connect-phonenumber-return-values"></a>

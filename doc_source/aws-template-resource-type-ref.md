@@ -166,7 +166,7 @@ service-provider::service-name::data-type-name
 + [AWS Network Manager](AWS_NetworkManager.md)
 + [Amazon Nimble Studio](AWS_NimbleStudio.md)
 + [Observability Access Manager \(OAM\)](AWS_Oam.md)
-+ [Amazon Omics](AWS_Omics.md)
++ [AWS HealthOmics](AWS_Omics.md)
 + [Amazon OpenSearch Ingestion](AWS_OSIS.md)
 + [Amazon OpenSearch Service](AWS_OpenSearchService.md)
 + [Amazon OpenSearch Service \(legacy Elasticsearch resource\)](AWS_Elasticsearch.md)

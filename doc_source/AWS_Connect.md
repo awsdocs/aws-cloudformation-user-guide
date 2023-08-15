@@ -17,5 +17,6 @@
 + [AWS::Connect::Rule](aws-resource-connect-rule.md)
 + [AWS::Connect::SecurityKey](aws-resource-connect-securitykey.md)
 + [AWS::Connect::TaskTemplate](aws-resource-connect-tasktemplate.md)
++ [AWS::Connect::TrafficDistributionGroup](aws-resource-connect-trafficdistributiongroup.md)
 + [AWS::Connect::User](aws-resource-connect-user.md)
 + [AWS::Connect::UserHierarchyGroup](aws-resource-connect-userhierarchygroup.md)

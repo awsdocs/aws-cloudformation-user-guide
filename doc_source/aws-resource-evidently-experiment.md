@@ -126,7 +126,7 @@ This is represented in thousandths of a percent\. For example, specify 10,000 to
 
 `Segment`  <a name="cfn-evidently-experiment-segment"></a>
 Specifies an audience *segment* to use in the experiment\. When a segment is used in an experiment, only user sessions that match the segment pattern are used in the experiment\.  
-For more information, see [ Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html)\.  
+For more information, see [ Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

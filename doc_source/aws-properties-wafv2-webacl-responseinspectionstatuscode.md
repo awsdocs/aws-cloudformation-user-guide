@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL ResponseInspectionStatusCode<a name="aws-properties-wafv2-webacl-responseinspectionstatuscode"></a>
 
-Configures inspection of the response status code for success and failure indicators\. This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet`\. 
+Configures inspection of the response status code\. This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet`\. 
 
 **Note**  
 Response inspection is available only in web ACLs that protect Amazon CloudFront distributions\.

@@ -61,7 +61,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The default aggregation\. Valid values for this structure are `SUM`, `MAX`, `MIN`, `COUNT`, `DISTINCT_COUNT`, and `AVERAGE`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AVERAGE | COUNT | DISTINCT_COUNT | MAX | MIN | SUM`  
+*Allowed values*: `AVERAGE | COUNT | DISTINCT_COUNT | MAX | MEDIAN | MIN | STDEV | STDEVP | SUM | VAR | VARP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowedAggregations`  <a name="cfn-quicksight-topic-topiccalculatedfield-allowedaggregations"></a>

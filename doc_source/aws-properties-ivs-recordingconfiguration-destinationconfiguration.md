@@ -25,6 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `S3`  <a name="cfn-ivs-recordingconfiguration-destinationconfiguration-s3"></a>
 An S3 destination configuration where recorded videos will be stored\. See the [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html) property type for more information\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [S3DestinationConfiguration](aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

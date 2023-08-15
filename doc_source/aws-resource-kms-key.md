@@ -32,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KMS::Key",
   "Properties" : {
+      "[BypassPolicyLockoutSafetyCheck](#cfn-kms-key-bypasspolicylockoutsafetycheck)" : Boolean,
       "[Description](#cfn-kms-key-description)" : String,
       "[Enabled](#cfn-kms-key-enabled)" : Boolean,
       "[EnableKeyRotation](#cfn-kms-key-enablekeyrotation)" : Boolean,
@@ -51,6 +52,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::KMS::Key
 Properties: 
+  [BypassPolicyLockoutSafetyCheck](#cfn-kms-key-bypasspolicylockoutsafetycheck): Boolean
   [Description](#cfn-kms-key-description): String
   [Enabled](#cfn-kms-key-enabled): Boolean
   [EnableKeyRotation](#cfn-kms-key-enablekeyrotation): Boolean
@@ -65,6 +67,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-kms-key-properties"></a>
+
+`BypassPolicyLockoutSafetyCheck`  <a name="cfn-kms-key-bypasspolicylockoutsafetycheck"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-kms-key-description"></a>
 A description of the KMS key\. Use a description that helps you to distinguish this KMS key from others in the account, such as its intended use\.  
@@ -103,7 +111,7 @@ A key policy document can include only the following characters:
 + The tab \(`\u0009`\), line feed \(`\u000A`\), and carriage return \(`\u000D`\) special characters
 *Minimum*: `1`  
 *Maximum*: `32768`  
-*Required*: Yes  
+*Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

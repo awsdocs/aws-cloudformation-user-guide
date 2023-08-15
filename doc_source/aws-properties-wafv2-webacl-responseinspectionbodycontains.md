@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL ResponseInspectionBodyContains<a name="aws-properties-wafv2-webacl-responseinspectionbodycontains"></a>
 
-Configures inspection of the response body\. AWS WAF can inspect the first 65,536 bytes \(64 KB\) of the response body\. This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet`\. 
+Configures inspection of the response body\. AWS WAF can inspect the first 65,536 bytes \(64 KB\) of the response body\. This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet`\. 
 
 **Note**  
 Response inspection is available only in web ACLs that protect Amazon CloudFront distributions\.
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-responseinspectionbodycontains-properties"></a>
 
 `FailureStrings`  <a name="cfn-wafv2-webacl-responseinspectionbodycontains-failurestrings"></a>
-Strings in the body of the response that indicate a failed login attempt\. To be counted as a failure, the string can be anywhere in the body and must be an exact match, including case\. Each string must be unique among the success and failure strings\.   
+Strings in the body of the response that indicate a failed login or account creation attempt\. To be counted as a failure, the string can be anywhere in the body and must be an exact match, including case\. Each string must be unique among the success and failure strings\.   
 JSON example: `"FailureStrings": [ "Request failed" ]`   
 *Required*: Yes  
 *Type*: List of String  
@@ -38,8 +38,8 @@ JSON example: `"FailureStrings": [ "Request failed" ]`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuccessStrings`  <a name="cfn-wafv2-webacl-responseinspectionbodycontains-successstrings"></a>
-Strings in the body of the response that indicate a successful login attempt\. To be counted as a success, the string can be anywhere in the body and must be an exact match, including case\. Each string must be unique among the success and failure strings\.   
-JSON example: `"SuccessStrings": [ "Login successful" ]`   
+Strings in the body of the response that indicate a successful login or account creation attempt\. To be counted as a success, the string can be anywhere in the body and must be an exact match, including case\. Each string must be unique among the success and failure strings\.   
+JSON examples: `"SuccessStrings": [ "Login successful" ]` and `"SuccessStrings": [ "Account creation successful", "Welcome to our site!" ]`   
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `5`  

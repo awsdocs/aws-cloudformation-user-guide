@@ -41,7 +41,7 @@
 + [AWS::EC2::NetworkInsightsAnalysis](aws-resource-ec2-networkinsightsanalysis.md)
 + [AWS::EC2::NetworkInsightsPath](aws-resource-ec2-networkinsightspath.md)
 + [AWS::EC2::NetworkInterface](aws-resource-ec2-networkinterface.md)
-+ [AWS::EC2::NetworkInterfaceAttachment](aws-resource-ec2-network-interface-attachment.md)
++ [AWS::EC2::NetworkInterfaceAttachment](aws-resource-ec2-networkinterfaceattachment.md)
 + [AWS::EC2::NetworkInterfacePermission](aws-resource-ec2-networkinterfacepermission.md)
 + [AWS::EC2::NetworkPerformanceMetricSubscription](aws-resource-ec2-networkperformancemetricsubscription.md)
 + [AWS::EC2::PlacementGroup](aws-resource-ec2-placementgroup.md)

@@ -95,7 +95,7 @@ The owner of the product\.
 The type of product\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `CLOUD_FORMATION_TEMPLATE | MARKETPLACE | TERRAFORM_OPEN_SOURCE`  
+*Allowed values*: `CLOUD_FORMATION_TEMPLATE | MARKETPLACE | TERRAFORM_CLOUD | TERRAFORM_OPEN_SOURCE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProvisioningArtifactParameters`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters"></a>

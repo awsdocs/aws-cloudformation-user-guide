@@ -58,7 +58,7 @@ The Amazon Resource Name \(ARN\) of the host associated with the connection\.
 The name of the external provider where your third\-party code repository is configured\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `Bitbucket | GitHub | GitHubEnterpriseServer`  
+*Allowed values*: `Bitbucket | GitHub | GitHubEnterpriseServer | GitLab`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-codestarconnections-connection-tags"></a>

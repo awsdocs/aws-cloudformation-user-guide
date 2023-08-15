@@ -200,3 +200,8 @@ Resources:
           ]
         }
 ```
+
+## See also<a name="aws-resource-organizations-resourcepolicy--seealso"></a>
++ [Delegated administrator for AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_delegate_policies.html) in the *AWS Organizations User Guide*\.
++ [PutResourcePolicy](https://docs.aws.amazon.com/organizations/latest/APIReference/API_PutResourcePolicy.html) in the *AWS Organizations API Reference Guide*\.
+

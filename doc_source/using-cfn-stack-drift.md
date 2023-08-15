@@ -104,7 +104,7 @@ In certain edge cases, CloudFormation may not be able to always return accurate 
 
     There are certain property values that, by design, are never returned by the service to which the resource belongs\. These tend to contain confidential information, such as passwords or other sensitive data that shouldn't be exposed\. For example, the IAM service will never return the value of the `Password` property of the [IAM User LoginProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html) property type, and therefore CloudFormation can't include it in drift detection results\.
   + Objects in an array may be actually service defaults and not drift added manually\.
-+ If you encounter any false positive, send us your comments using the feedback link in the CloudFormation console, or reach out to us through the AWS forums at [https://forums\.aws\.amazon\.com/](https://forums.aws.amazon.com/)\.
++ If you encounter any false positive, send us your comments using the feedback link in the CloudFormation console, or reach out to us through [AWS re:Post](https://forums.aws.amazon.com/)\.
 + Some properties can have input values that are equal but not identical\. To avoid false positives, you should ensure that your expected configuration matches the actual configuration\.
   + For example, the expected configuration of resource property can be 1024 MB and the actual configuration of the same resource property can be 1GB\. 1024 MB and 1GB are equal but not identical\.
 

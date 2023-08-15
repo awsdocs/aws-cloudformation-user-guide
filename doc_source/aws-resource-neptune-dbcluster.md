@@ -281,7 +281,9 @@ The resource id for the DB cluster\. For example: `cluster-ABCD1234EFGH5678IJKL9
 The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
 
 `Port`  <a name="Port-fn::getatt"></a>
-The port number on which the DB cluster accepts connections\. For example: `8182`\.
+The port number on which the DB instances in the DB cluster accept connections\.  
+If not specified, the default port used is `8182`\.  
+This property will soon be deprecated\. Please update existing templates to use the new `DBPort` property that has the same functionality\.
 
 `ReadEndpoint`  <a name="ReadEndpoint-fn::getatt"></a>
 The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 

@@ -494,7 +494,7 @@ The following example creates a Systems Manager maintenance window task that use
                     "MaintenanceWindowAutomationParameters": {
                         "DocumentVersion": "1",
                         "Parameters": {
-                            "instanceId": [
+                            "InstanceId": [
                                 "{{RESOURCE_ID}}"
                             ]
                         }
@@ -531,7 +531,7 @@ Resources:
         MaintenanceWindowAutomationParameters:
           DocumentVersion: 1
           Parameters:
-            instanceId:
+            InstanceId:
               - '{{RESOURCE_ID}}'
       Priority: 1
       MaxConcurrency: 5

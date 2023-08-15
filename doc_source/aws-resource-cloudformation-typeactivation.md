@@ -62,7 +62,7 @@ The name of the IAM execution role to use to activate the extension\.
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Pattern*: `arn:.+:iam::[0-9]{12}:role/.+`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingConfig`  <a name="cfn-cloudformation-typeactivation-loggingconfig"></a>
 Specifies logging configuration information for an extension\.  
@@ -84,7 +84,7 @@ Conditional: You must specify `PublicTypeArn`, or `TypeName`, `Type`, and `Publi
 *Type*: String  
 *Maximum*: `1024`  
 *Pattern*: `arn:aws[A-Za-z0-9-]{0,64}:cloudformation:[A-Za-z0-9-]{1,64}::type/.+/[0-9a-zA-Z]{12,40}/.+`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublisherId`  <a name="cfn-cloudformation-typeactivation-publisherid"></a>
 The ID of the extension publisher\.  
@@ -94,7 +94,7 @@ Conditional: You must specify `PublicTypeArn`, or `TypeName`, `Type`, and `Publi
 *Minimum*: `1`  
 *Maximum*: `40`  
 *Pattern*: `[0-9a-zA-Z]{12,40}`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-cloudformation-typeactivation-type"></a>
 The extension type\.  
@@ -102,7 +102,7 @@ Conditional: You must specify `PublicTypeArn`, or `TypeName`, `Type`, and `Publi
 *Required*: Conditional  
 *Type*: String  
 *Allowed values*: `HOOK | MODULE | RESOURCE`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TypeName`  <a name="cfn-cloudformation-typeactivation-typename"></a>
 The name of the extension\.  
@@ -112,7 +112,7 @@ Conditional: You must specify `PublicTypeArn`, or `TypeName`, `Type`, and `Publi
 *Minimum*: `10`  
 *Maximum*: `204`  
 *Pattern*: `[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}(::MODULE){0,1}`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TypeNameAlias`  <a name="cfn-cloudformation-typeactivation-typenamealias"></a>
 An alias to assign to the public extension, in this account and Region\. If you specify an alias for the extension, CloudFormation treats the alias as the extension type name within this account and Region\. You must use the alias to refer to the extension in your templates, API calls, and CloudFormation console\.  
@@ -122,7 +122,7 @@ An extension alias must be unique within a given account and Region\. You can ac
 *Minimum*: `10`  
 *Maximum*: `204`  
 *Pattern*: `[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}(::MODULE){0,1}`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VersionBump`  <a name="cfn-cloudformation-typeactivation-versionbump"></a>
 Manually updates a previously\-activated type to a new major or minor version, if available\. You can also use this parameter to update the value of `AutoUpdate`\.  

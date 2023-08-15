@@ -58,10 +58,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-topic-topiccolumn-properties"></a>
 
 `Aggregation`  <a name="cfn-quicksight-topic-topiccolumn-aggregation"></a>
-The type of aggregation that is performed on the column data when it's queried\. Valid values for this structure are `SUM`, `MAX`, `MIN`, `COUNT`, `DISTINCT_COUNT`, and `AVERAGE`\.  
+The type of aggregation that is performed on the column data when it's queried\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AVERAGE | COUNT | DISTINCT_COUNT | MAX | MIN | SUM`  
+*Allowed values*: `AVERAGE | COUNT | DISTINCT_COUNT | MAX | MEDIAN | MIN | STDEV | STDEVP | SUM | VAR | VARP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowedAggregations`  <a name="cfn-quicksight-topic-topiccolumn-allowedaggregations"></a>

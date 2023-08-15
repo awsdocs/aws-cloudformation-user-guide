@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Iops](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-iops)" : Integer,
   "[SizeInGB](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-sizeingb)" : Integer,
+  "[Throughput](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-throughput)" : Integer,
   "[VolumeType](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-volumetype)" : String
 }
 ```
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Iops](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-iops): Integer
   [SizeInGB](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-sizeingb): Integer
+  [Throughput](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-throughput): Integer
   [VolumeType](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-volumetype): String
 ```
 
@@ -35,6 +37,12 @@ The number of I/O operations per second \(IOPS\) that the volume supports\.
 `SizeInGB`  <a name="cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-sizeingb"></a>
 The volume size, in gibibytes \(GiB\)\. This can be a number from 1 \- 1024\. If the volume type is EBS\-optimized, the minimum value is 10\.  
 *Required*: Yes  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Throughput`  <a name="cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-throughput"></a>
+Property description not available\.  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

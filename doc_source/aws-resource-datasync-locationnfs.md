@@ -1,6 +1,6 @@
 # AWS::DataSync::LocationNFS<a name="aws-resource-datasync-locationnfs"></a>
 
-The `AWS::DataSync::LocationNFS` resource specifies a file system on a Network File System \(NFS\) server that can be read from or written to\.
+The `AWS::DataSync::LocationNFS` resource specifies a Network File System \(NFS\) file server that AWS DataSync can use as a transfer source or destination\.
 
 ## Syntax<a name="aws-resource-datasync-locationnfs-syntax"></a>
 
@@ -94,58 +94,56 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-datasync-locationnfs-return-values-fn--getatt-fn--getatt"></a>
 
 `LocationArn`  <a name="LocationArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the specified source NFS file system location\.
+The Amazon Resource Name \(ARN\) of the NFS location that you created\.
 
 `LocationUri`  <a name="LocationUri-fn::getatt"></a>
-The URI of the specified source NFS location\.
+The URI of the NFS location that you created\.
 
 ## Examples<a name="aws-resource-datasync-locationnfs--examples"></a>
 
 
 
-### Create a NFS location for DataSync<a name="aws-resource-datasync-locationnfs--examples--Create_a_NFS_location_for_DataSync"></a>
+### Create an NFS location for DataSync<a name="aws-resource-datasync-locationnfs--examples--Create_an_NFS_location_for_DataSync"></a>
 
 The following example specifies an NFS location for DataSync, using a source and destination location\. In this example, the server hostname is `MyServer@example.com`, using NFS version 4\.0, in the subdirectory `/MySubdirectory`\. 
 
-#### JSON<a name="aws-resource-datasync-locationnfs--examples--Create_a_NFS_location_for_DataSync--json"></a>
+#### JSON<a name="aws-resource-datasync-locationnfs--examples--Create_an_NFS_location_for_DataSync--json"></a>
 
 ```
 {
-"AWSTemplateFormatVersion": "2010-09-09",
-"Description": "Specifies an NFS location for DataSync",
-"Resources": 
-  "LocationNFS": {
-    "Type": "AWS::DataSync::LocationNFS",
-    "Properties": {
-      "MountOptions": {
-        "Version": "NFS4_0"
-      },
-      "OnPremConfig": {
-        "AgentArns": [
-          "arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs"
-        ]
-      },
-      "ServerHostname": "MyServer@example.com",
-      "Subdirectory": "/MySubdirectory"
+    "Resources": {
+        "LocationNFS": {
+            "Type": "AWS::DataSync::LocationNFS",
+            "Properties": {
+                "MountOptions": {
+                    "Version": "NFS4_0"
+                },
+                "OnPremConfig": {
+                    "AgentArns": [
+                        "arn:aws:datasync:us-east-2:111222333444:agent/agent-000addbcdf44bbnfs"
+                    ]
+                },
+                "ServerHostname": "MyServer@example.com",
+                "Subdirectory": "/MySubdirectory"
+            }
+        }
     }
-  }
 }
 ```
 
-#### YAML<a name="aws-resource-datasync-locationnfs--examples--Create_a_NFS_location_for_DataSync--yaml"></a>
+#### YAML<a name="aws-resource-datasync-locationnfs--examples--Create_an_NFS_location_for_DataSync--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: Specifies an NFS location for DataSync
 Resources:
-LocationNFS:
-  Type: AWS::DataSync::LocationNFS
-  Properties: 
-    MountOptions: 
-      Version: NFS4_0
-    OnPremConfig: 
-      AgentArns: 
-        - arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44b3nfs
-    ServerHostname: MyServer@example.com
-    Subdirectory: /MySubdirectory
+  LocationNFS:
+    Type: 'AWS::DataSync::LocationNFS'
+    Properties:
+      MountOptions:
+        Version: NFS4_0
+      OnPremConfig:
+        AgentArns:
+          - >-
+            arn:aws:datasync:us-east-2:111222333444:agent/agent-000addbcdf44bbnfs
+      ServerHostname: MyServer@example.com
+      Subdirectory: /MySubdirectory
 ```

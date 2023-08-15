@@ -34,7 +34,7 @@ The Amazon Resource Name \(ARN\) that identifies the Auto Scaling group, or the 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ManagedScaling`  <a name="cfn-ecs-capacityprovider-autoscalinggroupprovider-managedscaling"></a>
-he managed scaling settings for the Auto Scaling group capacity provider\.  
+The managed scaling settings for the Auto Scaling group capacity provider\.  
 *Required*: No  
 *Type*: [ManagedScaling](aws-properties-ecs-capacityprovider-managedscaling.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

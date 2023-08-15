@@ -95,3 +95,63 @@ If you are a collaboration owner, ensure that you add `"DeletionPolicy: Retain"`
 If your `Membership` resource depends on the collaboration explicitly or implicitly by using a `"Ref"` on the `Collaboration` \(`CollaborationIdentifier: !Ref Collaboration`\), CloudFormation tries to delete the `Membership` resource before the `Collaboration` resource\. However, this attempt will fail because collaboration owners must delete the collaboration before deleting their membership to the collaboration\.
 
 For more information, see [DeletionPolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) and [UpdateReplacePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html)\.
+
+## Examples<a name="aws-resource-cleanrooms-membership--examples"></a>
+
+
+
+### Membership for a collaboration creator<a name="aws-resource-cleanrooms-membership--examples--Membership_for_a_collaboration_creator"></a>
+
+The following an example of a membership for a collaboration creator\. See the Remarks section for notes on the use of the deletion and update replacement policies\.
+
+#### JSON<a name="aws-resource-cleanrooms-membership--examples--Membership_for_a_collaboration_creator--json"></a>
+
+```
+"CollaborationCreatorMembership": {
+  "Type" : "AWS::CleanRooms::Membership",
+  "DeletionPolicy": "Retain",
+  "UpdateReplacePolicy": "Retain",
+  "Properties" : {
+      "CollaborationIdentifier" : "a1b2c3d4-5678-90ab-cdef-EXAMPLE11111",
+      "QueryLogStatus" : "ENABLED",
+    }
+  }
+```
+
+#### YAML<a name="aws-resource-cleanrooms-membership--examples--Membership_for_a_collaboration_creator--yaml"></a>
+
+```
+CollaborationCreatorMembership:
+  Type: AWS::CleanRooms::Membership
+  DeletionPolicy: Retain
+  UpdateReplacePolicy: Retain
+  Properties:
+    CollaborationIdentifier: a1b2c3d4-5678-90ab-cdef-EXAMPLE11111
+    QueryLogStatus: ENABLED
+```
+
+### Membership for a non\-collaboration creator<a name="aws-resource-cleanrooms-membership--examples--Membership_for_a_non-collaboration_creator_"></a>
+
+The following is an example of a membership for a non\-collaboration creator\.
+
+#### JSON<a name="aws-resource-cleanrooms-membership--examples--Membership_for_a_non-collaboration_creator_--json"></a>
+
+```
+"ExampleMembership": {
+  "Type" : "AWS::CleanRooms::Membership",
+  "Properties" : {
+      "CollaborationIdentifier" : "a1b2c3d4-5678-90ab-cdef-EXAMPLE11111",
+      "QueryLogStatus" : "ENABLED",
+    }
+  }
+```
+
+#### YAML<a name="aws-resource-cleanrooms-membership--examples--Membership_for_a_non-collaboration_creator_--yaml"></a>
+
+```
+ExampleMembership:
+  Type: AWS::CleanRooms::Membership
+  Properties:
+    CollaborationIdentifier: a1b2c3d4-5678-90ab-cdef-EXAMPLE11111
+    QueryLogStatus: ENABLED
+```

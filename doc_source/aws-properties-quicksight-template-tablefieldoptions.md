@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The order of field IDs of the field options for a table visual\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelectedFieldOptions`  <a name="cfn-quicksight-template-tablefieldoptions-selectedfieldoptions"></a>

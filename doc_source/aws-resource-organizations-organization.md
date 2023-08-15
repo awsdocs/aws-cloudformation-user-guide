@@ -6,9 +6,9 @@ This operation must be called using credentials from the account that is to beco
 
 **Important**  
 If you delete an organization, you can't recover it\. If you created any policies inside of the organization, they're also deleted and you can't recover them\.
-You can delete an organization only after you remove all member accounts from the organization\. If you created some of your member accounts using AWS Organizations, you might be blocked from removing those accounts\. You can remove a member account only if it has all the information that's required to operate as a standalone AWS account\. For more information about how to provide that information and then remove the account, see [Leaving an organization as a member account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_leave-as-member) in the * AWS Organizations User Guide*\.
+You can delete an organization only after you remove all member accounts from the organization\. If you created some of your member accounts using AWS Organizations, you might be blocked from removing those accounts\. You can remove a member account only if it has all the information that's required to operate as a standalone AWS account\. For more information about how to provide that information and then remove the account, see [Leave an organization from your member account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_leave-as-member.html) in the * AWS Organizations User Guide*\.
 If you closed a member account before you remove it from the organization, it enters a 'suspended' state for a period of time and you can't remove the account from the organization until it is finally closed\. This can take up to 90 days and can prevent you from deleting the organization until all member accounts are completely closed\.
-For more information, see [Deleting the organization by removing the management account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_delete.html) in the * AWS Organizations User Guide*\.
+For more information, see [Deleting an organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_delete.html) in the * AWS Organizations User Guide*\.
 
 ## Syntax<a name="aws-resource-organizations-organization-syntax"></a>
 
@@ -38,7 +38,7 @@ Properties:
 `FeatureSet`  <a name="cfn-organizations-organization-featureset"></a>
 Specifies the feature set supported by the new organization\. Each feature set supports different levels of functionality\.  
 +  `ALL` – In addition to all the features supported by the consolidated billing feature set, the management account gains access to advanced features that give you more control over accounts in your organization\. By default or if you set the `FeatureSet` property to `ALL`, the new organization is created with all features enabled and service control policies automatically enabled in the [root](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#root)\. For more information, see [All features](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#feature-set-all) in the * AWS Organizations User Guide*\.
-+  `CONSOLIDATED_BILLING` – All member accounts have their bills consolidated to and paid by the management account\. For more information, see [Consolidated billing](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#feature-set-cb-only) in the * AWS Organizations User Guide\.* 
++  `CONSOLIDATED_BILLING` – All member accounts have their bills consolidated to and paid by the management account\. For more information, see [Consolidated billing](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#feature-set-cb-only) in the * AWS Organizations User Guide*\. 
 
    The consolidated billing feature subset isn't available for organizations in the AWS GovCloud \(US\) Region\.
 Feature set `ALL` provides the following advanced features:  
@@ -163,3 +163,8 @@ Resources:
     Properties:
       FeatureSet: CONSOLIDATED_BILLING
 ```
+
+## See also<a name="aws-resource-organizations-organization--seealso"></a>
++ [Creating an organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_create.html) in the *AWS Organizations User Guide*\.
++ [CreateOrganization](https://docs.aws.amazon.com/organizations/latest/APIReference/API_CreateOrganization.html) in the *AWS Organizations API Reference Guide*\.
+

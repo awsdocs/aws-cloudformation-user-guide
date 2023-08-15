@@ -23,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pipes-pipe-deadletterconfig-properties"></a>
 
 `Arn`  <a name="cfn-pipes-pipe-deadletterconfig-arn"></a>
-The ARN of the Amazon SQS queue specified as the target for the dead\-letter queue\.  
+The ARN of the specified target for the dead\-letter queue\.   
+For Amazon Kinesis stream and Amazon DynamoDB stream sources, specify either an Amazon SNS topic or Amazon SQS queue ARN\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

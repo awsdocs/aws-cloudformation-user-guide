@@ -120,3 +120,7 @@ An optional nested statement that narrows the scope of the web requests that are
 *Required*: No  
 *Type*: [Statement](aws-properties-wafv2-rulegroup-statement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-wafv2-rulegroup-ratebasedstatement--seealso"></a>
+
+For examples of rate\-based statements, see the `AWS::WAFv2::WebACL` `RateBasedStatement` property\.

@@ -138,7 +138,7 @@ An Amazon Resource Name \(ARN\) that uniquely identifies the target endpoint\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TaskData`  <a name="cfn-dms-replicationtask-taskdata"></a>
-Property description not available\.  
+Supplemental information that the task requires to migrate the data for certain source and target endpoints\. For more information, see [Specifying Supplemental Data for Task Settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.TaskData.html) in the * AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

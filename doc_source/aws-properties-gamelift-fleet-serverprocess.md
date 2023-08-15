@@ -34,9 +34,10 @@ The number of server processes using this configuration that run concurrently on
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchPath`  <a name="cfn-gamelift-fleet-serverprocess-launchpath"></a>
-The location of a game build executable or the Realtime script file that contains the `Init()` function\. Game builds and Realtime scripts are installed on instances at the root:   
+The location of a game build executable or Realtime script\. Game builds and Realtime scripts are installed on instances at the root:   
 + Windows \(custom game builds only\): `C:\game`\. Example: "`C:\game\MyGame\server.exe`" 
 + Linux: `/local/game`\. Examples: "`/local/game/MyGame/server.exe`" or "`/local/game/MyRealtimeScript.js`"
+Amazon GameLift doesn't support the use of setup scripts that launch the game executable\. For custom game builds, this parameter must indicate the executable that calls the server SDK operations `initSDK()` and `ProcessReady()`\. 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

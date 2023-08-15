@@ -2,6 +2,7 @@
 
 **Resource types**
 + [AWS::DataSync::Agent](aws-resource-datasync-agent.md)
++ [AWS::DataSync::LocationAzureBlob](aws-resource-datasync-locationazureblob.md)
 + [AWS::DataSync::LocationEFS](aws-resource-datasync-locationefs.md)
 + [AWS::DataSync::LocationFSxLustre](aws-resource-datasync-locationfsxlustre.md)
 + [AWS::DataSync::LocationFSxONTAP](aws-resource-datasync-locationfsxontap.md)

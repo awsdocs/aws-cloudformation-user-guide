@@ -62,7 +62,7 @@ Property description not available\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InternetMeasurementsLogDelivery`  <a name="cfn-internetmonitor-monitor-internetmeasurementslogdelivery"></a>
-Property description not available\.  
+Publish internet measurements for a monitor for all city\-networks \(up to the 500,000 service limit\) to another location, such as an Amazon S3 bucket\. Measurements are also published to Amazon CloudWatch Logs for the first 500 \(by traffic volume\) city\-networks \(client locations and ASNs, typically internet service providers or ISPs\)\.  
 *Required*: No  
 *Type*: [InternetMeasurementsLogDelivery](aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -87,8 +87,8 @@ The resources that have been added for the monitor, listed by their Amazon Resou
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourcesToAdd`  <a name="cfn-internetmonitor-monitor-resourcestoadd"></a>
-The resources to add to a monitor, which you provide as a set of Amazon Resource Names \(ARNs\)\.  
-You can add a combination of Virtual Private Clouds \(VPCs\) and Amazon CloudFront distributions, or you can add Amazon WorkSpaces directories\. You can't add all three types of resources\.  
+The resources to include in a monitor, which you provide as a set of Amazon Resource Names \(ARNs\)\. Resources can be Amazon Virtual Private Cloud VPCs, Network Load Balancers \(NLBs\), Amazon CloudFront distributions, or Amazon WorkSpaces directories\.  
+You can add a combination of VPCs and CloudFront distributions, or you can add WorkSpaces directories, or you can add NLBs\. You can't add NLBs or WorkSpaces directories together with any other resources\.  
 If you add only VPC resources, at least one VPC must have an Internet Gateway attached to it, to make sure that it has internet connectivity\.
 *Required*: No  
 *Type*: List of String  
@@ -113,7 +113,7 @@ The tags for a monitor, listed as a set of *key:value* pairs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficPercentageToMonitor`  <a name="cfn-internetmonitor-monitor-trafficpercentagetomonitor"></a>
-Property description not available\.  
+The percentage of the internet\-facing traffic for your application that you want to monitor\. You can also, optionally, set a limit for the number of city\-networks \(client locations and ASNs, typically internet service providers\) that Internet Monitor will monitor traffic for\. The city\-networks maximum limit caps the number of city\-networks that Internet Monitor monitors for your application, regardless of the percentage of traffic that you choose to monitor\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

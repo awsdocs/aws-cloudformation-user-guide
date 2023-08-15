@@ -13,11 +13,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::NetworkInterface",
   "Properties" : {
       "[Description](#cfn-ec2-networkinterface-description)" : String,
-      "[EnablePrimaryIpv6](#cfn-ec2-networkinterface-enableprimaryipv6)" : Boolean,
       "[GroupSet](#cfn-ec2-networkinterface-groupset)" : [ String, ... ],
       "[InterfaceType](#cfn-ec2-networkinterface-interfacetype)" : String,
+      "[Ipv4PrefixCount](#cfn-ec2-networkinterface-ipv4prefixcount)" : Integer,
+      "[Ipv4Prefixes](#cfn-ec2-networkinterface-ipv4prefixes)" : [ Ipv4PrefixSpecification, ... ],
       "[Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount)" : Integer,
       "[Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses)" : [ InstanceIpv6Address, ... ],
+      "[Ipv6PrefixCount](#cfn-ec2-networkinterface-ipv6prefixcount)" : Integer,
+      "[Ipv6Prefixes](#cfn-ec2-networkinterface-ipv6prefixes)" : [ Ipv6PrefixSpecification, ... ],
       "[PrivateIpAddress](#cfn-ec2-networkinterface-privateipaddress)" : String,
       "[PrivateIpAddresses](#cfn-ec2-networkinterface-privateipaddresses)" : [ PrivateIpAddressSpecification, ... ],
       "[SecondaryPrivateIpAddressCount](#cfn-ec2-networkinterface-secondaryprivateipaddresscount)" : Integer,
@@ -34,13 +37,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::NetworkInterface
 Properties: 
   [Description](#cfn-ec2-networkinterface-description): String
-  [EnablePrimaryIpv6](#cfn-ec2-networkinterface-enableprimaryipv6): Boolean
   [GroupSet](#cfn-ec2-networkinterface-groupset): 
     - String
   [InterfaceType](#cfn-ec2-networkinterface-interfacetype): String
+  [Ipv4PrefixCount](#cfn-ec2-networkinterface-ipv4prefixcount): Integer
+  [Ipv4Prefixes](#cfn-ec2-networkinterface-ipv4prefixes): 
+    - Ipv4PrefixSpecification
   [Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses): 
     - InstanceIpv6Address
+  [Ipv6PrefixCount](#cfn-ec2-networkinterface-ipv6prefixcount): Integer
+  [Ipv6Prefixes](#cfn-ec2-networkinterface-ipv6prefixes): 
+    - Ipv6PrefixSpecification
   [PrivateIpAddress](#cfn-ec2-networkinterface-privateipaddress): String
   [PrivateIpAddresses](#cfn-ec2-networkinterface-privateipaddresses): 
     - PrivateIpAddressSpecification
@@ -59,12 +67,6 @@ A description for the network interface\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`EnablePrimaryIpv6`  <a name="cfn-ec2-networkinterface-enableprimaryipv6"></a>
-If you’re modifying a network interface in a dual\-stack or IPv6\-only subnet, you have the option to assign a primary IPv6 IP address\. A primary IPv6 address is an IPv6 GUA address associated with an ENI that you have enabled to use a primary IPv6 address\. Use this option if the instance that this ENI will be attached to relies on its IPv6 address not changing\. AWS will automatically assign an IPv6 address associated with the ENI attached to your instance to be the primary IPv6 address\. Once you enable an IPv6 GUA address to be a primary IPv6, you cannot disable it\. When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the instance is terminated or the network interface is detached\. If you have multiple IPv6 addresses associated with an ENI attached to your instance and you enable a primary IPv6 address, the first IPv6 GUA address associated with the ENI becomes the primary IPv6 address\.  
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `GroupSet`  <a name="cfn-ec2-networkinterface-groupset"></a>
 The security group IDs associated with this network interface\.  
 *Required*: No  
@@ -78,6 +80,18 @@ The type of network interface\. The default is `interface`\. The supported value
 *Allowed values*: `branch | efa | trunk`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Ipv4PrefixCount`  <a name="cfn-ec2-networkinterface-ipv4prefixcount"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv4Prefixes`  <a name="cfn-ec2-networkinterface-ipv4prefixes"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Ipv4PrefixSpecification](aws-properties-ec2-networkinterface-ipv4prefixspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Ipv6AddressCount`  <a name="cfn-ec2-networkinterface-ipv6addresscount"></a>
 The number of IPv6 addresses to assign to a network interface\. Amazon EC2 automatically selects the IPv6 addresses from the subnet range\. To specify specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property\.  
 *Required*: No  
@@ -88,6 +102,18 @@ The number of IPv6 addresses to assign to a network interface\. Amazon EC2 autom
 One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface\. If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and don't specify this property\.  
 *Required*: No  
 *Type*: List of [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv6PrefixCount`  <a name="cfn-ec2-networkinterface-ipv6prefixcount"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv6Prefixes`  <a name="cfn-ec2-networkinterface-ipv6prefixes"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Ipv6PrefixSpecification](aws-properties-ec2-networkinterface-ipv6prefixspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-ec2-networkinterface-privateipaddress"></a>

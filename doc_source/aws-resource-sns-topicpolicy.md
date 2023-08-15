@@ -49,4 +49,4 @@ The Amazon Resource Names \(ARN\) of the topics to which you want to add the pol
 #### <a name="aws-resource-sns-topicpolicy-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-The provider\-assigned unique ID for this managed resource\.
+Property description not available\.

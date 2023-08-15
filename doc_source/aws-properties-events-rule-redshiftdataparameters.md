@@ -59,7 +59,7 @@ The name or ARN of the secret that enables access to the database\. Required whe
 
 `Sql`  <a name="cfn-events-rule-redshiftdataparameters-sql"></a>
 The SQL statement text to run\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `100000`  

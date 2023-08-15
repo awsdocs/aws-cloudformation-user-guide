@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[SalesforceConfiguration](#cfn-kendra-datasource-datasourceconfiguration-salesforceconfiguration)" : SalesforceConfiguration,
   "[ServiceNowConfiguration](#cfn-kendra-datasource-datasourceconfiguration-servicenowconfiguration)" : ServiceNowConfiguration,
   "[SharePointConfiguration](#cfn-kendra-datasource-datasourceconfiguration-sharepointconfiguration)" : SharePointConfiguration,
+  "[TemplateConfiguration](#cfn-kendra-datasource-datasourceconfiguration-templateconfiguration)" : TemplateConfiguration,
   "[WebCrawlerConfiguration](#cfn-kendra-datasource-datasourceconfiguration-webcrawlerconfiguration)" : WebCrawlerConfiguration,
   "[WorkDocsConfiguration](#cfn-kendra-datasource-datasourceconfiguration-workdocsconfiguration)" : WorkDocsConfiguration
 }
@@ -42,6 +43,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     ServiceNowConfiguration
   [SharePointConfiguration](#cfn-kendra-datasource-datasourceconfiguration-sharepointconfiguration): 
     SharePointConfiguration
+  [TemplateConfiguration](#cfn-kendra-datasource-datasourceconfiguration-templateconfiguration): 
+    TemplateConfiguration
   [WebCrawlerConfiguration](#cfn-kendra-datasource-datasourceconfiguration-webcrawlerconfiguration): 
     WebCrawlerConfiguration
   [WorkDocsConfiguration](#cfn-kendra-datasource-datasourceconfiguration-workdocsconfiguration): 
@@ -96,6 +99,12 @@ Provides the configuration information to connect to ServiceNow as your data sou
 Provides the configuration information to connect to Microsoft SharePoint as your data source\.  
 *Required*: No  
 *Type*: [SharePointConfiguration](aws-properties-kendra-datasource-sharepointconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TemplateConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-templateconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [TemplateConfiguration](aws-properties-kendra-datasource-templateconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WebCrawlerConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-webcrawlerconfiguration"></a>

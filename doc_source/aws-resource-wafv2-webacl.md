@@ -181,6 +181,345 @@ When a rule with a label matches a web request, AWS WAF adds the fully qualified
 
 
 
+### Create a web ACL with a variety of rate\-based rules<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_a_variety_of_rate-based_rules"></a>
+
+The following example web ACL specification shows a number of rate\-based rules\. For information about each rule, see the examples under `AWS::WAFv2::WebACL RateBasedStatement`\.
+
+#### YAML<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_a_variety_of_rate-based_rules--yaml"></a>
+
+```
+Name: exampleWebACL
+Id: exampleWebACLExampleID
+ARN: arn:aws:wafv2:us-east-1:ExampleAccountNumber:regional/webacl/exampleWebACL/exampleWebACLExampleID
+DefaultAction:
+  Allow: {}
+Description: ''
+Rules:
+- Name: rbrCountAll
+  Priority: 0
+  Statement:
+    RateBasedStatement:
+      Limit: 100000
+      AggregateKeyType: CONSTANT
+      ScopeDownStatement:
+        GeoMatchStatement:
+          CountryCodes:
+          - GB
+          ForwardedIPConfig:
+            HeaderName: X-Forwarded-For
+            FallbackBehavior: MATCH
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrCountAll
+- Name: rbrNoCustomKeys
+  Priority: 1
+  Statement:
+    RateBasedStatement:
+      Limit: 1000
+      AggregateKeyType: FORWARDED_IP
+      ForwardedIPConfig:
+        HeaderName: X-Forwarded-For
+        FallbackBehavior: MATCH
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrNoCustomKeys
+- Name: rbrCustomKeysA
+  Priority: 2
+  Statement:
+    RateBasedStatement:
+      Limit: 2000
+      AggregateKeyType: CUSTOM_KEYS
+      ForwardedIPConfig:
+        HeaderName: X-Forwarded-For
+        FallbackBehavior: MATCH
+      CustomKeys:
+      - Header:
+          Name: Content-Type
+          TextTransformations:
+          - Priority: 0
+            Type: NONE
+      - ForwardedIP: {}
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrCustomKeysA
+- Name: rbrCustomKeysB
+  Priority: 3
+  Statement:
+    RateBasedStatement:
+      Limit: 3000
+      AggregateKeyType: CUSTOM_KEYS
+      CustomKeys:
+      - QueryString:
+          TextTransformations:
+          - Priority: 0
+            Type: NONE
+      - HTTPMethod: {}
+      - UriPath:
+          TextTransformations:
+          - Priority: 0
+            Type: NONE
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrCustomKeysB
+- Name: labelUSStates
+  Priority: 4
+  Statement:
+    GeoMatchStatement:
+      CountryCodes:
+      - US
+  Action:
+    Count: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: labelUSStates
+- Name: rbrRequestsFromUSStates
+  Priority: 5
+  Statement:
+    RateBasedStatement:
+      Limit: 500
+      AggregateKeyType: CUSTOM_KEYS
+      ScopeDownStatement:
+        GeoMatchStatement:
+          CountryCodes:
+          - US
+      CustomKeys:
+      - LabelNamespace:
+          Namespace: 'awswaf:clientip:geo:region:'
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrRequestsFromUSStates
+VisibilityConfig:
+  SampledRequestsEnabled: true
+  CloudWatchMetricsEnabled: true
+  MetricName: exampleWebACL
+Capacity: 193
+ManagedByFirewallManager: false
+LabelNamespace: 'awswaf:ExampleAccountNumber:webacl:exampleWebACL:'
+```
+
+#### JSON<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_a_variety_of_rate-based_rules--json"></a>
+
+```
+ {
+  "Name": "exampleWebACL",
+  "Id": "exampleWebACLExampleID",
+  "ARN": "arn:aws:wafv2:us-east-1:ExampleAccountNumber:regional/webacl/exampleWebACL/exampleWebACLExampleID",
+  "DefaultAction": {
+    "Allow": {}
+  },
+  "Description": "",
+  "Rules": [
+    {
+      "Name": "rbrCountAll",
+      "Priority": 0,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 100000,
+          "AggregateKeyType": "CONSTANT",
+          "ScopeDownStatement": {
+            "GeoMatchStatement": {
+              "CountryCodes": [
+                "GB"
+              ],
+              "ForwardedIPConfig": {
+                "HeaderName": "X-Forwarded-For",
+                "FallbackBehavior": "MATCH"
+              }
+            }
+          }
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrCountAll"
+      }
+    },
+    {
+      "Name": "rbrNoCustomKeys",
+      "Priority": 1,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 1000,
+          "AggregateKeyType": "FORWARDED_IP",
+          "ForwardedIPConfig": {
+            "HeaderName": "X-Forwarded-For",
+            "FallbackBehavior": "MATCH"
+          }
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrNoCustomKeys"
+      }
+    },
+    {
+      "Name": "rbrCustomKeysA",
+      "Priority": 2,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 2000,
+          "AggregateKeyType": "CUSTOM_KEYS",
+          "ForwardedIPConfig": {
+            "HeaderName": "X-Forwarded-For",
+            "FallbackBehavior": "MATCH"
+          },
+          "CustomKeys": [
+            {
+              "Header": {
+                "Name": "Content-Type",
+                "TextTransformations": [
+                  {
+                    "Priority": 0,
+                    "Type": "NONE"
+                  }
+                ]
+              }
+            },
+            {
+              "ForwardedIP": {}
+            }
+          ]
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrCustomKeysA"
+      }
+    },
+    {
+      "Name": "rbrCustomKeysB",
+      "Priority": 3,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 3000,
+          "AggregateKeyType": "CUSTOM_KEYS",
+          "CustomKeys": [
+            {
+              "QueryString": {
+                "TextTransformations": [
+                  {
+                    "Priority": 0,
+                    "Type": "NONE"
+                  }
+                ]
+              }
+            },
+            {
+              "HTTPMethod": {}
+            },
+            {
+              "UriPath": {
+                "TextTransformations": [
+                  {
+                    "Priority": 0,
+                    "Type": "NONE"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrCustomKeysB"
+      }
+    },
+    {
+      "Name": "labelUSStates",
+      "Priority": 4,
+      "Statement": {
+        "GeoMatchStatement": {
+          "CountryCodes": [
+            "US"
+          ]
+        }
+      },
+      "Action": {
+        "Count": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "labelUSStates"
+      }
+    },
+    {
+      "Name": "rbrRequestsFromUSStates",
+      "Priority": 5,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 500,
+          "AggregateKeyType": "CUSTOM_KEYS",
+          "ScopeDownStatement": {
+            "GeoMatchStatement": {
+              "CountryCodes": [
+                "US"
+              ]
+            }
+          },
+          "CustomKeys": [
+            {
+              "LabelNamespace": {
+                "Namespace": "awswaf:clientip:geo:region:"
+              }
+            }
+          ]
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrRequestsFromUSStates"
+      }
+    }
+  ],
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "exampleWebACL"
+  },
+  "Capacity": 193,
+  "ManagedByFirewallManager": false,
+  "LabelNamespace": "awswaf:ExampleAccountNumber:webacl:exampleWebACL:"
+}
+```
+
 ### Create a web ACL with custom request and response handling<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_custom_request_and_response_handling"></a>
 
 The following shows an example web ACL specification\. This example includes custom request and response configurations\.

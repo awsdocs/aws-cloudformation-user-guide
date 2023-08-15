@@ -1,13 +1,13 @@
 # AWS::WAFv2::WebACL ResponseInspection<a name="aws-properties-wafv2-webacl-responseinspection"></a>
 
-The criteria for inspecting responses to login requests, used by the ATP rule group to track login success and failure rates\. 
+The criteria for inspecting responses to login requests and account creation requests, used by the ATP and ACFP rule groups to track login and account creation success and failure rates\. 
 
 **Note**  
 Response inspection is available only in web ACLs that protect Amazon CloudFront distributions\.
 
-The rule group evaluates the responses that your protected resources send back to client login attempts, keeping count of successful and failed attempts from each IP address and client session\. Using this information, the rule group labels and mitigates requests from client sessions and IP addresses with too much suspicious activity in a short amount of time\. 
+The rule groups evaluates the responses that your protected resources send back to client login and account creation attempts, keeping count of successful and failed attempts from each IP address and client session\. Using this information, the rule group labels and mitigates requests from client sessions and IP addresses with too much suspicious activity in a short amount of time\. 
 
-This is part of the `AWSManagedRulesATPRuleSet` configuration in `ManagedRuleGroupConfig`\.
+This is part of the `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet` configurations in `ManagedRuleGroupConfig`\.
 
 Enable response inspection by configuring exactly one component of the response to inspect, for example, `Header` or `StatusCode`\. You can't configure more than one component for inspection\. If you don't configure any of the response inspection options, response inspection is disabled\. 
 

@@ -2,7 +2,7 @@
 
 Creates an organizational unit \(OU\) within a root or parent OU\. An OU is a container for accounts that enables you to organize your accounts to apply policies according to your business requirements\. The number of levels deep that you can nest OUs is dependent upon the policy types enabled for that root\. For service control policies, the limit is five\.
 
-For more information about OUs, see [Managing Organizational Units](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html) in the * AWS Organizations User Guide\.* 
+For more information about OUs, see [Managing organizational units \(OUs\)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html) in the * AWS Organizations User Guide*\.
 
 If the request includes tags, then the requester must have the `organizations:TagResource` permission\.
 
@@ -73,6 +73,9 @@ If any one of the tags is not valid or if you exceed the allowed number of tags 
 
  When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `Id`\. For example: `ou-examplerootid111-exampleouid111`\.
 
+**Note**  
+When creating child OUs, we recommend that you use the `Ref` function instead of `Fn::GetAtt`\. For example, in the properties for the child OU, use `ParentId: !Ref ParentOU`, instead of `ParentId: !GetAtt 'ParentOU.Id'`\.
+
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-organizations-organizationalunit-return-values-fn--getatt"></a>
@@ -88,3 +91,116 @@ The Amazon Resource Name \(ARN\) of this OU\. For example: `arn:aws:organization
 
 `Id`  <a name="Id-fn::getatt"></a>
 The unique identifier \(ID\) associated with this OU\. For example: `ou-examplerootid111-exampleouid111`\.
+
+## Examples<a name="aws-resource-organizations-organizationalunit--examples"></a>
+
+
+
+### Specify an OU under the root<a name="aws-resource-organizations-organizationalunit--examples--Specify_an_OU_under_the_root"></a>
+
+This example illustrates how to specify an OU using `AWS::Organizations::OrganizationalUnit` directly under the root\.
+
+#### JSON<a name="aws-resource-organizations-organizationalunit--examples--Specify_an_OU_under_the_root--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation Organizations Template Example",
+    "Parameters": {
+        "OrganizationRootId": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "TestTemplateOU": {
+            "Type": "AWS::Organizations::OrganizationalUnit",
+            "Properties": {
+                "Name": "TestTemplateOU",
+                "ParentId": {
+                    "Ref": "OrganizationRootId"
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-organizations-organizationalunit--examples--Specify_an_OU_under_the_root--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation Organizations Template Example
+Parameters:
+  OrganizationRootId:
+    Type: String
+Resources:
+  TestTemplateOU:
+    Type: 'AWS::Organizations::OrganizationalUnit'
+    Properties:
+      Name: TestTemplateOU
+      ParentId: !Ref OrganizationRootId
+```
+
+### Specify an OU under a parent OU<a name="aws-resource-organizations-organizationalunit--examples--Specify_an_OU_under_a_parent_OU"></a>
+
+This example illustrates how to specify a nested OU using `AWS::Organizations::OrganizationalUnit` by referencing another OU\.
+
+#### JSON<a name="aws-resource-organizations-organizationalunit--examples--Specify_an_OU_under_a_parent_OU--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation Nested OU Template Example",
+    "Parameters": {
+        "OrganizationRootId": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "ParentOU": {
+            "Type": "AWS::Organizations::OrganizationalUnit",
+            "Properties": {
+                "Name": "ParentOU",
+                "ParentId": {
+                    "Ref": "OrganizationRootId"
+                }
+            }
+        },
+        "ChildOU": {
+            "Type": "AWS::Organizations::OrganizationalUnit",
+            "Properties": {
+                "Name": "ChildOU",
+                "ParentId": {
+                    "Ref": "ParentOU"
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-organizations-organizationalunit--examples--Specify_an_OU_under_a_parent_OU--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation Nested OU Template Example
+Parameters:
+  OrganizationRootId:
+    Type: String
+Resources:
+  ParentOU:
+    Type: 'AWS::Organizations::OrganizationalUnit'
+    Properties:
+      Name: ParentOU
+      ParentId: !Ref OrganizationRootId
+  ChildOU:
+    Type: 'AWS::Organizations::OrganizationalUnit'
+    Properties:
+      Name: ChildOU
+      ParentId: !Ref ParentOU
+```
+
+## See also<a name="aws-resource-organizations-organizationalunit--seealso"></a>
++ [Creating an OU](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html#create_ou) in the *AWS Organizations User Guide*\.
++ [CreateOrganizationalUnit](https://docs.aws.amazon.com/organizations/latest/APIReference/API_CreateOrganizationalUnit.html) in the *AWS Organizations API Reference Guide*\.
+

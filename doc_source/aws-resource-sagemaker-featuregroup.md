@@ -130,3 +130,13 @@ Tags used to define a `FeatureGroup`\.
 ### Ref<a name="aws-resource-sagemaker-featuregroup-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `FeatureGroupName` of the feature group\.
+
+### Fn::GetAtt<a name="aws-resource-sagemaker-featuregroup-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-sagemaker-featuregroup-return-values-fn--getatt-fn--getatt"></a>
+
+`CreationTime`  <a name="CreationTime-fn::getatt"></a>
+Property description not available\.
+
+`FeatureGroupStatus`  <a name="FeatureGroupStatus-fn::getatt"></a>
+Property description not available\.

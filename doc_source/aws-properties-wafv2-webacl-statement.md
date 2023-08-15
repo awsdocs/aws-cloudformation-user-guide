@@ -106,7 +106,7 @@ The label match statement provides the label or namespace string to search for\.
 `ManagedRuleGroupStatement`  <a name="cfn-wafv2-webacl-statement-managedrulegroupstatement"></a>
 A rule statement used to run the rules that are defined in a managed rule group\. To use this, provide the vendor name and the name of the rule group in this statement\. You can retrieve the required names through the API call `ListAvailableManagedRuleGroups`\.  
 You cannot nest a `ManagedRuleGroupStatement`, for example for use inside a `NotStatement` or `OrStatement`\. It can only be referenced as a top\-level statement within a rule\.  
-You are charged additional fees when you use the AWS WAF Bot Control managed rule group `AWSManagedRulesBotControlRuleSet` or the AWS WAF Fraud Control account takeover prevention \(ATP\) managed rule group `AWSManagedRulesATPRuleSet`\. For more information, see [AWS WAF Pricing](http://aws.amazon.com/waf/pricing/)\.
+You are charged additional fees when you use the AWS WAF Bot Control managed rule group `AWSManagedRulesBotControlRuleSet`, the AWS WAF Fraud Control account takeover prevention \(ATP\) managed rule group `AWSManagedRulesATPRuleSet`, or the AWS WAF Fraud Control account creation fraud prevention \(ACFP\) managed rule group `AWSManagedRulesACFPRuleSet`\. For more information, see [AWS WAF Pricing](http://aws.amazon.com/waf/pricing/)\.
 *Required*: No  
 *Type*: [ManagedRuleGroupStatement](aws-properties-wafv2-webacl-managedrulegroupstatement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

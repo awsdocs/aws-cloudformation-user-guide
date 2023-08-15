@@ -2,7 +2,7 @@
 
 The identifier of a field in the web request payload that contains customer data\. 
 
-This data type is used to specify fields in the `RequestInspection` configurations, for the managed rule group configuration `AWSManagedRulesATPRuleSet`\. 
+This data type is used to specify fields in the `RequestInspection` and `RequestInspectionACFP` configurations, which are used in the managed rule group configurations `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet`, respectively\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-fieldidentifier-syntax"></a>
 

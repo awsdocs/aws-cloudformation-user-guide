@@ -528,7 +528,7 @@ Valid values: `agent`, `error`
  **MySQL**   
 Valid values: `audit`, `error`, `general`, `slowquery`   
  **Oracle**   
-Valid values: `alert`, `audit`, `listener`, `trace`   
+Valid values: `alert`, `audit`, `listener`, `trace`, `oemagent`   
  **PostgreSQL**   
 Valid values: `postgresql`, `upgrade`   
 *Required*: No  

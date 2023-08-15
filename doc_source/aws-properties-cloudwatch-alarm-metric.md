@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Dimensions`  <a name="cfn-cloudwatch-alarm-metric-dimensions"></a>
 The metric dimensions that you want to be used for the metric that the alarm will watch\.  
 *Required*: No  
-*Type*: List of [Dimension](aws-properties-cw-dimension.md)  
+*Type*: List of [Dimension](aws-properties-cloudwatch-alarm-dimension.md)  
 *Maximum*: `30`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

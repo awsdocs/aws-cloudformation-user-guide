@@ -49,7 +49,7 @@ The URLs of the queues to which you want to add the policy\. You can use the `[ 
 #### <a name="aws-resource-sqs-queuepolicy-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Property description not available\.
+The provider\-assigned unique ID for this managed resource\.
 
 ## Examples<a name="aws-resource-sqs-queuepolicy--examples"></a>
 

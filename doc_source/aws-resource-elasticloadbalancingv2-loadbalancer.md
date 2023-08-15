@@ -80,7 +80,7 @@ You cannot specify a scheme for a Gateway Load Balancer\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-elasticloadbalancingv2-loadbalancer-securitygroups"></a>
-\[Application Load Balancers\] The IDs of the security groups for the load balancer\.  
+\[Application Load Balancers and Network Load Balancers\] The IDs of the security groups for the load balancer\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -83,7 +83,7 @@ The text wrap \(none, wrap\) for the table cells\.
 The vertical text alignment \(top, middle, bottom\) for the table cells\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `BOTTOM | MIDDLE | TOP`  
+*Allowed values*: `AUTO | BOTTOM | MIDDLE | TOP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Visibility`  <a name="cfn-quicksight-template-tablecellstyle-visibility"></a>

@@ -79,10 +79,11 @@ A list of key\-value pairs containing the Airflow configuration options for your
 
 `AirflowVersion`  <a name="cfn-mwaa-environment-airflowversion"></a>
 The version of Apache Airflow to use for the environment\. If no value is specified, defaults to the latest version\.  
-*Allowed Values*: `2.0.2` \| `1.10.12` \| `2.2.2` \| `2.4.3` \| `2.5.1` \(latest\)  
+If you specify a newer version number for an existing environment, the version update requires some service interruption before taking effect\.  
+*Allowed Values*: `2.0.2` \| `1.10.12` \| `2.2.2` \| `2.4.3` \| `2.5.1` \| `2.6.3` \(latest\)   
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `DagS3Path`  <a name="cfn-mwaa-environment-dags3path"></a>
 The relative path to the DAGs folder on your Amazon S3 bucket\. For example, `dags`\. To learn more, see [Adding or updating DAGs](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html)\.  
@@ -194,9 +195,10 @@ The relative path to the startup shell script in your Amazon S3 bucket\. For exa
 
 `Tags`  <a name="cfn-mwaa-environment-tags"></a>
 The key\-value tag pairs associated to your environment\. For example, `"Environment": "Staging"`\. To learn more, see [Tagging](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html)\.  
+If you specify new tags for an existing environment, the update requires service interruption before taking effect\.  
 *Required*: No  
 *Type*: Json  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `WebserverAccessMode`  <a name="cfn-mwaa-environment-webserveraccessmode"></a>
 The Apache Airflow *Web server* access mode\. To learn more, see [Apache Airflow access modes](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html)\. Valid values: `PRIVATE_ONLY` or `PUBLIC_ONLY`\.  

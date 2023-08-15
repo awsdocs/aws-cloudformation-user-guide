@@ -91,7 +91,7 @@ The type of instance to connect to the environment \(for example, `t2.micro`\)\.
 *Type*: String  
 *Minimum*: `5`  
 *Maximum*: `20`  
-*Pattern*: `^[a-z][1-9][.][a-z0-9]+$`  
+*Pattern*: `^[a-z]+[1-9][.][a-z0-9]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-cloud9-environmentec2-name"></a>

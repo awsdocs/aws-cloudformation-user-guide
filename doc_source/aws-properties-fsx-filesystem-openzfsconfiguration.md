@@ -69,16 +69,17 @@ A recurring daily time, in the format `HH:MM`\. `HH` is the zero\-padded hour of
 
 `DeploymentType`  <a name="cfn-fsx-filesystem-openzfsconfiguration-deploymenttype"></a>
 Specifies the file system deployment type\. Single AZ deployment types are configured for redundancy within a single Availability Zone in an AWS Region \. Valid values are the following:  
-+  `SINGLE_AZ_1`\- \(Default\) Creates file systems with throughput capacities of 64 \- 4,096 MBps\. `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is available\.
++  `MULTI_AZ_1`\- Creates file systems with high availability that are configured for Multi\-AZ redundancy to tolerate temporary unavailability in Availability Zones \(AZs\)\. `Multi_AZ_1` is available in the following AWS Regions: 
++  `SINGLE_AZ_1`\- \(Default\) Creates file systems with throughput capacities of 64 \- 4,096 MB/s\. `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is available\.
 +  `SINGLE_AZ_2`\- Creates file systems with throughput capacities of 160 \- 10,240 MB/s using an NVMe L2ARC cache\. `Single_AZ_2` is available only in the US East \(N\. Virginia\), US East \(Ohio\), US West \(Oregon\), and Europe \(Ireland\) AWS Regions\.
 For more information, see: [Deployment type availability](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions) and [File system performance](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance) in the *Amazon FSx for OpenZFS User Guide*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `SINGLE_AZ_1 | SINGLE_AZ_2`  
+*Allowed values*: `MULTI_AZ_1 | SINGLE_AZ_1 | SINGLE_AZ_2`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DiskIopsConfiguration`  <a name="cfn-fsx-filesystem-openzfsconfiguration-diskiopsconfiguration"></a>
-The SSD IOPS \(input/output operations per second\) configuration for an Amazon FSx for NetApp ONTAP or FSx for OpenZFS file system\. By default, Amazon FSx automatically provisions 3 IOPS per GB of storage capacity\. You can provision additional IOPS per GB of storage\. The configuration consists of the total number of provisioned SSD IOPS and how it is was provisioned, or the mode \(by the customer or by Amazon FSx\)\.  
+The SSD IOPS \(input/output operations per second\) configuration for an Amazon FSx for NetApp ONTAP, Amazon FSx for Windows File Server, or FSx for OpenZFS file system\. By default, Amazon FSx automatically provisions 3 IOPS per GB of storage capacity\. You can provision additional IOPS per GB of storage\. The configuration consists of the total number of provisioned SSD IOPS and how it is was provisioned, or the mode \(by the customer or by Amazon FSx\)\.  
 *Required*: No  
 *Type*: [DiskIopsConfiguration](aws-properties-fsx-filesystem-openzfsconfiguration-diskiopsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
