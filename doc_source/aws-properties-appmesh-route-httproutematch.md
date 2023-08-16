@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Headers](#cfn-appmesh-route-httproutematch-headers)" : [ HttpRouteHeader, ... ],
   "[Method](#cfn-appmesh-route-httproutematch-method)" : String,
   "[Path](#cfn-appmesh-route-httproutematch-path)" : HttpPathMatch,
+  "[Port](#cfn-appmesh-route-httproutematch-port)" : Integer,
   "[Prefix](#cfn-appmesh-route-httproutematch-prefix)" : String,
   "[QueryParameters](#cfn-appmesh-route-httproutematch-queryparameters)" : [ QueryParameter, ... ],
   "[Scheme](#cfn-appmesh-route-httproutematch-scheme)" : String
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Method](#cfn-appmesh-route-httproutematch-method): String
   [Path](#cfn-appmesh-route-httproutematch-path): 
     HttpPathMatch
+  [Port](#cfn-appmesh-route-httproutematch-port): Integer
   [Prefix](#cfn-appmesh-route-httproutematch-prefix): String
   [QueryParameters](#cfn-appmesh-route-httproutematch-queryparameters): 
     - QueryParameter
@@ -53,6 +55,14 @@ The client request method to match on\. Specify only one\.
 The client request path to match on\.  
 *Required*: No  
 *Type*: [HttpPathMatch](aws-properties-appmesh-route-httppathmatch.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Port`  <a name="cfn-appmesh-route-httproutematch-port"></a>
+The port number to match on\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-appmesh-route-httproutematch-prefix"></a>

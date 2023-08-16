@@ -96,12 +96,13 @@ Parameters:
 ## Properties<a name="parameters-section-structure-properties"></a>
 
 `AllowedPattern`  
-A regular expression that represents the patterns to allow for `String` types\. The pattern must match the entire parameter value provided\.  
+A regular expression that represents the patterns to allow for `String` or `CommaDelimitedList` types\. When applied on a parameter of type `String`, the pattern must match the entire parameter value provided\. When applied to a parameter of type `CommaDelimitedList`, the pattern must match each value in the list\.  
 *Required*: No
 
 `AllowedValues`  
-An array containing the list of values allowed for the parameter\.  
-*Required*: No
+An array containing the list of values allowed for the parameter\. When applied to a parameter of type `String`, the parameter value must be one of the allowed values\. When applied to a parameter of type `CommaDelimitedList`, each value in the list must be one of the specified allowed values\.  
+*Required*: No  
+If you're using YAML and you want to use `Yes` and `No` strings for `AllowedValues`, use single\-quotes to prevent the YAML parser from considering these boolean values\.
 
 `ConstraintDescription`  
 A string that explains a constraint when the constraint is violated\. For example, without a constraint description, a parameter that has an allowed pattern of `[A-Za-z0-9]+` displays the following error message when the user specifies an invalid value:  
@@ -135,7 +136,7 @@ A numeric value that determines the smallest numeric value you want to allow for
 *Required*: No
 
 `NoEcho`  
-Whether to mask the parameter value to prevent it from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.  
+Whether to mask the parameter value to prevent it from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.  
 *Required*: No  
 Using the `NoEcho` attribute does not mask any information stored in the following:  
 + The `Metadata` template section\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. For more information, see [Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)\.
@@ -173,7 +174,7 @@ Parameters that correspond to existing parameters in Systems Manager Parameter S
 
 AWS\-specific parameter types are helpful in catching invalid values at the start of creating or updating a stack\. To specify parameters with AWS\-specific types, a template user must enter existing AWS values that are in their AWS account\. AWS CloudFormation validates these input values against existing values in the account\. For example, with the `AWS::EC2::VPC::Id` parameter type, a user must [enter an existing VPC ID](cfn-using-console-create-stack-parameters.md) that is in the account and region in which they are creating the stack\.
 
-If you want to allow template users to enter input values from different AWS accounts, don't define parameters with AWS\-specific types; instead, define parameters of type `String` \(or `CommaDelimitedList`\)\.
+If you want to allow template users to enter input values from different AWS accounts, don't define parameters with AWS\-specific types; instead, define parameters of type `String` or `CommaDelimitedList`\.
 
 ### Supported AWS\-specific parameter types<a name="aws-specific-parameter-types-supported"></a>
 
@@ -409,7 +410,7 @@ Parameters:
 
 #### Return a value from a comma\-delimited list parameter<a name="parameters-section-structure-examples-return-value"></a>
 
-To refer to a specific value in a list, use the `Fn::Select` intrinsic function in the `Resources` section of your template\. You pass the index value of the object that you want and a list of objects, as shown in the following snippet:
+To refer to a specific value in a list, use the ``Fn::Select`` intrinsic function in the `Resources` section of your template\. You pass the index value of the object that you want and a list of objects, as shown in the following snippet:
 
 ##### JSON<a name="parameters-section-structure-examples-example4.json"></a>
 

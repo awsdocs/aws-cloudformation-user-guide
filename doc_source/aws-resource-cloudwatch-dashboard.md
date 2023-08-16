@@ -48,9 +48,9 @@ The name of the dashboard\. The name must be between 1 and 255 characters\. If y
 
 ### Ref<a name="aws-resource-cloudwatch-dashboard-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the value of `DashboardName`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the value of `DashboardName`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-cloudwatch-dashboard--seealso"></a>
 +  [Amazon CloudWatch Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudwatch.html) 

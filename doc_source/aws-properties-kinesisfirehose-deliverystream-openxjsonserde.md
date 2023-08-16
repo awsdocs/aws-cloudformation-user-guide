@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CaseInsensitive](#cfn-kinesisfirehose-deliverystream-openxjsonserde-caseinsensitive)" : Boolean,
-  "[ColumnToJsonKeyMappings](#cfn-kinesisfirehose-deliverystream-openxjsonserde-columntojsonkeymappings)" : {Key : Value, ...},
+  "[ColumnToJsonKeyMappings](#cfn-kinesisfirehose-deliverystream-openxjsonserde-columntojsonkeymappings)" : {Key: Value, ...},
   "[ConvertDotsInJsonKeysToUnderscores](#cfn-kinesisfirehose-deliverystream-openxjsonserde-convertdotsinjsonkeystounderscores)" : Boolean
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CaseInsensitive](#cfn-kinesisfirehose-deliverystream-openxjsonserde-caseinsensitive): Boolean
   [ColumnToJsonKeyMappings](#cfn-kinesisfirehose-deliverystream-openxjsonserde-columntojsonkeymappings): 
-    Key : Value
+    Key: Value
   [ConvertDotsInJsonKeysToUnderscores](#cfn-kinesisfirehose-deliverystream-openxjsonserde-convertdotsinjsonkeystounderscores): Boolean
 ```
 

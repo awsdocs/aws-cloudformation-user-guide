@@ -10,7 +10,7 @@ With self\-managed permissions, you create the AWS Identity and Access Managemen
 
 ## Self\-managed permissions<a name="prereqs-self-managed-permissions"></a>
 
-To set up the required permissions for creating a **service\-managed** stack set, see [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.
+To set up the required permissions for creating a **service\-managed** stack set, see [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)\.
 
 Before you create a stack set with **self\-managed** permissions, you need to establish a trust relationship between the administrator and target accounts by creating IAM roles in each account\.
 
@@ -122,7 +122,7 @@ Be aware that this template grants administrator access\. After you use the temp
    }
    ```
 
-   You must add the S3 and Amazon SNS service action and resources to `AWSCloudFormationStackSetExecutionRole` policy statement for each target account for StackSets to work\. Service managed stacks automatically take care of the permissions required to access the Amazon SNS topic in the CloudFormation service account\. StackSets uses these permissions to notify the stack instance state in the target accounts and in the administrator account\.
+   You must add the S3 service action and resources to `AWSCloudFormationStackSetExecutionRole` policy statement for each target account for StackSets to work\. StackSets uses these permissions to notify the stack instance state in the target accounts and in the administrator account\.
 
    To create stacks in target accounts that use resources from services other than CloudFormation, you must add those service actions and resources to the `AWSCloudFormationStackSetExecutionRole` policy statement for each target account\. The following example shows a policy statement with the required permissions for StackSets\.
 
@@ -135,8 +135,7 @@ Be aware that this template grants administrator access\. After you use the temp
                "Action": 
                   [
                     "cloudformation:*",
-                    "s3:*",
-                    "sns:*"
+                    "s3:*"
                   ],
                "Resource": "*"
            }
@@ -284,8 +283,7 @@ You must scope the permissions in the policy statement to the types of resources
                "Action": 
                   [
                     "cloudformation:*",
-                    "s3:*",
-                    "sns:*"
+                    "s3:*"
                   ],
                "Resource": "*"
            }
@@ -296,7 +294,7 @@ You must scope the permissions in the policy statement to the types of resources
    You must provide the following trust policy when you create the role to define the trust relationship:
 
    ```
-   { 
+   {
      "Version": "2012-10-17", 
      "Statement": [ 
        { 
@@ -356,7 +354,6 @@ Similarly, the user can also specify a customized execution role\. If they speci
                   [
                     "cloudformation:*",
                     "s3:*",
-                    "sns:*"
                   ],
                "Resource": "*"
            },
@@ -375,7 +372,7 @@ Similarly, the user can also specify a customized execution role\. If they speci
    You must provide the following trust policy when you create the role to define the trust relationship:
 
    ```
-   { 
+   {
      "Version": "2012-10-17", 
      "Statement": [ 
        { 
@@ -389,7 +386,7 @@ Similarly, the user can also specify a customized execution role\. If they speci
    }
    ```
 
-1. Create a customized administrator role in your administrator account, as detailed in [Set up advanced permissions options for stack set operationsSet up permissions to control target account access](#stacksets-prereqs-multiadmin)\. Include a trust relationship between the customized administrator role and the customized execution roles which you want it to use\.
+1. Create a customized administrator role in your administrator account, as detailed in [Set up permissions to control target account accessSet up permissions for which users and groups can perform stack set operations in specific target accounts](#stacksets-prereqs-multiadmin)\. Include a trust relationship between the customized administrator role and the customized execution roles which you want it to use\.
 
    The following example includes an `sts::AssumeRole` policy for both the **AWSCloudFormationStackSetExecutionRole** defined for the target account, in addition to a customized execution role\.
 

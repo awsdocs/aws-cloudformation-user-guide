@@ -1,6 +1,6 @@
 # AWS::AuditManager::Assessment<a name="aws-resource-auditmanager-assessment"></a>
 
- The `AWS::AuditManager::Assessment` resource is an AWS Audit Manager resource type that defines the scope of audit evidence collected by Audit Manager\. An Audit Manager assessment is an implementation of an Audit Manager framework\. 
+The `AWS::AuditManager::Assessment` resource is an Audit Manager resource type that defines the scope of audit evidence collected by Audit Manager\. An Audit Manager assessment is an implementation of an Audit Manager framework\. 
 
 ## Syntax<a name="aws-resource-auditmanager-assessment-syntax"></a>
 
@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AssessmentReportsDestination](#cfn-auditmanager-assessment-assessmentreportsdestination)" : AssessmentReportsDestination,
       "[AwsAccount](#cfn-auditmanager-assessment-awsaccount)" : AWSAccount,
+      "[Delegations](#cfn-auditmanager-assessment-delegations)" : [ Delegation, ... ],
       "[Description](#cfn-auditmanager-assessment-description)" : String,
       "[FrameworkId](#cfn-auditmanager-assessment-frameworkid)" : String,
       "[Name](#cfn-auditmanager-assessment-name)" : String,
@@ -34,6 +35,8 @@ Properties:
     AssessmentReportsDestination
   [AwsAccount](#cfn-auditmanager-assessment-awsaccount): 
     AWSAccount
+  [Delegations](#cfn-auditmanager-assessment-delegations): 
+    - Delegation
   [Description](#cfn-auditmanager-assessment-description): String
   [FrameworkId](#cfn-auditmanager-assessment-frameworkid): String
   [Name](#cfn-auditmanager-assessment-name): String
@@ -60,6 +63,12 @@ Properties:
 *Type*: [AWSAccount](aws-properties-auditmanager-assessment-awsaccount.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Delegations`  <a name="cfn-auditmanager-assessment-delegations"></a>
+ The delegations that are associated with the assessment\.   
+*Required*: No  
+*Type*: List of [Delegation](aws-properties-auditmanager-assessment-delegation.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Description`  <a name="cfn-auditmanager-assessment-description"></a>
  The description of the assessment\.   
 *Required*: No  
@@ -69,7 +78,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FrameworkId`  <a name="cfn-auditmanager-assessment-frameworkid"></a>
-The unique identifier for the framework\.   
+The unique identifier for the framework\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `36`  
@@ -99,7 +108,9 @@ The unique identifier for the framework\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-auditmanager-assessment-status"></a>
- The overall status of the assessment\.   
+The overall status of the assessment\.  
+When you create a new assessment, the initial `Status` value is always `ACTIVE`\. When you create an assessment, even if you specify the value as `INACTIVE`, the value overrides to `ACTIVE`\.   
+After you create an assessment, you can change the value of the `Status` property at any time\. For example, when you want to stop collecting evidence for your assessment, you can change the assessment status to `INACTIVE`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ACTIVE | INACTIVE`  
@@ -115,17 +126,17 @@ The unique identifier for the framework\.
 
 ### Ref<a name="aws-resource-auditmanager-assessment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the assessment ID\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the assessment ID\. For example:
 
-            `{ "Ref": "111A1A1A-22B2-33C3-DDD4-55E5E5E555E5" }`        
+`{ "Ref": "111A1A1A-22B2-33C3-DDD4-55E5E5E555E5" }`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-auditmanager-assessment-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-auditmanager-assessment-return-values-fn--getatt-fn--getatt"></a>
 
@@ -137,9 +148,6 @@ The unique identifier for the assessment\. For example, `111A1A1A-22B2-33C3-DDD4
 
 `CreationTime`  <a name="CreationTime-fn::getatt"></a>
 The time when the assessment was created\. For example, `1607582033.373`\.
-
-`Delegations`  <a name="Delegations-fn::getatt"></a>
-The delegations associated with the assessment\. 
 
 ## See also<a name="aws-resource-auditmanager-assessment--seealso"></a>
 + [CreateAssessment](https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_CreateAssessment.html) in the *AWS Audit Manager API Reference*\.

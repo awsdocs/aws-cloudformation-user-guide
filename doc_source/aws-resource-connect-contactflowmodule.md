@@ -1,6 +1,6 @@
 # AWS::Connect::ContactFlowModule<a name="aws-resource-connect-contactflowmodule"></a>
 
-The `AWS::Connect::ContactFlowModule` resource specifies a contact flow module for the specified Amazon Connect instance\.
+Specifies a flow module for an Amazon Connect instance\.
 
 ## Syntax<a name="aws-resource-connect-contactflowmodule-syntax"></a>
 
@@ -39,7 +39,7 @@ Properties:
 ## Properties<a name="aws-resource-connect-contactflowmodule-properties"></a>
 
 `Content`  <a name="cfn-connect-contactflowmodule-content"></a>
-The content of the contact flow module\.  
+The content of the flow module\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -47,7 +47,7 @@ The content of the contact flow module\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-connect-contactflowmodule-description"></a>
-The description of the contact flow module\.  
+The description of the flow module\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -62,7 +62,7 @@ The Amazon Resource Name \(ARN\) of the Amazon Connect instance\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-connect-contactflowmodule-name"></a>
-The name of the contact flow module\.  
+The name of the flow module\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -71,7 +71,7 @@ The name of the contact flow module\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-connect-contactflowmodule-state"></a>
-The state of the contact flow module\.  
+The state of the flow module\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ACTIVE | ARCHIVED`  
@@ -88,24 +88,24 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-connect-contactflowmodule-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the contact flow module name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the flow module\. For example:
 
-`{ "Ref": "myContactFlowModuleName" }`
+`{ "Ref": "myFlowModuleName" }`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-connect-contactflowmodule-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-connect-contactflowmodule-return-values-fn--getatt-fn--getatt"></a>
 
 `ContactFlowModuleArn`  <a name="ContactFlowModuleArn-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the contact flow module Amazon Resource Name \(ARN\)\. For example:  
-`{ "Ref": "myContactFlowModuleArn" }`  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\) of the flow module\. For example:  
+`{ "Ref": "myFlowModuleArn" }`  
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 `Status`  <a name="Status-fn::getatt"></a>
 
@@ -113,23 +113,23 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Specify a contact flow module resource<a name="aws-resource-connect-contactflowmodule--examples--Specify_a_contact_flow_module_resource"></a>
+### Specify a flow module resource<a name="aws-resource-connect-contactflowmodule--examples--Specify_a_flow_module_resource"></a>
 
-The following example specifies a contact flow module resource for an Amazon Connect instance\.
+The following example specifies a flow module resource for an Amazon Connect instance\.
 
-#### YAML<a name="aws-resource-connect-contactflowmodule--examples--Specify_a_contact_flow_module_resource--yaml"></a>
+#### YAML<a name="aws-resource-connect-contactflowmodule--examples--Specify_a_flow_module_resource--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Specifies a contact flow module for an Amazon Connect instance
+Description: Specifies a flow module for an Amazon Connect instance
 Resources:
   cf11:
     Type: 'AWS::Connect::ContactFlowModule'
     Properties:
-      Name: ExampleContactFlowModule
-      Description: contact flow module created using cfn
+      Name: ExampleFlowModule
+      Description: flow module created using cfn
       InstanceArn: arn:aws:connect:region-name:aws-account-id:instance/instance-arn
-      Content: ExampleContactFlowModule content(JSON) using Amazon Connect Flow Language.
+      Content: ExampleFlowModule content(JSON) using Amazon Connect Flow Language.
       Tags:
         - Key: testkey
           Value: testValue

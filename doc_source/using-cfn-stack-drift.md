@@ -85,8 +85,9 @@ In order to successfully perform drift detection on a stack, a user must have th
 + Read permission for each resource that supports drift detection included in the stack\. For example, if the stack includes an `AWS::EC2::Instance` resource, you must have `ec2:DescribeInstances` permission to perform drift detection on the stack\.
 + `cloudformation:DetectStackDrift`
 + `cloudformation:DetectStackResourceDrift`
++ `cloudformation:BatchDescribeTypeConfigurations`
 
-For more information on setting permissions in CloudFormation, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
+For more information about setting permissions in CloudFormation, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
 
 In certain edge cases, CloudFormation may not be able to always return accurate drift results\. You should be aware of these edge cases in order to properly interpret your drift detection results\.
 + In certain cases, objects contained in property arrays will be reported as drift, when in actuality they're default values supplied to the property from the underlying service responsible for the resource\.
@@ -102,5 +103,11 @@ In certain edge cases, CloudFormation may not be able to always return accurate 
   + Property values that the service that is responsible for the resource doesn't return\.
 
     There are certain property values that, by design, are never returned by the service to which the resource belongs\. These tend to contain confidential information, such as passwords or other sensitive data that shouldn't be exposed\. For example, the IAM service will never return the value of the `Password` property of the [IAM User LoginProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html) property type, and therefore CloudFormation can't include it in drift detection results\.
-  + Objects in an array: they may be actually service defaults, not drift added manually out\-of\-band\.
-+ If you encounter any false positive, send us your comments using the feedback link in the CloudFormation console, or reach out to us through the AWS forums at [https://forums\.aws\.amazon\.com/](https://forums.aws.amazon.com/)\.
+  + Objects in an array may be actually service defaults and not drift added manually\.
++ If you encounter any false positive, send us your comments using the feedback link in the CloudFormation console, or reach out to us through [AWS re:Post](https://forums.aws.amazon.com/)\.
++ Some properties can have input values that are equal but not identical\. To avoid false positives, you should ensure that your expected configuration matches the actual configuration\.
+  + For example, the expected configuration of resource property can be 1024 MB and the actual configuration of the same resource property can be 1GB\. 1024 MB and 1GB are equal but not identical\.
+
+    When drift detection runs on this resource property, it will signal drifted results\.
+
+    To avoid this false positive, change the expected configuration of the resource property to 1024MB and then run drift detection\.

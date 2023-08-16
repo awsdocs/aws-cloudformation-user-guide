@@ -55,7 +55,8 @@ A container for information about the replication destination and its configurat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Filter`  <a name="cfn-s3-bucket-replicationrule-filter"></a>
-A filter that identifies the subset of objects to which the replication rule applies\. A `Filter` must specify exactly one `Prefix`, `TagFilter`, or an `And` child element\. The use of the filter field indicates this is a V2 replication configuration\. V1 does not have this field\.  
+A filter that identifies the subset of objects to which the replication rule applies\. A `Filter` must specify exactly one `Prefix`, `TagFilter`, or an `And` child element\. The use of the filter field indicates that this is a V2 replication configuration\. This field isn't supported in a V1 replication configuration\.  
+V1 replication configuration only supports filtering by key prefix\. To filter using a V1 replication configuration, add the `Prefix` directly as a child element of the `Rule` element\.
 *Required*: No  
 *Type*: [ReplicationRuleFilter](aws-properties-s3-bucket-replicationrulefilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -67,7 +68,7 @@ A unique identifier for the rule\. The maximum value is 255 characters\. If you 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-s3-bucket-replicationconfiguration-rules-prefix"></a>
-An object key name prefix that identifies the object or objects to which the rule applies\. The maximum prefix length is 1,024 characters\. To include all objects in a bucket, specify an empty string\.   
+An object key name prefix that identifies the object or objects to which the rule applies\. The maximum prefix length is 1,024 characters\. To include all objects in a bucket, specify an empty string\. To filter using a V1 replication configuration, add the `Prefix` directly as a child element of the `Rule` element\.  
 Replacement must be made for object keys containing special characters \(such as carriage returns\) when using XML requests\. For more information, see [ XML related object key constraints](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints)\.
 *Required*: No  
 *Type*: String  

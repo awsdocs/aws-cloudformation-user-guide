@@ -61,7 +61,7 @@ A list of regular expression patterns to exclude certain documents in your Sales
 The pattern is applied to the name of the attached file\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeAttachmentFilePatterns`  <a name="cfn-kendra-datasource-salesforceconfiguration-includeattachmentfilepatterns"></a>
@@ -69,7 +69,7 @@ A list of regular expression patterns to include certain documents in your Sales
 The pattern is applied to the name of the attached file\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KnowledgeArticleConfiguration`  <a name="cfn-kendra-datasource-salesforceconfiguration-knowledgearticleconfiguration"></a>
@@ -84,7 +84,7 @@ The Amazon Resource Name \(ARN\) of an AWS Secrets Managersecret that contains t
 + consumerKey \- The application public key generated when you created your Salesforce application\.
 + consumerSecret \- The application private key generated when you created your Salesforce application\.
 + password \- The password associated with the user logging in to the Salesforce instance\.
-+ securityToken \- The token associated with the user account logging in to the Salesforce instance\.
++ securityToken \- The token associated with the user logging in to the Salesforce instance\.
 + username \- The user name of the user logging in to the Salesforce instance\.
 *Required*: Yes  
 *Type*: String  

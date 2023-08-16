@@ -32,7 +32,7 @@ Maximum execution timeout for the deployment\. Note that the timeout value shoul
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `600`  
-*Maximum*: `14400`  
+*Maximum*: `28800`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TerminationWaitInSeconds`  <a name="cfn-sagemaker-endpoint-bluegreenupdatepolicy-terminationwaitinseconds"></a>

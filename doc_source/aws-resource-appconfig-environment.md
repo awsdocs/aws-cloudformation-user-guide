@@ -91,17 +91,17 @@ Metadata to assign to the environment\. Tags help organize and categorize your A
 
 ### Ref<a name="aws-resource-appconfig-environment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the environment ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the environment ID\.
 
 ## Examples<a name="aws-resource-appconfig-environment--examples"></a>
 
 
 
-### AWS AppConfig Environment Example<a name="aws-resource-appconfig-environment--examples--_Environment_Example"></a>
+### AWS AppConfig environment example<a name="aws-resource-appconfig-environment--examples--_environment_example"></a>
 
 The following example creates an AWS AppConfig environment named MyTestEnvironment\. An environment is a logical deployment group of AWS AppConfig targets, such as applications in a Beta or Production environment\. You can also define environments for application subcomponents such as the Web, Mobile, and Back\-end components for your application\. 
 
-#### JSON<a name="aws-resource-appconfig-environment--examples--_Environment_Example--json"></a>
+#### JSON<a name="aws-resource-appconfig-environment--examples--_environment_example--json"></a>
 
 ```
 Resources": {
@@ -124,7 +124,7 @@ Resources": {
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-environment--examples--_Environment_Example--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-environment--examples--_environment_example--yaml"></a>
 
 ```
 Resources:

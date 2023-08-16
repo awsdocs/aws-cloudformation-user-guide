@@ -1,4 +1,4 @@
-# AWS::CodeDeployBlueGreen transform<a name="transform-aws-codedeploybluegreen"></a>
+# `AWS::CodeDeployBlueGreen` transform<a name="transform-aws-codedeploybluegreen"></a>
 
 Use the `AWS::CodeDeployBlueGreen` transform to enable ECS blue/green deployments through CodeDeploy on your stack\. For more information, including a usage example, see [Perform ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html)\.
 

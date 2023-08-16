@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::OpsWorks::App",
   "Properties" : {
       "[AppSource](#cfn-opsworks-app-appsource)" : Source,
-      "[Attributes](#cfn-opsworks-app-attributes)" : {Key : Value, ...},
+      "[Attributes](#cfn-opsworks-app-attributes)" : {Key: Value, ...},
       "[DataSources](#cfn-opsworks-app-datasources)" : [ DataSource, ... ],
       "[Description](#cfn-opsworks-app-description)" : String,
       "[Domains](#cfn-opsworks-app-domains)" : [ String, ... ],
@@ -38,7 +38,7 @@ Properties:
   [AppSource](#cfn-opsworks-app-appsource): 
     Source
   [Attributes](#cfn-opsworks-app-attributes): 
-    Key : Value
+    Key: Value
   [DataSources](#cfn-opsworks-app-datasources): 
     - DataSource
   [Description](#cfn-opsworks-app-description): String
@@ -136,13 +136,13 @@ The app type\. Each supported type is associated with a particular layer\. For e
 
 ### Ref<a name="aws-resource-opsworks-app-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example: 
 
  `{ "Ref": "myApp" }` 
 
 For the AWS OpsWorks stack `myApp`, `Ref` returns the ID of the AWS OpsWorks app\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-opsworks-app--examples"></a>
 

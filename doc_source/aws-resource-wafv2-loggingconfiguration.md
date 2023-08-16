@@ -7,7 +7,11 @@ You can define one logging destination per web ACL\.
 
 You can access information about the traffic that AWS WAF inspects using the following steps:
 
-1. Create your logging destination\. You can use an Amazon CloudWatch Logs log group, an Amazon Simple Storage Service \(Amazon S3\) bucket, or an Amazon Kinesis Data Firehose\. For information about configuring logging destinations and the permissions that are required for each, see [Logging web ACL traffic information](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) in the * AWS WAF Developer Guide*\.
+1. Create your logging destination\. You can use an Amazon CloudWatch Logs log group, an Amazon Simple Storage Service \(Amazon S3\) bucket, or an Amazon Kinesis Data Firehose\. 
+
+   The name that you give the destination must start with `aws-waf-logs-`\. Depending on the type of destination, you might need to configure additional settings or permissions\. 
+
+   For configuration requirements and pricing information for each destination type, see [Logging web ACL traffic](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) in the * AWS WAF Developer Guide*\.
 
 1. Associate your logging destination to your web ACL using a `PutLoggingConfiguration` request\.
 
@@ -26,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::WAFv2::LoggingConfiguration",
   "Properties" : {
       "[LogDestinationConfigs](#cfn-wafv2-loggingconfiguration-logdestinationconfigs)" : [ String, ... ],
-      "[LoggingFilter](#cfn-wafv2-loggingconfiguration-loggingfilter)" : Json,
+      "[LoggingFilter](#cfn-wafv2-loggingconfiguration-loggingfilter)" : LoggingFilter,
       "[RedactedFields](#cfn-wafv2-loggingconfiguration-redactedfields)" : [ FieldToMatch, ... ],
       "[ResourceArn](#cfn-wafv2-loggingconfiguration-resourcearn)" : String
     }
@@ -40,7 +44,8 @@ Type: AWS::WAFv2::LoggingConfiguration
 Properties: 
   [LogDestinationConfigs](#cfn-wafv2-loggingconfiguration-logdestinationconfigs): 
     - String
-  [LoggingFilter](#cfn-wafv2-loggingconfiguration-loggingfilter): Json
+  [LoggingFilter](#cfn-wafv2-loggingconfiguration-loggingfilter): 
+    LoggingFilter
   [RedactedFields](#cfn-wafv2-loggingconfiguration-redactedfields): 
     - FieldToMatch
   [ResourceArn](#cfn-wafv2-loggingconfiguration-resourcearn): String
@@ -59,12 +64,14 @@ You can associate one logging destination to a web ACL\.
 `LoggingFilter`  <a name="cfn-wafv2-loggingconfiguration-loggingfilter"></a>
 Filtering that specifies which web requests are kept in the logs and which are dropped\. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation\.   
 *Required*: No  
-*Type*: Json  
+*Type*: [LoggingFilter](aws-properties-wafv2-loggingconfiguration-loggingfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedactedFields`  <a name="cfn-wafv2-loggingconfiguration-redactedfields"></a>
-The parts of the request that you want to keep out of the logs\. For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be `xxx`\.   
-You can specify only the following fields for redaction: `UriPath`, `QueryString`, `SingleHeader`, `Method`, and `JsonBody`\.
+The parts of the request that you want to keep out of the logs\.  
+For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be `REDACTED` for all rules that use the `SingleHeader` `FieldToMatch` setting\.   
+Redaction applies only to the component that's specified in the rule's `FieldToMatch` setting, so the `SingleHeader` redaction doesn't apply to rules that use the `Headers` `FieldToMatch`\.  
+You can specify only the following fields for redaction: `UriPath`, `QueryString`, `SingleHeader`, and `Method`\.
 *Required*: No  
 *Type*: List of [FieldToMatch](aws-properties-wafv2-loggingconfiguration-fieldtomatch.md)  
 *Maximum*: `100`  
@@ -83,15 +90,15 @@ The Amazon Resource Name \(ARN\) of the web ACL that you want to associate with 
 
 ### Ref<a name="aws-resource-wafv2-loggingconfiguration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the web ACL\. 
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\) of the web ACL\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-wafv2-loggingconfiguration-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-wafv2-loggingconfiguration-return-values-fn--getatt-fn--getatt"></a>
 

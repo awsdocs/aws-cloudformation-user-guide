@@ -9,7 +9,7 @@ There are two kinds of private extensions:
 Any use of private extensions in your account is analogous to using it in a sandbox environment\. This is because extensions are version\-controlled, and provisioning behavior is version\-specific, which means that private extensions behave the same as if they were made public\.
 
 **Note**  
-Private extensions, and activated public extensions from third\-party publishers, may implement event handlers that runs during create, read, update, list, and delete operations\. Because of this, using these extensions in your CloudFormation stacks incurs charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](https://aws.amazon.com/cloudformation/pricing/)\.
+Private extensions, and activated public extensions from third\-party publishers, may implement event handlers that runs during create, read, update, list, and delete operations\. Because of this, using these extensions in your CloudFormation stacks incurs charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](http://aws.amazon.com/cloudformation/pricing/)\.
 
 For information about developing private extensions of your own, see [CloudFormation Command Line Interface User Guide](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html)\.
 
@@ -53,7 +53,7 @@ Register your hook with CloudFormation, so it's available for use in the AWS Clo
    $ cfn submit --dry-run
    ```
 
-1. Register your hook by using the CloudFormation CLI `cfn submitWhen activating a resource, you can specify` operation\.
+1. Register your hook by using the CloudFormation CLI `cfn submit`\.
 
    ```
    cfn submit --set-default
@@ -108,6 +108,12 @@ If your extension calls AWS APIs as part of its functionality, you must create a
 
 An extension can include configuration properties meant to apply to all instances of the extension for a given account and Region\. The extension author defines these in the extension's definition configuration\. If there are any required properties in the extension's configuration definition, you must specify those properties before you can use the extension in your account and Region\.
 
+**Note**  
+If your type configuration includes dynamic references to values stored in AWS Systems Manager or AWS Secrets Manager, any role used to provision the type \(for example, when creating or updating a stack\) must have the proper permissions to retrieve that value\. Specifically:  
+If the type configuration contains a parameter stored in AWS Systems Manager Parameter Store, the user or role used to provision the type must have permissions to call [GetParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetParameter.html)\.
+If the type configuration contains a secret stored in AWS Secrets Manager, the user or role used to provision the type must have permissions to call [GetSecretValue](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html)\. 
+For more information on dynamic references, see [Using dynamic references to specify template values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
+
 For more information about how configuration definitions are defined when developing an extension, see [Defining the account\-level configuration of an extension](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html#resource-type-howto-configuration) in the *CloudFormation User Guide for Extension Development*\.
 
 **To view the current configuration data for an extension in the CloudFormation console**
@@ -123,7 +129,7 @@ For more information about how configuration definitions are defined when develo
 1. Expand the **Configuration** tab to see the current configuration that you have set for this extension\.
 
 **To view the current configuration data for an extension in the AWS CLI**
-+ Use the [describe\-type](cli/latest/reference/cloudformation/describe-type.html) command to return detailed information about the extension\. The `ConfigurationSchema` element of the output contains the current configuration definition of the extension in a given Region\.
++ Use the [describe\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-type.html) command to return detailed information about the extension\. The `ConfigurationSchema` element of the output contains the current configuration definition of the extension in a given Region\.
 
   Alternatively, use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/batch-describe-type-configurations.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/batch-describe-type-configurations.html) command to return configuration data about multiple extensions\.
 
@@ -156,7 +162,7 @@ For more information about how configuration definitions are defined when develo
       --type RESOURCE \
       --type-name My::Resource::Example \
       --configuration-alias default \
-      --configuration "{\"CredentialKey\": \"testUserCredential\"}"
+      --configuration "{"CredentialKey": "testUserCredential"}"
   ```
 
 ## Specifying a version of a private extension to use using the AWS CLI<a name="registry-set-version"></a>

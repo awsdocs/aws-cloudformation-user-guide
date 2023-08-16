@@ -11,7 +11,7 @@ There are two kinds of public extensions:
   You can publish your own third\-party extensions to make them available to general CloudFormation users\. For more information, see [Publishing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish.html) in the *CloudFormation Command Line Interface User Guide*\.
 
 **Note**  
-As with private extensions, public extensions from third\-party publishers may implement event handlers that runs during resource create, read, update, list, and delete stack operations\. Because of this, using these extensions in your CloudFormation stacks may incur charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](https://aws.amazon.com/cloudformation/pricing/)\.
+As with private extensions, public extensions from third\-party publishers may implement event handlers that runs during resource create, read, update, list, and delete stack operations\. Because of this, using these extensions in your CloudFormation stacks may incur charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](http://aws.amazon.com/cloudformation/pricing/)\.
 
 ## Activating public extensions for use in your AWS account<a name="registry-public-enable"></a>
 
@@ -55,20 +55,19 @@ While extension aliases are only required to be unique in a given account and re
 
 When activating a resource, you can specify the IAM execution role for CloudFormation to assume when invoking that extension in your account and region\.
 
-In order for CloudFormation to assume the execution role, the role must have a trust policy defined with CloudFormation\. In addition, if the extension requires permissions to perform an operation, you must include these in the execution role\. The required permissions are defined in the handler section of the extension schema\.
+In order for CloudFormation to assume the execution role, the role must have a trust policy defined with CloudFormation\. In addition, permission to perform an operation is granted by creating an IAM policy and attaching to the execution role\. The required permissions are defined in the handler section of the extension schema\.
 
-The following is an example for resource type and hook extension\.
+The following is an example IAM Role trust policy for the resource type extension:
 
 ```
 {
-    "Version":"2012-10-17",
+    "Version": "2012-10-17",
     "Statement":[
         {
-            "Effect":"Allow",
-            "Principal": [
-                "Service":"resources.cloudformation.amazonaws.com",
-                "Service":"hooks.cloudformation.amazonaws.com"
-            ],
+            "Effect": "Allow",
+            "Principal":{
+                "Service": "resources.cloudformation.amazonaws.com"
+            },
             "Action":"sts:AssumeRole",
             "Condition":{
                 "StringEquals":{
@@ -76,6 +75,34 @@ The following is an example for resource type and hook extension\.
                 },
                 "StringLike":{
                     "aws:SourceArn":"arn:aws:cloudformation:us-east-1:123456789012:type/resource/Organization-Service-Resource/*"
+                }
+            }
+        }
+    ]
+}
+```
+
+The following is an example IAM Role trust policy for the hook extension:
+
+```
+{
+    "Version":"2012-10-17",
+    "Statement":[
+        {
+            "Effect":"Allow",
+            "Principal": {
+                "Service": [
+                    "resources.cloudformation.amazonaws.com",
+                    "hooks.cloudformation.amazonaws.com"
+                ]
+            },
+            "Action":"sts:AssumeRole",
+            "Condition":{
+                "StringEquals":{
+                    "aws:SourceAccount":"123456789012"
+                },
+                "StringLike":{
+                     "aws:SourceArn":"arn:aws:cloudformation:us-east-1:123456789012:type/hook/Organization-Service-Hook/*"
                 }
             }
         }
@@ -196,7 +223,7 @@ By enabling hooks in your account, you are authorizing a hook to use defined per
 
   ```
   aws cloudformation --region us-west-2 set-type-configuration \
-    --configuration "{\"CloudFormationConfiguration\":{\"HookConfiguration\":{\"TargetStacks\":\"ALL\",\"FailureMode\":\"FAIL\",\"Properties\":{}}}}" \
+    --configuration "{"CloudFormationConfiguration":{"HookConfiguration":{"TargetStacks": "ALL", "FailureMode": "FAIL", "Properties":{}}}}" \
     --type-arn $HOOK_TYPE_ARN
   ```
 **Important**  
@@ -252,7 +279,7 @@ The following sections show how to deactivate public extensions in your account\
 
 #### To deactivate a public extension in your account using the AWS CLI<a name="registry-public-deactivate-extension-cli"></a>
 
-To deactivate a public extension in your account, specify the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/deactivate-type.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/deactivate-type.html)\. The following is an example of an AWS CLI deactivate command\.
+To deactivate a public extension in your account, specify the [deactivate\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/deactivate-type.html)\. The following is an example of an AWS CLI deactivate command\.
 
 ```
 aws cloudformation deactivate-type \
@@ -274,6 +301,6 @@ The following example specifies the AWS Region and the Amazon Resource Name \(AR
 ```
 aws cloudformation set-type-configuration \
   --region us-west-2 \
-  --configuration "{\"CloudFormationConfiguration\":{\"HookConfiguration\":{\"TargetStacks\":\"NONE\",\"FailureMode\":\"FAIL\",\"Properties\":{}}}}" \
+  --configuration "{"CloudFormationConfiguration":{"HookConfiguration":{"TargetStacks": "NONE", "FailureMode": "FAIL", "Properties":{}}}}" \
   --type-arn HOOK_TYPE_ARN
 ```

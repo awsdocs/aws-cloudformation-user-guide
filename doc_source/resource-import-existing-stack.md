@@ -11,27 +11,27 @@ In this walkthrough, we provide the following example template, called `Template
     "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "Import test",
     "Resources": {
-         "ServiceTable":{
-           "Type":"AWS::DynamoDB::Table",
-           "Properties":{
-              "TableName":"Service",
-              "AttributeDefinitions":[
-                 {
-                    "AttributeName":"key",
-                    "AttributeType":"S"
-                 }
-              ],
-              "KeySchema":[
-                 {
-                    "AttributeName":"key",
-                    "KeyType":"HASH"
-                 }
-              ],
-              "ProvisionedThroughput":{
-                 "ReadCapacityUnits":5,
-                 "WriteCapacityUnits":1
-              }
-           }
+        "ServiceTable": {
+            "Type": "AWS::DynamoDB::Table",
+            "Properties": {
+                "TableName": "Service",
+                "AttributeDefinitions": [
+                    {
+                        "AttributeName": "key",
+                        "AttributeType": "S"
+                    }
+                ],
+                "KeySchema": [
+                    {
+                        "AttributeName": "key",
+                        "KeyType": "HASH"
+                    }
+                ],
+                "ProvisionedThroughput": {
+                    "ReadCapacityUnits": 5,
+                    "WriteCapacityUnits": 1
+                }
+            }
         },
         "GamesTable": {
             "Type": "AWS::DynamoDB::Table",
@@ -61,6 +61,9 @@ In this walkthrough, we provide the following example template, called `Template
 ```
 
 ## Import an existing resource into a stack using the AWS Management Console<a name="resource-import-existing-stack-console"></a>
+
+**Note**  
+The AWS CloudFormation console doesn't support the use of the intrinsic function Fn::Transform when importing resources\. You can use the AWS Command Line Interface to import resources that use of the intrinsic function Fn::Transform\.
 
 1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
@@ -161,7 +164,7 @@ The import operation fails if you modify existing parameters that initiate a cre
    { "Stack-Drift-Detection-Id" : "624af370-311a-11e8-b6b7-500cexample" }
    
    > aws cloudformation describe-stack-drift-detection-status --stack-drift-detection-id 624af370-311a-11e8-b6b7-500cexample
-               
+   
    > aws cloudformation describe-stack-resource-drifts --stack-name TargetStack
    ```
 

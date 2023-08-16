@@ -2,6 +2,9 @@
 
 `WebhookFilter` is a structure of the `FilterGroups` property on the [AWS CodeBuild Project ProjectTriggers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html) property type that specifies which webhooks trigger an AWS CodeBuild build\.
 
+**Note**  
+The Webhook feature isn't available in AWS CloudFormation for GitHub Enterprise projects\. Use the AWS CLI or AWS CodeBuild console to create the webhook\.
+
 ## Syntax<a name="aws-properties-codebuild-project-webhookfilter-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

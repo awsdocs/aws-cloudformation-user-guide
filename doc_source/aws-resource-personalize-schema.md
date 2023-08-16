@@ -67,17 +67,58 @@ The schema\.
 
 ### Ref<a name="aws-resource-personalize-schema-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the resource\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-personalize-schema-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-personalize-schema-return-values-fn--getatt-fn--getatt"></a>
 
 `SchemaArn`  <a name="SchemaArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the schema\.
+
+## Examples<a name="aws-resource-personalize-schema--examples"></a>
+
+
+
+### Creating a schema<a name="aws-resource-personalize-schema--examples--Creating_a_schema"></a>
+
+The following example creates an Amazon Personalize schema for an Interactions dataset\.
+
+#### JSON<a name="aws-resource-personalize-schema--examples--Creating_a_schema--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MySchema": {
+            "Type": "AWS::Personalize::Schema",
+            "Properties": {
+                "Name": "my-schema-name",
+                "Schema": "{\"type\": \"record\",\"name\": \"Interactions\", \"namespace\": \"com.amazonaws.personalize.schema\", \"fields\": [ { \"name\": \"USER_ID\", \"type\": \"string\" }, { \"name\": \"ITEM_ID\", \"type\": \"string\" }, { \"name\": \"TIMESTAMP\", \"type\": \"long\"}], \"version\": \"1.0\"}"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-personalize-schema--examples--Creating_a_schema--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MySchema:
+    Type: AWS::Personalize::Schema
+    Properties: 
+      Name: "my-schema-name"
+      Schema: >-
+        {"type": "record","name": "Interactions", "namespace":
+        "com.amazonaws.personalize.schema", "fields": [ { "name": "USER_ID",
+        "type": "string" }, { "name": "ITEM_ID", "type": "string" }, { "name":
+        "TIMESTAMP", "type": "long"}], "version": "1.0"}
+```

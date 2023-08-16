@@ -45,13 +45,18 @@ Properties:
 ## Properties<a name="aws-resource-wafv2-ipset-properties"></a>
 
 `Addresses`  <a name="cfn-wafv2-ipset-addresses"></a>
-Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter\-Domain Routing \(CIDR\) notation\. AWS WAF supports all IPv4 and IPv6 CIDR ranges except for /0\.   
-Examples:   
+Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses\. All addresses must be specified using Classless Inter\-Domain Routing \(CIDR\) notation\. AWS WAF supports all IPv4 and IPv6 CIDR ranges except for `/0`\.   
+Example address strings:   
 + To configure AWS WAF to allow, block, or count requests that originated from the IP address 192\.0\.2\.44, specify `192.0.2.44/32`\.
 + To configure AWS WAF to allow, block, or count requests that originated from IP addresses from 192\.0\.2\.0 to 192\.0\.2\.255, specify `192.0.2.0/24`\.
 + To configure AWS WAF to allow, block, or count requests that originated from the IP address 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`\.
 + To configure AWS WAF to allow, block, or count requests that originated from IP addresses 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify `1111:0000:0000:0000:0000:0000:0000:0000/64`\.
 For more information about CIDR notation, see the Wikipedia entry [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)\.  
+Example JSON `Addresses` specifications:   
++ Empty array: `"Addresses": []` 
++ Array with one address: `"Addresses": ["192.0.2.44/32"]` 
++ Array with three addresses: `"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]` 
++ INVALID specification: `"Addresses": [""]` INVALID 
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,14 +71,14 @@ A description of the IP set that helps with identification\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IPAddressVersion`  <a name="cfn-wafv2-ipset-ipaddressversion"></a>
-Specify IPV4 or IPV6\.   
+The version of the IP addresses, either `IPV4` or `IPV6`\.   
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `IPV4 | IPV6`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-ipset-name"></a>
-The descriptive name of the IP set\. You cannot change the name of an `IPSet` after you create it\.  
+The name of the IP set\. You cannot change the name of an `IPSet` after you create it\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -82,7 +87,7 @@ The descriptive name of the IP set\. You cannot change the name of an `IPSet` af
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Scope`  <a name="cfn-wafv2-ipset-scope"></a>
-Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.   
+Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.   
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
@@ -105,6 +110,10 @@ For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`\.
 
 ### Fn::GetAtt<a name="aws-resource-wafv2-ipset-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-wafv2-ipset-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
@@ -121,6 +130,20 @@ The ID of the IP set\.
 
 The following shows an example IP set specification\. 
 
+#### YAML<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--yaml"></a>
+
+```
+ SampleIPSet:
+      Type: 'AWS::WAFv2::IPSet'
+      Properties:
+        Description: SampleIPSet
+        Name: SampleIPSet
+        Scope: REGIONAL
+        IPAddressVersion: IPV4
+        Addresses:
+          - 1.2.1.1/32
+```
+
 #### JSON<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--json"></a>
 
 ```
@@ -136,18 +159,4 @@ The following shows an example IP set specification\.
         ]
       }
     }
-```
-
-#### YAML<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--yaml"></a>
-
-```
- SampleIPSet:
-      Type: 'AWS::WAFv2::IPSet'
-      Properties:
-        Description: SampleIPSet
-        Name: SampleIPSet
-        Scope: REGIONAL
-        IPAddressVersion: IPV4
-        Addresses:
-          - 1.2.1.1/32
 ```

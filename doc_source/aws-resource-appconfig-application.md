@@ -72,17 +72,17 @@ Metadata to assign to the application\. Tags help organize and categorize your A
 
 ### Ref<a name="aws-resource-appconfig-application-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the application ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the application ID\.
 
 ## Examples<a name="aws-resource-appconfig-application--examples"></a>
 
 
 
-### AWS AppConfig Application Example<a name="aws-resource-appconfig-application--examples--_Application_Example"></a>
+### AWS AppConfig application example<a name="aws-resource-appconfig-application--examples--_application_example"></a>
 
 The following example creates a simple AWS AppConfig application named MyTestApplication\. An application in AWS AppConfig is a logical unit of code that provides capabilities for your customers\. For example, an application can be a microservice that runs on Amazon EC2 instances, a mobile application installed by your users, a serverless application using Amazon API Gateway and AWS Lambda, or any system you run on behalf of others\. 
 
-#### JSON<a name="aws-resource-appconfig-application--examples--_Application_Example--json"></a>
+#### JSON<a name="aws-resource-appconfig-application--examples--_application_example--json"></a>
 
 ```
 BasicApplication": {
@@ -101,7 +101,7 @@ BasicApplication": {
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-application--examples--_Application_Example--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-application--examples--_application_example--yaml"></a>
 
 ```
 BasicApplication:

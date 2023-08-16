@@ -14,9 +14,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ActionId](#cfn-fis-experimenttemplate-experimenttemplateaction-actionid)" : String,
   "[Description](#cfn-fis-experimenttemplate-experimenttemplateaction-description)" : String,
-  "[Parameters](#cfn-fis-experimenttemplate-experimenttemplateaction-parameters)" : {Key : Value, ...},
+  "[Parameters](#cfn-fis-experimenttemplate-experimenttemplateaction-parameters)" : {Key: Value, ...},
   "[StartAfter](#cfn-fis-experimenttemplate-experimenttemplateaction-startafter)" : [ String, ... ],
-  "[Targets](#cfn-fis-experimenttemplate-experimenttemplateaction-targets)" : {Key : Value, ...}
+  "[Targets](#cfn-fis-experimenttemplate-experimenttemplateaction-targets)" : {Key: Value, ...}
 }
 ```
 
@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ActionId](#cfn-fis-experimenttemplate-experimenttemplateaction-actionid): String
   [Description](#cfn-fis-experimenttemplate-experimenttemplateaction-description): String
   [Parameters](#cfn-fis-experimenttemplate-experimenttemplateaction-parameters): 
-    Key : Value
+    Key: Value
   [StartAfter](#cfn-fis-experimenttemplate-experimenttemplateaction-startafter): 
     - String
   [Targets](#cfn-fis-experimenttemplate-experimenttemplateaction-targets): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-fis-experimenttemplate-experimenttemplateaction-properties"></a>

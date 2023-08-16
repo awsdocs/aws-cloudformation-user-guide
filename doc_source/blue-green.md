@@ -38,7 +38,7 @@ In order to perform ECS blue/green deployment using CodeDeploy through CloudForm
 | Two target groups | [AWS::ElasticLoadBalancingV2::TargetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html) | Required\. | No | 
 | Amazon ECS task definition  | [AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html) | Required\. | Yes | 
 | Container for your Amazon ECS application | [AWS::ECS::TaskDefinition ContainerDefinition Name](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-name.html) | Required\. | No | 
-| Port for your replacement task set | [AWS::ECS::TaskDefinition PortMapping ContainerPort](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.html#cfn-ecs-taskdefinition-containerdefinition-portmappings-containerport.html) | Required\. | No | 
+| Port for your replacement task set | [AWS::ECS::TaskDefinition PortMapping ContainerPort](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-portmapping.html#cfn-ecs-taskdefinition-portmapping-containerport) | Required\. | No | 
 
 ## Resource updates that trigger green deployments<a name="blue-green-resources"></a>
 
@@ -96,58 +96,64 @@ You can view the stack events generated at each step of the ECS deployment on th
 
 ```
 "Hooks": {
-      "Logical ID": {
-        "Properties": {
-            "TrafficRoutingConfig": {
-                "Type": "Traffic routing type"
-                "TimeBasedCanary": {
-                    "StepPercentage": Integer,
-                    "BakeTimeMins": Integer
-                }
-                "TimeBasedLinear": {
-                    "StepPercentage": Integer,
-                    "BakeTimeMins": Integer
-                }
-            },
-              "AdditionalOptions": {
-                "TerminationWaitTimeInMinutes": Integer
-              },
-            "LifecycleEventHooks": {
-                "BeforeInstall": "FunctionName",
-                "AfterInstall": "FunctionName",
-                "AfterAllowTestTraffic": "FunctionName",
-                "BeforeAllowTraffic": "FunctionName",
-                "AfterAllowTraffic": "FunctionName"
-            },
-            "ServiceRole": "CodeDeployServiceRoleName",
-            "Applications": [{
-                "Target": {
-                    "Type": "AWS::ECS::Service",
-                    "LogicalID": "Resource Logical ID"
-                },
-                "ECSAttributes": {
-                  "TaskDefinitions": ["AWS::ECS::TaskDefinition Resource Logical ID (Blue)", "AWS::ECS::TaskDefinition Resource Logical ID (Green)"],
-                  "TaskSets": ["AWS::ECS::TaskSet Resource Logical ID (Blue)", "AWS::ECS::TaskSet Resource Logical ID (Green)"],
-                  "TrafficRouting": {
-                    "ProdTrafficRoute": {
-                      "Type": "AWS::ElasticLoadBalancingV2::Listener",
-                      "LogicalID": "Resource Logical ID (Production)"
-                    },
-                    "TestTrafficRoute": {
-                      "Type": "AWS::ElasticLoadBalancingV2::Listener",                
-                      "LogicalID": "Resource Logical ID (Test)"             
-                    },
-                    "TargetGroups": [
-                      "AWS::ElasticLoadBalancingV2::TargetGroup Resource Logical ID (Blue)",
-                      "AWS::ElasticLoadBalancingV2::TargetGroup Resource Logical ID (Green)"
-                    ]
-                  }
-                }
-              }
-        ]
+  "Logical ID": {
+    "Properties": {
+      "TrafficRoutingConfig": {
+        "Type": "Traffic routing type",
+        "TimeBasedCanary": {
+          "StepPercentage": Integer,
+          "BakeTimeMins": Integer
+        },
+        "TimeBasedLinear": {
+          "StepPercentage": Integer,
+          "BakeTimeMins": Integer
+        }
       },
-        "Type": "AWS::CodeDeploy::BlueGreen"
-    }
+      "AdditionalOptions": {"TerminationWaitTimeInMinutes": Integer},
+      "LifecycleEventHooks": {
+        "BeforeInstall": "FunctionName",
+        "AfterInstall": "FunctionName",
+        "AfterAllowTestTraffic": "FunctionName",
+        "BeforeAllowTraffic": "FunctionName",
+        "AfterAllowTraffic": "FunctionName"
+      },
+      "ServiceRole": "CodeDeployServiceRoleName",
+      "Applications": [
+        {
+          "Target": {
+            "Type": "AWS::ECS::Service",
+            "LogicalID": "Resource Logical ID"
+          },
+          "ECSAttributes": {
+            "TaskDefinitions": [
+              "AWS::ECS::TaskDefinition Resource Logical ID (Blue)",
+              "AWS::ECS::TaskDefinition Resource Logical ID (Green)"
+            ],
+            "TaskSets": [
+              "AWS::ECS::TaskSet Resource Logical ID (Blue)",
+              "AWS::ECS::TaskSet Resource Logical ID (Green)"
+            ],
+            "TrafficRouting": {
+              "ProdTrafficRoute": {
+                "Type": "AWS::ElasticLoadBalancingV2::Listener",
+                "LogicalID": "Resource Logical ID (Production)"
+              },
+              "TestTrafficRoute": {
+                "Type": "AWS::ElasticLoadBalancingV2::Listener",
+                "LogicalID": "Resource Logical ID (Test)"
+              },
+              "TargetGroups": [
+                "AWS::ElasticLoadBalancingV2::TargetGroup Resource Logical ID (Blue)",
+                "AWS::ElasticLoadBalancingV2::TargetGroup Resource Logical ID (Green)"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Type": "AWS::CodeDeploy::BlueGreen"
+  }
+}
 ```
 
 ### Properties<a name="blue-green-template-reference-props"></a>

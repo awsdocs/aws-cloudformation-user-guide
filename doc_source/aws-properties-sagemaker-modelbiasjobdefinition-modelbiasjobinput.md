@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[BatchTransformInput](#cfn-sagemaker-modelbiasjobdefinition-modelbiasjobinput-batchtransforminput)" : BatchTransformInput,
   "[EndpointInput](#cfn-sagemaker-modelbiasjobdefinition-modelbiasjobinput-endpointinput)" : EndpointInput,
   "[GroundTruthS3Input](#cfn-sagemaker-modelbiasjobdefinition-modelbiasjobinput-groundtruths3input)" : MonitoringGroundTruthS3Input
 }
@@ -18,6 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-sagemaker-modelbiasjobdefinition-modelbiasjobinput-syntax.yaml"></a>
 
 ```
+  [BatchTransformInput](#cfn-sagemaker-modelbiasjobdefinition-modelbiasjobinput-batchtransforminput): 
+    BatchTransformInput
   [EndpointInput](#cfn-sagemaker-modelbiasjobdefinition-modelbiasjobinput-endpointinput): 
     EndpointInput
   [GroundTruthS3Input](#cfn-sagemaker-modelbiasjobdefinition-modelbiasjobinput-groundtruths3input): 
@@ -26,9 +29,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-sagemaker-modelbiasjobdefinition-modelbiasjobinput-properties"></a>
 
+`BatchTransformInput`  <a name="cfn-sagemaker-modelbiasjobdefinition-modelbiasjobinput-batchtransforminput"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [BatchTransformInput](aws-properties-sagemaker-modelbiasjobdefinition-batchtransforminput.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `EndpointInput`  <a name="cfn-sagemaker-modelbiasjobdefinition-modelbiasjobinput-endpointinput"></a>
-Input object for the endpoint\.  
-*Required*: Yes  
+Input object for the endpoint  
+*Required*: No  
 *Type*: [EndpointInput](aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

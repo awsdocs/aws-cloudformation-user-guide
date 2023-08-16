@@ -1,6 +1,6 @@
 # AWS::Kendra::Index DocumentMetadataConfiguration<a name="aws-properties-kendra-index-documentmetadataconfiguration"></a>
 
-Specifies the properties of a custom index field\.
+Specifies the properties, such as relevance tuning and searchability, of an index field\.
 
 ## Syntax<a name="aws-properties-kendra-index-documentmetadataconfiguration-syntax"></a>
 
@@ -39,7 +39,7 @@ The name of the index field\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Relevance`  <a name="cfn-kendra-index-documentmetadataconfiguration-relevance"></a>
-Provides manual tuning parameters to determine how the field affects the search results\.  
+Provides tuning parameters to determine how the field affects the search results\.  
 *Required*: No  
 *Type*: [Relevance](aws-properties-kendra-index-relevance.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

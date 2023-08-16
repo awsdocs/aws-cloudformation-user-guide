@@ -2,7 +2,10 @@
 
 Adds the specified user to the specified group\.
 
-Calling this action requires developer credentials\.
+**Note**  
+Amazon Cognito evaluates AWS Identity and Access Management \(IAM\) policies in requests for this API operation\. For this operation, you must use IAM credentials to authorize requests, and you must grant yourself the corresponding IAM permission in a policy\.  
+ [Signing AWS API Requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-signing.html) 
+ [Using the Amazon Cognito user pools API and user pool endpoints](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pools-API-operations.html) 
 
 ## Syntax<a name="aws-resource-cognito-userpoolusertogroupattachment-syntax"></a>
 
@@ -64,6 +67,6 @@ The user pool ID for the user pool\.
 
 ### Ref<a name="aws-resource-cognito-userpoolusertogroupattachment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a generated ID, such as `UserToGroupAttachment-YejJvzrEXAMPLE`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a generated ID, such as `UserToGroupAttachment-YejJvzrEXAMPLE`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

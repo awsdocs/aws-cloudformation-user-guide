@@ -152,7 +152,7 @@ A set of tags to associate with the DAX cluster\.
 
 ### Ref<a name="aws-resource-dax-cluster-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the created DAX cluster\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the created DAX cluster\. For example:
 
 ```
 { "Ref": "MyResource" }
@@ -164,7 +164,7 @@ A set of tags to associate with the DAX cluster\.
 MyDAXCluster
 ```
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-dax-cluster-return-values-fn--getatt"></a>
 

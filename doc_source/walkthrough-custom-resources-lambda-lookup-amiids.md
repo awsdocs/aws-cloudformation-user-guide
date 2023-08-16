@@ -90,7 +90,7 @@ To create the Lambda function, you declare the `AWS::Lambda::Function` resource,
       "S3Key": { "Ref": "S3Key" }
     },
     "Handler": { "Fn::Join" : [ "", [{ "Ref": "ModuleName" },".handler"] ] },
-    "Runtime": "nodejs8.10",
+    "Runtime": "nodejs18.x",
     "Timeout": "30",
     "Role": { "Fn::GetAtt" : ["LambdaExecutionRole", "Arn"] }
   }
@@ -107,12 +107,12 @@ AMIInfoFunction:
       S3Bucket: !Ref S3Bucket
       S3Key: !Ref S3Key
     Handler: !Sub "${ModuleName}.handler"
-    Runtime: nodejs8.10
+    Runtime: nodejs18.x
     Timeout: 30
     Role: !GetAtt LambdaExecutionRole.Arn
 ```
 
-The `Code` property specifies the Amazon S3 location \(bucket name and file name\) where you uploaded the sample package\. The sample template uses input parameters \(`"Ref": "S3Bucket"` and `"Ref": "S3Key"`\) to set the bucket and file names so that you are able to specify the names when you create the stack\. Similarly, the handler name, which corresponds to the name of the source file \(the JavaScript file\) in the `.zip` package, also uses an input parameter \(`"Ref": "ModuleName"`\)\. Because the source file is JavaScript code, the runtime is specified as `nodejs8.10`\.
+The `Code` property specifies the Amazon S3 location \(bucket name and file name\) where you uploaded the sample package\. The sample template uses input parameters \(`"Ref": "S3Bucket"` and `"Ref": "S3Key"`\) to set the bucket and file names so that you are able to specify the names when you create the stack\. Similarly, the handler name, which corresponds to the name of the source file \(the JavaScript file\) in the `.zip` package, also uses an input parameter \(`"Ref": "ModuleName"`\)\. Because the source file is JavaScript code, the runtime is specified as `nodejs18.x`\.
 
 For this walkthrough, the execution time for the function exceeds the default value of `3` seconds, so the timeout is set to `30` seconds\. If you don't specify a sufficiently long timeout, Lambda might cause a timeout before the function can complete, causing stack creation to fail\.
 
@@ -308,7 +308,7 @@ If stack creation succeeds, all resources in the stack, such as the Lambda funct
 
 To see which AMI ID AWS CloudFormation used to create the EC2 instance, view the stack outputs\.
 
-If the Lambda function returns an error, view the function's logs in the Amazon CloudWatch Logs [console](https://console.aws.amazon.com/cloudwatch/home#logs:)\. The name of the log stream is the physical ID of the custom resource, which you can find by viewing the stack's resources\. For more information, see [Viewing log data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/ViewingLogData.html) in the *Amazon CloudWatch User Guide*\.
+If the Lambda function returns an error, view the function's logs in the Amazon CloudWatch Logs [console](https://console.aws.amazon.com/cloudwatch/home#logs:)\. The name of the log stream is the physical ID of the custom resource, which you can find by viewing the stack's resources\. For more information, see [Viewing log data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html#ViewingLogData) in the *Amazon CloudWatch User Guide*\.
 
 ## Step 3: Clean up resources<a name="walkthrough-custom-resources-lambda-lookup-amiids-createfunction-cleanup"></a>
 
@@ -326,5 +326,5 @@ All the resources that you created are deleted\.
 
 Now that you understand how to create and use Lambda functions with AWS CloudFormation, you can use the sample template and code from this walkthrough to build other stacks and functions\.
 
-## Related information<a name="w11339ab1c23c23c16b7c29"></a>
+## Related information<a name="w4ab1c23c23c16b7c29"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)

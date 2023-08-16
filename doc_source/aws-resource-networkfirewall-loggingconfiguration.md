@@ -63,11 +63,11 @@ Defines how AWS Network Firewall performs logging for a [AWS::NetworkFirewall::F
 
 ### Ref<a name="aws-resource-networkfirewall-loggingconfiguration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the firewall that the logging configuration is associated with\. For example: 
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\) of the firewall that the logging configuration is associated with\. For example: 
 
  `{ "Ref": "arn:aws:network-firewall:us-east-1:012345678901:firewall/myFirewallName" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-networkfirewall-loggingconfiguration--examples"></a>
 

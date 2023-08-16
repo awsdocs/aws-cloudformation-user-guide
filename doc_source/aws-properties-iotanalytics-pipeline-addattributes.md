@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-iotanalytics-pipeline-addattributes-attributes)" : {Key : Value, ...},
+  "[Attributes](#cfn-iotanalytics-pipeline-addattributes-attributes)" : {Key: Value, ...},
   "[Name](#cfn-iotanalytics-pipeline-addattributes-name)" : String,
   "[Next](#cfn-iotanalytics-pipeline-addattributes-next)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-iotanalytics-pipeline-addattributes-attributes): 
-    Key : Value
+    Key: Value
   [Name](#cfn-iotanalytics-pipeline-addattributes-name): String
   [Next](#cfn-iotanalytics-pipeline-addattributes-next): String
 ```

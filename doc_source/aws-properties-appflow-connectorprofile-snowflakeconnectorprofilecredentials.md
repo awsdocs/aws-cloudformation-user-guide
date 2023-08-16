@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SnowflakeConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials"></a>
 
- The `SnowflakeConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Snowflake\. 
+ The connector\-specific profile credentials required when using Snowflake\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials-syntax"></a>
 

@@ -38,12 +38,12 @@ Playback\-key\-pair name\. The value does not need to be unique\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9-_]*$`  
+*Pattern*: `[a-zA-Z0-9-_]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PublicKeyMaterial`  <a name="cfn-ivs-playbackkeypair-publickeymaterial"></a>
 The public portion of a customer\-generated key pair\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -58,19 +58,19 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-ivs-playbackkeypair-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the playback key pair ARN\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the playback key pair ARN\. For example:
 
  `{ "Ref": "myPlaybackKeyPair" }` 
 
 For the Amazon IVS playback key pair `myPlaybackKeyPair`, `Ref` returns the playback key pair ARN\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ivs-playbackkeypair-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ivs-playbackkeypair-return-values-fn--getatt-fn--getatt"></a>
 

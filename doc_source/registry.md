@@ -73,7 +73,7 @@ If you use an IAM role to perform your stack operations, that IAM role must have
 + Configure AWS Config to record all resource types\. For more information, see [Record configurations for third\-party resources](https://docs.aws.amazon.com/config/latest/developerguide/customresources.html) in the *AWS Config Developer Guide*\.
 **Note**  
 AWS Config doesn't support recording of private resources containing properties defined as both required *and* write\-only\.  
-By design, resource properties defined as write\-only aren't returned in the schema used to create AWS Config configuration item\. Because of this, including a property that's defined as both write\-only and required will cause the configuration item creation to fail, as a required property won't be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\.
+By design, resource properties defined as write\-only aren't returned in the schema used to create AWS Config configuration item\. Because of this, including a property that's defined as both write\-only and required will cause the configuration item creation to fail, as a required property will not be present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\.
 
 For more information about configuration items, see [Configuration items](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-items) in the *AWS Config Developer Guide*\.
 
@@ -94,7 +94,7 @@ The value of `aws:SourceArn` must use the extension's ARN\.
 The most effective way to protect against the confused deputy problem is to use the `aws:SourceArn` global condition context key with the full ARN of the resource\. If you don't know the full ARN of the extension or if you are specifying multiple extensions, use the `aws:SourceArn` global context condition key with wildcards \(`*`\) for the unknown portions of the ARN\. For example, `arn:aws:cloudformation:*:123456789012:*`\.
 
 **Note**  
-For registry services, CloudFormation makes calls to AWS Security Token Service \(AWS STS\) to assume a role in your account\. This role is configured for `ExecutionRoleArn` in the [RegisterType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html) operation and `LogRoleArn` set in the [LoggingConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html) operation\.
+For registry services, CloudFormation makes calls to AWS Security Token Service \(AWS STS\) to assume a role in your account\. This role is configured for `ExecutionRoleArn` in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html) operation and `LogRoleArn` set in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html) operation\.
 
 The following example shows how you can use the `aws:SourceArn` and `aws:SourceAccount` global condition context keys in AWS CloudFormation to prevent the confused deputy problem\.
 

@@ -91,9 +91,16 @@ The layer's software license\. It can be any of the following:
 
 ### Ref<a name="aws-resource-lambda-layerversion-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the layer version, such as `arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the layer version, such as `arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-lambda-layerversion-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-lambda-layerversion-return-values-fn--getatt-fn--getatt"></a>
+
+`LayerVersionArn`  <a name="LayerVersionArn-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-lambda-layerversion--examples"></a>
 

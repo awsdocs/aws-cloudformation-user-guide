@@ -114,7 +114,7 @@ The name of the patch baseline\.
 Defines the operating system the patch baseline applies to\. The default value is `WINDOWS`\.   
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | CENTOS | DEBIAN | MACOS | ORACLE_LINUX | RASPBIAN | REDHAT_ENTERPRISE_LINUX | SUSE | UBUNTU | WINDOWS`  
+*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | AMAZON_LINUX_2022 | AMAZON_LINUX_2023 | CENTOS | DEBIAN | MACOS | ORACLE_LINUX | RASPBIAN | REDHAT_ENTERPRISE_LINUX | ROCKY_LINUX | SUSE | UBUNTU | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PatchGroups`  <a name="cfn-ssm-patchbaseline-patchgroups"></a>
@@ -161,12 +161,12 @@ Optional metadata that you assign to a resource\. Tags enable you to categorize 
 
 ### Ref<a name="aws-resource-ssm-patchbaseline-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the patch baseline ID, such as `pb-abcde1234567890yz`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the patch baseline ID, such as `pb-abcde1234567890yz`\.
 
 **Note**  
 The ID of the default patch baseline provided by AWS is an ARN, for example `arn:aws:ssm:us-west-2:123456789012:patchbaseline/abcde1234567890yz`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ssm-patchbaseline--examples"></a>
 

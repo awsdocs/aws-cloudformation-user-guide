@@ -45,16 +45,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AuthenticationConfiguration`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-authenticationconfiguration"></a>
 Configuration information required to connect to websites using authentication\.  
-You can connect to websites using basic authentication of user name and password\.  
-You must provide the website host name and port number\. For example, the host name of https://a\.example\.com/page1\.html is "a\.example\.com" and the port is 443, the standard port for HTTPS\. You use a secret in [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) to store your authentication credentials\.  
+You can connect to websites using basic authentication of user name and password\. You use a secret in [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) to store your authentication credentials\.  
+You must provide the website host name and port number\. For example, the host name of https://a\.example\.com/page1\.html is "a\.example\.com" and the port is 443, the standard port for HTTPS\.  
 *Required*: No  
 *Type*: [WebCrawlerAuthenticationConfiguration](aws-properties-kendra-datasource-webcrawlerauthenticationconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CrawlDepth`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-crawldepth"></a>
-Specifies the number of levels in a website that you want to crawl\.  
-The first level begins from the website seed or starting point URL\. For example, if a website has 3 levels – index level \(i\.e\. seed in this example\), sections level, and subsections level – and you are only interested in crawling information up to the sections level \(i\.e\. levels 0\-1\), you can set your depth to 1\.  
-The default crawl depth is set to 2\.  
+The 'depth' or number of levels from the seed level to crawl\. For example, the seed URL page is depth 1 and any hyperlinks on this page that are also crawled are depth 2\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -62,16 +60,16 @@ The default crawl depth is set to 2\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxContentSizePerPageInMegaBytes`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-maxcontentsizeperpageinmegabytes"></a>
-The maximum size \(in MB\) of a webpage or attachment to crawl\.  
+The maximum size \(in MB\) of a web page or attachment to crawl\.  
 Files larger than this size \(in MB\) are skipped/not crawled\.  
-The default maximum size of a webpage or attachment is set to 50 MB\.  
+The default maximum size of a web page or attachment is set to 50 MB\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxLinksPerPage`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-maxlinksperpage"></a>
-The maximum number of URLs on a webpage to include when crawling a website\. This number is per webpage\.  
-As a website’s webpages are crawled, any URLs the webpages link to are also crawled\. URLs on a webpage are crawled in order of appearance\.  
+The maximum number of URLs on a web page to include when crawling a website\. This number is per web page\.  
+As a website’s web pages are crawled, any URLs the web pages link to are also crawled\. URLs on a web page are crawled in order of appearance\.  
 The default maximum links per page is 100\.  
 *Required*: No  
 *Type*: Integer  
@@ -101,14 +99,14 @@ Web proxy credentials are optional and you can use them to connect to a web prox
 A list of regular expression patterns to exclude certain URLs to crawl\. URLs that match the patterns are excluded from the index\. URLs that don't match the patterns are included in the index\. If a URL matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UrlInclusionPatterns`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-urlinclusionpatterns"></a>
 A list of regular expression patterns to include certain URLs to crawl\. URLs that match the patterns are included in the index\. URLs that don't match the patterns are excluded from the index\. If a URL matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Urls`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-urls"></a>

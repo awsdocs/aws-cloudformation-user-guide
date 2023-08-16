@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy CrossRegionCopyDeprecateRule<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopydeprecaterule"></a>
 
-Specifies an AMI deprecation rule for cross\-Region AMI copies created by a cross\-Region copy rule\.
+<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopydeprecaterule-description"></a>The `CrossRegionCopyDeprecateRule` property type specifies Property description not available\. for an [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopydeprecaterule-syntax"></a>
 
@@ -25,15 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopydeprecaterule-properties"></a>
 
 `Interval`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopydeprecaterule-interval"></a>
-The period after which to deprecate the cross\-Region AMI copies\. The period must be less than or equal to the cross\-Region AMI copy retention period, and it can't be greater than 10 years\. This is equivalent to 120 months, 520 weeks, or 3650 days\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: Integer  
-*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IntervalUnit`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopydeprecaterule-intervalunit"></a>
-The unit of time in which to measure the **Interval**\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `DAYS | MONTHS | WEEKS | YEARS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

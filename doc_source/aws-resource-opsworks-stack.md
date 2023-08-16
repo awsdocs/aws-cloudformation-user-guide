@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::OpsWorks::Stack",
   "Properties" : {
       "[AgentVersion](#cfn-opsworks-stack-agentversion)" : String,
-      "[Attributes](#cfn-opsworks-stack-attributes)" : {Key : Value, ...},
+      "[Attributes](#cfn-opsworks-stack-attributes)" : {Key: Value, ...},
       "[ChefConfiguration](#cfn-opsworks-stack-chefconfiguration)" : ChefConfiguration,
       "[CloneAppIds](#cfn-opsworks-stack-cloneappids)" : [ String, ... ],
       "[ClonePermissions](#cfn-opsworks-stack-clonepermissions)" : Boolean,
@@ -50,7 +50,7 @@ Type: AWS::OpsWorks::Stack
 Properties: 
   [AgentVersion](#cfn-opsworks-stack-agentversion): String
   [Attributes](#cfn-opsworks-stack-attributes): 
-    Key : Value
+    Key: Value
   [ChefConfiguration](#cfn-opsworks-stack-chefconfiguration): 
     ChefConfiguration
   [CloneAppIds](#cfn-opsworks-stack-cloneappids): 
@@ -285,13 +285,13 @@ For more information about how to use AWS OpsWorks Stacks with a VPC, see [Runni
 
 ### Ref<a name="aws-resource-opsworks-stack-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "myStack" }` 
 
 For the AWS OpsWorks stack *myStack*, `Ref` returns the AWS OpsWorks stack ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-opsworks-stack--examples"></a>
 

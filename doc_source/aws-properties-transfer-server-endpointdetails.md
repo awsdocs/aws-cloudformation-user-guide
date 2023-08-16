@@ -1,6 +1,6 @@
 # AWS::Transfer::Server EndpointDetails<a name="aws-properties-transfer-server-endpointdetails"></a>
 
-The virtual private cloud \(VPC\) endpoint settings that are configured for your server\. When you host your endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic IP addresses and make it accessible to clients over the internet\. Your VPC's default security groups are automatically assigned to your endpoint\.
+The virtual private cloud \(VPC\) endpoint settings that are configured for your server\. When you host your endpoint within your VPC, you can make your endpoint accessible only to resources within your VPC, or you can attach Elastic IP addresses and make your endpoint accessible to clients over the internet\. Your VPC's default security groups are automatically assigned to your endpoint\.
 
 ## Syntax<a name="aws-properties-transfer-server-endpointdetails-syntax"></a>
 

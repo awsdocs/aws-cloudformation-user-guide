@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments)" : [ WriteTreatmentResource, ... ],
       "[ApplicationId](#cfn-pinpoint-campaign-applicationid)" : String,
       "[CampaignHook](#cfn-pinpoint-campaign-campaignhook)" : CampaignHook,
+      "[CustomDeliveryConfiguration](#cfn-pinpoint-campaign-customdeliveryconfiguration)" : CustomDeliveryConfiguration,
       "[Description](#cfn-pinpoint-campaign-description)" : String,
       "[HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent)" : Integer,
       "[IsPaused](#cfn-pinpoint-campaign-ispaused)" : Boolean,
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SegmentId](#cfn-pinpoint-campaign-segmentid)" : String,
       "[SegmentVersion](#cfn-pinpoint-campaign-segmentversion)" : Integer,
       "[Tags](#cfn-pinpoint-campaign-tags)" : Json,
+      "[TemplateConfiguration](#cfn-pinpoint-campaign-templateconfiguration)" : TemplateConfiguration,
       "[TreatmentDescription](#cfn-pinpoint-campaign-treatmentdescription)" : String,
       "[TreatmentName](#cfn-pinpoint-campaign-treatmentname)" : String
     }
@@ -42,6 +44,8 @@ Properties:
   [ApplicationId](#cfn-pinpoint-campaign-applicationid): String
   [CampaignHook](#cfn-pinpoint-campaign-campaignhook): 
     CampaignHook
+  [CustomDeliveryConfiguration](#cfn-pinpoint-campaign-customdeliveryconfiguration): 
+    CustomDeliveryConfiguration
   [Description](#cfn-pinpoint-campaign-description): String
   [HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent): Integer
   [IsPaused](#cfn-pinpoint-campaign-ispaused): Boolean
@@ -56,6 +60,8 @@ Properties:
   [SegmentId](#cfn-pinpoint-campaign-segmentid): String
   [SegmentVersion](#cfn-pinpoint-campaign-segmentversion): Integer
   [Tags](#cfn-pinpoint-campaign-tags): Json
+  [TemplateConfiguration](#cfn-pinpoint-campaign-templateconfiguration): 
+    TemplateConfiguration
   [TreatmentDescription](#cfn-pinpoint-campaign-treatmentdescription): String
   [TreatmentName](#cfn-pinpoint-campaign-treatmentname): String
 ```
@@ -80,6 +86,12 @@ Specifies the Lambda function to use as a code hook for a campaign\.
 *Type*: [CampaignHook](aws-properties-pinpoint-campaign-campaignhook.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CustomDeliveryConfiguration`  <a name="cfn-pinpoint-campaign-customdeliveryconfiguration"></a>
+The delivery configuration settings for sending the treatment through a custom channel\. This object is required if the `MessageConfiguration` object for the treatment specifies a `CustomMessage` object\.  
+*Required*: No  
+*Type*: [CustomDeliveryConfiguration](aws-properties-pinpoint-campaign-customdeliveryconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Description`  <a name="cfn-pinpoint-campaign-description"></a>
 A custom description of the campaign\.  
 *Required*: No  
@@ -93,7 +105,7 @@ The allocated percentage of users \(segment members\) who shouldn't receive mess
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsPaused`  <a name="cfn-pinpoint-campaign-ispaused"></a>
-Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by changing this value to `false`\. If you restart a campaign, the campaign restarts from the beginning and not at the point you paused it\.  
+Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by changing this value to `false`\. If you restart a campaign, the campaign restarts from the beginning and not at the point you paused it\. If a campaign is running it will complete and then pause\. Pause only pauses or skips the next run for a recurring future scheduled campaign\. A campaign scheduled for immediate can't be paused\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -106,7 +118,7 @@ The messaging limits for the campaign\.
 
 `MessageConfiguration`  <a name="cfn-pinpoint-campaign-messageconfiguration"></a>
 The message configuration settings for the campaign\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -147,6 +159,12 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TemplateConfiguration`  <a name="cfn-pinpoint-campaign-templateconfiguration"></a>
+The message template to use for the treatment\.  
+*Required*: No  
+*Type*: [TemplateConfiguration](aws-properties-pinpoint-campaign-templateconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TreatmentDescription`  <a name="cfn-pinpoint-campaign-treatmentdescription"></a>
 A custom description of the default treatment for the campaign\.  
 *Required*: No  
@@ -163,15 +181,15 @@ A custom name of the default treatment for the campaign, if the campaign has mul
 
 ### Ref<a name="aws-resource-pinpoint-campaign-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a string that combines the unique identifier for the Amazon Pinpoint application with the unique identifier for the segment that the campaign targets\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a string that combines the unique identifier for the Amazon Pinpoint application with the unique identifier for the segment that the campaign targets\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-pinpoint-campaign-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-pinpoint-campaign-return-values-fn--getatt-fn--getatt"></a>
 

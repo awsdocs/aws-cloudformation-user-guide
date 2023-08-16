@@ -61,6 +61,7 @@ The description of the service\.
 
 `DnsConfig`  <a name="cfn-servicediscovery-service-dnsconfig"></a>
 A complex type that contains information about the Route 53 DNS records that you want AWS Cloud Map to create when you register an instance\.  
+The record types of a service can only be changed by deleting the service and recreating it with a new `Dnsconfig`\.
 *Required*: No  
 *Type*: [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -112,15 +113,15 @@ If present, specifies that the service instances are only discoverable using the
 
 ### Ref<a name="aws-resource-servicediscovery-service-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the value of `Id` for the service, such as `srv-e4anhexample0004`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the value of `Id` for the service, such as `srv-e4anhexample0004`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-servicediscovery-service-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-servicediscovery-service-return-values-fn--getatt-fn--getatt"></a>
 

@@ -3,8 +3,8 @@
 Macros enable you to perform custom processing on templates, from simple actions like find\-and\-replace operations to extensive transformations of entire templates\.
 
 To get an idea of the breadth of possibilities, consider the `AWS::Include` and `AWS::Serverless` transforms, which are macros hosted by AWS CloudFormation:
-+ `AWS::Include transform` enables you to insert boilerplate template snippets into your templates\.
-+ `AWS::Serverless transform` takes an entire template written in the AWS Serverless Application Model \(AWS SAM\) syntax and transforms and expands it into a compliant AWS CloudFormation template\. \(For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.\)
++ ``AWS::Include` transform` enables you to insert boilerplate template snippets into your templates\.
++ ``AWS::Serverless` transform` takes an entire template written in the AWS Serverless Application Model \(AWS SAM\) syntax and transforms and expands it into a compliant AWS CloudFormation template\. \(For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.\)
 
 ## How AWS CloudFormation macros work<a name="template-macros-overview"></a>
 
@@ -18,18 +18,17 @@ To use a macro, reference the macro in your template:
 + To process a section, or *snippet*, of a template, reference the macro in an ``Fn::Transform`` function located relative to the template content you want to transform\. When using `Fn::Transform`, you can also pass any specified parameters it requires\.
 + To process an entire template, reference the macro in the [Transform](transform-section-structure.md) section of the template\.
 
-Next, you typically create a change set and then execute it\. \(Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly advice that you use change sets\.\) AWS CloudFormation passes the specified template content, along with any additional specified parameters, to the Lambda function specified in the macro resource\. The Lambda function returns the processed template content, be it a snippet or an entire template\.
+Next, you typically create a change set and then execute it\. \(Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly advise that you use change sets\.\) AWS CloudFormation passes the specified template content, along with any additional specified parameters, to the Lambda function specified in the macro resource\. The Lambda function returns the processed template content, be it a snippet or an entire template\.
 
 After all macros in the template have been called, AWS CloudFormation generates a change set that includes the processed template content\. After you review the change set, execute it to apply the changes\.
 
 **Important**  
-If your stack set template references one or more macros, you must create the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, you must use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
+If your stack set template references one or more macros, you must create the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, you must use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
 
 ![\[Use the Fn::Transform intrinsic function or the Transform section of the template, to pass the template contents and associated parameters to the macro's underlying Lambda function, which returns the processed template contents.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/template-macro-use.png)
 
 **Note**  
 If you are comfortable creating or updating a stack directly from a processed template, without first reviewing the proposed changes in a change set, you can do so by specifying the `CAPABILITY_AUTO_EXPAND` capability during a `CreateStack` or `UpdateStack` request\. You should only create stacks directly from a template that references macros if you know what processing the macros performs\.  
-In addition, change sets don't currently support nested stacks\. If you want to create a stack from a stack template that references macros and contains nested stacks, you must create the stack directly from the template using this capability\.  
 For more information, see [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) in the *AWS CloudFormation API Reference*\.
 
 ## Creating an AWS CloudFormation macro definition<a name="template-macros-author"></a>
@@ -84,6 +83,7 @@ AWS CloudFormation expects the underlying function to return a response in the f
     "requestId" : "$REQUEST_ID",
     "status" : "$STATUS",
     "fragment" : { ... }
+    "errorMessage": "optional error message for failures"
 }
 ```
 + **requestId**
@@ -119,7 +119,7 @@ To create a macro definition, the user must have permissions to create a stack o
 
 In order for AWS CloudFormation to successfully run a macro included in a template, the user must have `Invoke` permissions for the underlying Lambda function\. To prevent potential escalation of permissions, AWS CloudFormation impersonates the user while running the macro\. For more information, see [Lambda permissions model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) in the *AWS Lambda Developer Guide* and [Actions and condition context keys for AWS Lambda](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_lambda.html) in the *IAM User Guide*\.
 
-The [AWS::Serverless transform](transform-aws-serverless.md) and [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) transforms are macros hosted by AWS CloudFormation\. No special permissions are necessary to use them, and they're available from within any account in AWS CloudFormation\.
+The [`AWS::Serverless` transform](transform-aws-serverless.md) and [`AWS::Include` transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) transforms are macros hosted by AWS CloudFormation\. No special permissions are necessary to use them, and they're available from within any account in AWS CloudFormation\.
 
 ### Debugging AWS CloudFormation macros<a name="template-macros-debug"></a>
 
@@ -129,7 +129,7 @@ To aid in debugging, you can also specify the `LogGroupName` and `LogRoleArn` pr
 
 When a macro runs, the owner of the Lambda function is billed for any charges related to the execution of that function\.
 
-The [AWS::Serverless transform](transform-aws-serverless.md) and [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) transforms are macros hosted by AWS CloudFormation\. There is no charge for using them\.
+The [`AWS::Serverless` transform](transform-aws-serverless.md) and [`AWS::Include` transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) transforms are macros hosted by AWS CloudFormation\. There is no charge for using them\.
 
 ### Considerations when creating AWS CloudFormation macro definitions<a name="template-macros-considerations"></a>
 
@@ -144,8 +144,8 @@ When creating macro definitions, keep the following in mind:
 + The `Fn::ImportValue` intrinsic function isn't currently supported in macros\.
 + Intrinsic functions included in the template are evaluated after any macros\. Therefore, the processed template content your macro returns can include calls to intrinsic functions, and they're evaluated as usual\.
 + StackSets doesn't currently support creating or updating stack sets with service\-managed permissions from templates that reference AWS CloudFormation macros\.
-+ If your stack set template references one or more macros, you must create or update the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Processing macros can add multiple resources that you might not be aware of\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
-+ Change sets don't currently support nested stacks\. If you want to create or update a stack using a template that references macros *and* contains nested stacks, you must create or update the stack directly\. To perform this, use the [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\.
++ If your stack set template references one or more macros, you must create or update the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Processing macros can add multiple resources that you might not be aware of\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
++ Change sets don't currently support nested stacks\. If you want to create or update a stack using a template that references macros *and* contains nested stacks, you must create or update the stack directly\. To perform this, use the [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\.
 
 **To create an AWS CloudFormation macro definition:**
 
@@ -167,7 +167,7 @@ After AWS CloudFormation has successfully created the stacks that contain the ma
 
 ### AWS CloudFormation macro evaluation order<a name="template-macros-order"></a>
 
-You can reference multiple macros in a given template, including transforms hosted by AWS CloudFormation, such as [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) and [AWS::Serverless transform](transform-aws-serverless.md)\.
+You can reference multiple macros in a given template, including transforms hosted by AWS CloudFormation, such as [`AWS::Include` transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) and [`AWS::Serverless` transform](transform-aws-serverless.md)\.
 
 Macros are evaluated in order, based on their location in the template, from the most deeply nested outward to the most general\. Macros at the same location in the template are evaluated serially based on the order in which they're listed\.
 
@@ -218,7 +218,7 @@ AWSTemplateFormatVersion: 2010-09-09
         'Fn::Transform':
           - Name: 'AWS::Include'
               Parameters:
-                Location: s3://MyAmazonS3BucketName/MyFileName.yaml
+                Location: s3://DOC-EXAMPLE-BUCKET/MyFileName.yaml
         CorsConfiguration:[]   //End of processable content for AWS::Include
     MyEc2Instance:
       Type: 'AWS::EC2::Instance' 
@@ -234,7 +234,7 @@ To create or update a stack using a template that references macros, you typical
 A macro can add IAM resources to your template\. For these resources, AWS CloudFormation requires you to [acknowledge their capabilities](using-iam-template.md#using-iam-capabilities)\. Because AWS CloudFormation can't know which resources are added before processing your template, you might need to acknowledge IAM capabilities when you create the change set, depending on whether the referenced macros contain IAM resources\. That way, when you run the change set, AWS CloudFormation has the necessary capabilities to create IAM resources\.
 
 **Important**  
-If your stack set template references one or more macros, you must create the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, you must use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
+If your stack set template references one or more macros, you must create the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, you must use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
 
 **Note**  
 If you are comfortable creating or updating a stack directly from a processed template, without first reviewing the proposed changes in a change set, you can do so by specifying the `CAPABILITY_AUTO_EXPAND` capability during a `CreateStack` or `UpdateStack` request\. You should only create stacks directly from a stack template that contains macros if you know what processing the macro performs\. You can't use change sets with stack set macros; you must update your stack set directly\.  
@@ -257,7 +257,7 @@ The maximum size for a processed stack template is 51,200 bytes when passed dire
 If CloudFormation returns a `Transformation data limit exceeded` error while processing your template, your template has exceeded the maximum template size CloudFormation allows during processing\.  
 To resolve this issue, consider doing the following:  
 Restructure your template into multiple templates to avoid exceeding the maximum size for in\-process templates\. For example:  
-Use nested stack templates to encapsulate parts of the template\. For more information, see [Working with nested stacks](using-cfn-nested-stacks.md)\.
+Use nested stack templates to encapsulate parts of the template\. For more information, see [Working with nested stacksTo view the root stack of a nested stackTo view the nested stacks that belong to a root stack](using-cfn-nested-stacks.md)\.
 Create multiple stacks and use cross\-stack references to exchange information between them\. For more information, see [Walkthrough: Refer to resource outputs in another AWS CloudFormation stack](walkthrough-crossstackref.md)\.
 Reduce the size of template fragment returned by a given macro\. CloudFormation doesn't tamper with the contents of fragments returned by macros\.
 
@@ -271,11 +271,11 @@ In order for AWS CloudFormation to successfully run a macro referenced in a temp
 
 1. [Create a change set](using-cfn-updating-stacks-changesets-create.md) using the template\.
 **Important**  
-If your stack set template references one or more macros, you must create the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, you must use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
+If your stack set template references one or more macros, you must create the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, you must use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
 
 1. Review and [run the change set](using-cfn-updating-stacks-changesets-execute.md)\.
 **Important**  
-If your stack set template references one or more macros, you must create the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, you must use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
+If your stack set template references one or more macros, you must create the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, you must use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
 
 ## Macro examples<a name="template-macros-examples-list"></a>
 
@@ -289,6 +289,6 @@ In addition to the [Macro example: Creating and using a macro](macros-example.md
 
 [`Fn::Transform`](intrinsic-function-reference-transform.md)
 
-[AWS::Serverless transform](transform-aws-serverless.md)
+[`AWS::Serverless` transform](transform-aws-serverless.md)
 
-[AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md)
+[`AWS::Include` transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md)

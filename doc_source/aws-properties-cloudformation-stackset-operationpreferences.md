@@ -38,6 +38,7 @@ The number of accounts, per Region, for which this operation can fail before AWS
 Conditional: You must specify either `FailureToleranceCount` or `FailureTolerancePercentage` \(but not both\)\.  
 *Required*: Conditional  
 *Type*: Integer  
+*Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureTolerancePercentage`  <a name="cfn-cloudformation-stackset-operationpreferences-failuretolerancepercentage"></a>
@@ -46,6 +47,8 @@ When calculating the number of accounts based on the specified percentage, AWS C
 Conditional: You must specify either `FailureToleranceCount` or `FailureTolerancePercentage`, but not both\.  
 *Required*: Conditional  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxConcurrentCount`  <a name="cfn-cloudformation-stackset-operationpreferences-maxconcurrentcount"></a>
@@ -54,6 +57,7 @@ Note that this setting lets you specify the *maximum* for operations\. For large
 Conditional: You must specify either `MaxConcurrentCount` or `MaxConcurrentPercentage`, but not both\.  
 *Required*: Conditional  
 *Type*: Integer  
+*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxConcurrentPercentage`  <a name="cfn-cloudformation-stackset-operationpreferences-maxconcurrentpercentage"></a>
@@ -63,13 +67,15 @@ Note that this setting lets you specify the *maximum* for operations\. For large
 Conditional: You must specify either `MaxConcurrentCount` or `MaxConcurrentPercentage`, but not both\.  
 *Required*: Conditional  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegionConcurrencyType`  <a name="cfn-cloudformation-stackset-operationpreferences-regionconcurrencytype"></a>
 The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time\.  
-*Allowed values*: `SEQUENTIAL` \| `PARALLEL`  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `PARALLEL | SEQUENTIAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegionOrder`  <a name="cfn-cloudformation-stackset-operationpreferences-regionorder"></a>

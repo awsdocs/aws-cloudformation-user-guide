@@ -69,7 +69,7 @@ If you don't use the `--stack-name` option to limit the output to one stack, inf
 
 You can specify one or more stack status codes to list only stacks with the specified status codes\. The following table describes each stack status code:
 
-### <a name="w11339ab1c25c15c17c11b5"></a>
+### <a name="w4ab1c25c15c17c11b5"></a>
 
 
 | Stack Status | Description | 
@@ -81,7 +81,7 @@ You can specify one or more stack status codes to list only stacks with the spec
 |  `DELETE_FAILED`  |  Unsuccessful deletion of one or more stacks\. Because the delete failed, you might have some resources that are still running; however, you can't work with or update the stack\. Delete the stack again or view the stack events to see any associated error messages\.  | 
 |  `DELETE_IN_PROGRESS`  |  Ongoing removal of one or more stacks\.  | 
 | `REVIEW_IN_PROGRESS` | Ongoing creation of one or more stacks with an expected StackId but without any templates or resources\. A stack with this status code counts against the [maximum possible number of stacks](cloudformation-limits.md)\.  | 
-|  `ROLLBACK_COMPLETE`  |  Successful removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\. Any resources that were created during the create stack operation are deleted\. This status exists only after a failed stack creation\. It signifies that all operations from the partially created stack have been appropriately cleaned up\. When in this state, only a delete operation can be performed\.  | 
+|  `ROLLBACK_COMPLETE`  |  Successful removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\. The stack returns to the previous working state\. Any resources that were created during the create stack operation are deleted\. This status exists only after a failed stack creation\. It signifies that all operations from the partially created stack have been appropriately cleaned up\. When in this state, only a delete operation can be performed\.  | 
 |  `ROLLBACK_FAILED`  |  Unsuccessful removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\. Delete the stack or view the stack events to see any associated error messages\.  | 
 |  `ROLLBACK_IN_PROGRESS`  |  Ongoing removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\.  | 
 |  `UPDATE_COMPLETE`  | Successful update of one or more stacks\. | 

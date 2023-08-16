@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AggregationType](#cfn-appflow-flow-aggregationconfig-aggregationtype)" : String
+  "[AggregationType](#cfn-appflow-flow-aggregationconfig-aggregationtype)" : String,
+  "[TargetFileSize](#cfn-appflow-flow-aggregationconfig-targetfilesize)" : Integer
 }
 ```
 
@@ -18,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AggregationType](#cfn-appflow-flow-aggregationconfig-aggregationtype): String
+  [TargetFileSize](#cfn-appflow-flow-aggregationconfig-targetfilesize): Integer
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-aggregationconfig-properties"></a>
@@ -27,6 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Required*: No  
 *Type*: String  
 *Allowed values*: `None | SingleFile`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TargetFileSize`  <a name="cfn-appflow-flow-aggregationconfig-targetfilesize"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-flow-aggregationconfig--seealso"></a>

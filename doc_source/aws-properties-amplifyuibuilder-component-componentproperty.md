@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BindingProperties](#cfn-amplifyuibuilder-component-componentproperty-bindingproperties)" : ComponentPropertyBindingProperties,
-  "[Bindings](#cfn-amplifyuibuilder-component-componentproperty-bindings)" : FormBindings,
+  "[Bindings](#cfn-amplifyuibuilder-component-componentproperty-bindings)" : {Key: Value, ...},
   "[CollectionBindingProperties](#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties)" : ComponentPropertyBindingProperties,
   "[ComponentName](#cfn-amplifyuibuilder-component-componentproperty-componentname)" : String,
   "[Concat](#cfn-amplifyuibuilder-component-componentproperty-concat)" : [ ComponentProperty, ... ],
@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BindingProperties](#cfn-amplifyuibuilder-component-componentproperty-bindingproperties): 
     ComponentPropertyBindingProperties
   [Bindings](#cfn-amplifyuibuilder-component-componentproperty-bindings): 
-    FormBindings
+    Key: Value
   [CollectionBindingProperties](#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties): 
     ComponentPropertyBindingProperties
   [ComponentName](#cfn-amplifyuibuilder-component-componentproperty-componentname): String
@@ -64,7 +64,7 @@ The information to bind the component property to data at runtime\.
 `Bindings`  <a name="cfn-amplifyuibuilder-component-componentproperty-bindings"></a>
 The information to bind the component property to form data\.  
 *Required*: No  
-*Type*: [FormBindings](aws-properties-amplifyuibuilder-component-formbindings.md)  
+*Type*: Map of [FormBindingElement](aws-properties-amplifyuibuilder-component-formbindingelement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CollectionBindingProperties`  <a name="cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties"></a>

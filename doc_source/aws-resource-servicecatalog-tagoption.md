@@ -53,9 +53,9 @@ The TagOption value\.
 
 ### Ref<a name="aws-resource-servicecatalog-tagoption-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the TagOption identifier\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the TagOption identifier\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-servicecatalog-tagoption--seealso"></a>
 + [CreateTagOption](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateTagOption.html) in the *AWS Service Catalog API Reference*

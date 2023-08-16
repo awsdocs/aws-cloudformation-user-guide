@@ -1,9 +1,12 @@
 # AWS::Neptune::DBParameterGroup<a name="aws-resource-neptune-dbparametergroup"></a>
 
- `AWS::Neptune::DBParameterGroup` creates a new DB parameter group\. This type can be declared in a template and referenced in the `DBParameterGroupName` parameter of `AWS::Neptune::DBInstance`\.
+`AWS::Neptune::DBParameterGroup` creates a new DB parameter group\. This type can be declared in a template and referenced in the `DBParameterGroupName` parameter of `AWS::Neptune::DBInstance`\.
 
 **Note**  
 Applying a parameter group to a DB instance might require the instance to reboot, resulting in a database outage for the duration of the reboot\.
+
+**Note**  
+If you provide a custom `DBParameterGroup` that you associate with `DBInstance`, it is best to specify an `EngineVersion` property in `DBCluster`\. That `EngineVersion` needs to be compatible with the value of the `Family` property in the `DBParameterGroup`\.
 
 A DB parameter group is initially created with the default parameters for the database engine used by the DB instance\. To provide custom values for any of the parameters, you must modify the group after creating it using *ModifyDBParameterGroup*\. Once you've created a DB parameter group, you need to associate it with your DB instance using *ModifyDBInstance*\. When you associate a new DB parameter group with a running DB instance, you need to reboot the DB instance without failover for the new DB parameter group and associated settings to take effect\.
 
@@ -51,7 +54,7 @@ Provides the customer\-specified description for this DB parameter group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Family`  <a name="cfn-neptune-dbparametergroup-family"></a>
-Must be `neptune1`\.  
+Must be `neptune1` for engine versions prior to [1\.2\.0\.0](https://docs.aws.amazon.com/neptune/latest/userguide/engine-releases-1.2.0.0.html), or `neptune1.2` for engine version `1.2.0.0` and higher\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -80,6 +83,6 @@ The tags that you want to attach to this parameter group\.
 
 ### Ref<a name="aws-resource-neptune-dbparametergroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

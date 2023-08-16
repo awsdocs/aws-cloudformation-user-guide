@@ -42,7 +42,10 @@ The Amazon Resource Name \(ARN\) of the Amazon SNS caller\. This is the ARN of t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnsRegion`  <a name="cfn-cognito-userpool-smsconfiguration-snsregion"></a>
-Not currently supported by AWS CloudFormation\.  
+The AWS Region to use with Amazon SNS integration\. You can choose the same Region as your user pool, or a supported **Legacy Amazon SNS alternate Region**\.   
+ Amazon Cognito resources in the Asia Pacific \(Seoul\) AWS Region must use your Amazon SNS configuration in the Asia Pacific \(Tokyo\) Region\. For more information, see [SMS message settings for Amazon Cognito user pools](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `5`  
+*Maximum*: `32`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

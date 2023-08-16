@@ -1,6 +1,6 @@
 # AWS::SageMaker::Domain<a name="aws-resource-sagemaker-domain"></a>
 
-Creates a `Domain` used by Amazon SageMaker Studio\. A domain consists of an associated Amazon Elastic File System \(EFS\) volume, a list of authorized users, and a variety of security, application, policy, and Amazon Virtual Private Cloud \(VPC\) configurations\. An AWS account is limited to one domain per region\. Users within a domain can share notebook files and other artifacts with each other\.
+Creates a `Domain` used by Amazon SageMaker Studio\. A domain consists of an associated Amazon Elastic File System \(EFS\) volume, a list of authorized users, and a variety of security, application, policy, and Amazon Virtual Private Cloud \(VPC\) configurations\. Users within a domain can share notebook files and other artifacts with each other\.
 
  **EFS storage** 
 
@@ -32,9 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::Domain",
   "Properties" : {
       "[AppNetworkAccessType](#cfn-sagemaker-domain-appnetworkaccesstype)" : String,
+      "[AppSecurityGroupManagement](#cfn-sagemaker-domain-appsecuritygroupmanagement)" : String,
       "[AuthMode](#cfn-sagemaker-domain-authmode)" : String,
+      "[DefaultSpaceSettings](#cfn-sagemaker-domain-defaultspacesettings)" : DefaultSpaceSettings,
       "[DefaultUserSettings](#cfn-sagemaker-domain-defaultusersettings)" : UserSettings,
       "[DomainName](#cfn-sagemaker-domain-domainname)" : String,
+      "[DomainSettings](#cfn-sagemaker-domain-domainsettings)" : DomainSettings,
       "[KmsKeyId](#cfn-sagemaker-domain-kmskeyid)" : String,
       "[SubnetIds](#cfn-sagemaker-domain-subnetids)" : [ String, ... ],
       "[Tags](#cfn-sagemaker-domain-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -49,10 +52,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SageMaker::Domain
 Properties: 
   [AppNetworkAccessType](#cfn-sagemaker-domain-appnetworkaccesstype): String
+  [AppSecurityGroupManagement](#cfn-sagemaker-domain-appsecuritygroupmanagement): String
   [AuthMode](#cfn-sagemaker-domain-authmode): String
+  [DefaultSpaceSettings](#cfn-sagemaker-domain-defaultspacesettings): 
+    DefaultSpaceSettings
   [DefaultUserSettings](#cfn-sagemaker-domain-defaultusersettings): 
     UserSettings
   [DomainName](#cfn-sagemaker-domain-domainname): String
+  [DomainSettings](#cfn-sagemaker-domain-domainsettings): 
+    DomainSettings
   [KmsKeyId](#cfn-sagemaker-domain-kmskeyid): String
   [SubnetIds](#cfn-sagemaker-domain-subnetids): 
     - String
@@ -72,12 +80,25 @@ Specifies the VPC used for non\-EFS traffic\. The default value is `PublicIntern
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`AppSecurityGroupManagement`  <a name="cfn-sagemaker-domain-appsecuritygroupmanagement"></a>
+The entity that creates and manages the required security groups for inter\-app communication in `VpcOnly` mode\. Required when `CreateDomain.AppNetworkAccessType` is `VpcOnly` and `DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn` is provided\. If setting up the domain for use with RStudio, this value must be set to `Service`\.  
+*Allowed Values*: `Service` \| `Customer`  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `AuthMode`  <a name="cfn-sagemaker-domain-authmode"></a>
-The mode of authentication that members use to access the domain\.  
+The mode of authentication that members use to access the Domain\.  
 *Valid Values*: `SSO | IAM`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DefaultSpaceSettings`  <a name="cfn-sagemaker-domain-defaultspacesettings"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DefaultSpaceSettings](aws-properties-sagemaker-domain-defaultspacesettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultUserSettings`  <a name="cfn-sagemaker-domain-defaultusersettings"></a>
 The default user settings\.  
@@ -93,8 +114,14 @@ The domain name\.
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`DomainSettings`  <a name="cfn-sagemaker-domain-domainsettings"></a>
+A collection of settings that apply to the `SageMaker Domain`\. These settings are specified through the `CreateDomain` API call\.  
+*Required*: No  
+*Type*: [DomainSettings](aws-properties-sagemaker-domain-domainsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `KmsKeyId`  <a name="cfn-sagemaker-domain-kmskeyid"></a>
-SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key \(CMK\) by default\. For more control, specify a customer managed CMK\.  
+SageMaker uses AWS KMS to encrypt the EFS volume attached to the Domain with an AWS managed customer master key \(CMK\) by default\. For more control, specify a customer managed CMK\.  
 *Length Constraints*: Maximum length of 2048\.  
 *Pattern*: `.*`  
 *Required*: No  
@@ -112,14 +139,14 @@ The VPC subnets that Studio uses for communication\.
 
 `Tags`  <a name="cfn-sagemaker-domain-tags"></a>
 Tags to associated with the Domain\. Each tag consists of a key and an optional value\. Tag keys must be unique per resource\. Tags are searchable using the Search API\.   
-Tags that you specify for the Domain are also added to all Apps that are launched in the Domain\.  
+Tags that you specify for the Domain are also added to all apps that are launched in the Domain\.  
 *Array members*: Minimum number of 0 items\. Maximum number of 50 items\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-sagemaker-domain-vpcid"></a>
-The ID of the Amazon Virtual Private Cloud \(VPC\) that Studio uses for communication\.  
+The ID of the Amazon Virtual Private Cloud \(Amazon VPC\) that Studio uses for communication\.  
 *Length Constraints*: Maximum length of 32\.  
 *Pattern*: `[-0-9a-zA-Z]+`  
 *Required*: Yes  
@@ -130,29 +157,32 @@ The ID of the Amazon Virtual Private Cloud \(VPC\) that Studio uses for communic
 
 ### Ref<a name="aws-resource-sagemaker-domain-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the domain ID, such as `d-xxxxxxxxxxxx`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Domain ID, such as `d-xxxxxxxxxxxx`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-sagemaker-domain-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-sagemaker-domain-return-values-fn--getatt-fn--getatt"></a>
 
 `DomainArn`  <a name="DomainArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:sagemaker:us-west-2:account-id:domain/my-domain-name`\.
+The Amazon Resource Name \(ARN\) of the Domain, such as `arn:aws:sagemaker:us-west-2:account-id:domain/my-domain-name`\.
 
 `DomainId`  <a name="DomainId-fn::getatt"></a>
-The domain ID\.
+The Domain ID\.
 
 `HomeEfsFileSystemId`  <a name="HomeEfsFileSystemId-fn::getatt"></a>
 The ID of the Amazon Elastic File System \(EFS\) managed by this Domain\.
 
+`SecurityGroupIdForDomainBoundary`  <a name="SecurityGroupIdForDomainBoundary-fn::getatt"></a>
+The ID of the security group that authorizes traffic between the `RSessionGateway` apps and the `RStudioServerPro` app\.
+
 `SingleSignOnManagedApplicationInstanceId`  <a name="SingleSignOnManagedApplicationInstanceId-fn::getatt"></a>
-The AWS SSO managed application instance ID\.
+The IAM Identity Center managed application instance ID\.
 
 `Url`  <a name="Url-fn::getatt"></a>
-The URL for the domain\.
+The URL for the Domain\.

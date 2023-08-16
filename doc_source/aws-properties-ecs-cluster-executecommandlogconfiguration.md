@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-cluster-executecommandlogconfiguration-properties"></a>
 
 `CloudWatchEncryptionEnabled`  <a name="cfn-ecs-cluster-executecommandlogconfiguration-cloudwatchencryptionenabled"></a>
-Determines whether to use encryption on the CloudWatch logs\. If not specified, encryption will be disabled\.  
+Determines whether to use encryption on the CloudWatch logs\. If not specified, encryption will be off\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -11,11 +11,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Amplitude](#cfn-appflow-flow-connectoroperator-amplitude)" : String,
+  "[CustomConnector](#cfn-appflow-flow-connectoroperator-customconnector)" : String,
   "[Datadog](#cfn-appflow-flow-connectoroperator-datadog)" : String,
   "[Dynatrace](#cfn-appflow-flow-connectoroperator-dynatrace)" : String,
   "[GoogleAnalytics](#cfn-appflow-flow-connectoroperator-googleanalytics)" : String,
   "[InforNexus](#cfn-appflow-flow-connectoroperator-infornexus)" : String,
   "[Marketo](#cfn-appflow-flow-connectoroperator-marketo)" : String,
+  "[Pardot](#cfn-appflow-flow-connectoroperator-pardot)" : String,
   "[S3](#cfn-appflow-flow-connectoroperator-s3)" : String,
   "[Salesforce](#cfn-appflow-flow-connectoroperator-salesforce)" : String,
   "[SAPOData](#cfn-appflow-flow-connectoroperator-sapodata)" : String,
@@ -32,11 +34,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Amplitude](#cfn-appflow-flow-connectoroperator-amplitude): String
+  [CustomConnector](#cfn-appflow-flow-connectoroperator-customconnector): String
   [Datadog](#cfn-appflow-flow-connectoroperator-datadog): String
   [Dynatrace](#cfn-appflow-flow-connectoroperator-dynatrace): String
   [GoogleAnalytics](#cfn-appflow-flow-connectoroperator-googleanalytics): String
   [InforNexus](#cfn-appflow-flow-connectoroperator-infornexus): String
   [Marketo](#cfn-appflow-flow-connectoroperator-marketo): String
+  [Pardot](#cfn-appflow-flow-connectoroperator-pardot): String
   [S3](#cfn-appflow-flow-connectoroperator-s3): String
   [Salesforce](#cfn-appflow-flow-connectoroperator-salesforce): String
   [SAPOData](#cfn-appflow-flow-connectoroperator-sapodata): String
@@ -55,6 +59,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Required*: No  
 *Type*: String  
 *Allowed values*: `BETWEEN`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomConnector`  <a name="cfn-appflow-flow-connectoroperator-customconnector"></a>
+Operators supported by the custom connector\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `ADDITION | BETWEEN | CONTAINS | DIVISION | EQUAL_TO | GREATER_THAN | GREATER_THAN_OR_EQUAL_TO | LESS_THAN | LESS_THAN_OR_EQUAL_TO | MASK_ALL | MASK_FIRST_N | MASK_LAST_N | MULTIPLICATION | NO_OP | NOT_EQUAL_TO | PROJECTION | SUBTRACTION | VALIDATE_NON_NEGATIVE | VALIDATE_NON_NULL | VALIDATE_NON_ZERO | VALIDATE_NUMERIC`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Datadog`  <a name="cfn-appflow-flow-connectoroperator-datadog"></a>
@@ -92,6 +103,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Allowed values*: `ADDITION | BETWEEN | DIVISION | GREATER_THAN | LESS_THAN | MASK_ALL | MASK_FIRST_N | MASK_LAST_N | MULTIPLICATION | NO_OP | PROJECTION | SUBTRACTION | VALIDATE_NON_NEGATIVE | VALIDATE_NON_NULL | VALIDATE_NON_ZERO | VALIDATE_NUMERIC`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Pardot`  <a name="cfn-appflow-flow-connectoroperator-pardot"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `S3`  <a name="cfn-appflow-flow-connectoroperator-s3"></a>
  The operation to be performed on the provided Amazon S3 source fields\.   
 *Required*: No  
@@ -107,9 +124,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SAPOData`  <a name="cfn-appflow-flow-connectoroperator-sapodata"></a>
-Not currently supported by AWS CloudFormation\.  
+ The operation to be performed on the provided SAPOData source fields\.   
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ADDITION | BETWEEN | CONTAINS | DIVISION | EQUAL_TO | GREATER_THAN | GREATER_THAN_OR_EQUAL_TO | LESS_THAN | LESS_THAN_OR_EQUAL_TO | MASK_ALL | MASK_FIRST_N | MASK_LAST_N | MULTIPLICATION | NO_OP | NOT_EQUAL_TO | PROJECTION | SUBTRACTION | VALIDATE_NON_NEGATIVE | VALIDATE_NON_NULL | VALIDATE_NON_ZERO | VALIDATE_NUMERIC`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceNow`  <a name="cfn-appflow-flow-connectoroperator-servicenow"></a>

@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SalesforceConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties"></a>
 
- The `SalesforceConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Salesforce\. 
+ The connector\-specific profile properties required when using Salesforce\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties-syntax"></a>
 
@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[InstanceUrl](#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-instanceurl)" : String,
-  "[isSandboxEnvironment](#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment)" : Boolean
+  "[isSandboxEnvironment](#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment)" : Boolean,
+  "[usePrivateLinkForMetadataAndAuthorization](#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-useprivatelinkformetadataandauthorization)" : Boolean
 }
 ```
 
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [InstanceUrl](#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-instanceurl): String
   [isSandboxEnvironment](#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment): Boolean
+  [usePrivateLinkForMetadataAndAuthorization](#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-useprivatelinkformetadataandauthorization): Boolean
 ```
 
 ## Properties<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties-properties"></a>
@@ -34,6 +36,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `isSandboxEnvironment`  <a name="cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment"></a>
  Indicates whether the connector profile applies to a sandbox or production environment\.   
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`usePrivateLinkForMetadataAndAuthorization`  <a name="cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-useprivatelinkformetadataandauthorization"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

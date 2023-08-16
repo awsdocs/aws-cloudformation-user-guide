@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ProjectDescription](#cfn-sagemaker-project-projectdescription)" : String,
       "[ProjectName](#cfn-sagemaker-project-projectname)" : String,
-      "[ServiceCatalogProvisioningDetails](#cfn-sagemaker-project-servicecatalogprovisioningdetails)" : Json,
+      "[ServiceCatalogProvisionedProductDetails](#cfn-sagemaker-project-servicecatalogprovisionedproductdetails)" : ServiceCatalogProvisionedProductDetails,
+      "[ServiceCatalogProvisioningDetails](#cfn-sagemaker-project-servicecatalogprovisioningdetails)" : ServiceCatalogProvisioningDetails,
       "[Tags](#cfn-sagemaker-project-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -27,7 +28,10 @@ Type: AWS::SageMaker::Project
 Properties: 
   [ProjectDescription](#cfn-sagemaker-project-projectdescription): String
   [ProjectName](#cfn-sagemaker-project-projectname): String
-  [ServiceCatalogProvisioningDetails](#cfn-sagemaker-project-servicecatalogprovisioningdetails): Json
+  [ServiceCatalogProvisionedProductDetails](#cfn-sagemaker-project-servicecatalogprovisionedproductdetails): 
+    ServiceCatalogProvisionedProductDetails
+  [ServiceCatalogProvisioningDetails](#cfn-sagemaker-project-servicecatalogprovisioningdetails): 
+    ServiceCatalogProvisioningDetails
   [Tags](#cfn-sagemaker-project-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -51,10 +55,16 @@ The name of the project\.
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,31}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ServiceCatalogProvisionedProductDetails`  <a name="cfn-sagemaker-project-servicecatalogprovisionedproductdetails"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ServiceCatalogProvisionedProductDetails](aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceCatalogProvisioningDetails`  <a name="cfn-sagemaker-project-servicecatalogprovisioningdetails"></a>
 The product ID and provisioning artifact ID to provision a service catalog\. For information, see [What is AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [ServiceCatalogProvisioningDetails](aws-properties-sagemaker-project-servicecatalogprovisioningdetails.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-project-tags"></a>

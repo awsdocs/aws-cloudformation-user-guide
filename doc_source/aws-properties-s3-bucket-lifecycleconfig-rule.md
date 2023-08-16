@@ -116,13 +116,13 @@ For buckets with versioning enabled \(or suspended\), one or more transition rul
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ObjectSizeGreaterThan`  <a name="cfn-s3-bucket-lifecycleconfig-rule-objectsizegreaterthan"></a>
-Specifies the minimum object size in bytes for this rule to apply to\. For more information about size based rules, see [Lifecycle configuration using size\-based rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html#lc-size-rules) in the *Amazon S3 User Guide*\.  
+Specifies the minimum object size in bytes for this rule to apply to\. Objects must be larger than this value in bytes\. For more information about size based rules, see [Lifecycle configuration using size\-based rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html#lc-size-rules) in the *Amazon S3 User Guide*\.  
 *Required*: No  
 *Type*: Long  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ObjectSizeLessThan`  <a name="cfn-s3-bucket-lifecycleconfig-rule-objectsizelessthan"></a>
-Specifies the maximum object size in bytes for this rule to apply to\. For more information about sized based rules, see [Lifecycle configuration using size\-based rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html#lc-size-rules) in the *Amazon S3 User Guide*\.  
+Specifies the maximum object size in bytes for this rule to apply to\. Objects must be smaller than this value in bytes\. For more information about sized based rules, see [Lifecycle configuration using size\-based rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html#lc-size-rules) in the *Amazon S3 User Guide*\.  
 *Required*: No  
 *Type*: Long  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

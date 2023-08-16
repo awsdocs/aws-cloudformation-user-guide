@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy Action<a name="aws-properties-dlm-lifecyclepolicy-action"></a>
 
-Specifies an action for an event\-based policy\.
+ **\[Event\-based policies only\]** Specifies an action for an event\-based policy\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-action-syntax"></a>
 

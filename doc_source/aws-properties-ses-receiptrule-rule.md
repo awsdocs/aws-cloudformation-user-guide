@@ -52,7 +52,7 @@ If `true`, the receipt rule is active\. The default value is `false`\.
 
 `Name`  <a name="cfn-ses-receiptrule-rule-name"></a>
 The name of the receipt rule\. The name must meet the following requirements:  
-+ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
++ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), dashes \(\-\), or periods \(\.\)\. 
 + Start and end with a letter or number\.
 + Contain 64 characters or fewer\.
 *Required*: No  
@@ -73,7 +73,7 @@ If `true`, then messages that this receipt rule applies to are scanned for spam 
 
 `TlsPolicy`  <a name="cfn-ses-receiptrule-rule-tlspolicy"></a>
 Specifies whether Amazon SES should require that incoming email is delivered over a connection encrypted with Transport Layer Security \(TLS\)\. If this parameter is set to `Require`, Amazon SES bounces emails that are not received over TLS\. The default is `Optional`\.  
+Valid Values: `Require | Optional`  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `Optional | Require`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

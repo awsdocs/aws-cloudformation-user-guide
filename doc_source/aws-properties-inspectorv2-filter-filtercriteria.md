@@ -222,7 +222,7 @@ Details on the date and time a finding was last seen used to filter findings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkProtocol`  <a name="cfn-inspectorv2-filter-filtercriteria-networkprotocol"></a>
-Details on the ingress source addresses used to filter findings\.  
+Details on network protocol used to filter findings\.  
 *Required*: No  
 *Type*: List of [StringFilter](aws-properties-inspectorv2-filter-stringfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

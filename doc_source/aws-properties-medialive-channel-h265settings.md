@@ -40,6 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[SceneChangeDetect](#cfn-medialive-channel-h265settings-scenechangedetect)" : String,
   "[Slices](#cfn-medialive-channel-h265settings-slices)" : Integer,
   "[Tier](#cfn-medialive-channel-h265settings-tier)" : String,
+  "[TimecodeBurninSettings](#cfn-medialive-channel-h265settings-timecodeburninsettings)" : TimecodeBurninSettings,
   "[TimecodeInsertion](#cfn-medialive-channel-h265settings-timecodeinsertion)" : String
 }
 ```
@@ -77,6 +78,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [SceneChangeDetect](#cfn-medialive-channel-h265settings-scenechangedetect): String
   [Slices](#cfn-medialive-channel-h265settings-slices): Integer
   [Tier](#cfn-medialive-channel-h265settings-tier): String
+  [TimecodeBurninSettings](#cfn-medialive-channel-h265settings-timecodeburninsettings): 
+    TimecodeBurninSettings
   [TimecodeInsertion](#cfn-medialive-channel-h265settings-timecodeinsertion): String
 ```
 
@@ -248,6 +251,12 @@ Number of slices per picture\. Must be less than or equal to the number of macro
 H\.265 Tier\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TimecodeBurninSettings`  <a name="cfn-medialive-channel-h265settings-timecodeburninsettings"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [TimecodeBurninSettings](aws-properties-medialive-channel-timecodeburninsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimecodeInsertion`  <a name="cfn-medialive-channel-h265settings-timecodeinsertion"></a>

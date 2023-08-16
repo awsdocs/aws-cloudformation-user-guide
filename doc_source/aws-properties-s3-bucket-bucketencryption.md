@@ -1,6 +1,6 @@
 # AWS::S3::Bucket BucketEncryption<a name="aws-properties-s3-bucket-bucketencryption"></a>
 
-Specifies default encryption for a bucket using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\) or AWS KMS\-managed keys \(SSE\-KMS\) bucket\. For information about the Amazon S3 default encryption feature, see [Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon S3 User Guide*\.
+Specifies default encryption for a bucket using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\), AWS KMS\-managed keys \(SSE\-KMS\), or dual\-layer server\-side encryption with KMS\-managed keys \(DSSE\-KMS\)\. For information about the Amazon S3 default encryption feature, see [Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon S3 User Guide*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-bucketencryption-syntax"></a>
 

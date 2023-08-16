@@ -2,7 +2,7 @@
 
 The optional `Rules` section validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\. To use template rules, explicitly declare `Rules` in your template followed by an assertion\. Use the rules section to validate parameter values before creating or updating resources\.
 
-## Working with rules<a name="w11339ab1c23c15c19b5"></a>
+## Working with rules<a name="rules-specific-intrinsic-working-with-rules"></a>
 
 Each template rule consists of two properties:
 + *Rule condition* \(optional\) – determines when a rule takes effect\.
@@ -15,17 +15,17 @@ A rule can include a `RuleCondition` property and must include an `Assertions` p
 To define a rule condition and assertions, use *rule\-specific intrinsic functions*, which are functions that can only be used in the `Rules` section of a template\. You can nest functions, but the final result of a rule condition or assertion must be either true or false\.
 
 You can use the following rule\-specific intrinsic functions to define rule conditions and assertions:
-+ `[Fn::And](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-and)`
-+ `[Fn::Contains](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-Contains)`
-+ `[Fn::EachMemberEquals](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-EachMemberEquals)`
-+ `[Fn::EachMemberIn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-EachMemberIn)`
-+ `[Fn::Equals](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-equals)`
-+ `[Fn::If](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-if)`
-+ `[Fn::Not](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-not)`
-+ `[Fn::Or](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-or)`
-+ `[Fn::RefAll](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-refall)`
-+ `[Fn::ValueOf](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-valueof)`
-+ `[Fn::ValueOfAll](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-valueofall)`
++ ``Fn::And``
++ ``Fn::Contains``
++ ``Fn::EachMemberEquals``
++ ``Fn::EachMemberIn``
++ ``Fn::Equals``
++ ``Fn::If``
++ ``Fn::Not``
++ ``Fn::Or``
++ ``Fn::RefAll``
++ ``Fn::ValueOf``
++ ``Fn::ValueOfAll``
 
 Rule\-specific intrinsic functions are used in the condition or assertions of a rule\. The condition property determines if AWS CloudFormation applies the assertions\. If the condition evaluates to `true`, AWS CloudFormation evaluates the assertions to verify whether a parameter value is valid when a provisioned product is created or updated\. If a parameter value is invalid, AWS CloudFormation does not create or update the stack\. If the condition evaluates to `false`, AWS CloudFormation doesn't check the parameter value and proceeds with the stack operation\.
 
@@ -98,7 +98,7 @@ Rules:
 
 In the following example, the two rules check the value of the `InstanceType` parameter\. Depending on the value of the environment parameter \(`test` or `prod`\), the user must specify `a1.medium` or `a1.large` for the `InstanceType` parameter\. The `InstanceType` and `Environment` parameters must be declared in the `Parameters` section of the same template\.
 
-#### Example JSON<a name="rules-section-example-syntax.json"></a>
+#### Example JSON<a name="rules-section-example-conditionally-verify.json"></a>
 
 ```
 {
@@ -157,7 +157,7 @@ In the following example, the two rules check the value of the `InstanceType` pa
 }
 ```
 
-#### Example YAML<a name="rules-section-example-syntax.yaml"></a>
+#### Example YAML<a name="rules-section-example-conditionally-verify-2.yaml"></a>
 
 ```
 Rules:
@@ -190,7 +190,7 @@ The following template example, creates a sample web site that uses Amazon EC2 A
 **Note**  
 You will be billed for the AWS resources used if you create a stack from this template\.
 
-### Example JSON<a name="rules-section-example-syntax.json"></a>
+### Example JSON<a name="rules-section-example-cross-parameter-validation.json"></a>
 
 ```
 {

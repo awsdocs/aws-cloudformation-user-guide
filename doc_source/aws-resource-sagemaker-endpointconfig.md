@@ -15,8 +15,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AsyncInferenceConfig](#cfn-sagemaker-endpointconfig-asyncinferenceconfig)" : AsyncInferenceConfig,
       "[DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig)" : DataCaptureConfig,
       "[EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname)" : String,
+      "[ExplainerConfig](#cfn-sagemaker-endpointconfig-explainerconfig)" : ExplainerConfig,
       "[KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid)" : String,
       "[ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants)" : [ ProductionVariant, ... ],
+      "[ShadowProductionVariants](#cfn-sagemaker-endpointconfig-shadowproductionvariants)" : [ ProductionVariant, ... ],
       "[Tags](#cfn-sagemaker-endpointconfig-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -32,8 +34,12 @@ Properties:
   [DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig): 
     DataCaptureConfig
   [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname): String
+  [ExplainerConfig](#cfn-sagemaker-endpointconfig-explainerconfig): 
+    ExplainerConfig
   [KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid): String
   [ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants): 
+    - ProductionVariant
+  [ShadowProductionVariants](#cfn-sagemaker-endpointconfig-shadowproductionvariants): 
     - ProductionVariant
   [Tags](#cfn-sagemaker-endpointconfig-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -61,6 +67,12 @@ The name of the endpoint configuration\.
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ExplainerConfig`  <a name="cfn-sagemaker-endpointconfig-explainerconfig"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ExplainerConfig](aws-properties-sagemaker-endpointconfig-explainerconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `KmsKeyId`  <a name="cfn-sagemaker-endpointconfig-kmskeyid"></a>
 The Amazon Resource Name \(ARN\) of an AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint\.  
 + Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
@@ -84,6 +96,13 @@ A list of `ProductionVariant` objects, one for each model that you want to host 
 *Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ShadowProductionVariants`  <a name="cfn-sagemaker-endpointconfig-shadowproductionvariants"></a>
+Array of `ProductionVariant` objects\. There is one for each model that you want to host at this endpoint in shadow mode with production traffic replicated from the model specified on `ProductionVariants`\. If you use this field, you can only specify one variant for `ProductionVariants` and one variant for `ShadowProductionVariants`\.  
+*Required*: No  
+*Type*: List of [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)  
+*Maximum*: `10`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Tags`  <a name="cfn-sagemaker-endpointconfig-tags"></a>
 A list of key\-value pairs to apply to this resource\.  
 For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)\.  
@@ -96,15 +115,15 @@ For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFor
 
 ### Ref<a name="aws-resource-sagemaker-endpointconfig-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:01234567>8901:endpoint-config/myendpointconfig` 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:01234567>8901:endpoint-config/myendpointconfig` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-sagemaker-endpointconfig-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 

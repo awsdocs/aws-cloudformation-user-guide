@@ -1,6 +1,9 @@
 # AWS::DLM::LifecyclePolicy CrossRegionCopyRule<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopyrule"></a>
 
-Specifies a rule for cross\-Region snapshot copies\.
+ **\[Snapshot and AMI policies only\]** Specifies a cross\-Region copy rule for snapshot and AMI policies\.
+
+**Note**  
+To specify a cross\-Region copy action for event\-based polices, use CrossRegionCopyAction\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopyrule-syntax"></a>
 
@@ -46,13 +49,13 @@ The Amazon Resource Name \(ARN\) of the AWS KMS key to use for EBS encryption\. 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CopyTags`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-copytags"></a>
-Indicates whether to copy all user\-defined tags from the source snapshot to the cross\-Region snapshot copy\.  
+Indicates whether to copy all user\-defined tags from the source snapshot or AMI to the cross\-Region copy\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeprecateRule`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-deprecaterule"></a>
-The AMI deprecation rule for cross\-Region AMI copies created by the rule\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [CrossRegionCopyDeprecateRule](aws-properties-dlm-lifecyclepolicy-crossregioncopydeprecaterule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -64,7 +67,7 @@ To encrypt a copy of an unencrypted snapshot if encryption by default is not ena
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetainRule`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-retainrule"></a>
-The retention rule that indicates how long snapshot copies are to be retained in the destination Region\.  
+The retention rule that indicates how long the cross\-Region snapshot or AMI copies are to be retained in the destination Region\.  
 *Required*: No  
 *Type*: [CrossRegionCopyRetainRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -81,7 +84,7 @@ Use this parameter instead of **TargetRegion**\. Do not specify both\.
 
 `TargetRegion`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion"></a>
 Avoid using this parameter when creating new policies\. Instead, use **Target** to specify a target Region or a target Outpost for snapshot copies\.  
-For policies created before the **Target** parameter was introduced, this parameter indicates the target Region for snapshot copies\.  
+For policies created before the **Target** parameter was introduced, this parameter indicates the target Region for snapshot copies\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

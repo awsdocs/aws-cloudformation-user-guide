@@ -1,4 +1,4 @@
-# KinesisVideo resource type reference<a name="AWS_KinesisVideo"></a>
+# Amazon Kinesis Video Streams resource type reference<a name="AWS_KinesisVideo"></a>
 
 **Resource types**
 + [AWS::KinesisVideo::SignalingChannel](aws-resource-kinesisvideo-signalingchannel.md)

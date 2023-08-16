@@ -30,7 +30,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo)" : LoadBalancerInfo,
       "[OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters)" : [ TagFilter, ... ],
       "[OnPremisesTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset)" : OnPremisesTagSet,
+      "[OutdatedInstancesStrategy](#cfn-codedeploy-deploymentgroup-outdatedinstancesstrategy)" : String,
       "[ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn)" : String,
+      "[Tags](#cfn-codedeploy-deploymentgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations)" : [ TriggerConfig, ... ]
     }
 }
@@ -68,7 +70,10 @@ Properties:
     - TagFilter
   [OnPremisesTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset): 
     OnPremisesTagSet
+  [OutdatedInstancesStrategy](#cfn-codedeploy-deploymentgroup-outdatedinstancesstrategy): String
   [ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn): String
+  [Tags](#cfn-codedeploy-deploymentgroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations): 
     - TriggerConfig
 ```
@@ -177,11 +182,23 @@ Information about groups of tags applied to on\-premises instances\. The deploym
 *Type*: [OnPremisesTagSet](aws-properties-codedeploy-deploymentgroup-onpremisestagset.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OutdatedInstancesStrategy`  <a name="cfn-codedeploy-deploymentgroup-outdatedinstancesstrategy"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceRoleArn`  <a name="cfn-codedeploy-deploymentgroup-servicerolearn"></a>
 A service role Amazon Resource Name \(ARN\) that grants CodeDeploy permission to make calls to AWS services on your behalf\. For more information, see [Create a Service Role for AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-create-service-role.html) in the *AWS CodeDeploy User Guide*\.   
  In some cases, you might need to add a dependency on the service role's policy\. For more information, see IAM role policy in [DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)\.
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-codedeploy-deploymentgroup-tags"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TriggerConfigurations`  <a name="cfn-codedeploy-deploymentgroup-triggerconfigurations"></a>

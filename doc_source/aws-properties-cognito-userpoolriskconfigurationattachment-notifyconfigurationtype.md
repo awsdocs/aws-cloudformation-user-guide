@@ -45,6 +45,8 @@ Email template used when a detected risk event is blocked\.
 The email address that is sending the email\. The address must be either individually verified with Amazon Simple Email Service, or from a domain that has been verified with Amazon SES\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `131072`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MfaEmail`  <a name="cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-mfaemail"></a>
@@ -63,6 +65,8 @@ The email template used when a detected risk event is allowed\.
 The destination to which the receiver of an email should reply to\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `131072`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceArn`  <a name="cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-sourcearn"></a>

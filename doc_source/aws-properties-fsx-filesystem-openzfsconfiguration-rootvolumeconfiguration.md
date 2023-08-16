@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DataCompressionType](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-datacompressiontype)" : String,
   "[NfsExports](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-nfsexports)" : [ NfsExports, ... ],
   "[ReadOnly](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-readonly)" : Boolean,
+  "[RecordSizeKiB](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-recordsizekib)" : Integer,
   "[UserAndGroupQuotas](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-userandgroupquotas)" : [ UserAndGroupQuotas, ... ]
 }
 ```
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [NfsExports](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-nfsexports): 
     - NfsExports
   [ReadOnly](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-readonly): Boolean
+  [RecordSizeKiB](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-recordsizekib): Integer
   [UserAndGroupQuotas](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-userandgroupquotas): 
     - UserAndGroupQuotas
 ```
@@ -61,9 +63,17 @@ A Boolean value indicating whether the volume is read\-only\. Setting this value
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`RecordSizeKiB`  <a name="cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-recordsizekib"></a>
+Specifies the record size of an OpenZFS root volume, in kibibytes \(KiB\)\. Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB\. The default is 128 KiB\. Most workloads should use the default record size\. Database workflows can benefit from a smaller record size, while streaming workflows can benefit from a larger record size\. For additional guidance on setting a custom record size, see [ Tips for maximizing performance](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs) in the *Amazon FSx for OpenZFS User Guide*\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `4`  
+*Maximum*: `1024`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `UserAndGroupQuotas`  <a name="cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-userandgroupquotas"></a>
 An object specifying how much storage users or groups can use on the volume\.  
 *Required*: No  
 *Type*: [List](aws-properties-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-userandgroupquotas.md) of [UserAndGroupQuotas](aws-properties-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-userandgroupquotas.md)  
-*Maximum*: `100`  
+*Maximum*: `500`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

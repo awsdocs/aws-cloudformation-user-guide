@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SalesforceConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials"></a>
 
- The `SalesforceConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Salesforce\. 
+ The connector\-specific profile credentials required when using Salesforce\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials-syntax"></a>
 
@@ -13,6 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AccessToken](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-accesstoken)" : String,
   "[ClientCredentialsArn](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-clientcredentialsarn)" : String,
   "[ConnectorOAuthRequest](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-connectoroauthrequest)" : ConnectorOAuthRequest,
+  "[JwtToken](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-jwttoken)" : String,
+  "[OAuth2GrantType](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-oauth2granttype)" : String,
   "[RefreshToken](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken)" : String
 }
 ```
@@ -24,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ClientCredentialsArn](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-clientcredentialsarn): String
   [ConnectorOAuthRequest](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-connectoroauthrequest): 
     ConnectorOAuthRequest
+  [JwtToken](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-jwttoken): String
+  [OAuth2GrantType](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-oauth2granttype): String
   [RefreshToken](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken): String
 ```
 
@@ -33,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The credentials used to access protected Salesforce resources\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `2048`  
+*Maximum*: `4096`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -52,11 +56,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [ConnectorOAuthRequest](aws-properties-appflow-connectorprofile-connectoroauthrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`JwtToken`  <a name="cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-jwttoken"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OAuth2GrantType`  <a name="cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-oauth2granttype"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RefreshToken`  <a name="cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken"></a>
  The credentials used to acquire new access tokens\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `1024`  
+*Maximum*: `4096`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

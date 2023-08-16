@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[StreamConfiguration](#cfn-nimblestudio-launchprofile-streamconfiguration)" : StreamConfiguration,
       "[StudioComponentIds](#cfn-nimblestudio-launchprofile-studiocomponentids)" : [ String, ... ],
       "[StudioId](#cfn-nimblestudio-launchprofile-studioid)" : String,
-      "[Tags](#cfn-nimblestudio-launchprofile-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-nimblestudio-launchprofile-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -41,7 +41,7 @@ Properties:
     - String
   [StudioId](#cfn-nimblestudio-launchprofile-studioid): String
   [Tags](#cfn-nimblestudio-launchprofile-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-nimblestudio-launchprofile-properties"></a>

@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CertificateTransparencyLoggingPreference](#cfn-certificatemanager-certificate-certificatetransparencyloggingpreference)" : String,
       "[DomainName](#cfn-certificatemanager-certificate-domainname)" : String,
       "[DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions)" : [ DomainValidationOption, ... ],
+      "[KeyAlgorithm](#cfn-certificatemanager-certificate-keyalgorithm)" : String,
       "[SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames)" : [ String, ... ],
       "[Tags](#cfn-certificatemanager-certificate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[ValidationMethod](#cfn-certificatemanager-certificate-validationmethod)" : String
@@ -37,6 +38,7 @@ Properties:
   [DomainName](#cfn-certificatemanager-certificate-domainname): String
   [DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions): 
     - DomainValidationOption
+  [KeyAlgorithm](#cfn-certificatemanager-certificate-keyalgorithm): String
   [SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames): 
     - String
   [Tags](#cfn-certificatemanager-certificate-tags): 
@@ -47,13 +49,13 @@ Properties:
 ## Properties<a name="aws-resource-certificatemanager-certificate-properties"></a>
 
 `CertificateAuthorityArn`  <a name="cfn-certificatemanager-certificate-certificateauthorityarn"></a>
-The Amazon Resource Name \(ARN\) of the private certificate authority \(CA\) that will be used to issue the certificate\. If you do not provide an ARN and you are trying to request a private certificate, ACM will attempt to issue a public certificate\. For more information about private CAs, see the [AWS Certificate Manager Private Certificate Authority \(PCA\)](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) user guide\. The ARN must have the following form:   
+The Amazon Resource Name \(ARN\) of the private certificate authority \(CA\) that will be used to issue the certificate\. If you do not provide an ARN and you are trying to request a private certificate, ACM will attempt to issue a public certificate\. For more information about private CAs, see the [AWS Private Certificate Authority](https://docs.aws.amazon.com/privateca/latest/userguide/PcaWelcome.html) user guide\. The ARN must have the following form:   
  `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012`   
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
-*Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:[\w+=/,.@-]*:[0-9]+:[\w+=,.@-]+(/[\w+=,.@-]+)*`  
+*Pattern*: `arn:[\w+=/,.@-]+:acm-pca:[\w+=/,.@-]*:[0-9]+:[\w+=,.@-]+(/[\w+=,.@-]+)*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateTransparencyLoggingPreference`  <a name="cfn-certificatemanager-certificate-certificatetransparencyloggingpreference"></a>
@@ -82,6 +84,12 @@ In order for a AWS::CertificateManager::Certificate to be provisioned and valida
 *Maximum*: `100`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`KeyAlgorithm`  <a name="cfn-certificatemanager-certificate-keyalgorithm"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `SubjectAlternativeNames`  <a name="cfn-certificatemanager-certificate-subjectalternativenames"></a>
 Additional FQDNs to be included in the Subject Alternative Name extension of the ACM certificate\. For example, you can add www\.example\.net to a certificate for which the `DomainName` field is www\.example\.com if users can reach your site by using either name\.  
 *Required*: No  
@@ -108,9 +116,9 @@ If not specified, this property defaults to email validation\.
 
 ### Ref<a name="aws-resource-certificatemanager-certificate-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the certificate's Amazon Resource Name \(ARN\)\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the certificate's Amazon Resource Name \(ARN\)\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-certificatemanager-certificate--examples"></a>
 

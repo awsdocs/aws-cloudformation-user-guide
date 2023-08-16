@@ -1,6 +1,6 @@
 # AWS::Cassandra::Table BillingMode<a name="aws-properties-cassandra-table-billingmode"></a>
 
-Determines the billing mode for the table \- On\-demand or provisioned\.
+Determines the billing mode for the table \- on\-demand or provisioned\.
 
 ## Syntax<a name="aws-properties-cassandra-table-billingmode-syntax"></a>
 

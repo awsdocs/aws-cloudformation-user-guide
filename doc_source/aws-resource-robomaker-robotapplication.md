@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-robomaker-robotapplication-name)" : String,
       "[RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
       "[Sources](#cfn-robomaker-robotapplication-sources)" : [ SourceConfig, ... ],
-      "[Tags](#cfn-robomaker-robotapplication-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-robomaker-robotapplication-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -35,7 +35,7 @@ Properties:
   [Sources](#cfn-robomaker-robotapplication-sources): 
     - SourceConfig
   [Tags](#cfn-robomaker-robotapplication-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-robomaker-robotapplication-properties"></a>
@@ -62,7 +62,7 @@ The name of the robot application\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RobotSoftwareSuite`  <a name="cfn-robomaker-robotapplication-robotsoftwaresuite"></a>
-The robot software suite \(ROS distribuition\) used by the robot application\.  
+The robot software suite used by the robot application\.  
 *Required*: Yes  
 *Type*: [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -85,13 +85,13 @@ A map that contains tag keys and tag values that are attached to the robot appli
 
 When you pass the logical ID of an `AWS::RoboMaker::RobotApplication` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the robot application, such as `arn:aws:robomaker:us-west-2:123456789012:robot-application/MyRobotApplication/1546541208251`\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-robomaker-robotapplication-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-robomaker-robotapplication-return-values-fn--getatt-fn--getatt"></a>
 
@@ -119,16 +119,9 @@ The following example creates a robot application\.
       "Type": "AWS::RoboMaker::RobotApplication",
       "Properties": {
         "Name": "MyRobotApplication",
-        "Sources": [
-          {
-            "S3Bucket": "my-bucket",
-            "S3Key": "robot_bundle_x86.tar.gz",
-            "Architecture": "ARMHF"
-          }
-        ],
+        "Environment": "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-robot-app:latest",
         "RobotSoftwareSuite": {
-          "Name": "ROS",
-          "Version": "Kinetic"
+          "Name": "General"
         },
         "Tags": {
           "Name": "BasicRobotApplication",
@@ -149,23 +142,18 @@ The following example creates a robot application\.
 
 ```
 ---
-Description: "Basic RobotApplication test"
+Description: "Robot Application example"
 Resources:
   BasicRobotApplication:
     Type: "AWS::RoboMaker::RobotApplication"
     Properties:
       Name: "MyRobotApplication"
-      Sources:
-        - S3Bucket: "my-bucket"
-          S3Key: "robot_bundle_x86.tar.gz"
-          Architecture: "ARMHF"
+      Environment: "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-robot-app:latest"
       RobotSoftwareSuite:
-        Name: "ROS"
-        Version: "Kinetic"
+        Name: "General"
       Tags:
         "Name" : "BasicRobotApplication"
         "Type" : "CFN"
-
 Outputs:
   RobotApplication:
     Value: !Ref BasicRobotApplication

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap)" : {Key : Value, ...},
+  "[InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap)" : {Key: Value, ...},
   "[InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InputPathsMap](#cfn-events-rule-inputtransformer-inputpathsmap): 
-    Key : Value
+    Key: Value
   [InputTemplate](#cfn-events-rule-inputtransformer-inputtemplate): String
 ```
 
@@ -34,7 +34,7 @@ The keys cannot start with "AWS\."
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputTemplate`  <a name="cfn-events-rule-inputtransformer-inputtemplate"></a>
-Input template where you specify placeholders that will be filled with the values of the keys from `InputPathsMap` to customize the data sent to the target\. Enclose each `InputPathsMaps` value in brackets: <*value*> The InputTemplate must be valid JSON\.  
+Input template where you specify placeholders that will be filled with the values of the keys from `InputPathsMap` to customize the data sent to the target\. Enclose each `InputPathsMaps` value in brackets: <*value*>   
 If `InputTemplate` is a JSON object \(surrounded by curly braces\), the following restrictions apply:  
 + The placeholder cannot be used as an object key\.
 The following example shows the syntax for using `InputPathsMap` and `InputTemplate`\.  

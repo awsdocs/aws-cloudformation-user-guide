@@ -1,6 +1,6 @@
 # AWS::CloudFront::Distribution LegacyS3Origin<a name="aws-properties-cloudfront-distribution-legacys3origin"></a>
 
-<a name="aws-properties-cloudfront-distribution-legacys3origin-description"></a>The `LegacyS3Origin` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::CloudFront::Distribution](aws-resource-cloudfront-distribution.md)\.
+<a name="aws-properties-cloudfront-distribution-legacys3origin-description"></a>The `LegacyS3Origin` property type specifies Property description not available\. for an [AWS::CloudFront::Distribution](aws-resource-cloudfront-distribution.md)\.
 
 ## Syntax<a name="aws-properties-cloudfront-distribution-legacys3origin-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-distribution-legacys3origin-properties"></a>
 
 `DNSName`  <a name="cfn-cloudfront-distribution-legacys3origin-dnsname"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OriginAccessIdentity`  <a name="cfn-cloudfront-distribution-legacys3origin-originaccessidentity"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

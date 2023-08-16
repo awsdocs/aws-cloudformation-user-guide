@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AfterContactWorkTimeLimit`  <a name="cfn-connect-user-userphoneconfig-aftercontactworktimelimit"></a>
 The After Call Work \(ACW\) timeout setting, in seconds\.  
+When returned by a `SearchUsers` call, `AfterContactWorkTimeLimit` is returned in milliseconds\. 
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -45,6 +46,7 @@ The Auto accept setting\.
 The phone number for the user's desk phone\.  
 *Required*: No  
 *Type*: String  
+*Pattern*: `\\+[1-9]\\d{1,14}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PhoneType`  <a name="cfn-connect-user-userphoneconfig-phonetype"></a>

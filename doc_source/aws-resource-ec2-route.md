@@ -1,6 +1,6 @@
 # AWS::EC2::Route<a name="aws-resource-ec2-route"></a>
 
-Specifies a route in a route table within a VPC\.
+Specifies a route in a route table\.
 
 You must specify either `DestinationCidrBlock` or `DestinationIpv6CidrBlock`, plus the ID of one of the target resources\.
 
@@ -57,24 +57,25 @@ Properties:
 
 `CarrierGatewayId`  <a name="cfn-ec2-route-carriergatewayid"></a>
 The ID of the carrier gateway\.  
+You can only use this option when the VPC contains a subnet which is associated with a Wavelength Zone\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
-The IPv4 CIDR block used for the destination match\.  
+The IPv4 CIDR address block used for the destination match\. Routing decisions are based on the most specific match\. We modify the specified CIDR block to its canonical form; for example, if you specify `100.68.0.18/18`, we modify it to `100.68.0.0/18`\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
-The IPv6 CIDR block used for the destination match\.  
+The IPv6 CIDR block used for the destination match\. Routing decisions are based on the most specific match\.  
 *Required*: Conditional  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EgressOnlyInternetGatewayId`  <a name="cfn-ec2-route-egressonlyinternetgatewayid"></a>
-The ID of the egress\-only internet gateway\.  
+\[IPv6 traffic only\] The ID of an egress\-only internet gateway\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,7 +87,7 @@ The ID of an internet gateway or virtual private gateway attached to your VPC\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceId`  <a name="cfn-ec2-route-instanceid"></a>
-The ID of a NAT instance in your VPC\.  
+The ID of a NAT instance in your VPC\. The operation fails if you specify an instance ID unless exactly one network interface is attached\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -98,19 +99,19 @@ The ID of the local gateway\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NatGatewayId`  <a name="cfn-ec2-route-natgatewayid"></a>
-The ID of a NAT gateway\.  
+\[IPv4 traffic only\] The ID of a NAT gateway\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInterfaceId`  <a name="cfn-ec2-route-networkinterfaceid"></a>
-The ID of the network interface\.  
+The ID of a network interface\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RouteTableId`  <a name="cfn-ec2-route-routetableid"></a>
-The ID of the route table\. The routing table must be associated with the same VPC that the virtual private gateway is attached to\.   
+The ID of the route table for the route\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -137,9 +138,20 @@ The ID of a VPC peering connection\.
 
 ### Ref<a name="aws-resource-ec2-route-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the route\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the route\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-ec2-route-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-route-return-values-fn--getatt-fn--getatt"></a>
+
+`CidrBlock`  <a name="CidrBlock-fn::getatt"></a>
+The IPv4 CIDR block\.
 
 ## Examples<a name="aws-resource-ec2-route--examples"></a>
 

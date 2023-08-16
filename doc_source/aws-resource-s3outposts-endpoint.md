@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AccessType](#cfn-s3outposts-endpoint-accesstype)" : String,
       "[CustomerOwnedIpv4Pool](#cfn-s3outposts-endpoint-customerownedipv4pool)" : String,
+      "[FailedReason](#cfn-s3outposts-endpoint-failedreason)" : FailedReason,
       "[OutpostId](#cfn-s3outposts-endpoint-outpostid)" : String,
       "[SecurityGroupId](#cfn-s3outposts-endpoint-securitygroupid)" : String,
       "[SubnetId](#cfn-s3outposts-endpoint-subnetid)" : String
@@ -35,6 +36,8 @@ Type: AWS::S3Outposts::Endpoint
 Properties: 
   [AccessType](#cfn-s3outposts-endpoint-accesstype): String
   [CustomerOwnedIpv4Pool](#cfn-s3outposts-endpoint-customerownedipv4pool): String
+  [FailedReason](#cfn-s3outposts-endpoint-failedreason): 
+    FailedReason
   [OutpostId](#cfn-s3outposts-endpoint-outpostid): String
   [SecurityGroupId](#cfn-s3outposts-endpoint-securitygroupid): String
   [SubnetId](#cfn-s3outposts-endpoint-subnetid): String
@@ -56,6 +59,12 @@ The ID of the customer\-owned IPv4 address pool \(CoIP pool\) for the endpoint\.
 *Type*: String  
 *Pattern*: `^ipv4pool-coip-([0-9a-f]{17})$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FailedReason`  <a name="cfn-s3outposts-endpoint-failedreason"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [FailedReason](aws-properties-s3outposts-endpoint-failedreason.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutpostId`  <a name="cfn-s3outposts-endpoint-outpostid"></a>
 The ID of the Outpost\.   
@@ -79,9 +88,9 @@ The ID of the subnet\.
 
 ### Ref<a name="aws-resource-s3outposts-endpoint-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) for the endpoint\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\) for the endpoint\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-s3outposts-endpoint-return-values-fn--getatt"></a>
 

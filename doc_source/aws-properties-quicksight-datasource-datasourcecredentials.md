@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CopySourceArn](#cfn-quicksight-datasource-datasourcecredentials-copysourcearn)" : String,
-  "[CredentialPair](#cfn-quicksight-datasource-datasourcecredentials-credentialpair)" : CredentialPair
+  "[CredentialPair](#cfn-quicksight-datasource-datasourcecredentials-credentialpair)" : CredentialPair,
+  "[SecretArn](#cfn-quicksight-datasource-datasourcecredentials-secretarn)" : String
 }
 ```
 
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CopySourceArn](#cfn-quicksight-datasource-datasourcecredentials-copysourcearn): String
   [CredentialPair](#cfn-quicksight-datasource-datasourcecredentials-credentialpair): 
     CredentialPair
+  [SecretArn](#cfn-quicksight-datasource-datasourcecredentials-secretarn): String
 ```
 
 ## Properties<a name="aws-properties-quicksight-datasource-datasourcecredentials-properties"></a>
@@ -36,4 +38,10 @@ The Amazon Resource Name \(ARN\) of a data source that has the credential pair t
 Credential pair\. For more information, see ` [CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html) `\.  
 *Required*: No  
 *Type*: [CredentialPair](aws-properties-quicksight-datasource-credentialpair.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecretArn`  <a name="cfn-quicksight-datasource-datasourcecredentials-secretarn"></a>
+The Amazon Resource Name \(ARN\) of the secret associated with the data source in AWS Secrets Manager\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

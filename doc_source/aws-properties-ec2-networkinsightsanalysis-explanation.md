@@ -19,6 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Cidrs](#cfn-ec2-networkinsightsanalysis-explanation-cidrs)" : [ String, ... ],
   "[ClassicLoadBalancerListener](#cfn-ec2-networkinsightsanalysis-explanation-classicloadbalancerlistener)" : AnalysisLoadBalancerListener,
   "[Component](#cfn-ec2-networkinsightsanalysis-explanation-component)" : AnalysisComponent,
+  "[ComponentAccount](#cfn-ec2-networkinsightsanalysis-explanation-componentaccount)" : String,
+  "[ComponentRegion](#cfn-ec2-networkinsightsanalysis-explanation-componentregion)" : String,
   "[CustomerGateway](#cfn-ec2-networkinsightsanalysis-explanation-customergateway)" : AnalysisComponent,
   "[Destination](#cfn-ec2-networkinsightsanalysis-explanation-destination)" : AnalysisComponent,
   "[DestinationVpc](#cfn-ec2-networkinsightsanalysis-explanation-destinationvpc)" : AnalysisComponent,
@@ -50,6 +52,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[State](#cfn-ec2-networkinsightsanalysis-explanation-state)" : String,
   "[Subnet](#cfn-ec2-networkinsightsanalysis-explanation-subnet)" : AnalysisComponent,
   "[SubnetRouteTable](#cfn-ec2-networkinsightsanalysis-explanation-subnetroutetable)" : AnalysisComponent,
+  "[TransitGateway](#cfn-ec2-networkinsightsanalysis-explanation-transitgateway)" : AnalysisComponent,
+  "[TransitGatewayAttachment](#cfn-ec2-networkinsightsanalysis-explanation-transitgatewayattachment)" : AnalysisComponent,
+  "[TransitGatewayRouteTable](#cfn-ec2-networkinsightsanalysis-explanation-transitgatewayroutetable)" : AnalysisComponent,
+  "[TransitGatewayRouteTableRoute](#cfn-ec2-networkinsightsanalysis-explanation-transitgatewayroutetableroute)" : TransitGatewayRouteTableRoute,
   "[Vpc](#cfn-ec2-networkinsightsanalysis-explanation-vpc)" : AnalysisComponent,
   "[vpcEndpoint](#cfn-ec2-networkinsightsanalysis-explanation-vpcendpoint)" : AnalysisComponent,
   "[VpcPeeringConnection](#cfn-ec2-networkinsightsanalysis-explanation-vpcpeeringconnection)" : AnalysisComponent,
@@ -78,6 +84,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AnalysisLoadBalancerListener
   [Component](#cfn-ec2-networkinsightsanalysis-explanation-component): 
     AnalysisComponent
+  [ComponentAccount](#cfn-ec2-networkinsightsanalysis-explanation-componentaccount): String
+  [ComponentRegion](#cfn-ec2-networkinsightsanalysis-explanation-componentregion): String
   [CustomerGateway](#cfn-ec2-networkinsightsanalysis-explanation-customergateway): 
     AnalysisComponent
   [Destination](#cfn-ec2-networkinsightsanalysis-explanation-destination): 
@@ -131,6 +139,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AnalysisComponent
   [SubnetRouteTable](#cfn-ec2-networkinsightsanalysis-explanation-subnetroutetable): 
     AnalysisComponent
+  [TransitGateway](#cfn-ec2-networkinsightsanalysis-explanation-transitgateway): 
+    AnalysisComponent
+  [TransitGatewayAttachment](#cfn-ec2-networkinsightsanalysis-explanation-transitgatewayattachment): 
+    AnalysisComponent
+  [TransitGatewayRouteTable](#cfn-ec2-networkinsightsanalysis-explanation-transitgatewayroutetable): 
+    AnalysisComponent
+  [TransitGatewayRouteTableRoute](#cfn-ec2-networkinsightsanalysis-explanation-transitgatewayroutetableroute): 
+    TransitGatewayRouteTableRoute
   [Vpc](#cfn-ec2-networkinsightsanalysis-explanation-vpc): 
     AnalysisComponent
   [vpcEndpoint](#cfn-ec2-networkinsightsanalysis-explanation-vpcendpoint): 
@@ -202,6 +218,20 @@ The component\.
 *Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ComponentAccount`  <a name="cfn-ec2-networkinsightsanalysis-explanation-componentaccount"></a>
+The AWS account for the component\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `\d{12}`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ComponentRegion`  <a name="cfn-ec2-networkinsightsanalysis-explanation-componentregion"></a>
+The Region for the component\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `[a-z]{2}-[a-z]+-[1-9]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `CustomerGateway`  <a name="cfn-ec2-networkinsightsanalysis-explanation-customergateway"></a>
 The customer gateway\.  
 *Required*: No  
@@ -221,7 +251,7 @@ The destination VPC\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Direction`  <a name="cfn-ec2-networkinsightsanalysis-explanation-direction"></a>
-The direction\. The following are possible values:  
+The direction\. The following are the possible values:  
 + egress
 + ingress
 *Required*: No  
@@ -264,7 +294,7 @@ The Amazon Resource Name \(ARN\) of the load balancer\.
 The listener port of the load balancer\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -290,7 +320,7 @@ The target groups\.
 The target port\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -322,7 +352,7 @@ The packet field\.
 The port\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -396,6 +426,30 @@ The subnet\.
 The route table for the subnet\.  
 *Required*: No  
 *Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitGateway`  <a name="cfn-ec2-networkinsightsanalysis-explanation-transitgateway"></a>
+The transit gateway\.  
+*Required*: No  
+*Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitGatewayAttachment`  <a name="cfn-ec2-networkinsightsanalysis-explanation-transitgatewayattachment"></a>
+The transit gateway attachment\.  
+*Required*: No  
+*Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitGatewayRouteTable`  <a name="cfn-ec2-networkinsightsanalysis-explanation-transitgatewayroutetable"></a>
+The transit gateway route table\.  
+*Required*: No  
+*Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitGatewayRouteTableRoute`  <a name="cfn-ec2-networkinsightsanalysis-explanation-transitgatewayroutetableroute"></a>
+The transit gateway route table route\.  
+*Required*: No  
+*Type*: [TransitGatewayRouteTableRoute](aws-properties-ec2-networkinsightsanalysis-transitgatewayroutetableroute.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Vpc`  <a name="cfn-ec2-networkinsightsanalysis-explanation-vpc"></a>

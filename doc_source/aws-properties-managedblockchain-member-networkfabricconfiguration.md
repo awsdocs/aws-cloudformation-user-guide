@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-managedblockchain-member-networkfabricconfiguration-properties"></a>
 
 `Edition`  <a name="cfn-managedblockchain-member-networkfabricconfiguration-edition"></a>
-The edition of Amazon Managed Blockchain that the network uses\. Valid values are `standard` and `starter`\. For more information, see   
+The edition of Amazon Managed Blockchain that the network uses\. Valid values are `standard` and `starter`\. For more information, see [Amazon Managed Blockchain Pricing](http://aws.amazon.com/managed-blockchain/pricing/)  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `STANDARD | STARTER`  

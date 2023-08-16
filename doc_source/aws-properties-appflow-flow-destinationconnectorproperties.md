@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CustomConnector](#cfn-appflow-flow-destinationconnectorproperties-customconnector)" : CustomConnectorDestinationProperties,
   "[EventBridge](#cfn-appflow-flow-destinationconnectorproperties-eventbridge)" : EventBridgeDestinationProperties,
   "[LookoutMetrics](#cfn-appflow-flow-destinationconnectorproperties-lookoutmetrics)" : LookoutMetricsDestinationProperties,
   "[Marketo](#cfn-appflow-flow-destinationconnectorproperties-marketo)" : MarketoDestinationProperties,
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appflow-flow-destinationconnectorproperties-syntax.yaml"></a>
 
 ```
+  [CustomConnector](#cfn-appflow-flow-destinationconnectorproperties-customconnector): 
+    CustomConnectorDestinationProperties
   [EventBridge](#cfn-appflow-flow-destinationconnectorproperties-eventbridge): 
     EventBridgeDestinationProperties
   [LookoutMetrics](#cfn-appflow-flow-destinationconnectorproperties-lookoutmetrics): 
@@ -49,6 +52,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-destinationconnectorproperties-properties"></a>
+
+`CustomConnector`  <a name="cfn-appflow-flow-destinationconnectorproperties-customconnector"></a>
+The properties that are required to query the custom Connector\.  
+*Required*: No  
+*Type*: [CustomConnectorDestinationProperties](aws-properties-appflow-flow-customconnectordestinationproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventBridge`  <a name="cfn-appflow-flow-destinationconnectorproperties-eventbridge"></a>
  The properties required to query Amazon EventBridge\.   
@@ -105,7 +114,7 @@ The properties required to query SAPOData\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Zendesk`  <a name="cfn-appflow-flow-destinationconnectorproperties-zendesk"></a>
-Not currently supported by AWS CloudFormation\.  
+The properties required to query Zendesk\.  
 *Required*: No  
 *Type*: [ZendeskDestinationProperties](aws-properties-appflow-flow-zendeskdestinationproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

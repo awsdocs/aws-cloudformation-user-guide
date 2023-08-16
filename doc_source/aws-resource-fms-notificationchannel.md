@@ -49,9 +49,9 @@ The Amazon Resource Name \(ARN\) of the SNS topic that collects notifications fr
 
 The `Ref` for this resource returns the `SnsTopicArn`\. This is the Amazon Resource Name \(ARN\) that uniquely identifies the Amazon Simple Notification Service \(Amazon SNS\) topic\. For example, `arn:aws:sns:us-west-2:111122223333:MyTopic`\. For more information about SNS, see [Amazon Simple Notification Service Resource Type Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_SNS.html)\.
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource physical ID, such as 1234a1a\-a1b1\-12a1\-abcd\-a123b123456\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource physical ID, such as 1234a1a\-a1b1\-12a1\-abcd\-a123b123456\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-fms-notificationchannel--examples"></a>
 

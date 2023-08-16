@@ -61,9 +61,9 @@ The stack ID\.
 
 ### Ref<a name="aws-resource-opsworks-volume-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the AWS OpsWorks volume ID, such as `1ab23cd4-92ff-4501-b37c-example`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the AWS OpsWorks volume ID, such as `1ab23cd4-92ff-4501-b37c-example`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-opsworks-volume--examples"></a>
 

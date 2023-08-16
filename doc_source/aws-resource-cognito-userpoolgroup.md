@@ -4,6 +4,9 @@ Specifies a new group in the identified user pool\.
 
 Calling this action requires developer credentials\.
 
+**Note**  
+If you don't specify a value for a parameter, Amazon Cognito sets it to a default value\.
+
 ## Syntax<a name="aws-resource-cognito-userpoolgroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -54,9 +57,9 @@ The name of the group\. Must be unique\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Precedence`  <a name="cfn-cognito-userpoolgroup-precedence"></a>
-A non\-negative integer value that specifies the precedence of this group relative to the other groups that a user can belong to in the user pool\. Zero is the highest precedence value\. Groups with lower `Precedence` values take precedence over groups with higher ornull `Precedence` values\. If a user belongs to two or more groups, it is the group with the lowest precedence value whose role ARN is given in the user's tokens for the `cognito:roles` and `cognito:preferred_role` claims\.  
+A non\-negative integer value that specifies the precedence of this group relative to the other groups that a user can belong to in the user pool\. Zero is the highest precedence value\. Groups with lower `Precedence` values take precedence over groups with higher or null `Precedence` values\. If a user belongs to two or more groups, it is the group with the lowest precedence value whose role ARN is given in the user's tokens for the `cognito:roles` and `cognito:preferred_role` claims\.  
 Two groups can have the same `Precedence` value\. If this happens, neither group takes precedence over the other\. If two groups with the same `Precedence` have the same role ARN, that role is used in the `cognito:preferred_role` claim in tokens for users in each group\. If the two groups have different role ARNs, the `cognito:preferred_role` claim isn't set in users' tokens\.  
-The default `Precedence` value is null\.  
+The default `Precedence` value is null\. The maximum `Precedence` value is `2^31-1`\.  
 *Required*: No  
 *Type*: Double  
 *Minimum*: `0`  
@@ -84,6 +87,6 @@ The user pool ID for the user pool\.
 
 ### Ref<a name="aws-resource-cognito-userpoolgroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the user pool group\. For example: `Admins`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the user pool group\. For example: `Admins`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

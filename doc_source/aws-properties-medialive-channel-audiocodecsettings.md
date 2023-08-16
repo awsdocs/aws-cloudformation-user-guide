@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AacSettings](#cfn-medialive-channel-audiocodecsettings-aacsettings)" : AacSettings,
   "[Ac3Settings](#cfn-medialive-channel-audiocodecsettings-ac3settings)" : Ac3Settings,
+  "[Eac3AtmosSettings](#cfn-medialive-channel-audiocodecsettings-eac3atmossettings)" : Eac3AtmosSettings,
   "[Eac3Settings](#cfn-medialive-channel-audiocodecsettings-eac3settings)" : Eac3Settings,
   "[Mp2Settings](#cfn-medialive-channel-audiocodecsettings-mp2settings)" : Mp2Settings,
   "[PassThroughSettings](#cfn-medialive-channel-audiocodecsettings-passthroughsettings)" : PassThroughSettings,
@@ -28,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AacSettings
   [Ac3Settings](#cfn-medialive-channel-audiocodecsettings-ac3settings): 
     Ac3Settings
+  [Eac3AtmosSettings](#cfn-medialive-channel-audiocodecsettings-eac3atmossettings): 
+    Eac3AtmosSettings
   [Eac3Settings](#cfn-medialive-channel-audiocodecsettings-eac3settings): 
     Eac3Settings
   [Mp2Settings](#cfn-medialive-channel-audiocodecsettings-mp2settings): 
@@ -50,6 +53,12 @@ The setup of the AAC audio codec in the output\.
 The setup of an AC3 audio codec in the output\.  
 *Required*: No  
 *Type*: [Ac3Settings](aws-properties-medialive-channel-ac3settings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Eac3AtmosSettings`  <a name="cfn-medialive-channel-audiocodecsettings-eac3atmossettings"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [Eac3AtmosSettings](aws-properties-medialive-channel-eac3atmossettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Eac3Settings`  <a name="cfn-medialive-channel-audiocodecsettings-eac3settings"></a>

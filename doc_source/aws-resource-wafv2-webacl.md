@@ -3,7 +3,7 @@
 **Note**  
 This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
 
-Use an [AWS::WAFv2::WebACL](#aws-resource-wafv2-webacl) to define a collection of rules to use to inspect and control web requests\. Each rule has an action defined \(allow, block, or count\) for requests that match the statement of the rule\. In the web ACL, you assign a default action to take \(allow, block\) for any request that does not match any of the rules\. The rules in a web ACL can contain rule statements that you define explicitly and rule statements that reference rule groups and managed rule groups\. You can associate a web ACL with one or more AWS resources to protect\. The resources can be an Amazon CloudFront distribution, an Amazon API Gateway REST API, an Application Load Balancer, or an AWS AppSync GraphQL API\. 
+Use an [AWS::WAFv2::WebACL](#aws-resource-wafv2-webacl) to define a collection of rules to use to inspect and control web requests\. Each rule has an action defined \(allow, block, or count\) for requests that match the statement of the rule\. In the web ACL, you specify a default action to take \(allow, block\) for any request that doesn't match any of the rules\. The rules in a web ACL can contain rule statements that you define explicitly and rule statements that reference rule groups and managed rule groups\. You can associate a web ACL with one or more AWS resources to protect\. The resources can be an Amazon CloudFront distribution, an Amazon API Gateway REST API, an Application Load Balancer, an AWS AppSync GraphQL API , an Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance\. 
 
 ## Syntax<a name="aws-resource-wafv2-webacl-syntax"></a>
 
@@ -15,14 +15,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFv2::WebACL",
   "Properties" : {
+      "[AssociationConfig](#cfn-wafv2-webacl-associationconfig)" : AssociationConfig,
       "[CaptchaConfig](#cfn-wafv2-webacl-captchaconfig)" : CaptchaConfig,
-      "[CustomResponseBodies](#cfn-wafv2-webacl-customresponsebodies)" : {Key : Value, ...},
+      "[ChallengeConfig](#cfn-wafv2-webacl-challengeconfig)" : ChallengeConfig,
+      "[CustomResponseBodies](#cfn-wafv2-webacl-customresponsebodies)" : {Key: Value, ...},
       "[DefaultAction](#cfn-wafv2-webacl-defaultaction)" : DefaultAction,
       "[Description](#cfn-wafv2-webacl-description)" : String,
       "[Name](#cfn-wafv2-webacl-name)" : String,
       "[Rules](#cfn-wafv2-webacl-rules)" : [ Rule, ... ],
       "[Scope](#cfn-wafv2-webacl-scope)" : String,
       "[Tags](#cfn-wafv2-webacl-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TokenDomains](#cfn-wafv2-webacl-tokendomains)" : [ String, ... ],
       "[VisibilityConfig](#cfn-wafv2-webacl-visibilityconfig)" : VisibilityConfig
     }
 }
@@ -33,10 +36,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::WAFv2::WebACL
 Properties: 
+  [AssociationConfig](#cfn-wafv2-webacl-associationconfig): 
+    AssociationConfig
   [CaptchaConfig](#cfn-wafv2-webacl-captchaconfig): 
     CaptchaConfig
+  [ChallengeConfig](#cfn-wafv2-webacl-challengeconfig): 
+    ChallengeConfig
   [CustomResponseBodies](#cfn-wafv2-webacl-customresponsebodies): 
-    Key : Value
+    Key: Value
   [DefaultAction](#cfn-wafv2-webacl-defaultaction): 
     DefaultAction
   [Description](#cfn-wafv2-webacl-description): String
@@ -46,11 +53,21 @@ Properties:
   [Scope](#cfn-wafv2-webacl-scope): String
   [Tags](#cfn-wafv2-webacl-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TokenDomains](#cfn-wafv2-webacl-tokendomains): 
+    - String
   [VisibilityConfig](#cfn-wafv2-webacl-visibilityconfig): 
     VisibilityConfig
 ```
 
 ## Properties<a name="aws-resource-wafv2-webacl-properties"></a>
+
+`AssociationConfig`  <a name="cfn-wafv2-webacl-associationconfig"></a>
+Specifies custom configurations for the associations between the web ACL and protected resources\.   
+Use this to customize the maximum size of the request body that your protected CloudFront distributions forward to AWS WAF for inspection\. The default is 16 KB \(16,384 bytes\)\.   
+You are charged additional fees when your protected resources forward body sizes that are larger than the default\. For more information, see [AWS WAF Pricing](http://aws.amazon.com/waf/pricing/)\.
+*Required*: No  
+*Type*: [AssociationConfig](aws-properties-wafv2-webacl-associationconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CaptchaConfig`  <a name="cfn-wafv2-webacl-captchaconfig"></a>
 Specifies how AWS WAF should handle `CAPTCHA` evaluations for rules that don't have their own `CaptchaConfig` settings\. If you don't specify this, AWS WAF uses its default settings for `CaptchaConfig`\.   
@@ -58,10 +75,16 @@ Specifies how AWS WAF should handle `CAPTCHA` evaluations for rules that don't h
 *Type*: [CaptchaConfig](aws-properties-wafv2-webacl-captchaconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ChallengeConfig`  <a name="cfn-wafv2-webacl-challengeconfig"></a>
+Specifies how AWS WAF should handle challenge evaluations for rules that don't have their own `ChallengeConfig` settings\. If you don't specify this, AWS WAF uses its default settings for `ChallengeConfig`\.   
+*Required*: No  
+*Type*: [ChallengeConfig](aws-properties-wafv2-webacl-challengeconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `CustomResponseBodies`  <a name="cfn-wafv2-webacl-customresponsebodies"></a>
 A map of custom response keys and content bodies\. When you create a rule with a block action, you can send a custom response to the web request\. You define these for the web ACL, and then use them in the rules and default actions that you define in the web ACL\.   
-For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
-For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
+For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the * AWS WAF Developer Guide*\.   
+For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the * AWS WAF Developer Guide*\.   
 *Required*: No  
 *Type*: Map of [CustomResponseBody](aws-properties-wafv2-webacl-customresponsebody.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -82,7 +105,7 @@ A description of the web ACL that helps with identification\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-webacl-name"></a>
-The descriptive name of the web ACL\. You cannot change the name of a web ACL after you create it\.  
+The name of the web ACL\. You cannot change the name of a web ACL after you create it\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -97,7 +120,7 @@ The rule statements used to identify the web requests that you want to allow, bl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-webacl-scope"></a>
-Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 For information about how to define the association of the web ACL with your resource, see [AWS::WAFv2::WebACLAssociation](aws-resource-wafv2-webaclassociation.md)\.   
 *Required*: Yes  
@@ -109,6 +132,12 @@ Key:value pairs associated with an AWS resource\. The key:value pair can be anyt
 To modify tags on existing resources, use the AWS WAF APIs or command line interface\. With AWS CloudFormation, you can only add tags to AWS WAF resources during resource creation\. 
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TokenDomains`  <a name="cfn-wafv2-webacl-tokendomains"></a>
+Specifies the domains that AWS WAF should accept in a web request token\. This enables the use of tokens across multiple protected websites\. When AWS WAF provides a token, it uses the domain of the AWS resource that the web ACL is protecting\. If you don't specify a list of token domains, AWS WAF accepts tokens only for the domain of the protected resource\. With a token domain list, AWS WAF accepts the resource's host domain plus all domains in the token domain list, including their prefixed subdomains\.  
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VisibilityConfig`  <a name="cfn-wafv2-webacl-visibilityconfig"></a>
@@ -127,13 +156,18 @@ For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`\.
 
 ### Fn::GetAtt<a name="aws-resource-wafv2-webacl-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-wafv2-webacl-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the web ACL\.
 
 `Capacity`  <a name="Capacity-fn::getatt"></a>
-The current web ACL capacity \(WCU\) usage by the web ACL\. 
+The web ACL capacity units \(WCUs\) currently being used by this web ACL\.   
+AWS WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs\. AWS WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule\. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power\. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group\. The WCU limit for web ACLs is 1,500\. 
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the web ACL\.
@@ -146,6 +180,345 @@ When a rule with a label matches a web request, AWS WAF adds the fully qualified
 ## Examples<a name="aws-resource-wafv2-webacl--examples"></a>
 
 
+
+### Create a web ACL with a variety of rate\-based rules<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_a_variety_of_rate-based_rules"></a>
+
+The following example web ACL specification shows a number of rate\-based rules\. For information about each rule, see the examples under `AWS::WAFv2::WebACL RateBasedStatement`\.
+
+#### YAML<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_a_variety_of_rate-based_rules--yaml"></a>
+
+```
+Name: exampleWebACL
+Id: exampleWebACLExampleID
+ARN: arn:aws:wafv2:us-east-1:ExampleAccountNumber:regional/webacl/exampleWebACL/exampleWebACLExampleID
+DefaultAction:
+  Allow: {}
+Description: ''
+Rules:
+- Name: rbrCountAll
+  Priority: 0
+  Statement:
+    RateBasedStatement:
+      Limit: 100000
+      AggregateKeyType: CONSTANT
+      ScopeDownStatement:
+        GeoMatchStatement:
+          CountryCodes:
+          - GB
+          ForwardedIPConfig:
+            HeaderName: X-Forwarded-For
+            FallbackBehavior: MATCH
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrCountAll
+- Name: rbrNoCustomKeys
+  Priority: 1
+  Statement:
+    RateBasedStatement:
+      Limit: 1000
+      AggregateKeyType: FORWARDED_IP
+      ForwardedIPConfig:
+        HeaderName: X-Forwarded-For
+        FallbackBehavior: MATCH
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrNoCustomKeys
+- Name: rbrCustomKeysA
+  Priority: 2
+  Statement:
+    RateBasedStatement:
+      Limit: 2000
+      AggregateKeyType: CUSTOM_KEYS
+      ForwardedIPConfig:
+        HeaderName: X-Forwarded-For
+        FallbackBehavior: MATCH
+      CustomKeys:
+      - Header:
+          Name: Content-Type
+          TextTransformations:
+          - Priority: 0
+            Type: NONE
+      - ForwardedIP: {}
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrCustomKeysA
+- Name: rbrCustomKeysB
+  Priority: 3
+  Statement:
+    RateBasedStatement:
+      Limit: 3000
+      AggregateKeyType: CUSTOM_KEYS
+      CustomKeys:
+      - QueryString:
+          TextTransformations:
+          - Priority: 0
+            Type: NONE
+      - HTTPMethod: {}
+      - UriPath:
+          TextTransformations:
+          - Priority: 0
+            Type: NONE
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrCustomKeysB
+- Name: labelUSStates
+  Priority: 4
+  Statement:
+    GeoMatchStatement:
+      CountryCodes:
+      - US
+  Action:
+    Count: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: labelUSStates
+- Name: rbrRequestsFromUSStates
+  Priority: 5
+  Statement:
+    RateBasedStatement:
+      Limit: 500
+      AggregateKeyType: CUSTOM_KEYS
+      ScopeDownStatement:
+        GeoMatchStatement:
+          CountryCodes:
+          - US
+      CustomKeys:
+      - LabelNamespace:
+          Namespace: 'awswaf:clientip:geo:region:'
+  Action:
+    Block: {}
+  VisibilityConfig:
+    SampledRequestsEnabled: true
+    CloudWatchMetricsEnabled: true
+    MetricName: rbrRequestsFromUSStates
+VisibilityConfig:
+  SampledRequestsEnabled: true
+  CloudWatchMetricsEnabled: true
+  MetricName: exampleWebACL
+Capacity: 193
+ManagedByFirewallManager: false
+LabelNamespace: 'awswaf:ExampleAccountNumber:webacl:exampleWebACL:'
+```
+
+#### JSON<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_a_variety_of_rate-based_rules--json"></a>
+
+```
+ {
+  "Name": "exampleWebACL",
+  "Id": "exampleWebACLExampleID",
+  "ARN": "arn:aws:wafv2:us-east-1:ExampleAccountNumber:regional/webacl/exampleWebACL/exampleWebACLExampleID",
+  "DefaultAction": {
+    "Allow": {}
+  },
+  "Description": "",
+  "Rules": [
+    {
+      "Name": "rbrCountAll",
+      "Priority": 0,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 100000,
+          "AggregateKeyType": "CONSTANT",
+          "ScopeDownStatement": {
+            "GeoMatchStatement": {
+              "CountryCodes": [
+                "GB"
+              ],
+              "ForwardedIPConfig": {
+                "HeaderName": "X-Forwarded-For",
+                "FallbackBehavior": "MATCH"
+              }
+            }
+          }
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrCountAll"
+      }
+    },
+    {
+      "Name": "rbrNoCustomKeys",
+      "Priority": 1,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 1000,
+          "AggregateKeyType": "FORWARDED_IP",
+          "ForwardedIPConfig": {
+            "HeaderName": "X-Forwarded-For",
+            "FallbackBehavior": "MATCH"
+          }
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrNoCustomKeys"
+      }
+    },
+    {
+      "Name": "rbrCustomKeysA",
+      "Priority": 2,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 2000,
+          "AggregateKeyType": "CUSTOM_KEYS",
+          "ForwardedIPConfig": {
+            "HeaderName": "X-Forwarded-For",
+            "FallbackBehavior": "MATCH"
+          },
+          "CustomKeys": [
+            {
+              "Header": {
+                "Name": "Content-Type",
+                "TextTransformations": [
+                  {
+                    "Priority": 0,
+                    "Type": "NONE"
+                  }
+                ]
+              }
+            },
+            {
+              "ForwardedIP": {}
+            }
+          ]
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrCustomKeysA"
+      }
+    },
+    {
+      "Name": "rbrCustomKeysB",
+      "Priority": 3,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 3000,
+          "AggregateKeyType": "CUSTOM_KEYS",
+          "CustomKeys": [
+            {
+              "QueryString": {
+                "TextTransformations": [
+                  {
+                    "Priority": 0,
+                    "Type": "NONE"
+                  }
+                ]
+              }
+            },
+            {
+              "HTTPMethod": {}
+            },
+            {
+              "UriPath": {
+                "TextTransformations": [
+                  {
+                    "Priority": 0,
+                    "Type": "NONE"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrCustomKeysB"
+      }
+    },
+    {
+      "Name": "labelUSStates",
+      "Priority": 4,
+      "Statement": {
+        "GeoMatchStatement": {
+          "CountryCodes": [
+            "US"
+          ]
+        }
+      },
+      "Action": {
+        "Count": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "labelUSStates"
+      }
+    },
+    {
+      "Name": "rbrRequestsFromUSStates",
+      "Priority": 5,
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 500,
+          "AggregateKeyType": "CUSTOM_KEYS",
+          "ScopeDownStatement": {
+            "GeoMatchStatement": {
+              "CountryCodes": [
+                "US"
+              ]
+            }
+          },
+          "CustomKeys": [
+            {
+              "LabelNamespace": {
+                "Namespace": "awswaf:clientip:geo:region:"
+              }
+            }
+          ]
+        }
+      },
+      "Action": {
+        "Block": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "rbrRequestsFromUSStates"
+      }
+    }
+  ],
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "exampleWebACL"
+  },
+  "Capacity": 193,
+  "ManagedByFirewallManager": false,
+  "LabelNamespace": "awswaf:ExampleAccountNumber:webacl:exampleWebACL:"
+}
+```
 
 ### Create a web ACL with custom request and response handling<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_custom_request_and_response_handling"></a>
 

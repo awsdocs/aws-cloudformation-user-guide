@@ -67,7 +67,7 @@ The Amazon Resource Name \(ARN\) of the role that grants permission to AWS IoT t
 
 ### Ref<a name="aws-resource-iot-accountauditconfiguration-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the account ID\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the account ID\. 
 
 ## Examples<a name="aws-resource-iot-accountauditconfiguration--examples"></a>
 
@@ -80,117 +80,49 @@ The Amazon Resource Name \(ARN\) of the role that grants permission to AWS IoT t
 #### JSON<a name="aws-resource-iot-accountauditconfiguration--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon Web Services IoT AccountAuditConfiguration Sample Template",
-  "Resources": {
-    "MyAccountAuditConfiguration": {
-      "Type": "AWS::IoT::AccountAuditConfiguration",
-      "Properties": {
-        "AccountId": "${AWS::AccountId}",
-        "AuditCheckConfigurations": {
-          "AuthenticatedCognitoRoleOverlyPermissiveCheck": {
-            "Enabled": true
-          },
-          "CaCertificateExpiringCheck": {
-            "Enabled": true
-          },
-          "CaCertificateKeyQualityCheck": {
-            "Enabled": true
-          },
-          "ConflictingClientIdsCheck": {
-            "Enabled": true
-          },
-          "DeviceCertificateExpiringCheck": {
-            "Enabled": true
-          },
-          "DeviceCertificateKeyQualityCheck": {
-            "Enabled": true
-          },
-          "DeviceCertificateSharedCheck": {
-            "Enabled": true
-          },
-          "IotPolicyOverlyPermissiveCheck": {
-            "Enabled": true
-          },
-          "IotRoleAliasAllowsAccessToUnusedServicesCheck": {
-            "Enabled": true
-          },
-          "IotRoleAliasOverlyPermissiveCheck": {
-            "Enabled": true
-          },
-          "LoggingDisabledCheck": {
-            "Enabled": true
-          },
-          "RevokedCaCertificateStillActiveCheck": {
-            "Enabled": true
-          },
-          "RevokedDeviceCertificateStillActiveCheck": {
-            "Enabled": true
-          },
-          "UnauthenticatedCognitoRoleOverlyPermissiveCheck": {
-            "Enabled": true
-          }
-        },
-        "AuditNotificationTargetConfigurations": {
-          "Sns": {
-            "TargetArn": "arn:aws:sns:us-east-1:123456789012:AuditNotifications",
-            "RoleArn": "arn:aws:iam::123456789012:role/RoleForIoTAuditNotifications",
-            "Enabled": true
-          }
-        },
-        "RoleArn": "arn:aws:iam::123456789012:role/service-role/AWSIoTDeviceDefenderAudit"
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "Amazon
+            Web Services IoT AccountAuditConfiguration Sample Template", "Resources": {
+            "MyAccountAuditConfiguration": { "Type": "AWS::IoT::AccountAuditConfiguration",
+            "Properties": { "AccountId": "${AWS::AccountId}", "AuditCheckConfigurations": {
+            "AuthenticatedCognitoRoleOverlyPermissiveCheck": { "Enabled": true },
+            "CaCertificateExpiringCheck": { "Enabled": true }, "CaCertificateKeyQualityCheck": {
+            "Enabled": true }, "ConflictingClientIdsCheck": { "Enabled": true },
+            "DeviceCertificateExpiringCheck": { "Enabled": true },
+            "DeviceCertificateKeyQualityCheck": { "Enabled": true }, "DeviceCertificateSharedCheck":
+            { "Enabled": true }, "IotPolicyOverlyPermissiveCheck": { "Enabled": true },
+            "IotRoleAliasAllowsAccessToUnusedServicesCheck": { "Enabled": true },
+            "IotRoleAliasOverlyPermissiveCheck": { "Enabled": true }, "LoggingDisabledCheck": {
+            "Enabled": true }, "RevokedCaCertificateStillActiveCheck": { "Enabled": true },
+            "RevokedDeviceCertificateStillActiveCheck": { "Enabled": true },
+            "UnauthenticatedCognitoRoleOverlyPermissiveCheck": { "Enabled": true } },
+            "AuditNotificationTargetConfigurations": { "Sns": { "TargetArn":
+            "arn:aws:sns:us-east-1:123456789012:AuditNotifications", "RoleArn":
+            "arn:aws:iam::123456789012:role/RoleForIoTAuditNotifications", "Enabled": true } },
+            "RoleArn": "arn:aws:iam::123456789012:role/service-role/AWSIoTDeviceDefenderAudit" } } }
+            }
 ```
 
 #### YAML<a name="aws-resource-iot-accountauditconfiguration--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: Amazon Web Services IoT AccountAuditConfiguration Sample Template
-Resources:
-  MyAccountAuditConfiguration:
-    Type: 'AWS::IoT::AccountAuditConfiguration'
-    Properties:
-      AccountId: !Sub '${AWS::AccountId}'
-      AuditCheckConfigurations:
-        AuthenticatedCognitoRoleOverlyPermissiveCheck: 
-        	Enabled: True
-        CaCertificateExpiringCheck: 
-        	Enabled: True
-        CaCertificateKeyQualityCheck: 
-        	Enabled: True
-        ConflictingClientIdsCheck: 
-        	Enabled: True
-        DeviceCertificateExpiringCheck: 
-        	Enabled: True
-        DeviceCertificateKeyQualityCheck: 
-        	Enabled: True
-        DeviceCertificateSharedCheck: 
-        	Enabled: True
-        IotPolicyOverlyPermissiveCheck: 
-        	Enabled: True
-        IotRoleAliasAllowsAccessToUnusedServicesCheck: 
-        	Enabled: True
-        IotRoleAliasOverlyPermissiveCheck: 
-        	Enabled: True
-        LoggingDisabledCheck: 
-        	Enabled: True
-        RevokedCaCertificateStillActiveCheck: 
-        	Enabled: True
-        RevokedDeviceCertificateStillActiveCheck: 
-        	Enabled: True
-        UnauthenticatedCognitoRoleOverlyPermissiveCheck: 
-        	Enabled: True
-      AuditNotificationTargetConfigurations:
-         Sns:
-           TargetArn: 'arn:aws:sns:us-east-1:123456789012:AuditNotifications'
-           RoleArn: 'arn:aws:iam::123456789012:role/RoleForIoTAuditNotifications'
-           Enabled: true
-      RoleArn: 'arn:aws:iam::123456789012:role/service-role/AWSIoTDeviceDefenderAudit'
+AWSTemplateFormatVersion: 2010-09-09 Description: Amazon Web
+            Services IoT AccountAuditConfiguration Sample Template Resources:
+            MyAccountAuditConfiguration: Type: 'AWS::IoT::AccountAuditConfiguration' Properties:
+            AccountId: !Sub '${AWS::AccountId}' AuditCheckConfigurations:
+            AuthenticatedCognitoRoleOverlyPermissiveCheck: Enabled: True CaCertificateExpiringCheck:
+            Enabled: True CaCertificateKeyQualityCheck: Enabled: True ConflictingClientIdsCheck:
+            Enabled: True DeviceCertificateExpiringCheck: Enabled: True
+            DeviceCertificateKeyQualityCheck: Enabled: True DeviceCertificateSharedCheck: Enabled:
+            True IotPolicyOverlyPermissiveCheck: Enabled: True
+            IotRoleAliasAllowsAccessToUnusedServicesCheck: Enabled: True
+            IotRoleAliasOverlyPermissiveCheck: Enabled: True LoggingDisabledCheck: Enabled: True
+            RevokedCaCertificateStillActiveCheck: Enabled: True
+            RevokedDeviceCertificateStillActiveCheck: Enabled: True
+            UnauthenticatedCognitoRoleOverlyPermissiveCheck: Enabled: True
+            AuditNotificationTargetConfigurations: Sns: TargetArn:
+            'arn:aws:sns:us-east-1:123456789012:AuditNotifications' RoleArn:
+            'arn:aws:iam::123456789012:role/RoleForIoTAuditNotifications' Enabled: true RoleArn:
+            'arn:aws:iam::123456789012:role/service-role/AWSIoTDeviceDefenderAudit'
 ```
 
 ## See also<a name="aws-resource-iot-accountauditconfiguration--seealso"></a>

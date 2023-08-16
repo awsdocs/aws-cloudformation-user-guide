@@ -1,4 +1,4 @@
-# Wisdom resource type reference<a name="AWS_Wisdom"></a>
+# Amazon Connect Wisdom resource type reference<a name="AWS_Wisdom"></a>
 
 **Resource types**
 + [AWS::Wisdom::Assistant](aws-resource-wisdom-assistant.md)

@@ -34,6 +34,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade)" : Boolean,
       "[BrokerName](#cfn-amazonmq-broker-brokername)" : String,
       "[Configuration](#cfn-amazonmq-broker-configuration)" : ConfigurationId,
+      "[DataReplicationMode](#cfn-amazonmq-broker-datareplicationmode)" : String,
+      "[DataReplicationPrimaryBrokerArn](#cfn-amazonmq-broker-datareplicationprimarybrokerarn)" : String,
       "[DeploymentMode](#cfn-amazonmq-broker-deploymentmode)" : String,
       "[EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions)" : EncryptionOptions,
       "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
@@ -62,6 +64,8 @@ Properties:
   [BrokerName](#cfn-amazonmq-broker-brokername): String
   [Configuration](#cfn-amazonmq-broker-configuration): 
     ConfigurationId
+  [DataReplicationMode](#cfn-amazonmq-broker-datareplicationmode): String
+  [DataReplicationPrimaryBrokerArn](#cfn-amazonmq-broker-datareplicationprimarybrokerarn): String
   [DeploymentMode](#cfn-amazonmq-broker-deploymentmode): String
   [EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions): 
     EncryptionOptions
@@ -112,6 +116,18 @@ A list of information about the configuration\. Does not apply to RabbitMQ broke
 *Required*: No  
 *Type*: [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
+`DataReplicationMode`  <a name="cfn-amazonmq-broker-datareplicationmode"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DataReplicationPrimaryBrokerArn`  <a name="cfn-amazonmq-broker-datareplicationprimarybrokerarn"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentMode`  <a name="cfn-amazonmq-broker-deploymentmode"></a>
 The deployment mode of the broker\. Available values:  
@@ -205,17 +221,17 @@ The list of broker users \(persons or applications\) who can access queues and t
 
 ### Ref<a name="aws-resource-amazonmq-broker-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon MQ broker ID\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon MQ broker ID\. For example: 
 
  `b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-amazonmq-broker-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-amazonmq-broker-return-values-fn--getatt-fn--getatt"></a>
 

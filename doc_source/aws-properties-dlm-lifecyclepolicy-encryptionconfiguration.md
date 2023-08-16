@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy EncryptionConfiguration<a name="aws-properties-dlm-lifecyclepolicy-encryptionconfiguration"></a>
 
-Specifies the encryption settings for shared snapshots that are copied across Regions\.
+ **\[Event\-based policies only\]** Specifies the encryption settings for cross\-Region snapshot copies created by event\-based policies\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-encryptionconfiguration-syntax"></a>
 

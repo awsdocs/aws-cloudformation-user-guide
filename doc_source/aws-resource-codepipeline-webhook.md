@@ -1,8 +1,8 @@
 # AWS::CodePipeline::Webhook<a name="aws-resource-codepipeline-webhook"></a>
 
-The `AWS::CodePipeline::Webhook` resource creates and registers your webhook\. After the webhook is created and registered, it triggers your pipeline to start every time an external event occurs\. For more information, see [Configure Your GitHub Pipelines to Use Webhooks for Change Detection](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipelines-webhooks-migration.html) in the *AWS CodePipeline User Guide*\.
+The `AWS::CodePipeline::Webhook` resource creates and registers your webhook\. After the webhook is created and registered, it triggers your pipeline to start every time an external event occurs\. For more information, see [Migrate polling pipelines to use event\-based change detection](https://docs.aws.amazon.com/codepipeline/latest/userguide/update-change-detection.html) in the *AWS CodePipeline User Guide*\.
 
-We strongly recommend that you use AWS Secrets Manager to store your credentials\. If you use Secrets Manager, you must have already configured and stored your secret parameters in Secrets Manager\. For more information, see [ Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)\. 
+We strongly recommend that you use AWS Secrets Manager to store your credentials\. If you use Secrets Manager, you must have already configured and stored your secret parameters in Secrets Manager\. For more information, see [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)\. 
 
 **Important**  
 When passing secret parameters, do not enter the value directly into the template\. The value is rendered as plaintext and is therefore readable\. For security reasons, do not use plaintext in your AWS CloudFormation template to store your credentials\.
@@ -117,15 +117,15 @@ Type: Integer
 
 ### Ref<a name="aws-resource-codepipeline-webhook-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the webhook name, such as MyFirstPipeline\-SourceAction1\-Webhook\-utb9LrOl24Kk\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the webhook name, such as MyFirstPipeline\-SourceAction1\-Webhook\-utb9LrOl24Kk\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-codepipeline-webhook-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-codepipeline-webhook-return-values-fn--getatt-fn--getatt"></a>
 

@@ -1,6 +1,6 @@
 # AWS::FSx::FileSystem SelfManagedActiveDirectoryConfiguration<a name="aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration"></a>
 
-The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or an ONTAP storage virtual machine \(SVM\) to a self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\. For more information, see [ Using Amazon FSx with your self\-managed Microsoft Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or [Managing SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html)\.
+The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine \(SVM\) to a self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\. For more information, see [ Using Amazon FSx for Windows with your self\-managed Microsoft Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or [Managing FSx for ONTAP SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html)\.
 
 ## Syntax<a name="aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-syntax"></a>
 
@@ -69,9 +69,7 @@ Only Organizational Unit \(OU\) objects can be the direct parent of the file sys
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Password`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-password"></a>
-The password for the service account on your self\-managed AD domain that Amazon FSx will use to join to your AD domain\. We strongly suggest that you follow best practices and *do not* embed passwords in your CFN templates\.   
-The recommended approach is to use AWS Secrets Manager to store your passwords\. You can retrieve them for use in your templates using the `secretsmanager` dynamic reference\. There are additional costs associated with using AWS Secrets Manager\. To learn more, see [Secrets Manager secrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager) in the *AWS CloudFormation User Guide*\.  
-Alternatively, you can use the `NoEcho` property to obfuscate the password parameter value\. For more information, see [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) in the *AWS CloudFormation User Guide*\.   
+The password for the service account on your self\-managed AD domain that Amazon FSx will use to join to your AD domain\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

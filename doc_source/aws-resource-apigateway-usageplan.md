@@ -44,37 +44,37 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-usageplan-properties"></a>
 
 `ApiStages`  <a name="cfn-apigateway-usageplan-apistages"></a>
-The API stages to associate with this usage plan\.  
+The associated API stages of a usage plan\.  
 *Required*: No  
 *Type*: List of [ApiStage](aws-properties-apigateway-usageplan-apistage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigateway-usageplan-description"></a>
-A description of the usage plan\.  
+The description of a usage plan\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Quota`  <a name="cfn-apigateway-usageplan-quota"></a>
-Configures the number of requests that users can make within a given interval\.  
+The target maximum number of permitted requests per a given unit time interval\.  
 *Required*: No  
 *Type*: [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-apigateway-usageplan-tags"></a>
-An array of arbitrary tags \(key\-value pairs\) to associate with the usage plan\.  
+The collection of tags\. Each tag element is associated with a given resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Throttle`  <a name="cfn-apigateway-usageplan-throttle"></a>
-Configures the overall request rate \(average requests per second\) and burst capacity\.  
+A map containing method level throttling information for API stage in a usage plan\.  
 *Required*: No  
 *Type*: [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UsagePlanName`  <a name="cfn-apigateway-usageplan-usageplanname"></a>
-A name for the usage plan\.  
+The name of a usage plan\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,15 +83,15 @@ A name for the usage plan\.
 
 ### Ref<a name="aws-resource-apigateway-usageplan-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the usage plan ID, such as `abc123`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the usage plan ID, such as `abc123`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-apigateway-usageplan-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-apigateway-usageplan-return-values-fn--getatt-fn--getatt"></a>
 
@@ -158,5 +158,5 @@ usagePlan:
 ```
 
 ## See also<a name="aws-resource-apigateway-usageplan--seealso"></a>
-+ [usageplan:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplan-create/) in the *Amazon API Gateway REST API Reference*
++ [usageplan:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateUsagePlan.html) in the *Amazon API Gateway REST API Reference*
 

@@ -82,10 +82,10 @@ An object that defines the open and click tracking options for emails that you s
 
 ### Ref<a name="aws-resource-pinpointemail-configurationset-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "myConfigurationSet" }` 
 
 For the Amazon Pinpoint configuration set `myConfigurationSet`, Ref returns the name of the configuration set\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

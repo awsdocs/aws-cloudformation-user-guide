@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CaptureInterval](#cfn-medialive-channel-framecapturesettings-captureinterval)" : Integer,
-  "[CaptureIntervalUnits](#cfn-medialive-channel-framecapturesettings-captureintervalunits)" : String
+  "[CaptureIntervalUnits](#cfn-medialive-channel-framecapturesettings-captureintervalunits)" : String,
+  "[TimecodeBurninSettings](#cfn-medialive-channel-framecapturesettings-timecodeburninsettings)" : TimecodeBurninSettings
 }
 ```
 
@@ -22,6 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CaptureInterval](#cfn-medialive-channel-framecapturesettings-captureinterval): Integer
   [CaptureIntervalUnits](#cfn-medialive-channel-framecapturesettings-captureintervalunits): String
+  [TimecodeBurninSettings](#cfn-medialive-channel-framecapturesettings-timecodeburninsettings): 
+    TimecodeBurninSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-framecapturesettings-properties"></a>
@@ -36,4 +39,10 @@ The frequency, in seconds, for capturing frames for inclusion in the output\. Fo
 Unit for the frame capture interval\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TimecodeBurninSettings`  <a name="cfn-medialive-channel-framecapturesettings-timecodeburninsettings"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [TimecodeBurninSettings](aws-properties-medialive-channel-timecodeburninsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

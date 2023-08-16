@@ -1,6 +1,6 @@
 # AWS::ApiGateway::DomainName MutualTlsAuthentication<a name="aws-properties-apigateway-domainname-mutualtlsauthentication"></a>
 
-If specified, API Gateway performs two\-way authentication between the client and the server\. Clients must present a trusted certificate to access your API\.
+The mutual TLS authentication configuration for a custom domain name\. If specified, API Gateway performs two\-way authentication between the client and the server\. Clients must present a trusted certificate to access your API\.
 
 ## Syntax<a name="aws-properties-apigateway-domainname-mutualtlsauthentication-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-domainname-mutualtlsauthentication-properties"></a>
 
 `TruststoreUri`  <a name="cfn-apigateway-domainname-mutualtlsauthentication-truststoreuri"></a>
-An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`\. The truststore can contain certificates from public or private certificate authorities\. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version\. To update the truststore, you must have permissions to access the S3 object\.  
+An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example `s3://bucket-name/key-name`\. The truststore can contain certificates from public or private certificate authorities\. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version\. To update the truststore, you must have permissions to access the S3 object\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

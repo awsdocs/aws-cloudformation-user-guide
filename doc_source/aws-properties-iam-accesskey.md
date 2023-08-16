@@ -2,12 +2,10 @@
 
  Creates a new AWS secret access key and corresponding AWS access key ID for the specified user\. The default status for new keys is `Active`\.
 
-If you do not specify a user name, IAM determines the user name implicitly based on the AWS access key ID signing the request\. This operation works for access keys under the AWS account\. Consequently, you can use this operation to manage AWS account root user credentials\. This is true even if the AWS account has no associated users\.
-
  For information about quotas on the number of keys you can create, see [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 **Important**  
-To ensure the security of your AWS account, the secret access key is accessible only during key and user creation\. You must save the key \(for example, in a text file\) if you want to be able to access it again\. If a secret key is lost, you can delete the access keys for the associated user and then create new keys\.
+To ensure the security of your AWS account, the secret access key is accessible only during key and user creation\. You must save the key \(for example, in a text file\) if you want to be able to access it again\. If a secret key is lost, you can rotate access keys by increasing the value of the `serial` property\.
 
 ## Syntax<a name="aws-properties-iam-accesskey-syntax"></a>
 
@@ -65,15 +63,15 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 
 ### Ref<a name="aws-properties-iam-accesskey-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `AccessKeyId`\. For example: `AKIAIOSFODNN7EXAMPLE`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `AccessKeyId`\. For example: `AKIAIOSFODNN7EXAMPLE`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-properties-iam-accesskey-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-properties-iam-accesskey-return-values-fn--getatt-fn--getatt"></a>
 

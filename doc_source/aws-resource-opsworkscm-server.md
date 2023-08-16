@@ -29,7 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PreferredBackupWindow](#cfn-opsworkscm-server-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-opsworkscm-server-preferredmaintenancewindow)" : String,
       "[SecurityGroupIds](#cfn-opsworkscm-server-securitygroupids)" : [ String, ... ],
-      "[ServerName](#cfn-opsworkscm-server-servername)" : String,
       "[ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn)" : String,
       "[SubnetIds](#cfn-opsworkscm-server-subnetids)" : [ String, ... ],
       "[Tags](#cfn-opsworkscm-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -61,7 +60,6 @@ Properties:
   [PreferredMaintenanceWindow](#cfn-opsworkscm-server-preferredmaintenancewindow): String
   [SecurityGroupIds](#cfn-opsworkscm-server-securitygroupids): 
     - String
-  [ServerName](#cfn-opsworkscm-server-servername): String
   [ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn): String
   [SubnetIds](#cfn-opsworkscm-server-subnetids): 
     - String
@@ -215,15 +213,6 @@ The ARN of the instance profile that your Amazon EC2 instances use\.
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ServerName`  <a name="cfn-opsworkscm-server-servername"></a>
- The name of the server\. The server name must be unique within your AWS account, within each region\. Server names must start with a letter; then letters, numbers, or hyphens \(\-\) are allowed, up to a maximum of 40 characters\.   
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `40`  
-*Pattern*: `[a-zA-Z][a-zA-Z0-9\-]*`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
 `ServiceRoleArn`  <a name="cfn-opsworkscm-server-servicerolearn"></a>
  The service role that the AWS OpsWorks CM service backend uses to work with your account\. Although the AWS OpsWorks management console typically creates the service role for you, if you are using the AWS CLI or API commands, run the service\-role\-creation\.yaml AWS CloudFormation template, located at https://s3\.amazonaws\.com/opsworks\-cm\-us\-east\-1\-prod\-default\-assets/misc/opsworks\-cm\-roles\.yaml\. This template creates a CloudFormation stack that includes the service role and instance profile that you need\.   
 *Required*: Yes  
@@ -257,15 +246,15 @@ A map that contains tag keys and tag values to attach to an AWS OpsWorks for Che
 
 ### Ref<a name="aws-resource-opsworkscm-server-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the server's ARN, such as `arn:aws:OpsWorksCM:us-east-1:123456789012:server/server-a1bzhi`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the server's ARN, such as `arn:aws:OpsWorksCM:us-east-1:123456789012:server/server-a1bzhi`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-opsworkscm-server-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-opsworkscm-server-return-values-fn--getatt-fn--getatt"></a>
 
@@ -275,8 +264,8 @@ The Amazon Resource Name \(ARN\) of the server, such as `arn:aws:OpsWorksCM:us-e
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 A DNS name that can be used to access the engine\. Example: `myserver-asdfghjkl.us-east-1.opsworks.io`\.
 
-`Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+`ServerName`  <a name="ServerName-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-opsworkscm-server--examples"></a>
 

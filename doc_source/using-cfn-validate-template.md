@@ -7,10 +7,19 @@ The `aws cloudformation validate-template` command is designed to check only the
 
 To check the operational validity, you need to attempt to create the stack\. There is no sandbox or test area for AWS CloudFormation stacks, so you are charged for the resources you create during testing\.
 
-During validation, AWS CloudFormation first checks if the template is valid JSON\. If it isn't, CloudFormation checks if the template is valid YAML\. If both checks fail, CloudFormation returns a template validation error\. You can validate templates locally by using the `--template-body` parameter, or remotely with the `--template-url` parameter\. The following example validates a template in a remote location:
+During validation, AWS CloudFormation first checks if the template is valid JSON\. If it isn't, CloudFormation checks if the template is valid YAML\. If both checks fail, CloudFormation returns a template validation error\. You can validate templates locally by using the `--template-body` parameter, or remotely with the `--template-url` parameter\.
+
+## Valid template<a name="valid-template"></a>
+
+The following example passes the `--template-url` parameter, to validate a template in a remote location:
 
 ```
-PROMPT> aws cloudformation validate-template --template-url https://s3.amazonaws.com/cloudformation-templates-us-east-1/S3_Bucket.template
+aws cloudformation validate-template --template-url https://s3.amazonaws.com/cloudformation-templates-us-east-1/S3_Bucket.template
+```
+
+The following is the output of the previous command\.
+
+```
 {
     "Description": "AWS CloudFormation Sample Template S3_Bucket: Sample template showing how to create a publicly accessible S3 bucket. **WARNING** This template creates an S3 bucket.
 You will be billed for the AWS resources used if you create a stack from this template.",
@@ -21,10 +30,19 @@ You will be billed for the AWS resources used if you create a stack from this te
 
 The expected result is no error message, with information about all parameters listed\.
 
-The following example shows an error with a local template file\.
+## Validation error<a name="validation-error"></a>
+
+This section produces a validation error when running the `aws cloudformation validate-template` command\.
+
+The following example passes the `--template-body` parameter, to validate a template locally\.
 
 ```
-PROMPT> aws cloudformation validate-template --template-body file:///home/local/test/sampletemplate.json
+aws cloudformation validate-template --template-body file:///home/local/test/sampletemplate.json
+```
+
+The following is the output of the previous command\.
+
+```
 {
     "ResponseMetadata": {
         "RequestId": "4ae33ec0-1988-11e3-818b-e15a6df955cd"
@@ -41,3 +59,5 @@ PROMPT> aws cloudformation validate-template --template-body file:///home/local/
 }
 A client error (ValidationError) occurred: Template format error: JSON not well-formed. (line 11, column 8)
 ```
+
+The expected result is an error message, with information about error listed\.

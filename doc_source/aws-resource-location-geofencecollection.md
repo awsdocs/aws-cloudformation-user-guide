@@ -14,9 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CollectionName](#cfn-location-geofencecollection-collectionname)" : String,
       "[Description](#cfn-location-geofencecollection-description)" : String,
-      "[KmsKeyId](#cfn-location-geofencecollection-kmskeyid)" : String,
-      "[PricingPlan](#cfn-location-geofencecollection-pricingplan)" : String,
-      "[PricingPlanDataSource](#cfn-location-geofencecollection-pricingplandatasource)" : String
+      "[KmsKeyId](#cfn-location-geofencecollection-kmskeyid)" : String
     }
 }
 ```
@@ -29,14 +27,16 @@ Properties:
   [CollectionName](#cfn-location-geofencecollection-collectionname): String
   [Description](#cfn-location-geofencecollection-description): String
   [KmsKeyId](#cfn-location-geofencecollection-kmskeyid): String
-  [PricingPlan](#cfn-location-geofencecollection-pricingplan): String
-  [PricingPlanDataSource](#cfn-location-geofencecollection-pricingplandatasource): String
 ```
 
 ## Properties<a name="aws-resource-location-geofencecollection-properties"></a>
 
 `CollectionName`  <a name="cfn-location-geofencecollection-collectionname"></a>
-The name for the geofence collection\.  
+A custom name for the geofence collection\.  
+Requirements:  
++ Contain only alphanumeric characters \(A–Z, a–z, 0–9\), hyphens \(\-\), periods \(\.\), and underscores \(\_\)\. 
++ Must be a unique geofence collection name\.
++ No spaces allowed\. For example, `ExampleGeofenceCollection`\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -53,39 +53,26 @@ An optional description for the geofence collection\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-location-geofencecollection-kmskeyid"></a>
-A key identifier for an [AWS KMS customer managed key](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html)\. Enter a key ID, key ARN, alias name, or alias ARN\.  
+A key identifier for an [AWS KMS customer managed key](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html)\. Enter a key ID, key ARN, alias name, or alias ARN\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`PricingPlan`  <a name="cfn-location-geofencecollection-pricingplan"></a>
-No longer used\. If included, the only allowed value is `RequestBasedUsage`\.  
-*Allowed Values*: `RequestBasedUsage`  
-*Required*: No  
-*Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`PricingPlanDataSource`  <a name="cfn-location-geofencecollection-pricingplandatasource"></a>
-This parameter is no longer used\.  
-*Required*: No  
-*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-location-geofencecollection-return-values"></a>
 
 ### Ref<a name="aws-resource-location-geofencecollection-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `GeofenceCollection` name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `GeofenceCollection` name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-location-geofencecollection-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-location-geofencecollection-return-values-fn--getatt-fn--getatt"></a>
 

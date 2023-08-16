@@ -2,7 +2,7 @@
 
 The AWS CloudFormation *stack import* operation can import existing stacks into new or existing stack sets, so that you can migrate existing stacks to a stack set in one operation\. *StackSets* extends the functionality of stacks, so you can create, update, or delete stacks across multiple accounts and Regions with a single operation\.
 
-Use the stack import operations for *self\-managed* or *service\-managed* StackSets\. For *self\-managed* StackSets, the import operation can import stacks in the administrator account or in different target accounts and AWS Regions\. For *service\-managed* StackSets, the import operation can import any stack in the same AWS Organizations as the management account\. The import operation can import up to 10 stacks using inline stack IDs or up to 10,000 stacks using an Amazon S3 object\.
+Use the stack import operations for *self\-managed* or *service\-managed* StackSets\. For *self\-managed* StackSets, the import operation can import stacks in the administrator account or in different target accounts and AWS Regions\. For *service\-managed* StackSets, the import operation can import any stack in the same AWS Organizations as the management account\. The import operation can import up to 10 stacks using inline stack IDs or up to 200 stacks using an Amazon S3 object\.
 
 Stack import is available wherever StackSets are supported\. For information about StackSets Region support, see [StackSets regional support](https://docs.aws.amazon.com/general/latest/gr/cfn.html#regional-support-stacksets)\.
 
@@ -10,7 +10,10 @@ Stack import is available wherever StackSets are supported\. For information abo
 
 Because stack sets perform stack operations across multiple accounts, before you can create your first stack set you need the necessary permissions defined in your AWS account\.
 + To set up the required permissions for creating a stack set with **self\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](stacksets-prereqs.md#stacksets-opt-in-regions) and [Grant self\-managed permissions](stacksets-prereqs-self-managed.md)\.
-+ To set up the required permissions for creating a stack set with **service\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](stacksets-prereqs.md#stacksets-opt-in-regions) and [Enable trusted access with AWS Organizations](stacksets-orgs-enable-trusted-access.md)\.
++ To set up the required permissions for creating a stack set with **service\-managed** permissions, see [Performing stack set operations involving regions that are disabled by default](stacksets-prereqs.md#stacksets-opt-in-regions) and [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)\.
+
+**Important**  
+ The `NoEcho` property is not supported by StackSet import\. Stacks that contain `NoEcho` won't be imported into new stack sets through StackSet import\. 
 
 For more information on StackSets requirements, see [Prerequisites for stack set operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html)\.
 

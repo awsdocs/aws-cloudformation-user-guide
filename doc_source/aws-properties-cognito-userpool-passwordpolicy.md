@@ -66,7 +66,7 @@ In the password policy that you have set, refers to whether you have required us
 
 `TemporaryPasswordValidityDays`  <a name="cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays"></a>
 The number of days a temporary password is valid in the password policy\. If the user doesn't sign in during this time, an administrator must reset their password\.  
-When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set the deprecated `UnusedAccountValidityDays` value for that user pool\.
+When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value for the legacy `UnusedAccountValidityDays` parameter in that user pool\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

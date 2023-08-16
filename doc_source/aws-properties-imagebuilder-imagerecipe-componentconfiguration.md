@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ImageRecipe ComponentConfiguration<a name="aws-properties-imagebuilder-imagerecipe-componentconfiguration"></a>
 
- Configuration details of the component\.
+Configuration details of the component\.
 
 ## Syntax<a name="aws-properties-imagebuilder-imagerecipe-componentconfiguration-syntax"></a>
 
@@ -33,7 +33,7 @@ The Amazon Resource Name \(ARN\) of the component\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Parameters`  <a name="cfn-imagebuilder-imagerecipe-componentconfiguration-parameters"></a>
-A group of parameter settings that are used to configure the component for a specific recipe\.  
+A group of parameter settings that Image Builder uses to configure the component for a specific recipe\.  
 *Required*: No  
 *Type*: List of [ComponentParameter](aws-properties-imagebuilder-imagerecipe-componentparameter.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

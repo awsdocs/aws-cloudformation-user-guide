@@ -2,6 +2,7 @@
 
 **Resource types**
 + [AWS::AppStream::AppBlock](aws-resource-appstream-appblock.md)
++ [AWS::AppStream::AppBlockBuilder](aws-resource-appstream-appblockbuilder.md)
 + [AWS::AppStream::Application](aws-resource-appstream-application.md)
 + [AWS::AppStream::ApplicationEntitlementAssociation](aws-resource-appstream-applicationentitlementassociation.md)
 + [AWS::AppStream::ApplicationFleetAssociation](aws-resource-appstream-applicationfleetassociation.md)

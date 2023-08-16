@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ServerCertificateArns](#cfn-iot-domainconfiguration-servercertificatearns)" : [ String, ... ],
       "[ServiceType](#cfn-iot-domainconfiguration-servicetype)" : String,
       "[Tags](#cfn-iot-domainconfiguration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TlsConfig](#cfn-iot-domainconfiguration-tlsconfig)" : TlsConfig,
       "[ValidationCertificateArn](#cfn-iot-domainconfiguration-validationcertificatearn)" : String
     }
 }
@@ -39,6 +40,8 @@ Properties:
   [ServiceType](#cfn-iot-domainconfiguration-servicetype): String
   [Tags](#cfn-iot-domainconfiguration-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TlsConfig](#cfn-iot-domainconfiguration-tlsconfig): 
+    TlsConfig
   [ValidationCertificateArn](#cfn-iot-domainconfiguration-validationcertificatearn): String
 ```
 
@@ -91,6 +94,12 @@ For the cli\-input\-json file use format: "tags": "key1=value1&key2=value2\.\.\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TlsConfig`  <a name="cfn-iot-domainconfiguration-tlsconfig"></a>
+An object that specifies the TLS configuration for a domain\.  
+*Required*: No  
+*Type*: [TlsConfig](aws-properties-iot-domainconfiguration-tlsconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ValidationCertificateArn`  <a name="cfn-iot-domainconfiguration-validationcertificatearn"></a>
 The certificate used to validate the server certificate and prove domain name ownership\. This certificate must be signed by a public certificate authority\. This value is not required for AWS\-managed domains\.  
 *Required*: No  
@@ -101,17 +110,17 @@ The certificate used to validate the server certificate and prove domain name ow
 
 ### Ref<a name="aws-resource-iot-domainconfiguration-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the domain configuration name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the domain configuration name\. For example:
 
  `{ "Ref": "MyDomainConfiguration" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-domainconfiguration-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-domainconfiguration-return-values-fn--getatt-fn--getatt"></a>
 

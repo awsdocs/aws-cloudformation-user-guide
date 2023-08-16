@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-streamingdistribution-s3origin-properties"></a>
 
 `DomainName`  <a name="cfn-cloudfront-streamingdistribution-s3origin-domainname"></a>
-The DNS name of the Amazon S3 origin\.   
+The DNS name of the Amazon S3 origin\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

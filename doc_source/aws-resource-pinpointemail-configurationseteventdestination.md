@@ -56,10 +56,10 @@ The name of the event destination that you want to modify\.
 
 ### Ref<a name="aws-resource-pinpointemail-configurationseteventdestination-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "myEventDestination" }` 
 
 For the Amazon Pinpoint event destination `myEventDestination`, Ref returns the name of the configuration set event destination\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

@@ -46,18 +46,48 @@ A configuration used when creating an Object Lambda Access Point\.
 
 ### Ref<a name="aws-resource-s3objectlambda-accesspoint-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-s3objectlambda-accesspoint-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-s3objectlambda-accesspoint-return-values-fn--getatt-fn--getatt"></a>
+
+`Alias`  <a name="Alias-fn::getatt"></a>
+The alias of the Object Lambda Access Point\.
+
+`Alias.Status`  <a name="Alias.Status-fn::getatt"></a>
+The status of the Object Lambda Access Point alias\. Valid Values: `PROVISIONING` \| `READY`\.
+
+`Alias.Value`  <a name="Alias.Value-fn::getatt"></a>
+The alias name value of the Object Lambda Access Point\. For example: `myolap-1a4n8yjrb3kda96f67zwrwiiuse1a--ol-s3`\.
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Specifies the ARN for the Object Lambda Access Point\.
 
 `CreationDate`  <a name="CreationDate-fn::getatt"></a>
 The date and time when the specified Object Lambda Access Point was created\.
+
+`PolicyStatus`  <a name="PolicyStatus-fn::getatt"></a>
+Property description not available\.
+
+`PolicyStatus.IsPublic`  <a name="PolicyStatus.IsPublic-fn::getatt"></a>
+Property description not available\.
+
+`PublicAccessBlockConfiguration`  <a name="PublicAccessBlockConfiguration-fn::getatt"></a>
+Property description not available\.
+
+`PublicAccessBlockConfiguration.BlockPublicAcls`  <a name="PublicAccessBlockConfiguration.BlockPublicAcls-fn::getatt"></a>
+Property description not available\.
+
+`PublicAccessBlockConfiguration.BlockPublicPolicy`  <a name="PublicAccessBlockConfiguration.BlockPublicPolicy-fn::getatt"></a>
+Property description not available\.
+
+`PublicAccessBlockConfiguration.IgnorePublicAcls`  <a name="PublicAccessBlockConfiguration.IgnorePublicAcls-fn::getatt"></a>
+Property description not available\.
+
+`PublicAccessBlockConfiguration.RestrictPublicBuckets`  <a name="PublicAccessBlockConfiguration.RestrictPublicBuckets-fn::getatt"></a>
+Property description not available\.

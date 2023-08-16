@@ -121,18 +121,23 @@ A list of public keys to be used by the `DevEndpoints` for authentication\. Usin
 If you previously created an endpoint with a public key, you must remove that key to be able to set a list of public keys\. Call the `UpdateDevEndpoint` API operation with the public key content in the `deletePublicKeys` attribute, and the list of new keys in the `addPublicKeys` attribute\.
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-glue-devendpoint-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role used in this `DevEndpoint`\.  
 *Required*: Yes  
 *Type*: String  
+*Pattern*: `arn:aws:iam::\d{12}:role/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityConfiguration`  <a name="cfn-glue-devendpoint-securityconfiguration"></a>
 The name of the `SecurityConfiguration` structure to be used with this `DevEndpoint`\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-glue-devendpoint-securitygroupids"></a>
@@ -167,9 +172,9 @@ Known issue: when a development endpoint is created with the `G.2X` `WorkerType`
 
 ### Ref<a name="aws-resource-glue-devendpoint-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the endpoint name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the endpoint name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-glue-devendpoint--seealso"></a>
 +  [DevEndpoint Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide* 

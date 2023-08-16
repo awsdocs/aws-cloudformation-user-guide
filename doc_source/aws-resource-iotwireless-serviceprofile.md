@@ -57,7 +57,7 @@ The tags are an array of key\-value pairs to attach to the specified resource\. 
 
 ### Ref<a name="aws-resource-iotwireless-serviceprofile-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the service profile ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the service profile ID\.
 
 ### Fn::GetAtt<a name="aws-resource-iotwireless-serviceprofile-return-values-fn--getatt"></a>
 

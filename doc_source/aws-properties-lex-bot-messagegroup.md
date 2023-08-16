@@ -36,4 +36,5 @@ The primary message that Amazon Lex should send to the user\.
 Message variations to send to the user\. When variations are defined, Amazon Lex chooses the primary message or one of the variations to send to the user\.  
 *Required*: No  
 *Type*: List of [Message](aws-properties-lex-bot-message.md)  
+*Maximum*: `2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

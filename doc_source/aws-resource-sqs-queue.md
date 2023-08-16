@@ -35,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ReceiveMessageWaitTimeSeconds](#cfn-sqs-queue-receivemessagewaittimeseconds)" : Integer,
       "[RedriveAllowPolicy](#cfn-sqs-queue-redriveallowpolicy)" : Json,
       "[RedrivePolicy](#cfn-sqs-queue-redrivepolicy)" : Json,
+      "[SqsManagedSseEnabled](#cfn-sqs-queue-sqsmanagedsseenabled)" : Boolean,
       "[Tags](#cfn-sqs-queue-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VisibilityTimeout](#cfn-sqs-queue-visibilitytimeout)" : Integer
     }
@@ -59,6 +60,7 @@ Properties:
   [ReceiveMessageWaitTimeSeconds](#cfn-sqs-queue-receivemessagewaittimeseconds): Integer
   [RedriveAllowPolicy](#cfn-sqs-queue-redriveallowpolicy): Json
   [RedrivePolicy](#cfn-sqs-queue-redrivepolicy): Json
+  [SqsManagedSseEnabled](#cfn-sqs-queue-sqsmanagedsseenabled): Boolean
   [Tags](#cfn-sqs-queue-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibilityTimeout](#cfn-sqs-queue-visibilitytimeout): Integer
@@ -106,10 +108,11 @@ A shorter time period provides better security, but results in more calls to AWS
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsMasterKeyId`  <a name="cfn-sqs-queue-kmsmasterkeyid"></a>
-The ID of an AWS managed customer master key \(CMK\) for Amazon SQS or a custom CMK\. To use the AWS managed CMK for Amazon SQS, specify the \(default\) alias `alias/aws/sqs`\. For more information, see the following:  
+The ID of an AWS Key Management Service \(KMS\) for Amazon SQS, or a custom KMS\. To use the AWS managed KMS for Amazon SQS, specify a \(default\) alias ARN, alias name \(e\.g\. `alias/aws/sqs`\), key ARN, or key ID\. For more information, see the following:  
 +  [Encryption at rest](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html) in the *Amazon SQS Developer Guide* 
 +  [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) in the *Amazon SQS API Reference* 
-+  The Customer Master Keys section of the [AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf) whitepaper 
++  [Request Parameters](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html#API_DescribeKey_RequestParameters) in the *AWS Key Management Service API Reference* 
++  The Key Management Service \(KMS\) section of the [AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf) whitepaper 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -165,6 +168,12 @@ The dead\-letter queue of a FIFO queue must also be a FIFO queue\. Similarly, th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SqsManagedSseEnabled`  <a name="cfn-sqs-queue-sqsmanagedsseenabled"></a>
+Enables server\-side queue encryption using SQS owned encryption keys\. Only one server\-side encryption option is supported per queue \(for example, [SSE\-KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html) or [SSE\-SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html)\)\. When `SqsManagedSseEnabled` is not defined, `SSE-SQS` encryption is enabled by default\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-sqs-queue-tags"></a>
 The tags that you attach to this queue\. For more information, see [Resource tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) in the *AWS CloudFormation User Guide*\.  
 *Required*: No  
@@ -183,17 +192,17 @@ For more information about Amazon SQS queue visibility timeouts, see [Visibility
 
 ### Ref<a name="aws-resource-sqs-queue-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the queue URL\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the queue URL\. For example: 
 
  `{ "Ref": "https://sqs.us-east-2.amazonaws.com/123456789012/ab1-MyQueue-A2BCDEF3GHI4" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-sqs-queue-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-sqs-queue-return-values-fn--getatt-fn--getatt"></a>
 
@@ -204,7 +213,7 @@ Returns the Amazon Resource Name \(ARN\) of the queue\. For example: `arn:aws:sq
 Returns the queue name\. For example: `mystack-myqueue-1VF9BKQH5BJVI`\.
 
 `QueueUrl`  <a name="QueueUrl-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Returns the URLs of the queues from the policy\.
 
 ## Examples<a name="aws-resource-sqs-queue--examples"></a>
 

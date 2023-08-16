@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Iops](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops)" : Integer,
   "[SizeInGB](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb)" : Integer,
+  "[Throughput](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-throughput)" : Integer,
   "[VolumeType](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype)" : String
 }
 ```
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Iops](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops): Integer
   [SizeInGB](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb): Integer
+  [Throughput](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-throughput): Integer
   [VolumeType](#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype): String
 ```
 
@@ -38,8 +40,14 @@ The volume size, in gibibytes \(GiB\)\. This can be a number from 1 \- 1024\. If
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Throughput`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-throughput"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `VolumeType`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype"></a>
-The volume type\. Volume types supported are gp2, io1, and standard\.  
+The volume type\. Volume types supported are gp3, gp2, io1, st1, sc1, and standard\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

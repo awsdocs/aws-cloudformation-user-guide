@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-iotwireless-taskdefinition-properties"></a>
 
 `AutoCreateTasks`  <a name="cfn-iotwireless-taskdefinition-autocreatetasks"></a>
-Whether to automatically create tasks using this task definition for all gateways with the specified current version\. If `false`, the task must me created by calling `CreateWirelessGatewayTask`\.  
+Whether to automatically create tasks using this task definition for all gateways with the specified current version\. If `false`, the task must be created by calling `CreateWirelessGatewayTask`\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,7 +66,7 @@ Information about the gateways to update\.
 
 ### Ref<a name="aws-resource-iotwireless-taskdefinition-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the task definition\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the task definition\.
 
 ### Fn::GetAtt<a name="aws-resource-iotwireless-taskdefinition-return-values-fn--getatt"></a>
 

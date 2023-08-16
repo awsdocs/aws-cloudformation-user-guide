@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-texttransformation-properties"></a>
 
 `Priority`  <a name="cfn-wafv2-webacl-texttransformation-priority"></a>
-Sets the relative processing order for multiple transformations that are defined for a rule statement\. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content\. The priorities don't need to be consecutive, but they must all be different\.   
+Sets the relative processing order for multiple transformations\. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content\. The priorities don't need to be consecutive, but they must all be different\.   
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  

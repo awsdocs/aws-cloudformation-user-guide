@@ -26,4 +26,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The default value to use when a user doesn't provide a value for a slot\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `202`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

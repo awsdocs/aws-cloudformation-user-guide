@@ -1,6 +1,6 @@
 # AWS::Pinpoint::InAppTemplate<a name="aws-resource-pinpoint-inapptemplate"></a>
 
-Creates a message template that you can use to send in\-app messages\. A message template is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\.
+Creates a message template that you can use to send in\-app messages\. A message template is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\. The In\-App channel is unavailable in AWS GovCloud \(US\)\.
 
 ## Syntax<a name="aws-resource-pinpoint-inapptemplate-syntax"></a>
 
@@ -52,12 +52,12 @@ Custom data, in the form of key\-value pairs, that is included in an in\-app mes
 
 `Layout`  <a name="cfn-pinpoint-inapptemplate-layout"></a>
 A string that determines the appearance of the in\-app message\. You can specify one of the following:  
-+ `BOTTOM_BANNER` – a message that appears as a banner at the bottom of the page\.
-+ `TOP_BANNER` – a message that appears as a banner at the top of the page\.
-+ `OVERLAYS` – a message that covers entire screen\.
-+ `MOBILE_FEED` – a message that appears in a window in front of the page\.
-+ `MIDDLE_BANNER` – a message that appears as a banner in the middle of the page\.
-+ `CAROUSEL` – a scrollable layout of up to five unique messages\.
++  `BOTTOM_BANNER` – a message that appears as a banner at the bottom of the page\.
++  `TOP_BANNER` – a message that appears as a banner at the top of the page\.
++  `OVERLAYS` – a message that covers entire screen\.
++  `MOBILE_FEED` – a message that appears in a window in front of the page\.
++  `MIDDLE_BANNER` – a message that appears as a banner in the middle of the page\.
++  `CAROUSEL` – a scrollable layout of up to five unique messages\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

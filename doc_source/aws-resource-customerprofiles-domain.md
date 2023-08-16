@@ -1,6 +1,6 @@
 # AWS::CustomerProfiles::Domain<a name="aws-resource-customerprofiles-domain"></a>
 
-The AWS::CustomerProfiles::Domain resource specifies an Amazon Connect Customer Profiles Domain\.
+Specifies an Amazon Connect Customer Profiles Domain\.
 
 ## Syntax<a name="aws-resource-customerprofiles-domain-syntax"></a>
 
@@ -70,15 +70,15 @@ The tags used to organize, track, or control access for this resource\.
 
 ### Ref<a name="aws-resource-customerprofiles-domain-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DomainName of the domain\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the DomainName of the domain\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-customerprofiles-domain-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-customerprofiles-domain-return-values-fn--getatt-fn--getatt"></a>
 
@@ -97,30 +97,22 @@ The following example creates a Domain\.
 #### YAML<a name="aws-resource-customerprofiles-domain--examples----yaml"></a>
 
 ```
-Resources:
-    Domain:
-      Type: "AWS::CustomerProfiles::Domain"
-      Properties:
-        DomainName: "ExampleDomain"
-        DefaultEncryptionKey: "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE"
-        DeadLetterQueueUrl: "arn:aws:sqs:us-east-1:123456789012:DLQName"
-        DefaultExpirationDays: 6
+Type: "AWS::CustomerProfiles::Domain" 
+Properties:
+    DomainName: "ExampleDomain" 
+    DefaultEncryptionKey: "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE"
+    DeadLetterQueueUrl: "arn:aws:sqs:us-east-1:123456789012:DLQName" 
+    DefaultExpirationDays: 6
 ```
 
 #### JSON<a name="aws-resource-customerprofiles-domain--examples----json"></a>
 
 ```
-{
-  "Resources": {
-    "Domain": {
-      "Type": "AWS::CustomerProfiles::Domain",
-      "Properties": {
-        "DomainName": "ExampleDomain",
-        "DefaultEncryptionKey": "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
-        "DeadLetterQueueUrl": "arn:aws:sqs:us-east-1:123456789012:DLQName",
-        "DefaultExpirationDays": 6
-      }
-    }
-  }
+"Type": "AWS::CustomerProfiles::Domain",
+"Properties": { 
+    "DomainName": "ExampleDomain", 
+    "DefaultEncryptionKey": "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
+    "DeadLetterQueueUrl": "arn:aws:sqs:us-east-1:123456789012:DLQName", 
+    "DefaultExpirationDays": 6
 }
 ```

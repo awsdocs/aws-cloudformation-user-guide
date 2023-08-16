@@ -2,7 +2,7 @@
 
 Associates an AWS Identity and Access Management \(IAM\) role with an AWS Certificate Manager \(ACM\) certificate\. This enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave\. For more information, see [AWS Certificate Manager for Nitro Enclaves](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave-refapp.html) in the * AWS Nitro Enclaves User Guide*\.
 
-When the IAM role is associated with the ACM certificate, the certificate, certificate chain, and encrypted private key are placed in an Amazon S3 bucket that only the associated IAM role can access\. The private key of the certificate is encrypted with an AWS managed key that has an attached attestation\-based key policy\.
+When the IAM role is associated with the ACM certificate, the certificate, certificate chain, and encrypted private key are placed in an Amazon S3 location that only the associated IAM role can access\. The private key of the certificate is encrypted with an AWS managed key that has an attached attestation\-based key policy\.
 
 To enable the IAM role to access the Amazon S3 object, you must grant it permission to call `s3:GetObject` on the Amazon S3 bucket returned by the command\. To enable the IAM role to access the KMS key, you must grant it permission to call `kms:Decrypt` on the KMS key returned by the command\. For more information, see [ Grant the role permission to access the certificate and encryption key](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave-refapp.html#add-policy) in the * AWS Nitro Enclaves User Guide*\.
 
@@ -37,29 +37,25 @@ Properties:
 The ARN of the ACM certificate with which to associate the IAM role\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1283`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-ec2-enclavecertificateiamroleassociation-rolearn"></a>
 The ARN of the IAM role to associate with the ACM certificate\. You can associate up to 16 IAM roles with an ACM certificate\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1283`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-ec2-enclavecertificateiamroleassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-enclavecertificateiamroleassociation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the IAM role and ACM certificate association\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the IAM role and ACM certificate association\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-enclavecertificateiamroleassociation-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-enclavecertificateiamroleassociation-return-values-fn--getatt-fn--getatt"></a>
 

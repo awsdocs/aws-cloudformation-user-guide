@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy DeprecateRule<a name="aws-properties-dlm-lifecyclepolicy-deprecaterule"></a>
 
-Specifies an AMI deprecation rule for a schedule\.
+<a name="aws-properties-dlm-lifecyclepolicy-deprecaterule-description"></a>The `DeprecateRule` property type specifies Property description not available\. for an [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-deprecaterule-syntax"></a>
 
@@ -27,23 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-deprecaterule-properties"></a>
 
 `Count`  <a name="cfn-dlm-lifecyclepolicy-deprecaterule-count"></a>
-If the schedule has a count\-based retention rule, this parameter specifies the number of oldest AMIs to deprecate\. The count must be less than or equal to the schedule's retention count, and it can't be greater than 1000\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Interval`  <a name="cfn-dlm-lifecyclepolicy-deprecaterule-interval"></a>
-If the schedule has an age\-based retention rule, this parameter specifies the period after which to deprecate AMIs created by the schedule\. The period must be less than or equal to the schedule's retention period, and it can't be greater than 10 years\. This is equivalent to 120 months, 520 weeks, or 3650 days\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IntervalUnit`  <a name="cfn-dlm-lifecyclepolicy-deprecaterule-intervalunit"></a>
-The unit of time in which to measure the **Interval**\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `DAYS | MONTHS | WEEKS | YEARS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

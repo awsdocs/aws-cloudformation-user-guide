@@ -34,7 +34,7 @@ The Amazon S3 bucket event about which you want to publish messages to Amazon SQ
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Filter`  <a name="cfn-s3-bucket-notificationconfig-queueconfig-filter"></a>
- The filtering rules that determine which objects trigger notifications\. For example, you can create a filter so that Amazon S3 sends notifications only when image files with a `.jpg` extension are added to the bucket\.   
+ The filtering rules that determine which objects trigger notifications\. For example, you can create a filter so that Amazon S3 sends notifications only when image files with a `.jpg` extension are added to the bucket\. For more information, see [Configuring event notifications using object key name filtering](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/notification-how-to-filtering.html) in the *Amazon S3 User Guide*\.   
 *Required*: No  
 *Type*: [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

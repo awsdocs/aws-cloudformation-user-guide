@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Evidently::Project",
   "Properties" : {
+      "[AppConfigResource](#cfn-evidently-project-appconfigresource)" : AppConfigResourceObject,
       "[DataDelivery](#cfn-evidently-project-datadelivery)" : DataDeliveryObject,
       "[Description](#cfn-evidently-project-description)" : String,
       "[Name](#cfn-evidently-project-name)" : String,
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Evidently::Project
 Properties: 
+  [AppConfigResource](#cfn-evidently-project-appconfigresource): 
+    AppConfigResourceObject
   [DataDelivery](#cfn-evidently-project-datadelivery): 
     DataDeliveryObject
   [Description](#cfn-evidently-project-description): String
@@ -34,6 +37,14 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-evidently-project-properties"></a>
+
+`AppConfigResource`  <a name="cfn-evidently-project-appconfigresource"></a>
+Use this parameter if the project will use *client\-side evaluation powered by AWS AppConfig*\. Client\-side evaluation allows your application to assign variations to user sessions locally instead of by calling the [EvaluateFeature](https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_EvaluateFeature.html) operation\. This mitigates the latency and availability risks that come with an API call\. For more information, see [ Use client\-side evaluation \- powered by AWS AppConfig\.](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-client-side-evaluation.html)  
+This parameter is a structure that contains information about the AWS AppConfig application that will be used as for client\-side evaluation\.  
+To create a project that uses client\-side evaluation, you must have the `evidently:ExportProjectAsConfiguration` permission\.  
+*Required*: No  
+*Type*: [AppConfigResourceObject](aws-properties-evidently-project-appconfigresourceobject.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataDelivery`  <a name="cfn-evidently-project-datadelivery"></a>
 A structure that contains information about where Evidently is to store evaluation events for longer term storage, if you choose to do so\. If you choose not to store these events, Evidently deletes them after using them to produce metrics and other experiment results that you can view\.  
@@ -46,12 +57,18 @@ You can't specify both `CloudWatchLogs` and `S3Destination` in the same operatio
 An optional description of the project\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `160`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-evidently-project-name"></a>
 The name for the project\. It can include up to 127 characters\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `127`  
+*Pattern*: `[-a-zA-Z0-9._]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-evidently-project-tags"></a>
@@ -68,15 +85,15 @@ For more information, see [Tagging AWS resources](https://docs.aws.amazon.com/ge
 
 ### Ref<a name="aws-resource-evidently-project-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the project\. For example, `arn:aws:evidently:us-west-2:0123455678912:project/myProject`
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the project\. For example, `arn:aws:evidently:us-west-2:0123455678912:project/myProject`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-evidently-project-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-evidently-project-return-values-fn--getatt-fn--getatt"></a>
 

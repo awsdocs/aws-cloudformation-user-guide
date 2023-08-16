@@ -26,13 +26,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CacheParameterGroupName](#cfn-elasticache-replicationgroup-cacheparametergroupname)" : String,
       "[CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames)" : [ String, ... ],
       "[CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname)" : String,
+      "[ClusterMode](#cfn-elasticache-replicationgroup-clustermode)" : String,
       "[DataTieringEnabled](#cfn-elasticache-replicationgroup-datatieringenabled)" : Boolean,
       "[Engine](#cfn-elasticache-replicationgroup-engine)" : String,
       "[EngineVersion](#cfn-elasticache-replicationgroup-engineversion)" : String,
       "[GlobalReplicationGroupId](#cfn-elasticache-replicationgroup-globalreplicationgroupid)" : String,
+      "[IpDiscovery](#cfn-elasticache-replicationgroup-ipdiscovery)" : String,
       "[KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid)" : String,
       "[LogDeliveryConfigurations](#cfn-elasticache-replicationgroup-logdeliveryconfigurations)" : [ LogDeliveryConfigurationRequest, ... ],
       "[MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled)" : Boolean,
+      "[NetworkType](#cfn-elasticache-replicationgroup-networktype)" : String,
       "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ NodeGroupConfiguration, ... ],
       "[NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn)" : String,
       "[NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters)" : Integer,
@@ -52,6 +55,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow)" : String,
       "[Tags](#cfn-elasticache-replicationgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled)" : Boolean,
+      "[TransitEncryptionMode](#cfn-elasticache-replicationgroup-transitencryptionmode)" : String,
       "[UserGroupIds](#cfn-elasticache-replicationgroup-usergroupids)" : [ String, ... ]
     }
 }
@@ -71,14 +75,17 @@ Properties:
   [CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames): 
     - String
   [CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname): String
+  [ClusterMode](#cfn-elasticache-replicationgroup-clustermode): String
   [DataTieringEnabled](#cfn-elasticache-replicationgroup-datatieringenabled): Boolean
   [Engine](#cfn-elasticache-replicationgroup-engine): String
   [EngineVersion](#cfn-elasticache-replicationgroup-engineversion): String
   [GlobalReplicationGroupId](#cfn-elasticache-replicationgroup-globalreplicationgroupid): String
+  [IpDiscovery](#cfn-elasticache-replicationgroup-ipdiscovery): String
   [KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid): String
   [LogDeliveryConfigurations](#cfn-elasticache-replicationgroup-logdeliveryconfigurations): 
     - LogDeliveryConfigurationRequest
   [MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled): Boolean
+  [NetworkType](#cfn-elasticache-replicationgroup-networktype): String
   [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration): 
     - NodeGroupConfiguration
   [NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn): String
@@ -103,6 +110,7 @@ Properties:
   [Tags](#cfn-elasticache-replicationgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled): Boolean
+  [TransitEncryptionMode](#cfn-elasticache-replicationgroup-transitencryptionmode): String
   [UserGroupIds](#cfn-elasticache-replicationgroup-usergroupids): 
     - String
 ```
@@ -127,6 +135,7 @@ Password constraints:
 + Must be at least 16 characters and no more than 128 characters in length\.
 + Nonalphanumeric characters are restricted to \(\!, &, \#, $, ^, <, >, \-, \)\. 
 For more information, see [AUTH password](http://redis.io/commands/AUTH) at http://redis\.io/commands/AUTH\.  
+If ADDING the AuthToken, update requires [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -217,6 +226,12 @@ If you're going to launch your cluster in an Amazon VPC, you need to create a su
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ClusterMode`  <a name="cfn-elasticache-replicationgroup-clustermode"></a>
+Enabled or Disabled\. To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to Compatible\. Compatible mode allows your Redis clients to connect using both cluster mode enabled and cluster mode disabled\. After you migrate all Redis clients to use cluster mode enabled, you can then complete cluster mode configuration and set the cluster mode to Enabled\. For more information, see [Modify cluster mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/modify-cluster-mode.html)\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DataTieringEnabled`  <a name="cfn-elasticache-replicationgroup-datatieringenabled"></a>
 Enables data tiering\. Data tiering is only supported for replication groups using the r6gd node type\. This parameter must be set to true when using r6gd nodes\. For more information, see [Data tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html)\.  
 *Required*: No  
@@ -224,7 +239,7 @@ Enables data tiering\. Data tiering is only supported for replication groups usi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Engine`  <a name="cfn-elasticache-replicationgroup-engine"></a>
-The name of the cache engine to be used for the clusters in this replication group\. Must be Redis\.  
+The name of the cache engine to be used for the clusters in this replication group\. The value must be set to `Redis`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -241,6 +256,13 @@ The name of the Global datastore
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`IpDiscovery`  <a name="cfn-elasticache-replicationgroup-ipdiscovery"></a>
+The network type you choose when creating a replication group, either `ipv4` \| `ipv6`\. IPv6 is supported for workloads using Redis engine version 6\.2 onward or Memcached engine version 1\.6\.6 on all instances built on the [Nitro system](http://aws.amazon.com/ec2/nitro/)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `ipv4 | ipv6`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-elasticache-replicationgroup-kmskeyid"></a>
 The ID of the KMS key used to encrypt the disk on the cluster\.  
@@ -259,6 +281,13 @@ A flag indicating if you have Multi\-AZ enabled to enhance fault tolerance\. For
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NetworkType`  <a name="cfn-elasticache-replicationgroup-networktype"></a>
+Must be either `ipv4` \| `ipv6` \| `dual_stack`\. IPv6 is supported for workloads using Redis engine version 6\.2 onward or Memcached engine version 1\.6\.6 on all instances built on the [Nitro system](http://aws.amazon.com/ec2/nitro/)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `dual_stack | ipv4 | ipv6`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NodeGroupConfiguration`  <a name="cfn-elasticache-replicationgroup-nodegroupconfiguration"></a>
 `NodeGroupConfiguration ` is a property of the `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache \(ElastiCache\) Redis cluster node group\.   
@@ -408,10 +437,20 @@ Default: `false`
 For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an `AuthToken`, and a `CacheSubnetGroup`\.
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitEncryptionMode`  <a name="cfn-elasticache-replicationgroup-transitencryptionmode"></a>
+A setting that allows you to migrate your clients to use in\-transit encryption, with no downtime\.  
+When setting `TransitEncryptionEnabled` to `true`, you can set your `TransitEncryptionMode` to `preferred` in the same request, to allow both encrypted and unencrypted connections at the same time\. Once you migrate all your Redis clients to use encrypted connections you can modify the value to `required` to allow encrypted connections only\.  
+Setting `TransitEncryptionMode` to `required` is a two\-step process that requires you to first set the `TransitEncryptionMode` to `preferred`, after that you can set `TransitEncryptionMode` to `required`\.  
+This process will not trigger the replacement of the replication group\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `preferred | required`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserGroupIds`  <a name="cfn-elasticache-replicationgroup-usergroupids"></a>
-The list of user groups to associate with the replication group\.  
+The ID of user group to associate with the replication group\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -426,9 +465,9 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ### Fn::GetAtt<a name="aws-resource-elasticache-replicationgroup-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-elasticache-replicationgroup-return-values-fn--getatt-fn--getatt"></a>
 

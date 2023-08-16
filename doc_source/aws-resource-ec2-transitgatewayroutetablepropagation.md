@@ -47,9 +47,9 @@ The ID of the propagation route table\.
 
 ### Ref<a name="aws-resource-ec2-transitgatewayroutetablepropagation-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the transit gateway route table that is propagated\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the transit gateway route table that is propagated\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-ec2-transitgatewayroutetablepropagation--seealso"></a>
 +  [EnableTransitGatewayRouteTablePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableTransitGatewayRouteTablePropagation.html) in the *Amazon EC2 API Reference* 

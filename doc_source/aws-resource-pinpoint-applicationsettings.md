@@ -77,6 +77,6 @@ To override the default quiet time settings for a specific campaign, use the Cam
 
 ### Ref<a name="aws-resource-pinpoint-applicationsettings-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that you're specifying the settings for\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that you're specifying the settings for\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

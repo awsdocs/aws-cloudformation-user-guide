@@ -2,6 +2,7 @@
 
 **Resource types**
 + [AWS::Cognito::IdentityPool](aws-resource-cognito-identitypool.md)
++ [AWS::Cognito::IdentityPoolPrincipalTag](aws-resource-cognito-identitypoolprincipaltag.md)
 + [AWS::Cognito::IdentityPoolRoleAttachment](aws-resource-cognito-identitypoolroleattachment.md)
 + [AWS::Cognito::UserPool](aws-resource-cognito-userpool.md)
 + [AWS::Cognito::UserPoolClient](aws-resource-cognito-userpoolclient.md)

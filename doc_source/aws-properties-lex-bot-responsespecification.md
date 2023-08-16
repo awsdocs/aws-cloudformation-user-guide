@@ -1,6 +1,6 @@
 # AWS::Lex::Bot ResponseSpecification<a name="aws-properties-lex-bot-responsespecification"></a>
 
-Specifies a list of message groups that Amazon Lex uses to respond to user input\.
+Specifies a list of message groups that Amazon Lex uses to respond the user input\.
 
 ## Syntax<a name="aws-properties-lex-bot-responsespecification-syntax"></a>
 
@@ -35,4 +35,5 @@ Indicates whether the user can interrupt a speech response from Amazon Lex\.
 A collection of responses that Amazon Lex can send to the user\. Amazon Lex chooses the actual response to send at runtime\.  
 *Required*: Yes  
 *Type*: List of [MessageGroup](aws-properties-lex-bot-messagegroup.md)  
+*Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

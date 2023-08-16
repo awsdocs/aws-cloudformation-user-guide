@@ -1,8 +1,8 @@
 # AWS::ECS::CapacityProvider<a name="aws-resource-ecs-capacityprovider"></a>
 
-The `AWS::ECS::CapacityProvider` resource creates an Amazon Elastic Container Service \(Amazon ECS\) capacity provider\. Capacity providers are associated with an Amazon ECS cluster and are used in capacity provider strategies to facilitate cluster auto scaling\.
+Creates a new capacity provider\. Capacity providers are associated with an Amazon ECS cluster and are used in capacity provider strategies to facilitate cluster auto scaling\.
 
-Only capacity providers using an Auto Scaling group can be created\. Amazon ECS tasks on AWS Fargate use the `FARGATE` and `FARGATE_SPOT` capacity providers which are already created and available to all accounts in Regions supported by AWS Fargate\.
+Only capacity providers that use an Auto Scaling group can be created\. Amazon ECS tasks on AWS Fargate use the `FARGATE` and `FARGATE_SPOT` capacity providers\. These providers are available to all accounts in the AWS Regions that AWS Fargate supports\.
 
 ## Syntax<a name="aws-resource-ecs-capacityprovider-syntax"></a>
 
@@ -66,13 +66,13 @@ The following basic restrictions apply to tags:
 
 ### Ref<a name="aws-resource-ecs-capacityprovider-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\.
 
 In the following example, the `Ref` function returns the name of the capacity provider, such as `MyStack-MyCapacityProvider-JrwYBzxovGfr`\.
 
  `{ "Ref": "MyCapacityProvider" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ecs-capacityprovider--examples"></a>
 

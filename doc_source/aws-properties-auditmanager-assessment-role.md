@@ -1,6 +1,6 @@
 # AWS::AuditManager::Assessment Role<a name="aws-properties-auditmanager-assessment-role"></a>
 
- The `Role` property type specifies the wrapper that contains AWS Audit Manager role information, such as the role type and IAM Amazon Resource Name \(ARN\)\. 
+The `Role` property type specifies the wrapper that contains AWS Audit Manager role information, such as the role type and IAM Amazon Resource Name \(ARN\)\.
 
 ## Syntax<a name="aws-properties-auditmanager-assessment-role-syntax"></a>
 

@@ -1,4 +1,4 @@
-# Lightsail resource type reference<a name="AWS_Lightsail"></a>
+# Amazon Lightsail resource type reference<a name="AWS_Lightsail"></a>
 
 **Resource types**
 + [AWS::Lightsail::Alarm](aws-resource-lightsail-alarm.md)

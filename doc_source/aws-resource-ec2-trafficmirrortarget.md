@@ -4,7 +4,7 @@ Specifies a target for your Traffic Mirror session\.
 
 A Traffic Mirror target is the destination for mirrored traffic\. The Traffic Mirror source and the Traffic Mirror target \(monitoring appliances\) can be in the same VPC, or in different VPCs connected via VPC peering or a transit gateway\.
 
-A Traffic Mirror target can be a network interface, or a Network Load Balancer\.
+A Traffic Mirror target can be a network interface, a Network Load Balancer, or a Gateway Load Balancer endpoint\.
 
 To use the target in a Traffic Mirror session, use [AWS::EC2::TrafficMirrorSession](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html)\.
 
@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::TrafficMirrorTarget",
   "Properties" : {
       "[Description](#cfn-ec2-trafficmirrortarget-description)" : String,
+      "[GatewayLoadBalancerEndpointId](#cfn-ec2-trafficmirrortarget-gatewayloadbalancerendpointid)" : String,
       "[NetworkInterfaceId](#cfn-ec2-trafficmirrortarget-networkinterfaceid)" : String,
       "[NetworkLoadBalancerArn](#cfn-ec2-trafficmirrortarget-networkloadbalancerarn)" : String,
       "[Tags](#cfn-ec2-trafficmirrortarget-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::TrafficMirrorTarget
 Properties: 
   [Description](#cfn-ec2-trafficmirrortarget-description): String
+  [GatewayLoadBalancerEndpointId](#cfn-ec2-trafficmirrortarget-gatewayloadbalancerendpointid): String
   [NetworkInterfaceId](#cfn-ec2-trafficmirrortarget-networkinterfaceid): String
   [NetworkLoadBalancerArn](#cfn-ec2-trafficmirrortarget-networkloadbalancerarn): String
   [Tags](#cfn-ec2-trafficmirrortarget-tags): 
@@ -42,6 +44,12 @@ Properties:
 
 `Description`  <a name="cfn-ec2-trafficmirrortarget-description"></a>
 The description of the Traffic Mirror target\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`GatewayLoadBalancerEndpointId`  <a name="cfn-ec2-trafficmirrortarget-gatewayloadbalancerendpointid"></a>
+The ID of the Gateway Load Balancer endpoint\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -68,9 +76,9 @@ The tags to assign to the Traffic Mirror target\.
 
 ### Ref<a name="aws-resource-ec2-trafficmirrortarget-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Traffic Mirror target\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the Traffic Mirror target\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrortarget--examples"></a>
 

@@ -1,6 +1,6 @@
 # AWS::S3::StorageLens<a name="aws-resource-s3-storagelens"></a>
 
-The AWS::S3::StorageLens resource creates an instance of an Amazon S3 Storage Lens configuration\.
+The AWS::S3::StorageLens resource creates an Amazon S3 Storage Lens configuration\.
 
 ## Syntax<a name="aws-resource-s3-storagelens-syntax"></a>
 
@@ -57,3 +57,163 @@ Fn::GetAtt returns a value for a specified attribute of this type\. For more inf
 
 `StorageLensConfiguration.StorageLensArn`  <a name="StorageLensConfiguration.StorageLensArn-fn::getatt"></a>
 This property contains the details of the ARN of the S3 Storage Lens configuration\. This property is read\-only\.
+
+## Examples<a name="aws-resource-s3-storagelens--examples"></a>
+
+The following examples create an advanced S3 Storage Lens configuration that enables advanced metrics, Amazon CloudWatch publishing, and prefix aggregation\. This example also configures a metrics export and adds tags\.
+
+### Creating an advanced S3 Storage Lens configuration<a name="aws-resource-s3-storagelens--examples--Creating_an_advanced_S3_Storage_Lens_configuration"></a>
+
+#### JSON<a name="aws-resource-s3-storagelens--examples--Creating_an_advanced_S3_Storage_Lens_configuration--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "StorageLens Advanced Configuration Example",
+    "Resources": {
+        "StorageLensConfigurationExample": {
+            "Type": "AWS::S3::StorageLens",
+            "Properties": {
+                "StorageLensConfiguration": {
+                    "Id": "StorageLensAdvancedConfiguration",
+                    "AccountLevel": {
+                        "ActivityMetrics": {
+                            "IsEnabled": true
+                        },
+                        "AdvancedCostOptimizationMetrics": {
+                            "IsEnabled": true
+                        },
+                        "AdvancedDataProtectionMetrics": {
+                            "IsEnabled": true
+                        },
+                        "DetailedStatusCodesMetrics": {
+                            "IsEnabled": true
+                        },
+                        "BucketLevel": {
+                            "ActivityMetrics": {
+                                "IsEnabled": true
+                            },
+                            "AdvancedCostOptimizationMetrics": {
+                                "IsEnabled": true
+                            },
+                            "AdvancedDataProtectionMetrics": {
+                                "IsEnabled": true
+                            },
+                            "DetailedStatusCodesMetrics": {
+                                "IsEnabled": true
+                            },
+                            "PrefixLevel": {
+                                "StorageMetrics": {
+                                    "IsEnabled": true,
+                                    "SelectionCriteria": {
+                                        "MaxDepth": 5,
+                                        "MinStorageBytesPercentage": 1.23,
+                                        "Delimiter": "/"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Exclude": {
+                        "Buckets": [
+                            {
+                                "Fn::Sub": "arn:aws:s3:::source_bucket_1"
+                            },
+                            {
+                                "Fn::Sub": "arn:aws:s3:::source_bucket_2"
+                            }
+                        ]
+                    },
+                    "IsEnabled": true,
+                    "DataExport": {
+                        "S3BucketDestination": {
+                            "OutputSchemaVersion": "V_1",
+                            "Format": "CSV",
+                            "AccountId": "111122223333",
+                            "Arn": {
+                                "Fn::Sub": "arn:aws:s3:::destination_bucket"
+                            },
+                            "Prefix": "output-path-prefix",
+                            "Encryption": {
+                                "SSES3": {}
+                            }
+                        },
+                        "CloudWatchMetrics": {
+                            "IsEnabled": true
+                        }
+                    }
+                },
+                "Tags": [
+                    {
+                        "Key": "tag-key-1",
+                        "Value": "tag-value-1"
+                    },
+                    {
+                        "Key": "tag-key-2",
+                        "Value": "tag-value-2"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-s3-storagelens--examples--Creating_an_advanced_S3_Storage_Lens_configuration--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: StorageLens Advanced Configuration Example
+Resources:
+  StorageLensConfigurationExample:
+    Type: AWS::S3::StorageLens
+    Properties:
+      StorageLensConfiguration:
+        Id: "StorageLensAdvancedConfiguration"
+        AccountLevel:
+          ActivityMetrics:
+            IsEnabled: true
+          AdvancedCostOptimizationMetrics:
+            IsEnabled: true
+          AdvancedDataProtectionMetrics:
+            IsEnabled: true
+          DetailedStatusCodesMetrics:
+            IsEnabled: true
+          BucketLevel:
+            ActivityMetrics:
+              IsEnabled: true
+            AdvancedCostOptimizationMetrics:
+              IsEnabled: true
+            AdvancedDataProtectionMetrics:
+              IsEnabled: true
+            DetailedStatusCodesMetrics:
+              IsEnabled: true
+            PrefixLevel:
+              StorageMetrics:
+                IsEnabled: true
+                SelectionCriteria:
+                  MaxDepth: 5
+                  MinStorageBytesPercentage: 1.23
+                  Delimiter: "/"
+        Exclude:
+           Buckets:
+            - !Sub 'arn:aws:s3:::source_bucket_1'
+            - !Sub 'arn:aws:s3:::source_bucket_2'
+        IsEnabled: true
+        DataExport:
+          S3BucketDestination:
+            OutputSchemaVersion: "V_1"
+            Format: "CSV"
+            AccountId: "111122223333"
+            Arn: !Sub 'arn:aws:s3:::destination_bucket'
+            Prefix: "output-path-prefix"
+            Encryption:
+              SSES3: {}
+          CloudWatchMetrics:
+            IsEnabled: true
+      Tags:
+        - Key: "tag-key-1"
+          Value: "tag-value-1"
+        - Key: "tag-key-2"
+          Value: "tag-value-2"
+```

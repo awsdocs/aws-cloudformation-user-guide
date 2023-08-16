@@ -7,6 +7,6 @@
 + [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md)
 + [AWS::ElastiCache::SecurityGroup](aws-properties-elasticache-security-group.md)
 + [AWS::ElastiCache::SecurityGroupIngress](aws-properties-elasticache-security-group-ingress.md)
-+ [AWS::ElastiCache::SubnetGroup](aws-properties-elasticache-subnetgroup.md)
++ [AWS::ElastiCache::SubnetGroup](aws-resource-elasticache-subnetgroup.md)
 + [AWS::ElastiCache::User](aws-resource-elasticache-user.md)
 + [AWS::ElastiCache::UserGroup](aws-resource-elasticache-usergroup.md)

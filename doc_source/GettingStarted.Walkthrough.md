@@ -125,10 +125,65 @@ The following parameters are used in the template to specify values that are use
 10.     "Description" : "WebServer EC2 instance type",
 11.     "Type" : "String",
 12.     "Default" : "t2.small",
-13.     "AllowedValues" : [ "t1.micro", "t2.nano", "t2.micro", "t2.small", "t2.medium", "t2.large", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m2.xlarge", "m2.2xlarge", "m2.4xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "m4.large", "m4.xlarge", "m4.2xlarge", "m4.4xlarge", "m4.10xlarge", "c1.medium", "c1.xlarge", "c3.large", "c3.xlarge", "c3.2xlarge", "c3.4xlarge", "c3.8xlarge", "c4.large", "c4.xlarge", "c4.2xlarge", "c4.4xlarge", "c4.8xlarge", "g2.2xlarge", "g2.8xlarge", "r3.large", "r3.xlarge", "r3.2xlarge", "r3.4xlarge", "r3.8xlarge", "i2.xlarge", "i2.2xlarge", "i2.4xlarge", "i2.8xlarge", "d2.xlarge", "d2.2xlarge", "d2.4xlarge", "d2.8xlarge", "hi1.4xlarge", "hs1.8xlarge", "cr1.8xlarge", "cc2.8xlarge", "cg1.4xlarge"],
-14.     "ConstraintDescription" : "must be a valid EC2 instance type."
-15.   },
-16. ...
+13.        "AllowedValues": [
+14.         "t1.micro",
+15.         "t2.nano",
+16.         "t2.micro",
+17.         "t2.small",
+18.         "t2.medium",
+19.         "t2.large",
+20.         "m1.small",
+21.         "m1.medium",
+22.         "m1.large",
+23.         "m1.xlarge",
+24.         "m2.xlarge",
+25.         "m2.2xlarge",
+26.         "m2.4xlarge",
+27.         "m3.medium",
+28.         "m3.large",
+29.         "m3.xlarge",
+30.         "m3.2xlarge",
+31.         "m4.large",
+32.         "m4.xlarge",
+33.         "m4.2xlarge",
+34.         "m4.4xlarge",
+35.         "m4.10xlarge",
+36.         "c1.medium",
+37.         "c1.xlarge",
+38.         "c3.large",
+39.         "c3.xlarge",
+40.         "c3.2xlarge",
+41.         "c3.4xlarge",
+42.         "c3.8xlarge",
+43.         "c4.large",
+44.         "c4.xlarge",
+45.         "c4.2xlarge",
+46.         "c4.4xlarge",
+47.         "c4.8xlarge",
+48.         "g2.2xlarge",
+49.         "g2.8xlarge",
+50.         "r3.large",
+51.         "r3.xlarge",
+52.         "r3.2xlarge",
+53.         "r3.4xlarge",
+54.         "r3.8xlarge",
+55.         "i2.xlarge",
+56.         "i2.2xlarge",
+57.         "i2.4xlarge",
+58.         "i2.8xlarge",
+59.         "d2.xlarge",
+60.         "d2.2xlarge",
+61.         "d2.4xlarge",
+62.         "d2.8xlarge",
+63.         "hi1.4xlarge",
+64.         "hs1.8xlarge",
+65.         "cr1.8xlarge",
+66.         "cc2.8xlarge",
+67.         "cg1.4xlarge"
+68.        ],
+69.     "ConstraintDescription" : "must be a valid EC2 instance type."
+70.   },
+71. ...
 ```
 
 **Example YAML**  
@@ -285,23 +340,23 @@ You will create your stack based on the *WordPress\-1\.0\.0* file discussed earl
 
 1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. If this is a new CloudFormation account, choose **Create New Stack**\. Otherwise, choose **Create Stack**\.
+1. Choose **Create Stack**\.
 
-1. In the **Template** section, select **Specify an Amazon S3 Template URL** to type or paste the URL for the sample WordPress template, and then choose **Next**:
+1. In the **Specify template** section, select **Amazon S3 Template URL** to type or paste the URL for the sample WordPress template, and then choose **Next**:
 
    `https://s3.us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.template`
 **Note**  
 AWS CloudFormation templates that are stored in an S3 bucket must be accessible to the user who is creating the stack, and must be located in the *same region* as the stack that is being created\. Therefore, if the S3 bucket is located in the `us-east-2` Region, the stack must also be created in `us-east-2`\.
 
-1. In the **Specify Details** section, enter a stack name in the **Name** field\. For this example, use **MyWPTestStack**\. The stack name can't contain spaces\.
+1. In the **Specify stack details** section, enter a name in the **Stack name** field\. For this example, use **MyWPTestStack**\. The stack name can't contain spaces\.
 
-1. On the **Specify Parameters** page, you'll recognize the parameters from the Parameters section of the template\. You must provide values for all parameters that don't have default values, including **DBUser**, **DBPassword**, **DBRootPassword**, and **KeyName**\. In the **KeyName** field, enter the name of a valid Amazon EC2 pair in the same region you are creating the stack\.
+1. In the **Parameters** section, you must provide values for all parameters that don't have default values, including **DBUser**, **DBPassword**, **DBRootPassword**, and **KeyName**\. In the **KeyName** field, enter the name of a valid Amazon EC2 pair in the same region you are creating the stack\.
 
 1. Choose **Next**\.
 
 1. In this scenario, we won't add any tags\. Choose **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding tags to your CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html)\.
 
-1. Review the information for the stack\. When you're satisfied with the settings, choose **Create**\.
+1. Review the information for the stack\. When you're satisfied with the settings, choose **Submit**\.
 
 Your stack might take several minutes to create – but you probably don't want to just sit around waiting\. If you're like us, you'll want to know how the stack creation is going\.
 

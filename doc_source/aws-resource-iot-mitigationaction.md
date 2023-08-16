@@ -63,13 +63,13 @@ Metadata that can be used to manage the mitigation action\.
 
 ### Ref<a name="aws-resource-iot-mitigationaction-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the mitigation action name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the mitigation action name\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-mitigationaction-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-mitigationaction-return-values-fn--getatt-fn--getatt"></a>
 
@@ -90,38 +90,22 @@ The ID of the mitigation action\.
 #### JSON<a name="aws-resource-iot-mitigationaction--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon Web Services IoT MitigationAction Sample Template",
-  "Resources": {
-    "PublishToSnsMitigationAction": {
-      "Type": "AWS::IoT::MitigationAction",
-      "Properties": {
-        "ActionName": "PublishToSns",
-        "RoleArn": "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions",
-        "ActionParams": {
-          "PublishFindingToSnsParams": {
-            "TopicArn": "arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications"
-          }
-        }
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "Amazon
+            Web Services IoT MitigationAction Sample Template", "Resources": {
+            "PublishToSnsMitigationAction": { "Type": "AWS::IoT::MitigationAction", "Properties": {
+            "ActionName": "PublishToSns", "RoleArn":
+            "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions", "ActionParams": {
+            "PublishFindingToSnsParams": { "TopicArn":
+            "arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications" } } } } } }
 ```
 
 #### YAML<a name="aws-resource-iot-mitigationaction--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Description: Amazon Web Services IoT MitigationAction Sample Template
-Resources:
-  'PublishToSnsMitigationAction':
-    Type: AWS::IoT::MitigationAction
-    Properties:
-      ActionName: PublishToSns
-      RoleArn: arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions
-      ActionParams:
-        PublishFindingToSnsParams:
-          TopicArn: arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications
+AWSTemplateFormatVersion: '2010-09-09' Description: Amazon Web
+            Services IoT MitigationAction Sample Template Resources: 'PublishToSnsMitigationAction':
+            Type: AWS::IoT::MitigationAction Properties: ActionName: PublishToSns RoleArn:
+            arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions ActionParams:
+            PublishFindingToSnsParams: TopicArn:
+            arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications
 ```

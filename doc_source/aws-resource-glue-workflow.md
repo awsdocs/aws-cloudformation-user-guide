@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DefaultRunProperties](#cfn-glue-workflow-defaultrunproperties)" : Json,
       "[Description](#cfn-glue-workflow-description)" : String,
+      "[MaxConcurrentRuns](#cfn-glue-workflow-maxconcurrentruns)" : Integer,
       "[Name](#cfn-glue-workflow-name)" : String,
       "[Tags](#cfn-glue-workflow-tags)" : Json
     }
@@ -27,6 +28,7 @@ Type: AWS::Glue::Workflow
 Properties: 
   [DefaultRunProperties](#cfn-glue-workflow-defaultrunproperties): Json
   [Description](#cfn-glue-workflow-description): String
+  [MaxConcurrentRuns](#cfn-glue-workflow-maxconcurrentruns): Integer
   [Name](#cfn-glue-workflow-name): String
   [Tags](#cfn-glue-workflow-tags): Json
 ```
@@ -45,6 +47,12 @@ A description of the workflow
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MaxConcurrentRuns`  <a name="cfn-glue-workflow-maxconcurrentruns"></a>
+You can use this parameter to prevent unwanted multiple updates to data, to control costs, or in some cases, to prevent exceeding the maximum number of concurrent runs of any of the component jobs\. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-glue-workflow-name"></a>
 The name of the workflow representing the flow  
 *Required*: No  
@@ -61,6 +69,6 @@ The tags to use with this workflow\.
 
 ### Ref<a name="aws-resource-glue-workflow-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the workflow name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the workflow name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

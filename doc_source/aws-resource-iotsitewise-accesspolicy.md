@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::AccessPolicy<a name="aws-resource-iotsitewise-accesspolicy"></a>
 
-Creates an access policy that grants the specified identity \(AWS SSO user, AWS SSO group, or IAM user\) access to the specified AWS IoT SiteWise Monitor portal or project resource\.
+Creates an access policy that grants the specified identity \(IAM Identity Center user, IAM Identity Center group, or IAM user\) access to the specified AWS IoT SiteWise Monitor portal or project resource\.
 
 ## Syntax<a name="aws-resource-iotsitewise-accesspolicy-syntax"></a>
 
@@ -34,7 +34,7 @@ Properties:
 ## Properties<a name="aws-resource-iotsitewise-accesspolicy-properties"></a>
 
 `AccessPolicyIdentity`  <a name="cfn-iotsitewise-accesspolicy-accesspolicyidentity"></a>
-The identity for this access policy\. Choose an AWS SSO user, an AWS SSO group, or an IAM user\.  
+The identity for this access policy\. Choose an IAM Identity Center user, an IAM Identity Center group, or an IAM user\.  
 *Required*: Yes  
 *Type*: [AccessPolicyIdentity](aws-properties-iotsitewise-accesspolicy-accesspolicyidentity.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -55,21 +55,21 @@ The AWS IoT SiteWise Monitor resource for this access policy\. Choose either a p
 
 ### Ref<a name="aws-resource-iotsitewise-accesspolicy-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `AccessPolicyId`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `AccessPolicyId`\.
 
 ### Fn::GetAtt<a name="aws-resource-iotsitewise-accesspolicy-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iotsitewise-accesspolicy-return-values-fn--getatt-fn--getatt"></a>
 
 `AccessPolicyArn`  <a name="AccessPolicyArn-fn::getatt"></a>
 The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the access policy, which has the following format\.  
 `arn:${Partition}:iotsitewise:${Region}:${Account}:access-policy/${AccessPolicyId}`  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 `AccessPolicyId`  <a name="AccessPolicyId-fn::getatt"></a>
 The ID of the access policy\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

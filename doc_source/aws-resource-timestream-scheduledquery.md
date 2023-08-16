@@ -119,9 +119,9 @@ Scheduled query target store configuration\.
 
 ### Ref<a name="aws-resource-timestream-scheduledquery-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the scheduled query ARN\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the scheduled query ARN\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-timestream-scheduledquery-return-values-fn--getatt"></a>
 

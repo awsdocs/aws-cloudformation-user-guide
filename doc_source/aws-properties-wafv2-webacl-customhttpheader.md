@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL CustomHTTPHeader<a name="aws-properties-wafv2-webacl-customhttpheader"></a>
 
-A custom header for custom request and response handling\. This is used in `CustomResponse` and `CustomRequestHandling`\.
+A custom header for custom request and response handling\. This is used in [CustomResponse](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-blockaction.html#cfn-wafv2-webacl-blockaction-customresponse) and [CustomRequestHandling](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-allowaction.html#cfn-wafv2-webacl-allowaction-customrequesthandling)\.
 
 ## Syntax<a name="aws-properties-wafv2-webacl-customhttpheader-syntax"></a>
 

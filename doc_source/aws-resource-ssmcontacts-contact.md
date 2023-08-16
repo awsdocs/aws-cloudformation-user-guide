@@ -53,31 +53,34 @@ The full name of the contact or escalation plan\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Plan`  <a name="cfn-ssmcontacts-contact-plan"></a>
-A list of stages\. A contact has an engagement plan with stages that contact specified contact channels\. An escalation plan uses stages that contact specified contacts\.   
-*Required*: Yes  
+A list of stages\. A contact has an engagement plan with stages that contact specified contact channels\. An escalation plan uses stages that contact specified contacts\.  
+*Required*: No  
 *Type*: List of [Stage](aws-properties-ssmcontacts-contact-stage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ssmcontacts-contact-type"></a>
-Refers to the type of contact\. A single contact is type `PERSONAL` and an escalation plan is type `ESCALATION`\.  
+Refers to the type of contact:  
++  `PERSONAL`: A single, individual contact\.
++  `ESCALATION`: An escalation plan\.
++  `ONCALL_SCHEDULE`: An on\-call schedule\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `ESCALATION | PERSONAL`  
+*Allowed values*: `ESCALATION | ONCALL_SCHEDULE | PERSONAL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-ssmcontacts-contact-return-values"></a>
 
 ### Ref<a name="aws-resource-ssmcontacts-contact-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the resource\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ssmcontacts-contact-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ssmcontacts-contact-return-values-fn--getatt-fn--getatt"></a>
 

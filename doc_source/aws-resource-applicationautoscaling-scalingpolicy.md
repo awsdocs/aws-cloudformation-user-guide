@@ -2,7 +2,7 @@
 
 The `AWS::ApplicationAutoScaling::ScalingPolicy` resource defines a scaling policy that Application Auto Scaling uses to adjust the capacity of a scalable target\. 
 
-For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\. For more information about Application Auto Scaling scaling policies, see [Target tracking scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) in the *Application Auto Scaling User Guide*\.
+For more information, see [Target tracking scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) in the *Application Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-resource-applicationautoscaling-scalingpolicy-syntax"></a>
 
@@ -83,6 +83,7 @@ The identifier of the resource associated with the scaling policy\. This string 
 + Amazon MSK cluster \- The resource type and unique identifier are specified using the cluster ARN\. Example: `arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5`\.
 + Amazon ElastiCache replication group \- The resource type is `replication-group` and the unique identifier is the replication group name\. Example: `replication-group/mycluster`\.
 + Neptune cluster \- The resource type is `cluster` and the unique identifier is the cluster name\. Example: `cluster:mycluster`\.
++ SageMaker Serverless endpoint \- The resource type is `variant` and the unique identifier is the resource ID\. Example: `endpoint/my-end-point/variant/KMeansClustering`\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -112,9 +113,10 @@ The scalable dimension\. This string consists of the service namespace, resource
 +  `elasticache:replication-group:NodeGroups` \- The number of node groups for an Amazon ElastiCache replication group\.
 +  `elasticache:replication-group:Replicas` \- The number of replicas per node group for an Amazon ElastiCache replication group\.
 +  `neptune:cluster:ReadReplicaCount` \- The count of read replicas in an Amazon Neptune DB cluster\.
++  `sagemaker:variant:DesiredProvisionedConcurrency` \- The provisioned concurrency for a SageMaker Serverless endpoint\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | comprehend:entity-recognizer-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticache:replication-group:NodeGroups | elasticache:replication-group:Replicas | elasticmapreduce:instancegroup:InstanceCount | kafka:broker-storage:VolumeSize | lambda:function:ProvisionedConcurrency | neptune:cluster:ReadReplicaCount | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount`  
+*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | comprehend:entity-recognizer-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticache:replication-group:NodeGroups | elasticache:replication-group:Replicas | elasticmapreduce:instancegroup:InstanceCount | kafka:broker-storage:VolumeSize | lambda:function:ProvisionedConcurrency | neptune:cluster:ReadReplicaCount | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount | sagemaker:variant:DesiredProvisionedConcurrency`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScalingTargetId`  <a name="cfn-applicationautoscaling-scalingpolicy-scalingtargetid"></a>
@@ -153,13 +155,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Remarks<a name="aws-resource-applicationautoscaling-scalingpolicy--remarks"></a>
 
-When you create the [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html) resource for a step scaling policy, specify the name of the scaling policy in the `AlarmActions` property\. For an example snippet, see [Amazon Elastic Container Service template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ecs.html)\.
+When you create the [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html) resource for a step scaling policy, specify the name of the scaling policy in the `AlarmActions` property\. For a sample template snippet, see [Amazon Elastic Container Service template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ecs.html)\.
 
 ## Examples<a name="aws-resource-applicationautoscaling-scalingpolicy--examples"></a>
 
 The following examples create scaling policies for a scalable target that is registered with Application Auto Scaling\. 
 
-For more template snippets, see [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)\.
+For more sample template snippets, see [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)\.
 
 ### Target tracking scaling policy with a predefined metric<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_tracking_scaling_policy_with_a_predefined_metric"></a>
 
@@ -294,7 +296,7 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-applicationautoscaling-scalingpolicy--seealso"></a>
-+ [Getting started](https://docs.aws.amazon.com/autoscaling/application/userguide/getting-started.html) in the *Application Auto Scaling User Guide*
 + [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)
-+ [How to use AWS CloudFormation to configure auto scaling for Amazon DynamoDB tables and indexes](http://aws.amazon.com/blogs/database/how-to-use-aws-cloudformation-to-configure-auto-scaling-for-amazon-dynamodb-tables-and-indexes/)
++ [Getting started](https://docs.aws.amazon.com/autoscaling/application/userguide/getting-started.html) in the *Application Auto Scaling User Guide*
++ [How to use AWS CloudFormation to configure auto scaling for Amazon DynamoDB tables and indexes](http://aws.amazon.com/blogs/database/how-to-use-aws-cloudformation-to-configure-auto-scaling-for-amazon-dynamodb-tables-and-indexes/) on the AWS Blog
 

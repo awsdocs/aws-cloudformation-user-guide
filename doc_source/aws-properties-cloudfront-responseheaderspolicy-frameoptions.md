@@ -1,6 +1,6 @@
 # AWS::CloudFront::ResponseHeadersPolicy FrameOptions<a name="aws-properties-cloudfront-responseheaderspolicy-frameoptions"></a>
 
-Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value\.
+Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header's value\.
 
 For more information about the `X-Frame-Options` HTTP response header, see [X\-Frame\-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) in the MDN Web Docs\.
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-responseheaderspolicy-frameoptions-properties"></a>
 
 `FrameOption`  <a name="cfn-cloudfront-responseheaderspolicy-frameoptions-frameoption"></a>
-The value of the `X-Frame-Options` HTTP response header\. Valid values are `DENY` and `SAMEORIGIN`\.   
+The value of the `X-Frame-Options` HTTP response header\. Valid values are `DENY` and `SAMEORIGIN`\.  
 For more information about these values, see [X\-Frame\-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) in the MDN Web Docs\.  
 *Required*: Yes  
 *Type*: String  

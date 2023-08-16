@@ -101,7 +101,7 @@ The Amazon Resource Name \(ARN\) of the listener\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PortOverrides`  <a name="cfn-globalaccelerator-endpointgroup-portoverrides"></a>
-Allows you to override the destination ports used to route traffic to an endpoint\. Using a port override lets you to map a list of external destination ports \(that your users send traffic to\) to a list of internal destination ports that you want an application endpoint to receive traffic on\.   
+Allows you to override the destination ports used to route traffic to an endpoint\. Using a port override lets you map a list of external destination ports \(that your users send traffic to\) to a list of internal destination ports that you want an application endpoint to receive traffic on\.   
 *Required*: No  
 *Type*: List of [PortOverride](aws-properties-globalaccelerator-endpointgroup-portoverride.md)  
 *Maximum*: `10`  
@@ -127,15 +127,15 @@ The default value is 100\.
 
 ### Ref<a name="aws-resource-globalaccelerator-endpointgroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the endpoint group, such as `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh/listener/0123vxyz/endpoint-group/098765zyxwvu`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the endpoint group, such as `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh/listener/0123vxyz/endpoint-group/098765zyxwvu`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-globalaccelerator-endpointgroup-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-globalaccelerator-endpointgroup-return-values-fn--getatt-fn--getatt"></a>
 

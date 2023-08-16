@@ -36,21 +36,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-slot-properties"></a>
 
 `Description`  <a name="cfn-lex-bot-slot-description"></a>
-A description of the slot type\.  
+The description of the slot\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MultipleValuesSetting`  <a name="cfn-lex-bot-slot-multiplevaluessetting"></a>
-Determines whether the slot can return multiple values to the application\.  
+Indicates whether a slot can return multiple values\.  
 *Required*: No  
 *Type*: [MultipleValuesSetting](aws-properties-lex-bot-multiplevaluessetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-lex-bot-slot-name"></a>
-The name of the slot\.  
+The name given to the slot\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `^([0-9a-zA-Z][_-]?){1,100}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ObfuscationSetting`  <a name="cfn-lex-bot-slot-obfuscationsetting"></a>
@@ -67,9 +72,9 @@ The name of the slot type that this slot is based on\. The slot type defines the
 
 `ValueElicitationSetting`  <a name="cfn-lex-bot-slot-valueelicitationsetting"></a>
 Determines the slot resolution strategy that Amazon Lex uses to return slot type values\. The field can be set to one of the following values:  
-+ OriginalValue \- Returns the value entered by the user, if the user value is similar to a slot value\.
-+ TopResolution \- If there is a resolution list for the slot, return the first value in the resolution list as the slot type value\. If there is no resolution list, null is returned\.
-If you don't specify the valueSelectionStrategy, the default is OriginalValue\.  
++ ORIGINAL\_VALUE \- Returns the value entered by the user, if the user value is similar to a slot value\.
++ TOP\_RESOLUTION \- If there is a resolution list for the slot, return the first value in the resolution list as the slot type value\. If there is no resolution list, null is returned\.
+If you don't specify the `valueSelectionStrategy`, the default is `ORIGINAL_VALUE`\.  
 *Required*: Yes  
 *Type*: [SlotValueElicitationSetting](aws-properties-lex-bot-slotvalueelicitationsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

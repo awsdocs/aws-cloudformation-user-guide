@@ -21,7 +21,7 @@ The following template specifies the local artifact for a Lambda function's sour
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "Runtime": "nodejs8.10",
+        "Runtime": "nodejs18.x",
         "CodeUri": "/home/user/code/lambdafunction"
       }
     }
@@ -54,7 +54,7 @@ The command saves the template that it generates to the path specified by the `-
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "Runtime": "nodejs8.10",
+        "Runtime": "nodejs18.x",
         "CodeUri": "s3://mybucket/<md5 checksum>"
       }
     }

@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MonitorDimension](#cfn-ce-anomalymonitor-monitordimension)" : String,
       "[MonitorName](#cfn-ce-anomalymonitor-monitorname)" : String,
       "[MonitorSpecification](#cfn-ce-anomalymonitor-monitorspecification)" : String,
-      "[MonitorType](#cfn-ce-anomalymonitor-monitortype)" : String
+      "[MonitorType](#cfn-ce-anomalymonitor-monitortype)" : String,
+      "[ResourceTags](#cfn-ce-anomalymonitor-resourcetags)" : [ ResourceTag, ... ]
     }
 }
 ```
@@ -29,6 +30,8 @@ Properties:
   [MonitorName](#cfn-ce-anomalymonitor-monitorname): String
   [MonitorSpecification](#cfn-ce-anomalymonitor-monitorspecification): String
   [MonitorType](#cfn-ce-anomalymonitor-monitortype): String
+  [ResourceTags](#cfn-ce-anomalymonitor-resourcetags): 
+    - ResourceTag
 ```
 
 ## Properties<a name="aws-resource-ce-anomalymonitor-properties"></a>
@@ -62,21 +65,27 @@ The possible type values\.
 *Allowed values*: `CUSTOM | DIMENSIONAL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ResourceTags`  <a name="cfn-ce-anomalymonitor-resourcetags"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [ResourceTag](aws-properties-ce-anomalymonitor-resourcetag.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 ## Return values<a name="aws-resource-ce-anomalymonitor-return-values"></a>
 
 ### Ref<a name="aws-resource-ce-anomalymonitor-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns `MonitorArn`\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns `MonitorArn`\. For example:
 
             `{ "Ref": "myAnomalySubscriptionLogicalName" }`        
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ce-anomalymonitor-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ce-anomalymonitor-return-values-fn--getatt-fn--getatt"></a>
 

@@ -38,7 +38,6 @@ Properties:
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-launchnotificationconstraint-acceptlanguage"></a>
 The language code\.  
-+  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
 *Required*: No  
@@ -81,9 +80,9 @@ The product identifier\.
 
 ### Ref<a name="aws-resource-servicecatalog-launchnotificationconstraint-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the identifier of the constraint\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the identifier of the constraint\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-servicecatalog-launchnotificationconstraint--seealso"></a>
 + [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog API Reference*

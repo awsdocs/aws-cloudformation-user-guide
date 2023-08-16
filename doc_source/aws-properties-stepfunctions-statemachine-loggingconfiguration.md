@@ -2,6 +2,8 @@
 
 Defines what execution history events are logged and where they are logged\.
 
+Step Functions provides the log levels — `OFF`, `ALL`, `ERROR`, and `FATAL`\. No event types log when set to `OFF` and all event types do when set to `ALL`\.
+
 **Note**  
 By default, the `level` is set to `OFF`\. For more information see [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide\.
 

@@ -69,9 +69,9 @@ An array of tag object\.
 
 ### Ref<a name="aws-resource-config-configurationaggregator-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ConfigurationAggregatorName, such as `myConfigurationAggregator`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ConfigurationAggregatorName, such as `myConfigurationAggregator`\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-config-configurationaggregator-return-values-fn--getatt"></a>
 
@@ -139,31 +139,66 @@ The following example creates a `ConfigurationAggregator` for an organization\.
 "ConfigurationAggregator": {
     "Type": "AWS::Config::ConfigurationAggregator",
     "Properties": {
-      "OrganizationAggregationSource": {
-        "RoleArn": "arn:aws:iam::012345678912:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
-        "AwsRegions": [
-          "us-west-2",
-          "us-east-1"
-        ],
-        "AllAwsRegions": false
-      }
-      "ConfigurationAggregatorName": "MyConfigurationAggregator"
+        "OrganizationAggregationSource": {
+            "RoleArn": { "Fn::GetAtt" : [ "MyRole", "Arn" ] },
+            "AwsRegions": [
+                "us-west-2",
+                "us-east-1"
+            ],
+            "AllAwsRegions": false
+        },
+        "ConfigurationAggregatorName": "MyConfigurationAggregator"
     }
-  }
+}
+    
+"MyRole": {
+    "Type": "AWS::IAM::Role",
+    "Properties": {
+        "ManagedPolicyArns": "arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
+        "Path": "/service-role/",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [ 
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "config.amazonaws.com"
+                     },
+                     "Action": "sts:AssumeRole"
+                }
+            ]
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-config-configurationaggregator--examples--Configuration_Aggregator_for_an_Organization--yaml"></a>
 
 ```
 ConfigurationAggregator:
-  Type: 'AWS::Config::ConfigurationAggregator'
-  Properties:
-    OrganizationAggregationSource:
-      RoleArn: >-
-        arn:aws:iam::012345678912:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations
-      AwsRegions:
-        - us-west-2
-        - us-east-1
-      AllAwsRegions: false
-    ConfigurationAggregatorName: MyConfigurationAggregator
+    Type: 'AWS::Config::ConfigurationAggregator'
+    Properties:
+        OrganizationAggregationSource:
+            RoleArn: !GetAtt MyRole.Arn
+            AwsRegions:
+                - us-west-2
+                - us-east-1
+            AllAwsRegions: false
+        ConfigurationAggregatorName: MyConfigurationAggregator
+              
+MyRole:
+    Type: AWS::IAM::Role
+    Properties: 
+        ManagedPolicyArns: 
+            - arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations
+        Path: "/service-role/"
+        AssumeRolePolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Principal:
+                    Service:
+                        - config.amazonaws.com
+                Action:
+                    - 'sts:AssumeRole'
 ```

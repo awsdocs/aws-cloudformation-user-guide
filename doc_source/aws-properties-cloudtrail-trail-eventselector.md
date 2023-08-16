@@ -35,23 +35,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudtrail-trail-eventselector-properties"></a>
 
 `DataResources`  <a name="cfn-cloudtrail-trail-eventselector-dataresources"></a>
-CloudTrail supports data event logging for Amazon S3 objects and AWS Lambda functions\. You can specify up to 250 resources for an individual event selector, but the total number of data resources cannot exceed 250 across all event selectors in a trail\. This limit does not apply if you configure resource logging for all data events\.   
-For more information, see [Data Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events) and [Limits in AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) in the *AWS CloudTrail User Guide*\.  
+CloudTrail supports data event logging for Amazon S3 objects, AWS Lambda functions, and Amazon DynamoDB tables with basic event selectors\. You can specify up to 250 resources for an individual event selector, but the total number of data resources cannot exceed 250 across all event selectors in a trail\. This limit does not apply if you configure resource logging for all data events\.  
+For more information, see [Data Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html) and [Limits in AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) in the * AWS CloudTrail User Guide*\.  
 *Required*: Conditional  
 *Type*: List of [DataResource](aws-properties-cloudtrail-trail-dataresource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeManagementEventSources`  <a name="cfn-cloudtrail-trail-eventselector-excludemanagementeventsources"></a>
-An optional list of service event sources from which you do not want management events to be logged on your trail\. In this release, the list can be empty \(disables the filter\), or it can filter out AWS Key Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or `rdsdata.amazonaws.com`\. By default, `ExcludeManagementEventSources` is empty, and AWS KMS and Amazon RDS Data API events are logged to your trail\. You can exclude management event sources only in regions that support the event source\.  
+An optional list of service event sources from which you do not want management events to be logged on your trail\. In this release, the list can be empty \(disables the filter\), or it can filter out AWS Key Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or `rdsdata.amazonaws.com`\. By default, `ExcludeManagementEventSources` is empty, and AWS KMS and Amazon RDS Data API events are logged to your trail\. You can exclude management event sources only in Regions that support the event source\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeManagementEvents`  <a name="cfn-cloudtrail-trail-eventselector-includemanagementevents"></a>
 Specify if you want your event selector to include management events for your trail\.  
- For more information, see [Management Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events) in the * AWS CloudTrail User Guide*\.  
+ For more information, see [Management Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html) in the * AWS CloudTrail User Guide*\.  
 By default, the value is `true`\.  
-The first copy of management events is free\. You are charged for additional copies of management events that you are logging on any subsequent trail in the same region\. For more information about CloudTrail pricing, see [AWS CloudTrail Pricing](http://aws.amazon.com/cloudtrail/pricing/)\.  
+The first copy of management events is free\. You are charged for additional copies of management events that you are logging on any subsequent trail in the same Region\. For more information about CloudTrail pricing, see [AWS CloudTrail Pricing](http://aws.amazon.com/cloudtrail/pricing/)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

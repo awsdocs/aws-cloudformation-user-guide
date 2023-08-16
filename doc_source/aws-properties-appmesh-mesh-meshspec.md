@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EgressFilter](#cfn-appmesh-mesh-meshspec-egressfilter)" : EgressFilter
+  "[EgressFilter](#cfn-appmesh-mesh-meshspec-egressfilter)" : EgressFilter,
+  "[ServiceDiscovery](#cfn-appmesh-mesh-meshspec-servicediscovery)" : MeshServiceDiscovery
 }
 ```
 
@@ -19,6 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [EgressFilter](#cfn-appmesh-mesh-meshspec-egressfilter): 
     EgressFilter
+  [ServiceDiscovery](#cfn-appmesh-mesh-meshspec-servicediscovery): 
+    MeshServiceDiscovery
 ```
 
 ## Properties<a name="aws-properties-appmesh-mesh-meshspec-properties"></a>
@@ -27,4 +30,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The egress filter rules for the service mesh\.  
 *Required*: No  
 *Type*: [EgressFilter](aws-properties-appmesh-mesh-egressfilter.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ServiceDiscovery`  <a name="cfn-appmesh-mesh-meshspec-servicediscovery"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [MeshServiceDiscovery](aws-properties-appmesh-mesh-meshservicediscovery.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

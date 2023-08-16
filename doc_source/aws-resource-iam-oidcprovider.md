@@ -1,15 +1,22 @@
 # AWS::IAM::OIDCProvider<a name="aws-resource-iam-oidcprovider"></a>
 
-Creates an IAM entity to describe an identity provider \(IdP\) that supports [OpenID Connect \(OIDC\)](http://openid.net/connect/)\.
+Creates or updates an IAM entity to describe an identity provider \(IdP\) that supports [OpenID Connect \(OIDC\)](http://openid.net/connect/)\.
 
 The OIDC provider that you create with this operation can be used as a principal in a role's trust policy\. Such a policy establishes a trust relationship between AWS and the OIDC provider\.
 
 When you create the IAM OIDC provider, you specify the following:
 + The URL of the OIDC identity provider \(IdP\) to trust
 + A list of client IDs \(also known as audiences\) that identify the application or applications that are allowed to authenticate using the OIDC provider
++ A list of tags that are attached to the specified IAM OIDC provider
 + A list of thumbprints of one or more server certificates that the IdP uses
 
 You get all of this information from the OIDC IdP that you want to use to access AWS\.
+
+When you update the IAM OIDC provider, you specify the following:
++ The URL of the OIDC identity provider \(IdP\) to trust
++ A list of client IDs \(also known as audiences\) that replaces the existing list of client IDs associated with the OIDC IdP
++ A list of tags that replaces the existing list of tags attached to the specified IAM OIDC provider
++ A list of thumbprints that replaces the existing list of server certificates thumbprints that the IdP uses
 
 **Note**  
 The trust for the OIDC provider is derived from the IAM provider that this operation creates\. Therefore, it is best to limit access to the [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html) operation to highly privileged users\.
@@ -76,15 +83,15 @@ The URL that the IAM OIDC provider resource object is associated with\. For more
 
 ### Ref<a name="aws-resource-iam-oidcprovider-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iam-oidcprovider-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iam-oidcprovider-return-values-fn--getatt-fn--getatt"></a>
 

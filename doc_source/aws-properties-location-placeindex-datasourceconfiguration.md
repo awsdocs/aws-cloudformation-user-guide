@@ -1,6 +1,6 @@
 # AWS::Location::PlaceIndex DataSourceConfiguration<a name="aws-properties-location-placeindex-datasourceconfiguration"></a>
 
-Specifies the data storage option for requesting Places\.
+Specifies the data storage option requesting Places\.
 
 ## Syntax<a name="aws-properties-location-placeindex-datasourceconfiguration-syntax"></a>
 
@@ -23,12 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-location-placeindex-datasourceconfiguration-properties"></a>
 
 `IntendedUse`  <a name="cfn-location-placeindex-datasourceconfiguration-intendeduse"></a>
-Specifies how the results of an operation will be stored by the caller\.  
+Specifies how the results of an operation will be stored by the caller\.   
 Valid values include:  
-+ `SingleUse` specifies that the results won't be stored\.
++ `SingleUse` specifies that the results won't be stored\. 
 + `Storage` specifies that the result can be cached or stored in a database\.
-**Important**  
-Place index resources using HERE as a data provider can't be configured to store results for locations in Japan when choosing `Storage` for the `IntendedUse` parameter\.
 Default value: `SingleUse`  
 *Required*: No  
 *Type*: String  

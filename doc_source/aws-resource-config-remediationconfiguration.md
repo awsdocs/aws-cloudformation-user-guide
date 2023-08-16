@@ -77,7 +77,7 @@ For example, if you specify MaximumAutomaticAttempts as 5 with RetryAttemptSecon
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-config-remediationconfiguration-parameters"></a>
-An object of the RemediationParameterValue\.  
+An object of the RemediationParameterValue\. For more information, see [RemediationParameterValue](https://docs.aws.amazon.com/config/latest/APIReference/API_RemediationParameterValue.html)\.  
 The type is a map of strings to RemediationParameterValue\.
 *Required*: No  
 *Type*: Json  
@@ -97,7 +97,7 @@ For example, if you specify RetryAttemptSeconds as 50 seconds and MaximumAutomat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetId`  <a name="cfn-config-remediationconfiguration-targetid"></a>
-Target ID is the name of the public document\.  
+Target ID is the name of the SSM document\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -122,9 +122,9 @@ If you make backward incompatible changes to the SSM document, you must call Put
 
 ### Ref<a name="aws-resource-config-remediationconfiguration-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the remediation action with the associated SSM document\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the remediation action with the associated SSM document\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-remediationconfiguration--examples"></a>
 

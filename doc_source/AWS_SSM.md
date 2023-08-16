@@ -9,3 +9,4 @@
 + [AWS::SSM::Parameter](aws-resource-ssm-parameter.md)
 + [AWS::SSM::PatchBaseline](aws-resource-ssm-patchbaseline.md)
 + [AWS::SSM::ResourceDataSync](aws-resource-ssm-resourcedatasync.md)
++ [AWS::SSM::ResourcePolicy](aws-resource-ssm-resourcepolicy.md)

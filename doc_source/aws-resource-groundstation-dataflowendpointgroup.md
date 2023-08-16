@@ -16,6 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GroundStation::DataflowEndpointGroup",
   "Properties" : {
+      "[ContactPostPassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds)" : Integer,
+      "[ContactPrePassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds)" : Integer,
       "[EndpointDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails)" : [ EndpointDetails, ... ],
       "[Tags](#cfn-groundstation-dataflowendpointgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::GroundStation::DataflowEndpointGroup
 Properties: 
+  [ContactPostPassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds): Integer
+  [ContactPrePassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds): Integer
   [EndpointDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails): 
     - EndpointDetails
   [Tags](#cfn-groundstation-dataflowendpointgroup-tags): 
@@ -34,6 +38,18 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-groundstation-dataflowendpointgroup-properties"></a>
+
+`ContactPostPassDurationSeconds`  <a name="cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds"></a>
+ Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be in a `POSTPASS` state\. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the Dataflow Endpoint Group enters and exits the `POSTPASS` state\.   
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ContactPrePassDurationSeconds`  <a name="cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds"></a>
+ Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will be in a `PREPASS` state\. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the Dataflow Endpoint Group enters and exits the `PREPASS` state\.   
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointDetails`  <a name="cfn-groundstation-dataflowendpointgroup-endpointdetails"></a>
  List of Endpoint Details, containing address and port for each endpoint\.   
@@ -51,19 +67,19 @@ Properties:
 
 ### Ref<a name="aws-resource-groundstation-dataflowendpointgroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the dataflow endpoint group\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the dataflow endpoint group\. For example: 
 
  `{ "Ref": "DataflowEndpointGroup" }` 
 
  For the Ground Station dataflow endpoint group, `Ref` returns the ARN of the dataflow endpoint group\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-groundstation-dataflowendpointgroup-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-groundstation-dataflowendpointgroup-return-values-fn--getatt-fn--getatt"></a>
 

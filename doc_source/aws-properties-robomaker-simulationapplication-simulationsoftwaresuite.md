@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-robomaker-simulationapplication-simulationsoftwaresuite-properties"></a>
 
 `Name`  <a name="cfn-robomaker-simulationapplication-simulationsoftwaresuite-name"></a>
-The name of the simulation software suite\.  
+The name of the simulation software suite\. `SimulationRuntime` is the only supported value\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `Gazebo | RosbagPlay | SimulationRuntime`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-robomaker-simulationapplication-simulationsoftwaresuite-version"></a>
-The version of the simulation software suite\.  
+The version of the simulation software suite\. Not applicable for `SimulationRuntime`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

@@ -1,6 +1,6 @@
 # AWS::MSK::BatchScramSecret<a name="aws-resource-msk-batchscramsecret"></a>
 
-Represents a secret stored in the Amazon Secrets Manager that can be used to authenticate with a cluster using a user name and a password\.
+<a name="aws-resource-msk-batchscramsecret-description"></a>The `AWS::MSK::BatchScramSecret` resource Property description not available\. for MSK\.
 
 ## Syntax<a name="aws-resource-msk-batchscramsecret-syntax"></a>
 
@@ -31,13 +31,13 @@ Properties:
 ## Properties<a name="aws-resource-msk-batchscramsecret-properties"></a>
 
 `ClusterArn`  <a name="cfn-msk-batchscramsecret-clusterarn"></a>
-The Amazon Resource Name \(ARN\) of the MSK cluster\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecretArnList`  <a name="cfn-msk-batchscramsecret-secretarnlist"></a>
-A list of Amazon Secrets Manager secret ARNs\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -45,5 +45,3 @@ A list of Amazon Secrets Manager secret ARNs\.
 ## Return values<a name="aws-resource-msk-batchscramsecret-return-values"></a>
 
 ### Ref<a name="aws-resource-msk-batchscramsecret-return-values-ref"></a>
-
-The ARN of the cluster\.

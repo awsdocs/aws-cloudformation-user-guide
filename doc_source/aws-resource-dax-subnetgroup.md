@@ -54,7 +54,7 @@ A list of VPC subnet IDs for the subnet group\.
 
 ### Ref<a name="aws-resource-dax-subnetgroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the created subnet group\. For example 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the created subnet group\. For example 
 
 ```
 { "Ref": "MyDAXSubnetGroup" }
@@ -66,7 +66,7 @@ Returns a value similar to the following:
 my-dax-subnet-group
 ```
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-dax-subnetgroup--examples"></a>
 

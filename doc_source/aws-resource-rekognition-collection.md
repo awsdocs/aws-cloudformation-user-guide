@@ -49,11 +49,11 @@ ID for the collection that you are creating\.
 
 ### Ref<a name="aws-resource-rekognition-collection-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the collection ID\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the collection ID\. For example: 
 
  `{ "Ref": "MyCollection" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-rekognition-collection-return-values-fn--getatt"></a>
 

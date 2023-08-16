@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ActivationState](#cfn-refactorspaces-route-uripathrouteinput-activationstate)" : String,
+  "[AppendSourcePath](#cfn-refactorspaces-route-uripathrouteinput-appendsourcepath)" : Boolean,
   "[IncludeChildPaths](#cfn-refactorspaces-route-uripathrouteinput-includechildpaths)" : Boolean,
   "[Methods](#cfn-refactorspaces-route-uripathrouteinput-methods)" : [ String, ... ],
   "[SourcePath](#cfn-refactorspaces-route-uripathrouteinput-sourcepath)" : String
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ActivationState](#cfn-refactorspaces-route-uripathrouteinput-activationstate): String
+  [AppendSourcePath](#cfn-refactorspaces-route-uripathrouteinput-appendsourcepath): Boolean
   [IncludeChildPaths](#cfn-refactorspaces-route-uripathrouteinput-includechildpaths): Boolean
   [Methods](#cfn-refactorspaces-route-uripathrouteinput-methods): 
     - String
@@ -30,9 +32,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-refactorspaces-route-uripathrouteinput-properties"></a>
 
 `ActivationState`  <a name="cfn-refactorspaces-route-uripathrouteinput-activationstate"></a>
-Indicates whether traffic is forwarded to this route’s service after the route is created\.   
+If set to `ACTIVE`, traffic is forwarded to this route’s service after the route is created\.   
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AppendSourcePath`  <a name="cfn-refactorspaces-route-uripathrouteinput-appendsourcepath"></a>
+If set to `true`, this option appends the source path to the service URL endpoint\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IncludeChildPaths`  <a name="cfn-refactorspaces-route-uripathrouteinput-includechildpaths"></a>
@@ -48,7 +56,7 @@ A list of HTTP methods to match\. An empty list matches all values\. If a method
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourcePath`  <a name="cfn-refactorspaces-route-uripathrouteinput-sourcepath"></a>
-The path to use to match traffic\. Paths must start with `/` and are relative to the base of the application\.  
+This is the path that Refactor Spaces uses to match traffic\. Paths must start with `/` and are relative to the base of the application\. To use path parameters in the source path, add a variable in curly braces\. For example, the resource path \{user\} represents a path parameter called 'user'\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-alarmconfiguration-properties"></a>
 
 `Alarms`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms"></a>
-A list of alarms configured for the deployment group\. A maximum of 10 alarms can be added to a deployment group\.  
+A list of alarms configured for the deployment or deployment group\. A maximum of 10 alarms can be added\.  
 *Required*: No  
 *Type*: List of [Alarm](aws-properties-codedeploy-deploymentgroup-alarm.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

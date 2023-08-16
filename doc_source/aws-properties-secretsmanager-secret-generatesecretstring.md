@@ -48,8 +48,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A string of the characters that you don't want in the password\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `0`  
-*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeLowercase`  <a name="cfn-secretsmanager-secret-generatesecretstring-excludelowercase"></a>
@@ -101,7 +99,7 @@ Specifies whether to include at least one upper and lowercase letter, one number
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretStringTemplate`  <a name="cfn-secretsmanager-secret-generatesecretstring-secretstringtemplate"></a>
-A template that the generated string must match\.  
+A template that the generated string must match\. When you make a change to this property, a new secret version is created\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

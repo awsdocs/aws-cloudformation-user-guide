@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Ip](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ip)" : String,
+  "[Ipv6](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ipv6)" : String,
   "[SubnetId](#cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid)" : String
 }
 ```
@@ -19,17 +20,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Ip](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ip): String
+  [Ipv6](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ipv6): String
   [SubnetId](#cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid): String
 ```
 
 ## Properties<a name="aws-properties-route53resolver-resolverendpoint-ipaddressrequest-properties"></a>
 
 `Ip`  <a name="cfn-route53resolver-resolverendpoint-ipaddressrequest-ip"></a>
-The IP address that you want to use for DNS queries\.  
+The IPv4 address that you want to use for DNS queries\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `7`  
 *Maximum*: `36`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv6`  <a name="cfn-route53resolver-resolverendpoint-ipaddressrequest-ipv6"></a>
+ The IPv6 address that you want to use for DNS queries\.   
+*Required*: No  
+*Type*: String  
+*Minimum*: `7`  
+*Maximum*: `39`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid"></a>

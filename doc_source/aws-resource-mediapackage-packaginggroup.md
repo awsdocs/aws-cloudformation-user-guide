@@ -66,7 +66,17 @@ The tags to assign to the packaging group\.
 
 ### Ref<a name="aws-resource-mediapackage-packaginggroup-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the packaging group\.
+
+For example: `{ "Ref": "myPackagingGroup" }`
+
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-mediapackage-packaginggroup-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-mediapackage-packaginggroup-return-values-fn--getatt-fn--getatt"></a>
 
@@ -74,4 +84,4 @@ The tags to assign to the packaging group\.
 The Amazon Resource Name \(ARN\) for the packaging group\. You can get this from the response to any request to the packaging group\.
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
-The fully qualified domain name for the assets in the PackagingGroup\.
+The URL for the assets in the PackagingGroup\.

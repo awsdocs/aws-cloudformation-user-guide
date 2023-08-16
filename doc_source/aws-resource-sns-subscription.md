@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeliveryPolicy](#cfn-sns-subscription-deliverypolicy)" : Json,
       "[Endpoint](#cfn-sns-endpoint)" : String,
       "[FilterPolicy](#cfn-sns-subscription-filterpolicy)" : Json,
+      "[FilterPolicyScope](#cfn-sns-subscription-filterpolicyscope)" : String,
       "[Protocol](#cfn-sns-protocol)" : String,
       "[RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery)" : Boolean,
       "[RedrivePolicy](#cfn-sns-subscription-redrivepolicy)" : Json,
@@ -33,6 +34,7 @@ Properties:
   [DeliveryPolicy](#cfn-sns-subscription-deliverypolicy): Json
   [Endpoint](#cfn-sns-endpoint): String
   [FilterPolicy](#cfn-sns-subscription-filterpolicy): Json
+  [FilterPolicyScope](#cfn-sns-subscription-filterpolicyscope): String
   [Protocol](#cfn-sns-protocol): String
   [RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery): Boolean
   [RedrivePolicy](#cfn-sns-subscription-redrivepolicy): Json
@@ -59,6 +61,14 @@ The subscription's endpoint\. The endpoint value depends on the protocol that yo
 The filter policy JSON assigned to the subscription\. Enables the subscriber to filter out unwanted messages\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon SNS API Reference* and [Message filtering](https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html) in the *Amazon SNS Developer Guide*\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FilterPolicyScope`  <a name="cfn-sns-subscription-filterpolicyscope"></a>
+This attribute lets you choose the filtering scope by using one of the following string value types:  
++ `MessageAttributes` \(default\) \- The filter is applied on the message attributes\.
++ `MessageBody` \- The filter is applied on the message body\.
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-sns-protocol"></a>

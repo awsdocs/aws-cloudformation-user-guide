@@ -74,13 +74,13 @@ Information about the instance types for which to reserve the capacity\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NoRemoveEndDate`  <a name="cfn-ec2-capacityreservationfleet-noremoveenddate"></a>
-Not currently supported by AWS CloudFormation\.  
+Used to add an end date to a Capacity Reservation Fleet that has no end date and time\. To add an end date to a Capacity Reservation Fleet, specify `true` for this paramater and specify the end date and time \(in UTC time format\) for the **EndDate** parameter\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemoveEndDate`  <a name="cfn-ec2-capacityreservationfleet-removeenddate"></a>
-Not currently supported by AWS CloudFormation\.  
+Used to remove an end date from a Capacity Reservation Fleet that is configured to end automatically at a specific date and time\. To remove the end date from a Capacity Reservation Fleet, specify `true` for this paramater and omit the **EndDate** parameter\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -110,13 +110,13 @@ The total number of capacity units to be reserved by the Capacity Reservation Fl
 
 ### Ref<a name="aws-resource-ec2-capacityreservationfleet-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID, such as `crf-abcdef01234567890`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ID, such as `crf-abcdef01234567890`\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-capacityreservationfleet-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-capacityreservationfleet-return-values-fn--getatt-fn--getatt"></a>
 
@@ -139,18 +139,16 @@ Resources:
     Properties:
       AllocationStrategy: "prioritized"
       InstanceTypeSpecifications:
-        - InstanceTypeSpecification:
-            InstanceType: "c4.large"
-            InstancePlatform: "Linux/UNIX"
-            AvailabilityZone: "us-east-1a"
-            Weight: 1
-            Priority: 1
-        - InstanceTypeSpecification:
-            InstanceType: "c5.large"
-            InstancePlatform: "Linux/UNIX"
-            AvailabilityZone: "us-east-1a"
-            Weight: 1
-            Priority: 2
+        - InstanceType: "c4.large"
+          InstancePlatform: "Linux/UNIX"
+          AvailabilityZone: "us-east-1a"
+          Weight: 1
+          Priority: 1
+        - InstanceType: "c5.large"
+          InstancePlatform: "Linux/UNIX"
+          AvailabilityZone: "us-east-1a"
+          Weight: 1
+          Priority: 2
       Tenancy: "default"
       TotalTargetCapacity: 2
       InstanceMatchCriteria: "open"

@@ -21,8 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EventTimeFeatureName](#cfn-sagemaker-featuregroup-eventtimefeaturename)" : String,
       "[FeatureDefinitions](#cfn-sagemaker-featuregroup-featuredefinitions)" : [ FeatureDefinition, ... ],
       "[FeatureGroupName](#cfn-sagemaker-featuregroup-featuregroupname)" : String,
-      "[OfflineStoreConfig](#cfn-sagemaker-featuregroup-offlinestoreconfig)" : Json,
-      "[OnlineStoreConfig](#cfn-sagemaker-featuregroup-onlinestoreconfig)" : Json,
+      "[OfflineStoreConfig](#cfn-sagemaker-featuregroup-offlinestoreconfig)" : OfflineStoreConfig,
+      "[OnlineStoreConfig](#cfn-sagemaker-featuregroup-onlinestoreconfig)" : OnlineStoreConfig,
       "[RecordIdentifierFeatureName](#cfn-sagemaker-featuregroup-recordidentifierfeaturename)" : String,
       "[RoleArn](#cfn-sagemaker-featuregroup-rolearn)" : String,
       "[Tags](#cfn-sagemaker-featuregroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -40,8 +40,10 @@ Properties:
   [FeatureDefinitions](#cfn-sagemaker-featuregroup-featuredefinitions): 
     - FeatureDefinition
   [FeatureGroupName](#cfn-sagemaker-featuregroup-featuregroupname): String
-  [OfflineStoreConfig](#cfn-sagemaker-featuregroup-offlinestoreconfig): Json
-  [OnlineStoreConfig](#cfn-sagemaker-featuregroup-onlinestoreconfig): Json
+  [OfflineStoreConfig](#cfn-sagemaker-featuregroup-offlinestoreconfig): 
+    OfflineStoreConfig
+  [OnlineStoreConfig](#cfn-sagemaker-featuregroup-onlinestoreconfig): 
+    OnlineStoreConfig
   [RecordIdentifierFeatureName](#cfn-sagemaker-featuregroup-recordidentifierfeaturename): String
   [RoleArn](#cfn-sagemaker-featuregroup-rolearn): String
   [Tags](#cfn-sagemaker-featuregroup-tags): 
@@ -75,7 +77,7 @@ You can create up to 2,500 `FeatureDefinition`s per `FeatureGroup`\.
 *Required*: Yes  
 *Type*: List of [FeatureDefinition](aws-properties-sagemaker-featuregroup-featuredefinition.md)  
 *Maximum*: `2500`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FeatureGroupName`  <a name="cfn-sagemaker-featuregroup-featuregroupname"></a>
 The name of the `FeatureGroup`\.  
@@ -83,19 +85,19 @@ The name of the `FeatureGroup`\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,63}`  
+*Pattern*: `^[a-zA-Z0-9]([_-]*[a-zA-Z0-9]){0,63}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OfflineStoreConfig`  <a name="cfn-sagemaker-featuregroup-offlinestoreconfig"></a>
 The configuration of an `OfflineStore`\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [OfflineStoreConfig](aws-properties-sagemaker-featuregroup-offlinestoreconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OnlineStoreConfig`  <a name="cfn-sagemaker-featuregroup-onlinestoreconfig"></a>
 The configuration of an `OnlineStore`\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [OnlineStoreConfig](aws-properties-sagemaker-featuregroup-onlinestoreconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RecordIdentifierFeatureName`  <a name="cfn-sagemaker-featuregroup-recordidentifierfeaturename"></a>
@@ -128,3 +130,13 @@ Tags used to define a `FeatureGroup`\.
 ### Ref<a name="aws-resource-sagemaker-featuregroup-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `FeatureGroupName` of the feature group\.
+
+### Fn::GetAtt<a name="aws-resource-sagemaker-featuregroup-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-sagemaker-featuregroup-return-values-fn--getatt-fn--getatt"></a>
+
+`CreationTime`  <a name="CreationTime-fn::getatt"></a>
+Property description not available\.
+
+`FeatureGroupStatus`  <a name="FeatureGroupStatus-fn::getatt"></a>
+Property description not available\.

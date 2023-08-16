@@ -1,6 +1,6 @@
 # AWS::Athena::WorkGroup EngineVersion<a name="aws-properties-athena-workgroup-engineversion"></a>
 
-The Athena engine version for running queries\.
+The Athena engine version for running queries, or the PySpark engine version for running sessions\.
 
 ## Syntax<a name="aws-properties-athena-workgroup-engineversion-syntax"></a>
 
@@ -33,7 +33,7 @@ Read only\. The engine version on which the query runs\. If the user requests a 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelectedEngineVersion`  <a name="cfn-athena-workgroup-engineversion-selectedengineversion"></a>
-The engine version requested by the user\. Possible values are determined by the output of `ListEngineVersions`, including Auto\. The default is Auto\.  
+The engine version requested by the user\. Possible values are determined by the output of `ListEngineVersions`, including AUTO\. The default is AUTO\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

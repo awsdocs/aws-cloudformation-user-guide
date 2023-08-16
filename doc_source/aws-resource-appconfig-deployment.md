@@ -34,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeploymentStrategyId](#cfn-appconfig-deployment-deploymentstrategyid)" : String,
       "[Description](#cfn-appconfig-deployment-description)" : String,
       "[EnvironmentId](#cfn-appconfig-deployment-environmentid)" : String,
+      "[KmsKeyIdentifier](#cfn-appconfig-deployment-kmskeyidentifier)" : String,
       "[Tags](#cfn-appconfig-deployment-tags)" : [ Tags, ... ]
     }
 }
@@ -50,6 +51,7 @@ Properties:
   [DeploymentStrategyId](#cfn-appconfig-deployment-deploymentstrategyid): String
   [Description](#cfn-appconfig-deployment-description): String
   [EnvironmentId](#cfn-appconfig-deployment-environmentid): String
+  [KmsKeyIdentifier](#cfn-appconfig-deployment-kmskeyidentifier): String
   [Tags](#cfn-appconfig-deployment-tags): 
     - Tags
 ```
@@ -71,7 +73,7 @@ The configuration profile ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationVersion`  <a name="cfn-appconfig-deployment-configurationversion"></a>
-The configuration version to deploy\.  
+The configuration version to deploy\. If deploying an AWS AppConfig hosted configuration version, you can specify either the version number or version label\. For all other configurations, you must specify the version number\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -100,11 +102,19 @@ The environment ID\.
 *Pattern*: `[a-z0-9]{4,7}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`KmsKeyIdentifier`  <a name="cfn-appconfig-deployment-kmskeyidentifier"></a>
+The AWS KMS key identifier \(key ID, key alias, or key ARN\)\. AWS AppConfig uses this ID to encrypt the configuration data using a customer managed key\.   
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Tags`  <a name="cfn-appconfig-deployment-tags"></a>
 Metadata to assign to the deployment\. Tags help organize and categorize your AWS AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.  
 *Required*: No  
 *Type*: [List](aws-properties-appconfig-deployment-tags.md) of [Tags](aws-properties-appconfig-deployment-tags.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-appconfig-deployment-return-values"></a>
 
@@ -114,13 +124,13 @@ Metadata to assign to the deployment\. Tags help organize and categorize your AW
 
 
 
-### AWS AppConfigDeployment Example<a name="aws-resource-appconfig-deployment--examples--Deployment_Example"></a>
+### AWS AppConfig deployment example<a name="aws-resource-appconfig-deployment--examples--_deployment_example"></a>
 
 The following example creates an AWS AppConfig deployment\. Starting a deployment in AWS AppConfig calls the StartDeployment API action\. This call includes the IDs of the AWS AppConfig application, the environment, the configuration profile, and \(optionally\) the configuration data version to deploy\. The call also includes the ID of the deployment strategy to use, which determines how the configuration data is deployed\.
 
 AWS AppConfig monitors the distribution to all hosts and reports status\. If a distribution fails, then AWS AppConfig rolls back the configuration\. 
 
-#### JSON<a name="aws-resource-appconfig-deployment--examples--Deployment_Example--json"></a>
+#### JSON<a name="aws-resource-appconfig-deployment--examples--_deployment_example--json"></a>
 
 ```
 Resources": {
@@ -133,10 +143,10 @@ Resources": {
         "MyTestDeploymentStrategy"
       ],
       "Properties": {
-        "ApplicationId": 12345,
-        "EnvironmentId": 12345,
-        "DeploymentStrategyId": 12345,
-        "ConfigurationProfileId": 12345,
+        "ApplicationId": MyTestApplication,
+        "EnvironmentId": MyTestEnvironment,
+        "DeploymentStrategyId": MyTestDeploymentStrategy,
+        "ConfigurationProfileId": MyTestConfigurationProfile,
         "ConfigurationVersion": "1",
         "Description": "My test deployment",
         "Tags": [
@@ -151,7 +161,7 @@ Resources": {
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-deployment--examples--Deployment_Example--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-deployment--examples--_deployment_example--yaml"></a>
 
 ```
 Resources:

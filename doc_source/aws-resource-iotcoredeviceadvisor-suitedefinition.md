@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTCoreDeviceAdvisor::SuiteDefinition",
   "Properties" : {
-      "[SuiteDefinitionConfiguration](#cfn-iotcoredeviceadvisor-suitedefinition-suitedefinitionconfiguration)" : Json,
+      "[SuiteDefinitionConfiguration](#cfn-iotcoredeviceadvisor-suitedefinition-suitedefinitionconfiguration)" : SuiteDefinitionConfiguration,
       "[Tags](#cfn-iotcoredeviceadvisor-suitedefinition-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoTCoreDeviceAdvisor::SuiteDefinition
 Properties: 
-  [SuiteDefinitionConfiguration](#cfn-iotcoredeviceadvisor-suitedefinition-suitedefinitionconfiguration): Json
+  [SuiteDefinitionConfiguration](#cfn-iotcoredeviceadvisor-suitedefinition-suitedefinitionconfiguration): 
+    SuiteDefinitionConfiguration
   [Tags](#cfn-iotcoredeviceadvisor-suitedefinition-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -55,7 +56,7 @@ The Suite Definition Configuration name\.
 This is a required element\.  
 **Type:** String
 *Required*: Yes  
-*Type*: Json  
+*Type*: [SuiteDefinitionConfiguration](aws-properties-iotcoredeviceadvisor-suitedefinition-suitedefinitionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iotcoredeviceadvisor-suitedefinition-tags"></a>
@@ -72,9 +73,9 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt<a name="aws-resource-iotcoredeviceadvisor-suitedefinition-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iotcoredeviceadvisor-suitedefinition-return-values-fn--getatt-fn--getatt"></a>
 

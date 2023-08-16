@@ -2,7 +2,7 @@
 
 In IPAM, a scope is the highest\-level container within IPAM\. An IPAM contains two default scopes\. Each scope represents the IP space for a single network\. The private scope is intended for all private IP address space\. The public scope is intended for all public IP address space\. Scopes enable you to reuse IP addresses across multiple unconnected networks without causing IP address overlap or conflict\.
 
-For more information, see [How IPAM works](/vpc/latest/ipam/how-it-works-ipam.html) in the *Amazon VPC IPAM User Guide* 
+For more information, see [How IPAM works](https://docs.aws.amazon.com/vpc/latest/ipam/how-it-works-ipam.html) in the *Amazon VPC IPAM User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-ipamscope-syntax"></a>
 
@@ -56,15 +56,15 @@ The key/value combination of a tag assigned to the resource\. Use the tag key in
 
 ### Ref<a name="aws-resource-ec2-ipamscope-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the IPAM scope ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the IPAM scope ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-ipamscope-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-ipamscope-return-values-fn--getatt-fn--getatt"></a>
 

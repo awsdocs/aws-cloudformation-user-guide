@@ -2,6 +2,9 @@
 
 The `AWS::Cognito::UserPool` resource creates an Amazon Cognito user pool\. For more information on working with Amazon Cognito user pools, see [Amazon Cognito User Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html) and [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)\.
 
+**Note**  
+If you don't specify a value for a parameter, Amazon Cognito sets it to a default value\.
+
 ## Syntax<a name="aws-resource-cognito-userpool-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -16,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig)" : AdminCreateUserConfig,
       "[AliasAttributes](#cfn-cognito-userpool-aliasattributes)" : [ String, ... ],
       "[AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes)" : [ String, ... ],
+      "[DeletionProtection](#cfn-cognito-userpool-deletionprotection)" : String,
       "[DeviceConfiguration](#cfn-cognito-userpool-deviceconfiguration)" : DeviceConfiguration,
       "[EmailConfiguration](#cfn-cognito-userpool-emailconfiguration)" : EmailConfiguration,
       "[EmailVerificationMessage](#cfn-cognito-userpool-emailverificationmessage)" : String,
@@ -28,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SmsAuthenticationMessage](#cfn-cognito-userpool-smsauthenticationmessage)" : String,
       "[SmsConfiguration](#cfn-cognito-userpool-smsconfiguration)" : SmsConfiguration,
       "[SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage)" : String,
+      "[UserAttributeUpdateSettings](#cfn-cognito-userpool-userattributeupdatesettings)" : UserAttributeUpdateSettings,
       "[UsernameAttributes](#cfn-cognito-userpool-usernameattributes)" : [ String, ... ],
       "[UsernameConfiguration](#cfn-cognito-userpool-usernameconfiguration)" : UsernameConfiguration,
       "[UserPoolAddOns](#cfn-cognito-userpool-userpooladdons)" : UserPoolAddOns,
@@ -51,6 +56,7 @@ Properties:
     - String
   [AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes): 
     - String
+  [DeletionProtection](#cfn-cognito-userpool-deletionprotection): String
   [DeviceConfiguration](#cfn-cognito-userpool-deviceconfiguration): 
     DeviceConfiguration
   [EmailConfiguration](#cfn-cognito-userpool-emailconfiguration): 
@@ -70,6 +76,8 @@ Properties:
   [SmsConfiguration](#cfn-cognito-userpool-smsconfiguration): 
     SmsConfiguration
   [SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage): String
+  [UserAttributeUpdateSettings](#cfn-cognito-userpool-userattributeupdatesettings): 
+    UserAttributeUpdateSettings
   [UsernameAttributes](#cfn-cognito-userpool-usernameattributes): 
     - String
   [UsernameConfiguration](#cfn-cognito-userpool-usernameconfiguration): 
@@ -109,20 +117,29 @@ The attributes to be auto\-verified\. Possible values: **email**, **phone\_numbe
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DeletionProtection`  <a name="cfn-cognito-userpool-deletionprotection"></a>
+When active, `DeletionProtection` prevents accidental deletion of your user pool\. Before you can delete a user pool that you have protected against deletion, you must deactivate this feature\.  
+When you try to delete a protected user pool in a `DeleteUserPool` API request, Amazon Cognito returns an `InvalidParameterException` error\. To delete a protected user pool, send a new `DeleteUserPool` request after you deactivate deletion protection in an `UpdateUserPool` API request\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `ACTIVE | INACTIVE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DeviceConfiguration`  <a name="cfn-cognito-userpool-deviceconfiguration"></a>
-The device configuration\.  
+The device\-remembering configuration for a user pool\. A null value indicates that you have deactivated device remembering in your user pool\.  
+When you provide a value for any `DeviceConfiguration` field, you activate the Amazon Cognito device\-remembering feature\.
 *Required*: No  
 *Type*: [DeviceConfiguration](aws-properties-cognito-userpool-deviceconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailConfiguration`  <a name="cfn-cognito-userpool-emailconfiguration"></a>
-The email configuration\.  
+The email configuration of your user pool\. The email configuration type sets your preferred sending method, AWS Region, and sender for messages from your user pool\.  
 *Required*: No  
 *Type*: [EmailConfiguration](aws-properties-cognito-userpool-emailconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailVerificationMessage`  <a name="cfn-cognito-userpool-emailverificationmessage"></a>
-A string representing the email verification message\. EmailVerificationMessage is allowed only if [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
+This parameter is no longer used\. See [VerificationMessageTemplateType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  
@@ -131,7 +148,7 @@ A string representing the email verification message\. EmailVerificationMessage 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailVerificationSubject`  <a name="cfn-cognito-userpool-emailverificationsubject"></a>
-A string representing the email verification subject\. EmailVerificationSubject is allowed only if [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
+This parameter is no longer used\. See [VerificationMessageTemplateType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -159,7 +176,7 @@ For adding permission using the AWS CLI, see[ add\-permission ](https://docs.aws
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MfaConfiguration`  <a name="cfn-cognito-userpool-mfaconfiguration"></a>
-The multi\-factor \(MFA\) configuration\. Valid values include:  
+The multi\-factor authentication \(MFA\) configuration\. Valid values include:  
 +  `OFF` MFA won't be used for any users\.
 +  `ON` MFA is required for all users to sign in\.
 +  `OPTIONAL` MFA will be required only for individual users who have an MFA factor activated\.
@@ -192,18 +209,24 @@ A string representing the SMS authentication message\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmsConfiguration`  <a name="cfn-cognito-userpool-smsconfiguration"></a>
-The SMS configuration\.  
+The SMS configuration with the settings that your Amazon Cognito user pool must use to send an SMS message from your AWS account through Amazon Simple Notification Service\. To send SMS messages with Amazon SNS in the AWS Region that you want, the Amazon Cognito user pool uses an AWS Identity and Access Management \(IAM\) role in your AWS account\.  
 *Required*: No  
 *Type*: [SmsConfiguration](aws-properties-cognito-userpool-smsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmsVerificationMessage`  <a name="cfn-cognito-userpool-smsverificationmessage"></a>
-A string representing the SMS verification message\.  
+This parameter is no longer used\. See [VerificationMessageTemplateType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  
 *Maximum*: `140`  
 *Pattern*: `.*\{####\}.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UserAttributeUpdateSettings`  <a name="cfn-cognito-userpool-userattributeupdatesettings"></a>
+The settings for updates to user attributes\. These settings include the property `AttributesRequireVerificationBeforeUpdate`, a user\-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes\. For more information, see [ Verifying updates to email addresses and phone numbers](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates)\.  
+*Required*: No  
+*Type*: [UserAttributeUpdateSettings](aws-properties-cognito-userpool-userattributeupdatesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UsernameAttributes`  <a name="cfn-cognito-userpool-usernameattributes"></a>
@@ -220,7 +243,8 @@ You can choose to set case sensitivity on the username input for the selected si
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolAddOns`  <a name="cfn-cognito-userpool-userpooladdons"></a>
-Enables advanced security risk detection\. Set the key `AdvancedSecurityMode` to the value "AUDIT"\.  
+User pool add\-ons\. Contains settings for activation of advanced security features\. To log user security information but take no action, set to `AUDIT`\. To configure automatic security responses to risky traffic to your user pool, set to `ENFORCED`\.  
+For more information, see [Adding advanced security to a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)\.  
 *Required*: No  
 *Type*: [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -250,15 +274,15 @@ The template for the verification message that the user sees when the app reques
 
 ### Ref<a name="aws-resource-cognito-userpool-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a generated ID, such as `us-east-2_zgaEXAMPLE`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a generated ID, such as `us-east-2_zgaEXAMPLE`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-cognito-userpool-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-cognito-userpool-return-values-fn--getatt-fn--getatt"></a>
 

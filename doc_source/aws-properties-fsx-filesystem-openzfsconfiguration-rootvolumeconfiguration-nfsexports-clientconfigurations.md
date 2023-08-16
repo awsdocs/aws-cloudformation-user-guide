@@ -1,6 +1,6 @@
 # AWS::FSx::FileSystem ClientConfigurations<a name="aws-properties-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-nfsexports-clientconfigurations"></a>
 
-Specifies who can mount the file system and the options that can be used while mounting the file system\.
+Specifies who can mount an OpenZFS file system and the options available while mounting the file system\.
 
 ## Syntax<a name="aws-properties-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration-nfsexports-clientconfigurations-syntax"></a>
 

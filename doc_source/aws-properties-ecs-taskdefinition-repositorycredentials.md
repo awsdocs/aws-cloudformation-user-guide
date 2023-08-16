@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition RepositoryCredentials<a name="aws-properties-ecs-taskdefinition-repositorycredentials"></a>
 
-The `RepositoryCredentials` property specifies the repository credentials for private registry authentication\.
+The repository credentials for private registry authentication\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-repositorycredentials-syntax"></a>
 

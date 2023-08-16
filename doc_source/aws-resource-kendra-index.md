@@ -1,6 +1,6 @@
 # AWS::Kendra::Index<a name="aws-resource-kendra-index"></a>
 
-Specifies a new Amazon Kendra index\. And index is a collection of documents and associated metadata that you want to search for relevant documents\.
+Creates an Amazon Kendra index
 
 Once the index is active you can add documents to your index using the [BatchPutDocument](https://docs.aws.amazon.com/kendra/latest/dg/BatchPutDocument.html) operation or using one of the supported data sources\. 
 
@@ -53,13 +53,13 @@ Properties:
 ## Properties<a name="aws-resource-kendra-index-properties"></a>
 
 `CapacityUnits`  <a name="cfn-kendra-index-capacityunits"></a>
-Specifies capacity units configured for your index\. You can add and remove capacity units to tune an index to your requirements\. You can set capacity units only for Enterprise edition indexes\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [CapacityUnitsConfiguration](aws-properties-kendra-index-capacityunitsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-kendra-index-description"></a>
-A description of the index\.  
+A description for the index\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,7 +71,7 @@ Specifies the properties of an index field\. You can add either a custom or a bu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Edition`  <a name="cfn-kendra-index-edition"></a>
-Indicates whether the index is a enterprise edition index or a developer edition index\. Valid values are `DEVELOPER_EDITION` and `ENTERPRISE_EDITION`\.  
+Indicates whether the index is a Enterprise Edition index or a Developer Edition index\. Valid values are `DEVELOPER_EDITION` and `ENTERPRISE_EDITION`\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `DEVELOPER_EDITION | ENTERPRISE_EDITION`  
@@ -108,9 +108,9 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 `UserContextPolicy`  <a name="cfn-kendra-index-usercontextpolicy"></a>
 The user context policy\.  
 ATTRIBUTE\_FILTER  
-+ All indexed content is searchable and displayable for all users\. If there is an access control list, it is ignored\. You can filter on user and group attributes\.
++ All indexed content is searchable and displayable for all users\. If you want to filter search results on user context, you can use the attribute filters of `_user_id` and `_group_ids` or you can provide user and group information in `UserContext`\.
 USER\_TOKEN  
-+ Enables SSO and token\-based user access control\. All documents with no access control and all documents accessible to the user will be searchable and displayable\.
++ Enables token\-based user access control to filter search results on user context\. All documents with no access control and all documents accessible to the user will be searchable and displayable\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -125,17 +125,17 @@ Defines the type of user token used for the index\.
 
 ### Ref<a name="aws-resource-kendra-index-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the index ID\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the index ID\. For example:
 
  `{"Ref": "index-id"}` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-kendra-index-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-kendra-index-return-values-fn--getatt-fn--getatt"></a>
 

@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint RedisSettings<a name="aws-properties-dms-endpoint-redissettings"></a>
 
-Provides information that defines a Redis target endpoint\.
+Provides information that defines a Redis target endpoint\. This information includes the output format of records applied to the endpoint and details of transaction and control table data information\. For information about other available settings, see [ Specifying endpoint settings for Redis as a target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Redis.html#CHAP_Target.Redis.EndpointSettings) in the *AWS Database Migration Service User Guide*\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-redissettings-syntax"></a>
 

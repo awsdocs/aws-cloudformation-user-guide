@@ -13,8 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppIntegrations::DataIntegration",
   "Properties" : {
       "[Description](#cfn-appintegrations-dataintegration-description)" : String,
+      "[FileConfiguration](#cfn-appintegrations-dataintegration-fileconfiguration)" : FileConfiguration,
       "[KmsKey](#cfn-appintegrations-dataintegration-kmskey)" : String,
       "[Name](#cfn-appintegrations-dataintegration-name)" : String,
+      "[ObjectConfiguration](#cfn-appintegrations-dataintegration-objectconfiguration)" : Json,
       "[ScheduleConfig](#cfn-appintegrations-dataintegration-scheduleconfig)" : ScheduleConfig,
       "[SourceURI](#cfn-appintegrations-dataintegration-sourceuri)" : String,
       "[Tags](#cfn-appintegrations-dataintegration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -28,8 +30,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppIntegrations::DataIntegration
 Properties: 
   [Description](#cfn-appintegrations-dataintegration-description): String
+  [FileConfiguration](#cfn-appintegrations-dataintegration-fileconfiguration): 
+    FileConfiguration
   [KmsKey](#cfn-appintegrations-dataintegration-kmskey): String
   [Name](#cfn-appintegrations-dataintegration-name): String
+  [ObjectConfiguration](#cfn-appintegrations-dataintegration-objectconfiguration): Json
   [ScheduleConfig](#cfn-appintegrations-dataintegration-scheduleconfig): 
     ScheduleConfig
   [SourceURI](#cfn-appintegrations-dataintegration-sourceuri): String
@@ -45,6 +50,12 @@ A description of the DataIntegration\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`FileConfiguration`  <a name="cfn-appintegrations-dataintegration-fileconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [FileConfiguration](aws-properties-appintegrations-dataintegration-fileconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `KmsKey`  <a name="cfn-appintegrations-dataintegration-kmskey"></a>
 The KMS key for the DataIntegration\.  
 *Required*: Yes  
@@ -55,6 +66,12 @@ The KMS key for the DataIntegration\.
 The name of the DataIntegration\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ObjectConfiguration`  <a name="cfn-appintegrations-dataintegration-objectconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleConfig`  <a name="cfn-appintegrations-dataintegration-scheduleconfig"></a>
@@ -80,17 +97,17 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-appintegrations-dataintegration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DataIntegration name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the DataIntegration name\. For example:
 
 `{ "Ref": "myDataIntegrationName" }`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-appintegrations-dataintegration-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-appintegrations-dataintegration-return-values-fn--getatt-fn--getatt"></a>
 

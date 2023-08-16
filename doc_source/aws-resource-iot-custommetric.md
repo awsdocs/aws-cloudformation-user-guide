@@ -63,13 +63,13 @@ The type `number` only takes a single metric value as an input, but when you sub
 
 ### Ref<a name="aws-resource-iot-custommetric-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the custom metric name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the custom metric name\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-custommetric-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-custommetric-return-values-fn--getatt-fn--getatt"></a>
 
@@ -87,32 +87,18 @@ The Amazon Resource Number \(ARN\) of the custom metric; for example, `arn:aws-p
 #### JSON<a name="aws-resource-iot-custommetric--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon Web Services IoT CustomMetric Sample Template",
-  "Resources": {
-    "BatteryPercentageMetric": {
-      "Type": "AWS::IoT::CustomMetric",
-      "Properties": {
-        "MetricName": "batteryPercentage",
-        "DisplayName": "Remaining battery percentage",
-        "MetricType": "number"
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "Amazon
+            Web Services IoT CustomMetric Sample Template", "Resources": {
+            "BatteryPercentageMetric": { "Type": "AWS::IoT::CustomMetric", "Properties": {
+            "MetricName": "batteryPercentage", "DisplayName": "Remaining battery percentage",
+            "MetricType": "number" } } } }
 ```
 
 #### YAML<a name="aws-resource-iot-custommetric--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Description: Amazon Web Services IoT CustomMetric Sample Template
-Resources:
-  BatteryPercentageMetric:
-    Type: AWS::IoT::CustomMetric
-    Properties:
-      MetricName: batteryPercentage
-      DisplayName: Remaining battery percentage
-      MetricType: number
+AWSTemplateFormatVersion: '2010-09-09' Description: Amazon Web
+            Services IoT CustomMetric Sample Template Resources: BatteryPercentageMetric: Type:
+            AWS::IoT::CustomMetric Properties: MetricName: batteryPercentage DisplayName: Remaining
+            battery percentage MetricType: number
 ```

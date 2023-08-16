@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authenticationrequestextraparams)" : {Key : Value, ...},
+  "[AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authenticationrequestextraparams)" : {Key: Value, ...},
   "[AuthorizationEndpoint](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authorizationendpoint)" : String,
   "[ClientId](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientid)" : String,
   "[ClientSecret](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientsecret)" : String,
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authenticationrequestextraparams): 
-    Key : Value
+    Key: Value
   [AuthorizationEndpoint](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authorizationendpoint): String
   [ClientId](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientid): String
   [ClientSecret](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientsecret): String
@@ -65,7 +65,7 @@ The OAuth 2\.0 client identifier\.
 
 `ClientSecret`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientsecret"></a>
 The OAuth 2\.0 client secret\. This parameter is required if you are creating a rule\. If you are modifying a rule, you can omit this parameter if you set `UseExistingClientSecret` to true\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

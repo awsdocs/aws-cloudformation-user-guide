@@ -2,6 +2,12 @@
 
 The `AWS::ECS::Service` resource creates an Amazon Elastic Container Service \(Amazon ECS\) service that runs and maintains the requested number of tasks and associated load balancers\.
 
+**Important**  
+The stack update fails if you change any properties that require replacement and at least one Amazon ECS Service Connect `ServiceConnectService` is configured\. This is because AWS CloudFormation creates the replacement service first, but each `ServiceConnectService` must have a name that is unique in the namespace\.
+
+**Note**  
+Starting April 15, 2023, AWS; will not onboard new customers to Amazon Elastic Inference \(EI\), and will help current customers migrate their workloads to options that offer better price and performance\. After April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2\. However, customers who have used Amazon EI at least once during the past 30\-day period are considered current customers and will be able to continue using the service\. 
+
 ## Syntax<a name="aws-resource-ecs-service-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -29,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PropagateTags](#cfn-ecs-service-propagatetags)" : String,
       "[Role](#cfn-ecs-service-role)" : String,
       "[SchedulingStrategy](#cfn-ecs-service-schedulingstrategy)" : String,
+      "[ServiceConnectConfiguration](#cfn-ecs-service-serviceconnectconfiguration)" : ServiceConnectConfiguration,
       "[ServiceName](#cfn-ecs-service-servicename)" : String,
       "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ ServiceRegistry, ... ],
       "[Tags](#cfn-ecs-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -66,6 +73,8 @@ Properties:
   [PropagateTags](#cfn-ecs-service-propagatetags): String
   [Role](#cfn-ecs-service-role): String
   [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy): String
+  [ServiceConnectConfiguration](#cfn-ecs-service-serviceconnectconfiguration): 
+    ServiceConnectConfiguration
   [ServiceName](#cfn-ecs-service-servicename): String
   [ServiceRegistries](#cfn-ecs-service-serviceregistries): 
     - ServiceRegistry
@@ -78,12 +87,8 @@ Properties:
 
 `CapacityProviderStrategy`  <a name="cfn-ecs-service-capacityproviderstrategy"></a>
 The capacity provider strategy to use for the service\.  
-A capacity provider strategy consists of one or more capacity providers along with the `base` and `weight` to assign to them\. A capacity provider must be associated with the cluster to be used in a capacity provider strategy\. The PutClusterCapacityProviders API is used to associate a capacity provider with a cluster\. Only capacity providers with an `ACTIVE` or `UPDATING` status can be used\.  
-Review the [Capacity provider considerations](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html#capacity-providers-considerations) in the *Amazon Elastic Container Service Developer Guide\.*  
 If a `capacityProviderStrategy` is specified, the `launchType` parameter must be omitted\. If no `capacityProviderStrategy` or `launchType` is specified, the `defaultCapacityProviderStrategy` for the cluster is used\.  
-If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created\. New capacity providers can be created with the CreateCapacityProvider API operation\.  
-To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used\.  
-The PutClusterCapacityProviders API operation is used to update the list of available capacity providers for a cluster after the cluster is created\.  
+A capacity provider strategy may contain a maximum of 6 capacity providers\.  
 *Required*: No  
 *Type*: List of [CapacityProviderStrategyItem](aws-properties-ecs-service-capacityproviderstrategyitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -107,7 +112,7 @@ The deployment controller to use for the service\. If no deployment controller i
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DesiredCount`  <a name="cfn-ecs-service-desiredcount"></a>
-The number of instantiations of the specified task definition to place and keep running on your cluster\.  
+The number of instantiations of the specified task definition to place and keep running in your service\.  
 For new services, if a desired count is not specified, a default value of `1` is used\. When using the `DAEMON` scheduling strategy, the desired count is not required\.  
 For existing services, if a desired count is not specified, it is omitted from the operation\.  
 *Required*: Conditional  
@@ -115,20 +120,21 @@ For existing services, if a desired count is not specified, it is omitted from t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableECSManagedTags`  <a name="cfn-ecs-service-enableecsmanagedtags"></a>
-Specifies whether to turn on Amazon ECS managed tags for the tasks within the service\. For more information, see [Tagging Your Amazon ECS Resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+Specifies whether to turn on Amazon ECS managed tags for the tasks within the service\. For more information, see [Tagging your Amazon ECS resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableExecuteCommand`  <a name="cfn-ecs-service-enableexecutecommand"></a>
-Determines whether the execute command functionality is enabled for the service\. If `true`, the execute command functionality is enabled for all containers in tasks as part of the service\.  
+Determines whether the execute command functionality is turned on for the service\. If `true`, the execute command functionality is turned on for all containers in tasks as part of the service\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckGracePeriodSeconds`  <a name="cfn-ecs-service-healthcheckgraceperiodseconds"></a>
 The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has first started\. This is only used when your service is configured to use a load balancer\. If your service has a load balancer defined and you don't specify a health check grace period value, the default value of `0` is used\.  
-If you do not use an Elastic Load Balancing, we recomend that you use the `startPeriod` in the task definition healtch check parameters\. For more information, see [Health check](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html)\.  
+If you do not use an Elastic Load Balancing, we recommend that you use the `startPeriod` in the task definition health check parameters\. For more information, see [Health check](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html)\.  
 If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can specify a health check grace period of up to 2,147,483,647 seconds \(about 69 years\)\. During that time, the Amazon ECS service scheduler ignores health check status\. This grace period can prevent the service scheduler from marking tasks as unhealthy and stopping them before they have time to come up\.  
 *Required*: No  
 *Type*: Integer  
@@ -157,13 +163,13 @@ The network configuration for the service\. This parameter is required for task 
 An array of placement constraint objects to use for tasks in your service\. You can specify a maximum of 10 constraints for each task\. This limit includes constraints in the task definition and those specified at runtime\.  
 *Required*: No  
 *Type*: List of [PlacementConstraint](aws-properties-ecs-service-placementconstraint.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlacementStrategies`  <a name="cfn-ecs-service-placementstrategies"></a>
-The placement strategy objects to use for tasks in your service\. You can specify a maximum of five strategy rules per service\. For more information, see [Task Placement Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The placement strategy objects to use for tasks in your service\. You can specify a maximum of 5 strategy rules for each service\.  
 *Required*: No  
 *Type*: List of [PlacementStrategy](aws-properties-ecs-service-placementstrategy.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlatformVersion`  <a name="cfn-ecs-service-platformversion"></a>
 The platform version that your tasks in the service are running on\. A platform version is specified only for tasks using the Fargate launch type\. If one isn't specified, the `LATEST` platform version is used\. For more information, see [AWS Fargate platform versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
@@ -172,7 +178,8 @@ The platform version that your tasks in the service are running on\. A platform 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropagateTags`  <a name="cfn-ecs-service-propagatetags"></a>
-Specifies whether to propagate the tags from the task definition or the service to the tasks in the service\. If no value is specified, the tags are not propagated\. Tags can only be propagated to the tasks within the service during service creation\. To add tags to a task after service creation, use the [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.  
+Specifies whether to propagate the tags from the task definition to the task\. If no value is specified, the tags aren't propagated\. Tags can only be propagated to the task during task creation\. To add tags to a task after task creation, use the [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.  
+The default is `NONE`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `NONE | SERVICE | TASK_DEFINITION`  
@@ -198,8 +205,16 @@ Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deploymen
 *Allowed values*: `DAEMON | REPLICA`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ServiceConnectConfiguration`  <a name="cfn-ecs-service-serviceconnectconfiguration"></a>
+The configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace\.  
+Tasks that run in a namespace can use short names to connect to services in the namespace\. Tasks can connect to services across all of the clusters in the namespace\. Tasks connect through a managed proxy container that collects logs and metrics for increased visibility\. Only the tasks that Amazon ECS services create are supported with Service Connect\. For more information, see [Service Connect](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+*Required*: No  
+*Type*: [ServiceConnectConfiguration](aws-properties-ecs-service-serviceconnectconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceName`  <a name="cfn-ecs-service-servicename"></a>
 The name of your service\. Up to 255 letters \(uppercase and lowercase\), numbers, underscores, and hyphens are allowed\. Service names must be unique within a cluster, but you can have similarly named services in multiple clusters within a Region or across multiple Regions\.  
+The stack update fails if you change any properties that require replacement and the `ServiceName` is configured\. This is because AWS CloudFormation creates the replacement service first, but each `ServiceName` must be unique in the cluster\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -227,8 +242,9 @@ The following basic restrictions apply to tags:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskDefinition`  <a name="cfn-ecs-service-taskdefinition"></a>
-The `family` and `revision` \(`family:revision`\) or full ARN of the task definition to run in your service\. The `revision` is required in order for the resource to stabilize\.  
-A task definition must be specified if the service is using either the `ECS` or `CODE_DEPLOY` deployment controllers\.  
+The `family` and `revision` \(`family:revision`\) or full ARN of the task definition to run in your service\. If a `revision` isn't specified, the latest `ACTIVE` revision is used\.  
+A task definition must be specified if the service uses either the `ECS` or `CODE_DEPLOY` deployment controllers\.  
+For more information about deployment types, see [Amazon ECS deployment types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -237,19 +253,19 @@ A task definition must be specified if the service is using either the `ECS` or 
 
 ### Ref<a name="aws-resource-ecs-service-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\)\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\)\.
 
 In the following example, the `Ref` function returns the ARN of the `MyECSService` service, such as `arn:aws:ecs:us-west-2:123456789012:service/sample-webapp`\.
 
  `{ "Ref": "MyECSService" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ecs-service-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ecs-service-return-values-fn--getatt-fn--getatt"></a>
 

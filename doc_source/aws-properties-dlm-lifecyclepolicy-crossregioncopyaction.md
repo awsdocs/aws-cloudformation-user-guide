@@ -1,6 +1,9 @@
 # AWS::DLM::LifecyclePolicy CrossRegionCopyAction<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopyaction"></a>
 
-Specifies a rule for copying shared snapshots across Regions\.
+ **\[Event\-based policies only\]** Specifies a cross\-Region copy action for event\-based policies\.
+
+**Note**  
+To specify a cross\-Region copy rule for snapshot and AMI policies, use CrossRegionCopyRule\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopyaction-syntax"></a>
 
@@ -35,7 +38,7 @@ The encryption settings for the copied snapshot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetainRule`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyaction-retainrule"></a>
-Specifies the retention rule for cross\-Region snapshot copies\.  
+Specifies a retention rule for cross\-Region snapshot copies created by snapshot or event\-based policies, or cross\-Region AMI copies created by AMI policies\. After the retention period expires, the cross\-Region copy is deleted\.  
 *Required*: No  
 *Type*: [CrossRegionCopyRetainRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

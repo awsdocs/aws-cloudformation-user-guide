@@ -15,8 +15,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-ec2-networkinterface-description)" : String,
       "[GroupSet](#cfn-ec2-networkinterface-groupset)" : [ String, ... ],
       "[InterfaceType](#cfn-ec2-networkinterface-interfacetype)" : String,
+      "[Ipv4PrefixCount](#cfn-ec2-networkinterface-ipv4prefixcount)" : Integer,
+      "[Ipv4Prefixes](#cfn-ec2-networkinterface-ipv4prefixes)" : [ Ipv4PrefixSpecification, ... ],
       "[Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount)" : Integer,
       "[Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses)" : [ InstanceIpv6Address, ... ],
+      "[Ipv6PrefixCount](#cfn-ec2-networkinterface-ipv6prefixcount)" : Integer,
+      "[Ipv6Prefixes](#cfn-ec2-networkinterface-ipv6prefixes)" : [ Ipv6PrefixSpecification, ... ],
       "[PrivateIpAddress](#cfn-ec2-networkinterface-privateipaddress)" : String,
       "[PrivateIpAddresses](#cfn-ec2-networkinterface-privateipaddresses)" : [ PrivateIpAddressSpecification, ... ],
       "[SecondaryPrivateIpAddressCount](#cfn-ec2-networkinterface-secondaryprivateipaddresscount)" : Integer,
@@ -36,9 +40,15 @@ Properties:
   [GroupSet](#cfn-ec2-networkinterface-groupset): 
     - String
   [InterfaceType](#cfn-ec2-networkinterface-interfacetype): String
+  [Ipv4PrefixCount](#cfn-ec2-networkinterface-ipv4prefixcount): Integer
+  [Ipv4Prefixes](#cfn-ec2-networkinterface-ipv4prefixes): 
+    - Ipv4PrefixSpecification
   [Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses): 
     - InstanceIpv6Address
+  [Ipv6PrefixCount](#cfn-ec2-networkinterface-ipv6prefixcount): Integer
+  [Ipv6Prefixes](#cfn-ec2-networkinterface-ipv6prefixes): 
+    - Ipv6PrefixSpecification
   [PrivateIpAddress](#cfn-ec2-networkinterface-privateipaddress): String
   [PrivateIpAddresses](#cfn-ec2-networkinterface-privateipaddresses): 
     - PrivateIpAddressSpecification
@@ -70,6 +80,18 @@ The type of network interface\. The default is `interface`\. The supported value
 *Allowed values*: `branch | efa | trunk`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Ipv4PrefixCount`  <a name="cfn-ec2-networkinterface-ipv4prefixcount"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv4Prefixes`  <a name="cfn-ec2-networkinterface-ipv4prefixes"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Ipv4PrefixSpecification](aws-properties-ec2-networkinterface-ipv4prefixspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Ipv6AddressCount`  <a name="cfn-ec2-networkinterface-ipv6addresscount"></a>
 The number of IPv6 addresses to assign to a network interface\. Amazon EC2 automatically selects the IPv6 addresses from the subnet range\. To specify specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property\.  
 *Required*: No  
@@ -82,6 +104,18 @@ One or more specific IPv6 addresses from the IPv6 CIDR block range of your subne
 *Type*: List of [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Ipv6PrefixCount`  <a name="cfn-ec2-networkinterface-ipv6prefixcount"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv6Prefixes`  <a name="cfn-ec2-networkinterface-ipv6prefixes"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Ipv6PrefixSpecification](aws-properties-ec2-networkinterface-ipv6prefixspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `PrivateIpAddress`  <a name="cfn-ec2-networkinterface-privateipaddress"></a>
 Assigns a single private IP address to the network interface, which is used as the primary private IP address\. If you want to specify multiple private IP address, use the `PrivateIpAddresses` property\.  
 *Required*: No  
@@ -92,11 +126,11 @@ Assigns a single private IP address to the network interface, which is used as t
 Assigns private IP addresses to the network interface\. You can specify a primary private IP address by setting the value of the `Primary` property to `true` in the `PrivateIpAddressSpecification` property\. If you want EC2 to automatically assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not specify this property\.  
 *Required*: No  
 *Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-networkinterface-privateipaddressspecification.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SecondaryPrivateIpAddressCount`  <a name="cfn-ec2-networkinterface-secondaryprivateipaddresscount"></a>
 The number of secondary private IPv4 addresses to assign to a network interface\. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range\. You can't specify this option and specify more than one private IP address using `privateIpAddresses`\.  
-The number of IP addresses you can assign to a network interface varies by instance type\. For more information, see [IP Addresses Per ENI Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) in the *Amazon Virtual Private Cloud User Guide*\.  
+You can't specify a count of private IPv4 addresses if you've specified one of the following: specific private IPv4 addresses, specific IPv4 prefixes, or a count of IPv4 prefixes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -123,15 +157,15 @@ An arbitrary set of tags \(key\-value pairs\) for this network interface\.
 
 ### Ref<a name="aws-resource-ec2-networkinterface-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the network interface\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-networkinterface-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-networkinterface-return-values-fn--getatt-fn--getatt"></a>
 

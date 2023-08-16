@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition FirelensConfiguration<a name="aws-properties-ecs-taskdefinition-firelensconfiguration"></a>
 
-The FireLens configuration for the container\. This is used to specify and configure a log router for container logs\. For more information, see [Custom Log Routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the *Amazon Elastic Container Service Developer Guide*\.
+The FireLens configuration for the container\. This is used to specify and configure a log router for container logs\. For more information, see [Custom log routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-firelensconfiguration-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Options](#cfn-ecs-taskdefinition-firelensconfiguration-options)" : {Key : Value, ...},
+  "[Options](#cfn-ecs-taskdefinition-firelensconfiguration-options)" : {Key: Value, ...},
   "[Type](#cfn-ecs-taskdefinition-firelensconfiguration-type)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Options](#cfn-ecs-taskdefinition-firelensconfiguration-options): 
-    Key : Value
+    Key: Value
   [Type](#cfn-ecs-taskdefinition-firelensconfiguration-type): String
 ```
 

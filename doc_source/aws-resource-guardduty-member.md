@@ -77,9 +77,9 @@ You can use the `Status` property to update the status of the relationship betwe
 
 ### Ref<a name="aws-resource-guardduty-member-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique ID of the GuardDuty member account, such as 012345678901\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique ID of the GuardDuty member account, such as 012345678901\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-member--examples"></a>
 
@@ -108,12 +108,12 @@ The following example shows how to declare a GuardDuty `Member` resource:
 #### YAML<a name="aws-resource-guardduty-member--examples--Declare_a_Member_Resource--yaml"></a>
 
 ```
-Type: AWS::GuardDuty::Member
-Properties:
-      Status: Invited
-      MemberId: 012345678901
-      Email: guarddutymember@amazon.com
-      Message: You are invited to enable Amazon Guardduty.
-      DetectorId: a12abc34d567e8fa901bc2d34e56789f0
-      DisableEmailNotification: true
+      Type: AWS::GuardDuty::Member
+      Properties:
+            Status: Invited
+            MemberId: 012345678901
+            Email: guarddutymember@amazon.com
+            Message: You are invited to enable Amazon Guardduty.
+            DetectorId: a12abc34d567e8fa901bc2d34e56789f0
+            DisableEmailNotification: true
 ```

@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Ec2ImageId](#cfn-nimblestudio-streamingimage-ec2imageid)" : String,
       "[Name](#cfn-nimblestudio-streamingimage-name)" : String,
       "[StudioId](#cfn-nimblestudio-streamingimage-studioid)" : String,
-      "[Tags](#cfn-nimblestudio-streamingimage-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-nimblestudio-streamingimage-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -31,7 +31,7 @@ Properties:
   [Name](#cfn-nimblestudio-streamingimage-name): String
   [StudioId](#cfn-nimblestudio-streamingimage-studioid): String
   [Tags](#cfn-nimblestudio-streamingimage-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-nimblestudio-streamingimage-properties"></a>
@@ -72,6 +72,15 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 ### Fn::GetAtt<a name="aws-resource-nimblestudio-streamingimage-return-values-fn--getatt"></a>
 
 #### <a name="aws-resource-nimblestudio-streamingimage-return-values-fn--getatt-fn--getatt"></a>
+
+`EncryptionConfiguration`  <a name="EncryptionConfiguration-fn::getatt"></a>
+Property description not available\.
+
+`EncryptionConfiguration.KeyArn`  <a name="EncryptionConfiguration.KeyArn-fn::getatt"></a>
+Property description not available\.
+
+`EncryptionConfiguration.KeyType`  <a name="EncryptionConfiguration.KeyType-fn::getatt"></a>
+Property description not available\.
 
 `EulaIds`  <a name="EulaIds-fn::getatt"></a>
 The list of IDs of EULAs that must be accepted before a streaming session can be started using this streaming image\.

@@ -54,7 +54,7 @@ Properties:
 ## Properties<a name="aws-resource-emr-studio-properties"></a>
 
 `AuthMode`  <a name="cfn-emr-studio-authmode"></a>
-Specifies whether the Studio authenticates users using AWS SSO or IAM\.  
+Specifies whether the Studio authenticates users using IAM Identity Center or IAM\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `IAM | SSO`  
@@ -167,19 +167,19 @@ The ID of the Workspace security group associated with the Amazon EMR Studio\. T
 
 ### Ref<a name="aws-resource-emr-studio-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ID\. For example:
 
  `{ "Ref": "es-EXAMPLE12345678XXXXXXXXXXX" }` 
 
 Ref returns the ID of the Amazon EMR Studio\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-emr-studio-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-emr-studio-return-values-fn--getatt-fn--getatt"></a>
 

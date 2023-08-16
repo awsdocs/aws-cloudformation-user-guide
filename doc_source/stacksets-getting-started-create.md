@@ -37,7 +37,7 @@ With `service-managed` permissions, you can deploy stack instances to accounts m
 
    1. You can configure Amazon Simple Notification Service \(SNS\) updates by email, based on log content, using the **TopicARN** and **NotificationEmail** parameters\. For the purposes of this walkthrough, we are not configuring Amazon SNS updates\.
 
-   1. You can configure the delivery channel for updates and notifications using the **DeliveryChannelName** and **Frequency** parameters\. For more information about the delivery channel in AWS Config, see [Managing the delivery channel](http://docs.aws.amazon.com/config/latest/developerguide/manage-delivery-channel.html) in the *AWS Config Developer Guide*\. For the purposes of this walkthrough, we are leaving default settings in this area\.
+   1. You can configure the delivery channel for updates and notifications using the **DeliveryChannelName** and **Frequency** parameters\. For more information about the delivery channel in AWS Config, see [Managing the delivery channel](https://docs.aws.amazon.com/config/latest/developerguide/manage-delivery-channel.html) in the *AWS Config Developer Guide*\. For the purposes of this walkthrough, we are leaving default settings in this area\.
 
 1. When you are finished specifying parameters for AWS Config, choose **Next**\.
 
@@ -125,7 +125,7 @@ The concurrency of the StackSet instance deployments in the operation is depende
 **Important**  
 Wait until an operation is complete before starting another one\. You can run only one operation at a time\.
 
-1. Verify that the stack instances were created successfully\. Run `DescribeStackSetOperation` with the `operation-id` that is returned as part of the output of step 4\.
+1. Verify that the stack instances were created successfully\. Run `[DescribeStackSetOperation](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackSetOperation.html)` with the `operation-id` that is returned as part of the output of step 4\.
 
    ```
    aws cloudformation describe-stack-set-operation \
@@ -172,15 +172,15 @@ Before you create a stack set with service\-managed permissions, consider the fo
 
 1. Under **Permissions**, choose **Service\-managed permissions**\.
 
-   If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required to create or update a stack set with service\-managed permissions\. Only the administrator in the organization's management account has permissions to [manage trusted access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.  
-![\[Enable trusted access banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-service-managed-permissions.png)
+   If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required to create or update a stack set with service\-managed permissions\. Only the administrator in the organization's management account has permissions to [Activate trusted access with AWS Organizations](stacksets-orgs-activate-trusted-access.md)\.  
+![\[Activate trusted access banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-service-managed-permissions.png)
 
 1. For **Execution configuration**, choose **Active** so that StackSets performs non\-conflicting operations concurrently and queues conflicting operations\. After conflicting operations finish, StackSets starts queued operations in request order\.
 **Note**  
 If there are already running or queued operations, StackSets queues all incoming operations even if they are non\-conflicting\.  
 You can't modify your stack set's execution configuration while there are running or queued operations for that stack set\.
 
-1. Choose **Next** to proceed and to enable trusted access if not already enabled\.
+1. Choose **Next** to proceed and to activate trusted access if not already activated\.
 
 1. On the **Set deployment options** page, under **Deployment targets**, choose the accounts in your organization to deploy to\.
    + Choose **Deploy to organization** to deploy to all accounts in your organization\.  
@@ -194,7 +194,7 @@ You can't modify your stack set's execution configuration while there are runnin
 1. If you enabled automatic deployment, under **Account removal behavior**, choose whether stack resources are retained or deleted when an account is removed from a target organization or OU\.  
 ![\[Account removal behavior settings for stack sets with service-managed permissions.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-account-removal-retain.png)
 **Note**  
-With **Retain stacks** selected, stack instances are removed from your stack set, but the stacks and their associated resources are retained\. The resources stay in their current state, but will no longer be part of the stack set\. The stacks can't be reassociated with an existing or new stack set\.
+With **Retain stacks** selected, stack instances are removed from your stack set, but the stacks and their associated resources are retained\. The resources stay in their current state, but will no longer be part of the stack set\.
 
 1. Under **Deployment regions**, choose the Regions in which you want to deploy stack instances\. Choose **Next**\.
 

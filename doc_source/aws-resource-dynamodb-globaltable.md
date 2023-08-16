@@ -1,6 +1,6 @@
 # AWS::DynamoDB::GlobalTable<a name="aws-resource-dynamodb-globaltable"></a>
 
-The `AWS::DynamoDB::GlobalTable` resource enables you to create and manage a Version 2019\.11\.21 global table\. This resource cannot be used to create or manage a Version 2017\.11\.29 global table\.
+The `AWS::DynamoDB::GlobalTable` resource enables you to create and manage a Version 2019\.11\.21 global table\. This resource cannot be used to create or manage a Version 2017\.11\.29 global table\. For more information, see [Global tables](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html)\.
 
 **Important**  
 You cannot convert a resource of type `AWS::DynamoDB::Table` into a resource of type `AWS::DynamoDB::GlobalTable` by changing its type in your template\. **Doing so might result in the deletion of your DynamoDB table\.**  
@@ -118,7 +118,6 @@ Specifies how you are charged for read and write throughput and how you manage c
 All replicas in your global table will have the same billing mode\. If you use `PROVISIONED` billing mode, you must provide an auto scaling configuration via the `WriteProvisionedThroughputSettings` property\. The default value of this property is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-globaltable-globalsecondaryindexes"></a>
@@ -166,9 +165,6 @@ A name for the global table\. If you don't specify a name, AWS CloudFormation ge
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
-*Minimum*: `3`  
-*Maximum*: `255`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TimeToLiveSpecification`  <a name="cfn-dynamodb-globaltable-timetolivespecification"></a>
@@ -187,15 +183,15 @@ Specifies an auto scaling policy for write capacity\. This policy will be applie
 
 ### Ref<a name="aws-resource-dynamodb-globaltable-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the table name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the table name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-dynamodb-globaltable-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-dynamodb-globaltable-return-values-fn--getatt-fn--getatt"></a>
 

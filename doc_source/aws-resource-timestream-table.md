@@ -13,8 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Timestream::Table",
   "Properties" : {
       "[DatabaseName](#cfn-timestream-table-databasename)" : String,
-      "[MagneticStoreWriteProperties](#cfn-timestream-table-magneticstorewriteproperties)" : Json,
-      "[RetentionProperties](#cfn-timestream-table-retentionproperties)" : Json,
+      "[MagneticStoreWriteProperties](#cfn-timestream-table-magneticstorewriteproperties)" : MagneticStoreWriteProperties,
+      "[RetentionProperties](#cfn-timestream-table-retentionproperties)" : RetentionProperties,
+      "[Schema](#cfn-timestream-table-schema)" : Schema,
       "[TableName](#cfn-timestream-table-tablename)" : String,
       "[Tags](#cfn-timestream-table-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,8 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Timestream::Table
 Properties: 
   [DatabaseName](#cfn-timestream-table-databasename): String
-  [MagneticStoreWriteProperties](#cfn-timestream-table-magneticstorewriteproperties): Json
-  [RetentionProperties](#cfn-timestream-table-retentionproperties): Json
+  [MagneticStoreWriteProperties](#cfn-timestream-table-magneticstorewriteproperties): 
+    MagneticStoreWriteProperties
+  [RetentionProperties](#cfn-timestream-table-retentionproperties): 
+    RetentionProperties
+  [Schema](#cfn-timestream-table-schema): 
+    Schema
   [TableName](#cfn-timestream-table-tablename): String
   [Tags](#cfn-timestream-table-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -92,11 +97,11 @@ Properties:
       S3Configuration:
         BucketName: "testbucket"
         EncryptionOption: "SSE_KMS"
-        BucketName: "1234abcd-12ab-34cd-56ef-1234567890ab"
-        EncryptionOption: "prefix"
+        KmsKeyId: "1234abcd-12ab-34cd-56ef-1234567890ab"
+        ObjectKeyPrefix: "prefix"
 ```
 *Required*: No  
-*Type*: Json  
+*Type*: [MagneticStoreWriteProperties](aws-properties-timestream-table-magneticstorewriteproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetentionProperties`  <a name="cfn-timestream-table-retentionproperties"></a>
@@ -133,7 +138,13 @@ Properties:
         MagneticStoreRetentionPeriodInDays: "7"
 ```
 *Required*: No  
-*Type*: Json  
+*Type*: [RetentionProperties](aws-properties-timestream-table-retentionproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Schema`  <a name="cfn-timestream-table-schema"></a>
+ The schema of the table\.   
+*Required*: No  
+*Type*: [Schema](aws-properties-timestream-table-schema.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-timestream-table-tablename"></a>
@@ -153,9 +164,9 @@ The tags to add to the table
 
 ### Ref<a name="aws-resource-timestream-table-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the table name `TABLE_NAME` in the form `DATABASE_NAME|TABLE_NAME`\. `DATABASE_NAME` is the name of the Timestream database that the table is contained in\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the table name `TABLE_NAME` in the form `DATABASE_NAME|TABLE_NAME`\. `DATABASE_NAME` is the name of the Timestream database that the table is contained in\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-timestream-table-return-values-fn--getatt"></a>
 

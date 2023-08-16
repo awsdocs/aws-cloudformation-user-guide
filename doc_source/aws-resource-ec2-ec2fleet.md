@@ -62,6 +62,7 @@ Reserved\.
 
 `ExcessCapacityTerminationPolicy`  <a name="cfn-ec2-ec2fleet-excesscapacityterminationpolicy"></a>
 Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2 Fleet\.  
+Supported only for fleets of type `maintain`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `no-termination | termination`  
@@ -139,15 +140,15 @@ The end date and time of the request, in UTC format \(for example, *YYYY*\-*MM*\
 
 ### Ref<a name="aws-resource-ec2-ec2fleet-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the fleet ID, such as `fleet-1fe24079-d272-4023-8e7c-70e10784cb0e`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the fleet ID, such as `fleet-1fe24079-d272-4023-8e7c-70e10784cb0e`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-ec2fleet-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-ec2fleet-return-values-fn--getatt-fn--getatt"></a>
 

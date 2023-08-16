@@ -44,40 +44,49 @@ Properties:
 ## Properties<a name="aws-resource-rds-globalcluster-properties"></a>
 
 `DeletionProtection`  <a name="cfn-rds-globalcluster-deletionprotection"></a>
-The deletion protection setting for the new global database\. The global database can't be deleted when deletion protection is enabled\.  
+Specifies whether to enable deletion protection for the new global database cluster\. The global database can't be deleted when deletion protection is enabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engine`  <a name="cfn-rds-globalcluster-engine"></a>
-The name of the database engine to be used for this DB cluster\.  
-If this property isn't specified, the database engine is derived from the source DB cluster specified by the `SourceDBClusterIdentifier` property\.  
-If the `SourceDBClusterIdentifier` property isn't specified, this property is required\. If the `SourceDBClusterIdentifier` property is specified, make sure this property isn't specified\.
+The database engine to use for this global database cluster\.  
+Valid Values: `aurora-mysql | aurora-postgresql`   
+Constraints:  
++ Can't be specified if `SourceDBClusterIdentifier` is specified\. In this case, Amazon Aurora uses the engine of the source DB cluster\.
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-rds-globalcluster-engineversion"></a>
-The engine version of the Aurora global database\.  
+The engine version to use for this global database cluster\.  
+Constraints:  
++ Can't be specified if `SourceDBClusterIdentifier` is specified\. In this case, Amazon Aurora uses the engine version of the source DB cluster\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalClusterIdentifier`  <a name="cfn-rds-globalcluster-globalclusteridentifier"></a>
-The cluster identifier of the global database cluster\.  
+The cluster identifier for this global database cluster\. This parameter is stored as a lowercase string\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceDBClusterIdentifier`  <a name="cfn-rds-globalcluster-sourcedbclusteridentifier"></a>
-The DB cluster identifier or Amazon Resource Name \(ARN\) to use as the primary cluster of the global database\.   
-If the `Engine` property isn't specified, this property is required\. If the `Engine` property is specified, make sure this property isn't specified\.
+The Amazon Resource Name \(ARN\) to use as the primary cluster of the global database\.  
+If you provide a value for this parameter, don't specify values for the following settings because Amazon Aurora uses the values from the specified source DB cluster:  
++  `DatabaseName` 
++  `Engine` 
++  `EngineVersion` 
++  `StorageEncrypted` 
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageEncrypted`  <a name="cfn-rds-globalcluster-storageencrypted"></a>
-The storage encryption setting for the global database cluster\.   
+Specifies whether to enable storage encryption for the new global database cluster\.  
+Constraints:  
++ Can't be specified if `SourceDBClusterIdentifier` is specified\. In this case, Amazon Aurora uses the setting from the source DB cluster\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -86,9 +95,9 @@ The storage encryption setting for the global database cluster\.
 
 ### Ref<a name="aws-resource-rds-globalcluster-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the global database cluster\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the global database cluster\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-rds-globalcluster--examples"></a>
 
@@ -457,9 +466,9 @@ The following template was used to create DB cluster that you want to add to the
                 "MasterUserPassword": {
                     "Ref": "password"
                 },
-                "DBClusterParameterGroupName": "default.aurora-mysql5.7",
+                "DBClusterParameterGroupName": "default.aurora-mysql8.0",
                 "Engine": "aurora-mysql",
-                "EngineVersion": "5.7.mysql_aurora.2.10.0"
+                "EngineVersion": "8.0.mysql_aurora.8.0.30"
             }
         },
         "RDSDBInstance": {
@@ -469,7 +478,7 @@ The following template was used to create DB cluster that you want to add to the
                     "DBClusterIdentifier": {
                         "Ref": "RDSCluster"
                 },
-                "DBParameterGroupName": "default.aurora-mysql5.7",
+                "DBParameterGroupName": "default.aurora-mysql8.0",
                 "PubliclyAccessible": "true",
                 "DBInstanceClass": "db.r5.xlarge"
             }
@@ -525,9 +534,9 @@ The following template adds the DB cluster created by the previous template to a
                 "MasterUserPassword": {
                     "Ref": "password"
                 },
-                "DBClusterParameterGroupName": "default.aurora-mysql5.7",
+                "DBClusterParameterGroupName": "default.aurora-mysql8.0",
                 "Engine": "aurora-mysql",
-                "EngineVersion": "5.7.mysql_aurora.2.10.0"
+                "EngineVersion": "8.0.mysql_aurora.8.0.30"
             }
         },
         "RDSDBInstance": {
@@ -537,7 +546,7 @@ The following template adds the DB cluster created by the previous template to a
                 "DBClusterIdentifier": {
                     "Ref": "RDSCluster"
                 },
-                "DBParameterGroupName": "default.aurora-mysql5.7",
+                "DBParameterGroupName": "default.aurora-mysql8.0",
                 "PubliclyAccessible": "true",
                 "DBInstanceClass": "db.r5.xlarge"
             }
@@ -574,15 +583,15 @@ Resources:
     Properties:
       MasterUsername: !Ref username
       MasterUserPassword: !Ref password
-      DBClusterParameterGroupName: default.aurora-mysql5.7
+      DBClusterParameterGroupName: default.aurora-mysql8.0
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.10.0
+      EngineVersion: 8.0.mysql_aurora.8.0.30
   RDSDBInstance:
     Type: 'AWS::RDS::DBInstance'
     Properties:
       Engine: aurora-mysql
       DBClusterIdentifier: !Ref RDSCluster
-      DBParameterGroupName: default.aurora-mysql5.7
+      DBParameterGroupName: default.aurora-mysql8.0
       PubliclyAccessible: 'true'
       DBInstanceClass: db.r5.xlarge
                 
@@ -619,15 +628,15 @@ Resources:
     Properties:
       MasterUsername: !Ref username
       MasterUserPassword: !Ref password
-      DBClusterParameterGroupName: default.aurora-mysql5.7
+      DBClusterParameterGroupName: default.aurora-mysql8.0
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.10.0
+      EngineVersion: 8.0.mysql_aurora.8.0.30
   RDSDBInstance:
     Type: 'AWS::RDS::DBInstance'
     Properties:
       Engine: aurora-mysql
       DBClusterIdentifier: !Ref RDSCluster
-      DBParameterGroupName: default.aurora-mysql5.7
+      DBParameterGroupName: default.aurora-mysql8.0
       PubliclyAccessible: 'true'
       DBInstanceClass: db.r5.xlarge
 ```

@@ -68,9 +68,9 @@ A complex type that contains one `RecordSet` element for each record that you wa
 
 ### Ref<a name="aws-resource-route53-recordsetgroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the record set group, for example, `MyRecordSetGroup`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the record set group, for example, `MyRecordSetGroup`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-route53-recordsetgroup--examples"></a>
 

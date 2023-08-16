@@ -1,6 +1,6 @@
 # AWS::GuardDuty::Master<a name="aws-resource-guardduty-master"></a>
 
-You can use the `AWS::GuardDuty::Master` resource in a GuardDuty member account to accept an invitation from a GuardDuty administrator account\. The invitation to the member account must be sent prior to using the `AWS::GuardDuty::Master` resource to accept the administrator account's invitation\. You can invite a member account by using the `InviteMembers` operation of the Amazon GuardDuty API, or by creating an `AWS::GuardDuty::Member` resource\.
+You can use the `AWS::GuardDuty::Master` resource in a GuardDuty member account to accept an invitation from a GuardDuty administrator account\. The invitation to the member account must be sent prior to using the `AWS::GuardDuty::Master` resource to accept the administrator account's invitation\. You can invite a member account by using the `InviteMembers` operation of the GuardDuty API, or by creating an `AWS::GuardDuty::Member` resource\.
 
 ## Syntax<a name="aws-resource-guardduty-master-syntax"></a>
 
@@ -55,9 +55,9 @@ The AWS account ID of the account designated as the GuardDuty administrator acco
 
 ### Ref<a name="aws-resource-guardduty-master-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique ID of the GuardDuty administrator account, such as 012345678901\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique ID of the GuardDuty administrator account, such as 012345678901\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-master--examples"></a>
 

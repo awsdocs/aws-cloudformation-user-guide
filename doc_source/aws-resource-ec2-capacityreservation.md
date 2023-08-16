@@ -82,7 +82,7 @@ Indicates the way in which the Capacity Reservation ends\. A Capacity Reservatio
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EphemeralStorage`  <a name="cfn-ec2-capacityreservation-ephemeralstorage"></a>
-Indicates whether the Capacity Reservation supports instances with temporary, block\-level storage\.  
+ *Deprecated\.*   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -128,7 +128,7 @@ The Amazon Resource Name \(ARN\) of the Outpost on which to create the Capacity 
 The Amazon Resource Name \(ARN\) of the cluster placement group in which to create the Capacity Reservation\. For more information, see [ Capacity Reservations for cluster placement groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html) in the *Amazon EC2 User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^arn:aws([a-z-]+)?:ec2:[a-z\d-]+:\d{12}:placement-group/([^\s].+[^\s]){1,255}$`  
+*Pattern*: `^arn:aws([a-z-]+)?:ec2:[a-z\d-]+:\d{12}:placement-group/^.{1,255}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TagSpecifications`  <a name="cfn-ec2-capacityreservation-tagspecifications"></a>
@@ -150,15 +150,15 @@ Indicates the tenancy of the Capacity Reservation\. A Capacity Reservation can h
 
 ### Ref<a name="aws-resource-ec2-capacityreservation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID, such as `cr-1234ab5cd6789e0f1`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ID, such as `cr-1234ab5cd6789e0f1`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-capacityreservation-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-capacityreservation-return-values-fn--getatt-fn--getatt"></a>
 
@@ -167,6 +167,9 @@ Returns the Availability Zone in which the capacity is reserved\. For example: `
 
 `AvailableInstanceCount`  <a name="AvailableInstanceCount-fn::getatt"></a>
 Returns the remaining capacity, which indicates the number of instances that can be launched in the Capacity Reservation\. For example: `9`\.
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the Capacity Reservation\.
 
 `InstanceType`  <a name="InstanceType-fn::getatt"></a>
 Returns the type of instance for which the capacity is reserved\. For example: `m4.large`\.

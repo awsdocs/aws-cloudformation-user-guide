@@ -84,10 +84,10 @@ The following example uses an `ssm` dynamic reference to set the access control 
 #### YAML<a name="dynamic-references-ssm-example.yaml"></a>
 
 ```
-  MyS3Bucket:
-    Type: 'AWS::S3::Bucket'
-    Properties:
-      AccessControl: '{{resolve:ssm:S3AccessControl:2}}'
+  MyS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: '{{resolve:ssm:S3AccessControl:2}}'
 ```
 
 To specify a parameter stored in the Systems Manager Parameter Store, you must have access to call `[GetParameters](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetParameter.html)` for the specified parameter\. For more information, see [Controlling access to Systems Manager parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-access.html) in the *AWS Systems Manager User Guide*\.
@@ -151,12 +151,12 @@ The following example uses an `ssm-secure` dynamic reference to set the password
 #### YAML<a name="dynamic-references-ssm-secure-example.yaml"></a>
 
 ```
-  MyIAMUser:
-    Type: AWS::IAM::User
-    Properties:
-      UserName: 'MyUserName'
-      LoginProfile:
-        Password: '{{resolve:ssm-secure:IAMUserPassword:10}}'
+  MyIAMUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: 'MyUserName'
+      LoginProfile:
+        Password: '{{resolve:ssm-secure:IAMUserPassword:10}}'
 ```
 
 Additional considerations to note when using the `ssm-secure` dynamic reference pattern:
@@ -276,30 +276,20 @@ The following example uses the `secret-name` and `json-key` segments to retrieve
 
 Specifying the following segments would retrieve the `SecretString` for MySecret\.
 
-```
-  '{{resolve:secretsmanager:MySecret}}' or '{{resolve:secretsmanager:MySecret::::}}'
-```
+`'{{resolve:secretsmanager:MySecret}}'` or `'{{resolve:secretsmanager:MySecret::::}}'`
 
 Specifying the following segments would retrieve the `password` value for MySecret\.
 
-```
-  '{{resolve:secretsmanager:MySecret:SecretString:password}}'
-```
+`'{{resolve:secretsmanager:MySecret:SecretString:password}}'`
 
 Specifying the following segments would retrieve the `SecretString` for MySecret that is in another AWS account\. You must specify the complete secret ARN to access secrets in another AWS account\.
 
-```
-  '{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret-a1b2c3}}'
-```
+`'{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret-a1b2c3}}'`
 
 Specifying the following segments would retrieve the `password` value for MySecret that is in another AWS account\. You must specify the complete secret ARN to access secrets in another AWS account\.
 
-```
-  '{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret-a1b2c3:SecretString:password}}'
-```
+`'{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret-a1b2c3:SecretString:password}}'`
 
 Specifying the following segments would retrieve the `password` value for the `AWSPREVIOUS` version of MySecret\.
 
-```
-  '{{resolve:secretsmanager:MySecret:SecretString:password:AWSPREVIOUS}}'
-```
+`'{{resolve:secretsmanager:MySecret:SecretString:password:AWSPREVIOUS}}'`

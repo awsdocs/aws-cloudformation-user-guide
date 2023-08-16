@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile TrendmicroConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials"></a>
 
- The `TrendmicroConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Trend Micro\. 
+ The connector\-specific profile credentials required when using Trend Micro\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials-syntax"></a>
 

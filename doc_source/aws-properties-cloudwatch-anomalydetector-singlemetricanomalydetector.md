@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The metric dimensions to create the anomaly detection model for\.  
 *Required*: No  
 *Type*: List of [Dimension](aws-properties-cloudwatch-anomalydetector-dimension.md)  
-*Maximum*: `10`  
+*Maximum*: `30`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MetricName`  <a name="cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-metricname"></a>

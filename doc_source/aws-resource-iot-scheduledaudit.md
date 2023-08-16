@@ -94,13 +94,13 @@ Which checks are performed during the scheduled audit\. Checks must be enabled f
 
 ### Ref<a name="aws-resource-iot-scheduledaudit-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the scheduled audit name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the scheduled audit name\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-scheduledaudit-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-scheduledaudit-return-values-fn--getatt-fn--getatt"></a>
 
@@ -118,65 +118,37 @@ In this ScheduledAudit example, all audit checks are enabled, the frequency of t
 #### JSON<a name="aws-resource-iot-scheduledaudit--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon Web Services IoT ScheduledAudit Sample Template",
-  "Resources": {
-    "MyScheduledAudit": {
-      "Type": "AWS::IoT::ScheduledAudit",
-      "Properties": {
-        "ScheduledAuditName": "MyScheduledAudit",
-        "DayOfWeek" : "MON",
-        "Frequency" : "WEEKLY",
-        "TargetCheckNames": [
-           "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK",
-           "CA_CERTIFICATE_EXPIRING_CHECK",
-           "CA_CERTIFICATE_KEY_QUALITY_CHECK",
-           "CONFLICTING_CLIENT_IDS_CHECK",
-           "DEVICE_CERTIFICATE_EXPIRING_CHECK",
-           "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
-           "DEVICE_CERTIFICATE_SHARED_CHECK",
-           "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
-           "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
-           "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK",
-           "LOGGING_DISABLED_CHECK",
-           "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
-           "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
-           "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK" 
-        ]
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "Amazon
+            Web Services IoT ScheduledAudit Sample Template", "Resources": { "MyScheduledAudit": {
+            "Type": "AWS::IoT::ScheduledAudit", "Properties": { "ScheduledAuditName":
+            "MyScheduledAudit", "DayOfWeek" : "MON", "Frequency" : "WEEKLY", "TargetCheckNames": [
+            "AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK", "CA_CERTIFICATE_EXPIRING_CHECK",
+            "CA_CERTIFICATE_KEY_QUALITY_CHECK", "CONFLICTING_CLIENT_IDS_CHECK",
+            "DEVICE_CERTIFICATE_EXPIRING_CHECK", "DEVICE_CERTIFICATE_KEY_QUALITY_CHECK",
+            "DEVICE_CERTIFICATE_SHARED_CHECK", "IOT_POLICY_OVERLY_PERMISSIVE_CHECK",
+            "IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK",
+            "IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK", "LOGGING_DISABLED_CHECK",
+            "REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK",
+            "REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK",
+            "UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK" ] } } } }
 ```
 
 #### YAML<a name="aws-resource-iot-scheduledaudit--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Description: Amazon Web Services IoT ScheduledAudit Sample Template
-Resources:
-  MyScheduledAudit:
-    Type: AWS::IoT::ScheduledAudit
-    Properties:
-      ScheduledAuditName: MyScheduledAudit
-      DayOfWeek: 'MON'
-      Frequency: WEEKLY
-      TargetCheckNames:
-      - AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK
-      - CA_CERTIFICATE_EXPIRING_CHECK
-      - CA_CERTIFICATE_KEY_QUALITY_CHECK
-      - CONFLICTING_CLIENT_IDS_CHECK
-      - DEVICE_CERTIFICATE_EXPIRING_CHECK
-      - DEVICE_CERTIFICATE_KEY_QUALITY_CHECK
-      - DEVICE_CERTIFICATE_SHARED_CHECK
-      - IOT_POLICY_OVERLY_PERMISSIVE_CHECK
-      - IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK
-      - IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK
-      - LOGGING_DISABLED_CHECK
-      - REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK
-      - REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK
-      - UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK
+AWSTemplateFormatVersion: '2010-09-09' Description: Amazon Web
+            Services IoT ScheduledAudit Sample Template Resources: MyScheduledAudit: Type:
+            AWS::IoT::ScheduledAudit Properties: ScheduledAuditName: MyScheduledAudit DayOfWeek:
+            'MON' Frequency: WEEKLY TargetCheckNames: -
+            AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK - CA_CERTIFICATE_EXPIRING_CHECK -
+            CA_CERTIFICATE_KEY_QUALITY_CHECK - CONFLICTING_CLIENT_IDS_CHECK -
+            DEVICE_CERTIFICATE_EXPIRING_CHECK - DEVICE_CERTIFICATE_KEY_QUALITY_CHECK -
+            DEVICE_CERTIFICATE_SHARED_CHECK - IOT_POLICY_OVERLY_PERMISSIVE_CHECK -
+            IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK -
+            IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK - LOGGING_DISABLED_CHECK -
+            REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK -
+            REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK -
+            UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK
 ```
 
 ## See also<a name="aws-resource-iot-scheduledaudit--seealso"></a>

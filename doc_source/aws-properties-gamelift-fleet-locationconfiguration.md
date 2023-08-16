@@ -1,10 +1,6 @@
 # AWS::GameLift::Fleet LocationConfiguration<a name="aws-properties-gamelift-fleet-locationconfiguration"></a>
 
-A remote location where a multi\-location fleet can deploy EC2 instances for game hosting\. 
-
- **Related actions** 
-
- [CreateFleet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html) 
+A remote location where a multi\-location fleet can deploy game servers for game hosting\. 
 
 ## Syntax<a name="aws-properties-gamelift-fleet-locationconfiguration-syntax"></a>
 
@@ -35,7 +31,7 @@ An AWS Region code, such as `us-west-2`\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
-*Pattern*: `^[a-z]+(-([a-z]+|\d))*`  
+*Pattern*: `^[A-Za-z0-9\-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocationCapacity`  <a name="cfn-gamelift-fleet-locationconfiguration-locationcapacity"></a>

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot CustomPayload<a name="aws-properties-lex-bot-custompayload"></a>
 
-A custom response string that Amazon Lex sends to your application\. You define the content and structure of the string\.
+A custom response string that Amazon Lex sends to your application\. You define the content and structure the string\.
 
 ## Syntax<a name="aws-properties-lex-bot-custompayload-syntax"></a>
 
@@ -26,4 +26,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The string that is sent to your application\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

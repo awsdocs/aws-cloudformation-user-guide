@@ -35,7 +35,10 @@ The namespaced kernel parameter to set a `value` for\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-ecs-taskdefinition-systemcontrol-value"></a>
-The value for the namespaced kernel parameter that's specified in `namespace`\.  
+The namespaced kernel parameter to set a `value` for\.  
+Valid IPC namespace values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" | "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`, and `Sysctls` that start with `"fs.mqueue.*"`   
+Valid network namespace values: `Sysctls` that start with `"net.*"`   
+All of these values are supported by Fargate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -4,7 +4,7 @@ When you use AWS CloudFormation, you work with *templates* and *stacks*\. You cr
 
 **Topics**
 + [Templates](#cfn-concepts-templates)
-+ [Stacks](#w11339ab1b5c15b9)
++ [Stacks](#cfn-concepts-stacks)
 + [Change sets](#cfn-concepts-change-sets)
 
 ## Templates<a name="cfn-concepts-templates"></a>
@@ -17,47 +17,46 @@ For example, if you created a stack with the following template, CloudFormation 
 
 ```
 {
-  "AWSTemplateFormatVersion" : "2010-09-09",
-  "Description" : "A sample template",
-  "Resources" : {
-    "MyEC2Instance" : {
-      "Type" : "AWS::EC2::Instance",
-      "Properties" : {
-        "ImageId" : "ami-0ff8a91507f77f867",
-        "InstanceType" : "t2.micro",
-        "KeyName" : "testkey",
-        "BlockDeviceMappings" : [
-          {
-            "DeviceName" : "/dev/sdm",
-            "Ebs" : {
-              "VolumeType" : "io1",
-              "Iops" : 200,
-              "DeleteOnTermination" : false,
-              "VolumeSize" : 20
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "A sample template",
+    "Resources": {
+        "MyEC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-0ff8a91507f77f867",
+                "InstanceType": "t2.micro",
+                "KeyName": "testkey",
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/sdm",
+                        "Ebs": {
+                            "VolumeType": "io1",
+                            "Iops": 200,
+                            "DeleteOnTermination": false,
+                            "VolumeSize": 20
+                        }
+                    }
+                ]
             }
-          }
-        ]
-      }
+        }
     }
-  }
 }
 ```
 
 ### YAML<a name="t2-micro-example.yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: 2010-09-09
 Description: A sample template
 Resources:
   MyEC2Instance:
-    Type: "AWS::EC2::Instance"
-    Properties: 
-      ImageId: "ami-0ff8a91507f77f867"
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: ami-0ff8a91507f77f867
       InstanceType: t2.micro
       KeyName: testkey
       BlockDeviceMappings:
-        -
-          DeviceName: /dev/sdm
+        - DeviceName: /dev/sdm
           Ebs:
             VolumeType: io1
             Iops: 200
@@ -71,60 +70,61 @@ You can also specify multiple resources in a single template and configure these
 
 ```
 {
-    "AWSTemplateFormatVersion" : "2010-09-09",
-    "Description" : "A sample template",
-    "Resources" : {
-      "MyEC2Instance" : {
-        "Type" : "AWS::EC2::Instance",
-        "Properties" : {
-          "ImageId" : "ami-0ff8a91507f77f867",
-          "InstanceType" : "t2.micro",
-          "KeyName" : "testkey",
-          "BlockDeviceMappings" : [
-            {
-              "DeviceName" : "/dev/sdm",
-              "Ebs" : {
-                "VolumeType" : "io1",
-                "Iops" : 200,
-                "DeleteOnTermination" : false,
-                "VolumeSize" : 20
-              }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "A sample template",
+    "Resources": {
+        "MyEC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-0ff8a91507f77f867",
+                "InstanceType": "t2.micro",
+                "KeyName": "testkey",
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/sdm",
+                        "Ebs": {
+                            "VolumeType": "io1",
+                            "Iops": 200,
+                            "DeleteOnTermination": false,
+                            "VolumeSize": 20
+                        }
+                    }
+                ]
             }
-          ]
+        },
+        "MyEIP": {
+            "Type": "AWS::EC2::EIP",
+            "Properties": {
+                "InstanceId": {
+                    "Ref": "MyEC2Instance"
+                }
+            }
         }
-      },
-      "MyEIP" : {
-        "Type" : "AWS::EC2::EIP",
-        "Properties" : {
-          "InstanceId" : {"Ref": "MyEC2Instance"}
-        }
-      }
     }
-  }
+}
 ```
 
 ### YAML<a name="multiple-resources-single-template.yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: 2010-09-09
 Description: A sample template
 Resources:
   MyEC2Instance:
-    Type: "AWS::EC2::Instance"
-    Properties: 
-      ImageId: "ami-0ff8a91507f77f867"
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: ami-0ff8a91507f77f867
       InstanceType: t2.micro
       KeyName: testkey
       BlockDeviceMappings:
-        -
-          DeviceName: /dev/sdm
+        - DeviceName: /dev/sdm
           Ebs:
             VolumeType: io1
             Iops: 200
             DeleteOnTermination: false
             VolumeSize: 20
   MyEIP:
-    Type: AWS::EC2::EIP
+    Type: 'AWS::EC2::EIP'
     Properties:
       InstanceId: !Ref MyEC2Instance
 ```
@@ -137,7 +137,7 @@ For more information about declaring specific resources, see [AWS resource and p
 
 To start designing your own templates with AWS CloudFormation Designer, go to [https://console\.aws\.amazon\.com/cloudformation/designer](https://console.aws.amazon.com/cloudformation/designer)\.
 
-## Stacks<a name="w11339ab1b5c15b9"></a>
+## Stacks<a name="cfn-concepts-stacks"></a>
 
 When you use CloudFormation, you manage related resources as a single unit called a stack\. You create, update, and delete a collection of resources by creating, updating, and deleting stacks\. All the resources in a stack are defined by the stack's CloudFormation template\. Suppose you created a template that includes an Auto Scaling group, Elastic Load Balancing load balancer, and an Amazon Relational Database Service \(Amazon RDS\) database instance\. To create those resources, you create a stack by submitting the template that you created, and CloudFormation provisions all those resources for you\. You can work with stacks by using the CloudFormation [console](https://console.aws.amazon.com/cloudformation/), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation)\.
 

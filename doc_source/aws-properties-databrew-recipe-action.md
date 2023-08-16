@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Operation](#cfn-databrew-recipe-action-operation)" : String,
-  "[Parameters](#cfn-databrew-recipe-action-parameters)" : ParameterMap
+  "[Parameters](#cfn-databrew-recipe-action-parameters)" : RecipeParameters
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Operation](#cfn-databrew-recipe-action-operation): String
   [Parameters](#cfn-databrew-recipe-action-parameters): 
-    ParameterMap
+    RecipeParameters
 ```
 
 ## Properties<a name="aws-properties-databrew-recipe-action-properties"></a>
@@ -34,5 +34,5 @@ The name of a valid DataBrew transformation to be performed on the data\.
 `Parameters`  <a name="cfn-databrew-recipe-action-parameters"></a>
 Contextual parameters for the transformation\.  
 *Required*: No  
-*Type*: [ParameterMap](aws-properties-databrew-recipe-parametermap.md)  
+*Type*: [RecipeParameters](aws-properties-databrew-recipe-recipeparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

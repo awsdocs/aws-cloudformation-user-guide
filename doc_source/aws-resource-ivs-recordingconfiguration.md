@@ -14,6 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DestinationConfiguration](#cfn-ivs-recordingconfiguration-destinationconfiguration)" : DestinationConfiguration,
       "[Name](#cfn-ivs-recordingconfiguration-name)" : String,
+      "[RecordingReconnectWindowSeconds](#cfn-ivs-recordingconfiguration-recordingreconnectwindowseconds)" : Integer,
+      "[RenditionConfiguration](#cfn-ivs-recordingconfiguration-renditionconfiguration)" : RenditionConfiguration,
       "[Tags](#cfn-ivs-recordingconfiguration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[ThumbnailConfiguration](#cfn-ivs-recordingconfiguration-thumbnailconfiguration)" : ThumbnailConfiguration
     }
@@ -28,6 +30,9 @@ Properties:
   [DestinationConfiguration](#cfn-ivs-recordingconfiguration-destinationconfiguration): 
     DestinationConfiguration
   [Name](#cfn-ivs-recordingconfiguration-name): String
+  [RecordingReconnectWindowSeconds](#cfn-ivs-recordingconfiguration-recordingreconnectwindowseconds): Integer
+  [RenditionConfiguration](#cfn-ivs-recordingconfiguration-renditionconfiguration): 
+    RenditionConfiguration
   [Tags](#cfn-ivs-recordingconfiguration-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [ThumbnailConfiguration](#cfn-ivs-recordingconfiguration-thumbnailconfiguration): 
@@ -37,7 +42,7 @@ Properties:
 ## Properties<a name="aws-resource-ivs-recordingconfiguration-properties"></a>
 
 `DestinationConfiguration`  <a name="cfn-ivs-recordingconfiguration-destinationconfiguration"></a>
-A destination configuration contains information about where recorded video will be stored\. See the [ DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html) property type for more information\.  
+A destination configuration contains information about where recorded video will be stored\. See the [ DestinationConfiguration](aws-properties-ivs-recordingconfiguration-destinationconfiguration.md) property type for more information\.  
 *Required*: Yes  
 *Type*: [DestinationConfiguration](aws-properties-ivs-recordingconfiguration-destinationconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -48,7 +53,22 @@ Recording\-configuration name\. The value does not need to be unique\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9-_]*$`  
+*Pattern*: `[a-zA-Z0-9-_]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`RecordingReconnectWindowSeconds`  <a name="cfn-ivs-recordingconfiguration-recordingreconnectwindowseconds"></a>
+If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be considered a single broadcast and merged together\.  
+*Default*: `0`  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `300`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`RenditionConfiguration`  <a name="cfn-ivs-recordingconfiguration-renditionconfiguration"></a>
+A rendition configuration describes which renditions should be recorded for a stream\. See the [RenditionConfiguration](aws-properties-ivs-recordingconfiguration-renditionconfiguration.md) property type for more information\.  
+*Required*: No  
+*Type*: [RenditionConfiguration](aws-properties-ivs-recordingconfiguration-renditionconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ivs-recordingconfiguration-tags"></a>
@@ -59,7 +79,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThumbnailConfiguration`  <a name="cfn-ivs-recordingconfiguration-thumbnailconfiguration"></a>
-A thumbnail configuration enables/disables the recording of thumbnails for a live session and controls the interval at which thumbnails are generated for the live session\. See the [ThumbnailConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-thunbnailconfiguration.html) property type for more information\.  
+A thumbnail configuration enables/disables the recording of thumbnails for a live session and controls the interval at which thumbnails are generated for the live session\. See the [ThumbnailConfiguration](aws-properties-ivs-recordingconfiguration-thumbnailconfiguration.md) property type for more information\.  
 *Required*: No  
 *Type*: [ThumbnailConfiguration](aws-properties-ivs-recordingconfiguration-thumbnailconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -68,19 +88,19 @@ A thumbnail configuration enables/disables the recording of thumbnails for a liv
 
 ### Ref<a name="aws-resource-ivs-recordingconfiguration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the recording\-configuration ARN\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the recording\-configuration ARN\. For example:
 
  `{ "Ref": "myRecordingConfiguration" }` 
 
 For the Amazon IVS recording configuration `myRecordingConfiguration`, `Ref` returns the recording\-configuration ARN\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ivs-recordingconfiguration-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ivs-recordingconfiguration-return-values-fn--getatt-fn--getatt"></a>
 
@@ -120,7 +140,13 @@ The following examples specify an Amazon IVS Channel that records live\-channel 
         },
         "ThumbnailConfiguration": {
           "RecordingMode": "INTERVAL",
-          "TargetIntervalSeconds": 60
+            "TargetIntervalSeconds": 60,
+            "Storage": ["SEQUENTIAL", "LATEST"],
+          "Resolution": "HD"
+        },
+        "RenditionConfiguration": {
+          "RenditionSelection": "CUSTOM",
+          "Renditions": ["HD", "SD"]
         }
       }
     },
@@ -156,6 +182,15 @@ Resources:
      ThumbnailConfiguration:
        RecordingMode: INTERVAL
        TargetIntervalSeconds: 60
+       Resolution: HD
+       Storage:
+         - SEQUENTIAL
+         - LATEST
+     RenditionConfiguration:
+       RenditionSelection: CUSTOM
+       Renditions:
+         - HD
+         - SD
 
  Channel:
    Type: AWS::IVS::Channel

@@ -1,6 +1,6 @@
 # AWS::AppFlow::Flow SAPODataSourceProperties<a name="aws-properties-appflow-flow-sapodatasourceproperties"></a>
 
-<a name="aws-properties-appflow-flow-sapodatasourceproperties-description"></a>The `SAPODataSourceProperties` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::AppFlow::Flow](aws-resource-appflow-flow.md)\.
+ The properties that are applied when using SAPOData as a flow source\. 
 
 ## Syntax<a name="aws-properties-appflow-flow-sapodatasourceproperties-syntax"></a>
 
@@ -23,7 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appflow-flow-sapodatasourceproperties-properties"></a>
 
 `ObjectPath`  <a name="cfn-appflow-flow-sapodatasourceproperties-objectpath"></a>
-Not currently supported by AWS CloudFormation\.  
+ The object path specified in the SAPOData flow source\.   
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

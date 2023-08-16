@@ -42,24 +42,24 @@ Properties:
 ## Properties<a name="aws-resource-datasync-locationfsxwindows-properties"></a>
 
 `Domain`  <a name="cfn-datasync-locationfsxwindows-domain"></a>
-The name of the Windows domain that the FSx for Windows File Server belongs to\.  
+Specifies the name of the Windows domain that the FSx for Windows File Server belongs to\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `253`  
-*Pattern*: `^([A-Za-z0-9]+[A-Za-z0-9-.]*)*[A-Za-z0-9-]*[A-Za-z0-9]$`  
+*Pattern*: `^[A-Za-z0-9]((\.|-+)?[A-Za-z0-9]){0,252}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FsxFilesystemArn`  <a name="cfn-datasync-locationfsxwindows-fsxfilesystemarn"></a>
-The Amazon Resource Name \(ARN\) for the FSx for Windows File Server file system\.  
-*Required*: Yes  
+Specifies the Amazon Resource Name \(ARN\) for the FSx for Windows File Server file system\.  
+*Required*: No  
 *Type*: String  
 *Maximum*: `128`  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):fsx:[a-z\-0-9]*:[0-9]{12}:file-system/fs-.*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Password`  <a name="cfn-datasync-locationfsxwindows-password"></a>
-The password of the user who has the permissions to access files and folders in the FSx for Windows File Server file system\.  
-*Required*: Yes  
+Specifies the password of the user who has the permissions to access files and folders in the file system\.  
+*Required*: No  
 *Type*: String  
 *Maximum*: `104`  
 *Pattern*: `^.{0,104}$`  
@@ -74,7 +74,7 @@ The Amazon Resource Names \(ARNs\) of the security groups that are used to confi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subdirectory`  <a name="cfn-datasync-locationfsxwindows-subdirectory"></a>
-A subdirectory in the location's path\. This subdirectory in the Amazon FSx for Windows File Server file system is used to read data from the Amazon FSx for Windows File Server source location or write data to the FSx for Windows File Server destination\.  
+Specifies a mount path for your file system using forward slashes\. This is where DataSync reads or writes data \(depending on if this is a source or destination location\)\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `4096`  
@@ -82,7 +82,7 @@ A subdirectory in the location's path\. This subdirectory in the Amazon FSx for 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-datasync-locationfsxwindows-tags"></a>
-The key\-value pair that represents a tag that you want to add to the resource\. The value can be an empty string\. This value helps you manage, filter, and search for your resources\. We recommend that you create a name tag for your location\.  
+Specifies labels that help you categorize, filter, and search for your AWS resources\. We recommend creating at least a name tag for your location\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  

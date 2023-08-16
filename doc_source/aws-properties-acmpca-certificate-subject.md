@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CommonName](#cfn-acmpca-certificate-subject-commonname)" : String,
   "[Country](#cfn-acmpca-certificate-subject-country)" : String,
+  "[CustomAttributes](#cfn-acmpca-certificate-subject-customattributes)" : [ CustomAttribute, ... ],
   "[DistinguishedNameQualifier](#cfn-acmpca-certificate-subject-distinguishednamequalifier)" : String,
   "[GenerationQualifier](#cfn-acmpca-certificate-subject-generationqualifier)" : String,
   "[GivenName](#cfn-acmpca-certificate-subject-givenname)" : String,
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CommonName](#cfn-acmpca-certificate-subject-commonname): String
   [Country](#cfn-acmpca-certificate-subject-country): String
+  [CustomAttributes](#cfn-acmpca-certificate-subject-customattributes): 
+    - CustomAttribute
   [DistinguishedNameQualifier](#cfn-acmpca-certificate-subject-distinguishednamequalifier): String
   [GenerationQualifier](#cfn-acmpca-certificate-subject-generationqualifier): String
   [GivenName](#cfn-acmpca-certificate-subject-givenname): String
@@ -64,6 +67,15 @@ Two\-digit code that specifies the country in which the certificate subject loca
 *Minimum*: `2`  
 *Maximum*: `2`  
 *Pattern*: `[A-Za-z]{2}`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CustomAttributes`  <a name="cfn-acmpca-certificate-subject-customattributes"></a>
+  
+Contains a sequence of one or more X\.500 relative distinguished names \(RDNs\), each of which consists of an object identifier \(OID\) and a value\. For more information, see NIST’s definition of [Object Identifier \(OID\)](https://csrc.nist.gov/glossary/term/Object_Identifier)\.  
+Custom attributes cannot be used in combination with standard attributes\.
+*Required*: No  
+*Type*: List of [CustomAttribute](aws-properties-acmpca-certificate-customattribute.md)  
+*Maximum*: `30`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DistinguishedNameQualifier`  <a name="cfn-acmpca-certificate-subject-distinguishednamequalifier"></a>
@@ -108,7 +120,7 @@ The locality \(such as a city or town\) in which the certificate subject is loca
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Organization`  <a name="cfn-acmpca-certificate-subject-organization"></a>
-Legal name of the organization with which the certificate subject is affiliated\.  
+Legal name of the organization with which the certificate subject is affiliated\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

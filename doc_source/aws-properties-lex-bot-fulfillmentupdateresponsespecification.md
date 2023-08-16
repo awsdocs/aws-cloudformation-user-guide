@@ -1,6 +1,6 @@
 # AWS::Lex::Bot FulfillmentUpdateResponseSpecification<a name="aws-properties-lex-bot-fulfillmentupdateresponsespecification"></a>
 
-Provides information for updating the user on the progress of fulfilling an intent\.
+Provides settings for a message that is sent periodically to the user while a fulfillment Lambda function is running\.
 
 ## Syntax<a name="aws-properties-lex-bot-fulfillmentupdateresponsespecification-syntax"></a>
 
@@ -34,13 +34,16 @@ Determines whether the user can interrupt an update message while it is playing\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FrequencyInSeconds`  <a name="cfn-lex-bot-fulfillmentupdateresponsespecification-frequencyinseconds"></a>
-The frequency that a message is sent to the user\. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user\. If the fulfillment Lambda function returns before the first period ends, an update message is not played to the user\.  
+The frequency that a message is sent to the user\. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user\. If the fulfillment Lambda returns before the first period ends, an update message is not played to the user\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `900`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageGroups`  <a name="cfn-lex-bot-fulfillmentupdateresponsespecification-messagegroups"></a>
-One to 5 message groups that contain update messages\. Amazon Lex chooses one of the messages to play to the user\.  
+1 \- 5 message groups that contain update messages\. Amazon Lex chooses one of the messages to play to the user\.  
 *Required*: Yes  
 *Type*: List of [MessageGroup](aws-properties-lex-bot-messagegroup.md)  
+*Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

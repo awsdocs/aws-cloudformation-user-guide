@@ -36,7 +36,7 @@ Channel ARN for the stream\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^arn:aws:[is]vs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$`  
+*Pattern*: `arn:aws:[is]vs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ivs-streamkey-tags"></a>
@@ -50,19 +50,19 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-ivs-streamkey-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ARN\. For example:
 
  `{ "Ref": "myStreamKey" }` 
 
 For the Amazon IVS stream key `myStreamKey`, `Ref` returns the stream key ARN\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ivs-streamkey-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ivs-streamkey-return-values-fn--getatt-fn--getatt"></a>
 
@@ -95,7 +95,8 @@ The following examples specify an Amazon IVS channel and stream key\.
                          "Key": "MyKey",
                          "Value": "MyValue"
                      }
-                 ]
+                 ],
+                 "InsecureIngest": true
              }
          },
          "StreamKey": {
@@ -150,6 +151,7 @@ AWSTemplateFormatVersion: 2010-09-09
        Tags:
          - Key: MyKey
            Value: MyValue
+       InsecureIngest: true
    StreamKey:
      Type: AWS::IVS::StreamKey
      Properties:

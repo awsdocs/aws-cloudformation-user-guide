@@ -56,6 +56,7 @@ A description for the archive\.
 An event pattern to use to filter events sent to the archive\.  
 *Required*: No  
 *Type*: Json  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetentionDays`  <a name="cfn-events-archive-retentiondays"></a>
@@ -77,18 +78,15 @@ The ARN of the event bus that sends events to the archive\.
 
 ### Ref<a name="aws-resource-events-archive-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the archive name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the archive name\.
 
 ### Fn::GetAtt<a name="aws-resource-events-archive-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-events-archive-return-values-fn--getatt-fn--getatt"></a>
-
-`ArchiveName`  <a name="ArchiveName-fn::getatt"></a>
-The archive name\.
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the archive created\.

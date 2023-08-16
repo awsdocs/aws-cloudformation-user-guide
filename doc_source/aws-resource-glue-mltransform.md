@@ -58,6 +58,9 @@ Properties:
 A user\-defined, long\-form description text for the machine learning transform\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlueVersion`  <a name="cfn-glue-mltransform-glueversion"></a>
@@ -70,6 +73,7 @@ This value determines which version of AWS Glue this machine learning transform 
 A list of AWS Glue table definitions used by the transform\.  
 *Required*: Yes  
 *Type*: [InputRecordTables](aws-properties-glue-mltransform-inputrecordtables.md)  
+*Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxCapacity`  <a name="cfn-glue-mltransform-maxcapacity"></a>
@@ -96,6 +100,9 @@ A user\-defined name for the machine learning transform\. Names are required to 
 + If `Name` is not provided, a randomly generated name will be used instead\.
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NumberOfWorkers`  <a name="cfn-glue-mltransform-numberofworkers"></a>
@@ -123,6 +130,7 @@ The tags to use with this machine learning transform\. You may use tags to limit
 The timeout in minutes of the machine learning transform\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransformEncryption`  <a name="cfn-glue-mltransform-transformencryption"></a>
@@ -150,12 +158,13 @@ The type of predefined worker that is allocated when a task of this transform ru
 + `MaxCapacity` and `NumberOfWorkers` must both be at least 1\.
 *Required*: No  
 *Type*: String  
+*Allowed values*: `G.025X | G.1X | G.2X | G.4X | G.8X | Standard | Z.2X`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-glue-mltransform-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-mltransform-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the transform ID\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the transform ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

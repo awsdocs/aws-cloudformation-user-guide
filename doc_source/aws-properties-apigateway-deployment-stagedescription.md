@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-throttlingburstlimit)" : Integer,
   "[ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit)" : Double,
   "[TracingEnabled](#cfn-apigateway-deployment-stagedescription-tracingenabled)" : Boolean,
-  "[Variables](#cfn-apigateway-deployment-stagedescription-variables)" : {Key : Value, ...}
+  "[Variables](#cfn-apigateway-deployment-stagedescription-variables)" : {Key: Value, ...}
 }
 ```
 
@@ -58,7 +58,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit): Double
   [TracingEnabled](#cfn-apigateway-deployment-stagedescription-tracingenabled): Boolean
   [Variables](#cfn-apigateway-deployment-stagedescription-variables): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-apigateway-deployment-stagedescription-properties"></a>
@@ -70,13 +70,13 @@ Specifies settings for logging access in this stage\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CacheClusterEnabled`  <a name="cfn-apigateway-deployment-stagedescription-cacheclusterenabled"></a>
-Indicates whether cache clustering is enabled for the stage\.  
+Specifies whether a cache cluster is enabled for the stage\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CacheClusterSize`  <a name="cfn-apigateway-deployment-stagedescription-cacheclustersize"></a>
-The size of the stage's cache cluster\.  
+The size of the stage's cache cluster\. For more information, see [cacheClusterSize](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateStage.html#apigw-CreateStage-request-cacheClusterSize) in the *API Gateway API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -130,7 +130,7 @@ The version identifier of the API documentation snapshot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingLevel`  <a name="cfn-apigateway-deployment-stagedescription-logginglevel"></a>
-The logging level for this method\. For valid values, see the `loggingLevel` property of the [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the *Amazon API Gateway API Reference*\.  
+The logging level for this method\. For valid values, see the `loggingLevel` property of the [MethodSetting](https://docs.aws.amazon.com/apigateway/latest/api/API_MethodSetting.html) resource in the *Amazon API Gateway API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -179,5 +179,5 @@ A map that defines the stage variables\. Variable names must consist of alphanum
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-apigateway-deployment-stagedescription--seealso"></a>
-+ [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
++ [Stage](https://docs.aws.amazon.com/apigateway/latest/api/API_Stage.html) in the *Amazon API Gateway REST API Reference*
 

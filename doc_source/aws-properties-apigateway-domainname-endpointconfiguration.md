@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-domainname-endpointconfiguration-properties"></a>
 
 `Types`  <a name="cfn-apigateway-domainname-endpointconfiguration-types"></a>
-A list of endpoint types of an API or its custom domain name\. For an edge\-optimized API and its custom domain name, the endpoint type is `EDGE`\. For a regional API and its custom domain name, the endpoint type is `REGIONAL`\.  
+A list of endpoint types of an API \(RestApi\) or its custom domain name \(DomainName\)\. For an edge\-optimized API and its custom domain name, the endpoint type is `"EDGE"`\. For a regional API and its custom domain name, the endpoint type is `REGIONAL`\. For a private API, the endpoint type is `PRIVATE`\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-apigateway-domainname-endpointconfiguration--seealso"></a>
-+ [DomainName](https://docs.aws.amazon.com/apigateway/api-reference/resource/domain-name/) in the *Amazon API Gateway REST API Reference*
++ [DomainName](https://docs.aws.amazon.com/apigateway/latest/api/API_DomainName.html) in the *Amazon API Gateway REST API Reference*
 

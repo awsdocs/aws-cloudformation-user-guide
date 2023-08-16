@@ -1,6 +1,6 @@
 # AWS::AppFlow::Flow S3InputFormatConfig<a name="aws-properties-appflow-flow-s3inputformatconfig"></a>
 
-<a name="aws-properties-appflow-flow-s3inputformatconfig-description"></a>The `S3InputFormatConfig` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::AppFlow::Flow](aws-resource-appflow-flow.md)\.
+ When you use Amazon S3 as the source, the configuration format that you provide the flow input data\. 
 
 ## Syntax<a name="aws-properties-appflow-flow-s3inputformatconfig-syntax"></a>
 
@@ -23,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appflow-flow-s3inputformatconfig-properties"></a>
 
 `S3InputFileType`  <a name="cfn-appflow-flow-s3inputformatconfig-s3inputfiletype"></a>
-Not currently supported by AWS CloudFormation\.  
+ The file type that Amazon AppFlow gets from your Amazon S3 bucket\.   
 *Required*: No  
 *Type*: String  
+*Allowed values*: `CSV | JSON`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -3,7 +3,7 @@
 With the `DependsOn` attribute you can specify that the creation of a specific resource follows another\. When you add a `DependsOn` attribute to a resource, that resource is created only after the creation of the resource specified in the `DependsOn` attribute\.
 
 **Important**  
-Dependent stacks also have implicit dependencies in the form of target properties `!Ref` and `!GetAtt`\. For example, if the properties of resource A use a `!Ref` to resource B, the following rules apply:  
+Dependent stacks also have implicit dependencies in the form of target properties `!Ref`, `!GetAtt`, and `!Sub`\. For example, if the properties of resource A use a `!Ref` to resource B, the following rules apply:  
 Resource B is created before resource A\.
 Resource A is deleted before resource B\.
 Resource B is updated before resource A\.
@@ -235,7 +235,7 @@ EC2Host:
         Ref: PublicSubnet
 ```
 
-### Amazon ECS service and Auto Scaling group<a name="w11339ab1c31c23c15c17c19"></a>
+### Amazon ECS service and Auto Scaling group<a name="w4ab1c33c23c15c17c19"></a>
 
 When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to create container instances for an Amazon ECS cluster, the Amazon ECS service resource must have a dependency on the Auto Scaling group or Amazon EC2 instances, as shown in the following snippet\. That way the container instances are available and associated with the Amazon ECS cluster before CloudFormation creates the Amazon ECS service\.
 
@@ -293,7 +293,7 @@ service:
       Ref: taskdefinition
 ```
 
-### IAM role policy<a name="w11339ab1c31c23c15c17c21"></a>
+### IAM role policy<a name="w4ab1c33c23c15c17c21"></a>
 
 Resources that make additional calls to AWS require a service role, which permits a service to make calls to AWS on your behalf\. For example, the `AWS::CodeDeploy::DeploymentGroup` resource requires a service role so that CodeDeploy has permissions to deploy applications to your instances\. When you have a single template that defines a service role, the role's policy \(by using the `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy` resource\), and a resource that uses the role, add a dependency so that the resource depends on the role's policy\. This dependency ensures that the policy is available throughout the resource's lifecycle\.
 

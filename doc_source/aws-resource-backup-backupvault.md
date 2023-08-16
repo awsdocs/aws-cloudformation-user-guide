@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AccessPolicy](#cfn-backup-backupvault-accesspolicy)" : Json,
       "[BackupVaultName](#cfn-backup-backupvault-backupvaultname)" : String,
-      "[BackupVaultTags](#cfn-backup-backupvault-backupvaulttags)" : {Key : Value, ...},
+      "[BackupVaultTags](#cfn-backup-backupvault-backupvaulttags)" : {Key: Value, ...},
       "[EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn)" : String,
       "[LockConfiguration](#cfn-backup-backupvault-lockconfiguration)" : LockConfigurationType,
       "[Notifications](#cfn-backup-backupvault-notifications)" : NotificationObjectType
@@ -34,7 +34,7 @@ Properties:
   [AccessPolicy](#cfn-backup-backupvault-accesspolicy): Json
   [BackupVaultName](#cfn-backup-backupvault-backupvaultname): String
   [BackupVaultTags](#cfn-backup-backupvault-backupvaulttags): 
-    Key : Value
+    Key: Value
   [EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn): String
   [LockConfiguration](#cfn-backup-backupvault-lockconfiguration): 
     LockConfigurationType
@@ -86,13 +86,13 @@ The SNS event notifications for the specified backup vault\.
 
 ### Ref<a name="aws-resource-backup-backupvault-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns `BackupVaultName`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns `BackupVaultName`\.
 
 ### Fn::GetAtt<a name="aws-resource-backup-backupvault-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-backup-backupvault-return-values-fn--getatt-fn--getatt"></a>
 

@@ -73,6 +73,7 @@ An identifier that you want to associate with the instance\. Note the following:
 + If you specify an existing `InstanceId` and `ServiceId`, AWS Cloud Map updates the existing DNS records, if any\. If there's also an existing health check, AWS Cloud Map deletes the old health check and creates a new one\. 
 **Note**  
 The health check isn't deleted immediately, so it will still appear for a while if you submit a `ListHealthChecks` request, for example\.
+Do not include sensitive information in `InstanceId` if the namespace is discoverable by public DNS queries and any `Type` member of `DnsRecord` for the service contains `SRV` because the `InstanceId` is discoverable by public DNS queries\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
@@ -90,9 +91,9 @@ The ID of the service that you want to use for settings for the instance\.
 
 ### Ref<a name="aws-resource-servicediscovery-instance-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the value of `Id` for the instance, such as `i-abcd1234`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the value of `Id` for the instance, such as `i-abcd1234`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-servicediscovery-instance--examples"></a>
 

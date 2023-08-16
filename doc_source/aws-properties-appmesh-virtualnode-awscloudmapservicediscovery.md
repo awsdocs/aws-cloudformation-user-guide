@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Attributes](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-attributes)" : [ AwsCloudMapInstanceAttribute, ... ],
+  "[IpPreference](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-ippreference)" : String,
   "[NamespaceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename)" : String,
   "[ServiceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename)" : String
 }
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Attributes](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-attributes): 
     - AwsCloudMapInstanceAttribute
+  [IpPreference](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-ippreference): String
   [NamespaceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename): String
   [ServiceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename): String
 ```
@@ -36,8 +38,15 @@ A string map that contains attributes with values that you can use to filter ins
 *Type*: List of [AwsCloudMapInstanceAttribute](aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IpPreference`  <a name="cfn-appmesh-virtualnode-awscloudmapservicediscovery-ippreference"></a>
+The preferred IP version that this virtual node uses\. Setting the IP preference on the virtual node only overrides the IP preference set for the mesh on this specific node\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `IPv4_ONLY | IPv4_PREFERRED | IPv6_ONLY | IPv6_PREFERRED`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NamespaceName`  <a name="cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename"></a>
-The name of the AWS Cloud Map namespace to use\.  
+The HTTP name of the AWS Cloud Map namespace to use\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

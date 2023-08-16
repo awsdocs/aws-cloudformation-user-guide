@@ -1,6 +1,6 @@
 # AWS::Batch::JobDefinition Device<a name="aws-properties-batch-jobdefinition-device"></a>
 
-An object representing a container instance host device\.
+An object that represents a container instance host device\.
 
 **Note**  
 This object isn't applicable to jobs that are running on Fargate resources and shouldn't be provided\.

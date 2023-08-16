@@ -27,13 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-visibilityconfig-properties"></a>
 
 `CloudWatchMetricsEnabled`  <a name="cfn-wafv2-webacl-visibilityconfig-cloudwatchmetricsenabled"></a>
-A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch\. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics)\.  
+Indicates whether the associated resource sends metrics to Amazon CloudWatch\. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics) in the * AWS WAF Developer Guide*\.  
+For web ACLs, the metrics are for web requests that have the web ACL default action applied\. AWS WAF applies the default action to web requests that pass the inspection of all rules in the web ACL without being either allowed or blocked\. For more information, see [The web ACL default action](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html) in the * AWS WAF Developer Guide*\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-wafv2-webacl-visibilityconfig-metricname"></a>
-The descriptive name of the Amazon CloudWatch metric\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with length from one to 128 characters\. It can't contain whitespace or metric names reserved for AWS WAF, for example "All" and "Default\_Action\." You can't change a `MetricName` after you create a `VisibilityConfig`\.  
+A name of the Amazon CloudWatch metric dimension\. The name can contain only the characters: A\-Z, a\-z, 0\-9, \- \(hyphen\), and \_ \(underscore\)\. The name can be from one to 128 characters long\. It can't contain whitespace or metric names that are reserved for AWS WAF, for example `All` and `Default_Action`\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -42,7 +43,7 @@ The descriptive name of the Amazon CloudWatch metric\. The name can contain only
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SampledRequestsEnabled`  <a name="cfn-wafv2-webacl-visibilityconfig-sampledrequestsenabled"></a>
-A boolean indicating whether AWS WAF should store a sampling of the web requests that match the rules\. You can view the sampled requests through the AWS WAF console\.   
+Indicates whether AWS WAF should store a sampling of the web requests that match the rules\. You can view the sampled requests through the AWS WAF console\.   
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

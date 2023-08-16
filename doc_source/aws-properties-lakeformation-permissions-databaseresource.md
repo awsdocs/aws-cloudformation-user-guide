@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lakeformation-permissions-databaseresource-properties"></a>
 
 `CatalogId`  <a name="cfn-lakeformation-permissions-databaseresource-catalogid"></a>
-Not currently supported by AWS CloudFormation\.  
+The identifier for the Data Catalog\. By default, it is the account ID of the caller\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

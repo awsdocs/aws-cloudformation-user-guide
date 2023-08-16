@@ -102,9 +102,9 @@ Each `StatementId` must be unique\.
 
 ### Ref<a name="aws-resource-events-eventbuspolicy-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the event bus policy ID, such as `EventBusPolicy-1aBCdeFGh2J3`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the event bus policy ID, such as `EventBusPolicy-1aBCdeFGh2J3`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-events-eventbuspolicy--examples"></a>
 

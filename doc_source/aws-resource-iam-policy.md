@@ -1,12 +1,20 @@
 # AWS::IAM::Policy<a name="aws-resource-iam-policy"></a>
 
-Adds or updates an inline policy document that is embedded in the specified IAM user, group, or role\.
+Adds or updates an inline policy document that is embedded in the specified IAM group, user or role\.
 
 An IAM user can also have a managed policy attached to it\. For information about policies, see [Managed Policies and Inline Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the *IAM User Guide*\.
 
 The Groups, Roles, and Users properties are optional\. However, you must specify at least one of these properties\.
 
+For information about policy documents see [Creating IAM policies ](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html) in the *IAM User Guide*\.
+
 For information about limits on the number of inline policies that you can embed in an identity, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.
+
+**Important**  
+This resource does not support [ drift detection ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html)\. The following inline policy resource types support drift detection:  
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html)
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html)
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html)
 
 ## Syntax<a name="aws-resource-iam-policy-syntax"></a>
 
@@ -100,9 +108,16 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 
 ### Ref<a name="aws-resource-iam-policy-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When the logical ID of this resource is provided to the `Ref`intrinsic function, `Ref`returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-iam-policy-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-iam-policy-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-iam-policy--examples"></a>
 
@@ -204,5 +219,10 @@ Properties:
 ```
 
 ## See also<a name="aws-resource-iam-policy--seealso"></a>
-+  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [AWS::IAM::GroupPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html) 
++  [AWS::IAM::RolePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html) 
++  [AWS::IAM::UserPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html) 
++  [PutGroupPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutGroupPolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [PutRolePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutRolePolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [PutUserPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutUserPolicy.html) in the *AWS Identity and Access Management API Reference* 
 

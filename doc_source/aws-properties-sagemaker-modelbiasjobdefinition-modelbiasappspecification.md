@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ConfigUri](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-configuri)" : String,
-  "[Environment](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-environment)" : {Key : Value, ...},
+  "[Environment](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-environment)" : {Key: Value, ...},
   "[ImageUri](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-imageuri)" : String
 }
 ```
@@ -21,14 +21,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ConfigUri](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-configuri): String
   [Environment](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-environment): 
-    Key : Value
+    Key: Value
   [ImageUri](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-imageuri): String
 ```
 
 ## Properties<a name="aws-properties-sagemaker-modelbiasjobdefinition-modelbiasappspecification-properties"></a>
 
 `ConfigUri`  <a name="cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-configuri"></a>
-JSON formatted S3 file that defines bias parameters\. For more information on this JSON configuration file, see [Configure bias parameters](https://docs.aws.amazon.com/sagemaker/latest/json-bias-parameter-config.html)\.  
+JSON formatted S3 file that defines bias parameters\. For more information on this JSON configuration file, see [Configure bias parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-bias-parameters.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  

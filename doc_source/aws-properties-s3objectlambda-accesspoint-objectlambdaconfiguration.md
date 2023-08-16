@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration-properties"></a>
 
 `AllowedFeatures`  <a name="cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-allowedfeatures"></a>
-A container for allowed features\. Valid inputs are `GetObject-Range` and `GetObject-PartNumber`\.  
+A container for allowed features\. Valid inputs are `GetObject-Range`, `GetObject-PartNumber`, `HeadObject-Range`, and `HeadObject-PartNumber`\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

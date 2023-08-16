@@ -43,8 +43,8 @@ A destination for events after they have been sent to a function for processing\
 
 **Destinations**
 +  **Function** \- The Amazon Resource Name \(ARN\) of a Lambda function\.
-+  **Queue** \- The ARN of an SQS queue\.
-+  **Topic** \- The ARN of an SNS topic\.
++  **Queue** \- The ARN of a standard SQS queue\.
++  **Topic** \- The ARN of a standard SNS topic\.
 +  **Event Bus** \- The ARN of an Amazon EventBridge event bus\.
 *Required*: No  
 *Type*: [DestinationConfig](aws-properties-lambda-eventinvokeconfig-destinationconfig.md)  
@@ -91,7 +91,7 @@ The identifier of a version or alias\.
 
 ### Ref<a name="aws-resource-lambda-eventinvokeconfig-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a unique identifier for this resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a unique identifier for this resource\.
 
 ## Examples<a name="aws-resource-lambda-eventinvokeconfig--examples"></a>
 
@@ -120,7 +120,7 @@ Resources:
               };
               return response;
           };
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       TracingConfig:
         Mode: Active
   version:

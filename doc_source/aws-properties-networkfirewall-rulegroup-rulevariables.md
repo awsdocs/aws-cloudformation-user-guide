@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[IPSets](#cfn-networkfirewall-rulegroup-rulevariables-ipsets)" : {Key : Value, ...},
-  "[PortSets](#cfn-networkfirewall-rulegroup-rulevariables-portsets)" : {Key : Value, ...}
+  "[IPSets](#cfn-networkfirewall-rulegroup-rulevariables-ipsets)" : {Key: Value, ...},
+  "[PortSets](#cfn-networkfirewall-rulegroup-rulevariables-portsets)" : {Key: Value, ...}
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [IPSets](#cfn-networkfirewall-rulegroup-rulevariables-ipsets): 
-    Key : Value
+    Key: Value
   [PortSets](#cfn-networkfirewall-rulegroup-rulevariables-portsets): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-rulegroup-rulevariables-properties"></a>

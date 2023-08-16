@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-cloudfront-distribution-properties"></a>
 
 `DistributionConfig`  <a name="cfn-cloudfront-distribution-distributionconfig"></a>
-The current configuration information for the distribution\. Send a `GET` request to the `/CloudFront API version/distribution ID/config` resource\.  
+The distribution's configuration\.  
 *Required*: Yes  
 *Type*: [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -47,15 +47,15 @@ A complex type that contains zero or more `Tag` elements\.
 
 ### Ref<a name="aws-resource-cloudfront-distribution-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the CloudFront distribution ID\. For example: `E27LVI50CSW06W`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the CloudFront distribution ID\. For example: `E27LVI50CSW06W`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-cloudfront-distribution-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-cloudfront-distribution-return-values-fn--getatt-fn--getatt"></a>
 
@@ -63,7 +63,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The identifier for the distribution, for example `EDFDVBD632BHDS5`\.
 
 ## Examples<a name="aws-resource-cloudfront-distribution--examples"></a>
 

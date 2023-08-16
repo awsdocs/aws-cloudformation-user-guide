@@ -18,7 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-appflow-flow-description)" : String,
       "[DestinationFlowConfigList](#cfn-appflow-flow-destinationflowconfiglist)" : [ DestinationFlowConfig, ... ],
       "[FlowName](#cfn-appflow-flow-flowname)" : String,
+      "[FlowStatus](#cfn-appflow-flow-flowstatus)" : String,
       "[KMSArn](#cfn-appflow-flow-kmsarn)" : String,
+      "[MetadataCatalogConfig](#cfn-appflow-flow-metadatacatalogconfig)" : MetadataCatalogConfig,
       "[SourceFlowConfig](#cfn-appflow-flow-sourceflowconfig)" : SourceFlowConfig,
       "[Tags](#cfn-appflow-flow-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Tasks](#cfn-appflow-flow-tasks)" : [ Task, ... ],
@@ -36,7 +38,10 @@ Properties:
   [DestinationFlowConfigList](#cfn-appflow-flow-destinationflowconfiglist): 
     - DestinationFlowConfig
   [FlowName](#cfn-appflow-flow-flowname): String
+  [FlowStatus](#cfn-appflow-flow-flowstatus): String
   [KMSArn](#cfn-appflow-flow-kmsarn): String
+  [MetadataCatalogConfig](#cfn-appflow-flow-metadatacatalogconfig): 
+    MetadataCatalogConfig
   [SourceFlowConfig](#cfn-appflow-flow-sourceflowconfig): 
     SourceFlowConfig
   [Tags](#cfn-appflow-flow-tags): 
@@ -71,6 +76,17 @@ Properties:
 *Pattern*: `[a-zA-Z0-9][\w!@#.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`FlowStatus`  <a name="cfn-appflow-flow-flowstatus"></a>
+Sets the status of the flow\. You can specify one of the following values:    
+Active  
+The flow runs based on the trigger settings that you defined\. Active scheduled flows run as scheduled, and active event\-triggered flows run when the specified change event occurs\. However, active on\-demand flows run only when you manually start them by using Amazon AppFlow\.  
+Suspended  
+You can use this option to deactivate an active flow\. Scheduled and event\-triggered flows will cease to run until you reactive them\. This value only affects scheduled and event\-triggered flows\. It has no effect for on\-demand flows\.
+If you omit the FlowStatus parameter, Amazon AppFlow creates the flow with a default status\. The default status for on\-demand flows is Active\. The default status for scheduled and event\-triggered flows is Draft, which means they’re not yet active\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `KMSArn`  <a name="cfn-appflow-flow-kmsarn"></a>
  The ARN \(Amazon Resource Name\) of the Key Management Service \(KMS\) key you provide for encryption\. This is required if you do not want to use the Amazon AppFlow\-managed KMS key\. If you don't provide anything here, Amazon AppFlow uses the Amazon AppFlow\-managed KMS key\.   
 *Required*: No  
@@ -79,6 +95,12 @@ Properties:
 *Maximum*: `2048`  
 *Pattern*: `arn:aws:kms:.*:[0-9]+:.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MetadataCatalogConfig`  <a name="cfn-appflow-flow-metadatacatalogconfig"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [MetadataCatalogConfig](aws-properties-appflow-flow-metadatacatalogconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceFlowConfig`  <a name="cfn-appflow-flow-sourceflowconfig"></a>
  Contains information about the configuration of the source connector used in the flow\.   
@@ -108,17 +130,17 @@ Properties:
 
 ### Ref<a name="aws-resource-appflow-flow-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the flow name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the flow name\. For example:
 
             `{ "Ref": "myFlowName" }`        
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-appflow-flow-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-appflow-flow-return-values-fn--getatt-fn--getatt"></a>
 

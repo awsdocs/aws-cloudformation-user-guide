@@ -1,6 +1,6 @@
 # AWS::WAFv2::RuleGroup CustomResponseBody<a name="aws-properties-wafv2-rulegroup-customresponsebody"></a>
 
-The response body to use in a custom response to a web request\. This is referenced by key from the `CustomResponse` `CustomResponseBodyKey`\.
+The response body to use in a custom response to a web request\. This is referenced by key from [CustomResponse](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-blockaction.html#cfn-wafv2-webacl-blockaction-customresponse) `CustomResponseBodyKey`\.
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-customresponsebody-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Content`  <a name="cfn-wafv2-rulegroup-customresponsebody-content"></a>
 The payload of the custom response\.   
 You can use JSON escape strings in JSON content\. To do this, you must specify JSON content in the `ContentType` setting\.   
-For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
+For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the * AWS WAF Developer Guide*\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

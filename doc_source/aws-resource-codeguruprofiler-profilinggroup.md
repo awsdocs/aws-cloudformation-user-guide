@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeGuruProfiler::ProfilingGroup",
   "Properties" : {
-      "[AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions)" : Json,
+      "[AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions)" : AgentPermissions,
       "[AnomalyDetectionNotificationConfiguration](#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration)" : [ Channel, ... ],
       "[ComputePlatform](#cfn-codeguruprofiler-profilinggroup-computeplatform)" : String,
       "[ProfilingGroupName](#cfn-codeguruprofiler-profilinggroup-profilinggroupname)" : String,
@@ -26,7 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodeGuruProfiler::ProfilingGroup
 Properties: 
-  [AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions): Json
+  [AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions): 
+    AgentPermissions
   [AnomalyDetectionNotificationConfiguration](#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration): 
     - Channel
   [ComputePlatform](#cfn-codeguruprofiler-profilinggroup-computeplatform): String
@@ -42,7 +43,7 @@ The agent permissions attached to this profiling group\. This action group grant
 *Principals*: A list of string ARNs for the roles and users you want to grant access to the profiling group\. Wildcards are not supported in the ARNs\. You are allowed to provide up to 50 ARNs\. An empty list is not permitted\. This is a required key\.   
 For more information, see [Resource\-based policies in CodeGuru Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html) in the *Amazon CodeGuru Profiler user guide*, [ConfigureAgent](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html), and [PostAgentProfile](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html)\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [AgentPermissions](aws-properties-codeguruprofiler-profilinggroup-agentpermissions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AnomalyDetectionNotificationConfiguration`  <a name="cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration"></a>
@@ -73,15 +74,15 @@ The name of the profiling group\.
 
 ### Ref<a name="aws-resource-codeguruprofiler-profilinggroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the profiling group\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the profiling group\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-codeguruprofiler-profilinggroup-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-codeguruprofiler-profilinggroup-return-values-fn--getatt-fn--getatt"></a>
 

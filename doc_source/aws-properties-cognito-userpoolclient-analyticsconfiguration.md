@@ -1,9 +1,9 @@
 # AWS::Cognito::UserPoolClient AnalyticsConfiguration<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration"></a>
 
-The Amazon Pinpoint analytics configuration for collecting metrics for a user pool\.
+The Amazon Pinpoint analytics configuration necessary to collect metrics for a user pool\.
 
 **Note**  
-In Regions where Pinpoint isn't available, User Pools only supports sending events to Amazon Pinpoint projects in us\-east\-1\. In Regions where Pinpoint is available, User Pools will support sending events to Amazon Pinpoint projects within that same Region\. 
+In Regions where Amazon Pinpoint isn't available, user pools only support sending events to Amazon Pinpoint projects in us\-east\-1\. In Regions where Amazon Pinpoint is available, user pools support sending events to Amazon Pinpoint projects within that same Region\.
 
 ## Syntax<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-syntax"></a>
 
@@ -50,6 +50,8 @@ The application ID for an Amazon Pinpoint application\.
 The external ID\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `131072`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-rolearn"></a>
@@ -62,7 +64,7 @@ The ARN of an AWS Identity and Access Management role that authorizes Amazon Cog
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserDataShared`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-userdatashared"></a>
-If `UserDataShared` is `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics\.  
+If `UserDataShared` is `true`, Amazon Cognito includes user data in the events that it publishes to Amazon Pinpoint analytics\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

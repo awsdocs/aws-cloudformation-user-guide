@@ -1,8 +1,11 @@
 # AWS::Lex::Bot<a name="aws-resource-lex-bot"></a>
 
+**Note**  
+Amazon Lex V2 is the only supported version in AWS CloudFormation\.
+
 Specifies an Amazon Lex conversational bot\. 
 
-You must configure an intent based on the AMAZON\.FallbackIntent built\-in intent\. If you don't add one, creating the bot will fail\.
+You must configure an intent based on the `AMAZON.FallbackIntent` built\-in intent\. If you don't add one, creating the bot will fail\.
 
 ## Syntax<a name="aws-resource-lex-bot-syntax"></a>
 
@@ -18,11 +21,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BotFileS3Location](#cfn-lex-bot-botfiles3location)" : S3Location,
       "[BotLocales](#cfn-lex-bot-botlocales)" : [ BotLocale, ... ],
       "[BotTags](#cfn-lex-bot-bottags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[DataPrivacy](#cfn-lex-bot-dataprivacy)" : Json,
+      "[DataPrivacy](#cfn-lex-bot-dataprivacy)" : DataPrivacy,
       "[Description](#cfn-lex-bot-description)" : String,
       "[IdleSessionTTLInSeconds](#cfn-lex-bot-idlesessionttlinseconds)" : Integer,
       "[Name](#cfn-lex-bot-name)" : String,
       "[RoleArn](#cfn-lex-bot-rolearn)" : String,
+      "[TestBotAliasSettings](#cfn-lex-bot-testbotaliassettings)" : TestBotAliasSettings,
       "[TestBotAliasTags](#cfn-lex-bot-testbotaliastags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -40,11 +44,14 @@ Properties:
     - BotLocale
   [BotTags](#cfn-lex-bot-bottags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [DataPrivacy](#cfn-lex-bot-dataprivacy): Json
+  [DataPrivacy](#cfn-lex-bot-dataprivacy): 
+    DataPrivacy
   [Description](#cfn-lex-bot-description): String
   [IdleSessionTTLInSeconds](#cfn-lex-bot-idlesessionttlinseconds): Integer
   [Name](#cfn-lex-bot-name): String
   [RoleArn](#cfn-lex-bot-rolearn): String
+  [TestBotAliasSettings](#cfn-lex-bot-testbotaliassettings): 
+    TestBotAliasSettings
   [TestBotAliasTags](#cfn-lex-bot-testbotaliastags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -76,9 +83,9 @@ A list of tags to add to the bot\. You can only add tags when you import a bot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataPrivacy`  <a name="cfn-lex-bot-dataprivacy"></a>
-Provides information on additional privacy protections Amazon Lex should use with the bot's data\.  
+By default, data stored by Amazon Lex is encrypted\. The `DataPrivacy` structure provides settings that determine how Amazon Lex handles special cases of securing the data for your bot\.   
 *Required*: Yes  
-*Type*: Json  
+*Type*: [DataPrivacy](aws-properties-lex-bot-dataprivacy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-lex-bot-description"></a>
@@ -95,19 +102,29 @@ A user interaction remains active for the amount of time specified\. If no conve
 You can specify between 60 \(1 minute\) and 86,400 \(24 hours\) seconds\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `60`  
+*Maximum*: `86400`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-lex-bot-name"></a>
-The name of the field to filter the list of bots\.  
+The name of the bot locale\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `BotLocaleName`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-lex-bot-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role used to build and run the bot\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `32`  
+*Maximum*: `2048`  
+*Pattern*: `^arn:aws:iam::[0-9]{12}:role/.*$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TestBotAliasSettings`  <a name="cfn-lex-bot-testbotaliassettings"></a>
+Specifies configuration settings for the alias used to test the bot\. If the `TestBotAliasSettings` property is not specified, the settings are configured with default values\.  
+*Required*: No  
+*Type*: [TestBotAliasSettings](aws-properties-lex-bot-testbotaliassettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TestBotAliasTags`  <a name="cfn-lex-bot-testbotaliastags"></a>

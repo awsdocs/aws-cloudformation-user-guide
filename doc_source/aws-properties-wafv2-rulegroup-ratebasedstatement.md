@@ -1,16 +1,40 @@
 # AWS::WAFv2::RuleGroup RateBasedStatement<a name="aws-properties-wafv2-rulegroup-ratebasedstatement"></a>
 
-A rate\-based rule tracks the rate of requests for each originating IP address, and triggers the rule action when the rate exceeds a limit that you specify on the number of requests in any 5\-minute time span\. You can use this to put a temporary block on requests from an IP address that is sending excessive requests\.
+A rate\-based rule counts incoming requests and rate limits requests when they are coming at too fast a rate\. The rule categorizes requests according to your aggregation criteria, collects them into aggregation instances, and counts and rate limits the requests for each instance\. 
 
-When the rule action triggers, AWS WAF blocks additional requests from the IP address until the request rate falls below the limit\.
+You can specify individual aggregation keys, like IP address or HTTP method\. You can also specify aggregation key combinations, like IP address and HTTP method, or HTTP method, query argument, and cookie\. 
 
-You can optionally nest another statement inside the rate\-based statement, to narrow the scope of the rule so that it only counts requests that match the nested statement\. For example, based on recent requests that you have seen from an attacker, you might create a rate\-based rule with a nested AND rule statement that contains the following nested statements:
-+ An IP match statement with an IP set that specified the address 192\.0\.2\.44\.
-+ A string match statement that searches in the User\-Agent header for the string BadBot\.
+Each unique set of values for the aggregation keys that you specify is a separate aggregation instance, with the value from each key contributing to the aggregation instance definition\. 
 
-In this rate\-based rule, you also define a rate limit\. For this example, the rate limit is 1,000\. Requests that meet both of the conditions in the statements are counted\. If the count exceeds 1,000 requests per five minutes, the rule action triggers\. Requests that do not meet both conditions are not counted towards the rate limit and are not affected by this rule\.
+For example, assume the rule evaluates web requests with the following IP address and HTTP method values: 
++ IP address 10\.1\.1\.1, HTTP method POST
++ IP address 10\.1\.1\.1, HTTP method GET
++ IP address 127\.0\.0\.0, HTTP method POST
++ IP address 10\.1\.1\.1, HTTP method GET
 
-You cannot nest a `RateBasedStatement`, for example for use inside a `NotStatement` or `OrStatement`\. It can only be referenced as a top\-level statement within a rule\.
+The rule would create different aggregation instances according to your aggregation criteria, for example: 
++ If the aggregation criteria is just the IP address, then each individual address is an aggregation instance, and AWS WAF counts requests separately for each\. The aggregation instances and request counts for our example would be the following: 
+  + IP address 10\.1\.1\.1: count 3
+  + IP address 127\.0\.0\.0: count 1
++ If the aggregation criteria is HTTP method, then each individual HTTP method is an aggregation instance\. The aggregation instances and request counts for our example would be the following: 
+  + HTTP method POST: count 2
+  + HTTP method GET: count 2
++ If the aggregation criteria is IP address and HTTP method, then each IP address and each HTTP method would contribute to the combined aggregation instance\. The aggregation instances and request counts for our example would be the following: 
+  + IP address 10\.1\.1\.1, HTTP method POST: count 1
+  + IP address 10\.1\.1\.1, HTTP method GET: count 2
+  + IP address 127\.0\.0\.0, HTTP method POST: count 1
+
+For any n\-tuple of aggregation keys, each unique combination of values for the keys defines a separate aggregation instance, which AWS WAF counts and rate\-limits individually\. 
+
+You can optionally nest another statement inside the rate\-based statement, to narrow the scope of the rule so that it only counts and rate limits requests that match the nested statement\. You can use this nested scope\-down statement in conjunction with your aggregation key specifications or you can just count and rate limit all requests that match the scope\-down statement, without additional aggregation\. When you choose to just manage all requests that match a scope\-down statement, the aggregation instance is singular for the rule\. 
+
+You cannot nest a `RateBasedStatement` inside another statement, for example inside a `NotStatement` or `OrStatement`\. You can define a `RateBasedStatement` inside a web ACL and inside a rule group\. 
+
+For additional information about the options, see [Rate limiting web requests using rate\-based rules](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rate-based-rules.html) in the * AWS WAF Developer Guide*\. 
+
+If you only aggregate on the individual IP address or forwarded IP address, you can retrieve the list of IP addresses that AWS WAF is currently rate limiting for a rule through the API call `GetRateBasedStatementManagedKeys`\. This option is not available for other aggregation configurations\.
+
+ AWS WAF tracks and manages web requests separately for each instance of a rate\-based rule that you use\. For example, if you provide the same rate\-based rule settings in two web ACLs, each of the two rule statements represents a separate instance of the rate\-based rule and gets its own tracking and management by AWS WAF\. If you define a rate\-based rule inside a rule group, and then use that rule group in multiple places, each use creates a separate instance of the rate\-based rule that gets its own tracking and management by AWS WAF\. 
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-ratebasedstatement-syntax"></a>
 
@@ -21,6 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AggregateKeyType](#cfn-wafv2-rulegroup-ratebasedstatement-aggregatekeytype)" : String,
+  "[CustomKeys](#cfn-wafv2-rulegroup-ratebasedstatement-customkeys)" : [ RateBasedStatementCustomKey, ... ],
   "[ForwardedIPConfig](#cfn-wafv2-rulegroup-ratebasedstatement-forwardedipconfig)" : ForwardedIPConfiguration,
   "[Limit](#cfn-wafv2-rulegroup-ratebasedstatement-limit)" : Integer,
   "[ScopeDownStatement](#cfn-wafv2-rulegroup-ratebasedstatement-scopedownstatement)" : Statement
@@ -31,6 +56,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AggregateKeyType](#cfn-wafv2-rulegroup-ratebasedstatement-aggregatekeytype): String
+  [CustomKeys](#cfn-wafv2-rulegroup-ratebasedstatement-customkeys): 
+    - RateBasedStatementCustomKey
   [ForwardedIPConfig](#cfn-wafv2-rulegroup-ratebasedstatement-forwardedipconfig): 
     ForwardedIPConfiguration
   [Limit](#cfn-wafv2-rulegroup-ratebasedstatement-limit): Integer
@@ -41,30 +68,59 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-rulegroup-ratebasedstatement-properties"></a>
 
 `AggregateKeyType`  <a name="cfn-wafv2-rulegroup-ratebasedstatement-aggregatekeytype"></a>
-Setting that indicates how to aggregate the request counts\. The options are the following:  
-+ IP \- Aggregate the request counts on the IP address from the web request origin\.
-+ FORWARDED\_IP \- Aggregate the request counts on the first IP address in an HTTP header\. If you use this, configure the `ForwardedIPConfig`, to specify the header to use\. 
+Setting that indicates how to aggregate the request counts\.   
+Web requests that are missing any of the components specified in the aggregation keys are omitted from the rate\-based rule evaluation and handling\. 
++  `CONSTANT` \- Count and limit the requests that match the rate\-based rule's scope\-down statement\. With this option, the counted requests aren't further aggregated\. The scope\-down statement is the only specification used\. When the count of all requests that satisfy the scope\-down statement goes over the limit, AWS WAF applies the rule action to all requests that satisfy the scope\-down statement\. 
+
+  With this option, you must configure the `ScopeDownStatement` property\. 
++  `CUSTOM_KEYS` \- Aggregate the request counts using one or more web request components as the aggregate keys\.
+
+  With this option, you must specify the aggregate keys in the `CustomKeys` property\. 
+
+  To aggregate on only the IP address or only the forwarded IP address, don't use custom keys\. Instead, set the aggregate key type to `IP` or `FORWARDED_IP`\.
++  `FORWARDED_IP` \- Aggregate the request counts on the first IP address in an HTTP header\. 
+
+  With this option, you must specify the header to use in the `ForwardedIPConfig` property\. 
+
+  To aggregate on a combination of the forwarded IP address with other aggregate keys, use `CUSTOM_KEYS`\. 
++  `IP` \- Aggregate the request counts on the IP address from the web request origin\.
+
+  To aggregate on a combination of the IP address with other aggregate keys, use `CUSTOM_KEYS`\. 
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `FORWARDED_IP | IP`  
+*Allowed values*: `CONSTANT | CUSTOM_KEYS | FORWARDED_IP | IP`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomKeys`  <a name="cfn-wafv2-rulegroup-ratebasedstatement-customkeys"></a>
+Specifies the aggregate keys to use in a rate\-base rule\.   
+*Required*: No  
+*Type*: List of [RateBasedStatementCustomKey](aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.md)  
+*Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ForwardedIPConfig`  <a name="cfn-wafv2-rulegroup-ratebasedstatement-forwardedipconfig"></a>
 The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin\. Commonly, this is the X\-Forwarded\-For \(XFF\) header, but you can specify any header name\.   
 If the specified header isn't present in the request, AWS WAF doesn't apply the rule to the web request at all\.
-This is required if `AggregateKeyType` is set to `FORWARDED_IP`\.  
+This is required if you specify a forwarded IP in the rule's aggregate key settings\.   
 *Required*: No  
 *Type*: [ForwardedIPConfiguration](aws-properties-wafv2-rulegroup-forwardedipconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Limit`  <a name="cfn-wafv2-rulegroup-ratebasedstatement-limit"></a>
-The limit on requests per 5\-minute period for a single originating IP address\. If the statement includes a `ScopeDownStatement`, this limit is applied only to the requests that match the statement\.  
+The limit on requests per 5\-minute period for a single aggregation instance for the rate\-based rule\. If the rate\-based statement includes a `ScopeDownStatement`, this limit is applied only to the requests that match the statement\.  
+Examples:   
++ If you aggregate on just the IP address, this is the limit on requests from any single IP address\. 
++ If you aggregate on the HTTP method and the query argument name "city", then this is the limit on requests for any single method, city pair\. 
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScopeDownStatement`  <a name="cfn-wafv2-rulegroup-ratebasedstatement-scopedownstatement"></a>
-An optional nested statement that narrows the scope of the rate\-based statement to matching web requests\. This can be any nestable statement, and you can nest statements at any level below this scope\-down statement\.  
+An optional nested statement that narrows the scope of the web requests that are evaluated and managed by the rate\-based statement\. When you use a scope\-down statement, the rate\-based rule only tracks and rate limits requests that match the scope\-down statement\. You can use any nestable [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-notstatement.html#cfn-wafv2-webacl-notstatement-statement) in the scope\-down statement, and you can nest statements at any level, the same as you can for a rule statement\.   
 *Required*: No  
 *Type*: [Statement](aws-properties-wafv2-rulegroup-statement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-wafv2-rulegroup-ratebasedstatement--seealso"></a>
+
+For examples of rate\-based statements, see the `AWS::WAFv2::WebACL` `RateBasedStatement` property\.

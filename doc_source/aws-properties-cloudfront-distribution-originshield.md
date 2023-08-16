@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Enabled`  <a name="cfn-cloudfront-distribution-originshield-enabled"></a>
 A flag that specifies whether Origin Shield is enabled\.  
-When it’s enabled, CloudFront routes all requests through Origin Shield, which can help protect your origin\. When it’s disabled, CloudFront might send requests directly to your origin from multiple edge locations or regional edge caches\.  
+When it's enabled, CloudFront routes all requests through Origin Shield, which can help protect your origin\. When it's disabled, CloudFront might send requests directly to your origin from multiple edge locations or regional edge caches\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

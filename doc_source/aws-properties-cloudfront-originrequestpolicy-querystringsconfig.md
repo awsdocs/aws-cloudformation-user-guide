@@ -28,12 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `QueryStringBehavior`  <a name="cfn-cloudfront-originrequestpolicy-querystringsconfig-querystringbehavior"></a>
 Determines whether any URL query strings in viewer requests are included in requests that CloudFront sends to the origin\. Valid values are:  
-+  `none` – Query strings in viewer requests are not included in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any query strings that are listed in a `CachePolicy` *are* included in origin requests\.
-+  `whitelist` – The query strings in viewer requests that are listed in the `QueryStringNames` type are included in requests that CloudFront sends to the origin\.
++  `none` – No query strings in viewer requests are included in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any query strings that are listed in a `CachePolicy` *are* included in origin requests\.
++  `whitelist` – Only the query strings in viewer requests that are listed in the `QueryStringNames` type are included in requests that CloudFront sends to the origin\.
 +  `all` – All query strings in viewer requests are included in requests that CloudFront sends to the origin\.
++  `allExcept` – All query strings in viewer requests are included in requests that CloudFront sends to the origin, * **except** * for those listed in the `QueryStringNames` type, which are not included\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `all | none | whitelist`  
+*Allowed values*: `all | allExcept | none | whitelist`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QueryStrings`  <a name="cfn-cloudfront-originrequestpolicy-querystringsconfig-querystrings"></a>

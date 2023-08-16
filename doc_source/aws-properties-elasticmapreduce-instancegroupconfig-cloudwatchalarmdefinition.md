@@ -71,7 +71,7 @@ The namespace for the CloudWatch metric\. The default is `AWS/ElasticMapReduce`\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Period`  <a name="cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-period"></a>
-The period, in seconds, over which the statistic is applied\. EMR CloudWatch metrics are emitted every five minutes \(300 seconds\), so if an EMR CloudWatch metric is specified, specify `300`\.  
+The period, in seconds, over which the statistic is applied\. CloudWatch metrics for Amazon EMR are emitted every five minutes \(300 seconds\), so if you specify a CloudWatch metric, specify `300`\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

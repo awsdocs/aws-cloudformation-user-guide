@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-managedblockchain-member-networkframeworkconfiguration-properties"></a>
 
 `NetworkFabricConfiguration`  <a name="cfn-managedblockchain-member-networkframeworkconfiguration-networkfabricconfiguration"></a>
-Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain network using the Hyperledger Fabric framework\.  
+Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain network that is using the Hyperledger Fabric framework\.  
 *Required*: No  
 *Type*: [NetworkFabricConfiguration](aws-properties-managedblockchain-member-networkfabricconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

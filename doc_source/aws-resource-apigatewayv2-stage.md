@@ -127,9 +127,9 @@ The collection of tags\. Each tag element is associated with a given resource\.
 
 ### Ref<a name="aws-resource-apigatewayv2-stage-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the stage name, such as `MyTestStage`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the stage name, such as `MyTestStage`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigatewayv2-stage--examples"></a>
 

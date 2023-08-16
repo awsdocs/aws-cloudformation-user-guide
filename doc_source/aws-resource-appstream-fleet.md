@@ -28,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaxUserDurationInSeconds](#cfn-appstream-fleet-maxuserdurationinseconds)" : Integer,
       "[Name](#cfn-appstream-fleet-name)" : String,
       "[Platform](#cfn-appstream-fleet-platform)" : String,
+      "[SessionScriptS3Location](#cfn-appstream-fleet-sessionscripts3location)" : S3Location,
       "[StreamView](#cfn-appstream-fleet-streamview)" : String,
       "[Tags](#cfn-appstream-fleet-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UsbDeviceFilterStrings](#cfn-appstream-fleet-usbdevicefilterstrings)" : [ String, ... ],
@@ -59,6 +60,8 @@ Properties:
   [MaxUserDurationInSeconds](#cfn-appstream-fleet-maxuserdurationinseconds): Integer
   [Name](#cfn-appstream-fleet-name): String
   [Platform](#cfn-appstream-fleet-platform): String
+  [SessionScriptS3Location](#cfn-appstream-fleet-sessionscripts3location): 
+    S3Location
   [StreamView](#cfn-appstream-fleet-streamview): String
   [Tags](#cfn-appstream-fleet-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -149,7 +152,7 @@ The ARN of the public, private, or shared image to use\.
 The name of the image used to create the fleet\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
+*Pattern*: `^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,100}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-appstream-fleet-instancetype"></a>
@@ -203,7 +206,7 @@ The maximum number of concurrent sessions that can be run on an Elastic fleet\. 
 
 `MaxUserDurationInSeconds`  <a name="cfn-appstream-fleet-maxuserdurationinseconds"></a>
 The maximum amount of time that a streaming session can remain active, in seconds\. If users are still connected to a streaming instance five minutes before this limit is reached, they are prompted to save any open documents before being disconnected\. After this time elapses, the instance is terminated and replaced by a new instance\.  
-Specify a value between 600 and 360000\.  
+Specify a value between 600 and 432000\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -221,6 +224,12 @@ The platform of the fleet\. Platform is a required setting for Elastic fleets, a
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AMAZON_LINUX2 | WINDOWS | WINDOWS_SERVER_2016 | WINDOWS_SERVER_2019`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SessionScriptS3Location`  <a name="cfn-appstream-fleet-sessionscripts3location"></a>
+The S3 location of the session scripts configuration zip file\. This only applies to Elastic fleets\.  
+*Required*: No  
+*Type*: [S3Location](aws-properties-appstream-fleet-s3location.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamView`  <a name="cfn-appstream-fleet-streamview"></a>

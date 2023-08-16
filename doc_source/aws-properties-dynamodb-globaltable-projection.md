@@ -27,11 +27,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `NonKeyAttributes`  <a name="cfn-dynamodb-globaltable-projection-nonkeyattributes"></a>
 Represents the non\-key attribute names which will be projected into the index\.  
-For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the local secondary indexes, must not exceed 20\. If you project the same attribute into two different indexes, this counts as two distinct attributes when determining the total\.  
+For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the local secondary indexes, must not exceed 100\. If you project the same attribute into two different indexes, this counts as two distinct attributes when determining the total\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `20`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Updates are not supported\.
 
 `ProjectionType`  <a name="cfn-dynamodb-globaltable-projection-projectiontype"></a>
 The set of attributes that are projected into the index:  
@@ -40,5 +39,4 @@ The set of attributes that are projected into the index:
 +  `ALL` \- All of the table attributes are projected into the index\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `ALL | INCLUDE | KEYS_ONLY`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

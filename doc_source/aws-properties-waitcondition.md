@@ -49,8 +49,8 @@ Updates aren't supported\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Handle`  <a name="cfn-waitcondition-handle"></a>
-A reference to the wait condition handle used to signal this wait condition\. Use the `Ref` intrinsic function to specify an [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) resource\.  
-Anytime you add a WaitCondition resource during a stack update, you must associate the wait condition with a new WaitConditionHandle resource\. Don't reuse an old wait condition handle that has already been defined in the template\. If you reuse a wait condition handle, the wait condition might evaluate old signals from a previous create or update stack command\.  
+A reference to the wait condition handle used to signal this wait condition\. Use the `Ref` intrinsic function to specify an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) resource\.  
+Anytime you add a `WaitCondition` resource during a stack update, you must associate the wait condition with a new WaitConditionHandle resource\. Don't reuse an old wait condition handle that has already been defined in the template\. If you reuse a wait condition handle, the wait condition might evaluate old signals from a previous create or update stack command\.  
 Updates aren't supported\.  
 *Required*: No  
 *Type*: String  
@@ -67,15 +67,15 @@ Updates aren't supported\.
 
 ### Ref<a name="aws-properties-waitcondition-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-properties-waitcondition-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-properties-waitcondition-return-values-fn--getatt-fn--getatt"></a>
 

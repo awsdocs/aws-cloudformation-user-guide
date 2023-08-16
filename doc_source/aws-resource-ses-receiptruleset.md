@@ -41,9 +41,9 @@ The name of the receipt rule set to reorder\.
 
 ### Ref<a name="aws-resource-ses-receiptruleset-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ses-receiptruleset--examples"></a>
 
@@ -58,7 +58,7 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Amazon SES ReceiptRuleSet Sample Template",
+    "Description": "AWS SES ReceiptRuleSet Sample Template",
     "Parameters": {
         "ReceiptRuleSetName": {
             "Type": "String"
@@ -81,7 +81,7 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Amazon SES ReceiptRuleSet Sample Template
+Description: AWS SES ReceiptRuleSet Sample Template
 Parameters:
   ReceiptRuleSetName:
     Type: String

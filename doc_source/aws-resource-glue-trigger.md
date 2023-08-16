@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Actions](#cfn-glue-trigger-actions)" : [ Action, ... ],
       "[Description](#cfn-glue-trigger-description)" : String,
+      "[EventBatchingCondition](#cfn-glue-trigger-eventbatchingcondition)" : EventBatchingCondition,
       "[Name](#cfn-glue-trigger-name)" : String,
       "[Predicate](#cfn-glue-trigger-predicate)" : Predicate,
       "[Schedule](#cfn-glue-trigger-schedule)" : String,
@@ -33,6 +34,8 @@ Properties:
   [Actions](#cfn-glue-trigger-actions): 
     - Action
   [Description](#cfn-glue-trigger-description): String
+  [EventBatchingCondition](#cfn-glue-trigger-eventbatchingcondition): 
+    EventBatchingCondition
   [Name](#cfn-glue-trigger-name): String
   [Predicate](#cfn-glue-trigger-predicate): 
     Predicate
@@ -55,12 +58,24 @@ The actions initiated by this trigger\.
 A description of this trigger\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EventBatchingCondition`  <a name="cfn-glue-trigger-eventbatchingcondition"></a>
+Batch condition that must be met \(specified number of events received or batch time window expired\) before EventBridge event trigger fires\.  
+*Required*: No  
+*Type*: [EventBatchingCondition](aws-properties-glue-trigger-eventbatchingcondition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-trigger-name"></a>
 The name of the trigger\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Predicate`  <a name="cfn-glue-trigger-predicate"></a>
@@ -91,7 +106,8 @@ The tags to use with this trigger\.
 The type of trigger that this is\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Allowed values*: `CONDITIONAL | EVENT | ON_DEMAND | SCHEDULED`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WorkflowName`  <a name="cfn-glue-trigger-workflowname"></a>
 The name of the workflow associated with the trigger\.  
@@ -103,9 +119,9 @@ The name of the workflow associated with the trigger\.
 
 ### Ref<a name="aws-resource-glue-trigger-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the trigger name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the trigger name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-glue-trigger--examples"></a>
 

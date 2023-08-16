@@ -32,6 +32,7 @@ Determines if tests should run after building the image\. Image Builder defaults
 
 `TimeoutMinutes`  <a name="cfn-imagebuilder-image-imagetestsconfiguration-timeoutminutes"></a>
 The maximum time in minutes that tests are permitted to run\.  
+The timeoutMinutes attribute is not currently active\. This value is ignored\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `60`  

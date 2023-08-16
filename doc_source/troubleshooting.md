@@ -13,7 +13,7 @@ For general questions about CloudFormation, see the [AWS CloudFormation FAQs](ht
 
 If AWS CloudFormation fails to create, update, or delete your stack, you can view error messages or logs to help you learn more about the issue\. The following tasks describe general methods for troubleshooting a CloudFormation issue\. For information about specific errors and solutions, see the [Troubleshooting errors](#troubleshooting-errors) section\.
 + Use the [CloudFormation console](https://console.aws.amazon.com/cloudformation/) to view the status of your stack\. In the console, you can view a list of stack events while your stack is being created, updated, or deleted\. From this list, find the failure event and then view the status reason for that event\. The status reason might contain an error message from AWS CloudFormation or from a particular service that can help you troubleshoot your problem\. For more information about viewing stack events, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\.
-+ For Amazon EC2 issues, view the cloud\-init and cfn logs\. These logs are published on the Amazon EC2 instance in the `/var/log/` directory\. These logs capture processes and command outputs while AWS CloudFormation is setting up your instance\. For Windows, view the EC2Configure service and cfn logs in `%ProgramFiles%\Amazon\EC2ConfigService` and `C:\cfn\log`\.
++ For Amazon EC2 issues, view the cloud\-init and cfn logs\. These logs are published on the Amazon EC2 instance in the `/var/log/` directory\. These logs capture processes and command outputs while AWS CloudFormation is setting up your instance\. For Windows, view the EC2Configure service in `%ProgramFiles%\Amazon\EC2ConfigService`, EC2 Launch in `%ProgramData%\Amazon\EC2-Windows\Launch\Logs`, EC2 Launch v2 in `%ProgramData%\Amazon\EC2Launch\log`, and cfn logs in `C:\cfn\log`\.
 
   You can also configure your AWS CloudFormation template so that the logs are published to Amazon CloudWatch, which displays logs in the AWS Management Console so you don't have to connect to your Amazon EC2 instance\. For more information, see [View CloudFormation logs in the console](https://aws.amazon.com/blogs/devops/view-cloudformation-logs-in-the-console/) in the Application Management Blog\.
 
@@ -27,7 +27,7 @@ When you come across the following errors with your AWS CloudFormation stack, yo
 + [Error parsing parameter when passing a list](#troubleshooting-errors-error-parsing-parameter-when-passing-a-list)
 + [Insufficient IAM permissions](#troubleshooting-errors-insufficient-iam-permissions)
 + [Invalid value or unsupported resource property](#troubleshooting-errors-invalid-value-or-unsupported-resource-property)
-+ [Limit exceeded](#troubleshooting-errors-limit-exceeded)
++ [Quota exceeded](#troubleshooting-errors-limit-exceeded)
 + [Nested stacks are stuck in `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`, `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`, or `UPDATE_ROLLBACK_IN_PROGRESS`](#troubleshooting-errors-nested-stacks-are-stuck)
 + [No updates to perform](#troubleshooting-errors-no-updates-to-perform)
 + [Resource failed to stabilize during a create, update, or delete stack operation](#troubleshooting-resource-did-not-stabilize)
@@ -73,13 +73,13 @@ When you create or update an AWS CloudFormation stack, your stack can fail due t
 
 For resource property names and values, update your template to use valid names and values\. For a list of all the resources and their property names, see [AWS resource and property types reference](aws-template-resource-type-ref.md)\.
 
-### Limit exceeded<a name="troubleshooting-errors-limit-exceeded"></a>
+### Quota exceeded<a name="troubleshooting-errors-limit-exceeded"></a>
 
-Verify that you didn't reach a resource limit\. For example, the default maximum number of Amazon EC2 instances that you can launch is 20\. If try to create more Amazon EC2 instances than your account limit, the instance creation fails and you receive the error `Status=start_failed`\. To view the default AWS limits by service, see [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
+Verify that you didn't reach a resource quota\. For example, the default maximum number of Amazon EC2 On\-Demand instances that you can launch is 5\. If try to create more Amazon EC2 On\-Demand instances than your account quota, the instance creation fails and you receive the error `Status=start_failed`\. To view the default AWS quotas by service, see [AWS service quotas](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
 
-For AWS CloudFormation limits and tweaking strategies, see [AWS CloudFormation quotas](cloudformation-limits.md)\.
+For AWS CloudFormation quotas and tweaking strategies, see [AWS CloudFormation quotas](cloudformation-limits.md)\.
 
-Also, during an update, if a resource is replaced, AWS CloudFormation creates new resource before it deletes the old one\. This replacement might put your account over the resource limit, which would cause your update to fail\. You can delete excess resources or request a [limit increase](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\.
+Also, during an update, if a resource is replaced, AWS CloudFormation creates new resource before it deletes the old one\. This replacement might put your account over the resource quota, which would cause your update to fail\. You can delete excess resources or request a [quota increase](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\.
 
 ### Nested stacks are stuck in `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`, `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`, or `UPDATE_ROLLBACK_IN_PROGRESS`<a name="troubleshooting-errors-nested-stacks-are-stuck"></a>
 
@@ -135,12 +135,12 @@ Invalid security token
 AWS CloudFormation requires a new set of credentials\. No change is required\. Continue rolling back the update, which refreshes the credentials\.
 +   
 Limitation error  
-Delete resources that you don't need or request a [quota increase](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html), and then continue rolling back the update\. For example, if your account limit for the number of EC2 instances is 20 and the update rollback exceeds that limit, it will fail\.
+Delete resources that you don't need or request a [quota increase](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html), and then continue rolling back the update\. For example, if your account quota for the number of EC2 On\-Demand instances is 5 and the update rollback exceeds that quota, it will fail\.
 +   
 Resource didn't stabilize  
 A resource didn't respond because the operation might have exceeded the AWS CloudFormation timeout period or an AWS service might have been interrupted\. No change is required\. After the resource operation is complete or the AWS service is back in operation, continue rolling back the update\.
 
-To continue rolling back an update, you can use the AWS CloudFormation console or AWS command line interface \(AWS CLI\)\. For more information, see [Continue rolling back an update](using-cfn-updating-stacks-continueupdaterollback.md)\.
+To continue rolling back an update, you can use the AWS CloudFormation console or AWS command line interface \(AWS CLI\)\. For more information, see [Continue rolling back an updateTo continue rolling back an update \(console\)To continue rolling back an update \(AWS CLI\)](using-cfn-updating-stacks-continueupdaterollback.md)\.
 
 If none of these solutions work, you can skip the resources that AWS CloudFormation can't successfully roll back\. For more information, see the `ResourcesToSkip` parameter for the [ContinueUpdateRollback](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ContinueUpdateRollback.html) operation in the *AWS CloudFormation API Reference*\. AWS CloudFormation sets the status of the specified resources to `UPDATE_COMPLETE` and continues to roll back the stack\. After the rollback is complete, the state of the skipped resources will be inconsistent with the state of the resources in the stack template\. Before you perform another stack update, you must modify the resources or update the stack to be consistent with each other\. If you don't, subsequent stack updates might fail and make your stack unrecoverable\.
 

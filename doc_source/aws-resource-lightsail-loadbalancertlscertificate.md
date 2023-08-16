@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CertificateAlternativeNames](#cfn-lightsail-loadbalancertlscertificate-certificatealternativenames)" : [ String, ... ],
       "[CertificateDomainName](#cfn-lightsail-loadbalancertlscertificate-certificatedomainname)" : String,
       "[CertificateName](#cfn-lightsail-loadbalancertlscertificate-certificatename)" : String,
+      "[HttpsRedirectionEnabled](#cfn-lightsail-loadbalancertlscertificate-httpsredirectionenabled)" : Boolean,
       "[IsAttached](#cfn-lightsail-loadbalancertlscertificate-isattached)" : Boolean,
       "[LoadBalancerName](#cfn-lightsail-loadbalancertlscertificate-loadbalancername)" : String
     }
@@ -30,6 +31,7 @@ Properties:
     - String
   [CertificateDomainName](#cfn-lightsail-loadbalancertlscertificate-certificatedomainname): String
   [CertificateName](#cfn-lightsail-loadbalancertlscertificate-certificatename): String
+  [HttpsRedirectionEnabled](#cfn-lightsail-loadbalancertlscertificate-httpsredirectionenabled): Boolean
   [IsAttached](#cfn-lightsail-loadbalancertlscertificate-isattached): Boolean
   [LoadBalancerName](#cfn-lightsail-loadbalancertlscertificate-loadbalancername): String
 ```
@@ -55,6 +57,12 @@ The name of the SSL/TLS certificate\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`HttpsRedirectionEnabled`  <a name="cfn-lightsail-loadbalancertlscertificate-httpsredirectionenabled"></a>
+A Boolean value indicating whether HTTPS redirection is enabled for the load balancer that the TLS certificate is attached to\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IsAttached`  <a name="cfn-lightsail-loadbalancertlscertificate-isattached"></a>
 A Boolean value indicating whether the SSL/TLS certificate is attached to a Lightsail load balancer\.  
 *Required*: No  
@@ -72,13 +80,13 @@ The name of the load balancer that the SSL/TLS certificate is attached to\.
 
 ### Ref<a name="aws-resource-lightsail-loadbalancertlscertificate-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a unique identifier for this resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a unique identifier for this resource\.
 
 ### Fn::GetAtt<a name="aws-resource-lightsail-loadbalancertlscertificate-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-lightsail-loadbalancertlscertificate-return-values-fn--getatt-fn--getatt"></a>
 
@@ -102,3 +110,7 @@ After a certificate is attached to a load balancer, it cannot be detached\. It c
 *Maximum attached certificates*
 
 Don't attach more than one certificate to a load balancer\. If you attach multiple certificates to a load balancer, the behavior is unpredictable, and any one of the certificates might be in effect\. This will cause the stack to drift because only one of the certificates is attached to the load balancer, but the template shows multiple\.
+
+*Configuring HTTPS redirection*
+
+The `HttpsRedirectionEnabled` parameter can only be set on a certificate that is in a valid state and is also attached to a load balancer\.

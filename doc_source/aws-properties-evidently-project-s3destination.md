@@ -34,4 +34,7 @@ The name of the bucket in which Evidently stores evaluation events\.
 The bucket prefix in which Evidently stores evaluation events\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Pattern*: `[-a-zA-Z0-9!_.*'()/]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

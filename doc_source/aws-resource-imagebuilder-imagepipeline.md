@@ -17,12 +17,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn)" : String,
       "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled)" : Boolean,
       "[ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn)" : String,
+      "[ImageScanningConfiguration](#cfn-imagebuilder-imagepipeline-imagescanningconfiguration)" : ImageScanningConfiguration,
       "[ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration)" : ImageTestsConfiguration,
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn)" : String,
       "[Name](#cfn-imagebuilder-imagepipeline-name)" : String,
       "[Schedule](#cfn-imagebuilder-imagepipeline-schedule)" : Schedule,
       "[Status](#cfn-imagebuilder-imagepipeline-status)" : String,
-      "[Tags](#cfn-imagebuilder-imagepipeline-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-imagebuilder-imagepipeline-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -37,6 +38,8 @@ Properties:
   [DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn): String
   [EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled): Boolean
   [ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn): String
+  [ImageScanningConfiguration](#cfn-imagebuilder-imagepipeline-imagescanningconfiguration): 
+    ImageScanningConfiguration
   [ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration): 
     ImageTestsConfiguration
   [InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn): String
@@ -45,7 +48,7 @@ Properties:
     Schedule
   [Status](#cfn-imagebuilder-imagepipeline-status): String
   [Tags](#cfn-imagebuilder-imagepipeline-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-imagebuilder-imagepipeline-properties"></a>
@@ -71,7 +74,7 @@ The Amazon Resource Name \(ARN\) of the distribution configuration associated wi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnhancedImageMetadataEnabled`  <a name="cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled"></a>
- Collects additional information about the image being created, including the operating system \(OS\) version and package list\. This information is used to enhance the overall experience of using EC2 Image Builder\. Enabled by default\.  
+Collects additional information about the image being created, including the operating system \(OS\) version and package list\. This information is used to enhance the overall experience of using EC2 Image Builder\. Enabled by default\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -80,6 +83,12 @@ The Amazon Resource Name \(ARN\) of the distribution configuration associated wi
 The Amazon Resource Name \(ARN\) of the image recipe associated with this image pipeline\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ImageScanningConfiguration`  <a name="cfn-imagebuilder-imagepipeline-imagescanningconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ImageScanningConfiguration](aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageTestsConfiguration`  <a name="cfn-imagebuilder-imagepipeline-imagetestsconfiguration"></a>
@@ -124,15 +133,15 @@ The tags of this image pipeline\.
 
 ### Ref<a name="aws-resource-imagebuilder-imagepipeline-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-imagebuilder-imagepipeline-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-imagebuilder-imagepipeline-return-values-fn--getatt-fn--getatt"></a>
 

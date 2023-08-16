@@ -72,9 +72,16 @@ An account ID, or `*` to grant layer usage permission to all accounts in an orga
 
 ### Ref<a name="aws-resource-lambda-layerversionpermission-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the layer version ARN and statement ID, such as `arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1#engineering-org`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the layer version ARN and statement ID, such as `arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1#engineering-org`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-lambda-layerversionpermission-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-lambda-layerversionpermission-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-lambda-layerversionpermission--examples"></a>
 

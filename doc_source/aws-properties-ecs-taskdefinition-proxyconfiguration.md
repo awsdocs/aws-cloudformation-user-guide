@@ -1,10 +1,8 @@
 # AWS::ECS::TaskDefinition ProxyConfiguration<a name="aws-properties-ecs-taskdefinition-proxyconfiguration"></a>
 
-The `ProxyConfiguration` property specifies the details for the App Mesh proxy\.
+The configuration details for the App Mesh proxy\.
 
-For tasks using the EC2 launch type, the container instances require at least version 1\.26\.0 of the container agent and at least version 1\.26\.0\-1 of the `ecs-init` package to enable a proxy configuration\. If your container instances are launched from the Amazon ECS\-optimized AMI version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.
-
-For tasks using the Fargate launch type, the task or service requires platform version 1\.3\.0 or later\.
+For tasks that use the EC2 launch type, the container instances require at least version 1\.26\.0 of the container agent and at least version 1\.26\.0\-1 of the `ecs-init` package to use a proxy configuration\. If your container instances are launched from the Amazon ECS optimized AMI version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) 
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-proxyconfiguration-syntax"></a>
 
@@ -47,7 +45,7 @@ The set of network configuration parameters to provide the Container Network Int
 +  `EgressIgnoredPorts` \- \(Required\) The egress traffic going to the specified ports is ignored and not redirected to the `ProxyEgressPort`\. It can be an empty list\.
 +  `EgressIgnoredIPs` \- \(Required\) The egress traffic going to the specified IP addresses is ignored and not redirected to the `ProxyEgressPort`\. It can be an empty list\.
 *Required*: No  
-*Type*: List of [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md)  
+*Type*: List of [KeyValuePair](aws-properties-ecs-taskdefinition-keyvaluepair.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-ecs-taskdefinition-proxyconfiguration-type"></a>

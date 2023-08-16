@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Component ActionParameters<a name="aws-properties-amplifyuibuilder-component-actionparameters"></a>
 
-The `ActionParameters` property specifies the event action configuration for an element of a `Component` or `ComponentChild`\. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components\. `ActionParameters` defines the action that is performed when an event occurs on the component\.
+Represents the event action configuration for an element of a `Component` or `ComponentChild`\. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components\. `ActionParameters` defines the action that is performed when an event occurs on the component\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-component-actionparameters-syntax"></a>
 
@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Anchor](#cfn-amplifyuibuilder-component-actionparameters-anchor)" : ComponentProperty,
-  "[Fields](#cfn-amplifyuibuilder-component-actionparameters-fields)" : ComponentProperties,
+  "[Fields](#cfn-amplifyuibuilder-component-actionparameters-fields)" : {Key: Value, ...},
   "[Global](#cfn-amplifyuibuilder-component-actionparameters-global)" : ComponentProperty,
   "[Id](#cfn-amplifyuibuilder-component-actionparameters-id)" : ComponentProperty,
   "[Model](#cfn-amplifyuibuilder-component-actionparameters-model)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Anchor](#cfn-amplifyuibuilder-component-actionparameters-anchor): 
     ComponentProperty
   [Fields](#cfn-amplifyuibuilder-component-actionparameters-fields): 
-    ComponentProperties
+    Key: Value
   [Global](#cfn-amplifyuibuilder-component-actionparameters-global): 
     ComponentProperty
   [Id](#cfn-amplifyuibuilder-component-actionparameters-id): 
@@ -55,7 +55,7 @@ The HTML anchor link to the location to open\. Specify this value for a navigati
 `Fields`  <a name="cfn-amplifyuibuilder-component-actionparameters-fields"></a>
 A dictionary of key\-value pairs mapping Amplify Studio properties to fields in a data model\. Use when the action performs an operation on an Amplify DataStore model\.  
 *Required*: No  
-*Type*: [ComponentProperties](aws-properties-amplifyuibuilder-component-componentproperties.md)  
+*Type*: Map of [ComponentProperty](aws-properties-amplifyuibuilder-component-componentproperty.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Global`  <a name="cfn-amplifyuibuilder-component-actionparameters-global"></a>

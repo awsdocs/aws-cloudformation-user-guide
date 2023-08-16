@@ -77,11 +77,13 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `512`  
-*Pattern*: `(\u002F)|(\u002F[\u0021-\u007F]+\u002F)`  
+*Pattern*: `(\u002F)|(\u002F[\u0021-\u007E]+\u002F)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PermissionsBoundary`  <a name="cfn-iam-user-permissionsboundary"></a>
-The ARN of the policy that is used to set the permissions boundary for the user\.  
+The ARN of the managed policy that is used to set the permissions boundary for the user\.  
+A permissions boundary policy defines the maximum permissions that identity\-based policies can grant to an entity, but does not grant permissions\. Permissions boundaries do not define the maximum permissions that a resource\-based policy can grant to an entity\. To learn more, see [Permissions boundaries for IAM entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html) in the *IAM User Guide*\.  
+For more information about policy types, see [Policy types ](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types) in the *IAM User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,7 +93,7 @@ Adds or updates an inline policy document that is embedded in the specified IAM 
 The name of each policy for a role, user, or group must be unique\. If you don't choose unique names, updates to the IAM identity will fail\. 
 For information about limits on the number of inline policies that you can embed in a user, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.  
 *Required*: No  
-*Type*: List of [Policy](aws-properties-iam-policy-1.md)  
+*Type*: List of [Policy](aws-properties-iam-policy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iam-user-tags"></a>
@@ -116,15 +118,15 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 ### Ref<a name="aws-properties-iam-user-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `UserName`\. For example: `mystack-myuser-1CCXAFG2H2U4D`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `UserName`\. For example: `mystack-myuser-1CCXAFG2H2U4D`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-properties-iam-user-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-properties-iam-user-return-values-fn--getatt-fn--getatt"></a>
 

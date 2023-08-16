@@ -19,7 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Hardware](#cfn-lightsail-instance-hardware)" : Hardware,
       "[InstanceName](#cfn-lightsail-instance-instancename)" : String,
       "[KeyPairName](#cfn-lightsail-instance-keypairname)" : String,
+      "[Location](#cfn-lightsail-instance-location)" : Location,
       "[Networking](#cfn-lightsail-instance-networking)" : Networking,
+      "[State](#cfn-lightsail-instance-state)" : State,
       "[Tags](#cfn-lightsail-instance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserData](#cfn-lightsail-instance-userdata)" : String
     }
@@ -40,8 +42,12 @@ Properties:
     Hardware
   [InstanceName](#cfn-lightsail-instance-instancename): String
   [KeyPairName](#cfn-lightsail-instance-keypairname): String
+  [Location](#cfn-lightsail-instance-location): 
+    Location
   [Networking](#cfn-lightsail-instance-networking): 
     Networking
+  [State](#cfn-lightsail-instance-state): 
+    State
   [Tags](#cfn-lightsail-instance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserData](#cfn-lightsail-instance-userdata): String
@@ -95,11 +101,25 @@ If no key pair name is specified, the Regional Lightsail default key pair is use
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Location`  <a name="cfn-lightsail-instance-location"></a>
+The location for the instance, such as the AWS Region and Availability Zone\.  
+The `Location` property is read\-only and should not be specified in a create instance or update instance request\.
+*Required*: No  
+*Type*: [Location](aws-properties-lightsail-instance-location.md)  
+*Update requires*: Updates are not supported\.
+
 `Networking`  <a name="cfn-lightsail-instance-networking"></a>
 The public ports and the monthly amount of data transfer allocated for the instance\.  
 *Required*: No  
 *Type*: [Networking](aws-properties-lightsail-instance-networking.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`State`  <a name="cfn-lightsail-instance-state"></a>
+The status code and the state \(for example, `running`\) of the instance\.  
+The `State` property is read\-only and should not be specified in a create instance or update instance request\.
+*Required*: No  
+*Type*: [State](aws-properties-lightsail-instance-state.md)  
+*Update requires*: Updates are not supported\.
 
 `Tags`  <a name="cfn-lightsail-instance-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
@@ -121,13 +141,13 @@ Depending on the blueprint of your instance, the command to get software on your
 
 ### Ref<a name="aws-resource-lightsail-instance-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a unique identifier for this resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a unique identifier for this resource\.
 
 ### Fn::GetAtt<a name="aws-resource-lightsail-instance-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-lightsail-instance-return-values-fn--getatt-fn--getatt"></a>
 

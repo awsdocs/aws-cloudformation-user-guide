@@ -1,6 +1,8 @@
 # AWS::EC2::IPAM<a name="aws-resource-ec2-ipam"></a>
 
-IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts throughout your AWS Organization\. For more information, see [What is IPAM?](/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.
+IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts throughout your AWS Organization\. For more information, see [What is IPAM?](https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.
+
+There are AWS Identity and Access Management \(IAM\) permissions required to fully manage an IPAM in CloudFormation\. For more information, see [Example policy](https://docs.aws.amazon.com/vpc/latest/ipam/iam-ipam-policy-examples.html) in the *Amazon VPC IPAM User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-ipam-syntax"></a>
 
@@ -12,6 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::IPAM",
   "Properties" : {
+      "[DefaultResourceDiscoveryAssociationId](#cfn-ec2-ipam-defaultresourcediscoveryassociationid)" : String,
+      "[DefaultResourceDiscoveryId](#cfn-ec2-ipam-defaultresourcediscoveryid)" : String,
       "[Description](#cfn-ec2-ipam-description)" : String,
       "[OperatingRegions](#cfn-ec2-ipam-operatingregions)" : [ IpamOperatingRegion, ... ],
       "[Tags](#cfn-ec2-ipam-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -24,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::IPAM
 Properties: 
+  [DefaultResourceDiscoveryAssociationId](#cfn-ec2-ipam-defaultresourcediscoveryassociationid): String
+  [DefaultResourceDiscoveryId](#cfn-ec2-ipam-defaultresourcediscoveryid): String
   [Description](#cfn-ec2-ipam-description): String
   [OperatingRegions](#cfn-ec2-ipam-operatingregions): 
     - IpamOperatingRegion
@@ -33,6 +39,18 @@ Properties:
 
 ## Properties<a name="aws-resource-ec2-ipam-properties"></a>
 
+`DefaultResourceDiscoveryAssociationId`  <a name="cfn-ec2-ipam-defaultresourcediscoveryassociationid"></a>
+The IPAM's default resource discovery association ID\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DefaultResourceDiscoveryId`  <a name="cfn-ec2-ipam-defaultresourcediscoveryid"></a>
+The IPAM's default resource discovery ID\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Description`  <a name="cfn-ec2-ipam-description"></a>
 The description for the IPAM\.  
 *Required*: No  
@@ -41,7 +59,7 @@ The description for the IPAM\.
 
 `OperatingRegions`  <a name="cfn-ec2-ipam-operatingregions"></a>
 The operating Regions for an IPAM\. Operating Regions are AWS Regions where the IPAM is allowed to manage IP address CIDRs\. IPAM only discovers and monitors resources in the AWS Regions you select as operating Regions\.  
-For more information about operating Regions, see [Create an IPAM](/vpc/latest/ipam/create-ipam.html) in the *Amazon VPC IPAM User Guide*\.  
+For more information about operating Regions, see [Create an IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/create-ipam.html) in the *Amazon VPC IPAM User Guide*\.  
 *Required*: No  
 *Type*: List of [IpamOperatingRegion](aws-properties-ec2-ipam-ipamoperatingregion.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -56,15 +74,15 @@ The key/value combination of a tag assigned to the resource\. Use the tag key in
 
 ### Ref<a name="aws-resource-ec2-ipam-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the IPAM ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the IPAM ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-ipam-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-ipam-return-values-fn--getatt-fn--getatt"></a>
 
@@ -75,10 +93,13 @@ The ARN of the IPAM\.
 The ID of the IPAM\.
 
 `PrivateDefaultScopeId`  <a name="PrivateDefaultScopeId-fn::getatt"></a>
-The ID of the IPAM's default private scope\.
+The ID of the default private scope\.
 
 `PublicDefaultScopeId`  <a name="PublicDefaultScopeId-fn::getatt"></a>
-The ID of the IPAM's default public scope\.
+The ID of the default public scope\.
+
+`ResourceDiscoveryAssociationCount`  <a name="ResourceDiscoveryAssociationCount-fn::getatt"></a>
+The number of resource discovery associations\.
 
 `ScopeCount`  <a name="ScopeCount-fn::getatt"></a>
-The number of scopes in the IPAM\. The scope quota is 5\.
+The number of scopes\.

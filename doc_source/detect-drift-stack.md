@@ -46,7 +46,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
 1. Use the `detect-stack-drift` to detect drift on an entire stack\. Specify the stack name or ARN\. You can also specify the logical IDs of any specific resources that you want to use as filters for this drift detection operation\.
 
    ```
-   1. PROMPT> aws cloudformation detect-stack-drift --stack-name my-stack-with-resource-drift
+   1. $ aws cloudformation detect-stack-drift --stack-name my-stack-with-resource-drift
    2. {
    3.     "StackDriftDetectionId": "624af370-311a-11e8-b6b7-500cexample"
    4. }
@@ -57,7 +57,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
    In the example below, we've taken the stack drift detection ID returned by the `detect-stack-drift` example above and passed it as a parameter to `describe-stack-drift-detection-status`\. The parameter returns operation details that show that the drift detection operation has completed, a single stack resource has drifted, and that the entire stack is considered to have drifted as a result\.
 
    ```
-   1. PROMPT> aws cloudformation describe-stack-drift-detection-status --stack-drift-detection-id 624af370-311a-11e8-b6b7-500cexample
+   1. $ aws cloudformation describe-stack-drift-detection-status --stack-drift-detection-id 624af370-311a-11e8-b6b7-500cexample
    2. {
    3.     "StackId": "arn:aws:cloudformation:us-east-1:099908667365:stack/my-stack-with-resource-drift/489e5570-df85-11e7-a7d9-50example", 
    4.     "StackDriftDetectionId": "624af370-311a-11e8-b6b7-500cexample", 
@@ -73,7 +73,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
    The example below uses the `stack-resource-drift-status-filters` parameter to request stack drift information for those resources that have been modified or deleted\. The request returns information on the one resource that has been modified, including details about two of its properties whose values have been changed\. No resources have been deleted\.
 
    ```
-    1. PROMPT> aws cloudformation describe-stack-resource-drifts --stack-name my-stack-with-resource-drift --stack-resource-drift-status-filters MODIFIED DELETED
+    1. $ aws cloudformation describe-stack-resource-drifts --stack-name my-stack-with-resource-drift --stack-resource-drift-status-filters MODIFIED DELETED
     2. {
     3.     "StackResourceDrifts": [
     4.         {

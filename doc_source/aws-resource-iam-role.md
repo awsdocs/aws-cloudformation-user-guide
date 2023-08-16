@@ -1,6 +1,8 @@
 # AWS::IAM::Role<a name="aws-resource-iam-role"></a>
 
-Creates a new role for your AWS account\. For more information about roles, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html)\. For information about quotas for role names and the number of roles you can create, see [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
+Creates a new role for your AWS account\.
+
+ For more information about roles, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in the *IAM User Guide*\. For information about quotas for role names and the number of roles you can create, see [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-resource-iam-role-syntax"></a>
 
@@ -57,7 +59,7 @@ A description of the role that you provide\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `1000`  
-*Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
+*Pattern*: `[\u0009\u000A\u000D\u0020-\u007E\u00A1-\u00FF]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManagedPolicyArns`  <a name="cfn-iam-role-managepolicyarns"></a>
@@ -68,8 +70,8 @@ For more information about ARNs, see [Amazon Resource Names \(ARNs\) and AWS Ser
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxSessionDuration`  <a name="cfn-iam-role-maxsessionduration"></a>
-The maximum session duration \(in seconds\) that you want to set for the specified role\. If you do not specify a value for this setting, the default maximum of one hour is applied\. This setting can have a value from 1 hour to 12 hours\.  
-Anyone who assumes the role from the or API can use the `DurationSeconds` API parameter or the `duration-seconds` CLI parameter to request a longer session\. The `MaxSessionDuration` setting determines the maximum duration that can be requested using the `DurationSeconds` parameter\. If users don't specify a value for the `DurationSeconds` parameter, their security credentials are valid for one hour by default\. This applies when you use the `AssumeRole*` API operations or the `assume-role*` CLI operations but does not apply when you use those operations to create a console URL\. For more information, see [Using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html) in the *IAM User Guide*\.  
+The maximum session duration \(in seconds\) that you want to set for the specified role\. If you do not specify a value for this setting, the default value of one hour is applied\. This setting can have a value from 1 hour to 12 hours\.  
+Anyone who assumes the role from the AWS CLI or API can use the `DurationSeconds` API parameter or the `duration-seconds` AWS CLI parameter to request a longer session\. The `MaxSessionDuration` setting determines the maximum duration that can be requested using the `DurationSeconds` parameter\. If users don't specify a value for the `DurationSeconds` parameter, their security credentials are valid for one hour by default\. This applies when you use the `AssumeRole*` API operations or the `assume-role*` AWS CLI operations but does not apply when you use those operations to create a console URL\. For more information, see [Using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html) in the *IAM User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `3600`  
@@ -84,7 +86,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `512`  
-*Pattern*: `(\u002F)|(\u002F[\u0021-\u007F]+\u002F)`  
+*Pattern*: `(\u002F)|(\u002F[\u0021-\u007E]+\u002F)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PermissionsBoundary`  <a name="cfn-iam-role-permissionsboundary"></a>
@@ -101,7 +103,7 @@ A role can also have an attached managed policy\. For information about policies
 For information about limits on the number of inline policies that you can embed with a role, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.  
 If an external policy \(such as `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy`\) has a `Ref` to a role and if a resource \(such as `AWS::ECS::Service`\) also has a `Ref` to the same role, add a `DependsOn` attribute to the resource to make the resource depend on the external policy\. This dependency ensures that the role's policy is available throughout the resource's lifecycle\. For example, when you delete a stack with an `AWS::ECS::Service` resource, the `DependsOn` attribute ensures that AWS CloudFormation deletes the `AWS::ECS::Service` resource before deleting its role's policy\.
 *Required*: No  
-*Type*: List of [Policy](aws-properties-iam-policy.md)  
+*Type*: List of [Policy](aws-properties-iam-policy-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleName`  <a name="cfn-iam-role-rolename"></a>
@@ -125,7 +127,7 @@ A list of tags that are attached to the role\. For more information about taggin
 
 ### Ref<a name="aws-resource-iam-role-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When the logical ID of this resource is provided to the `Ref`intrinsic function, `Ref`returns the resource name\.
 
 For example:
 
@@ -133,13 +135,13 @@ For example:
 
 For the `AWS::IAM::Role` resource with the logical ID `RootRole`, `Ref` will return the role name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iam-role-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iam-role-return-values-fn--getatt-fn--getatt"></a>
 
@@ -319,8 +321,7 @@ Resources:
       AssumeRolePolicyDocument: 
         Version: "2012-10-17"
         Statement: 
-          - 
-            Effect: "Allow"
+          - Effect: "Allow"
             Principal: 
               Service: 
                 - "ec2.amazonaws.com"
@@ -348,7 +349,8 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-iam-role--seealso"></a>
-+  [CreateRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) in the *AWS Identity and Access Management API Reference* 
++ To view `AWS::IAM::User` template example snippets, see [IAM role template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenarios-iamroles)\. 
 +  [AWS Identity and Access Management Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html) 
++  [CreateRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) in the *AWS Identity and Access Management API Reference* 
 +  [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) 
 

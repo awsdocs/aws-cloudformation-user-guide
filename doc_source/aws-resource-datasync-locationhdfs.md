@@ -63,7 +63,7 @@ The Amazon Resource Names \(ARNs\) of the agents that are used to connect to the
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationType`  <a name="cfn-datasync-locationhdfs-authenticationtype"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

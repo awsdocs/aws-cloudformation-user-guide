@@ -1,6 +1,6 @@
 # AWS::AuditManager::Assessment AWSService<a name="aws-properties-auditmanager-assessment-awsservice"></a>
 
- The `AWSService` property type specifies an AWS service such as Amazon S3, AWS CloudTrail, and so on\. 
+The `AWSService` property type specifies an AWS service such as Amazon S3, AWS CloudTrail, and so on\.
 
 ## Syntax<a name="aws-properties-auditmanager-assessment-awsservice-syntax"></a>
 

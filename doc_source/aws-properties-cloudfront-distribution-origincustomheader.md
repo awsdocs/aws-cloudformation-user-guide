@@ -1,6 +1,6 @@
 # AWS::CloudFront::Distribution OriginCustomHeader<a name="aws-properties-cloudfront-distribution-origincustomheader"></a>
 
-A complex type that contains `HeaderName` and `HeaderValue` elements, if any, for this distribution\. 
+A complex type that contains `HeaderName` and `HeaderValue` elements, if any, for this distribution\.
 
 ## Syntax<a name="aws-properties-cloudfront-distribution-origincustomheader-syntax"></a>
 

@@ -57,22 +57,22 @@ The ID of the AWS account where you want to store the new theme\.
 
 `BaseThemeId`  <a name="cfn-quicksight-theme-basethemeid"></a>
 The ID of the theme that a custom theme will inherit from\. All themes inherit from one of the starting themes defined by Amazon QuickSight\. For a list of the starting themes, use `ListThemes` or choose **Themes** from within an analysis\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `2048`  
+*Maximum*: `512`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Configuration`  <a name="cfn-quicksight-theme-configuration"></a>
 The theme configuration, which contains the theme display properties\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [ThemeConfiguration](aws-properties-quicksight-theme-themeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-quicksight-theme-name"></a>
 A display name for the theme\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
@@ -97,7 +97,7 @@ An ID for the theme that you want to create\. The theme ID is unique per AWS Reg
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `2048`  
+*Maximum*: `512`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -126,3 +126,42 @@ The time the theme was last updated\.
 
 `Type`  <a name="Type-fn::getatt"></a>
 Theme type\.
+
+`Version`  <a name="Version-fn::getatt"></a>
+The version of the theme\.
+
+`Version.Arn`  <a name="Version.Arn-fn::getatt"></a>
+Property description not available\.
+
+`Version.BaseThemeId`  <a name="Version.BaseThemeId-fn::getatt"></a>
+Property description not available\.
+
+`Version.Configuration`  <a name="Version.Configuration-fn::getatt"></a>
+Property description not available\.
+
+`Version.Configuration.DataColorPalette`  <a name="Version.Configuration.DataColorPalette-fn::getatt"></a>
+Property description not available\.
+
+`Version.Configuration.Sheet`  <a name="Version.Configuration.Sheet-fn::getatt"></a>
+Property description not available\.
+
+`Version.Configuration.Typography`  <a name="Version.Configuration.Typography-fn::getatt"></a>
+Property description not available\.
+
+`Version.Configuration.UIColorPalette`  <a name="Version.Configuration.UIColorPalette-fn::getatt"></a>
+Property description not available\.
+
+`Version.CreatedTime`  <a name="Version.CreatedTime-fn::getatt"></a>
+Property description not available\.
+
+`Version.Description`  <a name="Version.Description-fn::getatt"></a>
+Property description not available\.
+
+`Version.Errors`  <a name="Version.Errors-fn::getatt"></a>
+Property description not available\.
+
+`Version.Status`  <a name="Version.Status-fn::getatt"></a>
+Property description not available\.
+
+`Version.VersionNumber`  <a name="Version.VersionNumber-fn::getatt"></a>
+Property description not available\.

@@ -1,6 +1,6 @@
 # AWS::Events::Connection ClientParameters<a name="aws-properties-events-connection-clientparameters"></a>
 
-<a name="aws-properties-events-connection-clientparameters-description"></a>The `ClientParameters` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Events::Connection](aws-resource-events-connection.md)\.
+Contains the OAuth authorization parameters to use for the connection\.
 
 ## Syntax<a name="aws-properties-events-connection-clientparameters-syntax"></a>
 
@@ -25,13 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-events-connection-clientparameters-properties"></a>
 
 `ClientID`  <a name="cfn-events-connection-clientparameters-clientid"></a>
-Not currently supported by AWS CloudFormation\.  
+The client ID to use for OAuth authorization\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `512`  
+*Pattern*: `^[ \t]*[^\x00-\x1F:\x7F]+([ \t]+[^\x00-\x1F:\x7F]+)*[ \t]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientSecret`  <a name="cfn-events-connection-clientparameters-clientsecret"></a>
-Not currently supported by AWS CloudFormation\.  
+The client secret assciated with the client ID to use for OAuth authorization\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `512`  
+*Pattern*: `^[ \t]*[^\x00-\x1F:\x7F]+([ \t]+[^\x00-\x1F:\x7F]+)*[ \t]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

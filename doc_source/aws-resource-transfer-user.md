@@ -59,17 +59,19 @@ A `HomeDirectory` example is `/bucket_name/home/mydirectory`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeDirectoryMappings`  <a name="cfn-transfer-user-homedirectorymappings"></a>
-Logical directory mappings that specify what Amazon S3 paths and keys should be visible to your user and how you want to make them visible\. You will need to specify the "`Entry`" and "`Target`" pair, where `Entry` shows how the path is made visible and `Target` is the actual Amazon S3 path\. If you only specify a target, it will be displayed as is\. You will need to also make sure that your IAM role provides access to paths in `Target`\. The following is an example\.  
- `'[ { "Entry": "/", "Target": "/bucket3/customized-reports/" } ]'`   
-In most cases, you can use this value instead of the session policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.  
-If the target of a logical directory entry does not exist in Amazon S3, the entry will be ignored\. As a workaround, you can use the Amazon S3 API to create 0 byte objects as place holders for your directory\. If using the CLI, use the `s3api` call instead of `s3` so you can use the put\-object operation\. For example, you use the following: `AWS s3api put-object --bucket bucketname --key path/to/folder/`\. Make sure that the end of the key name ends in a '/' for it to be considered a folder\.
+Logical directory mappings that specify what Amazon S3 or Amazon EFS paths and keys should be visible to your user and how you want to make them visible\. You must specify the `Entry` and `Target` pair, where `Entry` shows how the path is made visible and `Target` is the actual Amazon S3 or Amazon EFS path\. If you only specify a target, it is displayed as is\. You also must ensure that your AWS Identity and Access Management \(IAM\) role provides access to paths in `Target`\. This value can be set only when `HomeDirectoryType` is set to *LOGICAL*\.  
+The following is an `Entry` and `Target` pair example\.  
+ `[ { "Entry": "/directory1", "Target": "/bucket_name/home/mydirectory" } ]`   
+In most cases, you can use this value instead of the session policy to lock your user down to the designated home directory \("`chroot`"\)\. To do this, you can set `Entry` to `/` and set `Target` to the value the user should see for their home directory when they log in\.  
+The following is an `Entry` and `Target` pair example for `chroot`\.  
+ `[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]`   
 *Required*: No  
 *Type*: List of [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md)  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeDirectoryType`  <a name="cfn-transfer-user-homedirectorytype"></a>
-The type of landing directory \(folder\) you want your users' home directory to be when they log into the server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket or EFS paths as is in their file transfer protocol clients\. If you set it `LOGICAL`, you need to provide mappings in the `HomeDirectoryMappings` for how you want to make Amazon S3 or EFS paths visible to your users\.  
+The type of landing directory \(folder\) that you want your users' home directory to be when they log in to the server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket or EFS paths as is in their file transfer protocol clients\. If you set it `LOGICAL`, you need to provide mappings in the `HomeDirectoryMappings` for how you want to make Amazon S3 or Amazon EFS paths visible to your users\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `LOGICAL | PATH`  
@@ -92,7 +94,7 @@ Specifies the full POSIX identity, including user ID \(`Uid`\), group ID \(`Gid`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Role`  <a name="cfn-transfer-user-role"></a>
-Specifies the Amazon Resource Name \(ARN\) of the IAM role that controls your users' access to your Amazon S3 bucket or EFS file system\. The policies attached to this role determine the level of access that you want to provide your users when transferring files into and out of your Amazon S3 bucket or EFS file system\. The IAM role should also contain a trust relationship that allows the server to access your resources when servicing your users' transfer requests\.  
+The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that controls your users' access to your Amazon S3 bucket or Amazon EFS file system\. The policies attached to this role determine the level of access that you want to provide your users when transferring files into and out of your Amazon S3 bucket or Amazon EFS file system\. The IAM role should also contain a trust relationship that allows the server to access your resources when servicing your users' transfer requests\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
@@ -136,15 +138,15 @@ A unique string that identifies a user and is associated with a `ServerId`\. Thi
 
 ### Ref<a name="aws-resource-transfer-user-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the username, such as `transfer_user`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the username, such as `transfer_user`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-transfer-user-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-transfer-user-return-values-fn--getatt-fn--getatt"></a>
 
@@ -157,7 +159,7 @@ The ID of the server to which the user is attached\.
 An example `ServerId` is `s-01234567890abcdef`\.
 
 `UserName`  <a name="UserName-fn::getatt"></a>
-A unique string that identifies a user account associated with a server\.  
+A unique string that identifies a Transfer Family user account associated with a server\.  
 An example `UserName` is `transfer-user-1`\.
 
 ## Examples<a name="aws-resource-transfer-user--examples"></a>

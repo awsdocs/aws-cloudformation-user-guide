@@ -55,9 +55,9 @@ The vendor ID associated with the Amazon developer account that will host the sk
 
 ### Ref<a name="aws-resource-ask-skill-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the skill ID, such as amzn1\.ask\.skill\.a3103cee\-c48c\-40a0\-a2c9\-251141888863\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the skill ID, such as amzn1\.ask\.skill\.a3103cee\-c48c\-40a0\-a2c9\-251141888863\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ask-skill--examples"></a>
 

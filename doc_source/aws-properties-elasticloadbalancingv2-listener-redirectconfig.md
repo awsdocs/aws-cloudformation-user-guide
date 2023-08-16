@@ -123,20 +123,20 @@ HTTPlistener:
             {
                "Type": "redirect",
                "RedirectConfig": {
-               "Protocol": "HTTPS",
-               "Port": 443,
-               "Host": "#{host}",
-               "Path": "/#{path}",
-               "Query": "#{query}",
-               "StatusCode": "HTTP_301"
-              }
+                   "Protocol": "HTTPS",
+                   "Port": 443,
+                   "Host": "#{host}",
+                   "Path": "/#{path}",
+                   "Query": "#{query}",
+                   "StatusCode": "HTTP_301"
+               }
             }
-          ],
-          "LoadBalancerArn": {
-               "Ref": "myLoadBalancer"
-           },
-            "Port": 80,
-            "Protocol": "HTTP"
-       }
-  }
+        ],
+        "LoadBalancerArn": {
+            "Ref": "myLoadBalancer"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+    }
+}
 ```

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-iot-thing-attributepayload-attributes)" : {Key : Value, ...}
+  "[Attributes](#cfn-iot-thing-attributepayload-attributes)" : {Key: Value, ...}
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-iot-thing-attributepayload-attributes): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-iot-thing-attributepayload-properties"></a>
@@ -39,32 +39,15 @@ The following example declares an attribute payload with three attributes\.
 #### JSON<a name="aws-properties-iot-thing-attributepayload--examples----json"></a>
 
 ```
-            {
-   "AttributePayload":{
-      "Attributes":{
-         "myAttributeA":{
-            "Ref":"MyAttributeValueA"
-         },
-         "myAttributeB":{
-            "Ref":"MyAttributeValueB"
-         },
-         "myAttributeC":{
-            "Ref":"MyAttributeValueC"
-         }
-      }
-   }
-}
+ { "AttributePayload":{ "Attributes":{ "myAttributeA":{
+            "Ref":"MyAttributeValueA" }, "myAttributeB":{ "Ref":"MyAttributeValueB" },
+            "myAttributeC":{ "Ref":"MyAttributeValueC" } } } }
 ```
 
 #### YAML<a name="aws-properties-iot-thing-attributepayload--examples----yaml"></a>
 
 ```
-AttributePayload:
-  Attributes:
-    myAttributeA:
-      Ref: MyAttributeValueA
-    myAttributeB:
-      Ref: MyAttributeValueB
-    myAttributeC:
-      Ref: MyAttributeValueC
+ AttributePayload: Attributes: myAttributeA: Ref:
+            MyAttributeValueA myAttributeB: Ref: MyAttributeValueB myAttributeC: Ref:
+            MyAttributeValueC
 ```

@@ -58,7 +58,7 @@ The rule payload\.
 
 ### Ref<a name="aws-resource-iot-topicrule-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the topic rule name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the topic rule name\. For example:
 
  `{ "Ref": "MyTopicRule" }` 
 
@@ -66,13 +66,13 @@ For a stack named My\-Stack \(the \- character is omitted\), a value similar to 
 
  `MyStackMyTopicRule12ABC3D456EFG` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-topicrule-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-topicrule-return-values-fn--getatt-fn--getatt"></a>
 
@@ -88,59 +88,19 @@ The following example declares an AWS IoT rule\.
 #### JSON<a name="aws-resource-iot-topicrule--examples----json"></a>
 
 ```
-{
-	"AWSTemplateFormatVersion": "2010-09-09",
-	"Resources": {
-		"MyTopicRule": {
-			"Type": "AWS::IoT::TopicRule",
-			"Properties": {
-				"RuleName": {
-					"Ref": "NameParameter"
-				},
-				"TopicRulePayload": {
-					"RuleDisabled": "true",
-					"Sql": "SELECT temp FROM 'SomeTopic' WHERE temp > 60",
-					"Actions": [{
-						"S3": {
-							"BucketName": {
-								"Ref": "MyBucket"
-							},
-							"RoleArn": {
-								"Fn::GetAtt": [
-									"MyRole",
-									"Arn"
-								]
-							},
-							"Key": "MyKey.txt"
-						}
-					}]
-				}
-			}
-		}
-	}
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+            "MyTopicRule": { "Type": "AWS::IoT::TopicRule", "Properties": { "RuleName": { "Ref":
+            "NameParameter" }, "TopicRulePayload": { "RuleDisabled": "true", "Sql": "SELECT temp
+            FROM 'SomeTopic' WHERE temp > 60", "Actions": [{ "S3": { "BucketName": { "Ref":
+            "MyBucket" }, "RoleArn": { "Fn::GetAtt": [ "MyRole", "Arn" ] }, "Key": "MyKey.txt" } }]
+            } } } } }
 ```
 
 #### YAML<a name="aws-resource-iot-topicrule--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  MyTopicRule:
-    Type: AWS::IoT::TopicRule
-    Properties:
-      RuleName:
-        Ref: NameParameter
-      TopicRulePayload:
-        RuleDisabled: 'true'
-        Sql: SELECT temp FROM 'SomeTopic' WHERE temp > 60
-        Actions:
-        - S3:
-            BucketName:
-              Ref: MyBucket
-            RoleArn:
-              Fn::GetAtt:
-              - MyRole
-              - Arn
-            Key: MyKey.txt
+AWSTemplateFormatVersion: '2010-09-09' Resources: MyTopicRule:
+            Type: AWS::IoT::TopicRule Properties: RuleName: Ref: NameParameter TopicRulePayload:
+            RuleDisabled: 'true' Sql: SELECT temp FROM 'SomeTopic' WHERE temp > 60 Actions: - S3:
+            BucketName: Ref: MyBucket RoleArn: Fn::GetAtt: - MyRole - Arn Key: MyKey.txt
 ```

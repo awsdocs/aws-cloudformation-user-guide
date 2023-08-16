@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-segment-segmentdimensions-properties"></a>
 
 `Attributes`  <a name="cfn-pinpoint-segment-segmentdimensions-attributes"></a>
-One or more custom attributes to use as criteria for the segment\.  
+One or more custom attributes to use as criteria for the segment\. For more information see [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)   
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

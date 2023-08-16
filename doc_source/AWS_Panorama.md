@@ -1,4 +1,4 @@
-# Panorama resource type reference<a name="AWS_Panorama"></a>
+# AWS Panorama resource type reference<a name="AWS_Panorama"></a>
 
 **Resource types**
 + [AWS::Panorama::ApplicationInstance](aws-resource-panorama-applicationinstance.md)

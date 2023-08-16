@@ -73,7 +73,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-stepfunctions-activity-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Returns the ARN of the resource\.
 
 `Name`  <a name="Name-fn::getatt"></a>
 Returns the name of the activity\. For example:  

@@ -49,13 +49,13 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 
 ### Ref<a name="aws-resource-redshift-clustersecuritygroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "myClusterSecurityGroup" }` 
 
 For the Amazon Redshift cluster security group `myClusterSecurityGroup`, Ref returns the name of the cluster security group\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-redshift-clustersecuritygroup--examples"></a>
 
@@ -85,9 +85,9 @@ The following example describes an Amazon Redshift cluster security group that y
 #### YAML<a name="aws-resource-redshift-clustersecuritygroup--examples--Specify_a_Cluster_Security_Group--yaml"></a>
 
 ```
-myClusterSecurityGroup: 
+myClusterSecurityGroup:
   Type: "AWS::Redshift::ClusterSecurityGroup"
-  Properties: 
+  Properties:
     Description: "Security group to determine where connections to the Amazon Redshift cluster can come from"
     Tags:
       - Key: foo

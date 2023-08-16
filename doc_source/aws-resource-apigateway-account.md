@@ -1,10 +1,6 @@
 # AWS::ApiGateway::Account<a name="aws-resource-apigateway-account"></a>
 
-The `AWS::ApiGateway::Account` resource specifies the IAM role that Amazon API Gateway uses to write API logs to Amazon CloudWatch Logs\.
-
-**Important**  
-If an API Gateway resource has never been created in your AWS account, you must add a dependency on another API Gateway resource, such as an [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html) or [AWS::ApiGateway::ApiKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html) resource\.  
-If an API Gateway resource has been created in your AWS account, no dependency is required \(even if the resource was deleted\)\.
+The `AWS::ApiGateway::Account` resource specifies the IAM role that Amazon API Gateway uses to write API logs to Amazon CloudWatch Logs\. To avoid overwriting other roles, you should only have one `AWS::ApiGateway::Account` resource per region per account\. 
 
 ## Syntax<a name="aws-resource-apigateway-account-syntax"></a>
 
@@ -32,7 +28,7 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-account-properties"></a>
 
 `CloudWatchRoleArn`  <a name="cfn-apigateway-account-cloudwatchrolearn"></a>
-The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWatch Logs in your account\.  
+The ARN of an Amazon CloudWatch role for the current Account\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -41,15 +37,15 @@ The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWa
 
 ### Ref<a name="aws-resource-apigateway-account-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the resource, such as `mysta-accou-01234b567890example`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the resource, such as `mysta-accou-01234b567890example`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-apigateway-account-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-apigateway-account-return-values-fn--getatt-fn--getatt"></a>
 
@@ -132,5 +128,5 @@ Account:
 ```
 
 ## See also<a name="aws-resource-apigateway-account--seealso"></a>
-+ [account:update](https://docs.aws.amazon.com/apigateway/api-reference/resource/account/) in the *Amazon API Gateway REST API Reference*
++ [account:update](https://docs.aws.amazon.com/apigateway/latest/api/API_UpdateAccount.html) in the *Amazon API Gateway REST API Reference*
 

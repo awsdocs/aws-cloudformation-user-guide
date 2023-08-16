@@ -43,13 +43,13 @@ The maximum amount of time, in seconds, that a campaign can attempt to deliver a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessagesPerSecond`  <a name="cfn-pinpoint-campaign-limits-messagespersecond"></a>
-The maximum number of messages that a campaign can send each second\. The minimum value is 50\. The maximum value is 20,000\.  
+The maximum number of messages that a campaign can send each second\. The minimum value is 1\. The maximum value is 20,000\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Session`  <a name="cfn-pinpoint-campaign-limits-session"></a>
-Not currently supported by AWS CloudFormation\.  
+The maximum number of messages that the campaign can send per user session\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

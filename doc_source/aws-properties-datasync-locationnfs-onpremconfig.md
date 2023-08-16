@@ -1,6 +1,6 @@
 # AWS::DataSync::LocationNFS OnPremConfig<a name="aws-properties-datasync-locationnfs-onpremconfig"></a>
 
-A list of Amazon Resource Names \(ARNs\) of agents to use for a Network File System \(NFS\) location\.
+The AWS DataSync agents that are connecting to a Network File System \(NFS\) location\.
 
 ## Syntax<a name="aws-properties-datasync-locationnfs-onpremconfig-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-datasync-locationnfs-onpremconfig-properties"></a>
 
 `AgentArns`  <a name="cfn-datasync-locationnfs-onpremconfig-agentarns"></a>
-ARNs of the agents to use for an NFS location\.  
+The Amazon Resource Names \(ARNs\) of the agents connecting to a transfer location\.  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `4`  

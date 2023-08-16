@@ -66,7 +66,7 @@ A list of email addresses of the users\. Documents owned by these users are excl
 A list of regular expression patterns to exclude certain items in your Google Drive, including shared drives and users' My Drives\. Items that match the patterns are excluded from the index\. Items that don't match the patterns are included in the index\. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldMappings`  <a name="cfn-kendra-datasource-googledriveconfiguration-fieldmappings"></a>
@@ -80,7 +80,7 @@ Maps Google Drive data source attributes or field names to Amazon Kendra index f
 A list of regular expression patterns to include certain items in your Google Drive, including shared drives and users' My Drives\. Items that match the patterns are included in the index\. Items that don't match the patterns are excluded from the index\. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-googledriveconfiguration-secretarn"></a>

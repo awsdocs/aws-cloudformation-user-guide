@@ -11,7 +11,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CatalogTargets](#cfn-glue-crawler-targets-catalogtargets)" : [ CatalogTarget, ... ],
+  "[DeltaTargets](#cfn-glue-crawler-targets-deltatargets)" : [ DeltaTarget, ... ],
   "[DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets)" : [ DynamoDBTarget, ... ],
+  "[IcebergTargets](#cfn-glue-crawler-targets-icebergtargets)" : [ IcebergTarget, ... ],
   "[JdbcTargets](#cfn-glue-crawler-targets-jdbctargets)" : [ JdbcTarget, ... ],
   "[MongoDBTargets](#cfn-glue-crawler-targets-mongodbtargets)" : [ MongoDBTarget, ... ],
   "[S3Targets](#cfn-glue-crawler-targets-s3targets)" : [ S3Target, ... ]
@@ -23,8 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CatalogTargets](#cfn-glue-crawler-targets-catalogtargets): 
     - CatalogTarget
+  [DeltaTargets](#cfn-glue-crawler-targets-deltatargets): 
+    - DeltaTarget
   [DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets): 
     - DynamoDBTarget
+  [IcebergTargets](#cfn-glue-crawler-targets-icebergtargets): 
+    - IcebergTarget
   [JdbcTargets](#cfn-glue-crawler-targets-jdbctargets): 
     - JdbcTarget
   [MongoDBTargets](#cfn-glue-crawler-targets-mongodbtargets): 
@@ -41,10 +47,22 @@ Specifies AWS Glue Data Catalog targets\.
 *Type*: List of [CatalogTarget](aws-properties-glue-crawler-catalogtarget.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DeltaTargets`  <a name="cfn-glue-crawler-targets-deltatargets"></a>
+Specifies an array of Delta data store targets\.  
+*Required*: No  
+*Type*: List of [DeltaTarget](aws-properties-glue-crawler-deltatarget.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DynamoDBTargets`  <a name="cfn-glue-crawler-targets-dynamodbtargets"></a>
 Specifies Amazon DynamoDB targets\.  
 *Required*: No  
 *Type*: List of [DynamoDBTarget](aws-properties-glue-crawler-dynamodbtarget.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IcebergTargets`  <a name="cfn-glue-crawler-targets-icebergtargets"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [IcebergTarget](aws-properties-glue-crawler-icebergtarget.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JdbcTargets`  <a name="cfn-glue-crawler-targets-jdbctargets"></a>

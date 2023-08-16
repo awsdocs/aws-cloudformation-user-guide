@@ -1,6 +1,6 @@
 # AWS::CustomerProfiles::Integration<a name="aws-resource-customerprofiles-integration"></a>
 
-The AWS::CustomerProfiles::Integration resource specifies an Amazon Connect Customer Profiles Integration\.
+Specifies an Amazon Connect Customer Profiles Integration\.
 
 ## Syntax<a name="aws-resource-customerprofiles-integration-syntax"></a>
 
@@ -47,7 +47,7 @@ The unique name of the domain\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FlowDefinition`  <a name="cfn-customerprofiles-integration-flowdefinition"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration that controls how Customer Profiles retrieves data from the source\.  
 *Required*: No  
 *Type*: [FlowDefinition](aws-properties-customerprofiles-integration-flowdefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -59,7 +59,7 @@ The name of the profile object type mapping to use\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ObjectTypeNames`  <a name="cfn-customerprofiles-integration-objecttypenames"></a>
-Not currently supported by AWS CloudFormation\.  
+The object type mapping\.  
 *Required*: No  
 *Type*: List of [ObjectTypeMapping](aws-properties-customerprofiles-integration-objecttypemapping.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -80,15 +80,15 @@ The URI of the S3 bucket or any other type of data source\.
 
 ### Ref<a name="aws-resource-customerprofiles-integration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DomainName and the Uri of the integration\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the DomainName and the Uri of the integration\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-customerprofiles-integration-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-customerprofiles-integration-return-values-fn--getatt-fn--getatt"></a>
 
@@ -107,28 +107,20 @@ The following example creates an integration if Domain existed\.
 #### YAML<a name="aws-resource-customerprofiles-integration--examples----yaml"></a>
 
 ```
-Resources:
-    Integration:
-      Type: "AWS::CustomerProfiles::Integration"
-      Properties:
-        DomainName: "ExampleDomain"
-        ObjectTypeName: "CTR"
-        Uri: "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111"
+Type: "AWS::CustomerProfiles::Integration"
+Properties: 
+    DomainName: "ExampleDomain" 
+    ObjectTypeName: "CTR" 
+    Uri: "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111"
 ```
 
 #### JSON<a name="aws-resource-customerprofiles-integration--examples----json"></a>
 
 ```
-{
-  "Resources": {
-    "TestIntegration": {
-      "Type": "AWS::CustomerProfiles::Integration",
-      "Properties": {
-        "DomainName": "ExampleDomain",
-        "ObjectTypeName": "CTR",
-        "Uri": "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111"
-      }
-    }
-  }
+"Type": "AWS::CustomerProfiles::Integration", 
+"Properties": { 
+    "DomainName": "ExampleDomain",
+    "ObjectTypeName": "CTR", 
+    "Uri": "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111" } } }
 }
 ```

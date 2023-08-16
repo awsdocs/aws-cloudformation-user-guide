@@ -1,6 +1,6 @@
 # AWS::CloudFront::ResponseHeadersPolicy XSSProtection<a name="aws-properties-cloudfront-responseheaderspolicy-xssprotection"></a>
 
-Determines whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value\.
+Determines whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header's value\.
 
 For more information about the `X-XSS-Protection` HTTP response header, see [X\-XSS\-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) in the MDN Web Docs\.
 

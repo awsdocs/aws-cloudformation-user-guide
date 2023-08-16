@@ -1,4 +1,4 @@
-# DeviceFarm resource type reference<a name="AWS_DeviceFarm"></a>
+# AWS Device Farm resource type reference<a name="AWS_DeviceFarm"></a>
 
 **Resource types**
 + [AWS::DeviceFarm::DevicePool](aws-resource-devicefarm-devicepool.md)

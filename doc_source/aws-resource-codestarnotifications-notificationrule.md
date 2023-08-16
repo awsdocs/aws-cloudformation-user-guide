@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-codestarnotifications-notificationrule-name)" : String,
       "[Resource](#cfn-codestarnotifications-notificationrule-resource)" : String,
       "[Status](#cfn-codestarnotifications-notificationrule-status)" : String,
-      "[Tags](#cfn-codestarnotifications-notificationrule-tags)" : Json,
+      "[Tags](#cfn-codestarnotifications-notificationrule-tags)" : {Key: Value, ...},
       "[TargetAddress](#cfn-codestarnotifications-notificationrule-targetaddress)" : String,
       "[Targets](#cfn-codestarnotifications-notificationrule-targets)" : [ Target, ... ]
     }
@@ -39,7 +39,8 @@ Properties:
   [Name](#cfn-codestarnotifications-notificationrule-name): String
   [Resource](#cfn-codestarnotifications-notificationrule-resource): String
   [Status](#cfn-codestarnotifications-notificationrule-status): String
-  [Tags](#cfn-codestarnotifications-notificationrule-tags): Json
+  [Tags](#cfn-codestarnotifications-notificationrule-tags): 
+    Key: Value
   [TargetAddress](#cfn-codestarnotifications-notificationrule-targetaddress): String
   [Targets](#cfn-codestarnotifications-notificationrule-targets): 
     - Target
@@ -48,7 +49,7 @@ Properties:
 ## Properties<a name="aws-resource-codestarnotifications-notificationrule-properties"></a>
 
 `CreatedBy`  <a name="cfn-codestarnotifications-notificationrule-createdby"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -61,13 +62,13 @@ The level of detail to include in the notifications for this resource\. `BASIC` 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventTypeId`  <a name="cfn-codestarnotifications-notificationrule-eventtypeid"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventTypeIds`  <a name="cfn-codestarnotifications-notificationrule-eventtypeids"></a>
-A list of event types associated with this notification rule\. For a complete list of event types and IDs, see [Notification concepts](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api) in the *Developer Tools Console User Guide*\.   
+A list of event types associated with this notification rule\. For a complete list of event types and IDs, see [Notification concepts](https://docs.aws.amazon.com/dtconsole/latest/userguide/concepts.html#concepts-api) in the *Developer Tools Console User Guide*\.   
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -98,17 +99,17 @@ The status of the notification rule\. The default value is `ENABLED`\. If the st
 `Tags`  <a name="cfn-codestarnotifications-notificationrule-tags"></a>
 A list of tags to apply to this notification rule\. Key names cannot start with "`aws`"\.   
 *Required*: No  
-*Type*: Json  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetAddress`  <a name="cfn-codestarnotifications-notificationrule-targetaddress"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-codestarnotifications-notificationrule-targets"></a>
-A list of Amazon Resource Names \(ARNs\) of AWS Chatbot topics and AWS Chatbot clients to associate with the notification rule\.  
+A list of Amazon Resource Names \(ARNs\) of Amazon Simple Notification Service topics and AWS Chatbot clients to associate with the notification rule\.  
 *Required*: Yes  
 *Type*: List of [Target](aws-properties-codestarnotifications-notificationrule-target.md)  
 *Maximum*: `10`  
@@ -125,7 +126,7 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 #### <a name="aws-resource-codestarnotifications-notificationrule-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 ## Examples<a name="aws-resource-codestarnotifications-notificationrule--examples"></a>
 

@@ -47,9 +47,9 @@ The name of the resource policy\.
 
 ### Ref<a name="aws-resource-logs-resourcepolicy-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `PolicyName` of the resource policy\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `PolicyName` of the resource policy\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-logs-resourcepolicy--examples"></a>
 

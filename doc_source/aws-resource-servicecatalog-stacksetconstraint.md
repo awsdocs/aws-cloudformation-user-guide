@@ -47,7 +47,6 @@ Properties:
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-stacksetconstraint-acceptlanguage"></a>
 The language code\.  
-+  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
 *Required*: No  
@@ -117,6 +116,6 @@ Permission to create, update, and delete stack instances\. Choose from ALLOWED a
 
 ### Ref<a name="aws-resource-servicecatalog-stacksetconstraint-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the identifier of the constraint\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the identifier of the constraint\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

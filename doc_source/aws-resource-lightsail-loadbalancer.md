@@ -3,7 +3,7 @@
 The `AWS::Lightsail::LoadBalancer` resource specifies a load balancer that can be used with Lightsail instances\.
 
 **Note**  
-You cannot attach attach TLS certificates to a load balancer using the `AWS::Lightsail::LoadBalancer` resource type\. Instead, use the `LoadBalancerTlsCertificate` resource type to create a certificate and attach it to a load balancer\.
+You cannot attach a TLS certificate to a load balancer using the `AWS::Lightsail::LoadBalancer` resource type\. Instead, use the `AWS::Lightsail::LoadBalancerTlsCertificate` resource type to create a certificate and attach it to a load balancer\.
 
 ## Syntax<a name="aws-resource-lightsail-loadbalancer-syntax"></a>
 
@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LoadBalancerName](#cfn-lightsail-loadbalancer-loadbalancername)" : String,
       "[SessionStickinessEnabled](#cfn-lightsail-loadbalancer-sessionstickinessenabled)" : Boolean,
       "[SessionStickinessLBCookieDurationSeconds](#cfn-lightsail-loadbalancer-sessionstickinesslbcookiedurationseconds)" : String,
-      "[Tags](#cfn-lightsail-loadbalancer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-lightsail-loadbalancer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TlsPolicyName](#cfn-lightsail-loadbalancer-tlspolicyname)" : String
     }
 }
 ```
@@ -42,6 +43,7 @@ Properties:
   [SessionStickinessLBCookieDurationSeconds](#cfn-lightsail-loadbalancer-sessionstickinesslbcookiedurationseconds): String
   [Tags](#cfn-lightsail-loadbalancer-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TlsPolicyName](#cfn-lightsail-loadbalancer-tlspolicyname): String
 ```
 
 ## Properties<a name="aws-resource-lightsail-loadbalancer-properties"></a>
@@ -101,17 +103,24 @@ The `Value` of `Tags` is optional for Lightsail resources\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TlsPolicyName`  <a name="cfn-lightsail-loadbalancer-tlspolicyname"></a>
+The name of the TLS security policy for the load balancer\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `\w[\w\-]*\w`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-lightsail-loadbalancer-return-values"></a>
 
 ### Ref<a name="aws-resource-lightsail-loadbalancer-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a unique identifier for this resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a unique identifier for this resource\.
 
 ### Fn::GetAtt<a name="aws-resource-lightsail-loadbalancer-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-lightsail-loadbalancer-return-values-fn--getatt-fn--getatt"></a>
 
@@ -122,4 +131,8 @@ The Amazon Resource Name \(ARN\) of the load balancer\.
 
 *Load balancer TLS certificate*
 
-You cannot attach attach TLS certificates to a load balancer using the `AWS::Lightsail::LoadBalancer` resource type\. Instead, use the `LoadBalancerTlsCertificate` resource type to create and attach certificates to a load balancer\.
+You cannot attach a TLS certificate to a load balancer using the `AWS::Lightsail::LoadBalancer` resource type\. Instead, use the `AWS::Lightsail::LoadBalancerTlsCertificate` resource type to create and attach certificates to a load balancer\.
+
+*Configuring HTTPS redirection*
+
+HTTPS redirection can only be set using the `HttpsRedirectionEnabled` parameter on the `AWS::Lightsail::LoadBalancerTlsCertificate` resource that is attached to the load balancer\.

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SlotPriority<a name="aws-properties-lex-bot-slotpriority"></a>
 
-Sets the priority that Amazon Lex should use when eliciting slots values from a user\.
+Sets the priority that Amazon Lex should use when eliciting slot values from a user\.
 
 ## Syntax<a name="aws-properties-lex-bot-slotpriority-syntax"></a>
 
@@ -28,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The priority that Amazon Lex should apply to the slot\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SlotName`  <a name="cfn-lex-bot-slotpriority-slotname"></a>

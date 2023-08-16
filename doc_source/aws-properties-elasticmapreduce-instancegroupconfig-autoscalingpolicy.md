@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy-properties"></a>
 
 `Constraints`  <a name="cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints"></a>
-The upper and lower EC2 instance limits for an automatic scaling policy\. Automatic scaling activity will not cause an instance group to grow above or below these limits\.  
+The upper and lower Amazon EC2 instance limits for an automatic scaling policy\. Automatic scaling activity will not cause an instance group to grow above or below these limits\.  
 *Required*: Yes  
 *Type*: [ScalingConstraints](aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

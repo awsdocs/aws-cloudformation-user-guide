@@ -1,12 +1,21 @@
 # AWS::AutoScaling::AutoScalingGroup InstanceRequirements<a name="aws-properties-autoscaling-autoscalinggroup-instancerequirements"></a>
 
- `InstanceRequirements` specifies a set of requirements for the types of instances that can be launched by an `AWS::AutoScaling::AutoScalingGroup` resource\. `InstanceRequirements` is a property of the `LaunchTemplateOverrides` property of the [AWS::AutoScaling::AutoScalingGroup LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html) property type\.
+The attributes for the instance types for a mixed instances policy\. Amazon EC2 Auto Scaling uses your specified requirements to identify instance types\. Then, it uses your On\-Demand and Spot allocation strategies to launch instances from these instance types\.
 
-You must specify `VCpuCount` and `MemoryMiB`, but all other properties are optional\. Any unspecified optional property is set to its default\.
+When you specify multiple attributes, you get instance types that satisfy all of the specified attributes\. If you specify multiple values for an attribute, you get instance types that satisfy any of the specified values\.
 
-When you specify multiple properties, you get instance types that satisfy all of the specified properties\. If you specify multiple values for a property, you get instance types that satisfy any of the specified values\.
+To limit the list of instance types from which Amazon EC2 Auto Scaling can identify matching instance types, you can use one of the following parameters, but not both in the same request:
++ `AllowedInstanceTypes` \- The instance types to include in the list\. All other instance types are ignored, even if they match your specified attributes\.
++ `ExcludedInstanceTypes` \- The instance types to exclude from the list, even if they match your specified attributes\.
 
-For more information, see [Creating an Auto Scaling group using attribute\-based instance type selection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+**Note**  
+You must specify `VCpuCount` and `MemoryMiB`\. All other attributes are optional\. Any unspecified optional attribute is set to its default\.
+
+For an example template, see [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\.
+
+For more information, see [Creating an Auto Scaling group using attribute\-based instance type selection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html) in the *Amazon EC2 Auto Scaling User Guide*\. For help determining which instance types match your attributes before you apply them to your Auto Scaling group, see [Preview instance types with specified attributes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-get-instance-types-from-instance-requirements) in the *Amazon EC2 User Guide for Linux Instances*\.
+
+`InstanceRequirements` is a property of the `LaunchTemplateOverrides` property of the [AWS::AutoScaling::AutoScalingGroup LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html) property type\.
 
 ## Syntax<a name="aws-properties-autoscaling-autoscalinggroup-instancerequirements-syntax"></a>
 
@@ -21,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AcceleratorNames](#cfn-autoscaling-autoscalinggroup-instancerequirements-acceleratornames)" : [ String, ... ],
   "[AcceleratorTotalMemoryMiB](#cfn-autoscaling-autoscalinggroup-instancerequirements-acceleratortotalmemorymib)" : AcceleratorTotalMemoryMiBRequest,
   "[AcceleratorTypes](#cfn-autoscaling-autoscalinggroup-instancerequirements-acceleratortypes)" : [ String, ... ],
+  "[AllowedInstanceTypes](#cfn-autoscaling-autoscalinggroup-instancerequirements-allowedinstancetypes)" : [ String, ... ],
   "[BareMetal](#cfn-autoscaling-autoscalinggroup-instancerequirements-baremetal)" : String,
   "[BaselineEbsBandwidthMbps](#cfn-autoscaling-autoscalinggroup-instancerequirements-baselineebsbandwidthmbps)" : BaselineEbsBandwidthMbpsRequest,
   "[BurstablePerformance](#cfn-autoscaling-autoscalinggroup-instancerequirements-burstableperformance)" : String,
@@ -31,6 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[LocalStorageTypes](#cfn-autoscaling-autoscalinggroup-instancerequirements-localstoragetypes)" : [ String, ... ],
   "[MemoryGiBPerVCpu](#cfn-autoscaling-autoscalinggroup-instancerequirements-memorygibpervcpu)" : MemoryGiBPerVCpuRequest,
   "[MemoryMiB](#cfn-autoscaling-autoscalinggroup-instancerequirements-memorymib)" : MemoryMiBRequest,
+  "[NetworkBandwidthGbps](#cfn-autoscaling-autoscalinggroup-instancerequirements-networkbandwidthgbps)" : NetworkBandwidthGbpsRequest,
   "[NetworkInterfaceCount](#cfn-autoscaling-autoscalinggroup-instancerequirements-networkinterfacecount)" : NetworkInterfaceCountRequest,
   "[OnDemandMaxPricePercentageOverLowestPrice](#cfn-autoscaling-autoscalinggroup-instancerequirements-ondemandmaxpricepercentageoverlowestprice)" : Integer,
   "[RequireHibernateSupport](#cfn-autoscaling-autoscalinggroup-instancerequirements-requirehibernatesupport)" : Boolean,
@@ -53,6 +64,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AcceleratorTotalMemoryMiBRequest
   [AcceleratorTypes](#cfn-autoscaling-autoscalinggroup-instancerequirements-acceleratortypes): 
     - String
+  [AllowedInstanceTypes](#cfn-autoscaling-autoscalinggroup-instancerequirements-allowedinstancetypes): 
+    - String
   [BareMetal](#cfn-autoscaling-autoscalinggroup-instancerequirements-baremetal): String
   [BaselineEbsBandwidthMbps](#cfn-autoscaling-autoscalinggroup-instancerequirements-baselineebsbandwidthmbps): 
     BaselineEbsBandwidthMbpsRequest
@@ -70,6 +83,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     MemoryGiBPerVCpuRequest
   [MemoryMiB](#cfn-autoscaling-autoscalinggroup-instancerequirements-memorymib): 
     MemoryMiBRequest
+  [NetworkBandwidthGbps](#cfn-autoscaling-autoscalinggroup-instancerequirements-networkbandwidthgbps): 
+    NetworkBandwidthGbpsRequest
   [NetworkInterfaceCount](#cfn-autoscaling-autoscalinggroup-instancerequirements-networkinterfacecount): 
     NetworkInterfaceCountRequest
   [OnDemandMaxPricePercentageOverLowestPrice](#cfn-autoscaling-autoscalinggroup-instancerequirements-ondemandmaxpricepercentageoverlowestprice): Integer
@@ -86,7 +101,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `AcceleratorCount`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-acceleratorcount"></a>
 The minimum and maximum number of accelerators \(GPUs, FPGAs, or AWS Inferentia chips\) for an instance type\.  
 To exclude accelerator\-enabled instance types, set `Max` to `0`\.  
-Default: No minimum or maximum  
+Default: No minimum or maximum limits  
 *Required*: No  
 *Type*: [AcceleratorCountRequest](aws-properties-autoscaling-autoscalinggroup-acceleratorcountrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -118,7 +133,7 @@ Default: Any accelerator
 
 `AcceleratorTotalMemoryMiB`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-acceleratortotalmemorymib"></a>
 The minimum and maximum total memory size for the accelerators on an instance type, in MiB\.  
-Default: No minimum or maximum  
+Default: No minimum or maximum limits  
 *Required*: No  
 *Type*: [AcceleratorTotalMemoryMiBRequest](aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -133,6 +148,17 @@ Default: Any accelerator type
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`AllowedInstanceTypes`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-allowedinstancetypes"></a>
+The instance types to apply your specified attributes against\. All other instance types are ignored, even if they match your specified attributes\.  
+You can use strings with one or more wild cards, represented by an asterisk \(`*`\), to allow an instance type, size, or generation\. The following are examples: `m5.8xlarge`, `c5*.*`, `m5a.*`, `r*`, `*3*`\.  
+For example, if you specify `c5*`, Amazon EC2 Auto Scaling will allow the entire C5 instance family, which includes all C5a and C5n instance types\. If you specify `m5a.*`, Amazon EC2 Auto Scaling will allow all the M5a instance types, but not the M5n instance types\.  
+If you specify `AllowedInstanceTypes`, you can't specify `ExcludedInstanceTypes`\.
+Default: All instance types  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `400`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `BareMetal`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-baremetal"></a>
 Indicates whether bare metal instance types are included, excluded, or required\.  
 Default: `excluded`   
@@ -143,7 +169,7 @@ Default: `excluded`
 
 `BaselineEbsBandwidthMbps`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-baselineebsbandwidthmbps"></a>
 The minimum and maximum baseline bandwidth performance for an instance type, in Mbps\. For more information, see [Amazon EBS–optimized instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
-Default: No minimum or maximum  
+Default: No minimum or maximum limits  
 *Required*: No  
 *Type*: [BaselineEbsBandwidthMbpsRequest](aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -168,8 +194,9 @@ Default: Any manufacturer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludedInstanceTypes`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-excludedinstancetypes"></a>
-Lists which instance types to exclude\. You can use strings with one or more wild cards, represented by an asterisk \(`*`\)\. The following are examples: `c5*`, `m5a.*`, `r*`, `*3*`\.   
-For example, if you specify `c5*`, you are excluding the entire C5 instance family, which includes all C5a and C5n instance types\. If you specify `m5a.*`, you are excluding all the M5a instance types, but not the M5n instance types\.  
+The instance types to exclude\. You can use strings with one or more wild cards, represented by an asterisk \(`*`\), to exclude an instance family, type, size, or generation\. The following are examples: `m5.8xlarge`, `c5*.*`, `m5a.*`, `r*`, `*3*`\.   
+For example, if you specify `c5*`, you are excluding the entire C5 instance family, which includes all C5a and C5n instance types\. If you specify `m5a.*`, Amazon EC2 Auto Scaling will exclude all the M5a instance types, but not the M5n instance types\.  
+If you specify `ExcludedInstanceTypes`, you can't specify `AllowedInstanceTypes`\.
 Default: No excluded instance types  
 *Required*: No  
 *Type*: List of String  
@@ -196,7 +223,7 @@ Default: `included`
 `LocalStorageTypes`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-localstoragetypes"></a>
 Indicates the type of local storage that is required\.  
 + For instance types with hard disk drive \(HDD\) storage, specify `hdd`\.
-+ For instance types with solid state drive \(SSD\) storage, specify `sdd`\.
++ For instance types with solid state drive \(SSD\) storage, specify `ssd`\.
 Default: Any local storage type  
 *Required*: No  
 *Type*: List of String  
@@ -204,7 +231,7 @@ Default: Any local storage type
 
 `MemoryGiBPerVCpu`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-memorygibpervcpu"></a>
 The minimum and maximum amount of memory per vCPU for an instance type, in GiB\.  
-Default: No minimum or maximum  
+Default: No minimum or maximum limits  
 *Required*: No  
 *Type*: [MemoryGiBPerVCpuRequest](aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -215,15 +242,22 @@ The minimum and maximum instance memory size for an instance type, in MiB\.
 *Type*: [MemoryMiBRequest](aws-properties-autoscaling-autoscalinggroup-memorymibrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`NetworkBandwidthGbps`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-networkbandwidthgbps"></a>
+The minimum and maximum amount of network bandwidth, in gigabits per second \(Gbps\)\.  
+Default: No minimum or maximum limits  
+*Required*: No  
+*Type*: [NetworkBandwidthGbpsRequest](aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NetworkInterfaceCount`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-networkinterfacecount"></a>
 The minimum and maximum number of network interfaces for an instance type\.  
-Default: No minimum or maximum  
+Default: No minimum or maximum limits  
 *Required*: No  
 *Type*: [NetworkInterfaceCountRequest](aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnDemandMaxPricePercentageOverLowestPrice`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-ondemandmaxpricepercentageoverlowestprice"></a>
-The price protection threshold for On\-Demand Instances\. This is the maximum you’ll pay for an On\-Demand Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes\. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold\. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage\. To turn off price protection, specify a high value, such as `999999`\.   
+The price protection threshold for On\-Demand Instances\. This is the maximum you’ll pay for an On\-Demand Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes\. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold\. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage\. To turn off price protection, specify a high value, such as `999999`\.   
 If you set `DesiredCapacityType` to `vcpu` or `memory-mib`, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price\.   
 Default: `20`   
 *Required*: No  
@@ -239,7 +273,7 @@ Default: `false`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpotMaxPricePercentageOverLowestPrice`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-spotmaxpricepercentageoverlowestprice"></a>
-The price protection threshold for Spot Instances\. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes\. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold\. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage\. To turn off price protection, specify a high value, such as `999999`\.   
+The price protection threshold for Spot Instances\. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes\. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold\. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage\. To turn off price protection, specify a high value, such as `999999`\.   
 If you set `DesiredCapacityType` to `vcpu` or `memory-mib`, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price\.   
 Default: `100`   
 *Required*: No  
@@ -249,7 +283,7 @@ Default: `100`
 
 `TotalLocalStorageGB`  <a name="cfn-autoscaling-autoscalinggroup-instancerequirements-totallocalstoragegb"></a>
 The minimum and maximum total local storage size for an instance type, in GB\.  
-Default: No minimum or maximum  
+Default: No minimum or maximum limits  
 *Required*: No  
 *Type*: [TotalLocalStorageGBRequest](aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

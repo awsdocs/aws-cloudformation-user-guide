@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ManifestName](#cfn-mediapackage-packagingconfiguration-dashmanifest-manifestname)" : String,
   "[MinBufferTimeSeconds](#cfn-mediapackage-packagingconfiguration-dashmanifest-minbuffertimeseconds)" : Integer,
   "[Profile](#cfn-mediapackage-packagingconfiguration-dashmanifest-profile)" : String,
+  "[ScteMarkersSource](#cfn-mediapackage-packagingconfiguration-dashmanifest-sctemarkerssource)" : String,
   "[StreamSelection](#cfn-mediapackage-packagingconfiguration-dashmanifest-streamselection)" : StreamSelection
 }
 ```
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ManifestName](#cfn-mediapackage-packagingconfiguration-dashmanifest-manifestname): String
   [MinBufferTimeSeconds](#cfn-mediapackage-packagingconfiguration-dashmanifest-minbuffertimeseconds): Integer
   [Profile](#cfn-mediapackage-packagingconfiguration-dashmanifest-profile): String
+  [ScteMarkersSource](#cfn-mediapackage-packagingconfiguration-dashmanifest-sctemarkerssource): String
   [StreamSelection](#cfn-mediapackage-packagingconfiguration-dashmanifest-streamselection): 
     StreamSelection
 ```
@@ -32,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediapackage-packagingconfiguration-dashmanifest-properties"></a>
 
 `ManifestLayout`  <a name="cfn-mediapackage-packagingconfiguration-dashmanifest-manifestlayout"></a>
-Determines the position of some tags in the Media Presentation Description \(MPD\)\. When set to **FULL**, elements like `SegmentTemplate` and `ContentProtection` are included in each `Representation`\. When set to **COMPACT**, duplicate elements are combined and presented at the AdaptationSet level\.  
+Determines the position of some tags in the Media Presentation Description \(MPD\)\. When set to `FULL`, elements like `SegmentTemplate` and `ContentProtection` are included in each `Representation`\. When set to `COMPACT`, duplicate elements are combined and presented at the AdaptationSet level\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -50,13 +52,22 @@ Minimum amount of content \(measured in seconds\) that a player must keep availa
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Profile`  <a name="cfn-mediapackage-packagingconfiguration-dashmanifest-profile"></a>
-The DASH profile type\. When set to **HBBTV\_1\_5**, the content is compliant with HbbTV 1\.5\.  
+The DASH profile type\. When set to `HBBTV_1_5`, the content is compliant with HbbTV 1\.5\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ScteMarkersSource`  <a name="cfn-mediapackage-packagingconfiguration-dashmanifest-sctemarkerssource"></a>
+The source of scte markers used\.  
+Value description:  
++  `SEGMENTS` \- The scte markers are sourced from the segments of the ingested content\.
++  `MANIFEST` \- the scte markers are sourced from the manifest of the ingested content\. The MANIFEST value is compatible with source HLS playlists using the SCTE\-35 Enhanced syntax \(`EXT-OATCLS-SCTE35` tags\)\. SCTE\-35 Elemental and SCTE\-35 Daterange syntaxes are not supported with this option\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamSelection`  <a name="cfn-mediapackage-packagingconfiguration-dashmanifest-streamselection"></a>
-Limitations for outputs from the endpoint, based on the video bitrate\.   
+Limitations for outputs from the endpoint, based on the video bitrate\.  
 *Required*: No  
 *Type*: [StreamSelection](aws-properties-mediapackage-packagingconfiguration-streamselection.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

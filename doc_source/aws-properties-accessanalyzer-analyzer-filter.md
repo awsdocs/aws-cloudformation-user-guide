@@ -2,6 +2,8 @@
 
 The criteria that defines the rule\.
 
+To learn about filter keys that you can use to create an archive rule, see [AWS Identity and Access Management Access Analyzer filter keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-reference-filter-keys.html) in the *AWS Identity and Access Management User Guide*\.
+
 ## Syntax<a name="aws-properties-accessanalyzer-analyzer-filter-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

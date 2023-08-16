@@ -1,15 +1,16 @@
 # AWS::SecretsManager::Secret<a name="aws-resource-secretsmanager-secret"></a>
 
-Creates a new secret\. A *secret* can be a password, a set of credentials such as a user name and password, an OAuth token, or other secet information that you store in an encrypted form in Secrets Manager\.
+Creates a new secret\. A *secret* can be a password, a set of credentials such as a user name and password, an OAuth token, or other secret information that you store in an encrypted form in Secrets Manager\.
+
+For Amazon RDS master user credentials, see [AWS::RDS::DBCluster MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)\.
+
+To retrieve a secret in a CloudFormation template, use a *dynamic reference*\. For more information, see [ Retrieve a secret in an AWS CloudFormation resource](https://docs.aws.amazon.com/secretsmanager/latest/userguide/cfn-example_reference-secret.html)\.
+
+A common scenario is to first create a secret with `GenerateSecretString`, which generates a password, and then use a dynamic reference to retrieve the username and password from the secret to use as credentials for a new database\. See the example *Creating a Redshift cluster and a secret for the admin credentials*\.
 
 For information about creating a secret in the console, see [Create a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html)\. For information about creating a secret using the CLI or SDK, see [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html)\.
 
-For information about retrieving a secret from Secrets Manager, see [Retrieve secrets from Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html)\.
-
-To specify the encrypted value for the secret, you must include either the `GenerateSecretString` or the `SecretString` property, but not both\. We recommend that you use the `GenerateSecretString` property to generate a random password as shown in the examples\. You can't generate a secret with a `SecretBinary` secret value using AWS CloudFormation\.
-
-**Note**  
-Do not create a dynamic reference using a backslash `(\)` as the final value\. AWS CloudFormation cannot resolve those references, which causes a resource failure\. 
+For information about retrieving a secret in code, see [Retrieve secrets from Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html)\.
 
 ## Syntax<a name="aws-resource-secretsmanager-secret-syntax"></a>
 
@@ -56,26 +57,22 @@ Properties:
 The description of the secret\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GenerateSecretString`  <a name="cfn-secretsmanager-secret-generatesecretstring"></a>
-A structure that specifies how to generate a password to encrypt and store in the secret\.   
-Either `GenerateSecretString` or `SecretString` must have a value, but not both\. They cannot both be empty\.  
+A structure that specifies how to generate a password to encrypt and store in the secret\. To include a specific string in the secret, use `SecretString` instead\. If you omit both `GenerateSecretString` and `SecretString`, you create an empty secret\. When you make a change to this property, a new secret version is created\.  
 We recommend that you specify the maximum length and include every character type that the system you are generating a password for can support\.  
 *Required*: No  
 *Type*: [GenerateSecretString](aws-properties-secretsmanager-secret-generatesecretstring.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-secretsmanager-secret-kmskeyid"></a>
-The ARN, key ID, or alias of the AWS KMS key that Secrets Manager uses to encrypt the secret value in the secret\.  
+The ARN, key ID, or alias of the AWS KMS key that Secrets Manager uses to encrypt the secret value in the secret\. An alias is always prefixed by `alias/`, for example `alias/aws/secretsmanager`\. For more information, see [About aliases](https://docs.aws.amazon.com/kms/latest/developerguide/alias-about.html)\.  
 To use a AWS KMS key in a different account, use the key ARN or the alias ARN\.  
 If you don't specify this value, then Secrets Manager uses the key `aws/secretsmanager`\. If that key doesn't yet exist, then Secrets Manager creates it for you automatically the first time it encrypts the secret value\.  
 If the secret is in a different AWS account from the credentials calling the API, then you can't use `aws/secretsmanager` to encrypt the secret, and you must create and use a customer managed AWS KMS key\.   
 *Required*: No  
 *Type*: String  
-*Minimum*: `0`  
-*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-secretsmanager-secret-name"></a>
@@ -84,8 +81,6 @@ The secret name can contain ASCII letters, numbers, and the following characters
 Do not end your secret name with a hyphen followed by six characters\. If you do so, you risk confusion and unexpected results when searching for a secret by partial ARN\. Secrets Manager automatically adds a hyphen and six random characters after the secret name at the end of the ARN\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReplicaRegions`  <a name="cfn-secretsmanager-secret-replicaregions"></a>
@@ -95,8 +90,7 @@ A custom type that specifies a `Region` and the `KmsKeyId` for a replica secret\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretString`  <a name="cfn-secretsmanager-secret-secretstring"></a>
-The text to encrypt and store in the secret\. We recommend you use a JSON structure of key/value pairs for your secret value\.   
-Either `GenerateSecretString` or `SecretString` must have a value, but not both\. They cannot both be empty\. We recommend that you use the `GenerateSecretString` property to generate a random password\.   
+The text to encrypt and store in the secret\. We recommend you use a JSON structure of key/value pairs for your secret value\. To generate a random password, use `GenerateSecretString` instead\. If you omit both `GenerateSecretString` and `SecretString`, you create an empty secret\. When you make a change to this property, a new secret version is created\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -129,6 +123,17 @@ When you pass the logical ID of an `AWS::SecretsManager::Secret` resource to the
 If you know the ARN of a secret, you can reference a secret you created in one part of the stack template from within the definition of another resource in the same template\. You typically use the `Ref` function with the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type to get references to both the secret and its associated database\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+
+### Fn::GetAtt<a name="aws-resource-secretsmanager-secret-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-secretsmanager-secret-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ARN of the secret\.
 
 ## Examples<a name="aws-resource-secretsmanager-secret--examples"></a>
 
@@ -269,6 +274,50 @@ MyReplicatedSecret:
     - Region: us-east-1
       KmsKeyId: alias/exampleAlias
     - Region: us-east-2
+```
+
+### Creating a Redshift cluster and a secret for the admin credentials<a name="aws-resource-secretsmanager-secret--examples--Creating_a_Redshift_cluster_and_a_secret_for_the_admin_credentials"></a>
+
+The following example creates a secret and an Amazon Redshift resource as defined by the `TargetType` using the credentials found in the secret as the new Amazon Redshift user and password\. Then the code updates the secret with the connection details of the AWS resource by defining the `SecretTargetAttachment` object\.
+
+1. Define the secret without referencing the service or database\. You can't reference the service or database because it doesn't exist yet\. The secret must contain a username and password\.
+
+1. Next, define the service or database\. Include the reference to the secret to use stored credentials to define the database admin user and password\.
+
+1. Finally, define a `SecretTargetAttachment` resource type to finish configuring the secret with the required database engine type and the connection details of the service or database\. The rotation function requires the details, if you attach one later by defining a [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type\.
+
+#### YAML<a name="aws-resource-secretsmanager-secret--examples--Creating_a_Redshift_cluster_and_a_secret_for_the_admin_credentials--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyRedshiftSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: This is a Secrets Manager secret for a Redshift cluster
+      GenerateSecretString:
+        SecretStringTemplate: '{"username": "admin"}'
+        GenerateStringKey: password
+        PasswordLength: 16
+        ExcludeCharacters: "\"'@/\\"
+  MyRedshiftCluster:
+    Type: AWS::Redshift::Cluster
+    Properties:
+      DBName: myjsondb
+      MasterUsername:
+        Fn::Sub: "{{resolve:secretsmanager:${MyRedshiftSecret}::username}}"
+      MasterUserPassword:
+        Fn::Sub: "{{resolve:secretsmanager:${MyRedshiftSecret}::password}}"
+      NodeType: ds2.xlarge
+      ClusterType: single-node
+  SecretRedshiftAttachment:
+    Type: AWS::SecretsManager::SecretTargetAttachment
+    Properties:
+      SecretId:
+        Ref: MyRedshiftSecret
+      TargetId:
+        Ref: MyRedshiftCluster
+      TargetType: AWS::Redshift::Cluster
 ```
 
 ## See also<a name="aws-resource-secretsmanager-secret--seealso"></a>

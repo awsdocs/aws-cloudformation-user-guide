@@ -1,9 +1,11 @@
 # AWS::Personalize::Dataset DatasetImportJob<a name="aws-properties-personalize-dataset-datasetimportjob"></a>
 
-Describes a job that imports training data from a data source \(Amazon S3 bucket\) to an Amazon Personalize dataset\. For more information, see [CreateDatasetImportJob](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html)\.
+Describes a job that imports training data from a data source \(Amazon S3 bucket\) to an Amazon Personalize dataset\. 
 
 A dataset import job can be in one of the following states:
 + CREATE PENDING > CREATE IN\_PROGRESS > ACTIVE \-or\- CREATE FAILED
+
+If you specify a dataset import job as part of a dataset, all dataset import job fields are required\.
 
 ## Syntax<a name="aws-properties-personalize-dataset-datasetimportjob-syntax"></a>
 
@@ -15,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DatasetArn](#cfn-personalize-dataset-datasetimportjob-datasetarn)" : String,
   "[DatasetImportJobArn](#cfn-personalize-dataset-datasetimportjob-datasetimportjobarn)" : String,
-  "[DataSource](#cfn-personalize-dataset-datasetimportjob-datasource)" : Json,
+  "[DataSource](#cfn-personalize-dataset-datasetimportjob-datasource)" : DataSource,
   "[JobName](#cfn-personalize-dataset-datasetimportjob-jobname)" : String,
   "[RoleArn](#cfn-personalize-dataset-datasetimportjob-rolearn)" : String
 }
@@ -26,7 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DatasetArn](#cfn-personalize-dataset-datasetimportjob-datasetarn): String
   [DatasetImportJobArn](#cfn-personalize-dataset-datasetimportjob-datasetimportjobarn): String
-  [DataSource](#cfn-personalize-dataset-datasetimportjob-datasource): Json
+  [DataSource](#cfn-personalize-dataset-datasetimportjob-datasource): 
+    DataSource
   [JobName](#cfn-personalize-dataset-datasetimportjob-jobname): String
   [RoleArn](#cfn-personalize-dataset-datasetimportjob-rolearn): String
 ```
@@ -52,7 +55,7 @@ The ARN of the dataset import job\.
 `DataSource`  <a name="cfn-personalize-dataset-datasetimportjob-datasource"></a>
 The Amazon S3 bucket that contains the training data to import\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [DataSource](aws-properties-personalize-dataset-datasource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobName`  <a name="cfn-personalize-dataset-datasetimportjob-jobname"></a>

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SlotTypeValue<a name="aws-properties-lex-bot-slottypevalue"></a>
 
-Each slot type can have a set of values\. The `SlotTypeValue` represents a value that the slot type can take\.
+Each slot type can have a set of values\. Each `SlotTypeValue` represents a value that the slot type can take\.
 
 ## Syntax<a name="aws-properties-lex-bot-slottypevalue-syntax"></a>
 
@@ -36,4 +36,5 @@ The value of the slot type entry\.
 Additional values related to the slot type entry\.  
 *Required*: No  
 *Type*: List of [SampleValue](aws-properties-lex-bot-samplevalue.md)  
+*Maximum*: `10000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

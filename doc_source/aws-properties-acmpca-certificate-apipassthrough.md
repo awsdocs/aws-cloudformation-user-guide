@@ -2,7 +2,7 @@
 
 Contains X\.509 certificate information to be placed in an issued certificate\. An `APIPassthrough` or `APICSRPassthrough` template variant must be selected, or else this parameter is ignored\. 
 
-If conflicting or duplicate certificate information is supplied from other sources, ACM Private CA applies [order of operation rules](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html#template-order-of-operations) to determine what information is used\.
+If conflicting or duplicate certificate information is supplied from other sources, AWS Private CA applies [order of operation rules](https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations) to determine what information is used\.
 
 ## Syntax<a name="aws-properties-acmpca-certificate-apipassthrough-syntax"></a>
 

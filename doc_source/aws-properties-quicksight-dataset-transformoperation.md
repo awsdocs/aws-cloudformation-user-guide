@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CastColumnTypeOperation](#cfn-quicksight-dataset-transformoperation-castcolumntypeoperation)" : CastColumnTypeOperation,
   "[CreateColumnsOperation](#cfn-quicksight-dataset-transformoperation-createcolumnsoperation)" : CreateColumnsOperation,
   "[FilterOperation](#cfn-quicksight-dataset-transformoperation-filteroperation)" : FilterOperation,
+  "[OverrideDatasetParameterOperation](#cfn-quicksight-dataset-transformoperation-overridedatasetparameteroperation)" : OverrideDatasetParameterOperation,
   "[ProjectOperation](#cfn-quicksight-dataset-transformoperation-projectoperation)" : ProjectOperation,
   "[RenameColumnOperation](#cfn-quicksight-dataset-transformoperation-renamecolumnoperation)" : RenameColumnOperation,
   "[TagColumnOperation](#cfn-quicksight-dataset-transformoperation-tagcolumnoperation)" : TagColumnOperation
@@ -28,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     CreateColumnsOperation
   [FilterOperation](#cfn-quicksight-dataset-transformoperation-filteroperation): 
     FilterOperation
+  [OverrideDatasetParameterOperation](#cfn-quicksight-dataset-transformoperation-overridedatasetparameteroperation): 
+    OverrideDatasetParameterOperation
   [ProjectOperation](#cfn-quicksight-dataset-transformoperation-projectoperation): 
     ProjectOperation
   [RenameColumnOperation](#cfn-quicksight-dataset-transformoperation-renamecolumnoperation): 
@@ -54,6 +57,12 @@ An operation that creates calculated columns\. Columns created in one such opera
 An operation that filters rows based on some condition\.  
 *Required*: No  
 *Type*: [FilterOperation](aws-properties-quicksight-dataset-filteroperation.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OverrideDatasetParameterOperation`  <a name="cfn-quicksight-dataset-transformoperation-overridedatasetparameteroperation"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [OverrideDatasetParameterOperation](aws-properties-quicksight-dataset-overridedatasetparameteroperation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProjectOperation`  <a name="cfn-quicksight-dataset-transformoperation-projectoperation"></a>

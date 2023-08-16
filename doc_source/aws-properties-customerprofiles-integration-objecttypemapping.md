@@ -1,6 +1,6 @@
 # AWS::CustomerProfiles::Integration ObjectTypeMapping<a name="aws-properties-customerprofiles-integration-objecttypemapping"></a>
 
-<a name="aws-properties-customerprofiles-integration-objecttypemapping-description"></a>The `ObjectTypeMapping` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::CustomerProfiles::Integration](aws-resource-customerprofiles-integration.md)\.
+A map in which each key is an event type from an external application such as Segment or Shopify, and each value is an `ObjectTypeName` \(template\) used to ingest the event\.
 
 ## Syntax<a name="aws-properties-customerprofiles-integration-objecttypemapping-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-customerprofiles-integration-objecttypemapping-properties"></a>
 
 `Key`  <a name="cfn-customerprofiles-integration-objecttypemapping-key"></a>
-Not currently supported by AWS CloudFormation\.  
+The key\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-customerprofiles-integration-objecttypemapping-value"></a>
-Not currently supported by AWS CloudFormation\.  
+The value\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

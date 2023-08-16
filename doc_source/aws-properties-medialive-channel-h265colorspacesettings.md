@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ColorSpacePassthroughSettings](#cfn-medialive-channel-h265colorspacesettings-colorspacepassthroughsettings)" : ColorSpacePassthroughSettings,
+  "[DolbyVision81Settings](#cfn-medialive-channel-h265colorspacesettings-dolbyvision81settings)" : DolbyVision81Settings,
   "[Hdr10Settings](#cfn-medialive-channel-h265colorspacesettings-hdr10settings)" : Hdr10Settings,
   "[Rec601Settings](#cfn-medialive-channel-h265colorspacesettings-rec601settings)" : Rec601Settings,
   "[Rec709Settings](#cfn-medialive-channel-h265colorspacesettings-rec709settings)" : Rec709Settings
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ColorSpacePassthroughSettings](#cfn-medialive-channel-h265colorspacesettings-colorspacepassthroughsettings): 
     ColorSpacePassthroughSettings
+  [DolbyVision81Settings](#cfn-medialive-channel-h265colorspacesettings-dolbyvision81settings): 
+    DolbyVision81Settings
   [Hdr10Settings](#cfn-medialive-channel-h265colorspacesettings-hdr10settings): 
     Hdr10Settings
   [Rec601Settings](#cfn-medialive-channel-h265colorspacesettings-rec601settings): 
@@ -38,6 +41,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Passthrough applies no color space conversion to the output\.   
 *Required*: No  
 *Type*: [ColorSpacePassthroughSettings](aws-properties-medialive-channel-colorspacepassthroughsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DolbyVision81Settings`  <a name="cfn-medialive-channel-h265colorspacesettings-dolbyvision81settings"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DolbyVision81Settings](aws-properties-medialive-channel-dolbyvision81settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Hdr10Settings`  <a name="cfn-medialive-channel-h265colorspacesettings-hdr10settings"></a>

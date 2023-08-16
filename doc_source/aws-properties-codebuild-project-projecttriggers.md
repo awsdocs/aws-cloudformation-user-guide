@@ -2,6 +2,9 @@
 
  `ProjectTriggers` is a property of the [AWS CodeBuild Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html) resource that specifies webhooks that trigger an AWS CodeBuild build\. 
 
+**Note**  
+The Webhook feature isn't available in AWS CloudFormation for GitHub Enterprise projects\. Use the AWS CLI or AWS CodeBuild console to create the webhook\.
+
 ## Syntax<a name="aws-properties-codebuild-project-projecttriggers-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

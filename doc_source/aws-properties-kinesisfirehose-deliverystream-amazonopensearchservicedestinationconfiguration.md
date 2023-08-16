@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[BufferingHints](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-bufferinghints)" : AmazonopensearchserviceBufferingHints,
   "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-cloudwatchloggingoptions)" : CloudWatchLoggingOptions,
   "[ClusterEndpoint](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-clusterendpoint)" : String,
+  "[DocumentIdOptions](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-documentidoptions)" : DocumentIdOptions,
   "[DomainARN](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-domainarn)" : String,
   "[IndexName](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-indexname)" : String,
   "[IndexRotationPeriod](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-indexrotationperiod)" : String,
@@ -34,6 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-cloudwatchloggingoptions): 
     CloudWatchLoggingOptions
   [ClusterEndpoint](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-clusterendpoint): String
+  [DocumentIdOptions](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-documentidoptions): 
+    DocumentIdOptions
   [DomainARN](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-domainarn): String
   [IndexName](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-indexname): String
   [IndexRotationPeriod](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-indexrotationperiod): String
@@ -71,6 +74,12 @@ The endpoint to use when communicating with the cluster\. Specify either this Cl
 *Minimum*: `1`  
 *Maximum*: `512`  
 *Pattern*: `https:.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DocumentIdOptions`  <a name="cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-documentidoptions"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DocumentIdOptions](aws-properties-kinesisfirehose-deliverystream-documentidoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainARN`  <a name="cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration-domainarn"></a>

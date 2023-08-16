@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ElastiCache::UserGroup",
   "Properties" : {
       "[Engine](#cfn-elasticache-usergroup-engine)" : String,
+      "[Tags](#cfn-elasticache-usergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserGroupId](#cfn-elasticache-usergroup-usergroupid)" : String,
       "[UserIds](#cfn-elasticache-usergroup-userids)" : [ String, ... ]
     }
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ElastiCache::UserGroup
 Properties: 
   [Engine](#cfn-elasticache-usergroup-engine): String
+  [Tags](#cfn-elasticache-usergroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserGroupId](#cfn-elasticache-usergroup-usergroupid): String
   [UserIds](#cfn-elasticache-usergroup-userids): 
     - String
@@ -39,6 +42,12 @@ The current supported value is redis\.
 *Pattern*: `[a-zA-Z]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Tags`  <a name="cfn-elasticache-usergroup-tags"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `UserGroupId`  <a name="cfn-elasticache-usergroup-usergroupid"></a>
 The ID of the user group\.  
 *Required*: Yes  
@@ -47,7 +56,7 @@ The ID of the user group\.
 
 `UserIds`  <a name="cfn-elasticache-usergroup-userids"></a>
 The list of user IDs that belong to the user group\. A user named `default` must be included\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -61,9 +70,9 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-elasticache-usergroup-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-elasticache-usergroup-return-values-fn--getatt-fn--getatt"></a>
 

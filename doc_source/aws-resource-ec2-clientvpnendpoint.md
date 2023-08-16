@@ -71,7 +71,7 @@ Information about the authentication method to be used to authenticate clients\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClientCidrBlock`  <a name="cfn-ec2-clientvpnendpoint-clientcidrblock"></a>
-The IPv4 address range, in CIDR notation, from which to assign client IP addresses\. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually\. The address range cannot be changed after the Client VPN endpoint has been created\. The CIDR block should be /22 or greater\.  
+The IPv4 address range, in CIDR notation, from which to assign client IP addresses\. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually\. The address range cannot be changed after the Client VPN endpoint has been created\. Client CIDR range must have a size of at least /22 and must not be greater than /12\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -179,9 +179,9 @@ Default Value: `443`
 
 ### Ref<a name="aws-resource-ec2-clientvpnendpoint-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Client VPN endpoint ID\. For example: `cvpn-endpoint-1234567890abcdef0`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Client VPN endpoint ID\. For example: `cvpn-endpoint-1234567890abcdef0`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-clientvpnendpoint--examples"></a>
 

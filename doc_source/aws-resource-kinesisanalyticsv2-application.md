@@ -14,8 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration)" : ApplicationConfiguration,
       "[ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription)" : String,
+      "[ApplicationMaintenanceConfiguration](#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)" : ApplicationMaintenanceConfiguration,
       "[ApplicationMode](#cfn-kinesisanalyticsv2-application-applicationmode)" : String,
       "[ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname)" : String,
+      "[RunConfiguration](#cfn-kinesisanalyticsv2-application-runconfiguration)" : RunConfiguration,
       "[RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment)" : String,
       "[ServiceExecutionRole](#cfn-kinesisanalyticsv2-application-serviceexecutionrole)" : String,
       "[Tags](#cfn-kinesisanalyticsv2-application-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -31,8 +33,12 @@ Properties:
   [ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration): 
     ApplicationConfiguration
   [ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription): String
+  [ApplicationMaintenanceConfiguration](#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration): 
+    ApplicationMaintenanceConfiguration
   [ApplicationMode](#cfn-kinesisanalyticsv2-application-applicationmode): String
   [ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname): String
+  [RunConfiguration](#cfn-kinesisanalyticsv2-application-runconfiguration): 
+    RunConfiguration
   [RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment): String
   [ServiceExecutionRole](#cfn-kinesisanalyticsv2-application-serviceexecutionrole): String
   [Tags](#cfn-kinesisanalyticsv2-application-tags): 
@@ -55,6 +61,12 @@ The description of the application\.
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ApplicationMaintenanceConfiguration`  <a name="cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ApplicationMaintenanceConfiguration](aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ApplicationMode`  <a name="cfn-kinesisanalyticsv2-application-applicationmode"></a>
 To create a Kinesis Data Analytics Studio notebook, you must set the mode to `INTERACTIVE`\. However, for a Kinesis Data Analytics for Apache Flink application, the mode is optional\.  
 *Required*: No  
@@ -71,11 +83,17 @@ The name of the application\.
 *Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`RunConfiguration`  <a name="cfn-kinesisanalyticsv2-application-runconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [RunConfiguration](aws-properties-kinesisanalyticsv2-application-runconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RuntimeEnvironment`  <a name="cfn-kinesisanalyticsv2-application-runtimeenvironment"></a>
 The runtime environment for the application\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `FLINK-1_11 | FLINK-1_13 | FLINK-1_6 | FLINK-1_8 | SQL-1_0 | ZEPPELIN-FLINK-1_0 | ZEPPELIN-FLINK-2_0`  
+*Allowed values*: `FLINK-1_11 | FLINK-1_13 | FLINK-1_15 | FLINK-1_6 | FLINK-1_8 | SQL-1_0 | ZEPPELIN-FLINK-1_0 | ZEPPELIN-FLINK-2_0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceExecutionRole`  <a name="cfn-kinesisanalyticsv2-application-serviceexecutionrole"></a>
@@ -118,7 +136,7 @@ The following example shows how to create a simple application by using a deploy
         "MyApplication": {
             "Type": "AWS::KinesisAnalyticsV2::Application",
             "Properties": {
-                "RuntimeEnvironment": "FLINK-1_11",
+                "RuntimeEnvironment": "FLINK-1_15",
                 "ServiceExecutionRole": {
                     "Fn::GetAtt": [
                         "ServiceExecutionRole",
@@ -199,7 +217,7 @@ Resources:
   MyApplication:
     Type: AWS::KinesisAnalyticsV2::Application
     Properties:
-      RuntimeEnvironment: FLINK-1_11
+      RuntimeEnvironment: FLINK-1_15
       ServiceExecutionRole: !GetAtt ServiceExecutionRole.Arn
       ApplicationConfiguration:
         ApplicationCodeConfiguration:
@@ -251,7 +269,7 @@ The following example shows how to create a simple Studio application with an Am
             "Type": "AWS::KinesisAnalyticsV2::Application",
             "Properties": {
                 "ApplicationMode": "INTERACTIVE",
-                "RuntimeEnvironment": "ZEPPELIN-FLINK-1_0",
+                "RuntimeEnvironment": "ZEPPELIN-FLINK-3_0",
                 "ServiceExecutionRole": {
                     "Fn::GetAtt": [
                         "ServiceExecutionRole",
@@ -277,17 +295,25 @@ The following example shows how to create a simple Studio application with an Am
                             {
                                 "ArtifactType": "DEPENDENCY_JAR",
                                 "MavenReference": {
-                                    "GroupId": "software.amazon.kinesis",
-                                    "ArtifactId": "amazon-kinesis-sql-connector-flink",
-                                    "Version": "2.0.3"
+                                    "GroupId": "org.apache.flink",
+                                    "ArtifactId": "flink-sql-connector-kinesis",
+                                    "Version": "1.15.4"
                                 }
                             },
                             {
                                 "ArtifactType": "DEPENDENCY_JAR",
                                 "MavenReference": {
                                     "GroupId": "org.apache.flink",
-                                    "ArtifactId": "flink-sql-connector-kafka_2.12",
-                                    "Version": "1.11.1"
+                                    "ArtifactId": "flink-connector-kafka",
+                                    "Version": "1.15.4"
+                                }
+                            },
+                            {
+                                "ArtifactType": "DEPENDENCY_JAR",
+                                "MavenReference": {
+                                    "GroupId": "software.amazon.msk",
+                                    "ArtifactId": "aws-msk-iam-auth",
+                                    "Version": "1.1.6"
                                 }
                             }
                         ]
@@ -392,7 +418,7 @@ Resources:
     Type: AWS::KinesisAnalyticsV2::Application
     Properties:
       ApplicationMode: INTERACTIVE
-      RuntimeEnvironment: ZEPPELIN-FLINK-1_0
+      RuntimeEnvironment: ZEPPELIN-FLINK-3_0
       ServiceExecutionRole: !GetAtt ServiceExecutionRole.Arn
       ApplicationConfiguration:
         FlinkApplicationConfiguration:
@@ -406,14 +432,19 @@ Resources:
           CustomArtifactsConfiguration:
             - ArtifactType: DEPENDENCY_JAR
               MavenReference:
-                GroupId: software.amazon.kinesis
-                ArtifactId: amazon-kinesis-sql-connector-flink
-                Version: 2.0.3
+                GroupId: org.apache.flink
+                ArtifactId: flink-sql-connector-kinesis
+                Version: 1.15.4
             - ArtifactType: DEPENDENCY_JAR
               MavenReference:
                 GroupId: org.apache.flink
-                ArtifactId: flink-sql-connector-kafka_2.12
-                Version: 1.11.1
+                ArtifactId: flink-connector-kafka
+                Version: 1.15.4
+            - ArtifactType: DEPENDENCY_JAR
+              MavenReference:
+                GroupId: software.amazon.msk
+                ArtifactId: aws-msk-iam-auth
+                Version: 1.1.6
 
   GlueDatabase:
     Type: AWS::Glue::Database

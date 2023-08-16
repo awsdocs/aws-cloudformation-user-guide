@@ -65,6 +65,7 @@ The name of the solution\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PerformAutoML`  <a name="cfn-personalize-solution-performautoml"></a>
+We don't recommend enabling automated machine learning\. Instead, match your use case to the available Amazon Personalize recipes\. For more information, see [Determining your use case\.](https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html) 
 When true, Amazon Personalize performs a search for the best USER\_PERSONALIZATION recipe from the list specified in the solution configuration \(`recipeArn` must not be specified\)\. When false \(the default\), Amazon Personalize uses `recipeArn` for training\.  
 *Required*: No  
 *Type*: Boolean  
@@ -77,7 +78,7 @@ Whether to perform hyperparameter optimization \(HPO\) on the chosen recipe\. Th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RecipeArn`  <a name="cfn-personalize-solution-recipearn"></a>
-The ARN of the recipe used to create the solution\.  
+The ARN of the recipe used to create the solution\. This is required when `performAutoML` is false\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `256`  
@@ -94,17 +95,62 @@ Describes the configuration properties for the solution\.
 
 ### Ref<a name="aws-resource-personalize-solution-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the resource\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-personalize-solution-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-personalize-solution-return-values-fn--getatt-fn--getatt"></a>
 
 `SolutionArn`  <a name="SolutionArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the solution\.
+
+## Examples<a name="aws-resource-personalize-solution--examples"></a>
+
+
+
+### Creating a solution<a name="aws-resource-personalize-solution--examples--Creating_a_solution"></a>
+
+The following example creates an Amazon Personalize solution with the User\-Personalization recipe and an event value threshold\.
+
+#### JSON<a name="aws-resource-personalize-solution--examples--Creating_a_solution--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MySolution": {
+            "Type": "AWS::Personalize::Solution",
+            "Properties": {
+               "Name": "my-solution-name",
+               "DatasetGroupArn": "arn:aws:personalize:us-west-2:123456789012:dataset-group/my-dataset-group-name",
+               "RecipeArn": "arn:aws:personalize:::recipe/aws-user-personalization",
+               "SolutionConfig": {
+                  "EventValueThreshold" : ".05"
+                }
+            }
+         }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-personalize-solution--examples--Creating_a_solution--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MySolution:
+    Type: 'AWS::Personalize::Solution'
+    Properties:
+      Name: my-solution-name
+      DatasetGroupArn: >-
+        arn:aws:personalize:us-west-2:123456789012:dataset-group/my-dataset-group-name
+      RecipeArn: 'arn:aws:personalize:::recipe/aws-user-personalization'
+      SolutionConfig:
+        EventValueThreshold: '.05'
+```

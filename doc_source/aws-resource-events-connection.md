@@ -36,6 +36,7 @@ Properties:
 
 `AuthorizationType`  <a name="cfn-events-connection-authorizationtype"></a>
 The type of authorization to use for the connection\.  
+OAUTH tokens are refreshed when a 401 or 407 response is returned\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `API_KEY | BASIC | OAUTH_CLIENT_CREDENTIALS`  
@@ -68,13 +69,13 @@ The name for the connection to create\.
 
 ### Ref<a name="aws-resource-events-connection-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the connection that was created by the request\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the connection that was created by the request\.
 
 ### Fn::GetAtt<a name="aws-resource-events-connection-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-events-connection-return-values-fn--getatt-fn--getatt"></a>
 

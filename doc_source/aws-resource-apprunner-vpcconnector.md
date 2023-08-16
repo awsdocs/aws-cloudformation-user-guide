@@ -46,6 +46,7 @@ A list of IDs of security groups that App Runner should use for access to AWS re
 
 `Subnets`  <a name="cfn-apprunner-vpcconnector-subnets"></a>
 A list of IDs of subnets that App Runner should use when it associates your service with a custom Amazon VPC\. Specify IDs of subnets of a single Amazon VPC\. App Runner determines the Amazon VPC from the subnets you specify\.  
+ App Runner currently only provides support for IPv4\. 
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -70,15 +71,15 @@ If you don't specify a name, AWS CloudFormation generates a name for your VPC co
 
 ### Ref<a name="aws-resource-apprunner-vpcconnector-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a unique identifier for this resource\.
+When the logical ID of this resource is provided to the `Ref`intrinsic function, `Ref`returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-apprunner-vpcconnector-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-apprunner-vpcconnector-return-values-fn--getatt-fn--getatt"></a>
 

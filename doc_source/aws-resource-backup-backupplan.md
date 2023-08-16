@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Backup::BackupPlan",
   "Properties" : {
       "[BackupPlan](#cfn-backup-backupplan-backupplan)" : BackupPlanResourceType,
-      "[BackupPlanTags](#cfn-backup-backupplan-backupplantags)" : {Key : Value, ...}
+      "[BackupPlanTags](#cfn-backup-backupplan-backupplantags)" : {Key: Value, ...}
     }
 }
 ```
@@ -28,7 +28,7 @@ Properties:
   [BackupPlan](#cfn-backup-backupplan-backupplan): 
     BackupPlanResourceType
   [BackupPlanTags](#cfn-backup-backupplan-backupplantags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-backup-backupplan-properties"></a>
@@ -49,15 +49,15 @@ To help organize your resources, you can assign your own metadata to the resourc
 
 ### Ref<a name="aws-resource-backup-backupplan-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns `BackupPlanId`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns `BackupPlanId`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-backup-backupplan-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-backup-backupplan-return-values-fn--getatt-fn--getatt"></a>
 

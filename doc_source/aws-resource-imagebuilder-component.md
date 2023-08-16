@@ -1,6 +1,8 @@
 # AWS::ImageBuilder::Component<a name="aws-resource-imagebuilder-component"></a>
 
-Components are orchestration documents that define a sequence of steps for downloading, installing, and configuring software packages or for defining tests to run on software packages\. They also define validation and security hardening steps\. A component is defined using a YAML document format\. For more information, see [Using Documents in Image Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-application-documents.html)\.
+Creates a new component that can be used to build, validate, test, and assess your image\. The component is based on a YAML document that you specify using exactly one of the following methods:
++ Inline, using the `data` property in the request body\.
++ A URL that points to a YAML document file stored in Amazon S3, using the `uri` property in the request body\.
 
 ## Syntax<a name="aws-resource-imagebuilder-component-syntax"></a>
 
@@ -19,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-imagebuilder-component-name)" : String,
       "[Platform](#cfn-imagebuilder-component-platform)" : String,
       "[SupportedOsVersions](#cfn-imagebuilder-component-supportedosversions)" : [ String, ... ],
-      "[Tags](#cfn-imagebuilder-component-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-imagebuilder-component-tags)" : {Key: Value, ...},
       "[Uri](#cfn-imagebuilder-component-uri)" : String,
       "[Version](#cfn-imagebuilder-component-version)" : String
     }
@@ -40,7 +42,7 @@ Properties:
   [SupportedOsVersions](#cfn-imagebuilder-component-supportedosversions): 
     - String
   [Tags](#cfn-imagebuilder-component-tags): 
-    Key : Value
+    Key: Value
   [Uri](#cfn-imagebuilder-component-uri): String
   [Version](#cfn-imagebuilder-component-version): String
 ```
@@ -48,7 +50,7 @@ Properties:
 ## Properties<a name="aws-resource-imagebuilder-component-properties"></a>
 
 `ChangeDescription`  <a name="cfn-imagebuilder-component-changedescription"></a>
-A change description of the component\. For example `initial version`\.  
+The change description of the component\. Describes what change has been made in this version, or what makes this version different from other versions of this component\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -56,13 +58,16 @@ A change description of the component\. For example `initial version`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Data`  <a name="cfn-imagebuilder-component-data"></a>
-The data of the component\. For example, `name: HelloWorldTestingDocument\ndescription: This is hello world testing document.\nschemaVersion: 1.0\n\nphases:\n - name: test\n steps:\n - name: HelloWorldStep\n action: ExecuteBash\n inputs:\n commands:\n - echo \"Hello World! Test.\"\n`\. See Examples below for the schema for creating a component using Data\.   
+Component `data` contains inline YAML document content for the component\. Alternatively, you can specify the `uri` of a YAML document file stored in Amazon S3\. However, you cannot specify both properties\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `16000`  
+*Pattern*: `[^\x00]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-imagebuilder-component-description"></a>
-The description of the component\.  
+Describes the contents of the component\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -70,7 +75,7 @@ The description of the component\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-imagebuilder-component-kmskeyid"></a>
-The KMS key identifier used to encrypt the component\.  
+The ID of the KMS key that is used to encrypt this component\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -85,7 +90,7 @@ The name of the component\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Platform`  <a name="cfn-imagebuilder-component-platform"></a>
-The platform of the component\. For example, `Windows`\.  
+The operating system platform of the component\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `Linux | Windows`  
@@ -99,7 +104,7 @@ The operating system \(OS\) version supported by the component\. If the OS infor
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-imagebuilder-component-tags"></a>
-The tags associated with the component\.  
+The tags that apply to the component\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -115,22 +120,21 @@ Alternatively, you can specify the YAML document inline, using the component `da
 The component version\. For example, `1.0.0`\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^[0-9]+\.[0-9]+\.[0-9]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-imagebuilder-component-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-component-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:component/examplecomponent/2019.12.02/1`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:component/examplecomponent/2019.12.02/1`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-imagebuilder-component-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-imagebuilder-component-return-values-fn--getatt-fn--getatt"></a>
 
@@ -144,7 +148,7 @@ Returns the encryption status of the component\. For example `true` or `false`\.
 Returns the name of the component\.
 
 `Type`  <a name="Type-fn::getatt"></a>
-Returns the component type\. For example, `BUILD` or `TEST`\.
+Image Builder determines the component type based on the phases that are defined in the component document\. If there is only one phase, and its name is "test", then the type is `TEST`\. For all other components, the type is `BUILD`\.
 
 ## Examples<a name="aws-resource-imagebuilder-component--examples"></a>
 

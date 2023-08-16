@@ -1,6 +1,6 @@
 # AWS::WAFv2::RuleGroup OrStatement<a name="aws-properties-wafv2-rulegroup-orstatement"></a>
 
-A logical rule statement used to combine other rule statements with OR logic\. You provide more than one [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-notstatement.html#cfn-wafv2-webacl-notstatement-statement) within the `OrStatement`\. 
+A logical rule statement used to combine other rule statements with OR logic\. You provide more than one `Statement` within the `OrStatement`\. 
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-orstatement-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::CustomerProfiles::Integration TriggerProperties<a name="aws-properties-customerprofiles-integration-triggerproperties"></a>
 
-<a name="aws-properties-customerprofiles-integration-triggerproperties-description"></a>The `TriggerProperties` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::CustomerProfiles::Integration](aws-resource-customerprofiles-integration.md)\.
+Specifies the configuration details that control the trigger for a flow\. Currently, these settings only apply to the Scheduled trigger type\.
 
 ## Syntax<a name="aws-properties-customerprofiles-integration-triggerproperties-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-customerprofiles-integration-triggerproperties-properties"></a>
 
 `Scheduled`  <a name="cfn-customerprofiles-integration-triggerproperties-scheduled"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies the configuration details of a schedule\-triggered flow that you define\.  
 *Required*: No  
 *Type*: [ScheduledTriggerProperties](aws-properties-customerprofiles-integration-scheduledtriggerproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

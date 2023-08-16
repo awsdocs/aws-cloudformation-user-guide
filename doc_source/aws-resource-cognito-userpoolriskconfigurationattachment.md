@@ -80,13 +80,13 @@ The user pool ID\.
 
 ### Ref<a name="aws-resource-cognito-userpoolriskconfigurationattachment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the physicalResourceId, which is “UserPoolRiskConfigurationAttachment\-UserPoolId\-ClientId"\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the physicalResourceId, which is “UserPoolRiskConfigurationAttachment\-UserPoolId\-ClientId"\. For example:
 
  `{ "Ref": “UserPoolRiskConfigurationAttachment-us-east-1_FAKEPOOLID-2asc123fakeclientidajjulj6bh” }` 
 
 For the Amazon Cognito risk configuration attachment `UserPoolRiskConfigurationAttachment-us-east-1_FAKEPOOLID-2asc123fakeclientidajjulj6bh`, Ref returns the name of the risk configuration attachment\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cognito-userpoolriskconfigurationattachment--examples"></a>
 

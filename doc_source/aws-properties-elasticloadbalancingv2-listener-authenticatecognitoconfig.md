@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams)" : {Key : Value, ...},
+  "[AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams)" : {Key: Value, ...},
   "[OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest)" : String,
   "[Scope](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope)" : String,
   "[SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename)" : String,
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AuthenticationRequestExtraParams](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams): 
-    Key : Value
+    Key: Value
   [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest): String
   [Scope](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope): String
   [SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename): String

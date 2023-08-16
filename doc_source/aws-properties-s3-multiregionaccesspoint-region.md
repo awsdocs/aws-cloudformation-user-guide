@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Bucket](#cfn-s3-multiregionaccesspoint-region-bucket)" : String
+  "[Bucket](#cfn-s3-multiregionaccesspoint-region-bucket)" : String,
+  "[BucketAccountId](#cfn-s3-multiregionaccesspoint-region-bucketaccountid)" : String
 }
 ```
 
@@ -18,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Bucket](#cfn-s3-multiregionaccesspoint-region-bucket): String
+  [BucketAccountId](#cfn-s3-multiregionaccesspoint-region-bucketaccountid): String
 ```
 
 ## Properties<a name="aws-properties-s3-multiregionaccesspoint-region-properties"></a>
@@ -25,5 +27,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Bucket`  <a name="cfn-s3-multiregionaccesspoint-region-bucket"></a>
 The name of the associated bucket for the Region\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`BucketAccountId`  <a name="cfn-s3-multiregionaccesspoint-region-bucketaccountid"></a>
+The AWS account ID that owns the Amazon S3 bucket that's associated with this Multi\-Region Access Point\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Detective::Graph",
   "Properties" : {
+      "[AutoEnableMembers](#cfn-detective-graph-autoenablemembers)" : Boolean,
       "[Tags](#cfn-detective-graph-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -22,11 +23,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Detective::Graph
 Properties: 
+  [AutoEnableMembers](#cfn-detective-graph-autoenablemembers): Boolean
   [Tags](#cfn-detective-graph-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-detective-graph-properties"></a>
+
+`AutoEnableMembers`  <a name="cfn-detective-graph-autoenablemembers"></a>
+Indicates whether to automatically enable new organization accounts as member accounts in the organization behavior graph\.  
+By default, this property is set to `false`\. If you want to change the value of this property, you must be the Detective administrator for the organization\. For more information on setting a Detective administrator account, see [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-detective-graph-tags"></a>
 The tag values to assign to the new behavior graph\.  
@@ -38,15 +47,15 @@ The tag values to assign to the new behavior graph\.
 
 ### Ref<a name="aws-resource-detective-graph-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the new behavior graph\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the new behavior graph\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-detective-graph-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-detective-graph-return-values-fn--getatt-fn--getatt"></a>
 

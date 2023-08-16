@@ -60,17 +60,17 @@ Configuration information for indexing Confluence blogs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExclusionPatterns`  <a name="cfn-kendra-datasource-confluenceconfiguration-exclusionpatterns"></a>
->A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in your Confluence\. Content that matches the patterns are excluded from the index\. Content that doesn't match the patterns is included in the index\. If content matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the content isn't included in the index\.  
+A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in your Confluence\. Content that matches the patterns are excluded from the index\. Content that doesn't match the patterns is included in the index\. If content matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the content isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InclusionPatterns`  <a name="cfn-kendra-datasource-confluenceconfiguration-inclusionpatterns"></a>
 A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your Confluence\. Content that matches the patterns are included in the index\. Content that doesn't match the patterns is excluded from the index\. If content matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the content isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PageConfiguration`  <a name="cfn-kendra-datasource-confluenceconfiguration-pageconfiguration"></a>
@@ -80,9 +80,8 @@ Configuration information for indexing Confluence pages\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-confluenceconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Secrets Manager secret that contains the key\-value pairs required to connect to your Confluence server\. The secret must contain a JSON structure with the following keys:  
-+ username—The user name or email address of a user with administrative privileges for the Confluence server\.
-+ password—The password associated with the user logging in to the Confluence server\.
+The Amazon Resource Name \(ARN\) of an AWS Secrets Manager secret that contains the user name and password required to connect to the Confluence instance\. If you use Confluence Cloud, you use a generated API token as the password\.  
+You can also provide authentication credentials in the form of a personal access token\. For more information, see [Using a Confluence data source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -106,7 +105,7 @@ Configuration information for indexing Confluence spaces\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-kendra-datasource-confluenceconfiguration-version"></a>
-Specifies the version of the Confluence installation that you are connecting to\.  
+The version or the type of Confluence installation to connect to\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `CLOUD | SERVER`  

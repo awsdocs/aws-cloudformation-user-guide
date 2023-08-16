@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-appstream-stack-name)" : String,
       "[RedirectURL](#cfn-appstream-stack-redirecturl)" : String,
       "[StorageConnectors](#cfn-appstream-stack-storageconnectors)" : [ StorageConnector, ... ],
+      "[StreamingExperienceSettings](#cfn-appstream-stack-streamingexperiencesettings)" : StreamingExperienceSettings,
       "[Tags](#cfn-appstream-stack-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserSettings](#cfn-appstream-stack-usersettings)" : [ UserSetting, ... ]
     }
@@ -50,6 +51,8 @@ Properties:
   [RedirectURL](#cfn-appstream-stack-redirecturl): String
   [StorageConnectors](#cfn-appstream-stack-storageconnectors): 
     - StorageConnector
+  [StreamingExperienceSettings](#cfn-appstream-stack-streamingexperiencesettings): 
+    StreamingExperienceSettings
   [Tags](#cfn-appstream-stack-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserSettings](#cfn-appstream-stack-usersettings): 
@@ -130,6 +133,12 @@ The URL that users are redirected to after their streaming session ends\.
 The storage connectors to enable\.  
 *Required*: No  
 *Type*: List of [StorageConnector](aws-properties-appstream-stack-storageconnector.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StreamingExperienceSettings`  <a name="cfn-appstream-stack-streamingexperiencesettings"></a>
+The streaming protocol that you want your stack to prefer\. This can be UDP or TCP\. Currently, UDP is only supported in the Windows native client\.  
+*Required*: No  
+*Type*: [StreamingExperienceSettings](aws-properties-appstream-stack-streamingexperiencesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appstream-stack-tags"></a>

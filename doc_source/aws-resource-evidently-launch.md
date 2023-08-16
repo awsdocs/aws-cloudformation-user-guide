@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Evidently::Launch",
   "Properties" : {
       "[Description](#cfn-evidently-launch-description)" : String,
+      "[ExecutionStatus](#cfn-evidently-launch-executionstatus)" : ExecutionStatusObject,
       "[Groups](#cfn-evidently-launch-groups)" : [ LaunchGroupObject, ... ],
       "[MetricMonitors](#cfn-evidently-launch-metricmonitors)" : [ MetricDefinitionObject, ... ],
       "[Name](#cfn-evidently-launch-name)" : String,
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Evidently::Launch
 Properties: 
   [Description](#cfn-evidently-launch-description): String
+  [ExecutionStatus](#cfn-evidently-launch-executionstatus): 
+    ExecutionStatusObject
   [Groups](#cfn-evidently-launch-groups): 
     - LaunchGroupObject
   [MetricMonitors](#cfn-evidently-launch-metricmonitors): 
@@ -51,6 +54,15 @@ Properties:
 An optional description for the launch\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `160`  
+*Pattern*: `.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ExecutionStatus`  <a name="cfn-evidently-launch-executionstatus"></a>
+A structure that you can use to start and stop the launch\.  
+*Required*: No  
+*Type*: [ExecutionStatusObject](aws-properties-evidently-launch-executionstatusobject.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Groups`  <a name="cfn-evidently-launch-groups"></a>
@@ -63,24 +75,34 @@ An array of structures that contains the feature and variations that are to be u
 An array of structures that define the metrics that will be used to monitor the launch performance\. You can have up to three metric monitors in the array\.  
 *Required*: No  
 *Type*: List of [MetricDefinitionObject](aws-properties-evidently-launch-metricdefinitionobject.md)  
+*Maximum*: `3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-evidently-launch-name"></a>
 The name for the launch\. It can include up to 127 characters\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `127`  
+*Pattern*: `[-a-zA-Z0-9._]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Project`  <a name="cfn-evidently-launch-project"></a>
 The name or ARN of the project that you want to create the launch in\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `.*(^[a-zA-Z0-9._-]*$)|(arn:[^:]*:[^:]*:[^:]*:[^:]*:project/[a-zA-Z0-9._-]*).*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RandomizationSalt`  <a name="cfn-evidently-launch-randomizationsalt"></a>
 When Evidently assigns a particular user session to a launch, it must use a randomization ID to determine which variation the user session is served\. This randomization ID is a combination of the entity ID and `randomizationSalt`\. If you omit `randomizationSalt`, Evidently uses the launch name as the `randomizationsSalt`\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `127`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduledSplitsConfig`  <a name="cfn-evidently-launch-scheduledsplitsconfig"></a>
@@ -103,15 +125,15 @@ For more information, see [Tagging AWS resources](https://docs.aws.amazon.com/ge
 
 ### Ref<a name="aws-resource-evidently-launch-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the launch\. For example, `arn:aws:evidently:us-west-2:0123455678912:project/myProject/launch/myLaunch`
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the launch\. For example, `arn:aws:evidently:us-west-2:0123455678912:project/myProject/launch/myLaunch`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-evidently-launch-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-evidently-launch-return-values-fn--getatt-fn--getatt"></a>
 

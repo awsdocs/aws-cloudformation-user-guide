@@ -37,7 +37,7 @@ Properties:
 The identifier of the API\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApiMappingKey`  <a name="cfn-apigatewayv2-apimapping-apimappingkey"></a>
 The API mapping key\.  
@@ -61,9 +61,20 @@ The API stage\.
 
 ### Ref<a name="aws-resource-apigatewayv2-apimapping-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the API mapping resource ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the API mapping resource ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-apigatewayv2-apimapping-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigatewayv2-apimapping-return-values-fn--getatt-fn--getatt"></a>
+
+`ApiMappingId`  <a name="ApiMappingId-fn::getatt"></a>
+The API mapping resource ID\.
 
 ## Examples<a name="aws-resource-apigatewayv2-apimapping--examples"></a>
 

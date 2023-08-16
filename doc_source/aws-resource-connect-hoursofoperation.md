@@ -1,6 +1,6 @@
 # AWS::Connect::HoursOfOperation<a name="aws-resource-connect-hoursofoperation"></a>
 
-Creates hours of operation\. 
+Specifies hours of operation\.
 
 ## Syntax<a name="aws-resource-connect-hoursofoperation-syntax"></a>
 
@@ -55,7 +55,7 @@ The description for the hours of operation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceArn`  <a name="cfn-connect-hoursofoperation-instancearn"></a>
-The Amazon Resource Name \(ARN\) for the instance\.  
+The Amazon Resource Name \(ARN\) of the instance\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -69,7 +69,7 @@ The name for the hours of operation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-connect-hoursofoperation-tags"></a>
-The tags used to organize, track, or control access for this resource\.  
+The tags used to organize, track, or control access for this resource\. For example, \{ "tags": \{"key1":"value1", "key2":"value2"\} \}\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,22 +84,22 @@ The time zone for the hours of operation\.
 
 ### Ref<a name="aws-resource-connect-hoursofoperation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the hours of opreration\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the hours of operation\. For example:
 
 `{ "Ref": "myHoursOfOperation" }`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-connect-hoursofoperation-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-connect-hoursofoperation-return-values-fn--getatt-fn--getatt"></a>
 
 `HoursOfOperationArn`  <a name="HoursOfOperationArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) for the hours of operation\.
+The Amazon Resource Name \(ARN\) of the hours of operation\.
 
 ## Examples<a name="aws-resource-connect-hoursofoperation--examples"></a>
 

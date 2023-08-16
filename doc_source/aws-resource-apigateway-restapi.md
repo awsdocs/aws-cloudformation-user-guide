@@ -1,6 +1,6 @@
 # AWS::ApiGateway::RestApi<a name="aws-resource-apigateway-restapi"></a>
 
-The `AWS::ApiGateway::RestApi` resource creates a REST API\. For more information, see [restapi:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*\.
+The `AWS::ApiGateway::RestApi` resource creates a REST API\. For more information, see [restapi:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateRestApi.html) in the *Amazon API Gateway REST API Reference*\.
 
 **Note**  
 On January 1, 2016, the Swagger Specification was donated to the [OpenAPI initiative](https://www.openapis.org/), becoming the foundation of the OpenAPI Specification\.
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
       "[Mode](#cfn-apigateway-restapi-mode)" : String,
       "[Name](#cfn-apigateway-restapi-name)" : String,
-      "[Parameters](#cfn-apigateway-restapi-parameters)" : {Key : Value, ...},
+      "[Parameters](#cfn-apigateway-restapi-parameters)" : {Key: Value, ...},
       "[Policy](#cfn-apigateway-restapi-policy)" : Json,
       "[Tags](#cfn-apigateway-restapi-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -55,7 +55,7 @@ Properties:
   [Mode](#cfn-apigateway-restapi-mode): String
   [Name](#cfn-apigateway-restapi-name): String
   [Parameters](#cfn-apigateway-restapi-parameters): 
-    Key : Value
+    Key: Value
   [Policy](#cfn-apigateway-restapi-policy): Json
   [Tags](#cfn-apigateway-restapi-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -64,15 +64,13 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-restapi-properties"></a>
 
 `ApiKeySourceType`  <a name="cfn-apigateway-restapi-apikeysourcetype"></a>
-The source of the API key for metering requests according to a usage plan\. Valid values are:  
-+ `HEADER` to read the API key from the `X-API-Key` header of a request\.
-+ `AUTHORIZER` to read the API key from the `UsageIdentifierKey` from a Lambda authorizer\.
+The source of the API key for metering requests according to a usage plan\. Valid values are: `HEADER` to read the API key from the `X-API-Key` header of a request\. `AUTHORIZER` to read the API key from the `UsageIdentifierKey` from a custom authorizer\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BinaryMediaTypes`  <a name="cfn-apigateway-restapi-binarymediatypes"></a>
-The list of binary media types that are supported by the `RestApi` resource\. Use `~1` instead of `/` in the media types, for example `image~1png` or `application~1octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. Duplicates are not allowed\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\.  
+The list of binary media types supported by the RestApi\. By default, the RestApi supports only UTF\-8\-encoded text payloads\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,19 +88,19 @@ The Amazon Simple Storage Service \(Amazon S3\) location that points to an OpenA
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloneFrom`  <a name="cfn-apigateway-restapi-clonefrom"></a>
-The ID of the `RestApi` resource that you want to clone\.  
+The ID of the RestApi that you want to clone from\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigateway-restapi-description"></a>
-A description of the `RestApi` resource\.  
+The description of the RestApi\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableExecuteApiEndpoint`  <a name="cfn-apigateway-restapi-disableexecuteapiendpoint"></a>
-Specifies whether clients can invoke your API by using the default `execute-api` endpoint\. By default, clients can invoke your API with the default https://\{api\_id\}\.execute\-api\.\{region\}\.amazonaws\.com endpoint\. To require that clients use a custom domain name to invoke your API, disable the default endpoint\.  
+Specifies whether clients can invoke your API by using the default `execute-api` endpoint\. By default, clients can invoke your API with the default `https://{api_id}.execute-api.{region}.amazonaws.com` endpoint\. To require that clients use a custom domain name to invoke your API, disable the default endpoint  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -114,7 +112,7 @@ A list of the endpoint types of the API\. Use this property when creating an API
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailOnWarnings`  <a name="cfn-apigateway-restapi-failonwarnings"></a>
-Indicates whether to roll back the resource if a warning occurs while API Gateway is creating the `RestApi` resource\.  
+A query parameter to indicate whether to rollback the API update \(`true`\) or not \(`false`\) when a warning is encountered\. The default value is `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -129,20 +127,21 @@ A nullable integer that is used to enable compression \(with non\-negative betwe
 This property applies only when you use OpenAPI to define your REST API\. The `Mode` determines how API Gateway handles resource updates\.  
 Valid values are `overwrite` or `merge`\.   
 For `overwrite`, the new API definition replaces the existing one\. The existing API identifier remains unchanged\.  
- For `merge`, the new API definition takes precedence, but any container types such as endpoint configurations and binary media types are merged with the existing API\. Use `merge` to define top\-level `RestApi` properties in addition to using OpenAPI\. Generally, it's preferred to use API Gateway's OpenAPI extensions to model these properties\.  
-If you don't specify this property, a default value is chosen\. For REST APIs created before March 29, 2021, the default is `overwrite`\. Otherwise, the default value is `merge`\.  
+ For `merge`, the new API definition is merged with the existing API\.  
+If you don't specify this property, a default value is chosen\. For REST APIs created before March 29, 2021, the default is `overwrite`\. For REST APIs created after March 29, 2021, the new API definition takes precedence, but any container types such as endpoint configurations and binary media types are merged with the existing API\.   
+Use the default mode to define top\-level `RestApi` properties in addition to using OpenAPI\. Generally, it's preferred to use API Gateway's OpenAPI extensions to model these properties\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-apigateway-restapi-name"></a>
-A name for the `RestApi` resource\.  
+The name of the RestApi\. A name is required if the REST API is not based on an OpenAPI specification\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-apigateway-restapi-parameters"></a>
-Custom header parameters for the request\.  
+Custom header parameters as part of the request\. For example, to exclude DocumentationParts from an imported API, set `ignore=documentation` as a `parameters` value, as in the AWS CLI command of `aws apigateway import-rest-api --parameters ignore=documentation --body 'file:///path/to/imported-api-body.json'`\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -154,7 +153,7 @@ A policy document that contains the permissions for the `RestApi` resource\. To 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-apigateway-restapi-tags"></a>
-An array of arbitrary tags \(key\-value pairs\) to associate with the API\.  
+The key\-value map of strings\. The valid character set is \[a\-zA\-Z\+\-=\.\_:/\]\. The tag key can be up to 128 characters and must not start with `aws:`\. The tag value can be up to 256 characters\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -163,17 +162,20 @@ An array of arbitrary tags \(key\-value pairs\) to associate with the API\.
 
 ### Ref<a name="aws-resource-apigateway-restapi-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `RestApi` ID, such as `a1bcdef2gh`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `RestApi` ID, such as `a1bcdef2gh`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-apigateway-restapi-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-apigateway-restapi-return-values-fn--getatt-fn--getatt"></a>
+
+`RestApiId`  <a name="RestApiId-fn::getatt"></a>
+The string identifier of the associated RestApi\.
 
 `RootResourceId`  <a name="RootResourceId-fn::getatt"></a>
 The root resource ID for a `RestApi` resource, such as `a0bc123d4e`\.
@@ -409,5 +411,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-apigateway-restapi--seealso"></a>
-+ [restapi:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*
++ [restapi:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateRestApi.html) in the *Amazon API Gateway REST API Reference*
++ [Tutorial: Building a private REST API](https://docs.aws.amazon.com/apigateway/latest/developerguide/private-api-tutorial.html) in the *API Gateway Developer Guide*
 

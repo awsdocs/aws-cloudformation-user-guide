@@ -63,7 +63,7 @@ A description of the service\.
 
 `EndpointType`  <a name="cfn-refactorspaces-service-endpointtype"></a>
 The endpoint type of the service\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -81,7 +81,7 @@ A summary of the configuration for the AWS Lambda endpoint type\.
 
 `Name`  <a name="cfn-refactorspaces-service-name"></a>
 The name of the service\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -107,15 +107,15 @@ The ID of the virtual private cloud \(VPC\)\.
 
 ### Ref<a name="aws-resource-refactorspaces-service-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a composite ID following this format: `<EnvironmentId>|<ApplicationId>|<ServiceId>`\. For example, `env-1234654123|app-1234654123|svc-1234654123`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a composite ID following this format: `<EnvironmentId>|<ApplicationId>|<ServiceId>`\. For example, `env-1234654123|app-1234654123|svc-1234654123`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-refactorspaces-service-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-refactorspaces-service-return-values-fn--getatt-fn--getatt"></a>
 

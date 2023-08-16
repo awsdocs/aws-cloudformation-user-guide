@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appflow-flow-marketodestinationproperties-properties"></a>
 
 `ErrorHandlingConfig`  <a name="cfn-appflow-flow-marketodestinationproperties-errorhandlingconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+ The settings that determine how Amazon AppFlow handles an error when placing data in the destination\. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure\. `ErrorHandlingConfig` is a part of the destination connector details\.   
 *Required*: No  
 *Type*: [ErrorHandlingConfig](aws-properties-appflow-flow-errorhandlingconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

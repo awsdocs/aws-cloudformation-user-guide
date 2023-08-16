@@ -39,7 +39,7 @@ The entity, such as a user or session, that does an action that causes a metric 
 `EventPattern`  <a name="cfn-evidently-launch-metricdefinitionobject-eventpattern"></a>
 The EventBridge event pattern that defines how the metric is recorded\.  
 For more information about EventBridge event patterns, see [Amazon EventBridge event patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html)\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

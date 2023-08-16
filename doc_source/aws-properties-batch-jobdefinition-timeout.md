@@ -1,6 +1,6 @@
 # AWS::Batch::JobDefinition Timeout<a name="aws-properties-batch-jobdefinition-timeout"></a>
 
-An object representing a job timeout configuration\.
+An object that represents a job timeout configuration\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-timeout-syntax"></a>
 
@@ -23,7 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-timeout-properties"></a>
 
 `AttemptDurationSeconds`  <a name="cfn-batch-jobdefinition-timeout-attemptdurationseconds"></a>
-The time duration in seconds \(measured from the job attempt's `startedAt` timestamp\) after which AWS Batch terminates your jobs if they have not finished\. The minimum value for the timeout is 60 seconds\.  
+The job timeout time \(in seconds\) that's measured from the job attempt's `startedAt` timestamp\. After this time passes, AWS Batch terminates your jobs if they aren't finished\. The minimum value for the timeout is 60 seconds\.  
+For array jobs, the timeout applies to the child jobs, not to the parent array job\.  
+For multi\-node parallel \(MNP\) jobs, the timeout applies to the whole job, not to the individual nodes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

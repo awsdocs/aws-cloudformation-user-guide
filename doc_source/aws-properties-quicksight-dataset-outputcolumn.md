@@ -43,7 +43,7 @@ A display name for the dataset\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-quicksight-dataset-outputcolumn-type"></a>
-Type\.  
+The type\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DATETIME | DECIMAL | INTEGER | STRING`  

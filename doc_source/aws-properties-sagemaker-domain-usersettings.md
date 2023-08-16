@@ -15,6 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ExecutionRole](#cfn-sagemaker-domain-usersettings-executionrole)" : String,
   "[JupyterServerAppSettings](#cfn-sagemaker-domain-usersettings-jupyterserverappsettings)" : JupyterServerAppSettings,
   "[KernelGatewayAppSettings](#cfn-sagemaker-domain-usersettings-kernelgatewayappsettings)" : KernelGatewayAppSettings,
+  "[RSessionAppSettings](#cfn-sagemaker-domain-usersettings-rsessionappsettings)" : RSessionAppSettings,
+  "[RStudioServerProAppSettings](#cfn-sagemaker-domain-usersettings-rstudioserverproappsettings)" : RStudioServerProAppSettings,
   "[SecurityGroups](#cfn-sagemaker-domain-usersettings-securitygroups)" : [ String, ... ],
   "[SharingSettings](#cfn-sagemaker-domain-usersettings-sharingsettings)" : SharingSettings
 }
@@ -28,6 +30,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     JupyterServerAppSettings
   [KernelGatewayAppSettings](#cfn-sagemaker-domain-usersettings-kernelgatewayappsettings): 
     KernelGatewayAppSettings
+  [RSessionAppSettings](#cfn-sagemaker-domain-usersettings-rsessionappsettings): 
+    RSessionAppSettings
+  [RStudioServerProAppSettings](#cfn-sagemaker-domain-usersettings-rstudioserverproappsettings): 
+    RStudioServerProAppSettings
   [SecurityGroups](#cfn-sagemaker-domain-usersettings-securitygroups): 
     - String
   [SharingSettings](#cfn-sagemaker-domain-usersettings-sharingsettings): 
@@ -38,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ExecutionRole`  <a name="cfn-sagemaker-domain-usersettings-executionrole"></a>
 The execution role for the user\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
@@ -57,10 +63,22 @@ The kernel gateway app settings\.
 *Type*: [KernelGatewayAppSettings](aws-properties-sagemaker-domain-kernelgatewayappsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RSessionAppSettings`  <a name="cfn-sagemaker-domain-usersettings-rsessionappsettings"></a>
+A collection of settings that configure the `RSessionGateway` app\.  
+*Required*: No  
+*Type*: [RSessionAppSettings](aws-properties-sagemaker-domain-rsessionappsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RStudioServerProAppSettings`  <a name="cfn-sagemaker-domain-usersettings-rstudioserverproappsettings"></a>
+A collection of settings that configure user interaction with the `RStudioServerPro` app\.  
+*Required*: No  
+*Type*: [RStudioServerProAppSettings](aws-properties-sagemaker-domain-rstudioserverproappsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SecurityGroups`  <a name="cfn-sagemaker-domain-usersettings-securitygroups"></a>
 The security groups for the Amazon Virtual Private Cloud \(VPC\) that Studio uses for communication\.  
 Optional when the `CreateDomain.AppNetworkAccessType` parameter is set to `PublicInternetOnly`\.  
-Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly`\.  
+Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly`, unless specified as part of the `DefaultUserSettings` for the domain\.  
 Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio\. Therefore, the number of security groups that you can specify is one less than the maximum number shown\.  
 *Required*: No  
 *Type*: List of String  

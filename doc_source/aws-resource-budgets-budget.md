@@ -48,9 +48,9 @@ A notification that you want to associate with a budget\. A budget can have up t
 
 ### Ref<a name="aws-resource-budgets-budget-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the budget that is created by the template\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the budget that is created by the template\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-budgets-budget--examples"></a>
 

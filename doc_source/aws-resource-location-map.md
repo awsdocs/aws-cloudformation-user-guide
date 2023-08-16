@@ -35,7 +35,7 @@ Properties:
 ## Properties<a name="aws-resource-location-map-properties"></a>
 
 `Configuration`  <a name="cfn-location-map-configuration"></a>
-Specifies the map style selected from an available data provider\.  
+Specifies the `MapConfiguration`, including the map style, for the map resource that you create\. The map style defines the look of maps and the data provider for your map resource\.  
 *Required*: Yes  
 *Type*: [MapConfiguration](aws-properties-location-map-mapconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -51,8 +51,8 @@ An optional description for the map resource\.
 `MapName`  <a name="cfn-location-map-mapname"></a>
 The name for the map resource\.  
 Requirements:  
-+ Must contain only alphanumeric characters \(A–Z, a–z, 0–9\), hyphens \(\-\), periods \(\.\), and underscores \(\_\)\.
-+ Must be a unique map resource name\.
++ Must contain only alphanumeric characters \(A–Z, a–z, 0–9\), hyphens \(\-\), periods \(\.\), and underscores \(\_\)\. 
++ Must be a unique map resource name\. 
 + No spaces allowed\. For example, `ExampleMap`\.
 *Required*: Yes  
 *Type*: String  
@@ -72,15 +72,15 @@ No longer used\. If included, the only allowed value is `RequestBasedUsage`\.
 
 ### Ref<a name="aws-resource-location-map-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `Map` name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `Map` name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-location-map-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-location-map-return-values-fn--getatt-fn--getatt"></a>
 

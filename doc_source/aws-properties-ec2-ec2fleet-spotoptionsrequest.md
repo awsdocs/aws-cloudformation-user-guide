@@ -71,7 +71,8 @@ The strategies for managing your Spot Instances that are at an elevated risk of 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxTotalPrice`  <a name="cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice"></a>
-The maximum amount per hour for Spot Instances that you're willing to pay\.  
+The maximum amount per hour for Spot Instances that you're willing to pay\. We do not recommend using this parameter because it can lead to increased interruptions\. If you do not specify this parameter, you will pay the current Spot price\.  
+If you specify a maximum price, your Spot Instances will be interrupted more frequently than if you do not specify this parameter\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

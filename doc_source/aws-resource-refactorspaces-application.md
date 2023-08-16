@@ -2,6 +2,8 @@
 
 Creates an AWS Migration Hub Refactor Spaces application\. The account that owns the environment also owns the applications created inside the environment, regardless of the account that creates the application\. Refactor Spaces provisions an Amazon API Gateway, API Gateway VPC link, and Network Load Balancer for the application proxy inside your account\.
 
+In environments created with a [CreateEnvironment:NetworkFabricType](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/APIReference/API_CreateEnvironment.html#migrationhubrefactorspaces-CreateEnvironment-request-NetworkFabricType) of `NONE` you need to configure [ VPC to VPC connectivity](https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/amazon-vpc-to-amazon-vpc-connectivity-options.html) between your service VPC and the application proxy VPC to route traffic through the application proxy to a service with a private URL endpoint\. For more information, see [ Create an application](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/getting-started-create-application.html) in the *Refactor Spaces User Guide*\. 
+
 ## Syntax<a name="aws-resource-refactorspaces-application-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -47,19 +49,19 @@ The endpoint URL of the Amazon API Gateway proxy\.
 
 `EnvironmentIdentifier`  <a name="cfn-refactorspaces-application-environmentidentifier"></a>
 The unique identifier of the environment\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-refactorspaces-application-name"></a>
 The name of the application\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProxyType`  <a name="cfn-refactorspaces-application-proxytype"></a>
 The proxy type of the proxy created within the application\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -71,7 +73,7 @@ The tags assigned to the application\.
 
 `VpcId`  <a name="cfn-refactorspaces-application-vpcid"></a>
 The ID of the virtual private cloud \(VPC\)\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -79,15 +81,15 @@ The ID of the virtual private cloud \(VPC\)\.
 
 ### Ref<a name="aws-resource-refactorspaces-application-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a composite ID following this format: `<EnvironmentId>|<ApplicationId>`, for example, `env-1234654123|app-1234654123`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a composite ID following this format: `<EnvironmentId>|<ApplicationId>`, for example, `env-1234654123|app-1234654123`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-refactorspaces-application-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-refactorspaces-application-return-values-fn--getatt-fn--getatt"></a>
 

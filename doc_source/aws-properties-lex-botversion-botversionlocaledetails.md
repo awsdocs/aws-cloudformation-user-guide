@@ -26,4 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The version of a bot used for a bot locale\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `5`  
+*Pattern*: `^(DRAFT|[0-9]+)$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

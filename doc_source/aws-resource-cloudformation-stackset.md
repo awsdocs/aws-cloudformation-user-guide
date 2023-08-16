@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Capabilities](#cfn-cloudformation-stackset-capabilities)" : [ String, ... ],
       "[Description](#cfn-cloudformation-stackset-description)" : String,
       "[ExecutionRoleName](#cfn-cloudformation-stackset-executionrolename)" : String,
-      "[ManagedExecution](#cfn-cloudformation-stackset-managedexecution)" : Json,
+      "[ManagedExecution](#cfn-cloudformation-stackset-managedexecution)" : ManagedExecution,
       "[OperationPreferences](#cfn-cloudformation-stackset-operationpreferences)" : OperationPreferences,
       "[Parameters](#cfn-cloudformation-stackset-parameters)" : [ Parameter, ... ],
       "[PermissionModel](#cfn-cloudformation-stackset-permissionmodel)" : String,
@@ -44,7 +44,8 @@ Properties:
     - String
   [Description](#cfn-cloudformation-stackset-description): String
   [ExecutionRoleName](#cfn-cloudformation-stackset-executionrolename): String
-  [ManagedExecution](#cfn-cloudformation-stackset-managedexecution): Json
+  [ManagedExecution](#cfn-cloudformation-stackset-managedexecution): 
+    ManagedExecution
   [OperationPreferences](#cfn-cloudformation-stackset-operationpreferences): 
     OperationPreferences
   [Parameters](#cfn-cloudformation-stackset-parameters): 
@@ -119,7 +120,7 @@ If there are already running or queued operations, StackSets queues all incoming
 You can't modify your stack set's execution configuration while there are running or queued operations for that stack set\.
 When inactive \(default\), StackSets performs one operation at a time in request order\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [ManagedExecution](aws-properties-cloudformation-stackset-managedexecution.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OperationPreferences`  <a name="cfn-cloudformation-stackset-operationpreferences"></a>
@@ -137,11 +138,10 @@ The input parameters for the stack set template\.
 `PermissionModel`  <a name="cfn-cloudformation-stackset-permissionmodel"></a>
 Describes how the IAM roles required for stack set operations are created\.  
 + With `SELF_MANAGED` permissions, you must create the administrator and execution roles required to deploy to target accounts\. For more information, see [Grant Self\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)\.
-+ With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required to deploy to accounts managed by AWS Organizations\. For more information, see [Grant Service\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html)\.
-*Allowed Values*: `SERVICE_MANAGED` \| `SELF_MANAGED`  
-The `PermissionModel` property is required\.
++ With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required to deploy to accounts managed by AWS Organizations\.
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `SELF_MANAGED | SERVICE_MANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StackInstancesGroup`  <a name="cfn-cloudformation-stackset-stackinstancesgroup"></a>
@@ -287,7 +287,7 @@ In the following example, secret's resolution are avoided at stack level by prov
 #### YAML<a name="aws-resource-cloudformation-stackset--examples--Specifying__secrets_in_--yaml"></a>
 
 ```
-!Join 
+!Join
 - ''
 - - '{{'
   - 'resolve:secretsmanager:'

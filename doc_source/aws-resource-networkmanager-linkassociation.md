@@ -1,6 +1,6 @@
 # AWS::NetworkManager::LinkAssociation<a name="aws-resource-networkmanager-linkassociation"></a>
 
-Specifies the association between a device and a link\. A device can be associated to multiple links and a link can be associated to multiple devices\. The device and link must be in the same global network and the same site\.
+Describes the association between a device and a link\.
 
 ## Syntax<a name="aws-resource-networkmanager-linkassociation-syntax"></a>
 
@@ -62,9 +62,9 @@ The ID of the link\.
 
 ### Ref<a name="aws-resource-networkmanager-linkassociation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the IDs of the global network, device, and link\. For example: `global-network-01231231231231231|device-07f6fd08867abc123|link-11112222aaaabbbb1`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the IDs of the global network, device, and link\. For example: `global-network-01231231231231231|device-07f6fd08867abc123|link-11112222aaaabbbb1`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-networkmanager-linkassociation--examples"></a>
 

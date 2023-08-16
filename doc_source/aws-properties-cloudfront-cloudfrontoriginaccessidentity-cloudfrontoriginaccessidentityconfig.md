@@ -1,6 +1,6 @@
 # AWS::CloudFront::CloudFrontOriginAccessIdentity CloudFrontOriginAccessIdentityConfig<a name="aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig"></a>
 
-Origin access identity configuration\. Send a `GET` request to the `/CloudFront API version/CloudFront/identity ID/config` resource\. 
+Origin access identity configuration\. Send a `GET` request to the `/CloudFront API version/CloudFront/identity ID/config` resource\.
 
 ## Syntax<a name="aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig-syntax"></a>
 

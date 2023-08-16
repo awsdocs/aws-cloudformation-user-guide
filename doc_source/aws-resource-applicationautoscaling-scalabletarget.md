@@ -2,10 +2,10 @@
 
 The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application Auto Scaling can scale, such as an AWS::DynamoDB::Table or AWS::ECS::Service resource\.
 
+For more information, see [Getting started](https://docs.aws.amazon.com/autoscaling/application/userguide/getting-started.html) in the *Application Auto Scaling User Guide*\.
+
 **Note**  
 If the resource that you want Application Auto Scaling to scale is not yet created in your account, add a dependency on the resource when registering it as a scalable target using the [DependsOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) attribute\. 
-
-For more information, see [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) in the *Application Auto Scaling API Reference*\.
 
 ## Syntax<a name="aws-resource-applicationautoscaling-scalabletarget-syntax"></a>
 
@@ -78,6 +78,7 @@ The identifier of the resource associated with the scalable target\. This string
 + Amazon MSK cluster \- The resource type and unique identifier are specified using the cluster ARN\. Example: `arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5`\.
 + Amazon ElastiCache replication group \- The resource type is `replication-group` and the unique identifier is the replication group name\. Example: `replication-group/mycluster`\.
 + Neptune cluster \- The resource type is `cluster` and the unique identifier is the cluster name\. Example: `cluster:mycluster`\.
++ SageMaker Serverless endpoint \- The resource type is `variant` and the unique identifier is the resource ID\. Example: `endpoint/my-end-point/variant/KMeansClustering`\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -88,7 +89,7 @@ The identifier of the resource associated with the scalable target\. This string
 `RoleARN`  <a name="cfn-applicationautoscaling-scalabletarget-rolearn"></a>
 Specify the Amazon Resource Name \(ARN\) of an Identity and Access Management \(IAM\) role that allows Application Auto Scaling to modify the scalable target on your behalf\. This can be either an IAM service role that Application Auto Scaling can assume to make calls to other AWS resources on your behalf, or a service\-linked role for the specified service\. For more information, see [How Application Auto Scaling works with IAM](https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html) in the *Application Auto Scaling User Guide*\.  
 To automatically create a service\-linked role \(recommended\), specify the full ARN of the service\-linked role in your stack template\. To find the exact ARN of the service\-linked role for your AWS or custom resource, see the [Service\-linked roles](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-service-linked-roles.html) topic in the *Application Auto Scaling User Guide*\. Look for the ARN in the table at the bottom of the page\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -114,14 +115,14 @@ The scalable dimension associated with the scalable target\. This string consist
 +  `elasticache:replication-group:NodeGroups` \- The number of node groups for an Amazon ElastiCache replication group\.
 +  `elasticache:replication-group:Replicas` \- The number of replicas per node group for an Amazon ElastiCache replication group\.
 +  `neptune:cluster:ReadReplicaCount` \- The count of read replicas in an Amazon Neptune DB cluster\.
++  `sagemaker:variant:DesiredProvisionedConcurrency` \- The provisioned concurrency for a SageMaker Serverless endpoint\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | comprehend:entity-recognizer-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticache:replication-group:NodeGroups | elasticache:replication-group:Replicas | elasticmapreduce:instancegroup:InstanceCount | kafka:broker-storage:VolumeSize | lambda:function:ProvisionedConcurrency | neptune:cluster:ReadReplicaCount | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount`  
+*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | comprehend:entity-recognizer-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticache:replication-group:NodeGroups | elasticache:replication-group:Replicas | elasticmapreduce:instancegroup:InstanceCount | kafka:broker-storage:VolumeSize | lambda:function:ProvisionedConcurrency | neptune:cluster:ReadReplicaCount | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount | sagemaker:variant:DesiredProvisionedConcurrency`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScheduledActions`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledactions"></a>
 The scheduled actions for the scalable target\. Duplicates aren't allowed\.  
-For more information about using scheduled scaling, see [Scheduled scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html) in the *Application Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: List of [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,7 +140,6 @@ An embedded object that contains attributes and attribute values that are used t
 + For `DynamicScalingInSuspended`, while a suspension is in effect, all scale\-in activities that are triggered by a scaling policy are suspended\.
 + For `DynamicScalingOutSuspended`, while a suspension is in effect, all scale\-out activities that are triggered by a scaling policy are suspended\.
 + For `ScheduledScalingSuspended`, while a suspension is in effect, all scaling activities that involve scheduled actions are suspended\. 
-For more information, see [Suspending and resuming scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-suspend-resume-scaling.html) in the *Application Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -154,11 +154,20 @@ CloudFormation uses the following format to generate the ID: `service/resource_I
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
+### Fn::GetAtt<a name="aws-resource-applicationautoscaling-scalabletarget-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-applicationautoscaling-scalabletarget-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-applicationautoscaling-scalabletarget--examples"></a>
 
 Each scalable target has a service namespace, scalable dimension, and resource ID, as well as values for minimum and maximum capacity\.
 
-For more template snippets, see [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)\.
+For more sample template snippets, see [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)\.
+
+The [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples) section also provides examples of how to create scheduled actions\.
 
 ### Register a scalable target<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_scalable_target"></a>
 
@@ -203,8 +212,6 @@ ScalableTarget:
 ```
 
 ## See also<a name="aws-resource-applicationautoscaling-scalabletarget--seealso"></a>
-+ [Getting started](https://docs.aws.amazon.com/autoscaling/application/userguide/getting-started.html) in the *Application Auto Scaling User Guide*
-+ [How to use AWS CloudFormation to configure auto scaling for Amazon DynamoDB tables and indexes](http://aws.amazon.com/blogs/database/how-to-use-aws-cloudformation-to-configure-auto-scaling-for-amazon-dynamodb-tables-and-indexes/)
-+ [Scheduling AWS Lambda Provisioned Concurrency for recurring peak usage](http://aws.amazon.com/blogs/compute/scheduling-aws-lambda-provisioned-concurrency-for-recurring-peak-usage/)
 + [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)
-
++ [How to use AWS CloudFormation to configure auto scaling for Amazon DynamoDB tables and indexes](http://aws.amazon.com/blogs/database/how-to-use-aws-cloudformation-to-configure-auto-scaling-for-amazon-dynamodb-tables-and-indexes/) on the AWS Blog
++ [Scheduling AWS Lambda Provisioned Concurrency for recurring peak usage](http://aws.amazon.com/blogs/compute/scheduling-aws-lambda-provisioned-concurrency-for-recurring-peak-usage/) on the AWS Blog

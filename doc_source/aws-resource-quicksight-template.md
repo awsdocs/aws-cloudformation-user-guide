@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::QuickSight::Template",
   "Properties" : {
       "[AwsAccountId](#cfn-quicksight-template-awsaccountid)" : String,
+      "[Definition](#cfn-quicksight-template-definition)" : TemplateVersionDefinition,
       "[Name](#cfn-quicksight-template-name)" : String,
       "[Permissions](#cfn-quicksight-template-permissions)" : [ ResourcePermission, ... ],
       "[SourceEntity](#cfn-quicksight-template-sourceentity)" : TemplateSourceEntity,
@@ -31,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::QuickSight::Template
 Properties: 
   [AwsAccountId](#cfn-quicksight-template-awsaccountid): String
+  [Definition](#cfn-quicksight-template-definition): 
+    TemplateVersionDefinition
   [Name](#cfn-quicksight-template-name): String
   [Permissions](#cfn-quicksight-template-permissions): 
     - ResourcePermission
@@ -53,6 +56,12 @@ The ID for the AWS account that the group is in\. You use the ID for the AWS acc
 *Pattern*: `^[0-9]{12}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Definition`  <a name="cfn-quicksight-template-definition"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [TemplateVersionDefinition](aws-properties-quicksight-template-templateversiondefinition.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-quicksight-template-name"></a>
 A display name for the template\.  
 *Required*: No  
@@ -71,7 +80,8 @@ A list of resource permissions to be set on the template\.
 `SourceEntity`  <a name="cfn-quicksight-template-sourceentity"></a>
 The entity that you are using as a source when you create the template\. In `SourceEntity`, you specify the type of object you're using as source: `SourceTemplate` for a template or `SourceAnalysis` for an analysis\. Both of these require an Amazon Resource Name \(ARN\)\. For `SourceTemplate`, specify the ARN of the source template\. For `SourceAnalysis`, specify the ARN of the source analysis\. The `SourceTemplate` ARN can contain any AWS account and any Amazon QuickSight\-supported AWS Region\.   
 Use the `DataSetReferences` entity within `SourceTemplate` or `SourceAnalysis` to list the replacement datasets for the placeholders listed in the original\. The schema in each dataset must match its placeholder\.   
-*Required*: Yes  
+Either a `SourceEntity` or a `Definition` must be provided in order for the request to be valid\.  
+*Required*: No  
 *Type*: [TemplateSourceEntity](aws-properties-quicksight-template-templatesourceentity.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -87,7 +97,7 @@ An ID for the template that you want to create\. This template is unique per AWS
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `2048`  
+*Maximum*: `512`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -113,3 +123,33 @@ The time this template was created\.
 
 `LastUpdatedTime`  <a name="LastUpdatedTime-fn::getatt"></a>
 The time this template was last updated\.
+
+`Version`  <a name="Version-fn::getatt"></a>
+The version of the template\.
+
+`Version.CreatedTime`  <a name="Version.CreatedTime-fn::getatt"></a>
+Property description not available\.
+
+`Version.DataSetConfigurations`  <a name="Version.DataSetConfigurations-fn::getatt"></a>
+Property description not available\.
+
+`Version.Description`  <a name="Version.Description-fn::getatt"></a>
+Property description not available\.
+
+`Version.Errors`  <a name="Version.Errors-fn::getatt"></a>
+Property description not available\.
+
+`Version.Sheets`  <a name="Version.Sheets-fn::getatt"></a>
+Property description not available\.
+
+`Version.SourceEntityArn`  <a name="Version.SourceEntityArn-fn::getatt"></a>
+Property description not available\.
+
+`Version.Status`  <a name="Version.Status-fn::getatt"></a>
+Property description not available\.
+
+`Version.ThemeArn`  <a name="Version.ThemeArn-fn::getatt"></a>
+Property description not available\.
+
+`Version.VersionNumber`  <a name="Version.VersionNumber-fn::getatt"></a>
+Property description not available\.

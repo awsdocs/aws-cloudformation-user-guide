@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KinesisFirehose::DeliveryStream",
   "Properties" : {
+      "[AmazonOpenSearchServerlessDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-amazonopensearchserverlessdestinationconfiguration)" : AmazonOpenSearchServerlessDestinationConfiguration,
       "[AmazonopensearchserviceDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration)" : AmazonopensearchserviceDestinationConfiguration,
       "[DeliveryStreamEncryptionConfigurationInput](#cfn-kinesisfirehose-deliverystream-deliverystreamencryptionconfigurationinput)" : DeliveryStreamEncryptionConfigurationInput,
       "[DeliveryStreamName](#cfn-kinesisfirehose-deliverystream-deliverystreamname)" : String,
@@ -33,6 +34,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::KinesisFirehose::DeliveryStream
 Properties: 
+  [AmazonOpenSearchServerlessDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-amazonopensearchserverlessdestinationconfiguration): 
+    AmazonOpenSearchServerlessDestinationConfiguration
   [AmazonopensearchserviceDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration): 
     AmazonopensearchserviceDestinationConfiguration
   [DeliveryStreamEncryptionConfigurationInput](#cfn-kinesisfirehose-deliverystream-deliverystreamencryptionconfigurationinput): 
@@ -58,6 +61,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-kinesisfirehose-deliverystream-properties"></a>
+
+`AmazonOpenSearchServerlessDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-amazonopensearchserverlessdestinationconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [AmazonOpenSearchServerlessDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-amazonopensearchserverlessdestinationconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AmazonopensearchserviceDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration"></a>
 The destination in Amazon OpenSearch Service\. You can specify only one destination\.  

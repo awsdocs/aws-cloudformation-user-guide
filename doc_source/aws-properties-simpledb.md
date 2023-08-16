@@ -40,6 +40,6 @@ Information about the SimpleDB domain\.
 
 ### Ref<a name="aws-properties-simpledb-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the value of the `DomainName`, such as: `Domain1-123456789012`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the value of the `DomainName`, such as: `Domain1-123456789012`\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

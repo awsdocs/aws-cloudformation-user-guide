@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition Tmpfs<a name="aws-properties-ecs-taskdefinition-tmpfs"></a>
 
-The `Tmpfs` property specifies the container path, mount options, and size of the tmpfs mount\.
+The container path, mount options, and size of the tmpfs mount\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-tmpfs-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SlotDefaultValueSpecification<a name="aws-properties-lex-bot-slotdefaultvaluespecification"></a>
 
-Defines a list of values that Amazon Lex should use as the default value for a slot\.
+The default value to use when a user doesn't provide a value for a slot\.
 
 ## Syntax<a name="aws-properties-lex-bot-slotdefaultvaluespecification-syntax"></a>
 
@@ -27,4 +27,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A list of default values\. Amazon Lex chooses the default value to use in the order that they are presented in the list\.  
 *Required*: Yes  
 *Type*: List of [SlotDefaultValue](aws-properties-lex-bot-slotdefaultvalue.md)  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

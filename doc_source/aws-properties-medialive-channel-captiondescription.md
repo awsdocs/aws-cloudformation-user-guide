@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Accessibility](#cfn-medialive-channel-captiondescription-accessibility)" : String,
   "[CaptionSelectorName](#cfn-medialive-channel-captiondescription-captionselectorname)" : String,
   "[DestinationSettings](#cfn-medialive-channel-captiondescription-destinationsettings)" : CaptionDestinationSettings,
   "[LanguageCode](#cfn-medialive-channel-captiondescription-languagecode)" : String,
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-medialive-channel-captiondescription-syntax.yaml"></a>
 
 ```
+  [Accessibility](#cfn-medialive-channel-captiondescription-accessibility): String
   [CaptionSelectorName](#cfn-medialive-channel-captiondescription-captionselectorname): String
   [DestinationSettings](#cfn-medialive-channel-captiondescription-destinationsettings): 
     CaptionDestinationSettings
@@ -32,6 +34,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-captiondescription-properties"></a>
+
+`Accessibility`  <a name="cfn-medialive-channel-captiondescription-accessibility"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CaptionSelectorName`  <a name="cfn-medialive-channel-captiondescription-captionselectorname"></a>
 Specifies which input captions selector to use as a captions source when generating output captions\. This field should match a captionSelector name\.  

@@ -38,7 +38,7 @@ The account ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultLogLevel`  <a name="cfn-iot-logging-defaultloglevel"></a>
-The default log level\.Valid Values: `DEBUG | INFO | ERROR | WARN | DISABLED`  
+The default log level\. Valid Values: `DEBUG | INFO | ERROR | WARN | DISABLED`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -53,6 +53,6 @@ The role ARN used for the log\.
 
 ### Ref<a name="aws-resource-iot-logging-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the log ID\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the log ID\. For example:
 
  `{"Ref": "Log-12345"}` 

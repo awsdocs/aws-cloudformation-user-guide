@@ -32,7 +32,7 @@ The routing controls that are part of transactions that are evaluated to determi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WaitPeriodMs`  <a name="cfn-route53recoverycontrol-safetyrule-assertionrule-waitperiodms"></a>
-An evaluation period, in milliseconds \(ms\), during which any request against the target routing controls will fail\. This helps prevent "flapping" of state\. The wait period is 5000 ms by default, but you can choose a custom value\.  
+An evaluation period, in milliseconds \(ms\), during which any request against the target routing controls will fail\. This helps prevent flapping of state\. The wait period is 5000 ms by default, but you can choose a custom value\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

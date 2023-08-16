@@ -4,7 +4,7 @@
 + [Amazon Route 53 resource record set using hosted zone name or ID](#scenario-route53-recordset-by-host)
 + [Using RecordSetGroup to set up weighted resource record sets](#scenario-recordsetgroup-weighted)
 + [Using RecordSetGroup to set up an alias resource record set](#scenario-recordsetgroup-zoneapex)
-+ [Alias resource record set for a CloudFront distribution](#w11339ab1c23c21c80c11)
++ [Alias resource record set for a CloudFront distribution](#w4ab1c23c21c84c11)
 
 ## Amazon Route 53 resource record set using hosted zone name or ID<a name="scenario-route53-recordset-by-host"></a>
 
@@ -134,14 +134,14 @@ For more information about weighted resource record sets, see [Weighted routing]
  8.       Type: CNAME
  9.       TTL: '900'
 10.       SetIdentifier: Frontend One
-11.       Weight: '4'
+11.       Weight: '140'
 12.       ResourceRecords:
 13.       - example-ec2.amazonaws.com
 14.     - Name: mysite.example.com.
 15.       Type: CNAME
 16.       TTL: '900'
 17.       SetIdentifier: Frontend Two
-18.       Weight: '6'
+18.       Weight: '60'
 19.       ResourceRecords:
 20.       - example-ec2-larger.amazonaws.com
 ```
@@ -265,7 +265,7 @@ For more information about alias resource record sets, see [Choosing between ali
 17.         DNSName: !GetAtt 'myELB.DNSName'
 ```
 
-## Alias resource record set for a CloudFront distribution<a name="w11339ab1c23c21c80c11"></a>
+## Alias resource record set for a CloudFront distribution<a name="w4ab1c23c21c84c11"></a>
 
 The following example creates an alias record set that routes queries to the specified CloudFront distribution\.
 

@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-ssmcontacts-contactchannel-properties"></a>
 
 `ChannelAddress`  <a name="cfn-ssmcontacts-contactchannel-channeladdress"></a>
-The details that Incident Manager uses when trying to engage the contact channel\.   
+The details that Incident Manager uses when trying to engage the contact channel\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,7 +66,7 @@ The Amazon Resource Name \(ARN\) of the contact you are adding the contact chann
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Pattern*: `arn:(aws|aws-cn|aws-us-gov):ssm-contacts:[-\w+=\/,.@]*:[0-9]+:([\w+=\/,.@:-]+)*`  
+*Pattern*: `arn:(aws|aws-cn|aws-us-gov):ssm-contacts:[-\w+=\/,.@]*:[0-9]+:([\w+=\/,.@:-])*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeferActivation`  <a name="cfn-ssmcontacts-contactchannel-deferactivation"></a>
@@ -79,15 +79,15 @@ If you want to activate the channel at a later time, you can choose to defer act
 
 ### Ref<a name="aws-resource-ssmcontacts-contactchannel-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the resource, such as `arn:aws:ssm-contacts:us-west-2:123456789012:contact-channel/contactalias/cec1bb12-34f5-6789-a1ee-e1ca2345d6f7`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the resource, such as `arn:aws:ssm-contacts:us-west-2:123456789012:contact-channel/contactalias/cec1bb12-34f5-6789-a1ee-e1ca2345d6f7`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ssmcontacts-contactchannel-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ssmcontacts-contactchannel-return-values-fn--getatt-fn--getatt"></a>
 

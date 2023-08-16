@@ -46,10 +46,10 @@ An object that defines the tags \(keys and values\) that you want to associate w
 
 ### Ref<a name="aws-resource-pinpointemail-dedicatedippool-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "myDedicatedIpPool" }` 
 
 For the Amazon Pinpoint dedicated IP pool `myDedicatedIpPool`, Ref returns the name of the IP pool\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster ProvisionedThroughput<a name="aws-properties-msk-cluster-provisionedthroughput"></a>
 
-Specifies whether provisioned throughput is turned on and the volume throughput target\.
+Contains information about provisioned throughput for EBS storage volumes attached to kafka broker nodes\.
 
 ## Syntax<a name="aws-properties-msk-cluster-provisionedthroughput-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-provisionedthroughput-properties"></a>
 
 `Enabled`  <a name="cfn-msk-cluster-provisionedthroughput-enabled"></a>
-Specifies whether provisioned throughput is turned on for the cluster\.  
+Provisioned throughput is enabled or not\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeThroughput`  <a name="cfn-msk-cluster-provisionedthroughput-volumethroughput"></a>
-The provisioned throughput rate in MiB per second\.  
+Throughput value of the EBS volumes for the data drive on each kafka broker node in MiB per second\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

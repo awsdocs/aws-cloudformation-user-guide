@@ -1,4 +1,4 @@
-# Personalize resource type reference<a name="AWS_Personalize"></a>
+# Amazon Personalize resource type reference<a name="AWS_Personalize"></a>
 
 **Resource types**
 + [AWS::Personalize::Dataset](aws-resource-personalize-dataset.md)

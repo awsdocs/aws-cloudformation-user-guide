@@ -50,7 +50,7 @@ A list of the names of the users that you want to add to the group\.
 
 ### Ref<a name="aws-properties-iam-addusertogroup-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When the logical ID of this resource is provided to the `Ref`intrinsic function, `Ref`returns the resource name\.
 
 For example:
 
@@ -58,7 +58,7 @@ For example:
 
 For the `AWS::IAM::UserToGroupAddition` resource with the logical ID `MyUserToGroupAddition`, `Ref` will return the AWS resource name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-properties-iam-addusertogroup--seealso"></a>
 + To view `AWS::IAM::UserToGroupAddition` template example snippets, see [Add Users to a Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-addusertogroup)\. 

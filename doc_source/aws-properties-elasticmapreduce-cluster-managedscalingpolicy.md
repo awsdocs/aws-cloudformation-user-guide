@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-managedscalingpolicy-properties"></a>
 
 `ComputeLimits`  <a name="cfn-elasticmapreduce-cluster-managedscalingpolicy-computelimits"></a>
-The EC2 unit limits for a managed scaling policy\. The managed scaling activity of a cluster is not allowed to go above or below these limits\. The limit only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.  
+The Amazon EC2 unit limits for a managed scaling policy\. The managed scaling activity of a cluster is not allowed to go above or below these limits\. The limit only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.  
 *Required*: No  
 *Type*: [ComputeLimits](aws-properties-elasticmapreduce-cluster-computelimits.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

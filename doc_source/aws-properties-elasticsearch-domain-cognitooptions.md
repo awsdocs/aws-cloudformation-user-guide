@@ -38,19 +38,19 @@ Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashbo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdentityPoolId`  <a name="cfn-elasticsearch-domain-cognitooptions-identitypoolid"></a>
-The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch Dashboards authentication\.  
-*Required*: No  
+The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch Dashboards authentication\. Required if you enable Cognito authentication\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-elasticsearch-domain-cognitooptions-rolearn"></a>
-The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure your user pool and identity pool\.  
+The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure your user pool and identity pool\. Required if you enable Cognito authentication\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolId`  <a name="cfn-elasticsearch-domain-cognitooptions-userpoolid"></a>
-The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch Dashboards authentication\.  
-*Required*: No  
+The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch Dashboards authentication\. Required if you enable Cognito authentication\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

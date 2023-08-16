@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-imagebuilder-containerrecipe-name)" : String,
       "[ParentImage](#cfn-imagebuilder-containerrecipe-parentimage)" : String,
       "[PlatformOverride](#cfn-imagebuilder-containerrecipe-platformoverride)" : String,
-      "[Tags](#cfn-imagebuilder-containerrecipe-tags)" : {Key : Value, ...},
+      "[Tags](#cfn-imagebuilder-containerrecipe-tags)" : {Key: Value, ...},
       "[TargetRepository](#cfn-imagebuilder-containerrecipe-targetrepository)" : TargetContainerRepository,
       "[Version](#cfn-imagebuilder-containerrecipe-version)" : String,
       "[WorkingDirectory](#cfn-imagebuilder-containerrecipe-workingdirectory)" : String
@@ -50,7 +50,7 @@ Properties:
   [ParentImage](#cfn-imagebuilder-containerrecipe-parentimage): String
   [PlatformOverride](#cfn-imagebuilder-containerrecipe-platformoverride): String
   [Tags](#cfn-imagebuilder-containerrecipe-tags): 
-    Key : Value
+    Key: Value
   [TargetRepository](#cfn-imagebuilder-containerrecipe-targetrepository): 
     TargetContainerRepository
   [Version](#cfn-imagebuilder-containerrecipe-version): String
@@ -60,7 +60,7 @@ Properties:
 ## Properties<a name="aws-resource-imagebuilder-containerrecipe-properties"></a>
 
 `Components`  <a name="cfn-imagebuilder-containerrecipe-components"></a>
-Components for build and test that are included in the container recipe\.  
+Build and test components that are included in the container recipe\. Recipes require a minimum of one build component, and can have a maximum of 20 build and test components in any combination\.  
 *Required*: Yes  
 *Type*: List of [ComponentConfiguration](aws-properties-imagebuilder-containerrecipe-componentconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -93,7 +93,7 @@ The S3 URI for the Dockerfile that will be used to build your container image\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageOsVersionOverride`  <a name="cfn-imagebuilder-containerrecipe-imageosversionoverride"></a>
-Specifies the operating system version for the source image\.  
+Specifies the operating system version for the base image\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -128,7 +128,7 @@ The base image for the container recipe\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlatformOverride`  <a name="cfn-imagebuilder-containerrecipe-platformoverride"></a>
-Specifies the operating system platform when you use a custom source image\.  
+Specifies the operating system platform when you use a custom base image\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -168,15 +168,15 @@ The working directory for use during build and test workflows\.
 
 ### Ref<a name="aws-resource-imagebuilder-containerrecipe-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN, such as `arn:aws:imagebuilder:us-east-1:123456789012:container-recipe/mybasicrecipe/2020.12.17`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ARN, such as `arn:aws:imagebuilder:us-east-1:123456789012:container-recipe/mybasicrecipe/2020.12.17`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-imagebuilder-containerrecipe-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-imagebuilder-containerrecipe-return-values-fn--getatt-fn--getatt"></a>
 

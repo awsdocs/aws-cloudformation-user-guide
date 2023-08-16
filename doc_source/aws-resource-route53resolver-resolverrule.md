@@ -45,7 +45,7 @@ DNS queries for this domain name are forwarded to the IP addresses that are spec
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Name`  <a name="cfn-route53resolver-resolverrule-name"></a>
 The name for the Resolver rule, which you specified when you created the Resolver rule\.  
@@ -74,14 +74,14 @@ Currently, only Resolver can create rules that have a value of `RECURSIVE` for `
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverrule-tags"></a>
-Route 53 Resolver doesn't support updating tags through CloudFormation\.  
+Tags help organize and categorize your Resolver rules\. Each tag consists of a key and an optional value, both of which you define\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetIps`  <a name="cfn-route53resolver-resolverrule-targetips"></a>
-An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to\. Typically, these are the IP addresses of DNS resolvers on your network\. Specify IPv4 addresses\. IPv6 is not supported\.  
+An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to\. Typically, these are the IP addresses of DNS resolvers on your network\.   
 *Required*: No  
 *Type*: List of [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,15 +90,15 @@ An array that contains the IP addresses and ports that an outbound endpoint forw
 
 ### Ref<a name="aws-resource-route53resolver-resolverrule-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `ResolverRule` object, which contains detailed information about the rule\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `ResolverRule` object, which contains detailed information about the rule\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-route53resolver-resolverrule-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-route53resolver-resolverrule-return-values-fn--getatt-fn--getatt"></a>
 

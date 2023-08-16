@@ -44,8 +44,8 @@ The unique identifier of the member to which the node belongs\. Applies only to 
 The unique identifier of the network for the node\.  
 Ethereum public networks have the following `NetworkId`s:  
 +  `n-ethereum-mainnet` 
++  `n-ethereum-goerli` 
 +  `n-ethereum-rinkeby` 
-+  `n-ethereum-ropsten` 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -62,15 +62,15 @@ Configuration properties of a peer node\.
 
 ### Ref<a name="aws-resource-managedblockchain-node-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the node ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the node ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-managedblockchain-node-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-managedblockchain-node-return-values-fn--getatt-fn--getatt"></a>
 

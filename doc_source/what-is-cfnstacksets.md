@@ -15,6 +15,7 @@ This section helps you get started using StackSets, and answers common questions
 + [Configuring a target account gate in AWS CloudFormation StackSets](stacksets-account-gating.md)
 + [Detecting unmanaged configuration changes in stack sets](stacksets-drift.md)
 + [Importing a stack into AWS CloudFormation StackSets](stacksets-import.md)
++ [Account level targets for service\-managed Stack Sets](account-level-targets.md)
 + [Best practices](stacksets-bestpractices.md)
 + [AWS CloudFormation StackSets sample templates](stacksets-sampletemplates.md)
 + [Troubleshooting AWS CloudFormation StackSets](stacksets-troubleshooting.md)

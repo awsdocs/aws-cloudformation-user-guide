@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-emrcontainers-virtualcluster-containerinfo-properties"></a>
 
 `EksInfo`  <a name="cfn-emrcontainers-virtualcluster-containerinfo-eksinfo"></a>
-The information about the EKS cluster\.  
+The information about the Amazon EKS cluster\.  
 *Required*: Yes  
 *Type*: [EksInfo](aws-properties-emrcontainers-virtualcluster-eksinfo.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

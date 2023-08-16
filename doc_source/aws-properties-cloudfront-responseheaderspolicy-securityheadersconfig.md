@@ -53,28 +53,28 @@ For more information about the `X-Content-Type-Options` HTTP response header, se
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FrameOptions`  <a name="cfn-cloudfront-responseheaderspolicy-securityheadersconfig-frameoptions"></a>
-Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value\.  
+Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header's value\.  
 For more information about the `X-Frame-Options` HTTP response header, see [X\-Frame\-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) in the MDN Web Docs\.  
 *Required*: No  
 *Type*: [FrameOptions](aws-properties-cloudfront-responseheaderspolicy-frameoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReferrerPolicy`  <a name="cfn-cloudfront-responseheaderspolicy-securityheadersconfig-referrerpolicy"></a>
-Determines whether CloudFront includes the `Referrer-Policy` HTTP response header and the header’s value\.  
+Determines whether CloudFront includes the `Referrer-Policy` HTTP response header and the header's value\.  
 For more information about the `Referrer-Policy` HTTP response header, see [Referrer\-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy) in the MDN Web Docs\.  
 *Required*: No  
 *Type*: [ReferrerPolicy](aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StrictTransportSecurity`  <a name="cfn-cloudfront-responseheaderspolicy-securityheadersconfig-stricttransportsecurity"></a>
-Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header’s value\.  
+Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header's value\.  
 For more information about the `Strict-Transport-Security` HTTP response header, see [Strict\-Transport\-Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) in the MDN Web Docs\.  
 *Required*: No  
 *Type*: [StrictTransportSecurity](aws-properties-cloudfront-responseheaderspolicy-stricttransportsecurity.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `XSSProtection`  <a name="cfn-cloudfront-responseheaderspolicy-securityheadersconfig-xssprotection"></a>
-Determines whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value\.  
+Determines whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header's value\.  
 For more information about the `X-XSS-Protection` HTTP response header, see [X\-XSS\-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) in the MDN Web Docs\.  
 *Required*: No  
 *Type*: [XSSProtection](aws-properties-cloudfront-responseheaderspolicy-xssprotection.md)  

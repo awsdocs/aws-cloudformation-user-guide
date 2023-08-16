@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SlackConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-slackconnectorprofilecredentials"></a>
 
- The `SlackConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Slack\. 
+ The connector\-specific profile credentials required when using Slack\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-slackconnectorprofilecredentials-syntax"></a>
 
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The credentials used to access protected Slack resources\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `2048`  
+*Maximum*: `4096`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

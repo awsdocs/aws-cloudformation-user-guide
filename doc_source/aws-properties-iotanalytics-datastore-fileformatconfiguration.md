@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[JsonConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration-jsonconfiguration)" : JsonConfiguration,
+  "[JsonConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration-jsonconfiguration)" : Json,
   "[ParquetConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration-parquetconfiguration)" : ParquetConfiguration
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [JsonConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration-jsonconfiguration): 
-    JsonConfiguration
+    Json
   [ParquetConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration-parquetconfiguration): 
     ParquetConfiguration
 ```
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `JsonConfiguration`  <a name="cfn-iotanalytics-datastore-fileformatconfiguration-jsonconfiguration"></a>
 Contains the configuration information of the JSON format\.  
 *Required*: No  
-*Type*: [JsonConfiguration](aws-properties-iotanalytics-datastore-jsonconfiguration.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParquetConfiguration`  <a name="cfn-iotanalytics-datastore-fileformatconfiguration-parquetconfiguration"></a>

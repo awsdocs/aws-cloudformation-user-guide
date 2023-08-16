@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeliveryS3Bucket](#cfn-config-conformancepack-deliverys3bucket)" : String,
       "[DeliveryS3KeyPrefix](#cfn-config-conformancepack-deliverys3keyprefix)" : String,
       "[TemplateBody](#cfn-config-conformancepack-templatebody)" : String,
-      "[TemplateS3Uri](#cfn-config-conformancepack-templates3uri)" : String
+      "[TemplateS3Uri](#cfn-config-conformancepack-templates3uri)" : String,
+      "[TemplateSSMDocumentDetails](#cfn-config-conformancepack-templatessmdocumentdetails)" : TemplateSSMDocumentDetails
     }
 }
 ```
@@ -34,6 +35,8 @@ Properties:
   [DeliveryS3KeyPrefix](#cfn-config-conformancepack-deliverys3keyprefix): String
   [TemplateBody](#cfn-config-conformancepack-templatebody): String
   [TemplateS3Uri](#cfn-config-conformancepack-templates3uri): String
+  [TemplateSSMDocumentDetails](#cfn-config-conformancepack-templatessmdocumentdetails): 
+    TemplateSSMDocumentDetails
 ```
 
 ## Properties<a name="aws-resource-config-conformancepack-properties"></a>
@@ -76,13 +79,19 @@ You must have access to read Amazon S3 bucket\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TemplateSSMDocumentDetails`  <a name="cfn-config-conformancepack-templatessmdocumentdetails"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [TemplateSSMDocumentDetails](aws-properties-config-conformancepack-templatessmdocumentdetails.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-config-conformancepack-return-values"></a>
 
 ### Ref<a name="aws-resource-config-conformancepack-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the conformance pack\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the conformance pack\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-conformancepack--examples"></a>
 

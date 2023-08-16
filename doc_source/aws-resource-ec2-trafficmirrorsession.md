@@ -63,6 +63,7 @@ The ID of the source network interface\.
 `PacketLength`  <a name="cfn-ec2-trafficmirrorsession-packetlength"></a>
 The number of bytes in each packet to mirror\. These are bytes after the VXLAN header\. Do not specify this parameter when you want to mirror the entire packet\. To mirror a subset of the packet, set this to the length \(in bytes\) that you want to mirror\. For example, if you set this value to 100, then the first 100 bytes that meet the filter criteria are copied to the target\.  
 If you do not want to mirror the entire packet, use the `PacketLength` parameter to specify the number of bytes in each packet to mirror\.  
+For sessions with Network Load Balancer \(NLB\) Traffic Mirror targets the default `PacketLength` will be set to 8500\. Valid values are 1\-8500\. Setting a `PacketLength` greater than 8500 will result in an error response\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,9 +103,9 @@ The VXLAN ID for the Traffic Mirror session\. For more information about the VXL
 
 ### Ref<a name="aws-resource-ec2-trafficmirrorsession-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Traffic Mirror Session\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the Traffic Mirror Session\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrorsession--examples"></a>
 

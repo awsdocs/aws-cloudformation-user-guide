@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProvisioningRoleArn](#cfn-iot-provisioningtemplate-provisioningrolearn)" : String,
       "[Tags](#cfn-iot-provisioningtemplate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TemplateBody](#cfn-iot-provisioningtemplate-templatebody)" : String,
-      "[TemplateName](#cfn-iot-provisioningtemplate-templatename)" : String
+      "[TemplateName](#cfn-iot-provisioningtemplate-templatename)" : String,
+      "[TemplateType](#cfn-iot-provisioningtemplate-templatetype)" : String
     }
 }
 ```
@@ -37,6 +38,7 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TemplateBody](#cfn-iot-provisioningtemplate-templatebody): String
   [TemplateName](#cfn-iot-provisioningtemplate-templatename): String
+  [TemplateType](#cfn-iot-provisioningtemplate-templatetype): String
 ```
 
 ## Properties<a name="aws-resource-iot-provisioningtemplate-properties"></a>
@@ -83,11 +85,17 @@ The name of the fleet provisioning template\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`TemplateType`  <a name="cfn-iot-provisioningtemplate-templatetype"></a>
+The type of the provisioning template\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 ## Return values<a name="aws-resource-iot-provisioningtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-iot-provisioningtemplate-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the template name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the template name\. For example:
 
  `{ "Ref": "MyTemplate" }` 
 
@@ -97,9 +105,9 @@ For a stack named MyStack, a value similar to the following is returned:
 
 ### Fn::GetAtt<a name="aws-resource-iot-provisioningtemplate-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-provisioningtemplate-return-values-fn--getatt-fn--getatt"></a>
 

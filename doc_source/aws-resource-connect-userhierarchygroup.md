@@ -1,6 +1,6 @@
 # AWS::Connect::UserHierarchyGroup<a name="aws-resource-connect-userhierarchygroup"></a>
 
-Creates a new user hierarchy group\.
+Specifies a new user hierarchy group\.
 
 ## Syntax<a name="aws-resource-connect-userhierarchygroup-syntax"></a>
 
@@ -53,22 +53,22 @@ The Amazon Resource Name \(ARN\) of the parent group\.
 
 ### Ref<a name="aws-resource-connect-userhierarchygroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the user hierarchy group\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the user hierarchy group\. For example:
 
 `{ "Ref": "myUserHierarchyGroup" }`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-connect-userhierarchygroup-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-connect-userhierarchygroup-return-values-fn--getatt-fn--getatt"></a>
 
 `UserHierarchyGroupArn`  <a name="UserHierarchyGroupArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) for the user hierarchy group\.
+The Amazon Resource Name \(ARN\) of the user hierarchy group\.
 
 ## Examples<a name="aws-resource-connect-userhierarchygroup--examples"></a>
 

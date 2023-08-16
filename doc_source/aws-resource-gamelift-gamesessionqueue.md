@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-resource-gamelift-gamesessionqueue-properties"></a>
 
 `CustomEventData`  <a name="cfn-gamelift-gamesessionqueue-customeventdata"></a>
- Information to be added to all events that are related to this game session queue\.   
+Information to be added to all events that are related to this game session queue\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -107,7 +107,7 @@ A list of labels to assign to the new game session queue resource\. Tags are dev
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutInSeconds`  <a name="cfn-gamelift-gamesessionqueue-timeoutinseconds"></a>
-The maximum time, in seconds, that a new game session placement request remains in the queue\. When a request exceeds this time, the game session placement changes to a `TIMED_OUT` status\.  
+The maximum time, in seconds, that a new game session placement request remains in the queue\. When a request exceeds this time, the game session placement changes to a `TIMED_OUT` status\. By default, this property is set to `600`\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -117,15 +117,15 @@ The maximum time, in seconds, that a new game session placement request remains 
 
 ### Ref<a name="aws-resource-gamelift-gamesessionqueue-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the game session queue, which is unique within each Region\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the game session queue, which is unique within each Region\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-gamelift-gamesessionqueue-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-gamelift-gamesessionqueue-return-values-fn--getatt-fn--getatt"></a>
 

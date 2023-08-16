@@ -16,9 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn)" : String,
       "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled)" : Boolean,
       "[ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn)" : String,
+      "[ImageScanningConfiguration](#cfn-imagebuilder-image-imagescanningconfiguration)" : ImageScanningConfiguration,
       "[ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration)" : ImageTestsConfiguration,
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn)" : String,
-      "[Tags](#cfn-imagebuilder-image-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-imagebuilder-image-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -32,11 +33,13 @@ Properties:
   [DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn): String
   [EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled): Boolean
   [ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn): String
+  [ImageScanningConfiguration](#cfn-imagebuilder-image-imagescanningconfiguration): 
+    ImageScanningConfiguration
   [ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration): 
     ImageTestsConfiguration
   [InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn): String
   [Tags](#cfn-imagebuilder-image-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-imagebuilder-image-properties"></a>
@@ -51,11 +54,11 @@ The Amazon Resource Name \(ARN\) of the container recipe that is used for this p
 The Amazon Resource Name \(ARN\) of the distribution configuration\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:[0-9]{12}|aws):(?:image-recipe|container-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|[0-9]+)\.(?:x|[0-9]+)\.(?:x|[0-9]+))(?:/[0-9]+)?)?$`  
+*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:[0-9]{12}|aws):(?:image-recipe|container-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline|workflow\/(?:build|test|distribution))/[a-z0-9-_]+(?:/(?:(?:x|[0-9]+)\.(?:x|[0-9]+)\.(?:x|[0-9]+))(?:/[0-9]+)?)?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnhancedImageMetadataEnabled`  <a name="cfn-imagebuilder-image-enhancedimagemetadataenabled"></a>
- Collects additional information about the image being created, including the operating system \(OS\) version and package list\. This information is used to enhance the overall experience of using EC2 Image Builder\. Enabled by default\.  
+Indicates whether Image Builder collects additional information about the image, such as the operating system \(OS\) version and package list\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -64,7 +67,13 @@ The Amazon Resource Name \(ARN\) of the distribution configuration\.
 The Amazon Resource Name \(ARN\) of the image recipe\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:[0-9]{12}|aws):(?:image-recipe|container-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|[0-9]+)\.(?:x|[0-9]+)\.(?:x|[0-9]+))(?:/[0-9]+)?)?$`  
+*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:[0-9]{12}|aws):(?:image-recipe|container-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline|workflow\/(?:build|test|distribution))/[a-z0-9-_]+(?:/(?:(?:x|[0-9]+)\.(?:x|[0-9]+)\.(?:x|[0-9]+))(?:/[0-9]+)?)?$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ImageScanningConfiguration`  <a name="cfn-imagebuilder-image-imagescanningconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ImageScanningConfiguration](aws-properties-imagebuilder-image-imagescanningconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageTestsConfiguration`  <a name="cfn-imagebuilder-image-imagetestsconfiguration"></a>
@@ -89,15 +98,15 @@ The tags of the image\.
 
 ### Ref<a name="aws-resource-imagebuilder-image-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:image/my-example-image`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:image/my-example-image`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-imagebuilder-image-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-imagebuilder-image-return-values-fn--getatt-fn--getatt"></a>
 
@@ -105,10 +114,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image/mybasicrecipe/2019.12.03/1`\.
 
 `ImageId`  <a name="ImageId-fn::getatt"></a>
-Returns the AMI ID of the Amazon EC2 AMI in the Region in which you are using Image Builder\.
+Returns the AMI ID of the Amazon EC2 AMI in the Region in which you are using Image Builder\. Values are returned only for AMIs, and not for container images\.
 
 `ImageUri`  <a name="ImageUri-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Returns a list of URIs for container images created in the context Region\. Values are returned only for container images, and not for AMIs\.
 
 `Name`  <a name="Name-fn::getatt"></a>
 Returns the name of the image\.

@@ -1,6 +1,6 @@
 # AWS::WAFv2::RuleGroup AndStatement<a name="aws-properties-wafv2-rulegroup-andstatement"></a>
 
-A logical rule statement used to combine other rule statements with AND logic\. You provide more than one [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-notstatement.html#cfn-wafv2-webacl-notstatement-statement) within the `AndStatement`\. 
+A logical rule statement used to combine other rule statements with AND logic\. You provide more than one `Statement` within the `AndStatement`\. 
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-andstatement-syntax"></a>
 

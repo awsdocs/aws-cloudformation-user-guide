@@ -1,4 +1,4 @@
-# Amazon DocumentDB resource type reference<a name="AWS_DocDB"></a>
+# Amazon DocumentDB \(with MongoDB compatibility\) resource type reference<a name="AWS_DocDB"></a>
 
 **Resource types**
 + [AWS::DocDB::DBCluster](aws-resource-docdb-dbcluster.md)

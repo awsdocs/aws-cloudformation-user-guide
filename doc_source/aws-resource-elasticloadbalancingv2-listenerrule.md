@@ -2,6 +2,8 @@
 
 Specifies a listener rule\. The listener must be associated with an Application Load Balancer\. Each rule consists of a priority, one or more actions, and one or more conditions\.
 
+For more information, see [Quotas for your Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html) in the *User Guide for Application Load Balancers*\.
+
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listenerrule-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -51,7 +53,7 @@ The rule can optionally include up to one of each of the following conditions: `
 
 `ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenerrule-listenerarn"></a>
 The Amazon Resource Name \(ARN\) of the listener\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -68,15 +70,15 @@ If you try to reorder rules by updating their priorities, do not specify a new p
 
 ### Ref<a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the listener rule\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\) of the listener rule\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values-fn--getatt-fn--getatt"></a>
 

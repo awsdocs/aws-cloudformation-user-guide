@@ -37,7 +37,6 @@ Properties:
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-portfolioproductassociation-acceptlanguage"></a>
 The language code\.  
-+  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
 *Required*: No  
@@ -76,9 +75,9 @@ The identifier of the source portfolio\.
 
 ### Ref<a name="aws-resource-servicecatalog-portfolioproductassociation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a unique identifier for the association\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a unique identifier for the association\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-servicecatalog-portfolioproductassociation--seealso"></a>
 + [AssociateProductWithPortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociateProductWithPortfolio.html) in the *AWS Service Catalog API Reference*

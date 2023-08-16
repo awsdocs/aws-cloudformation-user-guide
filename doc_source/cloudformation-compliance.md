@@ -1,16 +1,15 @@
 # Compliance validation for AWS CloudFormation<a name="cloudformation-compliance"></a>
 
-Third\-party auditors assess the security and compliance of AWS CloudFormation as part of multiple AWS compliance programs\. 
+To learn whether an AWS service is within the scope of specific compliance programs, see [AWS services in Scope by Compliance Program](http://aws.amazon.com/compliance/services-in-scope/) and choose the compliance program that you are interested in\. For general information, see [AWS Compliance Programs](http://aws.amazon.com/compliance/programs/)\.
 
-AWS provides a frequently updated list of AWS services in scope of specific compliance programs at [AWS Services in Scope by Compliance Program](http://aws.amazon.com/compliance/services-in-scope/)\.
+You can download third\-party audit reports using AWS Artifact\. For more information, see [Downloading Reports in AWS Artifact](https://docs.aws.amazon.com/artifact/latest/ug/downloading-documents.html)\.
 
-Third\-party audit reports are available for you to download using AWS Artifact\. For more information, see [Downloading Reports in AWS Artifact](https://docs.aws.amazon.com/artifact/latest/ug/downloading-documents.html)\.
-
-For more information about AWS compliance programs, see [AWS Compliance Programs](http://aws.amazon.com/compliance/programs/)\.
-
-Your compliance responsibility when using AWS CloudFormation is determined by the sensitivity of your data, your organization’s compliance objectives, and applicable laws and regulations\. If your use of AWS CloudFormation is subject to compliance with standards like HIPAA, PCI, or FedRAMP, AWS provides resources to help:
-+ [Security and Compliance Quick Start Guides](https://aws.amazon.com/quickstart/?awsf.quickstart-homepage-filter=categories#security-identity-compliance)that discuss architectural considerations and steps for deploying security\- and compliance\-focused baseline environments on AWS\.
-+ [Architecting for HIPAA Security and Compliance](https://d0.awsstatic.com/whitepapers/compliance/AWS_HIPAA_Compliance_Whitepaper.pdf) whitepaper that outlines how companies use AWS to help them meet HIPAA requirements\.
-+ [AWS Compliance Resources](http://aws.amazon.com/compliance/resources/) provide several different workbooks and guides that might apply to your industry and location\.
-+ [AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config) can be used to assess how well your resource configurations comply with internal practices, industry guidelines, and regulations\. Use AWS Config to track your private resource types from the [CloudFormation Registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-config-record)\.
-+ [Security Hub](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub) provides you with a comprehensive view of your security state within AWS and helps you check your compliance with security industry standards and best practices\.
+Your compliance responsibility when using AWS services is determined by the sensitivity of your data, your company's compliance objectives, and applicable laws and regulations\. AWS provides the following resources to help with compliance:
++ [Security and Compliance Quick Start Guides](http://aws.amazon.com/quickstart/?awsf.quickstart-homepage-filter=categories%23security-identity-compliance) – These deployment guides discuss architectural considerations and provide steps for deploying baseline environments on AWS that are security and compliance focused\.
++ [Architecting for HIPAA Security and Compliance on Amazon Web Services](https://docs.aws.amazon.com/whitepapers/latest/architecting-hipaa-security-and-compliance-on-aws/welcome.html) – This whitepaper describes how companies can use AWS to create HIPAA\-eligible applications\.
+**Note**  
+Not all AWS services are HIPAA eligible\. For more information, see the [HIPAA Eligible Services Reference](https://aws.amazon.com/compliance/hipaa-eligible-services-reference/)\.
++ [AWS Compliance Resources](http://aws.amazon.com/compliance/resources/) – This collection of workbooks and guides might apply to your industry and location\.
++ [Evaluating Resources with Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html) in the *AWS Config Developer Guide* – The AWS Config service assesses how well your resource configurations comply with internal practices, industry guidelines, and regulations\.
++ [AWS Security Hub](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html) – This AWS service provides a comprehensive view of your security state within AWS\. Security Hub uses security controls to evaluate your AWS resources and to check your compliance against security industry standards and best practices\. For a list of supported services and controls, see [Security Hub controls reference](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-controls-reference.html)\.
++ [AWS Audit Manager](https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html) – This AWS service helps you continuously audit your AWS usage to simplify how you manage risk and compliance with regulations and industry standards\.

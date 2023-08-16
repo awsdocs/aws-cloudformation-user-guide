@@ -1,6 +1,6 @@
 # AWS CloudFormation and interface VPC endpoints \(AWS PrivateLink\)<a name="vpc-interface-endpoints"></a>
 
-You can establish a private connection between your VPC and AWS CloudFormation by creating an *interface VPC endpoint*\. Interface endpoints are powered by [AWS PrivateLink](http://aws.amazon.com/privatelink), a technology that enables you to privately access CloudFormation APIs without an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection\. Instances in your VPC don't need public IP addresses to communicate with CloudFormation APIs\. Traffic between your VPC and CloudFormation doesn't keep the Amazon network\.
+You can establish a private connection between your VPC and AWS CloudFormation by creating an *interface VPC endpoint*\. Interface endpoints are powered by [AWS PrivateLink](http://aws.amazon.com/privatelink), a technology that enables you to privately access CloudFormation APIs without an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection\. Instances in your VPC don't need public IP addresses to communicate with CloudFormation APIs\. Traffic between your VPC and CloudFormation doesn't leave the Amazon network\.
 
 Each interface endpoint is represented by one or more [Elastic Network Interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) in your subnets\.
 

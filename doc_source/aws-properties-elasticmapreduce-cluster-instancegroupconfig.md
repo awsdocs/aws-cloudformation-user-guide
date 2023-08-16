@@ -58,7 +58,7 @@ If specified, indicates that the instance group uses Spot Instances\. This is th
 
 `Configurations`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-configurations"></a>
 Amazon EMR releases 4\.x or later\.
-The list of configurations supplied for an EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.  
+The list of configurations supplied for an Amazon EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.  
 *Required*: No  
 *Type*: List of [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -73,7 +73,7 @@ The custom AMI ID to use for the provisioned instance group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration"></a>
-EBS configurations that will be attached to each EC2 instance in the instance group\.  
+EBS configurations that will be attached to each Amazon EC2 instance in the instance group\.  
 *Required*: No  
 *Type*: [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -85,7 +85,7 @@ Target number of instances for the instance group\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype"></a>
-The EC2 instance type for all instances in the instance group\.  
+The Amazon EC2 instance type for all instances in the instance group\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -94,7 +94,7 @@ The EC2 instance type for all instances in the instance group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Market`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-market"></a>
-Market type of the EC2 instances used to create a cluster node\.  
+Market type of the Amazon EC2 instances used to create a cluster node\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ON_DEMAND | SPOT`  

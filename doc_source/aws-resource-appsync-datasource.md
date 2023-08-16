@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-appsync-datasource-description)" : String,
       "[DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig)" : DynamoDBConfig,
       "[ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig)" : ElasticsearchConfig,
+      "[EventBridgeConfig](#cfn-appsync-datasource-eventbridgeconfig)" : EventBridgeConfig,
       "[HttpConfig](#cfn-appsync-datasource-httpconfig)" : HttpConfig,
       "[LambdaConfig](#cfn-appsync-datasource-lambdaconfig)" : LambdaConfig,
       "[Name](#cfn-appsync-datasource-name)" : String,
@@ -38,6 +39,8 @@ Properties:
     DynamoDBConfig
   [ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig): 
     ElasticsearchConfig
+  [EventBridgeConfig](#cfn-appsync-datasource-eventbridgeconfig): 
+    EventBridgeConfig
   [HttpConfig](#cfn-appsync-datasource-httpconfig): 
     HttpConfig
   [LambdaConfig](#cfn-appsync-datasource-lambdaconfig): 
@@ -78,6 +81,12 @@ As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service\
 *Type*: [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EventBridgeConfig`  <a name="cfn-appsync-datasource-eventbridgeconfig"></a>
+An EventBridge configuration that contains a valid ARN of an event bus\.  
+*Required*: No  
+*Type*: [EventBridgeConfig](aws-properties-appsync-datasource-eventbridgeconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `HttpConfig`  <a name="cfn-appsync-datasource-httpconfig"></a>
 Endpoints for an HTTP data source\.  
 *Required*: No  
@@ -110,7 +119,7 @@ Relational Database configuration of the relational database data source\.
 
 `ServiceRoleArn`  <a name="cfn-appsync-datasource-servicerolearn"></a>
 The AWS Identity and Access Management service role ARN for the data source\. The system assumes this role when accessing the data source\.  
-Required if `Type` is specified as `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, or `AMAZON_OPENSEARCH_SERVICE`\.   
+Required if `Type` is specified as `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `AMAZON_EVENTBRIDGE`, or `AMAZON_OPENSEARCH_SERVICE`\.   
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -120,6 +129,7 @@ The type of the data source\.
 +  **AWS\_LAMBDA**: The data source is an AWS Lambda function\.
 +  **AMAZON\_DYNAMODB**: The data source is an Amazon DynamoDB table\.
 +  **AMAZON\_ELASTICSEARCH**: The data source is an Amazon OpenSearch Service domain\.
++  **AMAZON\_EVENTBRIDGE**: The data source is an Amazon EventBridge event bus\.
 +  **AMAZON\_OPENSEARCH\_SERVICE**: The data source is an Amazon OpenSearch Service domain\.
 +  **NONE**: There is no data source\. This type is used when you wish to invoke a GraphQL operation without connecting to a data source, such as performing data transformation with resolvers or triggering a subscription to be invoked from a mutation\.
 +  **HTTP**: The data source is an HTTP endpoint\.

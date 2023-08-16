@@ -1,6 +1,6 @@
 # AWS::Location::Tracker<a name="aws-resource-location-tracker"></a>
 
-The `AWS::Location::Tracker` resource specifies a tracker resource in your AWS account, which lets you receive current and historical location of devices\.
+Specifies a tracker resource in your AWS account, which lets you receive current and historical location of devices\.
 
 ## Syntax<a name="aws-resource-location-tracker-syntax"></a>
 
@@ -15,8 +15,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-location-tracker-description)" : String,
       "[KmsKeyId](#cfn-location-tracker-kmskeyid)" : String,
       "[PositionFiltering](#cfn-location-tracker-positionfiltering)" : String,
-      "[PricingPlan](#cfn-location-tracker-pricingplan)" : String,
-      "[PricingPlanDataSource](#cfn-location-tracker-pricingplandatasource)" : String,
       "[TrackerName](#cfn-location-tracker-trackername)" : String
     }
 }
@@ -30,8 +28,6 @@ Properties:
   [Description](#cfn-location-tracker-description): String
   [KmsKeyId](#cfn-location-tracker-kmskeyid): String
   [PositionFiltering](#cfn-location-tracker-positionfiltering): String
-  [PricingPlan](#cfn-location-tracker-pricingplan): String
-  [PricingPlanDataSource](#cfn-location-tracker-pricingplandatasource): String
   [TrackerName](#cfn-location-tracker-trackername): String
 ```
 
@@ -65,19 +61,6 @@ This field is optional\. If not specified, the default value is `TimeBased`\.
 *Allowed values*: `AccuracyBased | DistanceBased | TimeBased`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`PricingPlan`  <a name="cfn-location-tracker-pricingplan"></a>
-No longer used\. If included, the only allowed value is `RequestBasedUsage`\.  
-*Required*: No  
-*Type*: String  
-*Allowed values*: `MobileAssetManagement | MobileAssetTracking | RequestBasedUsage`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`PricingPlanDataSource`  <a name="cfn-location-tracker-pricingplandatasource"></a>
-This parameter is no longer used\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
 `TrackerName`  <a name="cfn-location-tracker-trackername"></a>
 The name for the tracker resource\.  
 Requirements:  
@@ -95,15 +78,15 @@ Requirements:
 
 ### Ref<a name="aws-resource-location-tracker-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `Tracker` name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `Tracker` name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-location-tracker-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-location-tracker-return-values-fn--getatt-fn--getatt"></a>
 

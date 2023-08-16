@@ -1,8 +1,8 @@
 # AWS::WAFv2::WebACL AllowAction<a name="aws-properties-wafv2-webacl-allowaction"></a>
 
-Specifies that AWS WAF should allow requests\.
+Specifies that AWS WAF should allow the request and optionally defines additional custom handling for the request\.
 
-This is used only in the context of other settings, for example to specify values for the web ACL and rule group `RuleAction` and for the web ACL `DefaultAction`\. 
+This is used in the context of other settings, for example to specify values for a rule action or a web ACL default action\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-allowaction-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CustomRequestHandling`  <a name="cfn-wafv2-webacl-allowaction-customrequesthandling"></a>
 Defines custom handling for the web request\.  
-For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
+For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the * AWS WAF Developer Guide*\.   
 *Required*: No  
 *Type*: [CustomRequestHandling](aws-properties-wafv2-webacl-customrequesthandling.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

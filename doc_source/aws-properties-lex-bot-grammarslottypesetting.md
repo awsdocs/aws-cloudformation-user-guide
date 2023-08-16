@@ -1,6 +1,6 @@
 # AWS::Lex::Bot GrammarSlotTypeSetting<a name="aws-properties-lex-bot-grammarslottypesetting"></a>
 
-Settings required for a slot type based on a grammar that you provide\.
+Settings requried for a slot type based on a grammar that you provide\.
 
 ## Syntax<a name="aws-properties-lex-bot-grammarslottypesetting-syntax"></a>
 

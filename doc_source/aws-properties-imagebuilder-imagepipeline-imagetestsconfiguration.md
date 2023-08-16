@@ -32,6 +32,7 @@ Defines if tests should be executed when building this image\. For example, `tru
 
 `TimeoutMinutes`  <a name="cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes"></a>
 The maximum time in minutes that tests are permitted to run\.  
+The timeoutMinutes attribute is not currently active\. This value is ignored\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `60`  

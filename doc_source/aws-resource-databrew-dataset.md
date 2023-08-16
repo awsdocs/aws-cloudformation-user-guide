@@ -45,7 +45,7 @@ Properties:
 The file format of a dataset that is created from an Amazon S3 file or folder\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `CSV | EXCEL | JSON | PARQUET`  
+*Allowed values*: `CSV | EXCEL | JSON | ORC | PARQUET`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FormatOptions`  <a name="cfn-databrew-dataset-formatoptions"></a>

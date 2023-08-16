@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[S3Bucket](#cfn-synthetics-canary-code-s3bucket)" : String,
   "[S3Key](#cfn-synthetics-canary-code-s3key)" : String,
   "[S3ObjectVersion](#cfn-synthetics-canary-code-s3objectversion)" : String,
-  "[Script](#cfn-synthetics-canary-code-script)" : String
+  "[Script](#cfn-synthetics-canary-code-script)" : String,
+  "[SourceLocationArn](#cfn-synthetics-canary-code-sourcelocationarn)" : String
 }
 ```
 
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [S3Key](#cfn-synthetics-canary-code-s3key): String
   [S3ObjectVersion](#cfn-synthetics-canary-code-s3objectversion): String
   [Script](#cfn-synthetics-canary-code-script): String
+  [SourceLocationArn](#cfn-synthetics-canary-code-sourcelocationarn): String
 ```
 
 ## Properties<a name="aws-properties-synthetics-canary-code-properties"></a>
@@ -67,4 +69,12 @@ The S3 version ID of your script\.
 If you input your canary script directly into the canary instead of referring to an S3 location, the value of this parameter is the script in plain text\. It can be up to 5 MB\.  
 *Required*: Conditional  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceLocationArn`  <a name="cfn-synthetics-canary-code-sourcelocationarn"></a>
+The ARN of the Lambda layer where Synthetics stores the canary script code\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

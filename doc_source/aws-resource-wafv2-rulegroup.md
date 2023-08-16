@@ -17,8 +17,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFv2::RuleGroup",
   "Properties" : {
+      "[AvailableLabels](#cfn-wafv2-rulegroup-availablelabels)" : [ LabelSummary, ... ],
       "[Capacity](#cfn-wafv2-rulegroup-capacity)" : Integer,
-      "[CustomResponseBodies](#cfn-wafv2-rulegroup-customresponsebodies)" : {Key : Value, ...},
+      "[ConsumedLabels](#cfn-wafv2-rulegroup-consumedlabels)" : [ LabelSummary, ... ],
+      "[CustomResponseBodies](#cfn-wafv2-rulegroup-customresponsebodies)" : {Key: Value, ...},
       "[Description](#cfn-wafv2-rulegroup-description)" : String,
       "[Name](#cfn-wafv2-rulegroup-name)" : String,
       "[Rules](#cfn-wafv2-rulegroup-rules)" : [ Rule, ... ],
@@ -34,9 +36,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::WAFv2::RuleGroup
 Properties: 
+  [AvailableLabels](#cfn-wafv2-rulegroup-availablelabels): 
+    - LabelSummary
   [Capacity](#cfn-wafv2-rulegroup-capacity): Integer
+  [ConsumedLabels](#cfn-wafv2-rulegroup-consumedlabels): 
+    - LabelSummary
   [CustomResponseBodies](#cfn-wafv2-rulegroup-customresponsebodies): 
-    Key : Value
+    Key: Value
   [Description](#cfn-wafv2-rulegroup-description): String
   [Name](#cfn-wafv2-rulegroup-name): String
   [Rules](#cfn-wafv2-rulegroup-rules): 
@@ -50,18 +56,30 @@ Properties:
 
 ## Properties<a name="aws-resource-wafv2-rulegroup-properties"></a>
 
+`AvailableLabels`  <a name="cfn-wafv2-rulegroup-availablelabels"></a>
+The labels that one or more rules in this rule group add to matching web requests\. These labels are defined in the `RuleLabels` for a `Rule`\.  
+*Required*: No  
+*Type*: List of [LabelSummary](aws-properties-wafv2-rulegroup-labelsummary.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Capacity`  <a name="cfn-wafv2-rulegroup-capacity"></a>
 The web ACL capacity units \(WCUs\) required for this rule group\.  
 When you create your own rule group, you define this, and you cannot change it after creation\. When you add or modify the rules in a rule group, AWS WAF enforces this limit\.   
-AWS WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs\. AWS WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule\. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power\. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group\. The WCU limit for web ACLs is 1,500\.   
+ AWS WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs\. AWS WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule\. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power\. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group\. The WCU limit for web ACLs is 1,500\.   
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ConsumedLabels`  <a name="cfn-wafv2-rulegroup-consumedlabels"></a>
+The labels that one or more rules in this rule group match against in label match statements\. These labels are defined in a `LabelMatchStatement` specification, in the [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-notstatement.html#cfn-wafv2-webacl-notstatement-statement) definition of a rule\.   
+*Required*: No  
+*Type*: List of [LabelSummary](aws-properties-wafv2-rulegroup-labelsummary.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `CustomResponseBodies`  <a name="cfn-wafv2-rulegroup-customresponsebodies"></a>
 A map of custom response keys and content bodies\. When you create a rule with a block action, you can send a custom response to the web request\. You define these for the rule group, and then use them in the rules that you define in the rule group\.   
-For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
-For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
+For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the * AWS WAF Developer Guide*\.   
+For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the * AWS WAF Developer Guide*\.   
 *Required*: No  
 *Type*: Map of [CustomResponseBody](aws-properties-wafv2-rulegroup-customresponsebody.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -76,7 +94,7 @@ A description of the rule group that helps with identification\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-rulegroup-name"></a>
-The descriptive name of the rule group\. You cannot change the name of a rule group after you create it\.  
+The name of the rule group\. You cannot change the name of a rule group after you create it\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -91,7 +109,7 @@ The rule statements used to identify the web requests that you want to allow, bl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-rulegroup-scope"></a>
-Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
@@ -120,16 +138,14 @@ For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`\.
 
 ### Fn::GetAtt<a name="aws-resource-wafv2-rulegroup-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-wafv2-rulegroup-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the rule group\.
-
-`AvailableLabels`  <a name="AvailableLabels-fn::getatt"></a>
-Labels that rules in this rule group add to matching requests\. These labels are defined in the `RuleLabels` for a `Rule`\. 
-
-`ConsumedLabels`  <a name="ConsumedLabels-fn::getatt"></a>
-Labels that rules in this rule group match against\. Each of these labels is defined in a `LabelMatchStatement` specification, in the rule statement\. 
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the rule group\.
@@ -146,6 +162,122 @@ When a rule with a label matches a web request, AWS WAF adds the fully qualified
 ### Create a rule group<a name="aws-resource-wafv2-rulegroup--examples--Create_a_rule_group_"></a>
 
 The following shows an example rule group specification\. 
+
+#### YAML<a name="aws-resource-wafv2-rulegroup--examples--Create_a_rule_group_--yaml"></a>
+
+```
+ SampleRuleGroup:
+      Type: 'AWS::WAFv2::RuleGroup'
+      Properties:
+        Name: SampleRuleGroup
+        Scope: REGIONAL
+        Description: SampleRuleGroup
+        VisibilityConfig:
+          SampledRequestsEnabled: true
+          CloudWatchMetricsEnabled: true
+          MetricName: SampleRuleGroupMetrics
+        CustomResponseBodies:
+          CustomResponseBodyKey1:
+            ContentType: TEXT_PLAIN
+            Content: this is a plain text
+          CustomResponseBodyKey2:
+            ContentType: APPLICATION_JSON
+            Content: '{"jsonfieldname": "jsonfieldvalue"}'
+          CustomResponseBodyKey3:
+            ContentType: TEXT_HTML
+            Content: <html>HTML text content</html>
+        Capacity: 1000
+        Rules:
+          - Name: RuleOne
+            Priority: 1
+            Action:
+              Allow:
+                CustomRequestHandling:
+                  InsertHeaders:
+                    - Name: AllowActionHeader1Name
+                      Value: AllowActionHeader1Value
+                    - Name: AllowActionHeader2Name
+                      Value: AllowActionHeader2Value
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleOneMetric
+            Statement:
+              ByteMatchStatement:
+                FieldToMatch:
+                  AllQueryArguments: {}
+                PositionalConstraint: CONTAINS
+                SearchString: testagent
+                TextTransformations:
+                  - Priority: 1
+                    Type: HTML_ENTITY_DECODE
+          - Name: RuleTwo
+            Priority: 2
+            Action:
+              Block:
+                CustomResponse:
+                  ResponseCode: 503
+                  CustomResponseBodyKey: CustomResponseBodyKey1
+                  ResponseHeaders:
+                    - Name: BlockActionHeader1Name
+                      Value: BlockActionHeader1Value
+                    - Name: BlockActionHeader2Name
+                      Value: BlockActionHeader2Value
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleTwoMetric
+            Statement:
+              ByteMatchStatement:
+                FieldToMatch:
+                  SingleHeader:
+                    Name: haystack
+                PositionalConstraint: CONTAINS
+                SearchString: badbot
+                TextTransformations:
+                  - Priority: 0
+                    Type: NONE
+          - Name: RuleThree
+            Priority: 3
+            Action:
+              Count:
+                CustomRequestHandling:
+                  InsertHeaders:
+                    - Name: CountActionHeader1Name
+                      Value: CountActionHeader1Value
+                    - Name: CountActionHeader2Name
+                      Value: CountActionHeader2Value
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleThreeMetric
+            Statement:
+              ByteMatchStatement:
+                FieldToMatch:
+                  Body: {}
+                PositionalConstraint: CONTAINS
+                SearchString: RegionOne
+                TextTransformations:
+                  - Priority: 0
+                    Type: HTML_ENTITY_DECODE
+          - Name: RuleFour
+            Priority: 4
+            Action:
+              Allow: {}
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleFourMetric
+            Statement:
+              SizeConstraintStatement:
+                ComparisonOperator: GT
+                Size: 1000
+                FieldToMatch:
+                  UriPath: {}
+                TextTransformations:
+                  - Priority: 0
+                    Type: NONE
+```
 
 #### JSON<a name="aws-resource-wafv2-rulegroup--examples--Create_a_rule_group_--json"></a>
 
@@ -331,120 +463,4 @@ The following shows an example rule group specification\.
             ]
         }
     }
-```
-
-#### YAML<a name="aws-resource-wafv2-rulegroup--examples--Create_a_rule_group_--yaml"></a>
-
-```
- SampleRuleGroup:
-      Type: 'AWS::WAFv2::RuleGroup'
-      Properties:
-        Name: SampleRuleGroup
-        Scope: REGIONAL
-        Description: SampleRuleGroup
-        VisibilityConfig:
-          SampledRequestsEnabled: true
-          CloudWatchMetricsEnabled: true
-          MetricName: SampleRuleGroupMetrics
-        CustomResponseBodies:
-          CustomResponseBodyKey1:
-            ContentType: TEXT_PLAIN
-            Content: this is a plain text
-          CustomResponseBodyKey2:
-            ContentType: APPLICATION_JSON
-            Content: '{"jsonfieldname": "jsonfieldvalue"}'
-          CustomResponseBodyKey3:
-            ContentType: TEXT_HTML
-            Content: <html>HTML text content</html>
-        Capacity: 1000
-        Rules:
-          - Name: RuleOne
-            Priority: 1
-            Action:
-              Allow:
-                CustomRequestHandling:
-                  InsertHeaders:
-                    - Name: AllowActionHeader1Name
-                      Value: AllowActionHeader1Value
-                    - Name: AllowActionHeader2Name
-                      Value: AllowActionHeader2Value
-            VisibilityConfig:
-              SampledRequestsEnabled: true
-              CloudWatchMetricsEnabled: true
-              MetricName: RuleOneMetric
-            Statement:
-              ByteMatchStatement:
-                FieldToMatch:
-                  AllQueryArguments: {}
-                PositionalConstraint: CONTAINS
-                SearchString: testagent
-                TextTransformations:
-                  - Priority: 1
-                    Type: HTML_ENTITY_DECODE
-          - Name: RuleTwo
-            Priority: 2
-            Action:
-              Block:
-                CustomResponse:
-                  ResponseCode: 503
-                  CustomResponseBodyKey: CustomResponseBodyKey1
-                  ResponseHeaders:
-                    - Name: BlockActionHeader1Name
-                      Value: BlockActionHeader1Value
-                    - Name: BlockActionHeader2Name
-                      Value: BlockActionHeader2Value
-            VisibilityConfig:
-              SampledRequestsEnabled: true
-              CloudWatchMetricsEnabled: true
-              MetricName: RuleTwoMetric
-            Statement:
-              ByteMatchStatement:
-                FieldToMatch:
-                  SingleHeader:
-                    Name: haystack
-                PositionalConstraint: CONTAINS
-                SearchString: badbot
-                TextTransformations:
-                  - Priority: 0
-                    Type: NONE
-          - Name: RuleThree
-            Priority: 3
-            Action:
-              Count:
-                CustomRequestHandling:
-                  InsertHeaders:
-                    - Name: CountActionHeader1Name
-                      Value: CountActionHeader1Value
-                    - Name: CountActionHeader2Name
-                      Value: CountActionHeader2Value
-            VisibilityConfig:
-              SampledRequestsEnabled: true
-              CloudWatchMetricsEnabled: true
-              MetricName: RuleThreeMetric
-            Statement:
-              ByteMatchStatement:
-                FieldToMatch:
-                  Body: {}
-                PositionalConstraint: CONTAINS
-                SearchString: RegionOne
-                TextTransformations:
-                  - Priority: 0
-                    Type: HTML_ENTITY_DECODE
-          - Name: RuleFour
-            Priority: 4
-            Action:
-              Allow: {}
-            VisibilityConfig:
-              SampledRequestsEnabled: true
-              CloudWatchMetricsEnabled: true
-              MetricName: RuleFourMetric
-            Statement:
-              SizeConstraintStatement:
-                ComparisonOperator: GT
-                Size: 1000
-                FieldToMatch:
-                  UriPath: {}
-                TextTransformations:
-                  - Priority: 0
-                    Type: NONE
 ```

@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AddOns](#cfn-lightsail-disk-addons)" : [ AddOn, ... ],
       "[AvailabilityZone](#cfn-lightsail-disk-availabilityzone)" : String,
       "[DiskName](#cfn-lightsail-disk-diskname)" : String,
+      "[Location](#cfn-lightsail-disk-location)" : Location,
       "[SizeInGb](#cfn-lightsail-disk-sizeingb)" : Integer,
       "[Tags](#cfn-lightsail-disk-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -30,6 +31,8 @@ Properties:
     - AddOn
   [AvailabilityZone](#cfn-lightsail-disk-availabilityzone): String
   [DiskName](#cfn-lightsail-disk-diskname): String
+  [Location](#cfn-lightsail-disk-location): 
+    Location
   [SizeInGb](#cfn-lightsail-disk-sizeingb): Integer
   [Tags](#cfn-lightsail-disk-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -57,6 +60,12 @@ The name of the disk\.
 *Pattern*: `\w[\w\-]*\w`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Location`  <a name="cfn-lightsail-disk-location"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [Location](aws-properties-lightsail-disk-location.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SizeInGb`  <a name="cfn-lightsail-disk-sizeingb"></a>
 The size of the disk in GB\.  
 *Required*: Yes  
@@ -75,13 +84,13 @@ The `Value` of `Tags` is optional for Lightsail resources\.
 
 ### Ref<a name="aws-resource-lightsail-disk-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a unique identifier for this resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a unique identifier for this resource\.
 
 ### Fn::GetAtt<a name="aws-resource-lightsail-disk-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-lightsail-disk-return-values-fn--getatt-fn--getatt"></a>
 
@@ -100,6 +109,12 @@ The input/output operations per second \(IOPS\) of the disk\.
 
 `IsAttached`  <a name="IsAttached-fn::getatt"></a>
 A Boolean value indicating whether the disk is attached to an instance\.
+
+`Location.AvailabilityZone`  <a name="Location.AvailabilityZone-fn::getatt"></a>
+Property description not available\.
+
+`Location.RegionName`  <a name="Location.RegionName-fn::getatt"></a>
+Property description not available\.
 
 `Path`  <a name="Path-fn::getatt"></a>
 The path of the disk\.

@@ -37,7 +37,7 @@ A policy document that contains the permissions for the specified Amazon SQS que
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Queues`  <a name="cfn-sqs-queuepolicy-queues"></a>
-The URLs of the queues to which you want to add the policy\. You can use the `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)` function to specify an `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource\.  
+The URLs of the queues to which you want to add the policy\. You can use the `[ Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)` function to specify an `[ AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -49,7 +49,7 @@ The URLs of the queues to which you want to add the policy\. You can use the `[R
 #### <a name="aws-resource-sqs-queuepolicy-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The provider\-assigned unique ID for this managed resource\.
 
 ## Examples<a name="aws-resource-sqs-queuepolicy--examples"></a>
 

@@ -44,9 +44,6 @@ Join key properties of the left operand\.
 The operand on the left side of a join\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `[0-9a-zA-Z-]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnClause`  <a name="cfn-quicksight-dataset-joininstruction-onclause"></a>
@@ -67,9 +64,6 @@ Join key properties of the right operand\.
 The operand on the right side of a join\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `[0-9a-zA-Z-]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-quicksight-dataset-joininstruction-type"></a>

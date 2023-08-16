@@ -1,6 +1,6 @@
 # AWS::Lex::Bot InputContext<a name="aws-properties-lex-bot-inputcontext"></a>
 
-The name of a context that must be active for an intent to be selected by Amazon Lex\.
+A context that must be active for an intent to be selected by Amazon Lex\.
 
 ## Syntax<a name="aws-properties-lex-bot-inputcontext-syntax"></a>
 
@@ -26,4 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the context\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `^([0-9a-zA-Z][_-]?){1,100}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

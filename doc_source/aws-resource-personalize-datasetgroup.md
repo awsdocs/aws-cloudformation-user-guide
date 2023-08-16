@@ -71,17 +71,52 @@ The ARN of the IAM role that has permissions to create the dataset group\.
 
 ### Ref<a name="aws-resource-personalize-datasetgroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the resource\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-personalize-datasetgroup-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-personalize-datasetgroup-return-values-fn--getatt-fn--getatt"></a>
 
 `DatasetGroupArn`  <a name="DatasetGroupArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the dataset group\.
+
+## Examples<a name="aws-resource-personalize-datasetgroup--examples"></a>
+
+
+
+### Creating a dataset group<a name="aws-resource-personalize-datasetgroup--examples--Creating_a_dataset_group"></a>
+
+The following example creates an Amazon Personalize dataset group\.
+
+#### JSON<a name="aws-resource-personalize-datasetgroup--examples--Creating_a_dataset_group--json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Resources":{
+      "MyDatasetGroup": {
+            "Type": "AWS::Personalize::DatasetGroup",
+            "Properties": {
+               "Name": "my-dataset-group-name"
+            }
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-personalize-datasetgroup--examples--Creating_a_dataset_group--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyDatasetGroup:
+    Type: 'AWS::Personalize::DatasetGroup'
+    Properties:
+      Name: my-dataset-group-name
+```

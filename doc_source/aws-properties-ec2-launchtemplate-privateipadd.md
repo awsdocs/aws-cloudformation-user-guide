@@ -33,7 +33,7 @@ Indicates whether the private IPv4 address is the primary private IPv4 address\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-ec2-launchtemplate-privateipadd-privateipaddress"></a>
-The private IPv4 addresses\.  
+The private IPv4 address\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

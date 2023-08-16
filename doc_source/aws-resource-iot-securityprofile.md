@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoT::SecurityProfile",
   "Properties" : {
       "[AdditionalMetricsToRetainV2](#cfn-iot-securityprofile-additionalmetricstoretainv2)" : [ MetricToRetain, ... ],
-      "[AlertTargets](#cfn-iot-securityprofile-alerttargets)" : {Key : Value, ...},
+      "[AlertTargets](#cfn-iot-securityprofile-alerttargets)" : {Key: Value, ...},
       "[Behaviors](#cfn-iot-securityprofile-behaviors)" : [ Behavior, ... ],
       "[SecurityProfileDescription](#cfn-iot-securityprofile-securityprofiledescription)" : String,
       "[SecurityProfileName](#cfn-iot-securityprofile-securityprofilename)" : String,
@@ -31,7 +31,7 @@ Properties:
   [AdditionalMetricsToRetainV2](#cfn-iot-securityprofile-additionalmetricstoretainv2): 
     - MetricToRetain
   [AlertTargets](#cfn-iot-securityprofile-alerttargets): 
-    Key : Value
+    Key: Value
   [Behaviors](#cfn-iot-securityprofile-behaviors): 
     - Behavior
   [SecurityProfileDescription](#cfn-iot-securityprofile-securityprofiledescription): String
@@ -90,13 +90,13 @@ The ARN of the target \(thing group\) to which the security profile is attached\
 
 ### Ref<a name="aws-resource-iot-securityprofile-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the security profile name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the security profile name\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-securityprofile-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-securityprofile-return-values-fn--getatt-fn--getatt"></a>
 
@@ -114,124 +114,43 @@ The Amazon Resource Name \(ARN\) of the security profile\.
 #### JSON<a name="aws-resource-iot-securityprofile--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon Web Services IoT SecurityProfile Sample Template",
-  "Resources": {
-    "MySecurityProfile": {
-      "Type": "AWS::IoT::SecurityProfile",
-      "Properties": {
-        "AdditionalMetricsToRetainV2": [
-          {
-            "Metric": "aws:num-messages-received"
-          },
-          {
-            "Metric": "aws:num-disconnects"
-          }
-        ],
-        "AlertTargets": {
-          "SNS": {
-            "AlertTargetArn": "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts",
-            "RoleArn": "arn:aws:iam::123456789012:role/RoleForDefenderAlerts"
-          }
-        },
-        "Behaviors": [
-          {
-            "Name": "MaxMessageSize",
-            "Metric": "aws:message-byte-size",
-            "Criteria": {
-              "ConsecutiveDatapointsToAlarm": 1,
-              "ConsecutiveDatapointsToClear": 1,
-              "ComparisonOperator": "less-than-equals",
-              "Value": {
-                "Count": 5
-              }
-            }
-          },
-          {
-            "Name": "OutboundMessageCount",
-            "Metric": "aws:num-messages-sent",
-            "Criteria": {
-              "DurationSeconds": 300,
-              "ComparisonOperator": "less-than-equals",
-              "Value": {
-                "Count": 50
-              }
-            }
-          },
-          {
-            "Name": "AuthFailuresStatThreshold",
-            "Metric": "aws:num-authorization-failures",
-            "Criteria": {
-              "ComparisonOperator": "less-than-equals",
-              "DurationSeconds": 300,
-              "StatisticalThreshold": {
-                "Statistic": "p90"
-              }
-            }
-          }
-        ],
-        "SecurityProfileDescription": "Contains expected behaviors for connected devices",
-        "SecurityProfileName": "ProfileForConnectedDevices",
-        "Tags": [
-          {
-            "Key": "Application",
-            "Value": "SmartHome"
-          }
-        ],
-        "TargetArns": [
-          "arn:aws:iot:us-east-1:123456789012:all/things"
-        ]
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "Amazon
+            Web Services IoT SecurityProfile Sample Template", "Resources": { "MySecurityProfile": {
+            "Type": "AWS::IoT::SecurityProfile", "Properties": { "AdditionalMetricsToRetainV2": [ {
+            "Metric": "aws:num-messages-received" }, { "Metric": "aws:num-disconnects" } ],
+            "AlertTargets": { "SNS": { "AlertTargetArn":
+            "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts", "RoleArn":
+            "arn:aws:iam::123456789012:role/RoleForDefenderAlerts" } }, "Behaviors": [ { "Name":
+            "MaxMessageSize", "Metric": "aws:message-byte-size", "Criteria": {
+            "ConsecutiveDatapointsToAlarm": 1, "ConsecutiveDatapointsToClear": 1,
+            "ComparisonOperator": "less-than-equals", "Value": { "Count": 5 } } }, { "Name":
+            "OutboundMessageCount", "Metric": "aws:num-messages-sent", "Criteria": {
+            "DurationSeconds": 300, "ComparisonOperator": "less-than-equals", "Value": { "Count": 50
+            } } }, { "Name": "AuthFailuresStatThreshold", "Metric":
+            "aws:num-authorization-failures", "Criteria": { "ComparisonOperator":
+            "less-than-equals", "DurationSeconds": 300, "StatisticalThreshold": { "Statistic": "p90"
+            } } } ], "SecurityProfileDescription": "Contains expected behaviors for connected
+            devices", "SecurityProfileName": "ProfileForConnectedDevices", "Tags": [ { "Key":
+            "Application", "Value": "SmartHome" } ], "TargetArns": [
+            "arn:aws:iot:us-east-1:123456789012:all/things" ] } } } }
 ```
 
 #### YAML<a name="aws-resource-iot-securityprofile--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: Amazon Web Services IoT SecurityProfile Sample Template
-Resources:
-  MySecurityProfile:
-    Type: 'AWS::IoT::SecurityProfile'
-    Properties:
-      AdditionalMetricsToRetainV2:
-        - Metric: 'aws:num-messages-received'
-        - Metric: 'aws:num-disconnects'
-      AlertTargets:
-        SNS:
-          AlertTargetArn: 'arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts'
-          RoleArn: 'arn:aws:iam::123456789012:role/RoleForDefenderAlerts'
-      Behaviors:
-        - Name: MaxMessageSize
-          Metric: 'aws:message-byte-size'
-          Criteria:
-            ConsecutiveDatapointsToAlarm: 1
-            ConsecutiveDatapointsToClear: 1
-            ComparisonOperator: less-than-equals
-            Value:
-              Count: 5
-        - Name: OutboundMessageCount
-          Metric: 'aws:num-messages-sent'
-          Criteria:
-            DurationSeconds: 300
-            ComparisonOperator: less-than-equals
-            Value:
-              Count: 50
-        - Name: AuthFailuresStatThreshold
-          Metric: 'aws:num-authorization-failures'
-          Criteria:
-            ComparisonOperator: less-than-equals
-            DurationSeconds: 300
-            StatisticalThreshold:
-              Statistic: p90
-      SecurityProfileDescription: Contains expected behaviors for connected devices
-      SecurityProfileName: ProfileForConnectedDevices
-      Tags:
-        - Key: Application
-          Value: SmartHome
-      TargetArns:
-        - 'arn:aws:iot:us-east-1:123456789012:all/things'
+AWSTemplateFormatVersion: 2010-09-09 Description: Amazon Web
+            Services IoT SecurityProfile Sample Template Resources: MySecurityProfile: Type:
+            'AWS::IoT::SecurityProfile' Properties: AdditionalMetricsToRetainV2: - Metric:
+            'aws:num-messages-received' - Metric: 'aws:num-disconnects' AlertTargets: SNS:
+            AlertTargetArn: 'arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts' RoleArn:
+            'arn:aws:iam::123456789012:role/RoleForDefenderAlerts' Behaviors: - Name: MaxMessageSize
+            Metric: 'aws:message-byte-size' Criteria: ConsecutiveDatapointsToAlarm: 1
+            ConsecutiveDatapointsToClear: 1 ComparisonOperator: less-than-equals Value: Count: 5 -
+            Name: OutboundMessageCount Metric: 'aws:num-messages-sent' Criteria: DurationSeconds:
+            300 ComparisonOperator: less-than-equals Value: Count: 50 - Name:
+            AuthFailuresStatThreshold Metric: 'aws:num-authorization-failures' Criteria:
+            ComparisonOperator: less-than-equals DurationSeconds: 300 StatisticalThreshold:
+            Statistic: p90 SecurityProfileDescription: Contains expected behaviors for connected
+            devices SecurityProfileName: ProfileForConnectedDevices Tags: - Key: Application Value:
+            SmartHome TargetArns: - 'arn:aws:iot:us-east-1:123456789012:all/things'
 ```

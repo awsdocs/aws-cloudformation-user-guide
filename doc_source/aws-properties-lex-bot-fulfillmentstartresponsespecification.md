@@ -37,10 +37,13 @@ Determines whether the user can interrupt the start message while it is playing\
 The delay between when the Lambda fulfillment function starts running and the start message is played\. If the Lambda function returns before the delay is over, the start message isn't played\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `900`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageGroups`  <a name="cfn-lex-bot-fulfillmentstartresponsespecification-messagegroups"></a>
-One to 5 message groups that contain start messages\. Amazon Lex chooses one of the messages to play to the user\.  
+1 \- 5 message groups that contain start messages\. Amazon Lex chooses one of the messages to play to the user\.  
 *Required*: Yes  
 *Type*: List of [MessageGroup](aws-properties-lex-bot-messagegroup.md)  
+*Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

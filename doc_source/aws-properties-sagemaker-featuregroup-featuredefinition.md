@@ -31,11 +31,11 @@ The name of a feature\. The type must be a string\. `FeatureName` cannot be any 
 *Minimum*: `1`  
 *Maximum*: `64`  
 *Pattern*: `^[a-zA-Z0-9]([-_]*[a-zA-Z0-9]){0,63}`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FeatureType`  <a name="cfn-sagemaker-featuregroup-featuredefinition-featuretype"></a>
 The value type of a feature\. Valid values are Integral, Fractional, or String\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `Fractional | Integral | String`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

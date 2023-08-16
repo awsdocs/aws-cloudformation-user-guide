@@ -43,7 +43,7 @@ Properties:
 The API identifier\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ContentHandlingStrategy`  <a name="cfn-apigatewayv2-integrationresponse-contenthandlingstrategy"></a>
 Supported only for WebSocket APIs\. Specifies how to handle response payload content type conversions\. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`, with the following behaviors:  
@@ -58,7 +58,7 @@ If this property is not defined, the response payload will be passed through fro
 The integration ID\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IntegrationResponseKey`  <a name="cfn-apigatewayv2-integrationresponse-integrationresponsekey"></a>
 The integration response key\.  
@@ -88,9 +88,20 @@ The template selection expression for the integration response\. Supported only 
 
 ### Ref<a name="aws-resource-apigatewayv2-integrationresponse-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the integration response resource ID, such as `abcd123`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the integration response resource ID, such as `abcd123`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-apigatewayv2-integrationresponse-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigatewayv2-integrationresponse-return-values-fn--getatt-fn--getatt"></a>
+
+`IntegrationResponseId`  <a name="IntegrationResponseId-fn::getatt"></a>
+The integration response ID\.
 
 ## Examples<a name="aws-resource-apigatewayv2-integrationresponse--examples"></a>
 

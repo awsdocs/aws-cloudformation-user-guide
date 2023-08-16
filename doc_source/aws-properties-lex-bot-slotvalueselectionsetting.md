@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AdvancedRecognitionSetting](#cfn-lex-bot-slotvalueselectionsetting-advancedrecognitionsetting)" : AdvancedRecognitionSetting,
   "[RegexFilter](#cfn-lex-bot-slotvalueselectionsetting-regexfilter)" : SlotValueRegexFilter,
   "[ResolutionStrategy](#cfn-lex-bot-slotvalueselectionsetting-resolutionstrategy)" : String
 }
@@ -18,12 +19,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lex-bot-slotvalueselectionsetting-syntax.yaml"></a>
 
 ```
+  [AdvancedRecognitionSetting](#cfn-lex-bot-slotvalueselectionsetting-advancedrecognitionsetting): 
+    AdvancedRecognitionSetting
   [RegexFilter](#cfn-lex-bot-slotvalueselectionsetting-regexfilter): 
     SlotValueRegexFilter
   [ResolutionStrategy](#cfn-lex-bot-slotvalueselectionsetting-resolutionstrategy): String
 ```
 
 ## Properties<a name="aws-properties-lex-bot-slotvalueselectionsetting-properties"></a>
+
+`AdvancedRecognitionSetting`  <a name="cfn-lex-bot-slotvalueselectionsetting-advancedrecognitionsetting"></a>
+Provides settings that enable advanced recognition settings for slot values\. You can use this to enable using slot values as a custom vocabulary for recognizing user utterances\.  
+*Required*: No  
+*Type*: [AdvancedRecognitionSetting](aws-properties-lex-bot-advancedrecognitionsetting.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegexFilter`  <a name="cfn-lex-bot-slotvalueselectionsetting-regexfilter"></a>
 A regular expression used to validate the value of a slot\.  
@@ -33,9 +42,10 @@ A regular expression used to validate the value of a slot\.
 
 `ResolutionStrategy`  <a name="cfn-lex-bot-slotvalueselectionsetting-resolutionstrategy"></a>
 Determines the slot resolution strategy that Amazon Lex uses to return slot type values\. The field can be set to one of the following values:  
-+ OriginalValue \- Returns the value entered by the user, if the user value is similar to a slot value\.
-+ TopResolution \- If there is a resolution list for the slot, return the first value in the resolution list as the slot type value\. If there is no resolution list, null is returned\.
-If you don't specify the valueSelectionStrategy, the default is OriginalValue\.  
++  `ORIGINAL_VALUE` \- Returns the value entered by the user, if the user value is similar to the slot value\.
++  `TOP_RESOLUTION` \- If there is a resolution list for the slot, return the first value in the resolution list as the slot type value\. If there is no resolution list, null is returned\.
+If you don't specify the `valueSelectionStrategy`, the default is `ORIGINAL_VALUE`\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `Concatenation | OriginalValue | TopResolution`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

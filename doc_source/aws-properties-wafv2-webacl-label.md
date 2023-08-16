@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL Label<a name="aws-properties-wafv2-webacl-label"></a>
 
-A single label container\. This is used as an element of a label array in `RuleLabels` inside a `Rule`\. 
+A single label container\. This is used as an element of a label array in `RuleLabels` inside a rule\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-label-syntax"></a>
 

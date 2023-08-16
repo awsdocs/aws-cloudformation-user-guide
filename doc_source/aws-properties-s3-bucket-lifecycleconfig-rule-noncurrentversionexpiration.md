@@ -1,6 +1,6 @@
 # AWS::S3::Bucket NoncurrentVersionExpiration<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversionexpiration"></a>
 
-Specifies when noncurrent object versions expire\. Upon expiration, Amazon S3 permanently deletes the noncurrent object versions\. You set this lifecycle configuration action on a bucket that has versioning enabled \(or suspended\) to request that Amazon S3 delete noncurrent object versions at a specific period in the object's lifetime\.
+Specifies when noncurrent object versions expire\. Upon expiration, Amazon S3 permanently deletes the noncurrent object versions\. You set this lifecycle configuration action on a bucket that has versioning enabled \(or suspended\) to request that Amazon S3 delete noncurrent object versions at a specific period in the object's lifetime\. For more information about setting a lifecycle rule configuration, see [AWS::S3::Bucket Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html)\.
 
 ## Syntax<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversionexpiration-syntax"></a>
 

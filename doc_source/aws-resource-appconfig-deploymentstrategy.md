@@ -73,7 +73,7 @@ A description of the deployment strategy\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FinalBakeTimeInMinutes`  <a name="cfn-appconfig-deploymentstrategy-finalbaketimeinminutes"></a>
-The amount of time AWS AppConfig monitors for alarms before considering the deployment to be complete and no longer eligible for automatic roll back\.  
+Specifies the amount of time AWS AppConfig monitors for Amazon CloudWatch alarms after the configuration has been deployed to 100% of its targets, before considering the deployment to be complete\. If an alarm is triggered during this time, AWS AppConfig rolls back the deployment\. You must configure permissions for AWS AppConfig to roll back based on CloudWatch alarms\. For more information, see [Configuring permissions for rollback based on Amazon CloudWatch alarms](https://docs.aws.amazon.com/appconfig/latest/userguide/getting-started-with-appconfig-cloudwatch-alarms-permissions.html) in the * AWS AppConfig User Guide*\.  
 *Required*: No  
 *Type*: Double  
 *Minimum*: `0`  
@@ -124,17 +124,17 @@ Assigns metadata to an AWS AppConfig resource\. Tags help organize and categoriz
 
 ### Ref<a name="aws-resource-appconfig-deploymentstrategy-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the deployment strategy ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the deployment strategy ID\.
 
 ## Examples<a name="aws-resource-appconfig-deploymentstrategy--examples"></a>
 
 
 
-### AWS AppConfig Deployment Strategy Example<a name="aws-resource-appconfig-deploymentstrategy--examples--_Deployment_Strategy_Example"></a>
+### AWS AppConfig deployment strategy example<a name="aws-resource-appconfig-deploymentstrategy--examples--_deployment_strategy_example"></a>
 
 The following example creates an AWS AppConfig deployment strategy called MyTestDeploymentStrategy\. A deployment strategy defines how a configuration is deployed\.
 
-#### JSON<a name="aws-resource-appconfig-deploymentstrategy--examples--_Deployment_Strategy_Example--json"></a>
+#### JSON<a name="aws-resource-appconfig-deploymentstrategy--examples--_deployment_strategy_example--json"></a>
 
 ```
 Resources": {
@@ -160,7 +160,7 @@ Resources": {
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-deploymentstrategy--examples--_Deployment_Strategy_Example--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-deploymentstrategy--examples--_deployment_strategy_example--yaml"></a>
 
 ```
 Resources:

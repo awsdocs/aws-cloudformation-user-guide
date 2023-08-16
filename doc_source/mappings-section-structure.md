@@ -1,6 +1,6 @@
 # Mappings<a name="mappings-section-structure"></a>
 
-The optional `Mappings` section matches a key to a corresponding set of named values\. For example, if you want to set values based on a region, you can create a mapping that uses the region name as a key and contains the values you want to specify for each specific region\. You use the `Fn::FindInMap` intrinsic function to retrieve values in a map\.
+The optional `Mappings` section matches a key to a corresponding set of named values\. For example, if you want to set values based on a region, you can create a mapping that uses the region name as a key and contains the values you want to specify for each specific region\. You use the ``Fn::FindInMap`` intrinsic function to retrieve values in a map\.
 
 You can't include parameters, pseudo parameters, or intrinsic functions in the `Mappings` section\.
 
@@ -178,9 +178,9 @@ Resources:
       InstanceType: m1.small
 ```
 
-### Input parameter and FindInMap<a name="mappings-section-structure-examples-findinmap"></a>
+### Input parameter and `Fn::FindInMap`<a name="mappings-section-structure-examples-findinmap"></a>
 
-You can use an input parameter with the `Fn::FindInMap` function to refer to a specific value in a map\. For example, suppose you have a list of regions and environment types that map to a specific AMI ID\. You can select the AMI ID that your stack uses by using an input parameter \(`EnvironmentType`\)\. To determine the region, use the `AWS::Region` pseudo parameter, which gets the AWS Region in which you create the stack\.
+You can use an input parameter with the ``Fn::FindInMap`` function to refer to a specific value in a map\. For example, suppose you have a list of regions and environment types that map to a specific AMI ID\. You can select the AMI ID that your stack uses by using an input parameter \(`EnvironmentType`\)\. To determine the region, use the ``AWS::Region`` pseudo parameter, which gets the AWS Region in which you create the stack\.
 
 #### JSON<a name="mappings-section-structure-example4.json"></a>
 

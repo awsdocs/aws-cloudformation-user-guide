@@ -1,6 +1,6 @@
 # AWS::ECS::TaskSet NetworkConfiguration<a name="aws-properties-ecs-taskset-networkconfiguration"></a>
 
-The network configuration for a task\.
+The network configuration for a task or service\.
 
 ## Syntax<a name="aws-properties-ecs-taskset-networkconfiguration-syntax"></a>
 

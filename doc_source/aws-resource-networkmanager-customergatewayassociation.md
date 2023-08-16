@@ -75,9 +75,9 @@ The ID of the link\.
 
 ### Ref<a name="aws-resource-networkmanager-customergatewayassociation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the global network and the Amazon Resource Name \(ARN\) of the customer gateway\. For example: `global-network-01231231231231231|arn:aws:ec2:eu-central-1:123456789012:customer-gateway/cgw-00112233aabbcc112`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the global network and the Amazon Resource Name \(ARN\) of the customer gateway\. For example: `global-network-01231231231231231|arn:aws:ec2:eu-central-1:123456789012:customer-gateway/cgw-00112233aabbcc112`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-networkmanager-customergatewayassociation--examples"></a>
 

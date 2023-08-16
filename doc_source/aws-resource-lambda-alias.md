@@ -98,9 +98,9 @@ The [routing configuration](https://docs.aws.amazon.com/lambda/latest/dg/lambda-
 
 ### Ref<a name="aws-resource-lambda-alias-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ARN\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-lambda-alias--examples"></a>
 
@@ -129,7 +129,7 @@ Resources:
               }
               return response
           };
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       TracingConfig:
         Mode: Active
   version:
@@ -168,7 +168,7 @@ Resources:
               }
               return response
           }
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       TracingConfig:
         Mode: Active
   version:

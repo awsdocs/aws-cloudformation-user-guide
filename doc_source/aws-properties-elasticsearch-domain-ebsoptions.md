@@ -38,7 +38,7 @@ Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Iops`  <a name="cfn-elasticsearch-domain-ebsoptions-iops"></a>
-The number of I/O operations per second \(IOPS\) that the volume supports\. This property applies only to the Provisioned IOPS \(SSD\) EBS volume type\.  
+The number of I/O operations per second \(IOPS\) that the volume supports\. This property applies only to provisioned IOPS EBS volume types\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

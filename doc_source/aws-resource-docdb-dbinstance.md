@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBClusterIdentifier](#cfn-docdb-dbinstance-dbclusteridentifier)" : String,
       "[DBInstanceClass](#cfn-docdb-dbinstance-dbinstanceclass)" : String,
       "[DBInstanceIdentifier](#cfn-docdb-dbinstance-dbinstanceidentifier)" : String,
+      "[EnablePerformanceInsights](#cfn-docdb-dbinstance-enableperformanceinsights)" : Boolean,
       "[PreferredMaintenanceWindow](#cfn-docdb-dbinstance-preferredmaintenancewindow)" : String,
       "[Tags](#cfn-docdb-dbinstance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -33,6 +34,7 @@ Properties:
   [DBClusterIdentifier](#cfn-docdb-dbinstance-dbclusteridentifier): String
   [DBInstanceClass](#cfn-docdb-dbinstance-dbinstanceclass): String
   [DBInstanceIdentifier](#cfn-docdb-dbinstance-dbinstanceidentifier): String
+  [EnablePerformanceInsights](#cfn-docdb-dbinstance-enableperformanceinsights): Boolean
   [PreferredMaintenanceWindow](#cfn-docdb-dbinstance-preferredmaintenancewindow): String
   [Tags](#cfn-docdb-dbinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -78,6 +80,12 @@ Example: `mydbinstance`
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`EnablePerformanceInsights`  <a name="cfn-docdb-dbinstance-enableperformanceinsights"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `PreferredMaintenanceWindow`  <a name="cfn-docdb-dbinstance-preferredmaintenancewindow"></a>
 The time range each week during which system maintenance can occur, in Universal Coordinated Time \(UTC\)\.  
  Format: `ddd:hh24:mi-ddd:hh24:mi`   
@@ -98,15 +106,15 @@ The tags to be assigned to the instance\. You can assign up to 10 tags to an ins
 
 ### Ref<a name="aws-resource-docdb-dbinstance-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DBInstance's name, such as `sample-cluster-instance`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the DBInstance's name, such as `sample-cluster-instance`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-docdb-dbinstance-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-docdb-dbinstance-return-values-fn--getatt-fn--getatt"></a>
 

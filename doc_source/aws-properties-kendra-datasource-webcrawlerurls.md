@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `SeedUrlConfiguration`  <a name="cfn-kendra-datasource-webcrawlerurls-seedurlconfiguration"></a>
 Configuration of the seed or starting point URLs of the websites you want to crawl\.  
-You can choose to crawl only the website host names, or the website host names with subdomains, or the website host names with subdomains and other domains that the webpages link to\.  
+You can choose to crawl only the website host names, or the website host names with subdomains, or the website host names with subdomains and other domains that the web pages link to\.  
 You can list up to 100 seed URLs\.  
 *Required*: No  
 *Type*: [WebCrawlerSeedUrlConfiguration](aws-properties-kendra-datasource-webcrawlerseedurlconfiguration.md)  

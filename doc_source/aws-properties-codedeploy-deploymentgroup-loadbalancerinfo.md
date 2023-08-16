@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist)" : [ ELBInfo, ... ],
-  "[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ TargetGroupInfo, ... ]
+  "[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ TargetGroupInfo, ... ],
+  "[TargetGroupPairInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgrouppairinfolist)" : [ TargetGroupPairInfo, ... ]
 }
 ```
 
@@ -29,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - ELBInfo
   [TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist): 
     - TargetGroupInfo
+  [TargetGroupPairInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgrouppairinfolist): 
+    - TargetGroupPairInfo
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo-properties"></a>
@@ -45,4 +48,10 @@ An array that contains information about the target group to use for load balanc
  Adding more than one target group to the array is not supported\. 
 *Required*: Conditional  
 *Type*: List of [TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TargetGroupPairInfoList`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgrouppairinfolist"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [TargetGroupPairInfo](aws-properties-codedeploy-deploymentgroup-targetgrouppairinfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

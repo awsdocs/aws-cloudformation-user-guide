@@ -30,11 +30,11 @@ The Amazon Resource Name \(ARN\) of the contact channel\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Pattern*: `arn:(aws|aws-cn|aws-us-gov):ssm-contacts:[-\w+=\/,.@]*:[0-9]+:([\w+=\/,.@:-]+)*`  
+*Pattern*: `arn:(aws|aws-cn|aws-us-gov):ssm-contacts:[-\w+=\/,.@]*:[0-9]+:([\w+=\/,.@:-])*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryIntervalInMinutes`  <a name="cfn-ssmcontacts-contact-channeltargetinfo-retryintervalinminutes"></a>
-The number of minutes to wait to retry sending engagement in the case the engagement initially fails\.  
+The number of minutes to wait before retrying to send engagement if the engagement initially failed\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  

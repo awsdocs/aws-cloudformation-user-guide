@@ -1,6 +1,6 @@
 # AWS::ECS::PrimaryTaskSet<a name="aws-resource-ecs-primarytaskset"></a>
 
-Specifies which task set in a service is the primary task set\. Any parameters that are updated on the primary task set in a service will transition to the service\. This is used when a service uses the `EXTERNAL` deployment controller type\. For more information, see [Amazon ECS Deployment Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) in the *Amazon Elastic Container Service Developer Guide*\.
+Modifies which task set in a service is the primary task set\. Any parameters that are updated on the primary task set in a service will transition to the service\. This is used when a service uses the `EXTERNAL` deployment controller type\. For more information, see [Amazon ECS Deployment Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 ## Syntax<a name="aws-resource-ecs-primarytaskset-syntax"></a>
 
@@ -53,6 +53,6 @@ The short name or full Amazon Resource Name \(ARN\) of the task set to set as th
 
 ### Ref<a name="aws-resource-ecs-primarytaskset-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

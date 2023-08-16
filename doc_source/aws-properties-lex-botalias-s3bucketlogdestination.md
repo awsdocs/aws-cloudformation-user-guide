@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-botalias-s3bucketlogdestination-properties"></a>
 
 `KmsKeyArn`  <a name="cfn-lex-botalias-s3bucketlogdestination-kmskeyarn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Key Management Service key for encrypting audio log files stored in an S3 bucket\.  
+The Amazon Resource Name \(ARN\) of an AWS Key Management Service \(KMS\) key for encrypting audio log files stored in an Amazon S3 bucket\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -36,10 +36,14 @@ The Amazon Resource Name \(ARN\) of an AWS Key Management Service key for encryp
 The S3 prefix to assign to audio log files\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BucketArn`  <a name="cfn-lex-botalias-s3bucketlogdestination-s3bucketarn"></a>
 The Amazon Resource Name \(ARN\) of an Amazon S3 bucket where audio log files are stored\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `^arn:[\w\-]+:s3:::[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9]$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

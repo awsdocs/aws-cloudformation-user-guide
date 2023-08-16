@@ -30,10 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The Amazon S3 settings for logging audio to an S3 bucket\.  
 *Required*: No  
 *Type*: List of [AudioLogSetting](aws-properties-lex-botalias-audiologsetting.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextLogSettings`  <a name="cfn-lex-botalias-conversationlogsettings-textlogsettings"></a>
 The Amazon CloudWatch Logs settings for logging text and metadata\.  
 *Required*: No  
 *Type*: List of [TextLogSetting](aws-properties-lex-botalias-textlogsetting.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

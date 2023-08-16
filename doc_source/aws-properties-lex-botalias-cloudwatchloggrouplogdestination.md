@@ -28,10 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The Amazon Resource Name \(ARN\) of the log group where text and metadata logs are delivered\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `^arn:[\w\-]+:logs:[\w\-]+:[\d]{12}:log-group:[\.\-_/#A-Za-z0-9]{1,512}(?::\*)?$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogPrefix`  <a name="cfn-lex-botalias-cloudwatchloggrouplogdestination-logprefix"></a>
-The prefix of the log stream name within the log group that you specified\.  
+The prefix of the log stream name within the log group that you specified   
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

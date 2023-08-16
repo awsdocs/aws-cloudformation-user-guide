@@ -45,7 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3InputFormatConfig`  <a name="cfn-appflow-flow-s3sourceproperties-s3inputformatconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+ When you use Amazon S3 as the source, the configuration format that you provide the flow input data\.   
 *Required*: No  
 *Type*: [S3InputFormatConfig](aws-properties-appflow-flow-s3inputformatconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

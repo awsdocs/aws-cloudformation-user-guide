@@ -1,4 +1,4 @@
-# AWS::GameLift::Build S3Location<a name="aws-properties-gamelift-build-storagelocation"></a>
+# AWS::GameLift::Build StorageLocation<a name="aws-properties-gamelift-build-storagelocation"></a>
 
 The location in Amazon S3 where build or script files are stored for access by Amazon GameLift\. 
 
@@ -10,48 +10,48 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Bucket](#cfn-gamelift-build-storage-bucket)" : String,
-  "[Key](#cfn-gamelift-build-storage-key)" : String,
-  "[ObjectVersion](#cfn-gamelift-build-object-verison)" : String,
-  "[RoleArn](#cfn-gamelift-build-storage-rolearn)" : String
+  "[Bucket](#cfn-gamelift-build-storagelocation-bucket)" : String,
+  "[Key](#cfn-gamelift-build-storagelocation-key)" : String,
+  "[ObjectVersion](#cfn-gamelift-build-storagelocation-objectversion)" : String,
+  "[RoleArn](#cfn-gamelift-build-storagelocation-rolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-gamelift-build-storagelocation-syntax.yaml"></a>
 
 ```
-  [Bucket](#cfn-gamelift-build-storage-bucket): String
-  [Key](#cfn-gamelift-build-storage-key): String
-  [ObjectVersion](#cfn-gamelift-build-object-verison): String
-  [RoleArn](#cfn-gamelift-build-storage-rolearn): String
+  [Bucket](#cfn-gamelift-build-storagelocation-bucket): String
+  [Key](#cfn-gamelift-build-storagelocation-key): String
+  [ObjectVersion](#cfn-gamelift-build-storagelocation-objectversion): String
+  [RoleArn](#cfn-gamelift-build-storagelocation-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-gamelift-build-storagelocation-properties"></a>
 
-`Bucket`  <a name="cfn-gamelift-build-storage-bucket"></a>
-An Amazon S3 bucket identifier\. This is the name of the S3 bucket\.  
-GameLift currently does not support uploading from Amazon S3 buckets with names that contain a dot \(\.\)\.
+`Bucket`  <a name="cfn-gamelift-build-storagelocation-bucket"></a>
+An Amazon S3 bucket identifier\. Thename of the S3 bucket\.  
+Amazon GameLift doesn't support uploading from Amazon S3 buckets with names that contain a dot \(\.\)\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`Key`  <a name="cfn-gamelift-build-storage-key"></a>
+`Key`  <a name="cfn-gamelift-build-storagelocation-key"></a>
 The name of the zip file that contains the build files or script files\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ObjectVersion`  <a name="cfn-gamelift-build-object-verison"></a>
+`ObjectVersion`  <a name="cfn-gamelift-build-storagelocation-objectversion"></a>
 The version of the file, if object versioning is turned on for the bucket\. Amazon GameLift uses this information when retrieving files from your S3 bucket\. To retrieve a specific version of the file, provide an object version\. To retrieve the latest version of the file, do not set this parameter\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`RoleArn`  <a name="cfn-gamelift-build-storage-rolearn"></a>
-The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) for an IAM role that allows Amazon Web Services to access the S3 bucket\.  
+`RoleArn`  <a name="cfn-gamelift-build-storagelocation-rolearn"></a>
+The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) for an IAM role that allows Amazon GameLift to access the S3 bucket\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

@@ -13,9 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::S3::AccessPoint",
   "Properties" : {
       "[Bucket](#cfn-s3-accesspoint-bucket)" : String,
+      "[BucketAccountId](#cfn-s3-accesspoint-bucketaccountid)" : String,
       "[Name](#cfn-s3-accesspoint-name)" : String,
       "[Policy](#cfn-s3-accesspoint-policy)" : Json,
-      "[PolicyStatus](#cfn-s3-accesspoint-policystatus)" : Json,
       "[PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration)" : PublicAccessBlockConfiguration,
       "[VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration)" : VpcConfiguration
     }
@@ -28,9 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::S3::AccessPoint
 Properties: 
   [Bucket](#cfn-s3-accesspoint-bucket): String
+  [BucketAccountId](#cfn-s3-accesspoint-bucketaccountid): String
   [Name](#cfn-s3-accesspoint-name): String
   [Policy](#cfn-s3-accesspoint-policy): Json
-  [PolicyStatus](#cfn-s3-accesspoint-policystatus): Json
   [PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration): 
     PublicAccessBlockConfiguration
   [VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration): 
@@ -42,6 +42,12 @@ Properties:
 `Bucket`  <a name="cfn-s3-accesspoint-bucket"></a>
 The name of the bucket associated with this access point\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`BucketAccountId`  <a name="cfn-s3-accesspoint-bucketaccountid"></a>
+The AWS account ID associated with the S3 bucket associated with this access point\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -57,17 +63,11 @@ The access point policy associated with this access point\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`PolicyStatus`  <a name="cfn-s3-accesspoint-policystatus"></a>
-The container element for a bucket's policy status\.  
-*Required*: No  
-*Type*: Json  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `PublicAccessBlockConfiguration`  <a name="cfn-s3-accesspoint-publicaccessblockconfiguration"></a>
 The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket\. You can enable the configuration options in any combination\. For more information about when Amazon S3 considers a bucket or object public, see [The Meaning of "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status) in the *Amazon S3 User Guide*\.   
 *Required*: No  
 *Type*: [PublicAccessBlockConfiguration](aws-properties-s3-accesspoint-publicaccessblockconfiguration.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcConfiguration`  <a name="cfn-s3-accesspoint-vpcconfiguration"></a>
 The Virtual Private Cloud \(VPC\) configuration for this access point, if one exists\.  
@@ -79,9 +79,9 @@ The Virtual Private Cloud \(VPC\) configuration for this access point, if one ex
 
 ### Ref<a name="aws-resource-s3-accesspoint-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the access point name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the access point name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-s3-accesspoint-return-values-fn--getatt"></a>
 
@@ -267,8 +267,7 @@ Resources:
               - 's3:PutObject'
             Effect: Allow
             Resource:
-              - !Sub &gt;-
-                arn:${AWS::Partition}:s3:${AWS::Region}:${AWS::AccountId}:accesspoint/my-access-point/object/janedoe/*
+               - !Sub  'arn:${AWS::Partition}:s3:${AWS::Region}:${AWS::AccountId}:accesspoint/my-access-point/object/janedoe/*'
             Principal:
               AWS: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:user/JaneDoe'
 Outputs:

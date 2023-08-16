@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile DynatraceConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-dynatraceconnectorprofilecredentials"></a>
 
- The `DynatraceConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required by Dynatrace\. 
+ The connector\-specific profile credentials required by Dynatrace\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-dynatraceconnectorprofilecredentials-syntax"></a>
 

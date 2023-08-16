@@ -1,6 +1,6 @@
 # AWS::Events::Connection Parameter<a name="aws-properties-events-connection-parameter"></a>
 
-<a name="aws-properties-events-connection-parameter-description"></a>The `Parameter` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Events::Connection](aws-resource-events-connection.md)\.
+Additional query string parameter for the connection\. You can include up to 100 additional query string parameters per request\. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB\.
 
 ## Syntax<a name="aws-properties-events-connection-parameter-syntax"></a>
 
@@ -27,19 +27,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-events-connection-parameter-properties"></a>
 
 `IsValueSecret`  <a name="cfn-events-connection-parameter-isvaluesecret"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies whether the value is secret\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-events-connection-parameter-key"></a>
-Not currently supported by AWS CloudFormation\.  
+The key for a query string parameter\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `[^\x00-\x1F\x7F]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-events-connection-parameter-value"></a>
-Not currently supported by AWS CloudFormation\.  
+The value associated with the key for the query string parameter\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `[^\x00-\x09\x0B\x0C\x0E-\x1F\x7F]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

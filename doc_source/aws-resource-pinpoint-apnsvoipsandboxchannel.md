@@ -103,6 +103,6 @@ The key identifier that's assigned to your APNs signing key\. Specify this value
 
 ### Ref<a name="aws-resource-pinpoint-apnsvoipsandboxchannel-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that the channel is associated with\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that the channel is associated with\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

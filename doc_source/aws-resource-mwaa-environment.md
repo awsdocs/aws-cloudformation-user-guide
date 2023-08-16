@@ -2,15 +2,6 @@
 
 The `AWS::MWAA::Environment` resource creates an Amazon Managed Workflows for Apache Airflow \(MWAA\) environment\. 
 
-**Topics**
-+ [Syntax](#aws-resource-mwaa-environment-syntax)
-+ [Properties](#aws-resource-mwaa-environment-properties)
-+ [Return values](#aws-resource-mwaa-environment-return-values)
-+ [Examples](#aws-resource-mwaa-environment--examples)
-+ [AWS::MWAA::Environment LoggingConfiguration](aws-properties-mwaa-environment-loggingconfiguration.md)
-+ [AWS::MWAA::Environment ModuleLoggingConfiguration](aws-properties-mwaa-environment-moduleloggingconfiguration.md)
-+ [AWS::MWAA::Environment NetworkConfiguration](aws-properties-mwaa-environment-networkconfiguration.md)
-
 ## Syntax<a name="aws-resource-mwaa-environment-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -38,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RequirementsS3Path](#cfn-mwaa-environment-requirementss3path)" : String,
       "[Schedulers](#cfn-mwaa-environment-schedulers)" : Integer,
       "[SourceBucketArn](#cfn-mwaa-environment-sourcebucketarn)" : String,
+      "[StartupScriptS3ObjectVersion](#cfn-mwaa-environment-startupscripts3objectversion)" : String,
+      "[StartupScriptS3Path](#cfn-mwaa-environment-startupscripts3path)" : String,
       "[Tags](#cfn-mwaa-environment-tags)" : Json,
       "[WebserverAccessMode](#cfn-mwaa-environment-webserveraccessmode)" : String,
       "[WeeklyMaintenanceWindowStart](#cfn-mwaa-environment-weeklymaintenancewindowstart)" : String
@@ -69,6 +62,8 @@ Properties:
   [RequirementsS3Path](#cfn-mwaa-environment-requirementss3path): String
   [Schedulers](#cfn-mwaa-environment-schedulers): Integer
   [SourceBucketArn](#cfn-mwaa-environment-sourcebucketarn): String
+  [StartupScriptS3ObjectVersion](#cfn-mwaa-environment-startupscripts3objectversion): String
+  [StartupScriptS3Path](#cfn-mwaa-environment-startupscripts3path): String
   [Tags](#cfn-mwaa-environment-tags): Json
   [WebserverAccessMode](#cfn-mwaa-environment-webserveraccessmode): String
   [WeeklyMaintenanceWindowStart](#cfn-mwaa-environment-weeklymaintenancewindowstart): String
@@ -83,10 +78,12 @@ A list of key\-value pairs containing the Airflow configuration options for your
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AirflowVersion`  <a name="cfn-mwaa-environment-airflowversion"></a>
-The version of Apache Airflow to use for the environment\. If no value is specified, defaults to the latest version\. Valid values: `2.0.2`, `1.10.12`\.  
+The version of Apache Airflow to use for the environment\. If no value is specified, defaults to the latest version\.  
+If you specify a newer version number for an existing environment, the version update requires some service interruption before taking effect\.  
+*Allowed Values*: `2.0.2` \| `1.10.12` \| `2.2.2` \| `2.4.3` \| `2.5.1` \| `2.6.3` \(latest\)   
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `DagS3Path`  <a name="cfn-mwaa-environment-dags3path"></a>
 The relative path to the DAGs folder on your Amazon S3 bucket\. For example, `dags`\. To learn more, see [Adding or updating DAGs](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html)\.  
@@ -168,8 +165,8 @@ The relative path to the `requirements.txt` file on your Amazon S3 bucket\. For 
 
 `Schedulers`  <a name="cfn-mwaa-environment-schedulers"></a>
 The number of schedulers that you want to run in your environment\. Valid values:   
-+ **v2\.0\.2** \- Accepts between 2 to 5\. Defaults to 2\.
-+ **v1\.10\.12** \- Accepts 1\.
++ **v2** \- Accepts between 2 to 5\. Defaults to 2\.
++ **v1** \- Accepts 1\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -180,11 +177,28 @@ The Amazon Resource Name \(ARN\) of the Amazon S3 bucket where your DAG code and
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`StartupScriptS3ObjectVersion`  <a name="cfn-mwaa-environment-startupscripts3objectversion"></a>
+The version of the startup shell script in your Amazon S3 bucket\. You must specify the [version ID](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html) that Amazon S3 assigns to the file every time you update the script\.   
+ Version IDs are Unicode, UTF\-8 encoded, URL\-ready, opaque strings that are no more than 1,024 bytes long\. The following is an example:   
+ `3sL4kqtJlcpXroDTDmJ+rmSpXd3dIbrHY+MTRCxf3vjVBH40Nr8X8gdRQBpUMLUo`   
+ For more information, see [Using a startup script](https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html)\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StartupScriptS3Path`  <a name="cfn-mwaa-environment-startupscripts3path"></a>
+The relative path to the startup shell script in your Amazon S3 bucket\. For example, `s3://mwaa-environment/startup.sh`\.  
+ Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process\. You can use this script to install dependencies, modify Apache Airflow configuration options, and set environment variables\. For more information, see [Using a startup script](https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html)\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-mwaa-environment-tags"></a>
 The key\-value tag pairs associated to your environment\. For example, `"Environment": "Staging"`\. To learn more, see [Tagging](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html)\.  
+If you specify new tags for an existing environment, the update requires service interruption before taking effect\.  
 *Required*: No  
 *Type*: Json  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `WebserverAccessMode`  <a name="cfn-mwaa-environment-webserveraccessmode"></a>
 The Apache Airflow *Web server* access mode\. To learn more, see [Apache Airflow access modes](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html)\. Valid values: `PRIVATE_ONLY` or `PUBLIC_ONLY`\.  
@@ -203,13 +217,13 @@ The day and time of the week to start weekly maintenance updates of your environ
 
 ### Ref<a name="aws-resource-mwaa-environment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the environment details\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the environment details\.
 
 ### Fn::GetAtt<a name="aws-resource-mwaa-environment-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-mwaa-environment-return-values-fn--getatt-fn--getatt"></a>
 

@@ -39,8 +39,8 @@ Properties:
 ## Properties<a name="aws-resource-qldb-ledger-properties"></a>
 
 `DeletionProtection`  <a name="cfn-qldb-ledger-deletionprotection"></a>
-The flag that prevents a ledger from being deleted by any user\. If not provided on ledger creation, this feature is enabled \(`true`\) by default\.  
-If deletion protection is enabled, you must first disable it before you can delete the ledger\. You can disable it by calling the `UpdateLedger` operation to set the flag to `false`\.  
+Specifies whether the ledger is protected from being deleted by any user\. If not defined during ledger creation, this feature is enabled \(`true`\) by default\.  
+If deletion protection is enabled, you must first disable it before you can delete the ledger\. You can disable it by calling the `UpdateLedger` operation to set this parameter to `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -50,7 +50,7 @@ The key in AWS Key Management Service \(AWS KMS\) to use for encryption of data 
 Use one of the following options to specify this parameter:  
 +  `AWS_OWNED_KMS_KEY`: Use an AWS KMS key that is owned and managed by AWS on your behalf\.
 +  **Undefined**: By default, use an AWS owned KMS key\.
-+  **A valid symmetric customer managed KMS key**: Use the specified KMS key in your account that you create, own, and manage\.
++  **A valid symmetric customer managed KMS key**: Use the specified symmetric encryption KMS key in your account that you create, own, and manage\.
 
   Amazon QLDB does not support asymmetric keys\. For more information, see [Using symmetric and asymmetric keys](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html) in the * AWS Key Management Service Developer Guide*\.
 To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name \(ARN\), alias name, or alias ARN\. When using an alias name, prefix it with `"alias/"`\. To specify a key in a different AWS account, you must use the key ARN or alias ARN\.  
@@ -100,13 +100,13 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-qldb-ledger-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "myQLDBLedger" }` 
 
 For the resource with the logical ID `myQLDBLedger`, `Ref` returns the Amazon QLDB ledger name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-qldb-ledger--examples"></a>
 

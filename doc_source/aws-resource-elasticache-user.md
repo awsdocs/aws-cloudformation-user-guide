@@ -13,9 +13,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ElastiCache::User",
   "Properties" : {
       "[AccessString](#cfn-elasticache-user-accessstring)" : String,
+      "[AuthenticationMode](#cfn-elasticache-user-authenticationmode)" : AuthenticationMode,
       "[Engine](#cfn-elasticache-user-engine)" : String,
       "[NoPasswordRequired](#cfn-elasticache-user-nopasswordrequired)" : Boolean,
       "[Passwords](#cfn-elasticache-user-passwords)" : [ String, ... ],
+      "[Tags](#cfn-elasticache-user-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserId](#cfn-elasticache-user-userid)" : String,
       "[UserName](#cfn-elasticache-user-username)" : String
     }
@@ -29,10 +31,14 @@ Type: AWS::ElastiCache::User
 Properties: 
   [AccessString](#cfn-elasticache-user-accessstring): 
     String
+  [AuthenticationMode](#cfn-elasticache-user-authenticationmode): 
+    AuthenticationMode
   [Engine](#cfn-elasticache-user-engine): String
   [NoPasswordRequired](#cfn-elasticache-user-nopasswordrequired): Boolean
   [Passwords](#cfn-elasticache-user-passwords): 
     - String
+  [Tags](#cfn-elasticache-user-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserId](#cfn-elasticache-user-userid): String
   [UserName](#cfn-elasticache-user-username): String
 ```
@@ -44,6 +50,19 @@ Access permissions string used for this user\.
 *Required*: No  
 *Type*: String  
 *Pattern*: `.*\S.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AuthenticationMode`  <a name="cfn-elasticache-user-authenticationmode"></a>
+Specifies the authentication mode to use\. Below is an example of the possible JSON values:  
+
+```
+{
+ Type: <iam | no-password-required | password>
+ Passwords: ["*****", "******"] // If Type is password.
+}
+```
+*Required*: No  
+*Type*: [AuthenticationMode](aws-properties-elasticache-user-authenticationmode.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engine`  <a name="cfn-elasticache-user-engine"></a>
@@ -63,6 +82,12 @@ Indicates a password is not required for this user\.
 Passwords used for this user\. You can create up to two passwords for each user\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-elasticache-user-tags"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserId`  <a name="cfn-elasticache-user-userid"></a>
@@ -90,9 +115,9 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-elasticache-user-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-elasticache-user-return-values-fn--getatt-fn--getatt"></a>
 

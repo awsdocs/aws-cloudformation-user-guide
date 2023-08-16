@@ -39,7 +39,7 @@ The following example stack policy prevents updates to the `ProductionDatabase` 
 
 When you set a stack policy, all resources are protected by default\. To allow updates on all resources, we add an `Allow` statement that allows all actions on all resources\. Although the `Allow` statement specifies all resources, the explicit `Deny` statement overrides it for the resource with the `ProductionDatabase` logical ID\. This `Deny` statement prevents all update actions, such as replacement or deletion, on the `ProductionDatabase` resource\.
 
-The `Principal` element is required, but supports only the wild card \(`*`\), which means that the statement applies to all [principals](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#principal)\.
+The `Principal` element is required, but supports only the wild card \(`*`\), which means that the statement applies to all [principals](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html#principal)\.
 
 **Note**  
 During a stack update, AWS CloudFormation automatically updates resources that depend on other updated resources\. For example, AWS CloudFormation updates a resource that references an updated resource\. AWS CloudFormation makes no physical changes, such as the resource's ID, to automatically updated resources, but if a stack policy is associated with those resources, you must have permission to update them\.
@@ -63,7 +63,7 @@ You define a stack policy with five elements: `Effect`, `Action`, `Principal`, `
           "ResourceType" : [resource_type, ...]
         }
       }
-    }  
+    }
   ]
 }
 ```
@@ -89,7 +89,7 @@ Specifies all update actions\. The asterisk is a wild card that represents all u
 The following example shows how to specify just the replace and delete actions:  
 
 ```
-"Action" : ["Update:Replace", "Update:Delete"]
+"Action" : ["Update:Replace", "Update:Delete"]
 ```
 To allow all update actions except for one, use `NotAction`\. For example, to allow all update actions except for `Update:Delete`, use `NotAction`, as shown in this example:  
 
@@ -108,7 +108,7 @@ To allow all update actions except for one, use `NotAction`\. For example, to al
 For more information about stack updates, see [AWS CloudFormation stack updates](using-cfn-updating-stacks.md)\.
 
 Principal  
-The `Principal` element specifies the entity that the policy applies to\. This element is required but supports only the wild card \(`*`\), which means that the policy applies to all [principals](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#principal)\.
+The `Principal` element specifies the entity that the policy applies to\. This element is required but supports only the wild card \(`*`\), which means that the policy applies to all [principals](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html#principal)\.
 
 Resource  
 Specifies the logical IDs of the resources that the policy applies to\. To specify [types of resources](aws-template-resource-type-ref.md), use the `Condition` element\.  
@@ -203,13 +203,13 @@ For information about writing stack policies, see [Defining a stack policy](#sta
 **To set a stack policy on an existing stack \(AWS CLI only\)**
 + Use the `[aws cloudformation set\-stack\-policy](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/set-stack-policy.html)` command with the `--stack-policy-body` option to type in a modified policy or the `--stack-policy-url` option to specify a file containing the policy\.
 **Note**  
-To add a policy to an existing stack, you must have permission to the AWS CloudFormation `SetStackPolicy` action\.
+To add a policy to an existing stack, you must have permission to the AWS CloudFormation `[SetStackPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetStackPolicy.html)` action\.
 
 ## Updating protected resources<a name="protect-stack-resources-updating"></a>
 
 To update protected resources, create a temporary policy that overrides the stack policy and allows updates on those resources\. Specify the override policy when you update the stack\. The override policy doesn't permanently change the stack policy\.
 
-To update protected resources, you must have permission to use the AWS CloudFormation `SetStackPolicy` action\. For information about setting AWS CloudFormation permissions, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
+To update protected resources, you must have permission to use the AWS CloudFormation `[SetStackPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetStackPolicy.html)` action\. For information about setting AWS CloudFormation permissions, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
 
 **Note**  
 During a stack update, AWS CloudFormation automatically updates resources that depend on other updated resources\. For example, AWS CloudFormation updates a resource that references an updated resource\. AWS CloudFormation makes no physical changes, such as the resources' ID, to automatically updated resources, but if a stack policy is associated with those resources, you must have permission to update them\.
@@ -252,12 +252,12 @@ During a stack update, AWS CloudFormation automatically updates resources that d
          "Action" : "Update:*",
          "Principal": "*",
          "Resource" : "*"
-       }  
+       }
      ]
    }
    ```
 **Note**  
-AWS CloudFormation applies the override policy only during this update\. The override policy doesn't permanently change the stack policy\. To modify a stack policy, see [Modifying a stack policy ](#protect-stack-resources-modifying)\.
+AWS CloudFormation applies the override policy only during this update\. The override policy doesn't permanently change the stack policy\. To modify a stack policy, see [Modifying a stack policy To modify a stack policy \(AWS CLI\)](#protect-stack-resources-modifying)\.
 
 1. Review the stack information and the changes that you submitted\.
 
@@ -276,11 +276,11 @@ At this point, you also have the option to view the change set to review your pr
 **To update a protected resource \(AWS CLI\)**
 + Use the `[aws cloudformation update\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html)` command with the `--stack-policy-during-update-body` option to type in a modified policy or the `--stack-policy-during-update-url` option to specify a file containing the policy\.
 **Note**  
-AWS CloudFormation applies the override policy only during this update\. The override policy doesn't permanently change the stack policy\. To modify a stack policy, see [Modifying a stack policy ](#protect-stack-resources-modifying)\.
+AWS CloudFormation applies the override policy only during this update\. The override policy doesn't permanently change the stack policy\. To modify a stack policy, see [Modifying a stack policy To modify a stack policy \(AWS CLI\)](#protect-stack-resources-modifying)\.
 
 ## Modifying a stack policy<a name="protect-stack-resources-modifying"></a>
 
-To protect additional resources or to remove protection from resources, modify the stack policy\. For example, when you add a database that you want to protect to your stack, add a `Deny` statement for that database to the stack policy\. To modify the policy, you must have permission to use the `SetStackPolicy` action\.
+To protect additional resources or to remove protection from resources, modify the stack policy\. For example, when you add a database that you want to protect to your stack, add a `Deny` statement for that database to the stack policy\. To modify the policy, you must have permission to use the `[SetStackPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetStackPolicy.html)` action\.
 
 Use the AWS CLI to modify stack policies\.
 
@@ -297,7 +297,7 @@ You can't delete a stack policy\. To remove all protection from all resources, y
       "Action" : "Update:*",
       "Principal": "*",
       "Resource" : "*"
-    }  
+    }
   ]
 }
 ```
@@ -306,7 +306,7 @@ You can't delete a stack policy\. To remove all protection from all resources, y
 
 The following example policies show how to prevent updates to all stack resources and to specific resources, and prevent specific types of updates\.
 
-### Prevent updates to all stack resources<a name="w11339ab1c25c17c29c21b4"></a>
+### Prevent updates to all stack resources<a name="w4ab1c25c17c29c21b5"></a>
 
 To prevent updates to all stack resources, the following policy specifies a `Deny` statement for all update actions on all resources\.
 
@@ -318,12 +318,12 @@ To prevent updates to all stack resources, the following policy specifies a `Den
       "Action" : "Update:*",
       "Principal": "*",
       "Resource" : "*"
-    }  
+    }
   ]
 }
 ```
 
-### Prevent updates to a single resource<a name="w11339ab1c25c17c29c21b6"></a>
+### Prevent updates to a single resource<a name="w4ab1c25c17c29c21b7"></a>
 
 The following policy denies all update actions on the database with the `MyDatabase` logical ID\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the `MyDatabase` resource because the `Deny` statement always overrides allow actions\.
 
@@ -364,7 +364,7 @@ You can achieve the same result as the previous example by using a default denia
 **Important**  
 There is risk in using a default denial\. If you have an `Allow` statement elsewhere in the policy \(such as an `Allow` statement that uses a wildcard\), you might unknowingly grant update permission to resources that you don't intend to\. Because an explicit denial overrides any allow actions, you can ensure that a resource is protected by using a `Deny` statement\.
 
-### Prevent updates to all instances of a resource type<a name="w11339ab1c25c17c29c21b8"></a>
+### Prevent updates to all instances of a resource type<a name="w4ab1c25c17c29c21b9"></a>
 
 The following policy denies all update actions on the RDS DB instance resource type\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the RDS DB instance resources because a `Deny` statement always overrides allow actions\.
 
@@ -392,7 +392,7 @@ The following policy denies all update actions on the RDS DB instance resource t
 }
 ```
 
-### Prevent replacement updates for an instance<a name="w11339ab1c25c17c29c21c10"></a>
+### Prevent replacement updates for an instance<a name="w4ab1c25c17c29c21c11"></a>
 
 The following policy denies updates that would cause a replacement of the instance with the `MyInstance` logical ID\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the `MyInstance` resource because the `Deny` statement always overrides allow actions\.
 
@@ -415,7 +415,7 @@ The following policy denies updates that would cause a replacement of the instan
 }
 ```
 
-### Prevent updates to nested stacks<a name="w11339ab1c25c17c29c21c12"></a>
+### Prevent updates to nested stacks<a name="w4ab1c25c17c29c21c13"></a>
 
 The following policy denies all update actions on the AWS CloudFormation stack resource type \(nested stacks\)\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the AWS CloudFormationstack resources because the `Deny` statement always overrides allow actions\.
 

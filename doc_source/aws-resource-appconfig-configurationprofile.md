@@ -76,7 +76,13 @@ A description of the configuration profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocationUri`  <a name="cfn-appconfig-configurationprofile-locationuri"></a>
-A URI to locate the configuration\. You can specify the AWS AppConfig hosted configuration store, Systems Manager \(SSM\) document, an SSM Parameter Store parameter, or an Amazon S3 object\. For the hosted configuration store and for feature flags, specify `hosted`\. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN\. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: `s3://my-bucket/my-app/us-east-1/my-config.json`   
+A URI to locate the configuration\. You can specify the following:  
++ For the AWS AppConfig hosted configuration store and for feature flags, specify `hosted`\.
++ For an AWS Systems Manager Parameter Store parameter, specify either the parameter name in the format `ssm-parameter://<parameter name>` or the ARN\.
++ For an AWS CodePipeline pipeline, specify the URI in the following format: `codepipeline`://<pipeline name>\.
++ For an AWS Secrets Manager secret, specify the URI in the following format: `secretsmanager`://<secret name>\.
++ For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: `s3://my-bucket/my-app/us-east-1/my-config.json` 
++ For an SSM document, specify either the document name in the format `ssm-document://<document name>` or the Amazon Resource Name \(ARN\)\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -88,7 +94,7 @@ A name for the configuration profile\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `64`  
+*Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetrievalRoleArn`  <a name="cfn-appconfig-configurationprofile-retrievalrolearn"></a>
@@ -127,17 +133,154 @@ A list of methods for validating the configuration\.
 
 ### Ref<a name="aws-resource-appconfig-configurationprofile-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the configuration profile ID\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the configuration profile ID\.
 
 ## Examples<a name="aws-resource-appconfig-configurationprofile--examples"></a>
 
 
 
-### AWS AppConfig Configuration Profile Example \- CodePipeline<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_CodePipeline"></a>
+### AWS AppConfig feature flag<a name="aws-resource-appconfig-configurationprofile--examples--_feature_flag"></a>
+
+The following example creates an AWS AppConfig configuration profile of type `HostedConfigurationVersion`\. The feature flag created by this example enables cryptocurrency at checkout\. AWS AppConfig stores the configuration data for this profile in the AWS AppConfig hosted configuration store\.
+
+#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--_feature_flag--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::LanguageExtensions",
+  "Resources": {
+    "MySuperCoolApp": {
+      "Type": "AWS::AppConfig::Application",
+      "Properties": {
+        "Name": "MySuperCoolApp"
+      }
+    },
+    "MyFeatureFlags": {
+      "Type": "AWS::AppConfig::ConfigurationProfile",
+      "Properties": {
+        "Name": "MyFeatureFlags",
+        "ApplicationId": "MySuperCoolApp",
+        "LocationUri": "hosted",
+        "Type": "AWS.AppConfig.FeatureFlags"
+      }
+    },
+    "MyFeatureFlagsVersion": {
+      "Type": "AWS::AppConfig::HostedConfigurationVersion",
+      "Properties": {
+        "ApplicationId": "MySuperCoolApp",
+        "ConfigurationProfileId": "MyFeatureFlags",
+        "ContentType": "application/json",
+        "VersionLabel": "v1.0.0",
+        "Content": {
+          "Fn::ToJsonString": {
+            "flags": {
+              "allow-cryptocurrency-at-checkout": {
+                "attributes": {
+                  "allowed-currency": {
+                    "constraints": {
+                      "elements": {
+                        "enum": [
+                          "BTC",
+                          "ETH",
+                          "XRP"
+                        ],
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "bitcoin-discount-percentage": {
+                    "constraints": {
+                      "maximum": 25,
+                      "minimum": 0,
+                      "type": "number"
+                    }
+                  }
+                },
+                "name": "Allow Cryptocurrency at Checkout"
+              }
+            },
+            "values": {
+              "allow-cryptocurrency-at-checkout": {
+                "allowed-currency": [
+                  "BTC",
+                  "ETH"
+                ],
+                "bitcoin-discount-percentage": 5,
+                "enabled": true
+              }
+            },
+            "version": "1"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--_feature_flag--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Transform: 'AWS::LanguageExtensions'
+Resources:
+  MySuperCoolApp:
+    Type: 'AWS::AppConfig::Application'
+    Properties:
+      Name: MySuperCoolApp
+
+  MyFeatureFlags:
+    Type: 'AWS::AppConfig::ConfigurationProfile'
+    Properties:
+      Name: MyFeatureFlags
+      ApplicationId: !Ref MySuperCoolApp
+      LocationUri: hosted
+      Type: AWS.AppConfig.FeatureFlags
+
+  MyFeatureFlagsVersion:
+    Type: 'AWS::AppConfig::HostedConfigurationVersion'
+    Properties:
+      ApplicationId: !Ref MySuperCoolApp
+      ConfigurationProfileId: !Ref MyFeatureFlags
+      ContentType: application/json
+      VersionLabel: "v1.0.0"
+      Content: 
+        Fn::ToJsonString:
+            flags:
+              allow-cryptocurrency-at-checkout:
+                attributes:
+                  allowed-currency:
+                    constraints:
+                      elements:
+                        enum:
+                          - BTC
+                          - ETH
+                          - XRP
+                        type: string
+                      type: array
+                  bitcoin-discount-percentage:
+                    constraints:
+                      maximum: 25
+                      minimum: 0
+                      type: number
+                name: Allow Cryptocurrency at Checkout
+            values:
+              allow-cryptocurrency-at-checkout:
+                allowed-currency:
+                  - BTC
+                  - ETH
+                bitcoin-discount-percentage: 5
+                enabled: true
+            version: '1'
+```
+
+### AWS AppConfig configuration profile example \- AWS CodePipeline<a name="aws-resource-appconfig-configurationprofile--examples--_configuration_profile_example_-_"></a>
 
 The following examples creates an AWS AppConfig configuration profile named MyTestConfigurationProfile\. A configuration profile includes source information for accessing your configuration data\. A configuration profile can also include optional validators to ensure your configuration data is syntactically and semantically correct\. The following configuration profile example uses the specified `LocationUri` to retrieve configuration data from AWS CodePipeline\.
 
-#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_CodePipeline--json"></a>
+#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--_configuration_profile_example_-_--json"></a>
 
 ```
 {
@@ -168,7 +311,7 @@ The following examples creates an AWS AppConfig configuration profile named MyTe
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_CodePipeline--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--_configuration_profile_example_-_--yaml"></a>
 
 ```
 Resources:
@@ -187,11 +330,11 @@ Resources:
           Value: test
 ```
 
-### AWS AppConfig Configuration Profile Example \- Parameter Store<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_Parameter_Store"></a>
+### AWS AppConfig configuration profile example \- Parameter Store<a name="aws-resource-appconfig-configurationprofile--examples--_configuration_profile_example_-_Parameter_Store"></a>
 
-The following examples creats an AWS AppConfig configuration profile named MyTestConfigurationProfile\. A configuration profile includes source information for accessing your configuration data\. A configuration profile can also include optional validators to ensure your configuration data is syntactically and semantically correct\. The following configuration profile example uses the specified `RetrievalRoleArn` and `LocationUri` to retrieve configuration data from an SSM parameter\.
+The following examples creates an AWS AppConfig configuration profile named MyTestConfigurationProfile\. A configuration profile includes source information for accessing your configuration data\. A configuration profile can also include optional validators to ensure your configuration data is syntactically and semantically correct\. The following configuration profile example uses the specified `RetrievalRoleArn` and `LocationUri` to retrieve configuration data from an SSM parameter\.
 
-#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_Parameter_Store--json"></a>
+#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--_configuration_profile_example_-_Parameter_Store--json"></a>
 
 ```
 {
@@ -234,7 +377,7 @@ The following examples creats an AWS AppConfig configuration profile named MyTes
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_Parameter_Store--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--_configuration_profile_example_-_Parameter_Store--yaml"></a>
 
 ```
 Resources:

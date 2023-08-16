@@ -40,7 +40,7 @@ The IPv4 address range, in CIDR notation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Direction`  <a name="cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-direction"></a>
-The direction\. The following are possible values:  
+The direction\. The following are the possible values:  
 + egress
 + ingress
 *Required*: No  

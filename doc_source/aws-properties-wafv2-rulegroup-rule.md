@@ -1,6 +1,6 @@
 # AWS::WAFv2::RuleGroup Rule<a name="aws-properties-wafv2-rulegroup-rule"></a>
 
-A single rule, which you can use to identify web requests that you want to allow, block, or count\. Each rule includes one top\-level Statement that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\. 
+A single rule, which you can use in a [AWS::WAFv2::WebACL](aws-resource-wafv2-webacl.md) or [AWS::WAFv2::RuleGroup](aws-resource-wafv2-rulegroup.md) to identify web requests that you want to allow, block, or count\. Each rule includes one top\-level [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-rule.html#cfn-wafv2-rulegroup-rule-statement) that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\. 
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-rule-syntax"></a>
 
@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Action](#cfn-wafv2-rulegroup-rule-action)" : RuleAction,
   "[CaptchaConfig](#cfn-wafv2-rulegroup-rule-captchaconfig)" : CaptchaConfig,
+  "[ChallengeConfig](#cfn-wafv2-rulegroup-rule-challengeconfig)" : ChallengeConfig,
   "[Name](#cfn-wafv2-rulegroup-rule-name)" : String,
   "[Priority](#cfn-wafv2-rulegroup-rule-priority)" : Integer,
   "[RuleLabels](#cfn-wafv2-rulegroup-rule-rulelabels)" : [ Label, ... ],
@@ -27,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     RuleAction
   [CaptchaConfig](#cfn-wafv2-rulegroup-rule-captchaconfig): 
     CaptchaConfig
+  [ChallengeConfig](#cfn-wafv2-rulegroup-rule-challengeconfig): 
+    ChallengeConfig
   [Name](#cfn-wafv2-rulegroup-rule-name): String
   [Priority](#cfn-wafv2-rulegroup-rule-priority): Integer
   [RuleLabels](#cfn-wafv2-rulegroup-rule-rulelabels): 
@@ -40,7 +43,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-rulegroup-rule-properties"></a>
 
 `Action`  <a name="cfn-wafv2-rulegroup-rule-action"></a>
-The action that AWS WAF should take on a web request when it matches the rule's statement\. Settings at the web ACL level can override the rule action setting\.   
+The action that AWS WAF should take on a web request when it matches the rule statement\. Settings at the web ACL level can override the rule action setting\.   
 *Required*: No  
 *Type*: [RuleAction](aws-properties-wafv2-rulegroup-ruleaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -51,8 +54,15 @@ Specifies how AWS WAF should handle `CAPTCHA` evaluations\. If you don't specify
 *Type*: [CaptchaConfig](aws-properties-wafv2-rulegroup-captchaconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ChallengeConfig`  <a name="cfn-wafv2-rulegroup-rule-challengeconfig"></a>
+Specifies how AWS WAF should handle `Challenge` evaluations\. If you don't specify this, AWS WAF uses the challenge configuration that's defined for the web ACL\.   
+*Required*: No  
+*Type*: [ChallengeConfig](aws-properties-wafv2-rulegroup-challengeconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-wafv2-rulegroup-rule-name"></a>
-The descriptive name of the rule\. You can't change the name of a `Rule` after you create it\.   
+The name of the rule\.   
+If you change the name of a `Rule` after you create it and you want the rule's metric name to reflect the change, update the metric name in the rule's `VisibilityConfig` settings\. AWS WAF doesn't automatically update the metric name when you update the rule name\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -81,13 +91,14 @@ For example, `myLabelName` or `nameSpace1:nameSpace2:myLabelName`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Statement`  <a name="cfn-wafv2-rulegroup-rule-statement"></a>
-The AWS WAF processing statement for the rule, for example ByteMatchStatement or SizeConstraintStatement\.   
+The AWS WAF processing statement for the rule, for example [ByteMatchStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-bytematchstatement) or [SizeConstraintStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-sizeconstraintstatement)\.   
 *Required*: Yes  
 *Type*: [Statement](aws-properties-wafv2-rulegroup-statement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VisibilityConfig`  <a name="cfn-wafv2-rulegroup-rule-visibilityconfig"></a>
 Defines and enables Amazon CloudWatch metrics and web request sample collection\.   
+If you change the name of a `Rule` after you create it and you want the rule's metric name to reflect the change, update the metric name as well\. AWS WAF doesn't automatically update the metric name\.   
 *Required*: Yes  
 *Type*: [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

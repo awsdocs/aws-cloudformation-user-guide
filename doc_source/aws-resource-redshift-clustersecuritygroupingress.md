@@ -92,10 +92,10 @@ The following snippet describes a ingress rules for an Amazon Redshift cluster s
 #### YAML<a name="aws-resource-redshift-clustersecuritygroupingress--examples--Ingress_Rules--yaml"></a>
 
 ```
-myClusterSecurityGroupIngressIP: 
+myClusterSecurityGroupIngressIP:
   Type: "AWS::Redshift::ClusterSecurityGroupIngress"
-  Properties: 
-    ClusterSecurityGroupName: 
+  Properties:
+    ClusterSecurityGroupName:
     Ref: "myClusterSecurityGroup"
     CIDRIP: "10.0.0.0/16"
 ```

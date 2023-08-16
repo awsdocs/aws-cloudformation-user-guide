@@ -20,7 +20,7 @@ We strongly recommend you do not use these mechanisms to include sensitive infor
 Rather than embedding sensitive information directly in your CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
-The following example creates the `myteststack` stack in an Amazon S3 bucket:
+The following example creates the `myteststack` stack:
 
 ```
 1. PROMPT> aws cloudformation create-stack \

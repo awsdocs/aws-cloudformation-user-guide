@@ -58,9 +58,9 @@ The name of the log stream\. The name must be unique within the log group\.
 
 ### Ref<a name="aws-resource-logs-logstream-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name, such as ` MyAppLogStream`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name, such as ` MyAppLogStream`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-logs-logstream--examples"></a>
 

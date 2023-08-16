@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Arn](#cfn-wafv2-webacl-rulegroupreferencestatement-arn)" : String,
-  "[ExcludedRules](#cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules)" : [ ExcludedRule, ... ]
+  "[ExcludedRules](#cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules)" : [ ExcludedRule, ... ],
+  "[RuleActionOverrides](#cfn-wafv2-webacl-rulegroupreferencestatement-ruleactionoverrides)" : [ RuleActionOverride, ... ]
 }
 ```
 
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Arn](#cfn-wafv2-webacl-rulegroupreferencestatement-arn): String
   [ExcludedRules](#cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules): 
     - ExcludedRule
+  [RuleActionOverrides](#cfn-wafv2-webacl-rulegroupreferencestatement-ruleactionoverrides): 
+    - RuleActionOverride
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-rulegroupreferencestatement-properties"></a>
@@ -37,8 +40,17 @@ The Amazon Resource Name \(ARN\) of the entity\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludedRules`  <a name="cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules"></a>
-The rules in the referenced rule group whose actions are set to `Count`\. When you exclude a rule, AWS WAF evaluates it exactly as it would if the rule action setting were `Count`\. This is a useful option for testing the rules in a rule group without modifying how they handle your web traffic\.  
+Rules in the referenced rule group whose actions are set to `Count`\.   
+Instead of this option, use `RuleActionOverrides`\. It accepts any valid action setting, including `Count`\.
 *Required*: No  
 *Type*: List of [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RuleActionOverrides`  <a name="cfn-wafv2-webacl-rulegroupreferencestatement-ruleactionoverrides"></a>
+Action settings to use in the place of the rule actions that are configured inside the rule group\. You specify one override for each rule whose action you want to change\.   
+You can use overrides for testing, for example you can override all of rule actions to `Count` and then monitor the resulting count metrics to understand how the rule group would handle your web traffic\. You can also permanently override some or all actions, to modify how the rule group manages your web traffic\.  
+*Required*: No  
+*Type*: List of [RuleActionOverride](aws-properties-wafv2-webacl-ruleactionoverride.md)  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

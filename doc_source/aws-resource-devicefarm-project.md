@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DefaultJobTimeoutMinutes](#cfn-devicefarm-project-defaultjobtimeoutminutes)" : Integer,
       "[Name](#cfn-devicefarm-project-name)" : String,
-      "[Tags](#cfn-devicefarm-project-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-devicefarm-project-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VpcConfig](#cfn-devicefarm-project-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -28,6 +29,8 @@ Properties:
   [Name](#cfn-devicefarm-project-name): String
   [Tags](#cfn-devicefarm-project-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [VpcConfig](#cfn-devicefarm-project-vpcconfig): 
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-devicefarm-project-properties"></a>
@@ -52,6 +55,12 @@ The tags to add to the resource\. A tag is an array of key\-value pairs\. Tag ke
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`VpcConfig`  <a name="cfn-devicefarm-project-vpcconfig"></a>
+The VPC security groups and subnets that are attached to a project\.  
+*Required*: No  
+*Type*: [VpcConfig](aws-properties-devicefarm-project-vpcconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-devicefarm-project-return-values"></a>
 
 ### Ref<a name="aws-resource-devicefarm-project-return-values-ref"></a>
@@ -60,9 +69,9 @@ Not supported for this resource\.
 
 ### Fn::GetAtt<a name="aws-resource-devicefarm-project-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-devicefarm-project-return-values-fn--getatt-fn--getatt"></a>
 

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::OpsWorks::Layer",
   "Properties" : {
-      "[Attributes](#cfn-opsworks-layer-attributes)" : {Key : Value, ...},
+      "[Attributes](#cfn-opsworks-layer-attributes)" : {Key: Value, ...},
       "[AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips)" : Boolean,
       "[AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips)" : Boolean,
       "[CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn)" : String,
@@ -46,7 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::OpsWorks::Layer
 Properties: 
   [Attributes](#cfn-opsworks-layer-attributes): 
-    Key : Value
+    Key: Value
   [AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips): Boolean
   [AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips): Boolean
   [CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn): String
@@ -199,13 +199,13 @@ A `VolumeConfigurations` object that describes the layer's Amazon EBS volumes\.
 
 ### Ref<a name="aws-resource-opsworks-layer-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example:
 
  `{ "Ref": "myLayer" }` 
 
 For the AWS OpsWorks layer *myLayer*, `Ref` returns the AWS OpsWorks layer ID\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-opsworks-layer--examples"></a>
 

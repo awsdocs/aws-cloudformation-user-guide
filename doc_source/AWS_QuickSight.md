@@ -5,5 +5,8 @@
 + [AWS::QuickSight::Dashboard](aws-resource-quicksight-dashboard.md)
 + [AWS::QuickSight::DataSet](aws-resource-quicksight-dataset.md)
 + [AWS::QuickSight::DataSource](aws-resource-quicksight-datasource.md)
++ [AWS::QuickSight::RefreshSchedule](aws-resource-quicksight-refreshschedule.md)
 + [AWS::QuickSight::Template](aws-resource-quicksight-template.md)
 + [AWS::QuickSight::Theme](aws-resource-quicksight-theme.md)
++ [AWS::QuickSight::Topic](aws-resource-quicksight-topic.md)
++ [AWS::QuickSight::VPCConnection](aws-resource-quicksight-vpcconnection.md)

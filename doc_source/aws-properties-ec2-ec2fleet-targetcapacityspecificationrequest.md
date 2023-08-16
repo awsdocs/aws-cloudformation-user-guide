@@ -52,7 +52,7 @@ The number of Spot units to request\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetCapacityUnitType`  <a name="cfn-ec2-ec2fleet-targetcapacityspecificationrequest-targetcapacityunittype"></a>
-The unit for the target capacity\.  
+The unit for the target capacity\. `TargetCapacityUnitType` can only be specified when `InstanceRequirements` is specified\.  
 Default: `units` \(translates to number of instances\)  
 *Required*: No  
 *Type*: String  

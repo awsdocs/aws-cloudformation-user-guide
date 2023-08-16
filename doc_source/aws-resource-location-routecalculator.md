@@ -1,8 +1,11 @@
 # AWS::Location::RouteCalculator<a name="aws-resource-location-routecalculator"></a>
 
-The `AWS::Location::RouteCalculator` resource specifies a route calculator resource in your AWS account\.
+Specifies a route calculator resource in your AWS account\.
 
 You can send requests to a route calculator resource to estimate travel time, distance, and get directions\. A route calculator sources traffic and road network data from your chosen data provider\.
+
+**Note**  
+If your application is tracking or routing assets you use in your business, such as delivery vehicles or employees, you must not use Esri as your geolocation provider\. See section 82 of the [AWS service terms](http://aws.amazon.com/service-terms) for more details\.
 
 ## Syntax<a name="aws-resource-location-routecalculator-syntax"></a>
 
@@ -36,10 +39,10 @@ Properties:
 ## Properties<a name="aws-resource-location-routecalculator-properties"></a>
 
 `CalculatorName`  <a name="cfn-location-routecalculator-calculatorname"></a>
-The name of the route calculator resource\.  
+The name of the route calculator resource\.   
 Requirements:  
 + Can use alphanumeric characters \(A–Z, a–z, 0–9\) , hyphens \(\-\), periods \(\.\), and underscores \(\_\)\.
-+ Must be a unique route calculator resource name\.
++ Must be a unique Route calculator resource name\.
 + No spaces allowed\. For example, `ExampleRouteCalculator`\.
 *Required*: Yes  
 *Type*: String  
@@ -52,9 +55,12 @@ Requirements:
 Specifies the data provider of traffic and road network data\.  
 This field is case\-sensitive\. Enter the valid values as shown\. For example, entering `HERE` returns an error\.
 Valid values include:  
-+ `Esri`
-+ `Here`
-For more information about data providers, see the [Amazon Location Service data providers page](https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html)\.  
++ `Esri` – For additional information about [Esri](https://docs.aws.amazon.com/location/latest/developerguide/esri.html)'s coverage in your region of interest, see [Esri details on street networks and traffic coverage](https://doc.arcgis.com/en/arcgis-online/reference/network-coverage.htm)\.
+
+  Route calculators that use Esri as a data source only calculate routes that are shorter than 400 km\.
++ `Grab` – Grab provides routing functionality for Southeast Asia\. For additional information about [GrabMaps](https://docs.aws.amazon.com/location/latest/developerguide/grab.html)' coverage, see [GrabMaps countries and areas covered](https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area)\.
++ `Here` – For additional information about [HERE Technologies](https://docs.aws.amazon.com/location/latest/developerguide/HERE.html)' coverage in your region of interest, see [HERE car routing coverage](https://developer.here.com/documentation/routing-api/dev_guide/topics/coverage/car-routing.html) and [HERE truck routing coverage](https://developer.here.com/documentation/routing-api/dev_guide/topics/coverage/truck-routing.html)\.
+For additional information , see [Data providers](https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html) on the *Amazon Location Service Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -78,15 +84,15 @@ No longer used\. If included, the only allowed value is `RequestBasedUsage`\.
 
 ### Ref<a name="aws-resource-location-routecalculator-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `RouteCalculator` name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `RouteCalculator` name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-location-routecalculator-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-location-routecalculator-return-values-fn--getatt-fn--getatt"></a>
 

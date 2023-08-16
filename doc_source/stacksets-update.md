@@ -27,6 +27,8 @@ To override parameter values for specific stack *instances*, see [Override param
 
       \[Service\-managed permissions\] For **Deployment targets**, choose the accounts in your organization to deploy to\.
 
+   1. Select the **Region**\.
+
    1. Change the value of the **Frequency** parameter from **24hours** to **12hours**\.
 
       For more information about this and the other parameters, which specify values used by AWS Config, see [Setting up AWS Config with the console](http://docs.aws.amazon.com/config/latest/developerguide/gs-console.html) in the *AWS Config Developer Guide*\.
@@ -60,7 +62,7 @@ When acting as a delegated administrator, you must set the `--call-as` parameter
 --call-as DELEGATED_ADMIN
 ```
 
-Run the `update-stack-set` AWS CLI command to make changes to your stack set\. In this walkthrough, we are updating the value of the `MaximumExecutionFrequency` parameter\. For more information about the parameter names and values for creating or updating an AWS Config rule, see [put\-config\-rule](http://docs.aws.amazon.com/cli/latest/reference/configservice/put-config-rule.html) in the AWS CLI reference\. To change template parameter values, add the `--parameters` parameter\. For more information about what you can specify as a value for `--parameters`, see [Parameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html) in the AWS CloudFormation API Reference, and [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) in the *AWS CLI Command Reference*\.
+Run the `update-stack-set` AWS CLI command to make changes to your stack set\. In this walkthrough, we are updating the value of the `MaximumExecutionFrequency` parameter\. For more information about the parameter names and values for creating or updating an AWS Config rule, see [put\-config\-rule](http://docs.aws.amazon.com/cli/latest/reference/configservice/put-config-rule.html) in the AWS CLI reference\. To change template parameter values, add the `--parameters` parameter\. For more information about what you can specify as a value for `--parameters`, see [Parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html) in the AWS CloudFormation API Reference, and [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) in the *AWS CLI Command Reference*\.
 
 In the example command shown here, we are updating the stack set by using `--parameters`; specifically, we change the default snapshot delivery frequency for delivery channel configuration from **TwentyFour\_Hours** to **Twelve\_Hours**\. Because we are still using the current template, we add the `--use-previous-template` parameter\.
 

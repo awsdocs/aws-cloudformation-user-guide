@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Children](#cfn-amplifyuibuilder-component-componentchild-children)" : [ ComponentChild, ... ],
   "[ComponentType](#cfn-amplifyuibuilder-component-componentchild-componenttype)" : String,
-  "[Events](#cfn-amplifyuibuilder-component-componentchild-events)" : ComponentEvents,
+  "[Events](#cfn-amplifyuibuilder-component-componentchild-events)" : {Key: Value, ...},
   "[Name](#cfn-amplifyuibuilder-component-componentchild-name)" : String,
-  "[Properties](#cfn-amplifyuibuilder-component-componentchild-properties)" : ComponentProperties
+  "[Properties](#cfn-amplifyuibuilder-component-componentchild-properties)" : {Key: Value, ...}
 }
 ```
 
@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - ComponentChild
   [ComponentType](#cfn-amplifyuibuilder-component-componentchild-componenttype): String
   [Events](#cfn-amplifyuibuilder-component-componentchild-events): 
-    ComponentEvents
+    Key: Value
   [Name](#cfn-amplifyuibuilder-component-componentchild-name): String
   [Properties](#cfn-amplifyuibuilder-component-componentchild-properties): 
-    ComponentProperties
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-amplifyuibuilder-component-componentchild-properties"></a>
@@ -48,7 +48,7 @@ The type of the child component\.
 `Events`  <a name="cfn-amplifyuibuilder-component-componentchild-events"></a>
 Describes the events that can be raised on the child component\. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components\.  
 *Required*: No  
-*Type*: [ComponentEvents](aws-properties-amplifyuibuilder-component-componentevents.md)  
+*Type*: Map of [ComponentEvent](aws-properties-amplifyuibuilder-component-componentevent.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-amplifyuibuilder-component-componentchild-name"></a>
@@ -60,5 +60,5 @@ The name of the child component\.
 `Properties`  <a name="cfn-amplifyuibuilder-component-componentchild-properties"></a>
 Describes the properties of the child component\. You can't specify `tags` as a valid property for `properties`\.  
 *Required*: Yes  
-*Type*: [ComponentProperties](aws-properties-amplifyuibuilder-component-componentproperties.md)  
+*Type*: Map of [ComponentProperty](aws-properties-amplifyuibuilder-component-componentproperty.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

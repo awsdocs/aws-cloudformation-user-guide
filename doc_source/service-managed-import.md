@@ -7,9 +7,9 @@ The AWS CloudFormation stack import operation can import existing stacks into ne
 In addition to the [Requirements for stack import](stacksets-import.md#stackset-import-considerations) section, service\-managed stack imports requires the following\.
 + The stack import operation requires a management account or delegated admin account in which you can manage the associated AWS Organizations such as enabling trust access with StackSets\.
 + The target accounts are must be members of the AWS Organizations managed by the management account or delegated admin account\.
-+ Target stack exits in one of the target OUs\.
++ Target stack exists in one of the target OUs\.
 + The target account should be a member of AWS Organizations\.
-+ AWS Organizations access should be in the `ENABLED` state for the Organizations\.
++ AWS Organizations access should be in the `ACTIVATED` state for the Organizations\.
 + Stacks being imported should be present in any of the member accounts, and not the management account\.
 
 ## Import a service\-managed stack into a new stack set \(console\)<a name="import-service-managed-stack-to-new-stackset"></a>

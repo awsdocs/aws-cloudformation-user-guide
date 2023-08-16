@@ -10,13 +10,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Friday](#cfn-opsworks-instance-timebasedautoscaling-friday)" : {Key : Value, ...},
-  "[Monday](#cfn-opsworks-instance-timebasedautoscaling-monday)" : {Key : Value, ...},
-  "[Saturday](#cfn-opsworks-instance-timebasedautoscaling-saturday)" : {Key : Value, ...},
-  "[Sunday](#cfn-opsworks-instance-timebasedautoscaling-sunday)" : {Key : Value, ...},
-  "[Thursday](#cfn-opsworks-instance-timebasedautoscaling-thursday)" : {Key : Value, ...},
-  "[Tuesday](#cfn-opsworks-instance-timebasedautoscaling-tuesday)" : {Key : Value, ...},
-  "[Wednesday](#cfn-opsworks-instance-timebasedautoscaling-wednesday)" : {Key : Value, ...}
+  "[Friday](#cfn-opsworks-instance-timebasedautoscaling-friday)" : {Key: Value, ...},
+  "[Monday](#cfn-opsworks-instance-timebasedautoscaling-monday)" : {Key: Value, ...},
+  "[Saturday](#cfn-opsworks-instance-timebasedautoscaling-saturday)" : {Key: Value, ...},
+  "[Sunday](#cfn-opsworks-instance-timebasedautoscaling-sunday)" : {Key: Value, ...},
+  "[Thursday](#cfn-opsworks-instance-timebasedautoscaling-thursday)" : {Key: Value, ...},
+  "[Tuesday](#cfn-opsworks-instance-timebasedautoscaling-tuesday)" : {Key: Value, ...},
+  "[Wednesday](#cfn-opsworks-instance-timebasedautoscaling-wednesday)" : {Key: Value, ...}
 }
 ```
 
@@ -24,19 +24,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Friday](#cfn-opsworks-instance-timebasedautoscaling-friday): 
-    Key : Value
+    Key: Value
   [Monday](#cfn-opsworks-instance-timebasedautoscaling-monday): 
-    Key : Value
+    Key: Value
   [Saturday](#cfn-opsworks-instance-timebasedautoscaling-saturday): 
-    Key : Value
+    Key: Value
   [Sunday](#cfn-opsworks-instance-timebasedautoscaling-sunday): 
-    Key : Value
+    Key: Value
   [Thursday](#cfn-opsworks-instance-timebasedautoscaling-thursday): 
-    Key : Value
+    Key: Value
   [Tuesday](#cfn-opsworks-instance-timebasedautoscaling-tuesday): 
-    Key : Value
+    Key: Value
   [Wednesday](#cfn-opsworks-instance-timebasedautoscaling-wednesday): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-opsworks-instance-timebasedautoscaling-properties"></a>

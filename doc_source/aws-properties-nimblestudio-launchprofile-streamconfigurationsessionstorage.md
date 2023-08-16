@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Mode`  <a name="cfn-nimblestudio-launchprofile-streamconfigurationsessionstorage-mode"></a>
 Allows artists to upload files to their workstations\. The only valid option is `UPLOAD`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

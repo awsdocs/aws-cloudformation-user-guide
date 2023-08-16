@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile ConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-connectorprofilecredentials"></a>
 
- The `ConnectorProfileCredentials` property type specifies the connector\-specific credentials required by a given connector\. 
+ The connector\-specific credentials required by a connector\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-connectorprofilecredentials-syntax"></a>
 
@@ -11,11 +11,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Amplitude](#cfn-appflow-connectorprofile-connectorprofilecredentials-amplitude)" : AmplitudeConnectorProfileCredentials,
+  "[CustomConnector](#cfn-appflow-connectorprofile-connectorprofilecredentials-customconnector)" : CustomConnectorProfileCredentials,
   "[Datadog](#cfn-appflow-connectorprofile-connectorprofilecredentials-datadog)" : DatadogConnectorProfileCredentials,
   "[Dynatrace](#cfn-appflow-connectorprofile-connectorprofilecredentials-dynatrace)" : DynatraceConnectorProfileCredentials,
   "[GoogleAnalytics](#cfn-appflow-connectorprofile-connectorprofilecredentials-googleanalytics)" : GoogleAnalyticsConnectorProfileCredentials,
   "[InforNexus](#cfn-appflow-connectorprofile-connectorprofilecredentials-infornexus)" : InforNexusConnectorProfileCredentials,
   "[Marketo](#cfn-appflow-connectorprofile-connectorprofilecredentials-marketo)" : MarketoConnectorProfileCredentials,
+  "[Pardot](#cfn-appflow-connectorprofile-connectorprofilecredentials-pardot)" : PardotConnectorProfileCredentials,
   "[Redshift](#cfn-appflow-connectorprofile-connectorprofilecredentials-redshift)" : RedshiftConnectorProfileCredentials,
   "[Salesforce](#cfn-appflow-connectorprofile-connectorprofilecredentials-salesforce)" : SalesforceConnectorProfileCredentials,
   "[SAPOData](#cfn-appflow-connectorprofile-connectorprofilecredentials-sapodata)" : SAPODataConnectorProfileCredentials,
@@ -34,6 +36,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Amplitude](#cfn-appflow-connectorprofile-connectorprofilecredentials-amplitude): 
     AmplitudeConnectorProfileCredentials
+  [CustomConnector](#cfn-appflow-connectorprofile-connectorprofilecredentials-customconnector): 
+    CustomConnectorProfileCredentials
   [Datadog](#cfn-appflow-connectorprofile-connectorprofilecredentials-datadog): 
     DatadogConnectorProfileCredentials
   [Dynatrace](#cfn-appflow-connectorprofile-connectorprofilecredentials-dynatrace): 
@@ -44,6 +48,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     InforNexusConnectorProfileCredentials
   [Marketo](#cfn-appflow-connectorprofile-connectorprofilecredentials-marketo): 
     MarketoConnectorProfileCredentials
+  [Pardot](#cfn-appflow-connectorprofile-connectorprofilecredentials-pardot): 
+    PardotConnectorProfileCredentials
   [Redshift](#cfn-appflow-connectorprofile-connectorprofilecredentials-redshift): 
     RedshiftConnectorProfileCredentials
   [Salesforce](#cfn-appflow-connectorprofile-connectorprofilecredentials-salesforce): 
@@ -72,6 +78,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The connector\-specific credentials required when using Amplitude\.   
 *Required*: No  
 *Type*: [AmplitudeConnectorProfileCredentials](aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomConnector`  <a name="cfn-appflow-connectorprofile-connectorprofilecredentials-customconnector"></a>
+The connector\-specific profile credentials that are required when using the custom connector\.  
+*Required*: No  
+*Type*: [CustomConnectorProfileCredentials](aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Datadog`  <a name="cfn-appflow-connectorprofile-connectorprofilecredentials-datadog"></a>
@@ -104,6 +116,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [MarketoConnectorProfileCredentials](aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Pardot`  <a name="cfn-appflow-connectorprofile-connectorprofilecredentials-pardot"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [PardotConnectorProfileCredentials](aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Redshift`  <a name="cfn-appflow-connectorprofile-connectorprofilecredentials-redshift"></a>
  The connector\-specific credentials required when using Amazon Redshift\.   
 *Required*: No  
@@ -117,7 +135,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SAPOData`  <a name="cfn-appflow-connectorprofile-connectorprofilecredentials-sapodata"></a>
-Not currently supported by AWS CloudFormation\.  
+ The connector\-specific profile credentials required when using SAPOData\.   
 *Required*: No  
 *Type*: [SAPODataConnectorProfileCredentials](aws-properties-appflow-connectorprofile-sapodataconnectorprofilecredentials.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

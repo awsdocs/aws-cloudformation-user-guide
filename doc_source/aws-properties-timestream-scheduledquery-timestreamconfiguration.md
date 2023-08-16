@@ -50,7 +50,7 @@ Name of Timestream database to which the query result will be written\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MeasureNameColumn`  <a name="cfn-timestream-scheduledquery-timestreamconfiguration-measurenamecolumn"></a>
-Name of the measure column\.  
+Name of the measure column\. Also see `MultiMeasureMappings` and `MixedMeasureMappings` for how measure name properties on those relate to `MeasureNameColumn`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

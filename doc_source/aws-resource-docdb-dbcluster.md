@@ -27,9 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Port](#cfn-docdb-dbcluster-port)" : Integer,
       "[PreferredBackupWindow](#cfn-docdb-dbcluster-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-docdb-dbcluster-preferredmaintenancewindow)" : String,
+      "[RestoreToTime](#cfn-docdb-dbcluster-restoretotime)" : String,
+      "[RestoreType](#cfn-docdb-dbcluster-restoretype)" : String,
       "[SnapshotIdentifier](#cfn-docdb-dbcluster-snapshotidentifier)" : String,
+      "[SourceDBClusterIdentifier](#cfn-docdb-dbcluster-sourcedbclusteridentifier)" : String,
       "[StorageEncrypted](#cfn-docdb-dbcluster-storageencrypted)" : Boolean,
       "[Tags](#cfn-docdb-dbcluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[UseLatestRestorableTime](#cfn-docdb-dbcluster-uselatestrestorabletime)" : Boolean,
       "[VpcSecurityGroupIds](#cfn-docdb-dbcluster-vpcsecuritygroupids)" : [ String, ... ]
     }
 }
@@ -57,10 +61,14 @@ Properties:
   [Port](#cfn-docdb-dbcluster-port): Integer
   [PreferredBackupWindow](#cfn-docdb-dbcluster-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-docdb-dbcluster-preferredmaintenancewindow): String
+  [RestoreToTime](#cfn-docdb-dbcluster-restoretotime): String
+  [RestoreType](#cfn-docdb-dbcluster-restoretype): String
   [SnapshotIdentifier](#cfn-docdb-dbcluster-snapshotidentifier): String
+  [SourceDBClusterIdentifier](#cfn-docdb-dbcluster-sourcedbclusteridentifier): String
   [StorageEncrypted](#cfn-docdb-dbcluster-storageencrypted): Boolean
   [Tags](#cfn-docdb-dbcluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [UseLatestRestorableTime](#cfn-docdb-dbcluster-uselatestrestorabletime): Boolean
   [VpcSecurityGroupIds](#cfn-docdb-dbcluster-vpcsecuritygroupids): 
     - String
 ```
@@ -83,7 +91,7 @@ Constraints:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CopyTagsToSnapshot`  <a name="cfn-docdb-dbcluster-copytagstosnapshot"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -186,11 +194,29 @@ Constraints: Minimum 30\-minute window\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RestoreToTime`  <a name="cfn-docdb-dbcluster-restoretotime"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RestoreType`  <a name="cfn-docdb-dbcluster-restoretype"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SnapshotIdentifier`  <a name="cfn-docdb-dbcluster-snapshotidentifier"></a>
 The identifier for the snapshot or cluster snapshot to restore from\.  
 You can use either the name or the Amazon Resource Name \(ARN\) to specify a cluster snapshot\. However, you can use only the ARN to specify a snapshot\.  
 Constraints:  
 + Must match the identifier of an existing snapshot\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SourceDBClusterIdentifier`  <a name="cfn-docdb-dbcluster-sourcedbclusteridentifier"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -207,6 +233,12 @@ The tags to be assigned to the cluster\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`UseLatestRestorableTime`  <a name="cfn-docdb-dbcluster-uselatestrestorabletime"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `VpcSecurityGroupIds`  <a name="cfn-docdb-dbcluster-vpcsecuritygroupids"></a>
 A list of EC2 VPC security groups to associate with this cluster\.   
 *Required*: No  
@@ -217,15 +249,15 @@ A list of EC2 VPC security groups to associate with this cluster\.
 
 ### Ref<a name="aws-resource-docdb-dbcluster-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DBClusterIdentifier, such as `mycluster`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the DBClusterIdentifier, such as `mycluster`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-docdb-dbcluster-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-docdb-dbcluster-return-values-fn--getatt-fn--getatt"></a>
 

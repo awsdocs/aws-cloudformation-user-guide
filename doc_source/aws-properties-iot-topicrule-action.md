@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Kafka](#cfn-iot-topicrule-action-kafka)" : KafkaAction,
   "[Kinesis](#cfn-iot-topicrule-action-kinesis)" : KinesisAction,
   "[Lambda](#cfn-iot-topicrule-action-lambda)" : LambdaAction,
+  "[Location](#cfn-iot-topicrule-action-location)" : LocationAction,
   "[OpenSearch](#cfn-iot-topicrule-action-opensearch)" : OpenSearchAction,
   "[Republish](#cfn-iot-topicrule-action-republish)" : RepublishAction,
   "[S3](#cfn-iot-topicrule-action-s3)" : S3Action,
@@ -65,6 +66,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     KinesisAction
   [Lambda](#cfn-iot-topicrule-action-lambda): 
     LambdaAction
+  [Location](#cfn-iot-topicrule-action-location): 
+    LocationAction
   [OpenSearch](#cfn-iot-topicrule-action-opensearch): 
     OpenSearchAction
   [Republish](#cfn-iot-topicrule-action-republish): 
@@ -166,6 +169,12 @@ Write data to an Amazon Kinesis stream\.
 Invoke a Lambda function\.  
 *Required*: No  
 *Type*: [LambdaAction](aws-properties-iot-topicrule-lambdaaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Location`  <a name="cfn-iot-topicrule-action-location"></a>
+Sends device location data to [Amazon Location Service](https://docs.aws.amazon.com/location/latest/developerguide/welcome.html)\.  
+*Required*: No  
+*Type*: [LocationAction](aws-properties-iot-topicrule-locationaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OpenSearch`  <a name="cfn-iot-topicrule-action-opensearch"></a>

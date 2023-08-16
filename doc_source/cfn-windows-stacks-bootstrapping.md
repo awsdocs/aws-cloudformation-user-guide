@@ -4,7 +4,7 @@ This topic describes how to bootstrap a Windows stack and troubleshoot stack cre
 
 ## Example of bootstrapping a Windows stack<a name="cfn-windows-bootstrapping-example"></a>
 
-For the purposes of illustration, we'll examine a AWS CloudFormation single\-instance Sharepoint server template\.
+For the purposes of illustration, we'll examine a AWS CloudFormation single\-instance SharePoint server template\.
 
 The template can be viewed in its entirety at the following URL:
 + [https://s3\.amazonaws\.com/cloudformation\-templates\-us\-east\-1/Windows\_Single\_Server\_SharePoint\_Foundation\.template ](https://s3.amazonaws.com/cloudformation-templates-us-east-1/Windows_Single_Server_SharePoint_Foundation.template)
@@ -12,7 +12,7 @@ The template can be viewed in its entirety at the following URL:
 This example demonstrates how to:
 + Create an IAM User and security group for access to the instance\.
 + Configure initialization files: `cfn-credentials`, `cfn-hup.conf`, and `cfn-auto-reloader.conf`\.
-+ Download and install a package such as Sharepoint Foundation 2010 on the server instance\.
++ Download and install a package such as SharePoint Foundation 2010 on the server instance\.
 + Use a WaitCondition to ensure resources are ready\.
 + Retrieve an IP for the instance with Amazon Elastic IP \(EIP\)\.
 
@@ -137,7 +137,7 @@ If all goes well, an Elastic IP is used to provide access to the SharePoint inst
 
 Once stack creation is complete, the IP address supplied by EIP will be displayed in the **Outputs** tab of the AWS CloudFormation console\. However, before you can access the instance you will need to retrieve the generated temporary Administrator password for the instance\. For more information, see [Connecting to your Windows instance using RDP](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
-## How to manage Windows services<a name="w11339ab1c25c36c15c11"></a>
+## How to manage Windows services<a name="w4ab1c25c36c15c11"></a>
 
 You manage Windows services in the same way as Linux services, except that you use a `windows` key instead of `sysvinit`\. The following example starts the `cfn-hup` service, sets it to Automatic, and restarts the service if cfn\-init modifies the `c:\cfn\cfn-hup.conf` or `c:\cfn\hooks.d\cfn-auto-reloader.conf` configuration files\.
 
@@ -153,7 +153,7 @@ You manage Windows services in the same way as Linux services, except that you u
 }
 ```
 
-You can manage other Windows services in the same way by using the name— not the display name— to reference the service\.
+You can manage other Windows services in the same way by using the name – not the display name – to reference the service\.
 
 ## How to troubleshoot stack creation issues<a name="cfn-windows-stacks-troubleshooting"></a>
 
@@ -164,3 +164,7 @@ To turn this behavior off, choose **Show Advanced Options** when creating your s
 Important logs to look at are:
 + The EC2 configuration log at `C:\Program Files\Amazon\Ec2ConfigService\Logs\Ec2ConfigLog.txt`
 + The cfn\-init log at `C:\cfn\log\cfn-init.log`
+
+See these EC2 guides for more logs:
++ [EC2Launch directory structure](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2launch.html#ec2launch-directories)
++ [EC2Launch v2 directory structure](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2launch-v2-settings.html#ec2launch-v2-directory)

@@ -2,9 +2,9 @@
 
 **Important**  
 For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationPolicy attribute instead of wait conditions\. Add a CreationPolicy attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.  
-For more information, see [`CreationPolicy`](aws-attribute-creationpolicy.md) or [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+For more information, see [`CreationPolicy` attribute`CreationPolicy`](aws-attribute-creationpolicy.md) or [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
-Using the [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) resource and [`CreationPolicy`](aws-attribute-creationpolicy.md) attribute, you can do the following:
+Using the [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) resource and [`CreationPolicy` attribute`CreationPolicy`](aws-attribute-creationpolicy.md) attribute, you can do the following:
 + Coordinate stack resource creation with other configuration actions that are external to the stack creation
 + Track the status of a configuration process
 

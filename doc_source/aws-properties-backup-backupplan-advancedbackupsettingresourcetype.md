@@ -25,7 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-backupplan-advancedbackupsettingresourcetype-properties"></a>
 
 `BackupOptions`  <a name="cfn-backup-backupplan-advancedbackupsettingresourcetype-backupoptions"></a>
-The backup option for the resource\. Each option is a key\-value pair\.  
+The backup option for the resource\. Each option is a key\-value pair\. This option is only available for Windows VSS backup jobs\.  
+Valid values:   
+Set to `"WindowsVSS":"enabled"` to enable the `WindowsVSS` backup option and create a Windows VSS backup\.   
+Set to `"WindowsVSS":"disabled"` to create a regular backup\. The `WindowsVSS` option is not enabled by default\.  
+If you specify an invalid option, you get an `InvalidParameterValueException` exception\.  
+For more information about Windows VSS backups, see [Creating a VSS\-Enabled Windows Backup](https://docs.aws.amazon.com/aws-backup/latest/devguide/windows-backups.html)\.  
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

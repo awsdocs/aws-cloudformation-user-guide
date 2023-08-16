@@ -92,16 +92,16 @@ Resources:
       ImageId: ami-a1b23456
       NetworkInterfaces:
         - GroupSet:
-            - !ImportValue 
+            - Fn::ImportValue: 
               'Fn::Sub': '${NetworkStackNameParameter}-SecurityGroupID'
           AssociatePublicIpAddress: 'true'
           DeviceIndex: '0'
           DeleteOnTermination: 'true'
-          SubnetId: !ImportValue 
+          SubnetId: Fn::ImportValue 
             'Fn::Sub': '${NetworkStackNameParameter}-SubnetID'
 ```
 
-## Declaration<a name="w11339ab1c31c28c41b9"></a>
+## Declaration<a name="w4ab1c33c28c47b9"></a>
 
 ### JSON<a name="intrinsic-function-reference-importvalue-syntax.json"></a>
 
@@ -124,11 +124,12 @@ Alternatively, you can use the short form:
 ```
 
 **Important**  
-You can't use the short form of `!ImportValue` when it contains a `!Sub`\. The following example is valid for AWS CloudFormation, but *not* valid for YAML:  
+You can't use the short form of `!ImportValue` when it contains the short form of `!Sub`\.   
 
 ```
+# do not use
 !ImportValue
-  !Sub "${NetworkStack}-SubnetID"
+  !Sub '${NetworkStack}-SubnetID'
 ```
 Instead, you must use the full function name, for example:  
 
@@ -137,16 +138,16 @@ Fn::ImportValue:
   !Sub "${NetworkStack}-SubnetID"
 ```
 
-## Parameters<a name="w11339ab1c31c28c41c11"></a>
+## Parameters<a name="w4ab1c33c28c47c11"></a>
 
 sharedValueToImport  
 The stack output value that you want to import\.
 
-## Return value<a name="w11339ab1c31c28c41c13"></a>
+## Return value<a name="w4ab1c33c28c47c13"></a>
 
 The stack output value\.
 
-## Example<a name="w11339ab1c31c28c41c15"></a>
+## Example<a name="w4ab1c33c28c47c15"></a>
 
 ### JSON<a name="intrinsic-function-reference-importvalue-example.json"></a>
 
@@ -161,7 +162,7 @@ Fn::ImportValue:
   !Sub "${NetworkStackName}-SecurityGroupID"
 ```
 
-## Supported functions<a name="w11339ab1c31c28c41c17"></a>
+## Supported functions<a name="w4ab1c33c28c47c17"></a>
 
 You can use the following functions in the `Fn::ImportValue` function\. The value of these functions can't depend on a resource\.
 + `Fn::Base64`

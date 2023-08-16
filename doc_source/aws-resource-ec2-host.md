@@ -12,10 +12,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::Host",
   "Properties" : {
+      "[AssetId](#cfn-ec2-host-assetid)" : String,
       "[AutoPlacement](#cfn-ec2-host-autoplacement)" : String,
       "[AvailabilityZone](#cfn-ec2-host-availabilityzone)" : String,
+      "[HostMaintenance](#cfn-ec2-host-hostmaintenance)" : String,
       "[HostRecovery](#cfn-ec2-host-hostrecovery)" : String,
-      "[InstanceType](#cfn-ec2-host-instancetype)" : String
+      "[InstanceFamily](#cfn-ec2-host-instancefamily)" : String,
+      "[InstanceType](#cfn-ec2-host-instancetype)" : String,
+      "[OutpostArn](#cfn-ec2-host-outpostarn)" : String
     }
 }
 ```
@@ -25,13 +29,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::Host
 Properties: 
+  [AssetId](#cfn-ec2-host-assetid): String
   [AutoPlacement](#cfn-ec2-host-autoplacement): String
   [AvailabilityZone](#cfn-ec2-host-availabilityzone): String
+  [HostMaintenance](#cfn-ec2-host-hostmaintenance): String
   [HostRecovery](#cfn-ec2-host-hostrecovery): String
+  [InstanceFamily](#cfn-ec2-host-instancefamily): String
   [InstanceType](#cfn-ec2-host-instancetype): String
+  [OutpostArn](#cfn-ec2-host-outpostarn): String
 ```
 
 ## Properties<a name="aws-resource-ec2-host-properties"></a>
+
+`AssetId`  <a name="cfn-ec2-host-assetid"></a>
+The ID of the Outpost hardware asset on which the Dedicated Host is allocated\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoPlacement`  <a name="cfn-ec2-host-autoplacement"></a>
 Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID\. For more information, see [ Understanding auto\-placement and affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding) in the *Amazon EC2 User Guide*\.  
@@ -47,6 +61,13 @@ The Availability Zone in which to allocate the Dedicated Host\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`HostMaintenance`  <a name="cfn-ec2-host-hostmaintenance"></a>
+Indicates whether host maintenance is enabled or disabled for the Dedicated Host\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `off | on`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `HostRecovery`  <a name="cfn-ec2-host-hostrecovery"></a>
 Indicates whether to enable or disable host recovery for the Dedicated Host\. Host recovery is disabled by default\. For more information, see [ Host recovery](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-recovery.html) in the *Amazon EC2 User Guide*\.  
 Default: `off`   
@@ -55,9 +76,21 @@ Default: `off`
 *Allowed values*: `off | on`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`InstanceFamily`  <a name="cfn-ec2-host-instancefamily"></a>
+The instance family supported by the Dedicated Host\. For example, `m5`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `InstanceType`  <a name="cfn-ec2-host-instancetype"></a>
 Specifies the instance type to be supported by the Dedicated Hosts\. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only\.  
-*Required*: Yes  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OutpostArn`  <a name="cfn-ec2-host-outpostarn"></a>
+The Amazon Resource Name \(ARN\) of the AWS Outpost on which the Dedicated Host is allocated\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -65,15 +98,15 @@ Specifies the instance type to be supported by the Dedicated Hosts\. If you spec
 
 ### Ref<a name="aws-resource-ec2-host-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the host ID, such as `h-0ab123c45d67ef89`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the host ID, such as `h-0ab123c45d67ef89`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-host-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-host-return-values-fn--getatt-fn--getatt"></a>
 

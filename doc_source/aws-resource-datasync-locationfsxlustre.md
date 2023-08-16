@@ -37,7 +37,7 @@ Properties:
 
 `FsxFilesystemArn`  <a name="cfn-datasync-locationfsxlustre-fsxfilesystemarn"></a>
 The Amazon Resource Name \(ARN\) for the FSx for Lustre file system\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `128`  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):fsx:[a-z\-0-9]*:[0-9]{12}:file-system/fs-.*$`  
@@ -49,6 +49,7 @@ The ARNs of the security groups that are used to configure the FSx for Lustre fi
 *Length constraints*: Maximum length of 128\.  
 *Required*: Yes  
 *Type*: List of String  
+*Maximum*: `5`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subdirectory`  <a name="cfn-datasync-locationfsxlustre-subdirectory"></a>
@@ -70,17 +71,17 @@ The key\-value pair that represents a tag that you want to add to the resource\.
 
 ### Ref<a name="aws-resource-datasync-locationfsxlustre-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the location resource ARN\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the location resource ARN\. For example:
 
 `arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3`
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-datasync-locationfsxlustre-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-datasync-locationfsxlustre-return-values-fn--getatt-fn--getatt"></a>
 

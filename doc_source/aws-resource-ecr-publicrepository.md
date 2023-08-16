@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::PublicRepository",
   "Properties" : {
-      "[RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata)" : Json,
+      "[RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata)" : RepositoryCatalogData,
       "[RepositoryName](#cfn-ecr-publicrepository-repositoryname)" : String,
       "[RepositoryPolicyText](#cfn-ecr-publicrepository-repositorypolicytext)" : Json,
       "[Tags](#cfn-ecr-publicrepository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ECR::PublicRepository
 Properties: 
-  [RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata): Json
+  [RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata): 
+    RepositoryCatalogData
   [RepositoryName](#cfn-ecr-publicrepository-repositoryname): String
   [RepositoryPolicyText](#cfn-ecr-publicrepository-repositorypolicytext): Json
   [Tags](#cfn-ecr-publicrepository-tags): 
@@ -35,9 +36,9 @@ Properties:
 ## Properties<a name="aws-resource-ecr-publicrepository-properties"></a>
 
 `RepositoryCatalogData`  <a name="cfn-ecr-publicrepository-repositorycatalogdata"></a>
-The details about the repository that are publicly visible in the Amazon ECR Public Gallery\. For more information, see [Amazon ECR Public repository catalog data](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repository-catalog-data.html) in the *Amazon ECR Public User Guide*\.  
+Property description not available\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [RepositoryCatalogData](aws-properties-ecr-publicrepository-repositorycatalogdata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-ecr-publicrepository-repositoryname"></a>
@@ -63,15 +64,15 @@ An array of key\-value pairs to apply to this resource\.
 
 ### Ref<a name="aws-resource-ecr-publicrepository-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name, such as `test-repository`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name, such as `test-repository`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ecr-publicrepository-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ecr-publicrepository-return-values-fn--getatt-fn--getatt"></a>
 

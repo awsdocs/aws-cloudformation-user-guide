@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lakeformation-permissions-tablewithcolumnsresource-properties"></a>
 
 `CatalogId`  <a name="cfn-lakeformation-permissions-tablewithcolumnsresource-catalogid"></a>
-Not currently supported by AWS CloudFormation\.  
+The identifier for the Data Catalog\. By default, it is the account ID of the caller\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -63,3 +63,28 @@ The name of the table resource\. A table is a metadata definition that represent
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-lakeformation-permissions-tablewithcolumnsresource--examples"></a>
+
+### Input format for TableWithColumnsResource<a name="aws-properties-lakeformation-permissions-tablewithcolumnsresource--examples--Input_format_for_TableWithColumnsResource"></a>
+
+#### JSON<a name="aws-properties-lakeformation-permissions-tablewithcolumnsresource--examples--Input_format_for_TableWithColumnsResource--json"></a>
+
+```
+{
+  "CatalogId" : “123456789012”,
+  "ColumnNames" : [ “col1”, “col2” ],
+  "DatabaseName" : “my_database”,
+  "Name" : “my_table”
+}
+```
+
+#### YAML<a name="aws-properties-lakeformation-permissions-tablewithcolumnsresource--examples--Input_format_for_TableWithColumnsResource--yaml"></a>
+
+```
+CatalogId: “123456789012”
+  ColumnNames: 
+    - “col1”
+  DatabaseName: “my_database”
+  Name: “my_table”
+```

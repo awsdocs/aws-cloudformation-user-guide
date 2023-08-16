@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LogDestination](#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logdestination)" : {Key : Value, ...},
+  "[LogDestination](#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logdestination)" : {Key: Value, ...},
   "[LogDestinationType](#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logdestinationtype)" : String,
   "[LogType](#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logtype)" : String
 }
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [LogDestination](#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logdestination): 
-    Key : Value
+    Key: Value
   [LogDestinationType](#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logdestinationtype): String
   [LogType](#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logtype): String
 ```

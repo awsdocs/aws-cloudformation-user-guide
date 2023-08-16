@@ -1,6 +1,8 @@
 # AWS::Cognito::UserPool SchemaAttribute<a name="aws-properties-cognito-userpool-schemaattribute"></a>
 
-Contains information about the schema attribute\.
+A list of the user attributes and their properties in your user pool\. The attribute schema contains standard attributes, custom attributes with a `custom:` prefix, and developer attributes with a `dev:` prefix\. For more information, see [User pool attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)\.
+
+Developer\-only attributes are a legacy feature of user pools, are read\-only to all app clients\. You can create and update developer\-only attributes only with IAM\-authenticated API operations\. Use app client read/write permissions instead\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-schemaattribute-syntax"></a>
 
@@ -37,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpool-schemaattribute-properties"></a>
 
 `AttributeDataType`  <a name="cfn-cognito-userpool-schemaattribute-attributedatatype"></a>
-The attribute data type\.  
+The data format of the values for your attribute\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `Boolean | DateTime | Number | String`  
@@ -52,13 +54,13 @@ Specifies whether the attribute type is developer only\. This attribute can only
 
 `Mutable`  <a name="cfn-cognito-userpool-schemaattribute-mutable"></a>
 Specifies whether the value of the attribute can be changed\.  
-For any user pool attribute that is mapped to an identity provider attribute, you must set this parameter to `true`\. Amazon Cognito updates mapped attributes when users sign in to your application through an identity provider\. If an attribute is immutable, Amazon Cognito throws an error when it attempts to update the attribute\. For more information, see [Specifying Identity Provider Attribute Mappings for Your User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)\.  
+Any user pool attribute whose value you map from an IdP attribute must be mutable, with a parameter value of `true`\. Amazon Cognito updates mapped attributes when users sign in to your application through an IdP\. If an attribute is immutable, Amazon Cognito throws an error when it attempts to update the attribute\. For more information, see [Specifying Identity Provider Attribute Mappings for Your User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-cognito-userpool-schemaattribute-name"></a>
-A schema attribute of the name type\.  
+The name of your user pool attribute, for example `username` or `custom:costcenter`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

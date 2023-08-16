@@ -1,6 +1,6 @@
 # AWS::MediaPackage::OriginEndpoint MssEncryption<a name="aws-properties-mediapackage-originendpoint-mssencryption"></a>
 
-Holds encryption information so that access to the content can be controlled by a DRM solution\. 
+Holds encryption information so that access to the content can be controlled by a DRM solution\.
 
 ## Syntax<a name="aws-properties-mediapackage-originendpoint-mssencryption-syntax"></a>
 

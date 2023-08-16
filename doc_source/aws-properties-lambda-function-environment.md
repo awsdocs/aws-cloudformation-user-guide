@@ -1,6 +1,6 @@
 # AWS::Lambda::Function Environment<a name="aws-properties-lambda-function-environment"></a>
 
-A function's environment variable settings\. You can use environment variables to adjust your function's behavior without updating code\. An environment variable is a pair of strings that are stored in a function's version\-specific configuration\. 
+A function's environment variable settings\. You can use environment variables to adjust your function's behavior without updating code\. An environment variable is a pair of strings that are stored in a function's version\-specific configuration\.
 
 ## Syntax<a name="aws-properties-lambda-function-environment-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Variables](#cfn-lambda-function-environment-variables)" : {Key : Value, ...}
+  "[Variables](#cfn-lambda-function-environment-variables)" : {Key: Value, ...}
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Variables](#cfn-lambda-function-environment-variables): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-properties-lambda-function-environment-properties"></a>

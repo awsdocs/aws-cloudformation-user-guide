@@ -58,9 +58,9 @@ An array of tag object\.
 
 ### Ref<a name="aws-resource-config-aggregationauthorization-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the AggregationAuthorization, such as `arn:aws:config:us-east-1:123456789012:aggregation-authorization/987654321012/us-west-2`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the AggregationAuthorization, such as `arn:aws:config:us-east-1:123456789012:aggregation-authorization/987654321012/us-west-2`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-config-aggregationauthorization-return-values-fn--getatt"></a>
 

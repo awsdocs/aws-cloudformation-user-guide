@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-iam-managedpolicy-description)" : String,
       "[Groups](#cfn-iam-managedpolicy-groups)" : [ String, ... ],
       "[ManagedPolicyName](#cfn-iam-managedpolicy-managedpolicyname)" : String,
-      "[Path](#cfn-ec2-dhcpoptions-path)" : String,
+      "[Path](#cfn-iam-managedpolicy-path)" : String,
       "[PolicyDocument](#cfn-iam-managedpolicy-policydocument)" : Json,
       "[Roles](#cfn-iam-managedpolicy-roles)" : [ String, ... ],
       "[Users](#cfn-iam-managedpolicy-users)" : [ String, ... ]
@@ -38,7 +38,7 @@ Properties:
   [Groups](#cfn-iam-managedpolicy-groups): 
     - String
   [ManagedPolicyName](#cfn-iam-managedpolicy-managedpolicyname): String
-  [Path](#cfn-ec2-dhcpoptions-path): String
+  [Path](#cfn-iam-managedpolicy-path): String
   [PolicyDocument](#cfn-iam-managedpolicy-policydocument): Json
   [Roles](#cfn-iam-managedpolicy-roles): 
     - String
@@ -76,7 +76,7 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`Path`  <a name="cfn-ec2-dhcpoptions-path"></a>
+`Path`  <a name="cfn-iam-managedpolicy-path"></a>
 The path for the policy\.  
 For more information about paths, see [IAM identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
@@ -127,13 +127,13 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 
 ### Ref<a name="aws-resource-iam-managedpolicy-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN\.
 
 In the following sample, the `Ref` function returns the ARN of the `CreateTestDBPolicy` managed policy, such as `arn:aws:iam::123456789012:policy/teststack-CreateTestDBPolicy-16M23YE3CS700`\.
 
  `{ "Ref": "CreateTestDBPolicy" }` 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-iam-managedpolicy--examples"></a>
 
@@ -256,4 +256,8 @@ CreateTestDBPolicy:
 
 ## See also<a name="aws-resource-iam-managedpolicy--seealso"></a>
 +  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [CreatePolicyVersion](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicyVersion.html) in the *AWS Identity and Access Management API Reference* 
++  [AttachGroupPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachGroupPolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [AttachRolePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachRolePolicy.html) in the *AWS Identity and Access Management API Reference* 
++  [AttachUserPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachUserPolicy.html) in the *AWS Identity and Access Management API Reference* 
 

@@ -92,19 +92,19 @@ The virtual gateway that the gateway route is associated with\.
 
 ### Ref<a name="aws-resource-appmesh-gatewayroute-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ARN\. For example:
 
  `{ "Ref": "myGatewayRoute" }` 
 
 When you pass the logical ID of an `AWS::AppMesh::GatewayRoute` resource to the intrinsic Ref function, the function returns the gateway route ARN, such as `arn:aws:appmesh:us-east-1:555555555555:gatewayRoute/myGatewayRoute `\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-appmesh-gatewayroute-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-appmesh-gatewayroute-return-values-fn--getatt-fn--getatt"></a>
 

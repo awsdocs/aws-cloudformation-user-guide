@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::Listener<a name="aws-resource-elasticloadbalancingv2-listener"></a>
 
-Specifies a listener for an Application Load Balancer or Network Load Balancer\.
+Specifies a listener for an Application Load Balancer, Network Load Balancer, or Gateway Load Balancer\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listener-syntax"></a>
 
@@ -94,15 +94,15 @@ For more information, see [Security policies](https://docs.aws.amazon.com/elasti
 
 ### Ref<a name="aws-resource-elasticloadbalancingv2-listener-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the listener\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the Amazon Resource Name \(ARN\) of the listener\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-elasticloadbalancingv2-listener-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-elasticloadbalancingv2-listener-return-values-fn--getatt-fn--getatt"></a>
 
@@ -145,26 +145,27 @@ HTTPlistener:
             {
                 "Type": "redirect",
                 "RedirectConfig": {
-                       "Protocol": "HTTPS",
-                       "Port": 443,
-                       "Host": "#{host}",
-                       "Path": "/#{path}",
-                       "Query": "#{query}",
-                       "StatusCode": "HTTP_301"
-                   }
-               }
-           ],
-           "LoadBalancerArn": {
-               "Ref": "myLoadBalancer"
-           },
-           "Port": 80,
-           "Protocol": "HTTP"
-       }
-   }
+                    "Protocol": "HTTPS",
+                    "Port": 443,
+                    "Host": "#{host}",
+                    "Path": "/#{path}",
+                    "Query": "#{query}",
+                    "StatusCode": "HTTP_301"
+                }
+            }
+        ],
+        "LoadBalancerArn": {
+            "Ref": "myLoadBalancer"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+    }
+}
 ```
 
 ## See also<a name="aws-resource-elasticloadbalancingv2-listener--seealso"></a>
 +  [CreateListener](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html) in the *User Guide for Application Load Balancers* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) in the *User Guide for Network Load Balancers* 
++  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/gateway-listeners.html) in the *User Guide for Gateway Load Balancers* 
 

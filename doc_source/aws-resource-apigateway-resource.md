@@ -32,19 +32,19 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-resource-properties"></a>
 
 `ParentId`  <a name="cfn-apigateway-resource-parentid"></a>
-If you want to create a child resource, the ID of the parent resource\. For resources without a parent, specify the `RestApi` root resource ID, such as `{ "Fn::GetAtt": ["MyRestApi", "RootResourceId"] }`\.  
+The parent resource's identifier\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PathPart`  <a name="cfn-apigateway-resource-pathpart"></a>
-A path name for the resource\.  
+The last path segment for this resource\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-resource-restapiid"></a>
-The ID of the [RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html) resource in which you want to create this resource\.  
+The string identifier of the associated RestApi\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -53,15 +53,15 @@ The ID of the [RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/Use
 
 ### Ref<a name="aws-resource-apigateway-resource-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID, such as `abc123`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ID, such as `abc123`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-apigateway-resource-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-apigateway-resource-return-values-fn--getatt-fn--getatt"></a>
 
@@ -112,5 +112,5 @@ Stack:
 ```
 
 ## See also<a name="aws-resource-apigateway-resource--seealso"></a>
-+ [resource:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/resource-create/) in the *Amazon API Gateway REST API Reference*
++ [resource:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateResource.html) in the *Amazon API Gateway REST API Reference*
 

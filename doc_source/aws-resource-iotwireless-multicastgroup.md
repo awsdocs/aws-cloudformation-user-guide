@@ -80,7 +80,7 @@ The tags are an array of key\-value pairs to attach to the specified resource\. 
 
 ### Ref<a name="aws-resource-iotwireless-multicastgroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the multicast group\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the multicast group\.
 
 ### Fn::GetAtt<a name="aws-resource-iotwireless-multicastgroup-return-values-fn--getatt"></a>
 

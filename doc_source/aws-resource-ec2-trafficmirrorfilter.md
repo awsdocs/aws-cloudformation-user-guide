@@ -60,9 +60,9 @@ The tags to assign to a Traffic Mirror filter\.
 
 ### Ref<a name="aws-resource-ec2-trafficmirrorfilter-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Traffic Mirror filter\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the Traffic Mirror filter\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrorfilter--examples"></a>
 

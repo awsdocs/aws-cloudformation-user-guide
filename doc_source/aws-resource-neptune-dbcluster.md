@@ -22,19 +22,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AssociatedRoles](#cfn-neptune-dbcluster-associatedroles)" : [ DBClusterRole, ... ],
       "[AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones)" : [ String, ... ],
       "[BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod)" : Integer,
+      "[CopyTagsToSnapshot](#cfn-neptune-dbcluster-copytagstosnapshot)" : Boolean,
       "[DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname)" : String,
+      "[DBInstanceParameterGroupName](#cfn-neptune-dbcluster-dbinstanceparametergroupname)" : String,
+      "[DBPort](#cfn-neptune-dbcluster-dbport)" : Integer,
       "[DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname)" : String,
       "[DeletionProtection](#cfn-neptune-dbcluster-deletionprotection)" : Boolean,
       "[EnableCloudwatchLogsExports](#cfn-neptune-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
       "[EngineVersion](#cfn-neptune-dbcluster-engineversion)" : String,
       "[IamAuthEnabled](#cfn-neptune-dbcluster-iamauthenabled)" : Boolean,
       "[KmsKeyId](#cfn-neptune-dbcluster-kmskeyid)" : String,
-      "[Port](#cfn-neptune-dbcluster-port)" : Integer,
       "[PreferredBackupWindow](#cfn-neptune-dbcluster-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow)" : String,
       "[RestoreToTime](#cfn-neptune-dbcluster-restoretotime)" : String,
       "[RestoreType](#cfn-neptune-dbcluster-restoretype)" : String,
+      "[ServerlessScalingConfiguration](#cfn-neptune-dbcluster-serverlessscalingconfiguration)" : ServerlessScalingConfiguration,
       "[SnapshotIdentifier](#cfn-neptune-dbcluster-snapshotidentifier)" : String,
       "[SourceDBClusterIdentifier](#cfn-neptune-dbcluster-sourcedbclusteridentifier)" : String,
       "[StorageEncrypted](#cfn-neptune-dbcluster-storageencrypted)" : Boolean,
@@ -55,8 +58,11 @@ Properties:
   [AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones): 
     - String
   [BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod): Integer
+  [CopyTagsToSnapshot](#cfn-neptune-dbcluster-copytagstosnapshot): Boolean
   [DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-neptune-dbcluster-dbclusterparametergroupname): String
+  [DBInstanceParameterGroupName](#cfn-neptune-dbcluster-dbinstanceparametergroupname): String
+  [DBPort](#cfn-neptune-dbcluster-dbport): Integer
   [DBSubnetGroupName](#cfn-neptune-dbcluster-dbsubnetgroupname): String
   [DeletionProtection](#cfn-neptune-dbcluster-deletionprotection): Boolean
   [EnableCloudwatchLogsExports](#cfn-neptune-dbcluster-enablecloudwatchlogsexports): 
@@ -64,11 +70,12 @@ Properties:
   [EngineVersion](#cfn-neptune-dbcluster-engineversion): String
   [IamAuthEnabled](#cfn-neptune-dbcluster-iamauthenabled): Boolean
   [KmsKeyId](#cfn-neptune-dbcluster-kmskeyid): String
-  [Port](#cfn-neptune-dbcluster-port): Integer
   [PreferredBackupWindow](#cfn-neptune-dbcluster-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow): String
   [RestoreToTime](#cfn-neptune-dbcluster-restoretotime): String
   [RestoreType](#cfn-neptune-dbcluster-restoretype): String
+  [ServerlessScalingConfiguration](#cfn-neptune-dbcluster-serverlessscalingconfiguration): 
+    ServerlessScalingConfiguration
   [SnapshotIdentifier](#cfn-neptune-dbcluster-snapshotidentifier): String
   [SourceDBClusterIdentifier](#cfn-neptune-dbcluster-sourcedbclusteridentifier): String
   [StorageEncrypted](#cfn-neptune-dbcluster-storageencrypted): Boolean
@@ -100,6 +107,12 @@ An update may require some interruption\. See [ModifyDBInstance](https://docs.aw
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CopyTagsToSnapshot`  <a name="cfn-neptune-dbcluster-copytagstosnapshot"></a>
+ *If set to `true`, tags are copied to any snapshot of the DB cluster that is created\.*   
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DBClusterIdentifier`  <a name="cfn-neptune-dbcluster-dbclusteridentifier"></a>
 Contains a user\-supplied DB cluster identifier\. This identifier is the unique key that identifies a DB cluster\.  
 *Required*: No  
@@ -111,6 +124,23 @@ Provides the name of the DB cluster parameter group\.
 An update may require some interruption\. See [ModifyDBInstance](https://docs.aws.amazon.com/neptune/latest/userguide/api-instances.html#ModifyDBInstance) in the Amazon Neptune User Guide for more information\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DBInstanceParameterGroupName`  <a name="cfn-neptune-dbcluster-dbinstanceparametergroupname"></a>
+The name of the DB parameter group to apply to all instances of the DB cluster\. Used only in case of a major engine version upgrade request  
+Note that when you apply a parameter group using `DBInstanceParameterGroupName`, parameter changes are applied immediately, not during the next maintenance window\.  
+
+**Constraints**
++ The DB parameter group must be in the same DB parameter group family as the target DB cluster version\.
++ The `DBInstanceParameterGroupName` parameter is only valid for major engine version upgrades\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DBPort`  <a name="cfn-neptune-dbcluster-dbport"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBSubnetGroupName`  <a name="cfn-neptune-dbcluster-dbsubnetgroupname"></a>
@@ -135,7 +165,7 @@ Specifies a list of log types that are enabled for export to CloudWatch Logs\.
 Indicates the database engine version\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamAuthEnabled`  <a name="cfn-neptune-dbcluster-iamauthenabled"></a>
 True if mapping of Amazon Identity and Access Management \(IAM\) accounts to database accounts is enabled, and otherwise false\.  
@@ -148,12 +178,6 @@ If `StorageEncrypted` is true, the Amazon KMS key identifier for the encrypted D
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`Port`  <a name="cfn-neptune-dbcluster-port"></a>
-Specifies the port that the database engine is listening on\.  
-*Required*: No  
-*Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreferredBackupWindow`  <a name="cfn-neptune-dbcluster-preferredbackupwindow"></a>
 Specifies the daily time range during which automated backups are created if automated backups are enabled, as determined by the `BackupRetentionPeriod`\.  
@@ -183,6 +207,12 @@ If a DB cluster snapshot is specified, the target DB cluster is created from the
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ServerlessScalingConfiguration`  <a name="cfn-neptune-dbcluster-serverlessscalingconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ServerlessScalingConfiguration](aws-properties-neptune-dbcluster-serverlessscalingconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotIdentifier`  <a name="cfn-neptune-dbcluster-snapshotidentifier"></a>
 Specifies the identifier for a DB cluster snapshot\. Must match the identifier of an existing snapshot\.  
@@ -232,15 +262,15 @@ Provides a list of VPC security groups that the DB cluster belongs to\.
 
 ### Ref<a name="aws-resource-neptune-dbcluster-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-neptune-dbcluster-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-neptune-dbcluster-return-values-fn--getatt-fn--getatt"></a>
 
@@ -251,7 +281,9 @@ The resource id for the DB cluster\. For example: `cluster-ABCD1234EFGH5678IJKL9
 The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
 
 `Port`  <a name="Port-fn::getatt"></a>
-The port number on which the DB cluster accepts connections\. For example: `8182`\.
+The port number on which the DB instances in the DB cluster accept connections\.  
+If not specified, the default port used is `8182`\.  
+This property will soon be deprecated\. Please update existing templates to use the new `DBPort` property that has the same functionality\.
 
 `ReadEndpoint`  <a name="ReadEndpoint-fn::getatt"></a>
 The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 

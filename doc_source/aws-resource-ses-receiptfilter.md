@@ -47,7 +47,7 @@ Specifies an IP address filter for incoming email\.
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Amazon SES ReceiptFilter Sample Template",
+    "Description": "AWS SES ReceiptFilter Sample Template",
     "Parameters": {
         "FilterName": {
             "Type": "String"
@@ -86,7 +86,7 @@ Specifies an IP address filter for incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Amazon SES ReceiptFilter Sample Template
+Description: AWS SES ReceiptFilter Sample Template
 Parameters:
   FilterName:
     Type: String

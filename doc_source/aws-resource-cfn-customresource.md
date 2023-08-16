@@ -131,11 +131,11 @@ Resources:
         key4: map
 Outputs:
   CustomResourceAttribute1:
-    Value: !GetAtt 
+    Value: !GetAtt
       - MyFrontEndTest
       - responseKey1
   CustomResourceAttribute2:
-    Value: !GetAtt 
+    Value: !GetAtt
       - MyFrontEndTest
       - responseKey2
 ```
@@ -184,7 +184,7 @@ With AWS Lambda functions and custom resources, you can run custom code in respo
 MyCustomResource:
   Type: 'Custom::TestLambdaCrossStackRef'
   Properties:
-    ServiceToken: !Join 
+    ServiceToken: !Join
       - ''
       - - 'arn:aws:lambda:'
         - !Ref 'AWS::Region'

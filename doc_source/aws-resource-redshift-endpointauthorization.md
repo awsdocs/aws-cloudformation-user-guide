@@ -35,7 +35,7 @@ Properties:
 ## Properties<a name="aws-resource-redshift-endpointauthorization-properties"></a>
 
 `Account`  <a name="cfn-redshift-endpointauthorization-account"></a>
-The AAWS account ID of either the cluster owner \(grantor\) or grantee\. If `Grantee` parameter is true, then the `Account` value is of the grantor\.  
+The AWS account ID of either the cluster owner \(grantor\) or grantee\. If `Grantee` parameter is true, then the `Account` value is of the grantor\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `2147483647`  

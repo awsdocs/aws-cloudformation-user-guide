@@ -1,6 +1,6 @@
 # AWS::EC2::TransitGatewayPeeringAttachment<a name="aws-resource-ec2-transitgatewaypeeringattachment"></a>
 
-Requests a transit gateway peering attachment between the specified transit gateway \(requester\) and a peer transit gateway \(accepter\)\. The transit gateways must be in different Regions\. The peer transit gateway can be in your account or a different AWS account\.
+Requests a transit gateway peering attachment between the specified transit gateway \(requester\) and a peer transit gateway \(accepter\)\. The peer transit gateway can be in your account or a different AWS account\.
 
 After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment request\.
 
@@ -72,15 +72,15 @@ The ID of the transit gateway peering attachment\.
 
 ### Ref<a name="aws-resource-ec2-transitgatewaypeeringattachment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the transit gateway peering attachment\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the transit gateway peering attachment\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-transitgatewaypeeringattachment-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-ec2-transitgatewaypeeringattachment-return-values-fn--getatt-fn--getatt"></a>
 
@@ -89,6 +89,15 @@ The time the transit gateway peering attachment was created\.
 
 `State`  <a name="State-fn::getatt"></a>
 The state of the transit gateway peering attachment\. Note that the `initiating` state has been deprecated\.
+
+`Status`  <a name="Status-fn::getatt"></a>
+The status of the transit gateway peering attachment\.
+
+`Status.Code`  <a name="Status.Code-fn::getatt"></a>
+The status code\.
+
+`Status.Message`  <a name="Status.Message-fn::getatt"></a>
+The status message\.
 
 `TransitGatewayAttachmentId`  <a name="TransitGatewayAttachmentId-fn::getatt"></a>
 The ID of the transit gateway peering attachment\.

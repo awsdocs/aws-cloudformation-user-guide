@@ -40,7 +40,7 @@ Whether to allow inbound and outbound network calls to and from the containers u
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcConfig`  <a name="cfn-sagemaker-modelexplainabilityjobdefinition-networkconfig-vpcconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies a VPC that your training jobs and hosted models have access to\. Control access to and from your training and model containers by configuring the VPC\.  
 *Required*: No  
 *Type*: [VpcConfig](aws-properties-sagemaker-modelexplainabilityjobdefinition-vpcconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

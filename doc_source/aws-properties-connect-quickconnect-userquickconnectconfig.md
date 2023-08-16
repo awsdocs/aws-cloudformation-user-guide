@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-connect-quickconnect-userquickconnectconfig-properties"></a>
 
 `ContactFlowArn`  <a name="cfn-connect-quickconnect-userquickconnectconfig-contactflowarn"></a>
-The Amazon Resource Name \(ARN\) of the contact flow\.  
+The Amazon Resource Name \(ARN\) of the flow\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `500`  

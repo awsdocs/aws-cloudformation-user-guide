@@ -2,7 +2,7 @@
 
 The intrinsic function `Fn::Base64` returns the Base64 representation of the input string\. This function is typically used to pass encoded data to Amazon EC2 instances by way of the `UserData` property\.
 
-## Declaration<a name="w11339ab1c31c28c12b5"></a>
+## Declaration<a name="w4ab1c33c28c12b5"></a>
 
 ### JSON<a name="intrinsic-function-reference-base64-syntax.json"></a>
 
@@ -41,16 +41,16 @@ Fn::Base64:
   !Sub string
 ```
 
-## Parameters<a name="w11339ab1c31c28c12b7"></a>
+## Parameters<a name="w4ab1c33c28c12b7"></a>
 
 valueToEncode  
 The string value you want to convert to Base64\.
 
-## Return value:<a name="w11339ab1c31c28c12b9"></a>
+## Return value:<a name="w4ab1c33c28c12b9"></a>
 
 The original string, in Base64 representation\.
 
-## Example<a name="w11339ab1c31c28c12c11"></a>
+## Example<a name="w4ab1c33c28c12c11"></a>
 
 ### JSON<a name="intrinsic-function-reference-base64-example.json"></a>
 
@@ -64,9 +64,9 @@ The original string, in Base64 representation\.
 Fn::Base64: AWS CloudFormation
 ```
 
-## Supported functions<a name="w11339ab1c31c28c12c13"></a>
+## Supported functions<a name="w4ab1c33c28c12c13"></a>
 
 You can use any function that returns a string inside the `Fn::Base64` function\.
 
-## See also<a name="w11339ab1c31c28c12c15"></a>
+## See also<a name="w4ab1c33c28c12c15"></a>
 + [Intrinsic Function Reference](intrinsic-function-reference.md)

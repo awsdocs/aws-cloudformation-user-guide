@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryControl::ControlPanel<a name="aws-resource-route53recoverycontrol-controlpanel"></a>
 
-Creates a new control panel\. A control panel represents a group of routing controls that can be changed together in a single transaction\. You can use a control panel to centrally view the operational status of applications across your organization, and trigger multi\-app failovers in a single transaction, for example, to fail over an Availability Zone or AWS Region\.
+Creates a new control panel in Amazon Route 53 Application Recovery Controller\. A control panel represents a group of routing controls that can be changed together in a single transaction\. You can use a control panel to centrally view the operational status of applications across your organization, and trigger multi\-app failovers in a single transaction, for example, to fail over from one AWS Region \(cell\) to another\.
 
 ## Syntax<a name="aws-resource-route53recoverycontrol-controlpanel-syntax"></a>
 
@@ -54,15 +54,15 @@ The value for a tag\.
 
 ### Ref<a name="aws-resource-route53recoverycontrol-controlpanel-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `ControlPanelArn` object\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `ControlPanelArn` object\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-route53recoverycontrol-controlpanel-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-route53recoverycontrol-controlpanel-return-values-fn--getatt-fn--getatt"></a>
 

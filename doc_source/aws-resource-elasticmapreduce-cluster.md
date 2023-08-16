@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo)" : Json,
       "[Applications](#cfn-elasticmapreduce-cluster-applications)" : [ Application, ... ],
       "[AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole)" : String,
+      "[AutoTerminationPolicy](#cfn-elasticmapreduce-cluster-autoterminationpolicy)" : AutoTerminationPolicy,
       "[BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions)" : [ BootstrapActionConfig, ... ],
       "[Configurations](#cfn-elasticmapreduce-cluster-configurations)" : [ Configuration, ... ],
       "[CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid)" : String,
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LogUri](#cfn-elasticmapreduce-cluster-loguri)" : String,
       "[ManagedScalingPolicy](#cfn-elasticmapreduce-cluster-managedscalingpolicy)" : ManagedScalingPolicy,
       "[Name](#cfn-elasticmapreduce-cluster-name)" : String,
+      "[OSReleaseLabel](#cfn-elasticmapreduce-cluster-osreleaselabel)" : String,
       "[ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel)" : String,
       "[ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior)" : String,
       "[SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration)" : String,
@@ -49,6 +51,8 @@ Properties:
   [Applications](#cfn-elasticmapreduce-cluster-applications): 
     - Application
   [AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole): String
+  [AutoTerminationPolicy](#cfn-elasticmapreduce-cluster-autoterminationpolicy): 
+    AutoTerminationPolicy
   [BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions): 
     - BootstrapActionConfig
   [Configurations](#cfn-elasticmapreduce-cluster-configurations): 
@@ -65,6 +69,7 @@ Properties:
   [ManagedScalingPolicy](#cfn-elasticmapreduce-cluster-managedscalingpolicy): 
     ManagedScalingPolicy
   [Name](#cfn-elasticmapreduce-cluster-name): String
+  [OSReleaseLabel](#cfn-elasticmapreduce-cluster-osreleaselabel): String
   [ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel): String
   [ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior): String
   [SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration): String
@@ -95,13 +100,19 @@ The applications to install on this cluster, for example, Spark, Flink, Oozie, Z
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoScalingRole`  <a name="cfn-elasticmapreduce-cluster-autoscalingrole"></a>
-An IAM role for automatic scaling policies\. The default role is `EMR_AutoScaling_DefaultRole`\. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group\.  
+An IAM role for automatic scaling policies\. The default role is `EMR_AutoScaling_DefaultRole`\. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate Amazon EC2 instances in an instance group\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `10280`  
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`AutoTerminationPolicy`  <a name="cfn-elasticmapreduce-cluster-autoterminationpolicy"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [AutoTerminationPolicy](aws-properties-elasticmapreduce-cluster-autoterminationpolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BootstrapActions`  <a name="cfn-elasticmapreduce-cluster-bootstrapactions"></a>
 A list of bootstrap actions to run before Hadoop starts on the cluster nodes\.  
@@ -110,13 +121,13 @@ A list of bootstrap actions to run before Hadoop starts on the cluster nodes\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Configurations`  <a name="cfn-elasticmapreduce-cluster-configurations"></a>
-Applies only to Amazon EMR releases 4\.x and later\. The list of Configurations supplied to the EMR cluster\.  
+Applies only to Amazon EMR releases 4\.x and later\. The list of configurations that are supplied to the Amazon EMR cluster\.  
 *Required*: No  
 *Type*: List of [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CustomAmiId`  <a name="cfn-elasticmapreduce-cluster-customamiid"></a>
-Available only in Amazon EMR version 5\.7\.0 and later\. The ID of a custom Amazon EBS\-backed Linux AMI if the cluster uses a custom AMI\.  
+Available only in Amazon EMR releases 5\.7\.0 and later\. The ID of a custom Amazon EBS\-backed Linux AMI if the cluster uses a custom AMI\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -125,7 +136,7 @@ Available only in Amazon EMR version 5\.7\.0 and later\. The ID of a custom Amaz
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsRootVolumeSize`  <a name="cfn-elasticmapreduce-cluster-ebsrootvolumesize"></a>
-The size, in GiB, of the Amazon EBS root device volume of the Linux AMI that is used for each EC2 instance\. Available in Amazon EMR version 4\.x and later\.  
+The size, in GiB, of the Amazon EBS root device volume of the Linux AMI that is used for each Amazon EC2 instance\. Available in Amazon EMR releases 4\.x and later\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -137,7 +148,7 @@ A specification of the number and type of Amazon EC2 instances\.
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `JobFlowRole`  <a name="cfn-elasticmapreduce-cluster-jobflowrole"></a>
-Also called instance profile and EC2 role\. An IAM role for an EMR cluster\. The EC2 instances of the cluster assume this role\. The default role is `EMR_EC2_DefaultRole`\. In order to use the default role, you must have already created it using the CLI or console\.  
+Also called instance profile and Amazon EC2 role\. An IAM role for an Amazon EMR cluster\. The Amazon EC2 instances of the cluster assume this role\. The default role is `EMR_EC2_DefaultRole`\. In order to use the default role, you must have already created it using the AWS CLI or console\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  
@@ -152,7 +163,7 @@ Attributes for Kerberos configuration when Kerberos authentication is enabled us
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogEncryptionKmsKeyId`  <a name="cfn-elasticmapreduce-cluster-logencryptionkmskeyid"></a>
- The AWS KMS key used for encrypting log files\. This attribute is only available with EMR version 5\.30\.0 and later, excluding EMR 6\.0\.0\.   
+ The AWS KMS key used for encrypting log files\. This attribute is only available with Amazon EMR 5\.30\.0 and later, excluding Amazon EMR 6\.0\.0\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -164,7 +175,7 @@ The path to the Amazon S3 location where logs for this cluster are stored\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ManagedScalingPolicy`  <a name="cfn-elasticmapreduce-cluster-managedscalingpolicy"></a>
-Creates or updates a managed scaling policy for an Amazon EMR cluster\. The managed scaling policy defines the limits for resources, such as EC2 instances that can be added or terminated from a cluster\. The policy only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.   
+Creates or updates a managed scaling policy for an Amazon EMR cluster\. The managed scaling policy defines the limits for resources, such as Amazon EC2 instances that can be added or terminated from a cluster\. The policy only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.   
 *Required*: No  
 *Type*: [ManagedScalingPolicy](aws-properties-elasticmapreduce-cluster-managedscalingpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -175,6 +186,12 @@ The name of the cluster\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`OSReleaseLabel`  <a name="cfn-elasticmapreduce-cluster-osreleaselabel"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `ReleaseLabel`  <a name="cfn-elasticmapreduce-cluster-releaselabel"></a>
 The Amazon EMR release label, which determines the version of open\-source application packages installed on the cluster\. Release labels are in the form `emr-x.x.x`, where x\.x\.x is an Amazon EMR release version such as `emr-5.14.0`\. For more information about Amazon EMR release versions and included application versions and features, see [https://docs.aws.amazon.com/emr/latest/ReleaseGuide/](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/)\. The release label applies only to Amazon EMR releases version 4\.0 and later\. Earlier versions use `AmiVersion`\.  
 *Required*: No  
@@ -182,7 +199,7 @@ The Amazon EMR release label, which determines the version of open\-source appli
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScaleDownBehavior`  <a name="cfn-elasticmapreduce-cluster-scaledownbehavior"></a>
-The way that individual Amazon EC2 instances terminate when an automatic scale\-in activity occurs or an instance group is resized\. `TERMINATE_AT_INSTANCE_HOUR` indicates that Amazon EMR terminates nodes at the instance\-hour boundary, regardless of when the request to terminate the instance was submitted\. This option is only available with Amazon EMR 5\.1\.0 and later and is the default for clusters created using that version\. `TERMINATE_AT_TASK_COMPLETION` indicates that Amazon EMR adds nodes to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance\-hour boundary\. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption\. `TERMINATE_AT_TASK_COMPLETION` is available only in Amazon EMR version 4\.1\.0 and later, and is the default for versions of Amazon EMR earlier than 5\.1\.0\.  
+The way that individual Amazon EC2 instances terminate when an automatic scale\-in activity occurs or an instance group is resized\. `TERMINATE_AT_INSTANCE_HOUR` indicates that Amazon EMR terminates nodes at the instance\-hour boundary, regardless of when the request to terminate the instance was submitted\. This option is only available with Amazon EMR 5\.1\.0 and later and is the default for clusters created using that version\. `TERMINATE_AT_TASK_COMPLETION` indicates that Amazon EMR adds nodes to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance\-hour boundary\. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption\. `TERMINATE_AT_TASK_COMPLETION` is available only in Amazon EMR releases 4\.1\.0 and later, and is the default for versions of Amazon EMR earlier than 5\.1\.0\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `TERMINATE_AT_INSTANCE_HOUR | TERMINATE_AT_TASK_COMPLETION`  
@@ -232,15 +249,15 @@ When you create clusters directly through the EMR console or API, this value is 
 
 ### Ref<a name="aws-resource-elasticmapreduce-cluster-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the cluster ID, such as j\-1ABCD123AB1A\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns returns the cluster ID, such as j\-1ABCD123AB1A\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-elasticmapreduce-cluster-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-elasticmapreduce-cluster-return-values-fn--getatt-fn--getatt"></a>
 

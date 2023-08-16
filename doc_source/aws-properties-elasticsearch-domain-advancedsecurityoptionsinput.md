@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AnonymousAuthEnabled](#cfn-elasticsearch-domain-advancedsecurityoptionsinput-anonymousauthenabled)" : Boolean,
   "[Enabled](#cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled)" : Boolean,
   "[InternalUserDatabaseEnabled](#cfn-elasticsearch-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled)" : Boolean,
   "[MasterUserOptions](#cfn-elasticsearch-domain-advancedsecurityoptionsinput-masteruseroptions)" : MasterUserOptions
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticsearch-domain-advancedsecurityoptionsinput-syntax.yaml"></a>
 
 ```
+  [AnonymousAuthEnabled](#cfn-elasticsearch-domain-advancedsecurityoptionsinput-anonymousauthenabled): Boolean
   [Enabled](#cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled): Boolean
   [InternalUserDatabaseEnabled](#cfn-elasticsearch-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled): Boolean
   [MasterUserOptions](#cfn-elasticsearch-domain-advancedsecurityoptionsinput-masteruseroptions): 
@@ -29,6 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-elasticsearch-domain-advancedsecurityoptionsinput-properties"></a>
+
+`AnonymousAuthEnabled`  <a name="cfn-elasticsearch-domain-advancedsecurityoptionsinput-anonymousauthenabled"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled"></a>
 True to enable fine\-grained access control\. You must also enable encryption of data at rest and node\-to\-node encryption\.  

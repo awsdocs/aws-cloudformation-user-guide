@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
       "[SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite)" : SimulationSoftwareSuite,
       "[Sources](#cfn-robomaker-simulationapplication-sources)" : [ SourceConfig, ... ],
-      "[Tags](#cfn-robomaker-simulationapplication-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-robomaker-simulationapplication-tags)" : {Key: Value, ...}
     }
 }
 ```
@@ -41,7 +41,7 @@ Properties:
   [Sources](#cfn-robomaker-simulationapplication-sources): 
     - SourceConfig
   [Tags](#cfn-robomaker-simulationapplication-tags): 
-    Key : Value
+    Key: Value
 ```
 
 ## Properties<a name="aws-resource-robomaker-simulationapplication-properties"></a>
@@ -74,7 +74,7 @@ The rendering engine for the simulation application\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RobotSoftwareSuite`  <a name="cfn-robomaker-simulationapplication-robotsoftwaresuite"></a>
-The robot software suite \(ROS distribution\) used by the simulation application\.  
+The robot software suite used by the simulation application\.  
 *Required*: Yes  
 *Type*: [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -103,13 +103,13 @@ A map that contains tag keys and tag values that are attached to the simulation 
 
 When you pass the logical ID of an `AWS::RoboMaker::SimulationApplication` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the simulation application, such as `arn:aws:robomaker:us-west-2:123456789012:simulation-application/MySimulationApplication/1546541201334`\. 
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-robomaker-simulationapplication-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-robomaker-simulationapplication-return-values-fn--getatt-fn--getatt"></a>
 
@@ -137,24 +137,12 @@ The following example creates a simulation application\.
       "Type": "AWS::RoboMaker::SimulationApplication",
       "Properties": {
         "Name": "MySimulationApplication",
-        "Sources": [
-          {
-            "S3Bucket": "my-bucket",
-            "S3Key": "robot_bundle_x86.tar.gz",
-            "Architecture": "X86_64"
-          }
-        ],
+        "Environment": "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-sim-app:latest",
         "RobotSoftwareSuite": {
-          "Name": "ROS",
-          "Version": "Kinetic"
+          "Name": "General"
         },
         "SimulationSoftwareSuite": {
-          "Name": "Gazebo",
-          "Version": "7"
-        },
-        "RenderingEngine": {
-          "Name": "OGRE",
-          "Version": "1.x"
+          "Name": "SimulationRuntime"
         },
         "Tags": {
           "Name": "BasicSimulationApplication",
@@ -181,19 +169,11 @@ Resources:
     Type: "AWS::RoboMaker::SimulationApplication"
     Properties:
       Name: "MySimulationApplication"
-      Sources:
-        - S3Bucket: "my-bucket"
-          S3Key: "robot_bundle_x86.tar.gz"
-          Architecture: "X86_64"
+      Environment: "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-sim-app:latest"
       RobotSoftwareSuite:
-        Name: "ROS"
-        Version: "Kinetic"
+        Name: "General"
       SimulationSoftwareSuite:
-        Name: "Gazebo"
-        Version: "7"
-      RenderingEngine:
-        Name: "OGRE"
-        Version: "1.x"
+        Name: "SimulationRuntime"
       Tags:
         "Name" : "BasicSimulationApplication"
         "Type" : "CFN"

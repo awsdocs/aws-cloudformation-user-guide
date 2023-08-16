@@ -34,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Criteria`  <a name="cfn-iot-securityprofile-behavior-criteria"></a>
 The criteria that determine if a device is behaving normally in regard to the `metric`\.  
+In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT Device Defender detects that a device is behaving anomalously\.
 *Required*: No  
 *Type*: [BehaviorCriteria](aws-properties-iot-securityprofile-behaviorcriteria.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

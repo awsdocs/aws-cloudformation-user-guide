@@ -29,4 +29,5 @@ A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were ad
 A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3 events\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `CRAWL_EVENT_MODE | CRAWL_EVERYTHING | CRAWL_NEW_FOLDERS_ONLY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

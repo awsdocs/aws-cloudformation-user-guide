@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DedupeString](#cfn-ssmincidents-responseplan-incidenttemplate-dedupestring)" : String,
   "[Impact](#cfn-ssmincidents-responseplan-incidenttemplate-impact)" : Integer,
+  "[IncidentTags](#cfn-ssmincidents-responseplan-incidenttemplate-incidenttags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
   "[NotificationTargets](#cfn-ssmincidents-responseplan-incidenttemplate-notificationtargets)" : [ NotificationTargetItem, ... ],
   "[Summary](#cfn-ssmincidents-responseplan-incidenttemplate-summary)" : String,
   "[Title](#cfn-ssmincidents-responseplan-incidenttemplate-title)" : String
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DedupeString](#cfn-ssmincidents-responseplan-incidenttemplate-dedupestring): 
     String
   [Impact](#cfn-ssmincidents-responseplan-incidenttemplate-impact): Integer
+  [IncidentTags](#cfn-ssmincidents-responseplan-incidenttemplate-incidenttags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [NotificationTargets](#cfn-ssmincidents-responseplan-incidenttemplate-notificationtargets): 
     - NotificationTargetItem
   [Summary](#cfn-ssmincidents-responseplan-incidenttemplate-summary): String
@@ -55,6 +58,12 @@ Defines the impact to the customers\. Providing an impact overwrites the impact 
 *Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IncidentTags`  <a name="cfn-ssmincidents-responseplan-incidenttemplate-incidenttags"></a>
+Tags to assign to the template\. When the `StartIncident` API action is called, Incident Manager assigns the tags specified in the template to the incident\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NotificationTargets`  <a name="cfn-ssmincidents-responseplan-incidenttemplate-notificationtargets"></a>
 The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident\. You can also make updates to the incident through the chat channel using the SNS topics\.  
 *Required*: No  
@@ -67,7 +76,7 @@ The summary describes what has happened during the incident\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `4000`  
+*Maximum*: `8000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Title`  <a name="cfn-ssmincidents-responseplan-incidenttemplate-title"></a>

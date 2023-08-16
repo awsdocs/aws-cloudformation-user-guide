@@ -73,7 +73,7 @@ This parameter is optional\. If it is not included, it defaults to a slash \(/\)
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `512`  
-*Pattern*: `(\u002F)|(\u002F[\u0021-\u007F]+\u002F)`  
+*Pattern*: `(\u002F)|(\u002F[\u0021-\u007E]+\u002F)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateKey`  <a name="cfn-iam-servercertificate-privatekey"></a>
@@ -110,15 +110,15 @@ A list of tags that are attached to the server certificate\. For more informatio
 
 ### Ref<a name="aws-resource-iam-servercertificate-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `ServerCertificateName`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `ServerCertificateName`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iam-servercertificate-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iam-servercertificate-return-values-fn--getatt-fn--getatt"></a>
 

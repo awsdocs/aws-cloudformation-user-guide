@@ -1,4 +1,4 @@
-# AWS::ServiceCatalog transform<a name="transform-aws-servicecatalog"></a>
+# `AWS::ServiceCatalog` transform<a name="transform-aws-servicecatalog"></a>
 
 The `AWS::ServiceCatalog` transform enables Service Catalog users to reference outputs from an existing Service Catalog provisioned product in their CloudFormation template\.
 
@@ -6,7 +6,7 @@ To reference an output from an existing provisioned product, you must include th
 
 You can reference multiple provisioned products and key names in your template, a maximum of 20 per template\. During provisioning, the transform retrieves the value from each referenced provisioned product and key, substituting the output value in your CloudFormation template\.
 
-## Usage<a name="tbd"></a>
+## Usage<a name="servicecatalog-usage"></a>
 
 Use the `AWS::ServiceCatalog` transform at the top of the template\. You can't use `AWS::ServiceCatalog` as a transform embedded in any other template section\.
 
@@ -41,7 +41,7 @@ The JSON and YAML examples below show how a user can reference outputs from an e
 
 In these examples, `SampleProvisionedProduct` is a previously created provisioned product\. `SampleOutputKey` is an output key of this provisioned product\.
 
-### JSON<a name="servicecatalog-json-transform"></a>
+### JSON<a name="servicecatalog-json-transform.json"></a>
 
 This example is a working version\.
 

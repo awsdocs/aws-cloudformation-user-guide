@@ -306,7 +306,7 @@ Includes or excludes the EXT\-X\-PROGRAM\-DATE\-TIME tag in \.m3u8 manifest file
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProgramDateTimeClock`  <a name="cfn-medialive-channel-hlsgroupsettings-programdatetimeclock"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

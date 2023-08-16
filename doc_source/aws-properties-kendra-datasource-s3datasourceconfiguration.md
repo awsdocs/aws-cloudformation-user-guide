@@ -66,7 +66,7 @@ Some [examples](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-excl
 +  *\*\*/\*internal\** will exclude all internal\-related files in a directory and its subdirectories\.
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InclusionPatterns`  <a name="cfn-kendra-datasource-s3datasourceconfiguration-inclusionpatterns"></a>
@@ -77,12 +77,12 @@ Some [examples](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-excl
 +  *\*tax\** will include all files in a directory that contain 'tax' in the file name, such as 'tax', 'taxes', 'income\_tax'\.
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InclusionPrefixes`  <a name="cfn-kendra-datasource-s3datasourceconfiguration-inclusionprefixes"></a>
 A list of S3 prefixes for the documents that should be included in the index\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `250`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

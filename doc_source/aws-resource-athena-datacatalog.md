@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-athena-datacatalog-description)" : String,
       "[Name](#cfn-athena-datacatalog-name)" : String,
-      "[Parameters](#cfn-athena-datacatalog-parameters)" : {Key : Value, ...},
+      "[Parameters](#cfn-athena-datacatalog-parameters)" : {Key: Value, ...},
       "[Tags](#cfn-athena-datacatalog-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-athena-datacatalog-type)" : String
     }
@@ -29,7 +29,7 @@ Properties:
   [Description](#cfn-athena-datacatalog-description): String
   [Name](#cfn-athena-datacatalog-name): String
   [Parameters](#cfn-athena-datacatalog-parameters): 
-    Key : Value
+    Key: Value
   [Tags](#cfn-athena-datacatalog-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-athena-datacatalog-type): String
@@ -87,9 +87,9 @@ The type of data catalog: `LAMBDA` for a federated catalog, `GLUE` for AWS Glue 
 
 ### Ref<a name="aws-resource-athena-datacatalog-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the data catalog\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the name of the data catalog\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-athena-datacatalog--examples"></a>
 

@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource DocumentAttributeValue<a name="aws-properties-kendra-datasource-documentattributevalue"></a>
 
-The value of a custom document attribute\. You can only provide one value for a custom attribute\.
+The value of a document attribute\. You can only provide one value for a document attribute\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-documentattributevalue-syntax"></a>
 
@@ -44,7 +44,7 @@ A long integer value\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StringListValue`  <a name="cfn-kendra-datasource-documentattributevalue-stringlistvalue"></a>
-A list of strings\.   
+A list of strings\. The default maximum length or number of strings is 10\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -48,8 +48,8 @@ A description for the namespace\.
 The name that you want to assign to this namespace\. When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon Route 53 private hosted zone that has the same name as the namespace\.  
 *Required*: Yes  
 *Type*: String  
-*Maximum*: `1024`  
-*Pattern*: `^[!-~]{1,1024}$`  
+*Maximum*: `253`  
+*Pattern*: `^[!-~]{1,253}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Properties`  <a name="cfn-servicediscovery-privatednsnamespace-properties"></a>
@@ -76,15 +76,15 @@ The ID of the Amazon VPC that you want to associate the namespace with\.
 
 ### Ref<a name="aws-resource-servicediscovery-privatednsnamespace-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the value of `Id` for the namespace, such as `ns-e4anhexample0004`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the value of `Id` for the namespace, such as `ns-e4anhexample0004`\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-servicediscovery-privatednsnamespace-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-servicediscovery-privatednsnamespace-return-values-fn--getatt-fn--getatt"></a>
 

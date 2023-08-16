@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Description](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description)" : String,
   "[DisableTemplateValidation](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation)" : Boolean,
   "[Info](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info)" : Json,
-  "[Name](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name)" : String
+  "[Name](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name)" : String,
+  "[Type](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-type)" : String
 }
 ```
 
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DisableTemplateValidation](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation): Boolean
   [Info](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info): Json
   [Name](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name): String
+  [Type](#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-type): String
 ```
 
 ## Properties<a name="aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties-properties"></a>
@@ -43,7 +45,7 @@ If set to true, AWS Service Catalog stops validating the specified provisioning 
 
 `Info`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info"></a>
 Specify the template source with one of the following options, but not both\. Keys accepted: \[ `LoadTemplateFromURL`, `ImportFromPhysicalId` \]  
-The URL of the AWS CloudFormation template in Amazon S3, AWS CodeCommit, or GitHub in JSON format\. Specify the URL in JSON format as follows:  
+The URL of the AWS CloudFormation template in Amazon S3 in JSON format\. Specify the URL in JSON format as follows:  
  `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`   
  `ImportFromPhysicalId`: The physical id of the resource that contains the template\. Currently only supports AWS CloudFormation stack arn\. Specify the physical id in JSON format as follows: `ImportFromPhysicalId: “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`   
 *Required*: Yes  
@@ -55,6 +57,15 @@ The name of the provisioning artifact \(for example, v1 v2beta\)\. No spaces are
 *Required*: No  
 *Type*: String  
 *Maximum*: `8192`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Type`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-type"></a>
+The type of provisioning artifact\.  
++  `CLOUD_FORMATION_TEMPLATE` \- AWS CloudFormation template
++  `TERRAFORM_OPEN_SOURCE` \- Terraform open source configuration file
+*Required*: No  
+*Type*: String  
+*Allowed values*: `CLOUD_FORMATION_TEMPLATE | MARKETPLACE_AMI | MARKETPLACE_CAR | TERRAFORM_CLOUD | TERRAFORM_OPEN_SOURCE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties--seealso"></a>

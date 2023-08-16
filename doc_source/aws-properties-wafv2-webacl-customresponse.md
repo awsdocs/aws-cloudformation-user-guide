@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL CustomResponse<a name="aws-properties-wafv2-webacl-customresponse"></a>
 
-A custom response to send to the client\. You can define a custom response for rule actions and default web ACL actions that are set to `BlockAction`\. 
+A custom response to send to the client\. You can define a custom response for rule actions and default web ACL actions that are set to the block action\. 
 
 For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
 
@@ -40,7 +40,7 @@ References the response body that you want AWS WAF to return to the web request 
 
 `ResponseCode`  <a name="cfn-wafv2-webacl-customresponse-responsecode"></a>
 The HTTP status code to return to the client\.   
-For a list of status codes that you can use in your custom reqponses, see [Supported status codes for custom response](https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
+For a list of status codes that you can use in your custom responses, see [Supported status codes for custom response](https://docs.aws.amazon.com/waf/latest/developerguide/customizing-the-response-status-codes.html) in the * AWS WAF Developer Guide*\.   
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `200`  
@@ -49,7 +49,7 @@ For a list of status codes that you can use in your custom reqponses, see [Suppo
 
 `ResponseHeaders`  <a name="cfn-wafv2-webacl-customresponse-responseheaders"></a>
 The HTTP headers to use in the response\. Duplicate header names are not allowed\.   
-For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
+For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the * AWS WAF Developer Guide*\.   
 *Required*: No  
 *Type*: List of [CustomHTTPHeader](aws-properties-wafv2-webacl-customhttpheader.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

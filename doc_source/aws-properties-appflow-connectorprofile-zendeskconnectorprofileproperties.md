@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile ZendeskConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties"></a>
 
- The `ZendeskConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Zendesk\. 
+ The connector\-specific profile properties required when using Zendesk\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties-syntax"></a>
 

@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CustomOriginConfig](#cfn-cloudfront-distribution-origin-customoriginconfig)" : CustomOriginConfig,
   "[DomainName](#cfn-cloudfront-distribution-origin-domainname)" : String,
   "[Id](#cfn-cloudfront-distribution-origin-id)" : String,
+  "[OriginAccessControlId](#cfn-cloudfront-distribution-origin-originaccesscontrolid)" : String,
   "[OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders)" : [ OriginCustomHeader, ... ],
   "[OriginPath](#cfn-cloudfront-distribution-origin-originpath)" : String,
   "[OriginShield](#cfn-cloudfront-distribution-origin-originshield)" : OriginShield,
@@ -42,6 +43,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     CustomOriginConfig
   [DomainName](#cfn-cloudfront-distribution-origin-domainname): String
   [Id](#cfn-cloudfront-distribution-origin-id): String
+  [OriginAccessControlId](#cfn-cloudfront-distribution-origin-originaccesscontrolid): String
   [OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders): 
     - OriginCustomHeader
   [OriginPath](#cfn-cloudfront-distribution-origin-originpath): String
@@ -54,15 +56,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-distribution-origin-properties"></a>
 
 `ConnectionAttempts`  <a name="cfn-cloudfront-distribution-origin-connectionattempts"></a>
-The number of times that CloudFront attempts to connect to the origin\. The minimum number is 1, the maximum is 3, and the default \(if you don’t specify otherwise\) is 3\.  
-For a custom origin \(including an Amazon S3 bucket that’s configured with static website hosting\), this value also specifies the number of times that CloudFront attempts to get a response from the origin, in the case of an [Origin Response Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout)\.  
+The number of times that CloudFront attempts to connect to the origin\. The minimum number is 1, the maximum is 3, and the default \(if you don't specify otherwise\) is 3\.  
+For a custom origin \(including an Amazon S3 bucket that's configured with static website hosting\), this value also specifies the number of times that CloudFront attempts to get a response from the origin, in the case of an [Origin Response Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout)\.  
 For more information, see [Origin Connection Attempts](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#origin-connection-attempts) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionTimeout`  <a name="cfn-cloudfront-distribution-origin-connectiontimeout"></a>
-The number of seconds that CloudFront waits when trying to establish a connection to the origin\. The minimum timeout is 1 second, the maximum is 10 seconds, and the default \(if you don’t specify otherwise\) is 10 seconds\.  
+The number of seconds that CloudFront waits when trying to establish a connection to the origin\. The minimum timeout is 1 second, the maximum is 10 seconds, and the default \(if you don't specify otherwise\) is 10 seconds\.  
 For more information, see [Origin Connection Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#origin-connection-timeout) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
@@ -85,6 +87,13 @@ For more information, see [Origin Domain Name](https://docs.aws.amazon.com/Amazo
 A unique identifier for the origin\. This value must be unique within the distribution\.  
 Use this value to specify the `TargetOriginId` in a `CacheBehavior` or `DefaultCacheBehavior`\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OriginAccessControlId`  <a name="cfn-cloudfront-distribution-origin-originaccesscontrolid"></a>
+The unique identifier of an origin access control for this origin\.  
+For more information, see [Restricting access to an Amazon S3 origin](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
