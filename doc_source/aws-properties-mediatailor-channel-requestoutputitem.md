@@ -1,6 +1,6 @@
 # AWS::MediaTailor::Channel RequestOutputItem<a name="aws-properties-mediatailor-channel-requestoutputitem"></a>
 
-<a name="aws-properties-mediatailor-channel-requestoutputitem-description"></a>The `RequestOutputItem` property type specifies Property description not available\. for an [AWS::MediaTailor::Channel](aws-resource-mediatailor-channel.md)\.
+The output configuration for this channel\.
 
 ## Syntax<a name="aws-properties-mediatailor-channel-requestoutputitem-syntax"></a>
 
@@ -31,25 +31,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediatailor-channel-requestoutputitem-properties"></a>
 
 `DashPlaylistSettings`  <a name="cfn-mediatailor-channel-requestoutputitem-dashplaylistsettings"></a>
-Property description not available\.  
+DASH manifest configuration parameters\.  
 *Required*: No  
 *Type*: [DashPlaylistSettings](aws-properties-mediatailor-channel-dashplaylistsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HlsPlaylistSettings`  <a name="cfn-mediatailor-channel-requestoutputitem-hlsplaylistsettings"></a>
-Property description not available\.  
+HLS playlist configuration parameters\.  
 *Required*: No  
 *Type*: [HlsPlaylistSettings](aws-properties-mediatailor-channel-hlsplaylistsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManifestName`  <a name="cfn-mediatailor-channel-requestoutputitem-manifestname"></a>
-Property description not available\.  
+The name of the manifest for the channel\. The name appears in the `PlaybackUrl`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceGroup`  <a name="cfn-mediatailor-channel-requestoutputitem-sourcegroup"></a>
-Property description not available\.  
+A string used to match which `HttpPackageConfiguration` is used for each `VodSource`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

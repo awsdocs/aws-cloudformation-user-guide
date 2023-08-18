@@ -95,7 +95,7 @@ Required when `DeploymentType` is set to `MULTI_AZ_1`\. This specifies the subne
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RouteTableIds`  <a name="cfn-fsx-filesystem-ontapconfiguration-routetableids"></a>
-\(Multi\-AZ only\) Specifies the virtual private cloud \(VPC\) route tables in which your file system's endpoints will be created\. You should specify all VPC route tables associated with the subnets in which your clients are located\. By default, Amazon FSx selects your VPC's default route table\.  
+\(Multi\-AZ only\) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to the correct file server\. You should specify all virtual private cloud \(VPC\) route tables associated with the subnets in which your clients are located\. By default, Amazon FSx selects your VPC's default route table\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  

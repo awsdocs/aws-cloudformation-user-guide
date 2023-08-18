@@ -1,6 +1,6 @@
 # AWS::AppSync::Resolver AppSyncRuntime<a name="aws-properties-appsync-resolver-appsyncruntime"></a>
 
-Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function\. Specifies the name and version of the runtime to use\. Note that if a runtime is specified, code must also be specified\.
+Describes a runtime used by an AWS AppSync resolver or AWS AppSync function\. Specifies the name and version of the runtime to use\. Note that if a runtime is specified, code must also be specified\.
 
 ## Syntax<a name="aws-properties-appsync-resolver-appsyncruntime-syntax"></a>
 

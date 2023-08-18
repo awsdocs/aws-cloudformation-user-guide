@@ -1,6 +1,6 @@
 # AWS::EC2::NetworkInterface Ipv6PrefixSpecification<a name="aws-properties-ec2-networkinterface-ipv6prefixspecification"></a>
 
-<a name="aws-properties-ec2-networkinterface-ipv6prefixspecification-description"></a>The `Ipv6PrefixSpecification` property type specifies Property description not available\. for an [AWS::EC2::NetworkInterface](aws-resource-ec2-networkinterface.md)\.
+Describes the IPv6 prefix\.
 
 ## Syntax<a name="aws-properties-ec2-networkinterface-ipv6prefixspecification-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-networkinterface-ipv6prefixspecification-properties"></a>
 
 `Ipv6Prefix`  <a name="cfn-ec2-networkinterface-ipv6prefixspecification-ipv6prefix"></a>
-Property description not available\.  
+The IPv6 prefix\. For information, see [ Assigning prefixes to Amazon EC2 network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-personalize-solution-solutionconfig-properties"></a>
 
 `AlgorithmHyperParameters`  <a name="cfn-personalize-solution-solutionconfig-algorithmhyperparameters"></a>
-Lists the hyperparameter names and ranges\.  
+Lists the algorithm hyperparameters and their values\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

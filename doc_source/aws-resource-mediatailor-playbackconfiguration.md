@@ -65,7 +65,7 @@ Properties:
 ## Properties<a name="aws-resource-mediatailor-playbackconfiguration-properties"></a>
 
 `AdDecisionServerUrl`  <a name="cfn-mediatailor-playbackconfiguration-addecisionserverurl"></a>
-Property description not available\.  
+The URL for the ad decision server \(ADS\)\. This includes the specification of static parameters and placeholders for dynamic parameters\. AWS Elemental MediaTailor substitutes player\-specific and session\-specific parameters as needed when calling the ADS\. Alternately, for testing you can provide a static VAST URL\. The maximum length is 25,000 characters\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -125,25 +125,25 @@ Property description not available\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PersonalizationThresholdSeconds`  <a name="cfn-mediatailor-playbackconfiguration-personalizationthresholdseconds"></a>
-Property description not available\.  
+Defines the maximum duration of underfilled ad time \(in seconds\) allowed in an ad break\. If the duration of underfilled ad time exceeds the personalization threshold, then the personalization of the ad break is abandoned and the underlying content is shown\. This feature applies to *ad replacement* in live and VOD streams, rather than ad insertion, because it relies on an underlying content stream\. For more information about ad break behavior, including ad replacement and insertion, see [Ad Behavior in AWS Elemental MediaTailor](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html)\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SlateAdUrl`  <a name="cfn-mediatailor-playbackconfiguration-slateadurl"></a>
-Property description not available\.  
+The URL for a video asset to transcode and use to fill in time that's not used by ads\. AWS Elemental MediaTailor shows the slate to fill in gaps in media content\. Configuring the slate is optional for non\-VPAID playback configurations\. For VPAID, the slate is required because MediaTailor provides it in the slots designated for dynamic ad content\. The slate must be a high\-quality asset that contains both audio and video\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-mediatailor-playbackconfiguration-tags"></a>
-Property description not available\.  
+The tags to assign to the playback configuration\. Tags are key\-value pairs that you can associate with Amazon resources to help with organization, access control, and cost tracking\. For more information, see [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TranscodeProfileName`  <a name="cfn-mediatailor-playbackconfiguration-transcodeprofilename"></a>
-Property description not available\.  
+The name that is used to associate this playback configuration with a custom transcode profile\. This overrides the dynamic transcoding defaults of MediaTailor\. Use this only if you have already set up custom profiles with the help of AWS Support\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

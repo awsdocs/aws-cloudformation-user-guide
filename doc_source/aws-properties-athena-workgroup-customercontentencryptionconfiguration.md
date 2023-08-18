@@ -1,6 +1,6 @@
 # AWS::Athena::WorkGroup CustomerContentEncryptionConfiguration<a name="aws-properties-athena-workgroup-customercontentencryptionconfiguration"></a>
 
-Specifies the KMS key that is used to encrypt the user's data stores in Athena\. This setting does not apply to Athena SQL workgroups\.
+Specifies the customer managed KMS key that is used to encrypt the user's data stores in Athena\. When an AWS managed key is used, this value is null\. This setting does not apply to Athena SQL workgroups\.
 
 ## Syntax<a name="aws-properties-athena-workgroup-customercontentencryptionconfiguration-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-athena-workgroup-customercontentencryptionconfiguration-properties"></a>
 
 `KmsKey`  <a name="cfn-athena-workgroup-customercontentencryptionconfiguration-kmskey"></a>
-The KMS key that is used to encrypt the user's data stores in Athena\.  
+The customer managed KMS key that is used to encrypt the user's data stores in Athena\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

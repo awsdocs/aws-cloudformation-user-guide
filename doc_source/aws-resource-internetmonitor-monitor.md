@@ -62,7 +62,7 @@ Property description not available\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InternetMeasurementsLogDelivery`  <a name="cfn-internetmonitor-monitor-internetmeasurementslogdelivery"></a>
-Publish internet measurements for a monitor for all city\-networks \(up to the 500,000 service limit\) to another location, such as an Amazon S3 bucket\. Measurements are also published to Amazon CloudWatch Logs for the first 500 \(by traffic volume\) city\-networks \(client locations and ASNs, typically internet service providers or ISPs\)\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [InternetMeasurementsLogDelivery](aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -113,7 +113,7 @@ The tags for a monitor, listed as a set of *key:value* pairs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficPercentageToMonitor`  <a name="cfn-internetmonitor-monitor-trafficpercentagetomonitor"></a>
-The percentage of the internet\-facing traffic for your application that you want to monitor\. You can also, optionally, set a limit for the number of city\-networks \(client locations and ASNs, typically internet service providers\) that Internet Monitor will monitor traffic for\. The city\-networks maximum limit caps the number of city\-networks that Internet Monitor monitors for your application, regardless of the percentage of traffic that you choose to monitor\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

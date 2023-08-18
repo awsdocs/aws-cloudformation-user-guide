@@ -1,6 +1,6 @@
 # AWS::MediaTailor::VodSource<a name="aws-resource-mediatailor-vodsource"></a>
 
-<a name="aws-resource-mediatailor-vodsource-description"></a>The `AWS::MediaTailor::VodSource` resource Property description not available\. for MediaTailor\.
+The VOD source configuration parameters\.
 
 ## Syntax<a name="aws-resource-mediatailor-vodsource-syntax"></a>
 
@@ -36,25 +36,25 @@ Properties:
 ## Properties<a name="aws-resource-mediatailor-vodsource-properties"></a>
 
 `HttpPackageConfigurations`  <a name="cfn-mediatailor-vodsource-httppackageconfigurations"></a>
-Property description not available\.  
+The HTTP package configurations for the VOD source\.  
 *Required*: Yes  
 *Type*: List of [HttpPackageConfiguration](aws-properties-mediatailor-vodsource-httppackageconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceLocationName`  <a name="cfn-mediatailor-vodsource-sourcelocationname"></a>
-Property description not available\.  
+The name of the source location that the VOD source is associated with\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-mediatailor-vodsource-tags"></a>
-Property description not available\.  
+The tags assigned to the VOD source\. Tags are key\-value pairs that you can associate with Amazon resources to help with organization, access control, and cost tracking\. For more information, see [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VodSourceName`  <a name="cfn-mediatailor-vodsource-vodsourcename"></a>
-Property description not available\.  
+The name of the VOD source\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

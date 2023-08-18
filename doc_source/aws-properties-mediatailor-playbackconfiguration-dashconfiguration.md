@@ -42,4 +42,5 @@ The setting that controls whether MediaTailor includes the Location tag in DASH 
 The setting that controls whether MediaTailor handles manifests from the origin server as multi\-period manifests or single\-period manifests\. If your origin server produces single\-period manifests, set this to `SINGLE_PERIOD`\. The default setting is `MULTI_PERIOD`\. For multi\-period manifests, omit this setting or set it to `MULTI_PERIOD`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `MULTI_PERIOD | SINGLE_PERIOD`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

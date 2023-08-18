@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AccountFilterType](#cfn-cloudformation-stackset-deploymenttargets-accountfiltertype)" : String,
   "[Accounts](#cfn-cloudformation-stackset-deploymenttargets-accounts)" : [ String, ... ],
+  "[AccountsUrl](#cfn-cloudformation-stackset-deploymenttargets-accountsurl)" : String,
   "[OrganizationalUnitIds](#cfn-cloudformation-stackset-deploymenttargets-organizationalunitids)" : [ String, ... ]
 }
 ```
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AccountFilterType](#cfn-cloudformation-stackset-deploymenttargets-accountfiltertype): String
   [Accounts](#cfn-cloudformation-stackset-deploymenttargets-accounts): 
     - String
+  [AccountsUrl](#cfn-cloudformation-stackset-deploymenttargets-accountsurl): String
   [OrganizationalUnitIds](#cfn-cloudformation-stackset-deploymenttargets-organizationalunitids): 
     - String
 ```
@@ -47,6 +49,12 @@ The names of one or more AWS accounts for which you want to deploy stack set upd
 *Pattern*: `^[0-9]{12}$`  
 *Required*: Conditional  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AccountsUrl`  <a name="cfn-cloudformation-stackset-deploymenttargets-accountsurl"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OrganizationalUnitIds`  <a name="cfn-cloudformation-stackset-deploymenttargets-organizationalunitids"></a>

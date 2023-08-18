@@ -76,10 +76,12 @@ The default AMI is used if the parameter isn't explicitly assigned a value in th
 + **Amazon Linux \(default\): `amazonlinux-1-x86_64`** 
 + Amazon Linux 2: `amazonlinux-2-x86_64`
 + Ubuntu 18\.04: `ubuntu-18.04-x86_64`
++ Ubuntu 22\.04: `ubuntu-22.04-x86_64`
 **SSM paths**  
 + **Amazon Linux \(default\): `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64`**
 + Amazon Linux 2: `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2-x86_64`
 + Ubuntu 18\.04: `resolve:ssm:/aws/service/cloud9/amis/ubuntu-18.04-x86_64`
++ Ubuntu 22\.04: `resolve:ssm:/aws/service/cloud9/amis/ubuntu-22.04-x86_64`
 *Required*: No  
 *Type*: String  
 *Maximum*: `512`  

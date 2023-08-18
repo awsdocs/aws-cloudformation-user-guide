@@ -1,6 +1,6 @@
 # AWS::MediaTailor::Channel<a name="aws-resource-mediatailor-channel"></a>
 
-<a name="aws-resource-mediatailor-channel-description"></a>The `AWS::MediaTailor::Channel` resource Property description not available\. for MediaTailor\.
+The configuration parameters for a channel\. For information about MediaTailor channels, see [Working with channels](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-channels.html) in the *MediaTailor User Guide*\.
 
 ## Syntax<a name="aws-resource-mediatailor-channel-syntax"></a>
 
@@ -44,43 +44,45 @@ Properties:
 ## Properties<a name="aws-resource-mediatailor-channel-properties"></a>
 
 `ChannelName`  <a name="cfn-mediatailor-channel-channelname"></a>
-Property description not available\.  
+The name of the channel\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FillerSlate`  <a name="cfn-mediatailor-channel-fillerslate"></a>
-Property description not available\.  
+The slate used to fill gaps between programs in the schedule\. You must configure filler slate if your channel uses the `LINEAR` `PlaybackMode`\. MediaTailor doesn't support filler slate for channels using the `LOOP` `PlaybackMode`\.  
 *Required*: No  
 *Type*: [SlateSource](aws-properties-mediatailor-channel-slatesource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogConfiguration`  <a name="cfn-mediatailor-channel-logconfiguration"></a>
-Property description not available\.  
+The log configuration\.  
 *Required*: No  
 *Type*: [LogConfigurationForChannel](aws-properties-mediatailor-channel-logconfigurationforchannel.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Outputs`  <a name="cfn-mediatailor-channel-outputs"></a>
-Property description not available\.  
+The channel's output properties\.  
 *Required*: Yes  
 *Type*: List of [RequestOutputItem](aws-properties-mediatailor-channel-requestoutputitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlaybackMode`  <a name="cfn-mediatailor-channel-playbackmode"></a>
-Property description not available\.  
+The type of playback mode for this channel\.  
+`LINEAR` \- Programs play back\-to\-back only once\.  
+`LOOP` \- Programs play back\-to\-back in an endless loop\. When the last program in the schedule plays, playback loops back to the first program in the schedule\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-mediatailor-channel-tags"></a>
-Property description not available\.  
+The tags to assign to the channel\. Tags are key\-value pairs that you can associate with Amazon resources to help with organization, access control, and cost tracking\. For more information, see [Tagging AWS Elemental MediaTailor Resources](https://docs.aws.amazon.com/mediatailor/latest/ug/tagging.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tier`  <a name="cfn-mediatailor-channel-tier"></a>
-Property description not available\.  
+The tier for this channel\. STANDARD tier channels can contain live programs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

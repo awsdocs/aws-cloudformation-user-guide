@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery-properties"></a>
 
 `S3Config`  <a name="cfn-internetmonitor-monitor-internetmeasurementslogdelivery-s3config"></a>
-The configuration for publishing Amazon CloudWatch Internet Monitor internet measurements to Amazon S3\.  
+The Amazon S3 bucket where you publish internet measurements in addition to CloudWatch Logs\.  
 *Required*: No  
 *Type*: [S3Config](aws-properties-internetmonitor-monitor-s3config.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

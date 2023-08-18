@@ -37,14 +37,14 @@ Properties:
 `AuthorizationType`  <a name="cfn-events-connection-authorizationtype"></a>
 The type of authorization to use for the connection\.  
 OAUTH tokens are refreshed when a 401 or 407 response is returned\.
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Allowed values*: `API_KEY | BASIC | OAUTH_CLIENT_CREDENTIALS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthParameters`  <a name="cfn-events-connection-authparameters"></a>
 A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to use to authorize with the endpoint\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [AuthParameters](aws-properties-events-connection-authparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

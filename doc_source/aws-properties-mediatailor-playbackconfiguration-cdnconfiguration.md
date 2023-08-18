@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediatailor-playbackconfiguration-cdnconfiguration-properties"></a>
 
 `AdSegmentUrlPrefix`  <a name="cfn-mediatailor-playbackconfiguration-cdnconfiguration-adsegmenturlprefix"></a>
-Property description not available\.  
+A non\-default content delivery network \(CDN\) to serve ad segments\. By default, AWS Elemental MediaTailor uses Amazon CloudFront with default cache settings as its CDN for ad segments\. To set up an alternate CDN, create a rule in your CDN for the origin ads\.mediatailor\.*<region>*\.amazonaws\.com\. Then specify the rule's name in this `AdSegmentUrlPrefix`\. When AWS Elemental MediaTailor serves a manifest, it reports your CDN as the source for ad segments\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContentSegmentUrlPrefix`  <a name="cfn-mediatailor-playbackconfiguration-cdnconfiguration-contentsegmenturlprefix"></a>
-Property description not available\.  
+A content delivery network \(CDN\) to cache content segments, so that content requests don’t always have to go to the origin server\. First, create a rule in your CDN for the content segment origin server\. Then specify the rule's name in this `ContentSegmentUrlPrefix`\. When AWS Elemental MediaTailor serves a manifest, it reports your CDN as the source for content segments\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

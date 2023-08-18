@@ -1,6 +1,6 @@
 # AWS::FraudDetector::Detector Rule<a name="aws-properties-frauddetector-detector-rule"></a>
 
-A rule\. Rule is a condition that tells Amazon Fraud Detector how to interpret variables values during a fraud prediction\. 
+A rule\.
 
 ## Syntax<a name="aws-properties-frauddetector-detector-rule-syntax"></a>
 
@@ -79,6 +79,7 @@ The rule expression\. A rule expression captures the business logic\. For more i
 
 `Language`  <a name="cfn-frauddetector-detector-rule-language"></a>
 The rule language\.  
+Valid Value: DETECTORPL  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

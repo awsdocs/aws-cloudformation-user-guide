@@ -1,6 +1,6 @@
 # AWS::MediaTailor::Channel DashPlaylistSettings<a name="aws-properties-mediatailor-channel-dashplaylistsettings"></a>
 
-<a name="aws-properties-mediatailor-channel-dashplaylistsettings-description"></a>The `DashPlaylistSettings` property type specifies Property description not available\. for an [AWS::MediaTailor::Channel](aws-resource-mediatailor-channel.md)\.
+Dash manifest configuration parameters\.
 
 ## Syntax<a name="aws-properties-mediatailor-channel-dashplaylistsettings-syntax"></a>
 
@@ -29,25 +29,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediatailor-channel-dashplaylistsettings-properties"></a>
 
 `ManifestWindowSeconds`  <a name="cfn-mediatailor-channel-dashplaylistsettings-manifestwindowseconds"></a>
-Property description not available\.  
+The total duration \(in seconds\) of each manifest\. Minimum value: `30` seconds\. Maximum value: `3600` seconds\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinBufferTimeSeconds`  <a name="cfn-mediatailor-channel-dashplaylistsettings-minbuffertimeseconds"></a>
-Property description not available\.  
+Minimum amount of content \(measured in seconds\) that a player must keep available in the buffer\. Minimum value: `2` seconds\. Maximum value: `60` seconds\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinUpdatePeriodSeconds`  <a name="cfn-mediatailor-channel-dashplaylistsettings-minupdateperiodseconds"></a>
-Property description not available\.  
+Minimum amount of time \(in seconds\) that the player should wait before requesting updates to the manifest\. Minimum value: `2` seconds\. Maximum value: `60` seconds\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuggestedPresentationDelaySeconds`  <a name="cfn-mediatailor-channel-dashplaylistsettings-suggestedpresentationdelayseconds"></a>
-Property description not available\.  
+Amount of time \(in seconds\) that the player should be from the live point at the end of the manifest\. Minimum value: `2` seconds\. Maximum value: `60` seconds\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

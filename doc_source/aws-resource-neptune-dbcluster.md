@@ -138,7 +138,9 @@ Note that when you apply a parameter group using `DBInstanceParameterGroupName`,
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBPort`  <a name="cfn-neptune-dbcluster-dbport"></a>
-Property description not available\.  
+The port number on which the DB instances in the DB cluster accept connections\.  
+If not specified, the default port used is `8182`\.  
+The `Port` property will soon be deprecated\. Please update existing templates to use the new `DBPort` property that has the same functionality\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -281,9 +283,7 @@ The resource id for the DB cluster\. For example: `cluster-ABCD1234EFGH5678IJKL9
 The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
 
 `Port`  <a name="Port-fn::getatt"></a>
-The port number on which the DB instances in the DB cluster accept connections\.  
-If not specified, the default port used is `8182`\.  
-This property will soon be deprecated\. Please update existing templates to use the new `DBPort` property that has the same functionality\.
+The port number on which the DB instances in the DB cluster accept connections\.
 
 `ReadEndpoint`  <a name="ReadEndpoint-fn::getatt"></a>
 The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 

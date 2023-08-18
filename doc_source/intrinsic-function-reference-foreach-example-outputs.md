@@ -3,10 +3,10 @@
 These examples demonstrate using the `Fn::ForEach` intrinsic function in the [Outputs](outputs-section-structure.md) section\.
 
 **Topics**
-+ [Reference replicated [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.htmlAWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.htmlAWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) resources](#intrinsic-function-reference-foreach-example-replicate-outputs)
++ [Reference replicated [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) resources](#intrinsic-function-reference-foreach-example-replicate-outputs)
 + [Reference replicated [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resources](#intrinsic-function-reference-foreach-example-replicate-conditions)
 
-## Reference replicated [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.htmlAWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.htmlAWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) resources<a name="intrinsic-function-reference-foreach-example-replicate-outputs"></a>
+## Reference replicated [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) resources<a name="intrinsic-function-reference-foreach-example-replicate-outputs"></a>
 
 This example uses nested `Fn::ForEach` loops in the [Outputs](outputs-section-structure.md) section to reduce the template length\.
 

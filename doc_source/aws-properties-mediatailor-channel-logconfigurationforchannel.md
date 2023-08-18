@@ -1,6 +1,6 @@
 # AWS::MediaTailor::Channel LogConfigurationForChannel<a name="aws-properties-mediatailor-channel-logconfigurationforchannel"></a>
 
-<a name="aws-properties-mediatailor-channel-logconfigurationforchannel-description"></a>The `LogConfigurationForChannel` property type specifies Property description not available\. for an [AWS::MediaTailor::Channel](aws-resource-mediatailor-channel.md)\.
+The log configuration for the channel\.
 
 ## Syntax<a name="aws-properties-mediatailor-channel-logconfigurationforchannel-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediatailor-channel-logconfigurationforchannel-properties"></a>
 
 `LogTypes`  <a name="cfn-mediatailor-channel-logconfigurationforchannel-logtypes"></a>
-Property description not available\.  
+The log types\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

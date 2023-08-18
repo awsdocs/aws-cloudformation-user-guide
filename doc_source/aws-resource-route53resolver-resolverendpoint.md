@@ -76,15 +76,20 @@ A friendly name that lets you easily find a configuration in the Resolver dashbo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutpostArn`  <a name="cfn-route53resolver-resolverendpoint-outpostarn"></a>
-Property description not available\.  
+The ARN \(Amazon Resource Name\) for the Outpost\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `^arn:aws([a-z-]+)?:outposts:[a-z\d-]+:\d{12}:outpost/op-[a-f0-9]{17}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PreferredInstanceType`  <a name="cfn-route53resolver-resolverendpoint-preferredinstancetype"></a>
-Property description not available\.  
+ The Amazon EC2 instance type\.   
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResolverEndpointType`  <a name="cfn-route53resolver-resolverendpoint-resolverendpointtype"></a>
@@ -201,6 +206,33 @@ Properties :
     - 
       Key: LineOfBusiness
       Value: Engineering
+```
+
+### Associate a Resolver rule with a VPC<a name="aws-resource-route53resolver-resolverendpoint--examples--Associate_a_Resolver_rule_with_a_VPC"></a>
+
+The following example associates a resolver rule with a VPC\. When you associate a rule with a VPC, Resolver forwards all DNS queries for the domain name that is specified in the rule and that originate in the VPC\. The queries are forwarded to the IP addresses for the DNS resolvers that are specified in the rule\.
+
+#### JSON<a name="aws-resource-route53resolver-resolverendpoint--examples--Associate_a_Resolver_rule_with_a_VPC--json"></a>
+
+```
+{
+ "Type" : "AWS::Route53Resolver::ResolverRuleAssociation",
+ "Properties" : {
+	 "Name" : "MyResolverRuleAssociation",
+	 "ResolverRuleId" : "rslvr-rr-5328a0899aexample",
+	 "VPCId" : "vpc-03cf94c75cexample"
+	 }
+ }
+```
+
+#### YAML<a name="aws-resource-route53resolver-resolverendpoint--examples--Associate_a_Resolver_rule_with_a_VPC--yaml"></a>
+
+```
+Type: "AWS::Route53Resolver::ResolverRuleAssociation"
+	Properties:
+	  Name: MyResolverRuleAssociation
+	  ResolverRuleId: rslvr-rr-5328a0899aexample
+	  VPCId: vpc-03cf94c75cexample
 ```
 
 ## See also<a name="aws-resource-route53resolver-resolverendpoint--seealso"></a>

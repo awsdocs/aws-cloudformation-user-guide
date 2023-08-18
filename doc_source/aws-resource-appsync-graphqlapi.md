@@ -70,7 +70,7 @@ The following values are valid:
 `GRAPHQL | MERGED`  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationType`  <a name="cfn-appsync-graphqlapi-authenticationtype"></a>
 Security configuration for your GraphQL API\. For allowed values \(such as `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, or `AWS_LAMBDA`\), see [Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html) in the *AWS AppSync Developer Guide*\.  
@@ -132,7 +132,7 @@ Sets the scope of the GraphQL API to public \(`GLOBAL`\) or private \(`PRIVATE`\
 **WARNING**: If `Visibility` has not been defined, **explicitly** setting it to `GLOBAL` in a template/stack update will result in an API replacement and new DNS values\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `XrayEnabled`  <a name="cfn-appsync-graphqlapi-xrayenabled"></a>
 A flag indicating whether to use AWS X\-Ray tracing for this `GraphqlApi`\.  

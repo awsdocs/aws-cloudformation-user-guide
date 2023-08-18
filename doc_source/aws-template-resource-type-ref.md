@@ -88,6 +88,7 @@ service-provider::service-name::data-type-name
 + [Amazon EMR Serverless](AWS_EMRServerless.md)
 + [Amazon EMR on EKS](AWS_EMRContainers.md)
 + [Amazon ElastiCache](AWS_ElastiCache.md)
++ [AWS Entity Resolution](AWS_EntityResolution.md)
 + [Amazon EventBridge](AWS_Events.md)
 + [Amazon EventBridge Pipes](AWS_Pipes.md)
 + [Amazon EventBridge Scheduler](AWS_Scheduler.md)

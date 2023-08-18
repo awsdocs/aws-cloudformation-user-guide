@@ -1,6 +1,6 @@
 # AWS::MediaTailor::Channel SlateSource<a name="aws-properties-mediatailor-channel-slatesource"></a>
 
-<a name="aws-properties-mediatailor-channel-slatesource-description"></a>The `SlateSource` property type specifies Property description not available\. for an [AWS::MediaTailor::Channel](aws-resource-mediatailor-channel.md)\.
+Slate VOD source configuration\.
 
 ## Syntax<a name="aws-properties-mediatailor-channel-slatesource-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediatailor-channel-slatesource-properties"></a>
 
 `SourceLocationName`  <a name="cfn-mediatailor-channel-slatesource-sourcelocationname"></a>
-Property description not available\.  
+The name of the source location where the slate VOD source is stored\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VodSourceName`  <a name="cfn-mediatailor-channel-slatesource-vodsourcename"></a>
-Property description not available\.  
+The slate VOD source name\. The VOD source must already exist in a source location before it can be used for slate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

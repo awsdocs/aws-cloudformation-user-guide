@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CopyTagsToBackups](#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups)" : Boolean,
   "[DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime)" : String,
   "[DeploymentType](#cfn-fsx-filesystem-windowsconfiguration-deploymenttype)" : String,
+  "[DiskIopsConfiguration](#cfn-fsx-filesystem-windowsconfiguration-diskiopsconfiguration)" : DiskIopsConfiguration,
   "[PreferredSubnetId](#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid)" : String,
   "[SelfManagedActiveDirectoryConfiguration](#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration)" : SelfManagedActiveDirectoryConfiguration,
   "[ThroughputCapacity](#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity)" : Integer,
@@ -36,6 +37,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CopyTagsToBackups](#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups): Boolean
   [DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime): String
   [DeploymentType](#cfn-fsx-filesystem-windowsconfiguration-deploymenttype): String
+  [DiskIopsConfiguration](#cfn-fsx-filesystem-windowsconfiguration-diskiopsconfiguration): 
+    DiskIopsConfiguration
   [PreferredSubnetId](#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid): String
   [SelfManagedActiveDirectoryConfiguration](#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration): 
     SelfManagedActiveDirectoryConfiguration
@@ -102,6 +105,12 @@ For more information, see [ Availability and Durability: Single\-AZ and Multi\-A
 *Type*: String  
 *Allowed values*: `MULTI_AZ_1 | SINGLE_AZ_1 | SINGLE_AZ_2`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DiskIopsConfiguration`  <a name="cfn-fsx-filesystem-windowsconfiguration-diskiopsconfiguration"></a>
+The SSD IOPS \(input/output operations per second\) configuration for an Amazon FSx for Windows file system\. By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity\. You can provision additional IOPS per GiB of storage, up to the maximum limit associated with your chosen throughput capacity\.  
+*Required*: No  
+*Type*: [DiskIopsConfiguration](aws-properties-fsx-filesystem-openzfsconfiguration-diskiopsconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreferredSubnetId`  <a name="cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid"></a>
 Required when `DeploymentType` is set to `MULTI_AZ_1`\. This specifies the subnet in which you want the preferred file server to be located\. For in\-AWS applications, we recommend that you launch your clients in the same availability zone as your preferred file server to reduce cross\-availability zone data transfer costs and minimize latency\.   

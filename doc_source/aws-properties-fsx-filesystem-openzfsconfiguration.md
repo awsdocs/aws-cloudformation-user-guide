@@ -16,8 +16,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-openzfsconfiguration-dailyautomaticbackupstarttime)" : String,
   "[DeploymentType](#cfn-fsx-filesystem-openzfsconfiguration-deploymenttype)" : String,
   "[DiskIopsConfiguration](#cfn-fsx-filesystem-openzfsconfiguration-diskiopsconfiguration)" : DiskIopsConfiguration,
+  "[EndpointIpAddressRange](#cfn-fsx-filesystem-openzfsconfiguration-endpointipaddressrange)" : String,
   "[Options](#cfn-fsx-filesystem-openzfsconfiguration-options)" : [ String, ... ],
+  "[PreferredSubnetId](#cfn-fsx-filesystem-openzfsconfiguration-preferredsubnetid)" : String,
   "[RootVolumeConfiguration](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration)" : RootVolumeConfiguration,
+  "[RouteTableIds](#cfn-fsx-filesystem-openzfsconfiguration-routetableids)" : [ String, ... ],
   "[ThroughputCapacity](#cfn-fsx-filesystem-openzfsconfiguration-throughputcapacity)" : Integer,
   "[WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-openzfsconfiguration-weeklymaintenancestarttime)" : String
 }
@@ -33,10 +36,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DeploymentType](#cfn-fsx-filesystem-openzfsconfiguration-deploymenttype): String
   [DiskIopsConfiguration](#cfn-fsx-filesystem-openzfsconfiguration-diskiopsconfiguration): 
     DiskIopsConfiguration
+  [EndpointIpAddressRange](#cfn-fsx-filesystem-openzfsconfiguration-endpointipaddressrange): String
   [Options](#cfn-fsx-filesystem-openzfsconfiguration-options): 
     - String
+  [PreferredSubnetId](#cfn-fsx-filesystem-openzfsconfiguration-preferredsubnetid): String
   [RootVolumeConfiguration](#cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration): 
     RootVolumeConfiguration
+  [RouteTableIds](#cfn-fsx-filesystem-openzfsconfiguration-routetableids): 
+    - String
   [ThroughputCapacity](#cfn-fsx-filesystem-openzfsconfiguration-throughputcapacity): Integer
   [WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-openzfsconfiguration-weeklymaintenancestarttime): String
 ```
@@ -84,6 +91,15 @@ The SSD IOPS \(input/output operations per second\) configuration for an Amazon 
 *Type*: [DiskIopsConfiguration](aws-properties-fsx-filesystem-openzfsconfiguration-diskiopsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EndpointIpAddressRange`  <a name="cfn-fsx-filesystem-openzfsconfiguration-endpointipaddressrange"></a>
+\(Multi\-AZ only\) Specifies the IP address range in which the endpoints to access your file system will be created\. By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available /28 IP address range for you from one of the VPC's CIDR ranges\. You can have overlapping endpoint IP addresses for file systems deployed in the same VPC/route tables\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `9`  
+*Maximum*: `17`  
+*Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{9,17}$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Options`  <a name="cfn-fsx-filesystem-openzfsconfiguration-options"></a>
 To delete a file system if there are child volumes present below the root volume, use the string `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS`\. If your file system has child volumes and you don't use this option, the delete request will fail\.  
 *Required*: No  
@@ -91,10 +107,23 @@ To delete a file system if there are child volumes present below the root volume
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`PreferredSubnetId`  <a name="cfn-fsx-filesystem-openzfsconfiguration-preferredsubnetid"></a>
+Required when `DeploymentType` is set to `MULTI_AZ_1`\. This specifies the subnet in which you want the preferred file server to be located\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `RootVolumeConfiguration`  <a name="cfn-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration"></a>
 The configuration Amazon FSx uses when creating the root value of the Amazon FSx for OpenZFS file system\. All volumes are children of the root volume\.   
 *Required*: No  
 *Type*: [RootVolumeConfiguration](aws-properties-fsx-filesystem-openzfsconfiguration-rootvolumeconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RouteTableIds`  <a name="cfn-fsx-filesystem-openzfsconfiguration-routetableids"></a>
+\(Multi\-AZ only\) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to the correct file server\. You should specify all virtual private cloud \(VPC\) route tables associated with the subnets in which your clients are located\. By default, Amazon FSx selects your VPC's default route table\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThroughputCapacity`  <a name="cfn-fsx-filesystem-openzfsconfiguration-throughputcapacity"></a>

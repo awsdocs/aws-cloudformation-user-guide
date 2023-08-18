@@ -4,6 +4,38 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_MediaTailor.md) | The following resources were added: AWS::MediaTailor::Channel, AWS::MediaTailor::ChannelPolicy, AWS::MediaTailor::LiveSource, AWS::MediaTailor::SourceLocation, and AWS::MediaTailor::VodSource 
+
+ [AWS::MediaTailor::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html)   
+Use the `AWS::MediaTailor::Channel` resource to specify the configuration parameters for a channel\. 
+
+ [AWS::MediaTailor::ChannelPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channelpolicy.html)   
+Use the `AWS::MediaTailor::ChannelPolicy` resource to specify an IAM policy for the channel\. 
+
+ [AWS::MediaTailor::LiveSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-livesource.html)   
+Use the `AWS::MediaTailor::LiveSource` resource to specify configuration parameters for a live source\. 
+
+ [AWS::MediaTailor::SourceLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html)   
+Use the `AWS::MediaTailor::SourceLocation` resource to specify configuration parameters for a source location\. 
+
+ [AWS::MediaTailor::VodSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html)   
+Use the `AWS::MediaTailor::VodSource` resource to specify configuration parameters for a VOD source\.  | August 17, 2023 | 
+| [Updated resource](AWS_AppSync.md) | The following resources were updated: AWS::AppSync::GraphQLApi 
+
+ [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)   
+Updated several properties to mutable values\.  | August 17, 2023 | 
+| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::Filesystem 
+
+[AWS::FSx::Filesystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
+The `AWS::FSx::FileSystem OpenZFSConfiguration` and `AWS::FSx::FileSystem WindowsConfiguration` resources were updated\.  | August 17, 2023 | 
+| [New resources](AWS_EntityResolution.md) | The following resource was added: AWS::EntityResolution::SchemaMapping\. 
+
+ [AWS::EntityResolution::SchemaMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html)   
+Use the `AWS::EntityResolution::SchemaMapping` resource to specify a new schema mapping resource in AWS Entity Resolution\.  | August 17, 2023 | 
+| [New resource](AWS_Route53Resolver.md) | The following resource was added: AWS::Route53Resolver::OutpostResolver 
+
+[AWS::Route53Resolver::OutpostResolver](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-outpostresolver.html)  
+Use the `AWS::Route53Resolver::OutpostResolver` resource to specify information about a Route 53 Resolver on an AWS Outposts\.  | August 17, 2023 | 
 | [Updated resource](AWS_EC2.md) | The following resource was updated: AWS::EC2::LaunchTemplate NetworkInterface\. 
 
  [ AWS::EC2::LaunchTemplate NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)   
@@ -1638,7 +1670,23 @@ Use the `AdvancedFieldSelector` property to specify fine\-grained event properti
 
  [AWS::ConnectCampaigns::Campaign](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_ConnectCampaigns.html)   
 Use the `AWS::ConnectCampaigns::Campaign` resource to create a high\-volume outbound campaign\.  | June 23, 2022 | 
-| [Updated resources](AWS_MediaTailor.md) | The following resource updated: AWS::MediaTailor::PlaybackConfiguration\. 
+| [Updated resources](AWS_MediaTailor.md) | The following resources were updated: AWS::MediaTailor::Channel, AWS::MediaTailor::LiveSource, AWS::MediaTailor::SourceLocation, and AWS::MediaTailor::VodSource\. 
+
+ [AWS::MediaTailor::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html)   
+Added `DashPlaylistSettings`, `HlsPlaylistSettings`, `LogConfigurationForChannel`, `RequestOutputItem`, and `SlateSource` properties\. 
+
+ [AWS::MediaTailor::ChannelPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channelpolicy.html)   
+Added `ChannelName`and `Policy` properties\. 
+
+ [AWS::MediaTailor::LiveSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-livesource.html)   
+Added `HttpPackageConfiguration` property\. 
+
+ [AWS::MediaTailor::SourceLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html)   
+Added `AccessConfiguration`, `DefaultSegmentDeliveryConfiguration`, `HttpConfiguration`, `SecretsManagerAccessTokenConfiguration`, and `SegmentDeliveryConfiguration` properties\. 
+
+ [AWS::MediaTailor::VodSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html)   
+Added `HttpPackageConfiguration` property\.  | June 22, 2022 | 
+| [Updated resources](AWS_MediaTailor.md) | The following resource was updated: AWS::MediaTailor::PlaybackConfiguration\. 
 
  [AWS::MediaTailor::PlaybackConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html)   
 Added `DashConfiguration.ManifestEndpointPrefix`, `HlsConfiguration.ManifestEndpointPrefix`, `PlaybackConfigurationArn`, `PlaybackEndpointPrefix`, and `SessionInitializationEndpointPrefix` return values\.  | June 16, 2022 | 

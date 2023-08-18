@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)" : {Key: Value, ...},
   "[RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename)" : String,
   "[ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression)" : String,
+  "[ScheduleExpressionTimezone](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpressiontimezone)" : String,
   "[StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes)" : Double,
   "[TargetBackupVault](#cfn-backup-backupplan-backupruleresourcetype-targetbackupvault)" : String
 }
@@ -35,6 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     Key: Value
   [RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename): String
   [ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression): String
+  [ScheduleExpressionTimezone](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpressiontimezone): String
   [StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes): Double
   [TargetBackupVault](#cfn-backup-backupplan-backupruleresourcetype-targetbackupvault): String
 ```
@@ -79,6 +81,12 @@ A display name for a backup rule\.
 
 `ScheduleExpression`  <a name="cfn-backup-backupplan-backupruleresourcetype-scheduleexpression"></a>
 A CRON expression specifying when AWS Backup initiates a backup job\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ScheduleExpressionTimezone`  <a name="cfn-backup-backupplan-backupruleresourcetype-scheduleexpressiontimezone"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

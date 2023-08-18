@@ -1,6 +1,6 @@
 # AWS::MediaTailor::VodSource HttpPackageConfiguration<a name="aws-properties-mediatailor-vodsource-httppackageconfiguration"></a>
 
-<a name="aws-properties-mediatailor-vodsource-httppackageconfiguration-description"></a>The `HttpPackageConfiguration` property type specifies Property description not available\. for an [AWS::MediaTailor::VodSource](aws-resource-mediatailor-vodsource.md)\.
+The HTTP package configuration properties for the requested VOD source\.
 
 ## Syntax<a name="aws-properties-mediatailor-vodsource-httppackageconfiguration-syntax"></a>
 
@@ -27,19 +27,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediatailor-vodsource-httppackageconfiguration-properties"></a>
 
 `Path`  <a name="cfn-mediatailor-vodsource-httppackageconfiguration-path"></a>
-Property description not available\.  
+The relative path to the URL for this VOD source\. This is combined with `SourceLocation::HttpConfiguration::BaseUrl` to form a valid URL\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceGroup`  <a name="cfn-mediatailor-vodsource-httppackageconfiguration-sourcegroup"></a>
-Property description not available\.  
+The name of the source group\. This has to match one of the `Channel::Outputs::SourceGroup`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-mediatailor-vodsource-httppackageconfiguration-type"></a>
-Property description not available\.  
+The streaming protocol for this package configuration\. Supported values are `HLS` and `DASH`\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `DASH | HLS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

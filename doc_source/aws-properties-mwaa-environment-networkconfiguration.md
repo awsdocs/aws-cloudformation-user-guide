@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A list of one or more security group IDs\. Accepts up to 5 security group IDs\. A security group must be attached to the same VPC as the subnets\. To learn more, see [Security in your VPC on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html)\.  
 *Required*: No  
 *Type*: List of String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-mwaa-environment-networkconfiguration-subnetids"></a>
 A list of subnet IDs\. **Required** to create an environment\. Must be private subnets in two different availability zones\. A subnet must be attached to the same VPC as the security group\. To learn more, see [About networking on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html)\.  

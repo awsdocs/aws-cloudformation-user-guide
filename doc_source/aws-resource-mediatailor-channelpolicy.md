@@ -1,6 +1,6 @@
 # AWS::MediaTailor::ChannelPolicy<a name="aws-resource-mediatailor-channelpolicy"></a>
 
-<a name="aws-resource-mediatailor-channelpolicy-description"></a>The `AWS::MediaTailor::ChannelPolicy` resource Property description not available\. for MediaTailor\.
+Specifies an IAM policy for the channel\. IAM policies are used to control access to your channel\.
 
 ## Syntax<a name="aws-resource-mediatailor-channelpolicy-syntax"></a>
 
@@ -30,13 +30,13 @@ Properties:
 ## Properties<a name="aws-resource-mediatailor-channelpolicy-properties"></a>
 
 `ChannelName`  <a name="cfn-mediatailor-channelpolicy-channelname"></a>
-Property description not available\.  
+The name of the channel associated with this Channel Policy\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Policy`  <a name="cfn-mediatailor-channelpolicy-policy"></a>
-Property description not available\.  
+The IAM policy for the channel\. IAM policies are used to control access to your channel\.  
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

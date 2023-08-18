@@ -1,6 +1,6 @@
 # AWS::Neptune::DBCluster ServerlessScalingConfiguration<a name="aws-properties-neptune-dbcluster-serverlessscalingconfiguration"></a>
 
-<a name="aws-properties-neptune-dbcluster-serverlessscalingconfiguration-description"></a>The `ServerlessScalingConfiguration` property type specifies Property description not available\. for an [AWS::Neptune::DBCluster](aws-resource-neptune-dbcluster.md)\.
+Contains the scaling configuration of a Neptune Serverless DB cluster\.
 
 ## Syntax<a name="aws-properties-neptune-dbcluster-serverlessscalingconfiguration-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-neptune-dbcluster-serverlessscalingconfiguration-properties"></a>
 
 `MaxCapacity`  <a name="cfn-neptune-dbcluster-serverlessscalingconfiguration-maxcapacity"></a>
-Property description not available\.  
+The maximum number of Neptune capacity units \(NCUs\) for a DB instance in a Neptune Serverless cluster\. You can specify NCU values in half\-step increments, such as 40, 40\.5, 41, and so on\.  
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinCapacity`  <a name="cfn-neptune-dbcluster-serverlessscalingconfiguration-mincapacity"></a>
-Property description not available\.  
+The minimum number of Neptune capacity units \(NCUs\) for a DB instance in a Neptune Serverless cluster\. You can specify NCU values in half\-step increments, such as 8, 8\.5, 9, and so on\.  
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

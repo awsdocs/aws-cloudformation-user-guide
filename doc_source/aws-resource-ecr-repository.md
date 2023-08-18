@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::Repository",
   "Properties" : {
+      "[EmptyOnDelete](#cfn-ecr-repository-emptyondelete)" : Boolean,
       "[EncryptionConfiguration](#cfn-ecr-repository-encryptionconfiguration)" : EncryptionConfiguration,
       "[ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration)" : ImageScanningConfiguration,
       "[ImageTagMutability](#cfn-ecr-repository-imagetagmutability)" : String,
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ECR::Repository
 Properties: 
+  [EmptyOnDelete](#cfn-ecr-repository-emptyondelete): Boolean
   [EncryptionConfiguration](#cfn-ecr-repository-encryptionconfiguration): 
     EncryptionConfiguration
   [ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration): 
@@ -42,6 +44,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-ecr-repository-properties"></a>
+
+`EmptyOnDelete`  <a name="cfn-ecr-repository-emptyondelete"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionConfiguration`  <a name="cfn-ecr-repository-encryptionconfiguration"></a>
 The encryption configuration for the repository\. This determines how the contents of your repository are encrypted at rest\.  
