@@ -45,7 +45,7 @@ The ID of the route table\.
 
 ### Ref<a name="aws-resource-ec2-gatewayroutetableassociation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the gateway\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the association\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-gatewayroutetableassociation-return-values-fn--getatt"></a>
 

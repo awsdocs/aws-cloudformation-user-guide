@@ -1,6 +1,6 @@
 # AWS::EMRServerless::Application WorkerTypeSpecificationInput<a name="aws-properties-emrserverless-application-workertypespecificationinput"></a>
 
-<a name="aws-properties-emrserverless-application-workertypespecificationinput-description"></a>The `WorkerTypeSpecificationInput` property type specifies Property description not available\. for an [AWS::EMRServerless::Application](aws-resource-emrserverless-application.md)\.
+The specifications for a worker type\.
 
 ## Syntax<a name="aws-properties-emrserverless-application-workertypespecificationinput-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-emrserverless-application-workertypespecificationinput-properties"></a>
 
 `ImageConfiguration`  <a name="cfn-emrserverless-application-workertypespecificationinput-imageconfiguration"></a>
-Property description not available\.  
+The image configuration for a worker type\.  
 *Required*: No  
 *Type*: [ImageConfigurationInput](aws-properties-emrserverless-application-imageconfigurationinput.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

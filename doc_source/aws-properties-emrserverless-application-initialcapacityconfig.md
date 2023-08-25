@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The resource configuration of the initial capacity configuration\.  
 *Required*: Yes  
 *Type*: [WorkerConfiguration](aws-properties-emrserverless-application-workerconfiguration.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `WorkerCount`  <a name="cfn-emrserverless-application-initialcapacityconfig-workercount"></a>
 The number of workers in the initial capacity configuration\.  
@@ -37,4 +37,4 @@ The number of workers in the initial capacity configuration\.
 *Maximum*: 1000000  
 *Required*: Yes  
 *Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

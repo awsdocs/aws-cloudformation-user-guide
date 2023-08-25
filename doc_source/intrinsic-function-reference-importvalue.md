@@ -170,6 +170,5 @@ You can use the following functions in the `Fn::ImportValue` function\. The valu
 + `Fn::If`
 + `Fn::Join`
 + `Fn::Select`
-+ `Fn::Split`
 + `Fn::Sub`
 + `Ref`

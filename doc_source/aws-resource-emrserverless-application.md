@@ -58,25 +58,25 @@ Properties:
 ## Properties<a name="aws-resource-emrserverless-application-properties"></a>
 
 `Architecture`  <a name="cfn-emrserverless-application-architecture"></a>
-The CPU architecture type of the application\. Allowed values: `X86_64` or `ARM64`  
+The CPU architecture type of the application\. Allowed values: `X86_64` or `ARM64`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `AutoStartConfiguration`  <a name="cfn-emrserverless-application-autostartconfiguration"></a>
 The configuration for an application to automatically start on job submission\.  
 *Required*: No  
 *Type*: [AutoStartConfiguration](aws-properties-emrserverless-application-autostartconfiguration.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `AutoStopConfiguration`  <a name="cfn-emrserverless-application-autostopconfiguration"></a>
 The configuration for an application to automatically stop after a certain amount of time being idle\.  
 *Required*: No  
 *Type*: [AutoStopConfiguration](aws-properties-emrserverless-application-autostopconfiguration.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `ImageConfiguration`  <a name="cfn-emrserverless-application-imageconfiguration"></a>
-Property description not available\.  
+The image configuration for all worker types\. You can either set this parameter or `imageConfiguration` for each worker type in `workerTypeSpecifications`\.  
 *Required*: No  
 *Type*: [ImageConfigurationInput](aws-properties-emrserverless-application-imageconfigurationinput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -85,19 +85,16 @@ Property description not available\.
 The initial capacity of the application\.  
 *Required*: No  
 *Type*: List of [InitialCapacityConfigKeyValuePair](aws-properties-emrserverless-application-initialcapacityconfigkeyvaluepair.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `MaximumCapacity`  <a name="cfn-emrserverless-application-maximumcapacity"></a>
 The maximum capacity of the application\. This is cumulative across all workers at any given point in time during the lifespan of the application is created\. No new resources will be created once any one of the defined limits is hit\.  
 *Required*: No  
 *Type*: [MaximumAllowedResources](aws-properties-emrserverless-application-maximumallowedresources.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Name`  <a name="cfn-emrserverless-application-name"></a>
 The name of the application\.  
-*Minimum*: 1  
-*Maximum*: 64  
-*Pattern*: `^[A-Za-z0-9._\\/#-]+$`  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -109,19 +106,16 @@ The name of the application\.
 The network configuration for customer VPC connectivity for the application\.  
 *Required*: No  
 *Type*: [NetworkConfiguration](aws-properties-emrserverless-application-networkconfiguration.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `ReleaseLabel`  <a name="cfn-emrserverless-application-releaselabel"></a>
 The EMR release version associated with the application\.  
-*Minimum*: 1  
-*Maximum*: 64  
-*Pattern*: `^[A-Za-z0-9._/-]+$`  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
 *Pattern*: `[A-Za-z0-9._/-]+`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Tags`  <a name="cfn-emrserverless-application-tags"></a>
 The tags assigned to the application\.  
@@ -138,10 +132,10 @@ The type of application, such as Spark or Hive\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WorkerTypeSpecifications`  <a name="cfn-emrserverless-application-workertypespecifications"></a>
-Property description not available\.  
+The key\-value pairs that specify worker type to `WorkerTypeSpecificationInput`\. This parameter must contain all valid worker types for a Spark or Hive application\. Valid worker types include `Driver` and `Executor` for Spark applications and `HiveDriver` and `TezTask` for Hive applications\. You can either set image details in this parameter for each worker type, or in `imageConfiguration` for all worker types\.  
 *Required*: No  
 *Type*: Map of [WorkerTypeSpecificationInput](aws-properties-emrserverless-application-workertypespecificationinput.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 ## Return values<a name="aws-resource-emrserverless-application-return-values"></a>
 

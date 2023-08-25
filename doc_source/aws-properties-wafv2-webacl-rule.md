@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL Rule<a name="aws-properties-wafv2-webacl-rule"></a>
 
-A single rule, which you can use in a [AWS::WAFv2::WebACL](aws-resource-wafv2-webacl.md) or [AWS::WAFv2::RuleGroup](aws-resource-wafv2-rulegroup.md) to identify web requests that you want to allow, block, or count\. Each rule includes one top\-level [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-rule.html#cfn-wafv2-webacl-rule-statement) that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\. 
+A single rule, which you can use in a [AWS::WAFv2::WebACL](aws-resource-wafv2-webacl.md) or [AWS::WAFv2::RuleGroup](aws-resource-wafv2-rulegroup.md) to identify web requests that you want to manage in some way\. Each rule includes one top\-level [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-rule.html#cfn-wafv2-webacl-rule-statement) that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-rule-syntax"></a>
 

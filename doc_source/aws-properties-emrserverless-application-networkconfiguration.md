@@ -34,7 +34,7 @@ The array of security group Ids for customer VPC connectivity\.
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SubnetIds`  <a name="cfn-emrserverless-application-networkconfiguration-subnetids"></a>
 The array of subnet Ids for customer VPC connectivity\.  
@@ -44,4 +44,4 @@ The array of subnet Ids for customer VPC connectivity\.
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `16`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

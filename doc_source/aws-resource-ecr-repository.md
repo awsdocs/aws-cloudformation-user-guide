@@ -46,7 +46,7 @@ Properties:
 ## Properties<a name="aws-resource-ecr-repository-properties"></a>
 
 `EmptyOnDelete`  <a name="cfn-ecr-repository-emptyondelete"></a>
-Property description not available\.  
+If true, deleting the repository force deletes the contents of the repository\. If false, the repository must be empty before attempting to delete it\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

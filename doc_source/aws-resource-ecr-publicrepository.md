@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-ecr-publicrepository-properties"></a>
 
 `RepositoryCatalogData`  <a name="cfn-ecr-publicrepository-repositorycatalogdata"></a>
-Property description not available\.  
+The details about the repository that are publicly visible in the Amazon ECR Public Gallery\. For more information, see [Amazon ECR Public repository catalog data](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repository-catalog-data.html) in the *Amazon ECR Public User Guide*\.  
 *Required*: No  
 *Type*: [RepositoryCatalogData](aws-properties-ecr-publicrepository-repositorycatalogdata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

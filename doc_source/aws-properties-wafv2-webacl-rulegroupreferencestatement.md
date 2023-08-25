@@ -2,7 +2,7 @@
 
 A rule statement used to run the rules that are defined in a [AWS::WAFv2::RuleGroup](aws-resource-wafv2-rulegroup.md)\. To use this, create a rule group with your rules, then provide the ARN of the rule group in this statement\.
 
-You cannot nest a `RuleGroupReferenceStatement`, for example for use inside a `NotStatement` or `OrStatement`\. You can only use a rule group reference statement at the top level inside a web ACL\. 
+You cannot nest a `RuleGroupReferenceStatement`, for example for use inside a `NotStatement` or `OrStatement`\. You cannot use a rule group reference statement inside another rule group\. You can only reference a rule group as a top\-level statement within a rule that you define in a web ACL\.
 
 ## Syntax<a name="aws-properties-wafv2-webacl-rulegroupreferencestatement-syntax"></a>
 

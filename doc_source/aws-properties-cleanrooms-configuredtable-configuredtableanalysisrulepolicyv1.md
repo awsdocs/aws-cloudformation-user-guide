@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Aggregation](#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicyv1-aggregation)" : AnalysisRuleAggregation,
+  "[Custom](#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicyv1-custom)" : AnalysisRuleCustom,
   "[List](#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicyv1-list)" : AnalysisRuleList
 }
 ```
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Aggregation](#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicyv1-aggregation): 
     AnalysisRuleAggregation
+  [Custom](#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicyv1-custom): 
+    AnalysisRuleCustom
   [List](#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicyv1-list): 
     AnalysisRuleList
 ```
@@ -30,6 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Analysis rule type that enables only aggregation queries on a configured table\.  
 *Required*: No  
 *Type*: [AnalysisRuleAggregation](aws-properties-cleanrooms-configuredtable-analysisruleaggregation.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Custom`  <a name="cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicyv1-custom"></a>
+Analysis rule type that enables custom SQL queries on a configured table\.  
+*Required*: No  
+*Type*: [AnalysisRuleCustom](aws-properties-cleanrooms-configuredtable-analysisrulecustom.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `List`  <a name="cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicyv1-list"></a>

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AttributeAggregationFunction](#cfn-quicksight-analysis-aggregationfunction-attributeaggregationfunction)" : AttributeAggregationFunction,
   "[CategoricalAggregationFunction](#cfn-quicksight-analysis-aggregationfunction-categoricalaggregationfunction)" : String,
   "[DateAggregationFunction](#cfn-quicksight-analysis-aggregationfunction-dateaggregationfunction)" : String,
   "[NumericalAggregationFunction](#cfn-quicksight-analysis-aggregationfunction-numericalaggregationfunction)" : NumericalAggregationFunction
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-quicksight-analysis-aggregationfunction-syntax.yaml"></a>
 
 ```
+  [AttributeAggregationFunction](#cfn-quicksight-analysis-aggregationfunction-attributeaggregationfunction): 
+    AttributeAggregationFunction
   [CategoricalAggregationFunction](#cfn-quicksight-analysis-aggregationfunction-categoricalaggregationfunction): String
   [DateAggregationFunction](#cfn-quicksight-analysis-aggregationfunction-dateaggregationfunction): String
   [NumericalAggregationFunction](#cfn-quicksight-analysis-aggregationfunction-numericalaggregationfunction): 
@@ -28,6 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-quicksight-analysis-aggregationfunction-properties"></a>
+
+`AttributeAggregationFunction`  <a name="cfn-quicksight-analysis-aggregationfunction-attributeaggregationfunction"></a>
+Aggregation for attributes\.  
+*Required*: No  
+*Type*: [AttributeAggregationFunction](aws-properties-quicksight-analysis-attributeaggregationfunction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CategoricalAggregationFunction`  <a name="cfn-quicksight-analysis-aggregationfunction-categoricalaggregationfunction"></a>
 Aggregation for categorical values\.  

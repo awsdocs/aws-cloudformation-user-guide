@@ -26,4 +26,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Enables the application to automatically start on job submission\. Defaults to true\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

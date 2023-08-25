@@ -83,7 +83,7 @@ Any tags assigned to the DHCP options set\.
 
 ### Ref<a name="aws-resource-ec2-dhcpoptions-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource ID\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

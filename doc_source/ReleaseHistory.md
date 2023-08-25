@@ -4,6 +4,47 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_CleanRooms.md) | The following resource was updated: `AWS::CleanRooms::ConfiguredTable`\. 
+
+[AWS::CleanRooms::ConfiguredTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html)  
+Use the `AnalysisRuleCustom` property to specify a configured table resource with the `custom` analysis rule type in AWS Clean Rooms\.  | August 24, 2023 | 
+| [Updated resource](AWS_EMRServerless.md) | The following resource was updated: `AWS::EMRServerless::Application`\. 
+
+ [AWS::EMRServerless::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html)   
+The `ReleaseLabel` property can now be modified\.  | August 24, 2023 | 
+| [New resources](AWS_EntityResolution.md) | The following resource was added: `AWS::EntityResolution::MatchingWorkflow`\. 
+
+ [AWS::EntityResolution::MatchingWorkflow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html)   
+Use the `AWS::EntityResolution::MatchingWorkflow` resource to specify a new matching workflow resource in AWS Entity Resolution\.  | August 24, 2023 | 
+| [New resources](AWS_WorkSpacesWeb.md) | The following resources were added: `AWS::WorkSpacesWeb::BrowserSettings`, `AWS::WorkSpacesWeb::IdentityProvider`, `AWS::WorkSpacesWeb::IpAccessSettings`, `AWS::WorkSpacesWeb::NetworkSettings`, `AWS::WorkSpacesWeb::Portal`, `AWS::WorkSpacesWeb::TrustStore`, `AWS::WorkSpacesWeb::UserAccessLoggingSettings`, and `AWS::WorkSpacesWeb::UserSettings`\. 
+
+ [AWS::WorkSpacesWeb::BrowserSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-browsersettings.html)   
+Use the `AWS::WorkSpacesWeb::BrowserSettings` resource to specify browser settings that can be associated with a web portal\. 
+
+ [AWS::WorkSpacesWeb::IdentityProvider](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-identityprovider.html)   
+Use the `AWS::WorkSpacesWeb::IdentityProvider` resource to specify an identity provider that is then associated with a web portal\. 
+
+ [AWS::WorkSpacesWeb::IpAccessSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html)   
+Use the `AWS::WorkSpacesWeb::IpAccessSettings` resource to specify IP access settings that can be associated with a web portal\. 
+
+ [AWS::WorkSpacesWeb::NetworkSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-networksettings.html)   
+Use the `AWS::WorkSpacesWeb::NetworkSettings` resource to specify network settings that can be associated with a web portal\. 
+
+ [AWS::WorkSpacesWeb::Portal](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html)   
+Use the `AWS::WorkSpacesWeb::Portal` resource to specify a web portal, which users use to start browsing sessions\. 
+
+ [AWS::WorkSpacesWeb::TrustStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-truststore.html)   
+Use the `AWS::WorkSpacesWeb::TrustStore` resource to specify a trust store that can be associated with a web portal\. 
+
+ [AWS::WorkSpacesWeb::UserAccessLoggingSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-useraccessloggingsettings.html)   
+Use the `AWS::WorkSpacesWeb::UserAccessLoggingSettings` resource to specify user access logging settings that can be associated with a web portal\. 
+
+ [AWS::WorkSpacesWeb::UserSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html)   
+Use the `AWS::WorkSpacesWeb::UserSettings` resource to specify user settings that can be associated with a web portal\.  | August 24, 2023 | 
+| [New resource](AWS_EMR.md) | The following resource was added: `AWS::EMR::WALWorkspace`\. 
+
+ [AWS::EMR::WALWorkspace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html)   
+Use `properties` to configure an Amazon EMR write\-ahead log\.  | August 24, 2023 | 
 | [Updated resources](AWS_MediaTailor.md) | The following resources were added: AWS::MediaTailor::Channel, AWS::MediaTailor::ChannelPolicy, AWS::MediaTailor::LiveSource, AWS::MediaTailor::SourceLocation, and AWS::MediaTailor::VodSource 
 
  [AWS::MediaTailor::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html)   
@@ -28,10 +69,14 @@ Updated several properties to mutable values\.  | August 17, 2023 |
 
 [AWS::FSx::Filesystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
 The `AWS::FSx::FileSystem OpenZFSConfiguration` and `AWS::FSx::FileSystem WindowsConfiguration` resources were updated\.  | August 17, 2023 | 
-| [New resources](AWS_EntityResolution.md) | The following resource was added: AWS::EntityResolution::SchemaMapping\. 
+| [New resources](AWS_EntityResolution.md) | The following resource was added: `AWS::EntityResolution::SchemaMapping`\. 
 
  [AWS::EntityResolution::SchemaMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html)   
 Use the `AWS::EntityResolution::SchemaMapping` resource to specify a new schema mapping resource in AWS Entity Resolution\.  | August 17, 2023 | 
+| [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::InstanceConnectEndpoint\. 
+
+ [ AWS::EC2::InstanceConnectEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html)   
+Creates an EC2 Instance Connect Endpoint\.  | August 17, 2023 | 
 | [New resource](AWS_Route53Resolver.md) | The following resource was added: AWS::Route53Resolver::OutpostResolver 
 
 [AWS::Route53Resolver::OutpostResolver](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-outpostresolver.html)  
@@ -142,6 +187,10 @@ Use the `AWS::Connect::RoutingProfile` resource to create a routing profile for 
 
  [AWS::Connect::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html)   
 Use the `AWS::Connect::Queue` resource to create a queue for the specified Amazon Connect instance\.   | July 20, 2023 | 
+| [Updated resource](AWS_CleanRooms.md) | The following resource was updated: `AWS::CleanRooms::ConfiguredTable` 
+
+[AWS::CleanRooms::ConfiguredTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html)  
+Use the `AWS::CleanRooms::ConfiguredTable` resource to specify a new configured table resource in AWS Clean Rooms\.  | July 13, 2023 | 
 | [Updated resource](AWS_InternetMonitor.md) | The following resource was updated: `AWS::InternetMonitor::Monitor`\. 
 
  [AWS::InternetMonitor::Monitor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html)   
@@ -235,7 +284,7 @@ Use the `preset` property to set a transcode preset, based on bandwidth delivery
 
  [AWS::S3::Bucket ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html)   
 Updated `SSEAlgorithm` to add a new allowed value: `DSSE-KMS`\. You can apply this setting to enable dual\-layer server\-side encryption with AWS KMS keys\.  | June 15, 2023 | 
-| [New resources](AWS_CleanRooms.md) | The following resources were added: AWS::CleanRooms::Collaboration, AWS::CleanRooms::ConfiguredTable, AWS::CleanRooms::ConfiguredTableAssociation, and AWS::CleanRooms::Membership\. 
+| [New resources](AWS_CleanRooms.md) | The following resources were added: `AWS::CleanRooms::Collaboration`, `AWS::CleanRooms::ConfiguredTable`, `AWS::CleanRooms::ConfiguredTableAssociation`, and `AWS::CleanRooms::Membership`\. 
 
  [AWS::CleanRooms::Collaboration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html)   
 Use the `AWS::CleanRooms::Collaboration` resource to specify a new collaboration resource in AWS Clean Rooms\. 
@@ -876,6 +925,11 @@ For more information, see [Adding or removing response headers](https://docs.aws
 
  [AirflowVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)   
 The `AirflowVersion` property has been updated to include a new valid value for Apache Airflow version 2\.4\.3\.  | January 5, 2023 | 
+| [Updated resource](AWS_EMRServerless.md) | The following resource was updated: `AWS::EMRServerless::Application`\. 
+
+ [AWS::EMRServerless::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html)   
+Use the `ImageConfigurationInput` property to specify your custom image configuration for all worker types\.  
+Use the `WorkerTypeSpecificationInput` property to specify the configuration for a worker type\.  | January 3, 2023 | 
 | [Updated resource](AWS_Lex.md) | The following property type was updated: AWS::Lex::Bot\. 
 
 [AWS::Lex::Bot](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html)  
@@ -1135,6 +1189,10 @@ Use the `KmsKeyId` property to specify the AWS KMS key ID to use to encrypt the 
 
  [AWS::AutoScaling::AutoScalingGroup InstanceRequirements](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html)   
 Use the `AllowedInstanceTypes` and `NetworkBandwidthGbpsRequest` properties when using attribute\-based instance type selection\.  | November 17, 2022 | 
+| [Updated resource](AWS_EMRServerless.md) | The following resource was updated: `AWS::EMRServerless::Application`\. 
+
+ [AWS::EMRServerless::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html)   
+Use the `Architecture` property to specify the CPU architecture type of the application\.  | November 17, 2022 | 
 | [Updated resource](AWS_IVS.md) | The following resource was updated: AWS::IVS::RecordingConfiguration 
 
  [AWS::IVS::RecordingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html)   
@@ -1159,10 +1217,6 @@ Use the `AWS::Organizations::OrganizationalUnit` resource to create an organizat
 
  [AWS::Organizations::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-policy.html)   
 Use the `AWS::Organizations::Policy` resource to create a policy of a specified type that you can attach to a root, an organizational unit \(OU\), or an individual AWS account in AWS Organizations\.  | November 17, 2022 | 
-| [New resource](AWS_EMRServerless.md) | The following resource was added: AWS::EMRServerless::Application:Architecture\. 
-
- [AWS::EMRServerless::Application:Architecture](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html)   
-Use the `AWS::EMRServerless::Application:Architecture` resource to specify the CPU architecture type of the application\.  | November 17, 2022 | 
 | [New resource](AWS_XRay.md) | The following resource was added: AWS::XRay::ResourcePolicy\. 
 
  [AWS::XRay::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html)   
@@ -1738,7 +1792,7 @@ Use the `AWS::Connect::TaskTemplate` resource to create a task template\.  | Jun
 
  [AWS::Transfer::Server ProtocolDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html)   
 Use the `SetStatOption` to ignore the error that is generated when the client attempts to use SETSTAT on a file you are uploading to an S3 bucket\.  | May 26, 2022 | 
-| [New resource](AWS_EMRServerless.md) | The following resource was added: AWS::EMRServerless::Application\. 
+| [New resource](AWS_EMRServerless.md) | The following resource was added: `AWS::EMRServerless::Application`\. 
 
  [AWS::EMRServerless::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html)   
 Use the `AWS::EMRServerless::Application` resource to specify an EMR Serverless application\.  | May 26, 2022 | 
@@ -1937,14 +1991,6 @@ Use the [TextLogSetting](https://docs.aws.amazon.com/AWSCloudFormation/latest/Us
 
  [ AWS::IoTEvents::AlarmModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-alarmmodel.html)   
 Use the `AlarmModel` resource to monitor an AWS IoT Events input attribute\.  | March 24, 2022 | 
-| [Updated resource](AWS_ACMPCA.md) | The following resources were updated: AWS::ACMPCA::Certificate and AWS::ACMPCA::CertificateAuthority\. 
-
- [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   
-Use the `CustomAttribute` object to \.  
-Use the `CustomExtension` object to \. 
-
- [AWS::ACMPCA::CertificateAuthority](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)   
-Use the `CustomAttribute` object to \.  | March 17, 2022 | 
 | [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::Filesystem 
 
 [AWS::FSx::Filesystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
@@ -1969,6 +2015,14 @@ FSx for OpenZFS volumes now support setting the suggested block size for a volum
 
 [AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
 FSx for ONTAP file systems now support lower ThroughputCapacity settings\.  | March 17, 2022 | 
+| [Updated resource](AWS_ACMPCA.md) | The following resources were updated: AWS::ACMPCA::Certificate and AWS::ACMPCA::CertificateAuthority\. 
+
+ [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   
+Use the `CustomAttribute` object to \.  
+Use the `CustomExtension` object to \. 
+
+ [AWS::ACMPCA::CertificateAuthority](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)   
+Use the `CustomAttribute` object to \.  | March 17, 2022 | 
 | [Updated resource](AWS_FIS.md) | The following resource was updated: AWS::FIS::ExperimentTemplate\. 
 
  [AWS::FIS::ExperimentTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html)   
@@ -2687,7 +2741,7 @@ Use the `SubnetGroup` resource to specify a MemoryDB subnet group and associate 
 
  [AWS::MemoryDB::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html)   
 Use the `User` resource to specify a MemoryDB user and add it to an access control list\.  | September 23, 2021 | 
-| [Updated resources](AWS_EMR.md) | The following resource was updated: AWS::EMR::Studio\. 
+| [Updated resources](AWS_EMR.md) | The following resource was updated: `AWS::EMR::Studio`\. 
 
  [AWS::EMR::Studio](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html)   
 Use the `IdpAuthUrl` property to specify the authentication endpoint of your identity provider \(IdP\) when you use IAM authentication and want to let federated users log in to an Amazon EMR Studio with the Studio URL and credentials from your IdP\.  
@@ -2721,10 +2775,6 @@ Use the `WorkflowDetail` property to specify the steps and other details for a w
 
 [AWS::Transfer::Server WorkflowDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-workflowdetails)  
 Use the `WorkflowDetails` property as a container for the `WorkflowDetails` property\.  | September 2, 2021 | 
-| [Updated resource](AWS_ACMPCA.md) | The following resource was added: AWS::ACMPCA::CertificateAuthority OcspConfiguration\. The following resource was updated: AWS::ACMPCA::CertificateAuthority RevocationConfiguration\. 
-
- [AWS::ACMPCA::CertificateAuthority OcspConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html)   
-Use the `AWS::ACMPCA::CertificateAuthority OcspConfiguration` object to configure Online Certificate Status Protocol \(OCSP\) support on a CA\.  | September 2, 2021 | 
 | [Updated resource](AWS_DataSync.md) | The following resource was updated: AWS::DataSync::Task\. 
 
  [AWS::DataSync::Task](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)   
@@ -2737,6 +2787,10 @@ Use the `CrossAccount` property to allow event schemas from other accounts to be
 
  [AWS::KinesisFirehose::DeliveryStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)   
 DynamicPartitioningConfiguration property type is now supported for the delivery streams in CloudFormation\.  | September 2, 2021 | 
+| [Updated resource](AWS_ACMPCA.md) | The following resource was added: AWS::ACMPCA::CertificateAuthority OcspConfiguration\. The following resource was updated: AWS::ACMPCA::CertificateAuthority RevocationConfiguration\. 
+
+ [AWS::ACMPCA::CertificateAuthority OcspConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html)   
+Use the `AWS::ACMPCA::CertificateAuthority OcspConfiguration` object to configure Online Certificate Status Protocol \(OCSP\) support on a CA\.  | September 2, 2021 | 
 | [New resource](AWS_IoT.md) | The following resource is new: AWS::IoT::FleetMetric 
 
  [AWS::IoT::FleetMetric](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html)   
@@ -3023,10 +3077,6 @@ You now have additional text transformation options\.
 
  [AWS::WAFv2::RuleGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-rulegroup.html)   
 You now have additional text transformation options\.  | May 27, 2021 | 
-| [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::CertificateAuthority\. 
-
- [AWS::ACMPCA::CertificateAuthority](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)   
-Use the `S3ObjectAcl` property to restrict public access to your CRLs\.  | May 27, 2021 | 
 | [Updated resource](AWS_FraudDetector.md) | The following resource was updated: AWS::FraudDetector::Detector\. 
 
  [AWS::FraudDetector::Detector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html)   
@@ -3045,6 +3095,10 @@ In the `AirflowConfigurationOptions` property type, use a `PrimitiveType` of `Js
 
  [MinWorkers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minworkers)   
 Use the `MinWorkers` property to specify the minimum number of Apache Airflow workers that run in an environment\.  | May 27, 2021 | 
+| [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::CertificateAuthority\. 
+
+ [AWS::ACMPCA::CertificateAuthority](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)   
+Use the `S3ObjectAcl` property to restrict public access to your CRLs\.  | May 27, 2021 | 
 | [Updated resource](AWS_QLDB.md) | The following resource was updated: AWS::QLDB::Ledger 
 
  [AWS::QLDB::Ledger](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html)   
@@ -3116,10 +3170,6 @@ Use the `AWS::ECR::Repository.EncryptionConfiguration` property to configure enc
 
  [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)   
 Use the `ExpiredObjectDeleteMarker` property to specify whether Amazon S3 will remove a delete marker with no noncurrent versions\.  | May 13, 2021 | 
-| [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::CertificateAuthority\. 
-
- [AWS::ACMPCA::CertificateAuthority](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)   
-Use the `KeyStorageSecurityStandard` property to specify the minimum FIPS key security standard\.  | May 6, 2021 | 
 | [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
 
  [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)   
@@ -3141,6 +3191,10 @@ Use the `CloudwatchLogsAction` property to specify a Cloudwatch logs action\.
 Use the `TimestreamAction` property to specify a timestream action\.  
 Use the `KafkaAction` property to specify a kafka action\.  
 In the `S3Action` property, use the `CannedAcl` value to specify a canned ACL action\.  | May 6, 2021 | 
+| [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::CertificateAuthority\. 
+
+ [AWS::ACMPCA::CertificateAuthority](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)   
+Use the `KeyStorageSecurityStandard` property to specify the minimum FIPS key security standard\.  | May 6, 2021 | 
 | [New resources](AWS_FraudDetector.md) | The following resources were added: AWS::FraudDetector::Detector, AWS::FraudDetector::EntityType, AWS::FraudDetector::EventType, AWS::FraudDetector::Label, AWS::FraudDetector::Outcome, and AWS::FraudDetector::Variable 
 
  [AWS::FraudDetector::Detector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html)   
@@ -3526,7 +3580,7 @@ Use the `InferenceExecutionConfig` property to specify details of how containers
 
  [AWS::EC2::TransitGatewayConnect](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html)   
 Use the `TransitGatewayConnect` resource to create a Connect attachment from a specified transit gateway attachment\.  | February 25, 2021 | 
-| [New resources](AWS_EMR.md) | The following resources were added: AWS::EMR::Studio and AWS::EMR::StudioSessionMapping\. 
+| [New resources](AWS_EMR.md) | The following resources were added: `AWS::EMR::Studio` and `AWS::EMR::StudioSessionMapping`\. 
 
  [AWS::EMR::Studio](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html)   
 Use the `AWS::EMR::Studio` resource to create a new Amazon EMR Studio\. 
@@ -3760,16 +3814,16 @@ Added the attribute `AccessPolicyId` for internal use only\.  | January 28, 2021
 
  [AWS::LookoutVision:Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_LookoutVision.html)   
 Use the `Project` resource to create an Amazon Lookout for Vision project\.  | January 28, 2021 | 
-| [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::Certificate\. 
-
- [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   
-Use the `ApiPassthrough` property to include parameters in certificates during issuance\.  
-Use the `ValidityNotBefore` property to customize the start of certificate validity\.  | January 21, 2021 | 
 | [Updated resource](AWS_MediaConnect.md) | The following resource was updated: `AWS::MediaConnect::FlowVpcInterface`\. 
 
  [AWS::MediaConnect::FlowVpcInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html)   
 Use the `FlowArn` property to specify the ARN of the flow\.  
 Use the `Name` property to specify the name of the VPC Interface\.  | January 21, 2021 | 
+| [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::Certificate\. 
+
+ [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   
+Use the `ApiPassthrough` property to include parameters in certificates during issuance\.  
+Use the `ValidityNotBefore` property to customize the start of certificate validity\.  | January 21, 2021 | 
 | [Updated resource](AWS_SageMaker.md) | The following resources were updated: AWS::SageMaker::Device, AWS::SageMaker::DeviceFleet, and AWS::SageMaker::Model\. 
 
  [AWS::SageMaker::Device](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-device.html)   
@@ -4286,7 +4340,7 @@ Use the `ApiKeyId` property to specify the API key ID\.  | October 22, 2020 |
 [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)  
 In the [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html) property type, use the `OriginShield` property to enable CloudFront Origin Shield\.  
 For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the *Amazon CloudFront Developer Guide*\.  | October 22, 2020 | 
-| [Updated resource](AWS_EMR.md) | The following resource was updated: AWS::EMR::Cluster\. 
+| [Updated resource](AWS_EMR.md) | The following resource was updated: `AWS::EMR::Cluster`\. 
 
  [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html)   
 Use the `LogEncryptionKmsKeyId` property to specify the AWS KMS key used for encrypting log files\.  
@@ -4788,7 +4842,7 @@ Updated the following property: `SetTimer`\.  | May 7, 2020 |
 | [Updated resource](AWS_SSM.md) | The following resource was updated: AWS::SSM::Association 
 
  [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)   
-Use the `WaitForSuccessTimeoutSeconds` property to specify the number of seconds the service should wait for the association status to show "Success" before proceeding with the stack execution\. If the association status doesn't show "Success" after the specified number of seconds, then stack creation fails\.  | May 7, 2020 | 
+**\(No longer supported\)** Use the `WaitForSuccessTimeoutSeconds` property to specify the number of seconds the service should wait for the association status to show "Success" before proceeding with the stack execution\. If the association status doesn't show "Success" after the specified number of seconds, then stack creation fails\.  | May 7, 2020 | 
 | [New resource](AWS_ImageBuilder.md) | The following resource was added: AWS::ImageBuilder::Image\. 
 
  [AWS::ImageBuilder::Image](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html)   

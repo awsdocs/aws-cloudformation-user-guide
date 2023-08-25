@@ -46,20 +46,20 @@ Properties:
 
 `Actions`  <a name="cfn-securityhub-automationrule-actions"></a>
  One or more actions to update finding fields if a finding matches the conditions specified in `Criteria`\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: List of [AutomationRulesAction](aws-properties-securityhub-automationrule-automationrulesaction.md)  
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Criteria`  <a name="cfn-securityhub-automationrule-criteria"></a>
  A set of [AWS Security Finding Format \(ASFF\)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html) finding field attributes and corresponding expected values that Security Hub uses to filter findings\. If a rule is enabled and a finding matches the criteria specified in this parameter, Security Hub applies the rule action to the finding\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [AutomationRulesFindingFilters](aws-properties-securityhub-automationrule-automationrulesfindingfilters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-securityhub-automationrule-description"></a>
  A description of the rule\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,14 +72,14 @@ Specifies whether a rule is the last to be applied with respect to a finding tha
 
 `RuleName`  <a name="cfn-securityhub-automationrule-rulename"></a>
  The name of the rule\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleOrder`  <a name="cfn-securityhub-automationrule-ruleorder"></a>
 An integer ranging from 1 to 1000 that represents the order in which the rule action is applied to findings\. Security Hub applies rules with lower values for this parameter first\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `1000`  

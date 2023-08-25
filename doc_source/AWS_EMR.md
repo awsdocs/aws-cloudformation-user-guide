@@ -8,3 +8,4 @@
 + [AWS::EMR::Step](aws-resource-emr-step.md)
 + [AWS::EMR::Studio](aws-resource-emr-studio.md)
 + [AWS::EMR::StudioSessionMapping](aws-resource-emr-studiosessionmapping.md)
++ [AWS::EMR::WALWorkspace](aws-resource-emr-walworkspace.md)

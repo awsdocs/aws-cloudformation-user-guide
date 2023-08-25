@@ -9,7 +9,6 @@ service-provider::service-name::data-type-name
 ```
 
 **Topics**
-+ [AWS Private Certificate Authority](AWS_ACMPCA.md)
 + [AWS Amplify Console](AWS_Amplify.md)
 + [AWS Amplify UI Builder](AWS_AmplifyUIBuilder.md)
 + [Amazon API Gateway](AWS_ApiGateway.md)
@@ -179,6 +178,7 @@ service-provider::service-name::data-type-name
 + [Amazon Personalize](AWS_Personalize.md)
 + [Amazon Pinpoint](AWS_Pinpoint.md)
 + [Amazon Pinpoint Email](AWS_PinpointEmail.md)
++ [AWS Private Certificate Authority](AWS_ACMPCA.md)
 + [AWS Proton](AWS_Proton.md)
 + [Amazon Managed Service for Prometheus](AWS_APS.md)
 + [Amazon QLDB](AWS_QLDB.md)
@@ -229,5 +229,6 @@ service-provider::service-name::data-type-name
 + [AWS WAF V2](AWS_WAFv2.md)
 + [Amazon Connect Wisdom](AWS_Wisdom.md)
 + [Amazon WorkSpaces](AWS_WorkSpaces.md)
++ [Amazon WorkSpaces Web](AWS_WorkSpacesWeb.md)
 + [AWS X\-Ray](AWS_XRay.md)
 + [Shared property types](cfn-reference-shared.md)

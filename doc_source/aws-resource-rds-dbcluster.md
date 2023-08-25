@@ -667,6 +667,7 @@ Valid Values:
 Default:  
 + Aurora DB clusters \- `aurora` 
 + Multi\-AZ DB clusters \- `io1` 
+When you create an Aurora DB cluster with the storage type set to `aurora-iopt1`, the storage type is returned in the response\. The storage type isn't returned when you set it to `aurora`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

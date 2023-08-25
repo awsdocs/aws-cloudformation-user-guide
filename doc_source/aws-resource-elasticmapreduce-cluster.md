@@ -109,7 +109,7 @@ An IAM role for automatic scaling policies\. The default role is `EMR_AutoScalin
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoTerminationPolicy`  <a name="cfn-elasticmapreduce-cluster-autoterminationpolicy"></a>
-Property description not available\.  
+An auto\-termination policy defines the amount of idle time in seconds after which a cluster automatically terminates\. For alternative cluster termination options, see [Control cluster termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)  
 *Required*: No  
 *Type*: [AutoTerminationPolicy](aws-properties-elasticmapreduce-cluster-autoterminationpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -187,7 +187,7 @@ The name of the cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OSReleaseLabel`  <a name="cfn-elasticmapreduce-cluster-osreleaselabel"></a>
-Property description not available\.  
+The Amazon Linux release specified in a cluster launch RunJobFlow request\. If no Amazon Linux release was specified, the default Amazon Linux release is shown in the response\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -249,7 +249,7 @@ When you create clusters directly through the EMR console or API, this value is 
 
 ### Ref<a name="aws-resource-elasticmapreduce-cluster-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns returns the cluster ID, such as j\-1ABCD123AB1A\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the cluster ID, such as j\-1ABCD123AB1A\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

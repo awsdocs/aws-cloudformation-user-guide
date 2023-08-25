@@ -81,6 +81,7 @@ An operator that includes events that match the last few characters of the event
   +  `AWS::ManagedBlockchain::Network` 
   +  `AWS::ManagedBlockchain::Node` 
   +  `AWS::MedicalImaging::Datastore` 
+  +  `AWS::PCAConnectorAD::Connector` 
   +  `AWS::SageMaker::ExperimentTrialComponent` 
   +  `AWS::SageMaker::FeatureGroup` 
   +  `AWS::S3::AccessPoint` 
@@ -140,6 +141,9 @@ An operator that includes events that match the last few characters of the event
 
   When `resources.type` equals `AWS::MedicalImaging::Datastore`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:medical-imaging:<region>:<account_ID>:datastore/<data_store_ID>` 
+
+  When `resources.type` equals `AWS::PCAConnectorAD::Connector`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:pca-connector-ad:<region>:<account_ID>:connector/<connector_ID>` 
 
   When `resources.type` equals `AWS::SageMaker::ExperimentTrialComponent`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:sagemaker:<region>:<account_ID>:experiment-trial-component/<experiment_trial_component_name>` 

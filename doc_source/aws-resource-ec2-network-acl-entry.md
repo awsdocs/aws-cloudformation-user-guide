@@ -107,7 +107,7 @@ Rule number to assign to the entry, such as 100\. ACL entries are processed in a
 
 ### Ref<a name="aws-resource-ec2-network-acl-entry-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the network ACL entry\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

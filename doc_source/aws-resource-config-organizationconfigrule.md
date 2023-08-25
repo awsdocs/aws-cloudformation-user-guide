@@ -70,7 +70,7 @@ The name that you assign to organization AWS Config rule\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OrganizationCustomPolicyRuleMetadata`  <a name="cfn-config-organizationconfigrule-organizationcustompolicyrulemetadata"></a>
-Property description not available\.  
+An object that specifies metadata for your organization's AWS Config Custom Policy rule\. The metadata includes the runtime system in use, which accounts have debug logging enabled, and other custom rule metadata, such as resource type, resource ID of AWS resource, and organization trigger types that initiate AWS Config to evaluate AWS resources against a rule\.  
 *Required*: No  
 *Type*: [OrganizationCustomPolicyRuleMetadata](aws-properties-config-organizationconfigrule-organizationcustompolicyrulemetadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

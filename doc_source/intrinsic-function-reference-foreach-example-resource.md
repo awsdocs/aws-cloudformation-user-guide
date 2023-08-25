@@ -1,4 +1,4 @@
-# `Fn::ForEach` in the `Resources` section<a name="intrinsic-function-reference-foreach-example-resource"></a>
+# Examples of `Fn::ForEach` in the `Resources` section<a name="intrinsic-function-reference-foreach-example-resource"></a>
 
 These examples demonstrate using the `Fn::ForEach` intrinsic function in the [Resources](resources-section-structure.md) section\.
 
@@ -20,16 +20,32 @@ This example snippet returns a list of four Amazon SNS topics, with the logical 
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Transform": "AWS::LanguageExtensions",
+    "Parameters": {
+        "pRepoARNs": {
+            "Description": "ARN of SSO instance",
+            "Type": "CommaDelimitedList"
+        }
+    },
     "Resources": {
         "Fn::ForEach::Topics": [
             "TopicName",
-            ["Success", "Failure", "Timeout", "Unknown"],
+            {
+                "Ref": "pRepoARNs"
+            },
             {
                 "SnsTopic${TopicName}": {
                     "Type": "AWS::SNS::Topic",
                     "Properties": {
                         "TopicName": {
-                            "Ref": "TopicName"
+                            "Fn::Join": [
+                                ".",
+                                [
+                                    {
+                                        "Ref": "TopicName"
+                                    },
+                                    "fifo"
+                                ]
+                            ]
                         },
                         "FifoTopic": true
                     }
@@ -45,17 +61,22 @@ This example snippet returns a list of four Amazon SNS topics, with the logical 
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Transform: 'AWS::LanguageExtensions'
+Parameters:
+  pRepoARNs:
+    Description: ARN of SSO instance
+    Type: CommaDelimitedList
 Resources:
   'Fn::ForEach::Topics':
     - TopicName
-    - - Success
-      - Failure
-      - Timeout
-      - Unknown
+    - !Ref pRepoARNs
     - 'SnsTopic${TopicName}':
         Type: 'AWS::SNS::Topic'
         Properties:
-          TopicName: !Ref TopicName
+          TopicName: 
+           'Fn::Join':
+            - '.'
+            - - !Ref TopicName
+              - fifo
           FifoTopic: true
 ```
 
@@ -68,28 +89,28 @@ The transformed template will be equivalent to the following template:
         "SnsTopicSuccess": {
             "Type": "AWS::SNS::Topic",
             "Properties": {
-                "TopicName": "Success",
+                "TopicName": "Success.fifo",
                 "FifoTopic": true
             }
         },
         "SnsTopicFailure": {
             "Type": "AWS::SNS::Topic",
             "Properties": {
-                "TopicName": "Failure",
+                "TopicName": "Failure.fifo",
                 "FifoTopic": true
             }
         },
         "SnsTopicTimeout": {
             "Type": "AWS::SNS::Topic",
             "Properties": {
-                "TopicName": "Timeout",
+                "TopicName": "Timeout.fifo",
                 "FifoTopic": true
             }
         },
         "SnsTopicUnknown": {
             "Type": "AWS::SNS::Topic",
             "Properties": {
-                "TopicName": "Unknown",
+                "TopicName": "Unknown.fifo",
                 "FifoTopic": true
             }
         }

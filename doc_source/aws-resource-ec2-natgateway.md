@@ -117,7 +117,7 @@ The tags for the NAT gateway\.
 
 ### Ref<a name="aws-resource-ec2-natgateway-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the resource name\. For example, `nat-0a12bc456789de0fg`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the NAT gateway\. For example, `nat-0a12bc456789de0fg`\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

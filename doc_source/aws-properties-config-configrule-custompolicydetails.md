@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-config-configrule-custompolicydetails-properties"></a>
 
 `EnableDebugLogDelivery`  <a name="cfn-config-configrule-custompolicydetails-enabledebuglogdelivery"></a>
-The boolean expression for enabling debug logging for your AWS Config Custom Policy rule\. The default value is `false`\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -42,9 +42,7 @@ The runtime system for your AWS Config Custom Policy rule\. Guard is a policy\-a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyText`  <a name="cfn-config-configrule-custompolicydetails-policytext"></a>
-The policy definition containing the logic for your AWS Config Custom Policy rule\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `0`  
-*Maximum*: `10000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -76,7 +76,6 @@ The packaging type of the app block\.
 
 `PostSetupScriptDetails`  <a name="cfn-appstream-appblock-postsetupscriptdetails"></a>
 The post setup script details of the app block\.  
-This only applies to app blocks with PackagingType `APPSTREAM2`\.  
 *Required*: No  
 *Type*: [ScriptDetails](aws-properties-appstream-appblock-scriptdetails.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

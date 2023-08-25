@@ -1,4 +1,4 @@
-# `Fn::ForEach` in the `Outputs` section<a name="intrinsic-function-reference-foreach-example-outputs"></a>
+# Examples of `Fn::ForEach` in the `Outputs` section<a name="intrinsic-function-reference-foreach-example-outputs"></a>
 
 These examples demonstrate using the `Fn::ForEach` intrinsic function in the [Outputs](outputs-section-structure.md) section\.
 

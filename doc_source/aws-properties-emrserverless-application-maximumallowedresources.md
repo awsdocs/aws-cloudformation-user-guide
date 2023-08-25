@@ -36,7 +36,7 @@ The maximum allowed CPU for an application\.
 *Minimum*: `1`  
 *Maximum*: `15`  
 *Pattern*: `[1-9][0-9]*(\s)?(vCPU|vcpu|VCPU)?`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Disk`  <a name="cfn-emrserverless-application-maximumallowedresources-disk"></a>
 The maximum allowed disk for an application\.  
@@ -48,7 +48,7 @@ The maximum allowed disk for an application\.
 *Minimum*: `1`  
 *Maximum*: `15`  
 *Pattern*: `[1-9][0-9]*(\s)?(GB|gb|gB|Gb)`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Memory`  <a name="cfn-emrserverless-application-maximumallowedresources-memory"></a>
 The maximum allowed resources for an application\.  
@@ -60,4 +60,4 @@ The maximum allowed resources for an application\.
 *Minimum*: `1`  
 *Maximum*: `15`  
 *Pattern*: `[1-9][0-9]*(\s)?(GB|gb|gB|Gb)?`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

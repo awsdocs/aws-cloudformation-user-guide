@@ -189,7 +189,7 @@ The targets for the association\. You must specify the `InstanceId` or `Targets`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WaitForSuccessTimeoutSeconds`  <a name="cfn-ssm-association-waitforsuccesstimeoutseconds"></a>
-The number of seconds the service should wait for the association status to show "Success" before proceeding with the stack execution\. If the association status doesn't show "Success" after the specified number of seconds, then stack creation fails\.  
+**\(No longer supported\)** This property is no longer supported for the `AWS::SSM::Association` resource\. You should not include it when defining this resource in your AWS CloudFormation template\. Doing so can result in inaccuracies in AWS CloudFormation resource drift detection\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -233,8 +233,7 @@ The following example creates an association that uses the AWS\-RunShellScript S
                     "workingDirectory": [
                         "/"
                     ]
-                },
-                "WaitForSuccessTimeoutSeconds": 300
+                }
             }
         }
     }
@@ -259,7 +258,6 @@ Resources:
         - ls
         workingDirectory:
         - "/"
-      WaitForSuccessTimeoutSeconds: 300
 ```
 
 ### Create an association for all managed instances in an AWS account<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_"></a>
@@ -284,8 +282,7 @@ The following example creates an association that uses the AWS\-UpdateSSMAgent S
                             "*"
                         ]
                     }
-                ],
-                "WaitForSuccessTimeoutSeconds": 300
+                ]
             }
         }
     }
@@ -307,7 +304,6 @@ Resources:
       - Key: InstanceIds
         Values:
         - "*"
-      WaitForSuccessTimeoutSeconds: 300
 ```
 
 ### Create an association for a specific tag<a name="aws-resource-ssm-association--examples--Create_an_association_for_a_specific_tag"></a>
@@ -332,8 +328,7 @@ The following example creates an association that uses the AWS\-UpdateSSMAgent S
                             "Production"
                         ]
                     }
-                ],
-                "WaitForSuccessTimeoutSeconds": 300
+                ]
             }
         }
     }
@@ -355,7 +350,6 @@ Resources:
       - Key: tag:Environment
         Values:
         - Production
-      WaitForSuccessTimeoutSeconds: 300
 ```
 
 ### Create an association that associates an automation document with an instance<a name="aws-resource-ssm-association--examples--Create_an_association_that_associates_an_automation_document_with_an_instance"></a>
@@ -479,8 +473,7 @@ The following example creates an association that uses rate controls\. The assoc
                     "OutputS3BucketName": "MyAssociationOutputBucket",
                     "OutputS3KeyPrefix": "my-agent-update-output"
                 }
-            },
-            "WaitForSuccessTimeoutSeconds": 300
+            }
         }
     }
 }
@@ -505,7 +498,6 @@ OutputLocation:
   S3Location:
     OutputS3BucketName: MyAssociationOutputBucket
     OutputS3KeyPrefix: my-agent-update-output
-WaitForSuccessTimeoutSeconds: 300
 ```
 
 ### Create an association that works with Ansible<a name="aws-resource-ssm-association--examples--Create_an_association_that_works_with_Ansible"></a>
@@ -625,7 +617,6 @@ The following example creates an association that uses Ansible and Systems Manag
             "Type": "AWS::SSM::Association",
             "Properties": {
                 "Name": "AWS-ApplyAnsiblePlaybooks",
-                "WaitForSuccessTimeoutSeconds": 300,
                 "Targets": [
                     {
                         "Key": "InstanceIds",
@@ -753,7 +744,6 @@ Resources:
     Properties:
       # Here using the AWS-ApplyAnsiblePlaybooks
       Name: AWS-ApplyAnsiblePlaybooks
-      WaitForSuccessTimeoutSeconds: 300
       # Targeting Instance by InstanceId passed from the Logical ID of Instance being created 
       # in CloudFormation
       Targets:
@@ -909,7 +899,6 @@ The following example creates an association that runs a bash script\. Target is
             "Type": "AWS::SSM::Association",
             "Properties": {
                 "Name": "AWS-RunShellScript",
-                "WaitForSuccessTimeoutSeconds": 300,
                 "Targets": [
                     {
                         "Key": "tag:nginx",
@@ -1019,7 +1008,6 @@ Resources:
     Properties:
       # Command Document that this Association will run
       Name: AWS-RunShellScript
-      WaitForSuccessTimeoutSeconds: 300
       # Targeting Instance by Tags
       Targets:
         - Key: tag:nginx
@@ -1282,7 +1270,6 @@ The following example creates an assocation that runs a bash script using State 
             "Type": "AWS::SSM::Association",
             "Properties": {
                 "Name": "nginxInstallAutomation",
-                "WaitForSuccessTimeoutSeconds": 300,
                 "OutputLocation": {
                     "S3Location": {
                         "OutputS3BucketName": "SSMAssocLogs",
@@ -1482,7 +1469,6 @@ Resources:
     Type: AWS::SSM::Association
     Properties:
       Name: !Ref nginxInstallAutomation
-      WaitForSuccessTimeoutSeconds: 300
       OutputLocation:
         S3Location: 
           OutputS3BucketName: !Ref SSMAssocLogs

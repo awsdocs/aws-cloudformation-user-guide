@@ -48,7 +48,7 @@ For a list of status codes that you can use in your custom responses, see [Suppo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseHeaders`  <a name="cfn-wafv2-rulegroup-customresponse-responseheaders"></a>
-The HTTP headers to use in the response\. Duplicate header names are not allowed\.   
+The HTTP headers to use in the response\. You can specify any header name except for `content-type`\. Duplicate header names are not allowed\.  
 For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the * AWS WAF Developer Guide*\.   
 *Required*: No  
 *Type*: List of [CustomHTTPHeader](aws-properties-wafv2-rulegroup-customhttpheader.md)  

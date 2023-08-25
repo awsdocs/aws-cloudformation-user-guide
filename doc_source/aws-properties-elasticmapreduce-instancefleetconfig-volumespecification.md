@@ -41,9 +41,10 @@ The volume size, in gibibytes \(GiB\)\. This can be a number from 1 \- 1024\. If
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Throughput`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-throughput"></a>
-Property description not available\.  
+The throughput, in mebibyte per second \(MiB/s\)\. This optional parameter can be a number from 125 \- 1000 and is valid only for gp3 volumes\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VolumeType`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype"></a>

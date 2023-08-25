@@ -32,10 +32,10 @@ The worker type for an analytics framework\. For Spark applications, the key can
 *Pattern*: `^[a-zA-Z]+[-_]*[a-zA-Z]+$`  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Value`  <a name="cfn-emrserverless-application-initialcapacityconfigkeyvaluepair-value"></a>
 The value for the initial capacity configuration per worker\.  
 *Required*: Yes  
 *Type*: [InitialCapacityConfig](aws-properties-emrserverless-application-initialcapacityconfig.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

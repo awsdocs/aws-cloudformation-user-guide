@@ -135,6 +135,34 @@ In the following sample, the `Ref` function returns the ARN of the `CreateTestDB
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-iam-managedpolicy-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-iam-managedpolicy-return-values-fn--getatt-fn--getatt"></a>
+
+`AttachmentCount`  <a name="AttachmentCount-fn::getatt"></a>
+Property description not available\.
+
+`CreateDate`  <a name="CreateDate-fn::getatt"></a>
+Property description not available\.
+
+`DefaultVersionId`  <a name="DefaultVersionId-fn::getatt"></a>
+Property description not available\.
+
+`IsAttachable`  <a name="IsAttachable-fn::getatt"></a>
+Property description not available\.
+
+`PermissionsBoundaryUsageCount`  <a name="PermissionsBoundaryUsageCount-fn::getatt"></a>
+Property description not available\.
+
+`PolicyArn`  <a name="PolicyArn-fn::getatt"></a>
+Property description not available\.
+
+`PolicyId`  <a name="PolicyId-fn::getatt"></a>
+Property description not available\.
+
+`UpdateDate`  <a name="UpdateDate-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-iam-managedpolicy--examples"></a>
 
 

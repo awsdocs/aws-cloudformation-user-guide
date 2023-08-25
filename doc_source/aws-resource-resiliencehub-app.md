@@ -17,7 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AppAssessmentSchedule](#cfn-resiliencehub-app-appassessmentschedule)" : String,
       "[AppTemplateBody](#cfn-resiliencehub-app-apptemplatebody)" : String,
       "[Description](#cfn-resiliencehub-app-description)" : String,
+      "[EventSubscriptions](#cfn-resiliencehub-app-eventsubscriptions)" : [ EventSubscription, ... ],
       "[Name](#cfn-resiliencehub-app-name)" : String,
+      "[PermissionModel](#cfn-resiliencehub-app-permissionmodel)" : PermissionModel,
       "[ResiliencyPolicyArn](#cfn-resiliencehub-app-resiliencypolicyarn)" : String,
       "[ResourceMappings](#cfn-resiliencehub-app-resourcemappings)" : [ ResourceMapping, ... ],
       "[Tags](#cfn-resiliencehub-app-tags)" : {Key: Value, ...}
@@ -33,7 +35,11 @@ Properties:
   [AppAssessmentSchedule](#cfn-resiliencehub-app-appassessmentschedule): String
   [AppTemplateBody](#cfn-resiliencehub-app-apptemplatebody): String
   [Description](#cfn-resiliencehub-app-description): String
+  [EventSubscriptions](#cfn-resiliencehub-app-eventsubscriptions): 
+    - EventSubscription
   [Name](#cfn-resiliencehub-app-name): String
+  [PermissionModel](#cfn-resiliencehub-app-permissionmodel): 
+    PermissionModel
   [ResiliencyPolicyArn](#cfn-resiliencehub-app-resiliencypolicyarn): String
   [ResourceMappings](#cfn-resiliencehub-app-resourcemappings): 
     - ResourceMapping
@@ -210,11 +216,23 @@ Optional description for an application\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EventSubscriptions`  <a name="cfn-resiliencehub-app-eventsubscriptions"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [EventSubscription](aws-properties-resiliencehub-app-eventsubscription.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-resiliencehub-app-name"></a>
 Name for the application\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PermissionModel`  <a name="cfn-resiliencehub-app-permissionmodel"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [PermissionModel](aws-properties-resiliencehub-app-permissionmodel.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResiliencyPolicyArn`  <a name="cfn-resiliencehub-app-resiliencypolicyarn"></a>
 The Amazon Resource Name \(ARN\) of the resiliency policy\.  
@@ -248,3 +266,6 @@ The Amazon Resource Name \(ARN\) for the app\.
 
 `AppArn`  <a name="AppArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the app\.
+
+`DriftStatus`  <a name="DriftStatus-fn::getatt"></a>
+Property description not available\.

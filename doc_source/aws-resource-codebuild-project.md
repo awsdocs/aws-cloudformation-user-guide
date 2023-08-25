@@ -507,7 +507,7 @@ Resources:
         SecurityGroupIds: [!Ref CodeBuildSecurityGroup]
       Cache:
         Type: S3
-        Location: mybucket/prefix
+        Location: <mybucket/prefix>
   CodeBuildRole:
     Type: AWS::IAM::Role
     Properties:
@@ -618,7 +618,7 @@ Resources:
         },
         "Cache": {
           "Type": "S3",
-          "Location": "mybucket/prefix"
+          "Location": "<mybucket/prefix>"
         }
       }
     },

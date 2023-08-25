@@ -73,3 +73,7 @@ You can use the following functions within `Fn::ForEach`\.
 + ``Fn::Sub``
 + ``Fn::ToJsonString``
 + ``Ref``
+
+## Examples<a name="intrinsic-function-reference-foreach-example-pointer"></a>
+
+For examples, see [Examples](intrinsic-function-reference-foreach-examples.md)\.

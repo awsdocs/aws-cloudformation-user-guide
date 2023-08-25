@@ -1,6 +1,6 @@
 # AWS::Config::ConfigRule EvaluationModeConfiguration<a name="aws-properties-config-configrule-evaluationmodeconfiguration"></a>
 
-<a name="aws-properties-config-configrule-evaluationmodeconfiguration-description"></a>The `EvaluationModeConfiguration` property type specifies Property description not available\. for an [AWS::Config::ConfigRule](aws-resource-config-configrule.md)\.
+The configuration object for AWS Config rule evaluation mode\. The supported valid values are Detective or Proactive\.
 
 ## Syntax<a name="aws-properties-config-configrule-evaluationmodeconfiguration-syntax"></a>
 
@@ -23,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-config-configrule-evaluationmodeconfiguration-properties"></a>
 
 `Mode`  <a name="cfn-config-configrule-evaluationmodeconfiguration-mode"></a>
-Property description not available\.  
+The mode of an evaluation\. The valid values are Detective or Proactive\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `DETECTIVE | PROACTIVE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

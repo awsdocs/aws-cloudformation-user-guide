@@ -133,7 +133,7 @@ The throughput, measured in mebibytes per second \(MiBps\), that you want to pro
 
 `ThroughputMode`  <a name="cfn-efs-filesystem-throughputmode"></a>
 Specifies the throughput mode for the file system\. The mode can be `bursting`, `provisioned`, or `elastic`\. If you set `ThroughputMode` to `provisioned`, you must also set a value for `ProvisionedThroughputInMibps`\. After you create the file system, you can decrease your file system's throughput in Provisioned Throughput mode or change between the throughput modes, with certain time restrictions\. For more information, see [Specifying throughput with provisioned mode](https://docs.aws.amazon.com/efs/latest/ug/performance.html#provisioned-throughput) in the *Amazon EFS User Guide*\.   
-Default is `elastic`\.  
+Default is `bursting`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `bursting | elastic | provisioned`  

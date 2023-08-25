@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource DatabaseConfiguration<a name="aws-properties-kendra-datasource-databaseconfiguration"></a>
 
-Provides the configuration information to connect to a index\. 
+Provides the configuration information to an [Amazon Kendra supported database](https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html)\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-databaseconfiguration-syntax"></a>
 

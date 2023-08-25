@@ -1,4 +1,4 @@
-# `Fn::ForEach` in the `Conditions` section<a name="intrinsic-function-reference-foreach-example-conditions"></a>
+# Examples of `Fn::ForEach` in the `Conditions` section<a name="intrinsic-function-reference-foreach-example-conditions"></a>
 
 These examples demonstrate using the `Fn::ForEach` intrinsic function in the [Conditions](conditions-section-structure.md) section\.
 

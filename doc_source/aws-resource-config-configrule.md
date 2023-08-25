@@ -63,7 +63,7 @@ Properties:
 ## Properties<a name="aws-resource-config-configrule-properties"></a>
 
 `Compliance`  <a name="cfn-config-configrule-compliance"></a>
-Property description not available\.  
+Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of contributors that affect the compliance\.  
 *Required*: No  
 *Type*: [Compliance](aws-properties-config-configrule-compliance.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,7 +86,7 @@ The description that you provide for the AWS Config rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EvaluationModes`  <a name="cfn-config-configrule-evaluationmodes"></a>
-Property description not available\.  
+The modes the AWS Config rule can be evaluated in\. The valid values are distinct objects\. By default, the value is Detective evaluation mode only\.  
 *Required*: No  
 *Type*: List of [EvaluationModeConfiguration](aws-properties-config-configrule-evaluationmodeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -142,7 +142,7 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 The Amazon Resource Name \(ARN\) of the AWS Config rule, such as `arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi`\.
 
 `Compliance.Type`  <a name="Compliance.Type-fn::getatt"></a>
-The compliance status of an AWS Config rule, such as `COMPLIANT` or `NON_COMPLIANT`\. 
+Property description not available\.
 
 `ConfigRuleId`  <a name="ConfigRuleId-fn::getatt"></a>
 The ID of the AWS Config rule, such as `config-rule-a1bzhi`\.

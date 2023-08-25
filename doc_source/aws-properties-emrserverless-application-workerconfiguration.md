@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Pattern*: `^[1-9][0-9]*(\\s)?(vCPU|vcpu|VCPU)?$`  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Disk`  <a name="cfn-emrserverless-application-workerconfiguration-disk"></a>
 *Minimum*: 1  
@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Pattern*: `^[1-9][0-9]*(\\s)?(GB|gb|gB|Gb)$"`  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Memory`  <a name="cfn-emrserverless-application-workerconfiguration-memory"></a>
 *Minimum*: 1  
@@ -48,4 +48,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Pattern*: `^[1-9][0-9]*(\\s)?(GB|gb|gB|Gb)?$`  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

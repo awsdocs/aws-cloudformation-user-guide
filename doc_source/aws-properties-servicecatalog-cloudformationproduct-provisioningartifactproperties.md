@@ -62,7 +62,8 @@ The name of the provisioning artifact \(for example, v1 v2beta\)\. No spaces are
 `Type`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-type"></a>
 The type of provisioning artifact\.  
 +  `CLOUD_FORMATION_TEMPLATE` \- AWS CloudFormation template
-+  `TERRAFORM_OPEN_SOURCE` \- Terraform open source configuration file
++  `TERRAFORM_OPEN_SOURCE` \- Terraform Open Source configuration file
++  `TERRAFORM_CLOUD` \- Terraform Cloud configuration file
 *Required*: No  
 *Type*: String  
 *Allowed values*: `CLOUD_FORMATION_TEMPLATE | MARKETPLACE_AMI | MARKETPLACE_CAR | TERRAFORM_CLOUD | TERRAFORM_OPEN_SOURCE`  

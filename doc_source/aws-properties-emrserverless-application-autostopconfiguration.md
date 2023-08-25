@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Enables the application to automatically stop after a certain amount of time being idle\. Defaults to true\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `IdleTimeoutMinutes`  <a name="cfn-emrserverless-application-autostopconfiguration-idletimeoutminutes"></a>
 The amount of idle time in minutes after which your application will automatically stop\. Defaults to 15 minutes\.  
@@ -36,4 +36,4 @@ The amount of idle time in minutes after which your application will automatical
 *Maximum*: 10080  
 *Required*: No  
 *Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
