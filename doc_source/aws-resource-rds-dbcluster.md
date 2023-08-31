@@ -605,7 +605,7 @@ This property is only supported for Aurora Serverless v2\. For Aurora Serverless
 Valid for: Aurora DB clusters only  
 *Required*: No  
 *Type*: [ServerlessV2ScalingConfiguration](aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SnapshotIdentifier`  <a name="cfn-rds-dbcluster-snapshotidentifier"></a>
 The identifier for the DB snapshot or DB cluster snapshot to restore from\.  
