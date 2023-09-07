@@ -45,7 +45,6 @@ The unique identifier of the network for the node\.
 Ethereum public networks have the following `NetworkId`s:  
 +  `n-ethereum-mainnet` 
 +  `n-ethereum-goerli` 
-+  `n-ethereum-rinkeby` 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

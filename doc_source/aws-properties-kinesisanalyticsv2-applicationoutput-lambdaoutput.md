@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::ApplicationOutput LambdaOutput<a name="aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput"></a>
 
-When you configure a SQL\-based Kinesis Data Analytics application's output, identifies an Amazon Lambda function as the destination\. You provide the function Amazon Resource Name \(ARN\) of the Lambda function\. 
+When you configure a SQL\-based Managed Service for Apache Flink application's output, identifies an Amazon Lambda function as the destination\. You provide the function Amazon Resource Name \(ARN\) of the Lambda function\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput-syntax"></a>
 

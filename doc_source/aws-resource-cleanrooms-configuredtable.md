@@ -47,7 +47,7 @@ Properties:
 The columns within the underlying AWS Glue table that can be utilized within collaborations\.  
 *Required*: Yes  
 *Type*: List of String  
-*Maximum*: `100`  
+*Maximum*: `225`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AnalysisMethod`  <a name="cfn-cleanrooms-configuredtable-analysismethod"></a>

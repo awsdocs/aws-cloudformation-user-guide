@@ -99,12 +99,6 @@ The MinGwDiversity value\.
 `LoRaWAN.NwkGeoLoc`  <a name="LoRaWAN.NwkGeoLoc-fn::getatt"></a>
 The NwkGeoLoc value\.
 
-`LoRaWAN.PrAllowed`  <a name="LoRaWAN.PrAllowed-fn::getatt"></a>
-The PRAllowed value that describes whether passive roaming is allowed\.
-
-`LoRaWAN.RaAllowed`  <a name="LoRaWAN.RaAllowed-fn::getatt"></a>
-The RAAllowed value that describes whether roaming activation is allowed\.
-
 `LoRaWAN.ReportDevStatusBattery`  <a name="LoRaWAN.ReportDevStatusBattery-fn::getatt"></a>
 The ReportDevStatusBattery value\.
 

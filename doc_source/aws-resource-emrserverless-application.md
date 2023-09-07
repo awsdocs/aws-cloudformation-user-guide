@@ -58,9 +58,10 @@ Properties:
 ## Properties<a name="aws-resource-emrserverless-application-properties"></a>
 
 `Architecture`  <a name="cfn-emrserverless-application-architecture"></a>
-The CPU architecture type of the application\. Allowed values: `X86_64` or `ARM64`\.  
+The CPU architecture of an application\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ARM64 | X86_64`  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `AutoStartConfiguration`  <a name="cfn-emrserverless-application-autostartconfiguration"></a>
@@ -76,10 +77,10 @@ The configuration for an application to automatically stop after a certain amoun
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `ImageConfiguration`  <a name="cfn-emrserverless-application-imageconfiguration"></a>
-The image configuration for all worker types\. You can either set this parameter or `imageConfiguration` for each worker type in `workerTypeSpecifications`\.  
+The image configuration applied to all worker types\.  
 *Required*: No  
 *Type*: [ImageConfigurationInput](aws-properties-emrserverless-application-imageconfigurationinput.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `InitialCapacity`  <a name="cfn-emrserverless-application-initialcapacity"></a>
 The initial capacity of the application\.  
@@ -109,7 +110,7 @@ The network configuration for customer VPC connectivity for the application\.
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `ReleaseLabel`  <a name="cfn-emrserverless-application-releaselabel"></a>
-The EMR release version associated with the application\.  
+The Amazon EMR release associated with the application\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -132,7 +133,7 @@ The type of application, such as Spark or Hive\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WorkerTypeSpecifications`  <a name="cfn-emrserverless-application-workertypespecifications"></a>
-The key\-value pairs that specify worker type to `WorkerTypeSpecificationInput`\. This parameter must contain all valid worker types for a Spark or Hive application\. Valid worker types include `Driver` and `Executor` for Spark applications and `HiveDriver` and `TezTask` for Hive applications\. You can either set image details in this parameter for each worker type, or in `imageConfiguration` for all worker types\.  
+The specification applied to each worker type\.  
 *Required*: No  
 *Type*: Map of [WorkerTypeSpecificationInput](aws-properties-emrserverless-application-workertypespecificationinput.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -141,15 +142,15 @@ The key\-value pairs that specify worker type to `WorkerTypeSpecificationInput`\
 
 ### Ref<a name="aws-resource-emrserverless-application-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the application\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ID of the application\.
 
-For more information about using the `Ref` function, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-emrserverless-application-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt`intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-emrserverless-application-return-values-fn--getatt-fn--getatt"></a>
 

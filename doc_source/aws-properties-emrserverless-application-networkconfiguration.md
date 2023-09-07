@@ -28,9 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `SecurityGroupIds`  <a name="cfn-emrserverless-application-networkconfiguration-securitygroupids"></a>
 The array of security group Ids for customer VPC connectivity\.  
-*Minimum*: 1  
-*Maximum*: 32  
-*Pattern*: `^[-0-9a-zA-Z]+`  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  
@@ -38,9 +35,6 @@ The array of security group Ids for customer VPC connectivity\.
 
 `SubnetIds`  <a name="cfn-emrserverless-application-networkconfiguration-subnetids"></a>
 The array of subnet Ids for customer VPC connectivity\.  
-*Minimum*: 1  
-*Maximum*: 32  
-*Pattern*: `^[-0-9a-zA-Z]+`  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `16`  

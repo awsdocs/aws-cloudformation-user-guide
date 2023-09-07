@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PermissionArns](#cfn-ram-resourceshare-permissionarns)" : [ String, ... ],
       "[Principals](#cfn-ram-resourceshare-principals)" : [ String, ... ],
       "[ResourceArns](#cfn-ram-resourceshare-resourcearns)" : [ String, ... ],
+      "[Sources](#cfn-ram-resourceshare-sources)" : [ String, ... ],
       "[Tags](#cfn-ram-resourceshare-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -37,6 +38,8 @@ Properties:
   [Principals](#cfn-ram-resourceshare-principals): 
     - String
   [ResourceArns](#cfn-ram-resourceshare-resourcearns): 
+    - String
+  [Sources](#cfn-ram-resourceshare-sources): 
     - String
   [Tags](#cfn-ram-resourceshare-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -76,6 +79,12 @@ Not all resource types can be shared with IAM roles and users\. For more informa
 
 `ResourceArns`  <a name="cfn-ram-resourceshare-resourcearns"></a>
 Specifies a list of one or more ARNs of the resources to associate with the resource share\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Sources`  <a name="cfn-ram-resourceshare-sources"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

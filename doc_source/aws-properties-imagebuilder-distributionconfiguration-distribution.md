@@ -52,9 +52,10 @@ Container distribution settings for encryption, licensing, and sharing in a spec
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FastLaunchConfigurations`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-fastlaunchconfigurations"></a>
-Property description not available\.  
+The Windows faster\-launching configurations to use for AMI distribution\.  
 *Required*: No  
 *Type*: List of [FastLaunchConfiguration](aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.md)  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchTemplateConfigurations`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-launchtemplateconfigurations"></a>

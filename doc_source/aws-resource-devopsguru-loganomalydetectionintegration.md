@@ -10,9 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "Type" : "AWS::DevOpsGuru::LogAnomalyDetectionIntegration",
-  "Properties" : {
-    }
+  "Type" : "AWS::DevOpsGuru::LogAnomalyDetectionIntegration
 }
 ```
 
@@ -20,7 +18,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::DevOpsGuru::LogAnomalyDetectionIntegration
-Properties:
 ```
 
 ## Return values<a name="aws-resource-devopsguru-loganomalydetectionintegration-return-values"></a>

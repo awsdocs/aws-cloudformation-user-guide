@@ -1,9 +1,25 @@
 # AWS::WAFv2::WebACL<a name="aws-resource-wafv2-webacl"></a>
 
 **Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
+This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
 
-Use an [AWS::WAFv2::WebACL](#aws-resource-wafv2-webacl) to define a collection of rules to use to inspect and control web requests\. Each rule has an action defined \(allow, block, or count\) for requests that match the statement of the rule\. In the web ACL, you specify a default action to take \(allow, block\) for any request that doesn't match any of the rules\. The rules in a web ACL can contain rule statements that you define explicitly and rule statements that reference rule groups and managed rule groups\. You can associate a web ACL with one or more AWS resources to protect\. The resources can be an Amazon CloudFront distribution, an Amazon API Gateway REST API, an Application Load Balancer, an AWS AppSync GraphQL API , an Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance\. 
+Use an [AWS::WAFv2::WebACL](#aws-resource-wafv2-webacl) to define a collection of rules to use to inspect and control web requests\. The rules in a web ACL can contain rule statements that you define explicitly and rule statements that reference rule groups and managed rule groups\. 
+
+Each rule has an action defined, such as Allow, Block, or CAPTCHA, for requests that match the statement of the rule\. In the web ACL, you specify the default action to take for any request that doesn't match any of the rules\. The default action can be Allow or Block\. 
+
+You can associate a web ACL with one or more AWS resources to protect\. The resources can be an Amazon CloudFront distribution, an Amazon API Gateway REST API, an Application Load Balancer, an AWS AppSync GraphQL API , an Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance\. 
+
+For more information, see [Web access control lists \(web ACLs\)](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html) in the *AWS WAF developer guide*\.
+
+**Web ACLs used in AWS Shield Advanced automatic application layer DDoS mitigation** 
+
+If you use Shield Advanced automatic application layer DDoS mitigation, the web ACLs that you use with automatic mitigation have a rule group rule whose name starts with `ShieldMitigationRuleGroup`\. This rule is used for automatic mitigations and it's managed for you in the web ACL by Shield Advanced and AWS WAF\. You'll see the rule listed among the web ACL rules when you view the web ACL through the AWS WAF interfaces\. 
+
+When you manage the web ACL through AWS CloudFormation interfaces, you won't see the Shield Advanced rule\. AWS CloudFormation doesn't include this type of rule in the stack drift status between the actual configuration of the web ACL and your web ACL template\. 
+
+Don't add the Shield Advanced rule group rule to your web ACL template\. The rule shouldn't be in your template\. When you update the web ACL template in a stack, the Shield Advanced rule is maintained for you by AWS WAF in the resulting web ACL\.
+
+For more information, see [Shield Advanced automatic application layer DDoS mitigation](https://docs.aws.amazon.com/waf/latest/developerguide/ddos-automatic-app-layer-response.html) in the *AWS Shield Advanced developer guide*\.
 
 ## Syntax<a name="aws-resource-wafv2-webacl-syntax"></a>
 

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AttenuationControl](#cfn-medialive-channel-ac3settings-attenuationcontrol)" : String,
   "[Bitrate](#cfn-medialive-channel-ac3settings-bitrate)" : Double,
   "[BitstreamMode](#cfn-medialive-channel-ac3settings-bitstreammode)" : String,
   "[CodingMode](#cfn-medialive-channel-ac3settings-codingmode)" : String,
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-medialive-channel-ac3settings-syntax.yaml"></a>
 
 ```
+  [AttenuationControl](#cfn-medialive-channel-ac3settings-attenuationcontrol): String
   [Bitrate](#cfn-medialive-channel-ac3settings-bitrate): Double
   [BitstreamMode](#cfn-medialive-channel-ac3settings-bitstreammode): String
   [CodingMode](#cfn-medialive-channel-ac3settings-codingmode): String
@@ -35,6 +37,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-ac3settings-properties"></a>
+
+`AttenuationControl`  <a name="cfn-medialive-channel-ac3settings-attenuationcontrol"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Bitrate`  <a name="cfn-medialive-channel-ac3settings-bitrate"></a>
 The average bitrate in bits/second\. Valid bitrates depend on the coding mode\.  

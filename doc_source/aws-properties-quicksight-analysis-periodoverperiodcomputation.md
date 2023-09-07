@@ -47,7 +47,7 @@ The name of a computation\.
 
 `Time`  <a name="cfn-quicksight-analysis-periodoverperiodcomputation-time"></a>
 The time field that is used in a computation\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [DimensionField](aws-properties-quicksight-analysis-dimensionfield.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

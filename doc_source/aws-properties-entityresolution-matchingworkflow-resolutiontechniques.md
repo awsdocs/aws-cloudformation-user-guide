@@ -1,6 +1,6 @@
 # AWS::EntityResolution::MatchingWorkflow ResolutionTechniques<a name="aws-properties-entityresolution-matchingworkflow-resolutiontechniques"></a>
 
-An object which defines the `resolutionType` and the `ruleBasedProperties`
+An object which defines the `resolutionType` and the `ruleBasedProperties`\.
 
 ## Syntax<a name="aws-properties-entityresolution-matchingworkflow-resolutiontechniques-syntax"></a>
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-entityresolution-matchingworkflow-resolutiontechniques-properties"></a>
 
 `ResolutionType`  <a name="cfn-entityresolution-matchingworkflow-resolutiontechniques-resolutiontype"></a>
-There are two types of matching, `RULE_MATCHING` and `ML_MATCHING`  
+The type of matching\. There are two types of matching: `RULE_MATCHING` and `ML_MATCHING`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

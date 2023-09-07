@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-entityresolution-matchingworkflow-rulebasedproperties-properties"></a>
 
 `AttributeMatchingModel`  <a name="cfn-entityresolution-matchingworkflow-rulebasedproperties-attributematchingmodel"></a>
-You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel\. When choosing `MANY_TO_MANY`, the system can match attribute across the sub\-types of an attribute type\. For example, if the value of the Email field of Profile A and the value of BusinessEmail field of Profile B matches, the two profiles are matched on the Email type\. When choosing `ONE_TO_ONE` the system can only match if the sub\-types are exact matches\. For example, only when the value of the Email field of Profile A and the value of the Email field of Profile B matches, the two profiles are matched on the Email type\.  
+The comparison type\. You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel\. When choosing `MANY_TO_MANY`, the system can match attributes across the sub\-types of an attribute type\. For example, if the value of the `Email` field of Profile A and the value of `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type\. When choosing `ONE_TO_ONE` ,the system can only match if the sub\-types are exact matches\. For example, only when the value of the `Email` field of Profile A and the value of the `Email` field of Profile B matches, the two profiles are matched on the `Email` type\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rules`  <a name="cfn-entityresolution-matchingworkflow-rulebasedproperties-rules"></a>
-A list of Rule objects, each of which have fields `RuleName` and `MatchingKeys`\.  
+A list of `Rule` objects, each of which have fields `RuleName` and `MatchingKeys`\.  
 *Required*: Yes  
 *Type*: List of [Rule](aws-properties-entityresolution-matchingworkflow-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

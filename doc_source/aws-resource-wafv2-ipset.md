@@ -1,7 +1,7 @@
 # AWS::WAFv2::IPSet<a name="aws-resource-wafv2-ipset"></a>
 
 **Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
+This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
 
 Use an [AWS::WAFv2::IPSet](#aws-resource-wafv2-ipset) to identify web requests that originate from specific IP addresses or ranges of IP addresses\. For example, if you're receiving a lot of requests from a ranges of IP addresses, you can configure AWS WAF to block them using an IP set that lists those IP addresses\. 
 

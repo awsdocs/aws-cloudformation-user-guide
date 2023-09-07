@@ -47,6 +47,8 @@ Properties:
 
 `ApplicationLayerAutomaticResponseConfiguration`  <a name="cfn-shield-protection-applicationlayerautomaticresponseconfiguration"></a>
 The automatic application layer DDoS mitigation settings for the protection\. This configuration determines whether Shield Advanced automatically manages rules in the web ACL in order to respond to application layer events that Shield Advanced determines to be DDoS attacks\.   
+If you use AWS CloudFormation to manage the web ACLs that you use with Shield Advanced automatic mitigation, see the guidance for the `AWS::WAFv2::WebACL` resource\.   
+hello\!  
 *Required*: No  
 *Type*: [ApplicationLayerAutomaticResponseConfiguration](aws-properties-shield-protection-applicationlayerautomaticresponseconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

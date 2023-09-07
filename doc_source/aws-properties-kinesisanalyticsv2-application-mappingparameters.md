@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application MappingParameters<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters"></a>
 
-When you configure a SQL\-based Kinesis Data Analytics application's input at the time of creating or updating an application, provides additional mapping information specific to the record format \(such as JSON, CSV, or record fields delimited by some delimiter\) on the streaming source\.
+When you configure a SQL\-based Managed Service for Apache Flink application's input at the time of creating or updating an application, provides additional mapping information specific to the record format \(such as JSON, CSV, or record fields delimited by some delimiter\) on the streaming source\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters-syntax"></a>
 

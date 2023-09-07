@@ -1,6 +1,6 @@
 # AWS::EMRServerless::Application AutoStopConfiguration<a name="aws-properties-emrserverless-application-autostopconfiguration"></a>
 
-The conﬁguration for an application to automatically stop after a certain amount of time being idle\.
+<a name="aws-properties-emrserverless-application-autostopconfiguration-description"></a>The `AutoStopConfiguration` property type specifies Property description not available\. for an [AWS::EMRServerless::Application](aws-resource-emrserverless-application.md)\.
 
 ## Syntax<a name="aws-properties-emrserverless-application-autostopconfiguration-syntax"></a>
 
@@ -25,15 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-emrserverless-application-autostopconfiguration-properties"></a>
 
 `Enabled`  <a name="cfn-emrserverless-application-autostopconfiguration-enabled"></a>
-Enables the application to automatically stop after a certain amount of time being idle\. Defaults to true\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `IdleTimeoutMinutes`  <a name="cfn-emrserverless-application-autostopconfiguration-idletimeoutminutes"></a>
-The amount of idle time in minutes after which your application will automatically stop\. Defaults to 15 minutes\.  
-*Minimum*: 1  
-*Maximum*: 10080  
+Property description not available\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

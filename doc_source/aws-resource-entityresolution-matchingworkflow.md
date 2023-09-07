@@ -62,7 +62,7 @@ A list of `OutputSource` objects, each of which contains fields `OutputS3Path`, 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResolutionTechniques`  <a name="cfn-entityresolution-matchingworkflow-resolutiontechniques"></a>
-An object which defines the `resolutionType` and the `ruleBasedProperties`  
+An object which defines the `resolutionType` and the `ruleBasedProperties`\.  
 *Required*: Yes  
 *Type*: [ResolutionTechniques](aws-properties-entityresolution-matchingworkflow-resolutiontechniques.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

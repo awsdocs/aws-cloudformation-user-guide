@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Category`  <a name="cfn-quicksight-template-topbottomrankedcomputation-category"></a>
 The category field that is used in a computation\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [DimensionField](aws-properties-quicksight-template-dimensionfield.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

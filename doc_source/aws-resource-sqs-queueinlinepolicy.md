@@ -44,7 +44,3 @@ The URLs of the queues to which you want to add the policy\. You can use the `[ 
 ## Return values<a name="aws-resource-sqs-queueinlinepolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-sqs-queueinlinepolicy-return-values-ref"></a>
-
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the ARN of the topic for which the policy was added\.
-
-For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

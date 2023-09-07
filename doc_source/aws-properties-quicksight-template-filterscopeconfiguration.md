@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AllSheets](#cfn-quicksight-template-filterscopeconfiguration-allsheets)" : Json,
   "[SelectedSheets](#cfn-quicksight-template-filterscopeconfiguration-selectedsheets)" : SelectedSheetsFilterScopeConfiguration
 }
 ```
@@ -19,11 +20,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-quicksight-template-filterscopeconfiguration-syntax.yaml"></a>
 
 ```
+  [AllSheets](#cfn-quicksight-template-filterscopeconfiguration-allsheets): Json
   [SelectedSheets](#cfn-quicksight-template-filterscopeconfiguration-selectedsheets): 
     SelectedSheetsFilterScopeConfiguration
 ```
 
 ## Properties<a name="aws-properties-quicksight-template-filterscopeconfiguration-properties"></a>
+
+`AllSheets`  <a name="cfn-quicksight-template-filterscopeconfiguration-allsheets"></a>
+The configuration for applying a filter to all sheets\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelectedSheets`  <a name="cfn-quicksight-template-filterscopeconfiguration-selectedsheets"></a>
 The configuration for applying a filter to specific sheets\.  

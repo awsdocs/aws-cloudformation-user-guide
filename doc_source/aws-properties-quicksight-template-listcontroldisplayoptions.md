@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[InfoIconLabelOptions](#cfn-quicksight-template-listcontroldisplayoptions-infoiconlabeloptions)" : SheetControlInfoIconLabelOptions,
   "[SearchOptions](#cfn-quicksight-template-listcontroldisplayoptions-searchoptions)" : ListControlSearchOptions,
   "[SelectAllOptions](#cfn-quicksight-template-listcontroldisplayoptions-selectalloptions)" : ListControlSelectAllOptions,
   "[TitleOptions](#cfn-quicksight-template-listcontroldisplayoptions-titleoptions)" : LabelOptions
@@ -19,6 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-quicksight-template-listcontroldisplayoptions-syntax.yaml"></a>
 
 ```
+  [InfoIconLabelOptions](#cfn-quicksight-template-listcontroldisplayoptions-infoiconlabeloptions): 
+    SheetControlInfoIconLabelOptions
   [SearchOptions](#cfn-quicksight-template-listcontroldisplayoptions-searchoptions): 
     ListControlSearchOptions
   [SelectAllOptions](#cfn-quicksight-template-listcontroldisplayoptions-selectalloptions): 
@@ -28,6 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-quicksight-template-listcontroldisplayoptions-properties"></a>
+
+`InfoIconLabelOptions`  <a name="cfn-quicksight-template-listcontroldisplayoptions-infoiconlabeloptions"></a>
+The configuration of info icon label options\.  
+*Required*: No  
+*Type*: [SheetControlInfoIconLabelOptions](aws-properties-quicksight-template-sheetcontrolinfoiconlabeloptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SearchOptions`  <a name="cfn-quicksight-template-listcontroldisplayoptions-searchoptions"></a>
 The configuration of the search options in a list control\.  

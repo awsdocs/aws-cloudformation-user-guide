@@ -14,10 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Admins](#cfn-lakeformation-datalakesettings-admins)" : Admins,
       "[AllowExternalDataFiltering](#cfn-lakeformation-datalakesettings-allowexternaldatafiltering)" : Boolean,
+      "[AllowFullTableExternalDataAccess](#cfn-lakeformation-datalakesettings-allowfulltableexternaldataaccess)" : Boolean,
       "[AuthorizedSessionTagValueList](#cfn-lakeformation-datalakesettings-authorizedsessiontagvaluelist)" : [ String, ... ],
       "[CreateDatabaseDefaultPermissions](#cfn-lakeformation-datalakesettings-createdatabasedefaultpermissions)" : CreateDatabaseDefaultPermissions,
       "[CreateTableDefaultPermissions](#cfn-lakeformation-datalakesettings-createtabledefaultpermissions)" : CreateTableDefaultPermissions,
       "[ExternalDataFilteringAllowList](#cfn-lakeformation-datalakesettings-externaldatafilteringallowlist)" : ExternalDataFilteringAllowList,
+      "[MutationType](#cfn-lakeformation-datalakesettings-mutationtype)" : String,
       "[Parameters](#cfn-lakeformation-datalakesettings-parameters)" : Json,
       "[TrustedResourceOwners](#cfn-lakeformation-datalakesettings-trustedresourceowners)" : [ String, ... ]
     }
@@ -32,6 +34,7 @@ Properties:
   [Admins](#cfn-lakeformation-datalakesettings-admins): 
     Admins
   [AllowExternalDataFiltering](#cfn-lakeformation-datalakesettings-allowexternaldatafiltering): Boolean
+  [AllowFullTableExternalDataAccess](#cfn-lakeformation-datalakesettings-allowfulltableexternaldataaccess): Boolean
   [AuthorizedSessionTagValueList](#cfn-lakeformation-datalakesettings-authorizedsessiontagvaluelist): 
     - String
   [CreateDatabaseDefaultPermissions](#cfn-lakeformation-datalakesettings-createdatabasedefaultpermissions): 
@@ -40,6 +43,7 @@ Properties:
     CreateTableDefaultPermissions
   [ExternalDataFilteringAllowList](#cfn-lakeformation-datalakesettings-externaldatafilteringallowlist): 
     ExternalDataFilteringAllowList
+  [MutationType](#cfn-lakeformation-datalakesettings-mutationtype): String
   [Parameters](#cfn-lakeformation-datalakesettings-parameters): Json
   [TrustedResourceOwners](#cfn-lakeformation-datalakesettings-trustedresourceowners): 
     - String
@@ -58,6 +62,12 @@ Whether to allow Amazon EMR clusters or other third\-party query engines to acce
 If set to true, you allow Amazon EMR clusters or other third\-party engines to access data in Amazon S3 locations that are registered with Lake Formation\.  
 If false or null, no third\-party query engines will be able to access data in Amazon S3 locations that are registered with Lake Formation\.  
 For more information, see [External data filtering setting](https://docs.aws.amazon.com/lake-formation/latest/dg/initial-LF-setup.html#external-data-filter)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AllowFullTableExternalDataAccess`  <a name="cfn-lakeformation-datalakesettings-allowfulltableexternaldataaccess"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,6 +100,12 @@ For more information, see [Changing the default security settings for your data 
 A list of the account IDs of AWS accounts with Amazon EMR clusters or third\-party engines that are allwed to perform data filtering\.  
 *Required*: No  
 *Type*: [ExternalDataFilteringAllowList](aws-properties-lakeformation-datalakesettings-externaldatafilteringallowlist.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MutationType`  <a name="cfn-lakeformation-datalakesettings-mutationtype"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-lakeformation-datalakesettings-parameters"></a>

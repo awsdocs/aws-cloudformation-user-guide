@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application FlinkRunConfiguration<a name="aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration"></a>
 
-Describes the starting parameters for a Flink\-based Kinesis Data Analytics application\.
+Describes the starting parameters for a Managed Service for Apache Flink application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration-syntax"></a>
 

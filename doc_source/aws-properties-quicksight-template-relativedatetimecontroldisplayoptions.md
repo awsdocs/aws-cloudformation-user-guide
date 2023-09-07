@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DateTimeFormat](#cfn-quicksight-template-relativedatetimecontroldisplayoptions-datetimeformat)" : String,
+  "[InfoIconLabelOptions](#cfn-quicksight-template-relativedatetimecontroldisplayoptions-infoiconlabeloptions)" : SheetControlInfoIconLabelOptions,
   "[TitleOptions](#cfn-quicksight-template-relativedatetimecontroldisplayoptions-titleoptions)" : LabelOptions
 }
 ```
@@ -19,6 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DateTimeFormat](#cfn-quicksight-template-relativedatetimecontroldisplayoptions-datetimeformat): String
+  [InfoIconLabelOptions](#cfn-quicksight-template-relativedatetimecontroldisplayoptions-infoiconlabeloptions): 
+    SheetControlInfoIconLabelOptions
   [TitleOptions](#cfn-quicksight-template-relativedatetimecontroldisplayoptions-titleoptions): 
     LabelOptions
 ```
@@ -31,6 +34,12 @@ Customize how dates are formatted in controls\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InfoIconLabelOptions`  <a name="cfn-quicksight-template-relativedatetimecontroldisplayoptions-infoiconlabeloptions"></a>
+The configuration of info icon label options\.  
+*Required*: No  
+*Type*: [SheetControlInfoIconLabelOptions](aws-properties-quicksight-template-sheetcontrolinfoiconlabeloptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TitleOptions`  <a name="cfn-quicksight-template-relativedatetimecontroldisplayoptions-titleoptions"></a>

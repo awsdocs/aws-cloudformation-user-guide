@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource JSONMappingParameters<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-jsonmappingparameters"></a>
 
-For a SQL\-based Kinesis Data Analytics application, provides additional mapping information when JSON is the record format on the streaming source\.
+For a SQL\-based Managed Service for Apache Flink application, provides additional mapping information when JSON is the record format on the streaming source\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-jsonmappingparameters-syntax"></a>
 

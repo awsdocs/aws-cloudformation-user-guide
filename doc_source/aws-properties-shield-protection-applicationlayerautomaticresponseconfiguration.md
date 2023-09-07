@@ -2,6 +2,8 @@
 
 The automatic application layer DDoS mitigation settings for a [AWS::Shield::Protection](aws-resource-shield-protection.md)\. This configuration determines whether Shield Advanced automatically manages rules in the web ACL in order to respond to application layer events that Shield Advanced determines to be DDoS attacks\. 
 
+If you use AWS CloudFormation to manage the web ACLs that you use with Shield Advanced automatic mitigation, see the guidance for the `AWS::WAFv2::WebACL` resource\. 
+
 ## Syntax<a name="aws-properties-shield-protection-applicationlayerautomaticresponseconfiguration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

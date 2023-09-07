@@ -44,7 +44,7 @@ The ID for a computation\.
 
 `FromValue`  <a name="cfn-quicksight-template-metriccomparisoncomputation-fromvalue"></a>
 The field that is used in a metric comparison from value setup\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [MeasureField](aws-properties-quicksight-template-measurefield.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -56,12 +56,12 @@ The name of a computation\.
 
 `TargetValue`  <a name="cfn-quicksight-template-metriccomparisoncomputation-targetvalue"></a>
 The field that is used in a metric comparison to value setup\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [MeasureField](aws-properties-quicksight-template-measurefield.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Time`  <a name="cfn-quicksight-template-metriccomparisoncomputation-time"></a>
 The time field that is used in a computation\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [DimensionField](aws-properties-quicksight-template-dimensionfield.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

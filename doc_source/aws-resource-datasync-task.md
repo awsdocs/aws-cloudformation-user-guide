@@ -20,7 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Options](#cfn-datasync-task-options)" : Options,
       "[Schedule](#cfn-datasync-task-schedule)" : TaskSchedule,
       "[SourceLocationArn](#cfn-datasync-task-sourcelocationarn)" : String,
-      "[Tags](#cfn-datasync-task-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-datasync-task-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TaskReportConfig](#cfn-datasync-task-taskreportconfig)" : TaskReportConfig
     }
 }
 ```
@@ -44,6 +45,8 @@ Properties:
   [SourceLocationArn](#cfn-datasync-task-sourcelocationarn): String
   [Tags](#cfn-datasync-task-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TaskReportConfig](#cfn-datasync-task-taskreportconfig): 
+    TaskReportConfig
 ```
 
 ## Properties<a name="aws-resource-datasync-task-properties"></a>
@@ -114,6 +117,12 @@ Specifies the tags that you want to apply to the Amazon Resource Name \(ARN\) re
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TaskReportConfig`  <a name="cfn-datasync-task-taskreportconfig"></a>
+Specifies how you want to configure a task report, which provides detailed information about for your DataSync transfer\.  
+*Required*: No  
+*Type*: [TaskReportConfig](aws-properties-datasync-task-taskreportconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-datasync-task-return-values"></a>

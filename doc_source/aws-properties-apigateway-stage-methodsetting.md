@@ -61,7 +61,7 @@ Specifies whether responses should be cached and returned for requests\. A cache
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataTraceEnabled`  <a name="cfn-apigateway-stage-methodsetting-datatraceenabled"></a>
-Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon CloudWatch Logs\.  
+Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon CloudWatch Logs\. This can be useful to troubleshoot APIs, but can result in logging sensitive data\. We recommend that you don't enable this option for production APIs\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

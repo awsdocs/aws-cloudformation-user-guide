@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DesiredInstances](#cfn-appstream-fleet-computecapacity-desiredinstances)" : Integer
+  "[DesiredInstances](#cfn-appstream-fleet-computecapacity-desiredinstances)" : Integer,
+  "[DesiredSessions](#cfn-appstream-fleet-computecapacity-desiredsessions)" : Integer
 }
 ```
 
@@ -18,12 +19,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DesiredInstances](#cfn-appstream-fleet-computecapacity-desiredinstances): Integer
+  [DesiredSessions](#cfn-appstream-fleet-computecapacity-desiredsessions): Integer
 ```
 
 ## Properties<a name="aws-properties-appstream-fleet-computecapacity-properties"></a>
 
 `DesiredInstances`  <a name="cfn-appstream-fleet-computecapacity-desiredinstances"></a>
 The desired number of streaming instances\.  
-*Required*: Yes  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DesiredSessions`  <a name="cfn-appstream-fleet-computecapacity-desiredsessions"></a>
+Property description not available\.  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

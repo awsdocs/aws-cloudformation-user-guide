@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[InfoIconLabelOptions](#cfn-quicksight-template-textfieldcontroldisplayoptions-infoiconlabeloptions)" : SheetControlInfoIconLabelOptions,
   "[PlaceholderOptions](#cfn-quicksight-template-textfieldcontroldisplayoptions-placeholderoptions)" : TextControlPlaceholderOptions,
   "[TitleOptions](#cfn-quicksight-template-textfieldcontroldisplayoptions-titleoptions)" : LabelOptions
 }
@@ -18,6 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-quicksight-template-textfieldcontroldisplayoptions-syntax.yaml"></a>
 
 ```
+  [InfoIconLabelOptions](#cfn-quicksight-template-textfieldcontroldisplayoptions-infoiconlabeloptions): 
+    SheetControlInfoIconLabelOptions
   [PlaceholderOptions](#cfn-quicksight-template-textfieldcontroldisplayoptions-placeholderoptions): 
     TextControlPlaceholderOptions
   [TitleOptions](#cfn-quicksight-template-textfieldcontroldisplayoptions-titleoptions): 
@@ -25,6 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-quicksight-template-textfieldcontroldisplayoptions-properties"></a>
+
+`InfoIconLabelOptions`  <a name="cfn-quicksight-template-textfieldcontroldisplayoptions-infoiconlabeloptions"></a>
+The configuration of info icon label options\.  
+*Required*: No  
+*Type*: [SheetControlInfoIconLabelOptions](aws-properties-quicksight-template-sheetcontrolinfoiconlabeloptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlaceholderOptions`  <a name="cfn-quicksight-template-textfieldcontroldisplayoptions-placeholderoptions"></a>
 The configuration of the placeholder options in a text field control\.  

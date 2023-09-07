@@ -28,9 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Cpu`  <a name="cfn-emrserverless-application-maximumallowedresources-cpu"></a>
 The maximum allowed CPU for an application\.  
-*Minimum*: 1  
-*Maximum*: 15  
-*Pattern*: `^[1-9][0-9]*(\\s)?(vCPU|vcpu|VCPU)?$`  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -40,9 +37,6 @@ The maximum allowed CPU for an application\.
 
 `Disk`  <a name="cfn-emrserverless-application-maximumallowedresources-disk"></a>
 The maximum allowed disk for an application\.  
-*Minimum*: 1  
-*Maximum*: 15  
-*Pattern*: `^[1-9][0-9]*(\\s)?(GB|gb|gB|Gb)$"`  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -52,9 +46,6 @@ The maximum allowed disk for an application\.
 
 `Memory`  <a name="cfn-emrserverless-application-maximumallowedresources-memory"></a>
 The maximum allowed resources for an application\.  
-*Minimum*: 1  
-*Maximum*: 15  
-*Pattern*: `^[1-9][0-9]*(\\s)?(GB|gb|gB|Gb)?$`  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

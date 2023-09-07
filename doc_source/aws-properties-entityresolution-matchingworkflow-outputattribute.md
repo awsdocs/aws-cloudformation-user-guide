@@ -1,6 +1,6 @@
 # AWS::EntityResolution::MatchingWorkflow OutputAttribute<a name="aws-properties-entityresolution-matchingworkflow-outputattribute"></a>
 
-A list of `OutputAttribute` objects, each of which have the fields Name and Hashed\. Each of these objects selects a column to be included in the output table, and whether the values of the column should be hashed\.
+A list of `OutputAttribute` objects, each of which have the fields `Name` and `Hashed`\. Each of these objects selects a column to be included in the output table, and whether the values of the column should be hashed\.
 
 ## Syntax<a name="aws-properties-entityresolution-matchingworkflow-outputattribute-syntax"></a>
 

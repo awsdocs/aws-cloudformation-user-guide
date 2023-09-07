@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[FieldLevel](#cfn-quicksight-template-subtotaloptions-fieldlevel)" : String,
   "[FieldLevelOptions](#cfn-quicksight-template-subtotaloptions-fieldleveloptions)" : [ PivotTableFieldSubtotalOptions, ... ],
   "[MetricHeaderCellStyle](#cfn-quicksight-template-subtotaloptions-metricheadercellstyle)" : TableCellStyle,
+  "[StyleTargets](#cfn-quicksight-template-subtotaloptions-styletargets)" : [ TableStyleTarget, ... ],
   "[TotalCellStyle](#cfn-quicksight-template-subtotaloptions-totalcellstyle)" : TableCellStyle,
   "[TotalsVisibility](#cfn-quicksight-template-subtotaloptions-totalsvisibility)" : String,
   "[ValueCellStyle](#cfn-quicksight-template-subtotaloptions-valuecellstyle)" : TableCellStyle
@@ -29,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - PivotTableFieldSubtotalOptions
   [MetricHeaderCellStyle](#cfn-quicksight-template-subtotaloptions-metricheadercellstyle): 
     TableCellStyle
+  [StyleTargets](#cfn-quicksight-template-subtotaloptions-styletargets): 
+    - TableStyleTarget
   [TotalCellStyle](#cfn-quicksight-template-subtotaloptions-totalcellstyle): 
     TableCellStyle
   [TotalsVisibility](#cfn-quicksight-template-subtotaloptions-totalsvisibility): String
@@ -62,6 +65,13 @@ The optional configuration of subtotal cells\.
 The cell styling options for the subtotals of header cells\.  
 *Required*: No  
 *Type*: [TableCellStyle](aws-properties-quicksight-template-tablecellstyle.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StyleTargets`  <a name="cfn-quicksight-template-subtotaloptions-styletargets"></a>
+The style targets options for subtotals\.  
+*Required*: No  
+*Type*: List of [TableStyleTarget](aws-properties-quicksight-template-tablestyletarget.md)  
+*Maximum*: `3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TotalCellStyle`  <a name="cfn-quicksight-template-subtotaloptions-totalcellstyle"></a>

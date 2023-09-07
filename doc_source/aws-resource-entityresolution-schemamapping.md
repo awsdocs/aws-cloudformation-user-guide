@@ -1,6 +1,6 @@
 # AWS::EntityResolution::SchemaMapping<a name="aws-resource-entityresolution-schemamapping"></a>
 
-Creates a schema mapping, which defines the schema of the input customer records table\. The `SchemaMapping` also provides Entity Resolution with some metadata about the table, such as the attribute types of the columns and which columns to match on\.
+Creates a schema mapping, which defines the schema of the input customer records table\. The `SchemaMapping` also provides AWS Entity Resolution with some metadata about the table, such as the attribute types of the columns and which columns to match on\.
 
 ## Syntax<a name="aws-resource-entityresolution-schemamapping-syntax"></a>
 
@@ -42,7 +42,7 @@ A description of the schema\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MappedInputFields`  <a name="cfn-entityresolution-schemamapping-mappedinputfields"></a>
-A list of `MappedInputFields`\. Each `MappedInputField` corresponds to a column the source data table, and contains column name plus additional information that Entity Resolution uses for matching\.  
+A list of `MappedInputFields`\. Each `MappedInputField` corresponds to a column the source data table, and contains column name plus additional information that AWS Entity Resolution uses for matching\.  
 *Required*: Yes  
 *Type*: List of [SchemaInputAttribute](aws-properties-entityresolution-schemamapping-schemainputattribute.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application Input<a name="aws-properties-kinesisanalyticsv2-application-input"></a>
 
-When you configure the application input for a SQL\-based Kinesis Data Analytics application, you specify the streaming source, the in\-application stream name that is created, and the mapping between the two\. 
+When you configure the application input for a SQL\-based Managed Service for Apache Flink application, you specify the streaming source, the in\-application stream name that is created, and the mapping between the two\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-input-syntax"></a>
 
@@ -69,7 +69,7 @@ If the streaming source is an Amazon Kinesis data stream, identifies the stream'
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NamePrefix`  <a name="cfn-kinesisanalyticsv2-application-input-nameprefix"></a>
-The name prefix to use when creating an in\-application stream\. Suppose that you specify a prefix "`MyInApplicationStream`\." Kinesis Data Analytics then creates one or more \(as per the `InputParallelism` count you specified\) in\-application streams with the names "`MyInApplicationStream_001`," "`MyInApplicationStream_002`," and so on\.   
+The name prefix to use when creating an in\-application stream\. Suppose that you specify a prefix "`MyInApplicationStream`\." Managed Service for Apache Flink then creates one or more \(as per the `InputParallelism` count you specified\) in\-application streams with the names "`MyInApplicationStream_001`," "`MyInApplicationStream_002`," and so on\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

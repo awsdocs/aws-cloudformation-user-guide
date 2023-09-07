@@ -1,6 +1,6 @@
 # AWS::EMRServerless::Application AutoStartConfiguration<a name="aws-properties-emrserverless-application-autostartconfiguration"></a>
 
-The conﬁguration for an application to automatically start on job submission\.
+<a name="aws-properties-emrserverless-application-autostartconfiguration-description"></a>The `AutoStartConfiguration` property type specifies Property description not available\. for an [AWS::EMRServerless::Application](aws-resource-emrserverless-application.md)\.
 
 ## Syntax<a name="aws-properties-emrserverless-application-autostartconfiguration-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-emrserverless-application-autostartconfiguration-properties"></a>
 
 `Enabled`  <a name="cfn-emrserverless-application-autostartconfiguration-enabled"></a>
-Enables the application to automatically start on job submission\. Defaults to true\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

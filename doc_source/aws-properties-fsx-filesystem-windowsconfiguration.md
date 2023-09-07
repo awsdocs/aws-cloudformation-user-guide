@@ -1,6 +1,6 @@
 # AWS::FSx::FileSystem WindowsConfiguration<a name="aws-properties-fsx-filesystem-windowsconfiguration"></a>
 
-The Microsoft Windows configuration for the file system that's being created\. 
+The Microsoft Windows configuration for the file system that's being created\.
 
 ## Syntax<a name="aws-properties-fsx-filesystem-windowsconfiguration-syntax"></a>
 

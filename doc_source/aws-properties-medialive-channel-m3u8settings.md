@@ -15,6 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AudioFramesPerPes](#cfn-medialive-channel-m3u8settings-audioframesperpes)" : Integer,
   "[AudioPids](#cfn-medialive-channel-m3u8settings-audiopids)" : String,
   "[EcmPid](#cfn-medialive-channel-m3u8settings-ecmpid)" : String,
+  "[KlvBehavior](#cfn-medialive-channel-m3u8settings-klvbehavior)" : String,
+  "[KlvDataPids](#cfn-medialive-channel-m3u8settings-klvdatapids)" : String,
   "[NielsenId3Behavior](#cfn-medialive-channel-m3u8settings-nielsenid3behavior)" : String,
   "[PatInterval](#cfn-medialive-channel-m3u8settings-patinterval)" : Integer,
   "[PcrControl](#cfn-medialive-channel-m3u8settings-pcrcontrol)" : String,
@@ -38,6 +40,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AudioFramesPerPes](#cfn-medialive-channel-m3u8settings-audioframesperpes): Integer
   [AudioPids](#cfn-medialive-channel-m3u8settings-audiopids): String
   [EcmPid](#cfn-medialive-channel-m3u8settings-ecmpid): String
+  [KlvBehavior](#cfn-medialive-channel-m3u8settings-klvbehavior): String
+  [KlvDataPids](#cfn-medialive-channel-m3u8settings-klvdatapids): String
   [NielsenId3Behavior](#cfn-medialive-channel-m3u8settings-nielsenid3behavior): String
   [PatInterval](#cfn-medialive-channel-m3u8settings-patinterval): Integer
   [PcrControl](#cfn-medialive-channel-m3u8settings-pcrcontrol): String
@@ -70,6 +74,18 @@ The PID of the elementary audio streams in the transport stream\. Multiple value
 
 `EcmPid`  <a name="cfn-medialive-channel-m3u8settings-ecmpid"></a>
 This parameter is unused and deprecated\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`KlvBehavior`  <a name="cfn-medialive-channel-m3u8settings-klvbehavior"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`KlvDataPids`  <a name="cfn-medialive-channel-m3u8settings-klvdatapids"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

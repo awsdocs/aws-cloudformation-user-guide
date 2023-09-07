@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AttributeAggregationFunction](#cfn-quicksight-dashboard-aggregationfunction-attributeaggregationfunction)" : AttributeAggregationFunction,
   "[CategoricalAggregationFunction](#cfn-quicksight-dashboard-aggregationfunction-categoricalaggregationfunction)" : String,
   "[DateAggregationFunction](#cfn-quicksight-dashboard-aggregationfunction-dateaggregationfunction)" : String,
   "[NumericalAggregationFunction](#cfn-quicksight-dashboard-aggregationfunction-numericalaggregationfunction)" : NumericalAggregationFunction
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-quicksight-dashboard-aggregationfunction-syntax.yaml"></a>
 
 ```
+  [AttributeAggregationFunction](#cfn-quicksight-dashboard-aggregationfunction-attributeaggregationfunction): 
+    AttributeAggregationFunction
   [CategoricalAggregationFunction](#cfn-quicksight-dashboard-aggregationfunction-categoricalaggregationfunction): String
   [DateAggregationFunction](#cfn-quicksight-dashboard-aggregationfunction-dateaggregationfunction): String
   [NumericalAggregationFunction](#cfn-quicksight-dashboard-aggregationfunction-numericalaggregationfunction): 
@@ -28,6 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-quicksight-dashboard-aggregationfunction-properties"></a>
+
+`AttributeAggregationFunction`  <a name="cfn-quicksight-dashboard-aggregationfunction-attributeaggregationfunction"></a>
+Aggregation for attributes\.  
+*Required*: No  
+*Type*: [AttributeAggregationFunction](aws-properties-quicksight-dashboard-attributeaggregationfunction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CategoricalAggregationFunction`  <a name="cfn-quicksight-dashboard-aggregationfunction-categoricalaggregationfunction"></a>
 Aggregation for categorical values\.  

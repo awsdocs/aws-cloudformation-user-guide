@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MotionGraphicsConfiguration](#cfn-medialive-channel-encodersettings-motiongraphicsconfiguration)" : MotionGraphicsConfiguration,
   "[NielsenConfiguration](#cfn-medialive-channel-encodersettings-nielsenconfiguration)" : NielsenConfiguration,
   "[OutputGroups](#cfn-medialive-channel-encodersettings-outputgroups)" : [ OutputGroup, ... ],
+  "[ThumbnailConfiguration](#cfn-medialive-channel-encodersettings-thumbnailconfiguration)" : ThumbnailConfiguration,
   "[TimecodeConfig](#cfn-medialive-channel-encodersettings-timecodeconfig)" : TimecodeConfig,
   "[VideoDescriptions](#cfn-medialive-channel-encodersettings-videodescriptions)" : [ VideoDescription, ... ]
 }
@@ -50,6 +51,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     NielsenConfiguration
   [OutputGroups](#cfn-medialive-channel-encodersettings-outputgroups): 
     - OutputGroup
+  [ThumbnailConfiguration](#cfn-medialive-channel-encodersettings-thumbnailconfiguration): 
+    ThumbnailConfiguration
   [TimecodeConfig](#cfn-medialive-channel-encodersettings-timecodeconfig): 
     TimecodeConfig
   [VideoDescriptions](#cfn-medialive-channel-encodersettings-videodescriptions): 
@@ -116,6 +119,12 @@ The settings to configure Nielsen watermarks\.
 The settings for the output groups in the channel\.  
 *Required*: No  
 *Type*: List of [OutputGroup](aws-properties-medialive-channel-outputgroup.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ThumbnailConfiguration`  <a name="cfn-medialive-channel-encodersettings-thumbnailconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ThumbnailConfiguration](aws-properties-medialive-channel-thumbnailconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimecodeConfig`  <a name="cfn-medialive-channel-encodersettings-timecodeconfig"></a>

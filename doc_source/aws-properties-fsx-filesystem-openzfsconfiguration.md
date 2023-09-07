@@ -128,8 +128,8 @@ The configuration Amazon FSx uses when creating the root value of the Amazon FSx
 
 `ThroughputCapacity`  <a name="cfn-fsx-filesystem-openzfsconfiguration-throughputcapacity"></a>
 Specifies the throughput of an Amazon FSx for OpenZFS file system, measured in megabytes per second \(MBps\)\. Valid values depend on the DeploymentType you choose, as follows:  
++ For `MULTI_AZ_1` and `SINGLE_AZ_2`, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MBps\.
 + For `SINGLE_AZ_1`, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps\.
-+ For `SINGLE_AZ_2`, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MBps\.
 You pay for additional throughput capacity that you provision\.  
 *Required*: No  
 *Type*: Integer  

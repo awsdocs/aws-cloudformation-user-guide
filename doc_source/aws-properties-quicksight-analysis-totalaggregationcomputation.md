@@ -44,6 +44,6 @@ The name of a computation\.
 
 `Value`  <a name="cfn-quicksight-analysis-totalaggregationcomputation-value"></a>
 The value field that is used in a computation\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [MeasureField](aws-properties-quicksight-analysis-measurefield.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

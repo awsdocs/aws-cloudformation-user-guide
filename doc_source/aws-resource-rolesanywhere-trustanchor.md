@@ -1,6 +1,8 @@
 # AWS::RolesAnywhere::TrustAnchor<a name="aws-resource-rolesanywhere-trustanchor"></a>
 
- Creates a TrustAnchor\. 
+Creates a trust anchor to establish trust between IAM Roles Anywhere and your certificate authority \(CA\)\. You can define a trust anchor as a reference to an AWS Private Certificate Authority \(AWS Private CA\) or by uploading a CA certificate\. Your AWS workloads can authenticate with the trust anchor using certificates issued by the CA in exchange for temporary AWS credentials\.
+
+**Required permissions: **`rolesanywhere:CreateTrustAnchor`\. 
 
 ## Syntax<a name="aws-resource-rolesanywhere-trustanchor-syntax"></a>
 
@@ -14,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Enabled](#cfn-rolesanywhere-trustanchor-enabled)" : Boolean,
       "[Name](#cfn-rolesanywhere-trustanchor-name)" : String,
+      "[NotificationSettings](#cfn-rolesanywhere-trustanchor-notificationsettings)" : [ NotificationSetting, ... ],
       "[Source](#cfn-rolesanywhere-trustanchor-source)" : Source,
       "[Tags](#cfn-rolesanywhere-trustanchor-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,6 +30,8 @@ Type: AWS::RolesAnywhere::TrustAnchor
 Properties: 
   [Enabled](#cfn-rolesanywhere-trustanchor-enabled): Boolean
   [Name](#cfn-rolesanywhere-trustanchor-name): String
+  [NotificationSettings](#cfn-rolesanywhere-trustanchor-notificationsettings): 
+    - NotificationSetting
   [Source](#cfn-rolesanywhere-trustanchor-source): 
     Source
   [Tags](#cfn-rolesanywhere-trustanchor-tags): 
@@ -48,6 +53,12 @@ The name of the trust anchor\.
 *Minimum*: `1`  
 *Maximum*: `255`  
 *Pattern*: `^[ a-zA-Z0-9-_]*$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NotificationSettings`  <a name="cfn-rolesanywhere-trustanchor-notificationsettings"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [NotificationSetting](aws-properties-rolesanywhere-trustanchor-notificationsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Source`  <a name="cfn-rolesanywhere-trustanchor-source"></a>

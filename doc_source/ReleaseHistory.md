@@ -4,6 +4,42 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_CloudFormation.md) | The following resource was updated: `AWS::CloudFormation::Stack`\. 
+
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html)  
+The `Capabilities`, `ChangeSetId`, `CreationTime`, `Description`, `DisableRollback`, `EnableTerminationProtection`, `LastUpdateDate`, `Outputs`, `ParentId`, `RoleARN`, `RootId`, `StackId`, `StackName`, `StackPolicyBody`, `StackPolicyURL`, `StackStatus`, `StackStatusReason`, and `TemplateBody` properties can be accessed only when using AWS Cloud Control API\.  | August 31, 2023 | 
+| [Updated resource](AWS_DataSync.md) | The following resource was updated: `AWS::DataSync::Task`\. 
+
+[AWS::DataSync::Task](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)  
+Use the `TaskReportConfig` property to configure task reports, which can help you monitor and audit your DataSync transfers\.  | August 31, 2023 | 
+| [New resource](AWS_CleanRooms.md) |  The following resource was added: `AWS::CleanRooms::AnalysisTemplate` 
+
+[AWS::CleanRooms::AnalysisTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html)  
+Use the `AWS::CleanRooms::AnalysisTemplate` resource to specify a new analysis template resource in AWS Clean Rooms\.  | August 31, 2023 | 
+| [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::Connector 
+
+ [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+Creates and manage connector between AWS Private CA and an Active Directory\.  | August 31, 2023 | 
+| [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::DirectoryRegistration 
+
+ [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+Create and manage a directory registration that authorizes communication between AWS Private CA and an Active Directory  | August 31, 2023 | 
+| [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::ServicePrincipalName 
+
+ [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+Create and manage service principal name \(SPN\) for the service account in Active Directory\.  | August 31, 2023 | 
+| [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::TemplateGroupAccessControlEntry 
+
+ [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+Create and manage group access control entries from Active Directory groups\.  | August 31, 2023 | 
+| [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::Template 
+
+ [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+Create and manage an Active Directory compatible certificate template\.  | August 31, 2023 | 
+| [Updated resource](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACL\. 
+
+ [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
+Added guidance for managing web ACLs that you use with Shield Advanced automatic application layer DDoS mitigation\.   | August 30, 2023 | 
 | [Updated resource](AWS_CleanRooms.md) | The following resource was updated: `AWS::CleanRooms::ConfiguredTable`\. 
 
 [AWS::CleanRooms::ConfiguredTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html)  
@@ -2123,13 +2159,13 @@ Use the `PrivateDnsNameOptions` property to set options for instance hostnames\.
 Use the `InstanceMetadataTags` property to allow access to instance tags from the instance metadata\.  | February 10, 2022 | 
 | [New resources](AWS_CloudFormation.md) | The following resources were added: `AWS::CloudFormation::HookDefaultVersion`, `AWS::CloudFormation::HookTypeConfig`, and `AWS::CloudFormation::HookVersion`\. 
 
- [AWS::CloudFormation::HookDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html)   
 Use the `AWS::CloudFormation::HookDefaultVersion` resource to specify the default version of the hook\. 
 
- [AWS::CloudFormation::HookTypeConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html)   
 Use the `AWS::CloudFormation::HookTypeConfig` resource to specify the configuration of a hook\. 
 
- [AWS::CloudFormation::HookVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html)   
 Use the `AWS::CloudFormation::HookVersion` resource to publish the hook version in the AWS CloudFormation registry\.  | February 10, 2022 | 
 | [New resources](AWS_ECR.md) | The following resources were added: AWS::ECR::PullThroughCacheRule 
 
@@ -2964,13 +3000,13 @@ Use the `ProtocolDetails` property to specify the `PassiveIp` address for FTP an
 Use the `ClusterEndpointEncryptionType` to specify the encryption type of the cluster's endpoint\.  | June 24, 2021 | 
 | [New resources](AWS_CloudFormation.md) | The following resources were added: `AWS::CloudFormation::PublicTypeVersion`, `AWS::CloudFormation::Publisher`, and `AWS::CloudFormation::TypeActivation`\. 
 
- [AWS::CloudFormation::PublicTypeVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html)  
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html)  
 Use the `AWS::CloudFormation::PublicTypeVersion` resource to test and publish a registered extension as a public, third\-party extension\. 
 
- [AWS::CloudFormation::Publisher](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html)  
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html)  
 Use the `AWS::CloudFormation::Publisher` resource to register your account as a publisher of public extensions in the CloudFormation registry\. 
 
- [AWS::CloudFormation::TypeActivation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-typeactivation.html)  
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-typeactivation.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-typeactivation.html)  
 Use the `AWS::CloudFormation::TypeActivation` resource to activate a public third\-party extension, making it available for use in CloudFormation operations\.  | June 24, 2021 | 
 | [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::QuickConnect 
 
@@ -3125,7 +3161,7 @@ Use the `AWS::AppRunner::Service` resource to create or update an AWS App Runner
 Use the `SuiteDefinition` resource to create a new test suite configuration for Device Advisor\.  | May 20, 2021 | 
 | [Updated resources](AWS_CloudFormation.md) | The following resource was updated: `AWS::CloudFormation::StackSet`\. 
 
- [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)  
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)  
 Use the `CallAs` property type to specify whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account\.  | May 14, 2021 | 
 | [Updated resource](AWS_ECS.md) | The following resource was updated: AWS::ECS::TaskDefinition\. 
 
@@ -3293,7 +3329,7 @@ Use the `Configuration` property to specify settings for an AWS service that aut
 Use the `AWS::AutoScaling::WarmPool` resource to specify a warm pool for an Auto Scaling group\.   | April 22, 2021 | 
 | [Updated resources](AWS_CloudFormation.md) | The following resource was updated: `AWS::CloudFormation::StackSet`\. 
 
- [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)  
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)  
 Use the `RegionConcurrencyType` property type to specify the concurrency type of deploying StackSets operations in Regions\.  | April 15, 2021 | 
 | [Updated resource](AWS_ApiGateway.md) | The following resource was updated: AWS::ApiGateway::RestApi\. 
 
@@ -3734,10 +3770,10 @@ Added `SecretsManager` attributes to `OracleSettings`\.  | February 11, 2021 |
 The `S3RecordingConfig` property sets the information for a S3 recording config object\.  | February 11, 2021 | 
 | [New resources](AWS_CloudFormation.md) | The following resources were added: `AWS::CloudFormation::ResourceDefaultVersion` and `AWS::CloudFormation::ResourceVersion`\. 
 
- [AWS::CloudFormation::ResourceDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html)  
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html)  
 Use the `AWS::CloudFormation::ResourceDefaultVersion` resource to specify the default resource version to be used in CloudFormation operations\. 
 
- [AWS::CloudFormation::ResourceVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html)   
 Use the `AWS::CloudFormation::ResourceVersion` resource to specify a resource version with the CloudFormation service, making it available for use in CloudFormation operations\.  | February 11, 2021 | 
 | [New resources](AWS_SageMaker.md) | The following resources were added: AWS::SageMaker::App, AWS::SageMaker::AppImageConfig, AWS::SageMaker::Domain, AWS::SageMaker::UserProfile\. 
 
@@ -4039,10 +4075,10 @@ Use the `ReplicaModifications` property in `AWS::S3::Bucket SourceSelectionCrite
 Use the `BucketKeyEnabled` property to specify an S3 Bucket Key with default encryption using AWS Key Management Service\.  | December 18, 2020 | 
 | [New resources](AWS_CloudFormation.md) | The following resources were added: `AWS::CloudFormation::ModuleDefaultVersion` and `AWS::CloudFormation::ModuleVersion`\. 
 
- [AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)   
 Use the `AWS::CloudFormation::ModuleDefaultVersion` resource to specify the default version of a module, which will be used in CloudFormation operations for this account and Region\. 
 
- [AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)   
 Use the `AWS::CloudFormation::ModuleVersion` resource to register the specified version of the module with the CloudFormation service, making it available for use in CloudFormation templates in this account and Region\.  | December 18, 2020 | 
 | [New resources](AWS_DevOpsGuru.md) | The following resources were added: `AWS::DevOpsGuru::NotificationChannel`, `AWS::DevOpsGuru::ResourceCollection` 
 
@@ -4484,7 +4520,7 @@ Use the `AWS::AppFlow::Flow` resource to specify a new flow in Amazon AppFlow\.
 Use the `AWS::AppFlow::ConnectorProfile` describe an instance of a connector in Amazon AppFlow\.  | September 17, 2020 | 
 | [New resource](AWS_CloudFormation.md) | The following resource was added: `AWS::CloudFormation::StackSet`\. 
 
- [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)   
 Use the `AWS::CloudFormation::StackSet` resource to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\.  | September 17, 2020 | 
 | [Updated resource](AWS_ApiGatewayV2.md) | The following resource was updated: `AWS::ApiGatewayV2::Authorizer`\. 
 
@@ -4842,7 +4878,7 @@ Updated the following property: `SetTimer`\.  | May 7, 2020 |
 | [Updated resource](AWS_SSM.md) | The following resource was updated: AWS::SSM::Association 
 
  [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)   
-**\(No longer supported\)** Use the `WaitForSuccessTimeoutSeconds` property to specify the number of seconds the service should wait for the association status to show "Success" before proceeding with the stack execution\. If the association status doesn't show "Success" after the specified number of seconds, then stack creation fails\.  | May 7, 2020 | 
+Use the `WaitForSuccessTimeoutSeconds` property to specify the number of seconds the service should wait for the association status to show "Success" before proceeding with the stack execution\. If the association status doesn't show "Success" after the specified number of seconds, then stack creation fails\.  | May 7, 2020 | 
 | [New resource](AWS_ImageBuilder.md) | The following resource was added: AWS::ImageBuilder::Image\. 
 
  [AWS::ImageBuilder::Image](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html)   
@@ -5128,7 +5164,7 @@ Use the `Tags` property to add tag keys and values to an AWS OpsWorks for Chef A
 | [New resource](AWS_WAFv2.md) | The following resource was added: AWS::WAFv2::WebACLAssociation\. 
 
  [AWS WAFv2](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_WAFv2.html)   
-Use the web ACL association to define an association between a web ACL and a regional application resource, to protect the resource\. A regional application can be an Application Load Balancer \(ALB\), Amazon API Gateway REST API, an AWS AppSync GraphQL API, or an Amazon Cognito user pool\. For Amazon CloudFront distributions, you use AWS::CloudFront::Distribution to manage the association\.   | February 6, 2020 | 
+Use the web ACL association to define an association between a web ACL and a regional application resource, to protect the resource\. A regional application can be an Application Load Balancer \(ALB\), Amazon API Gateway REST API, an AWS AppSync GraphQL API, or an Amazon Cognito user pool\. For Amazon CloudFront distributions, you use `AWS::CloudFront::Distribution` to manage the association\.   | February 6, 2020 | 
 | [New resources](AWS_ACMPCA.md) | The following resources were added: AWS::ACMPCA::Certificate, AWS::ACMPCA::CertificateAuthority, AWS::ACMPCA::CertificateAuthorityActivation\. 
 
  [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   
@@ -6288,16 +6324,16 @@ In the [ProjectTriggers](https://docs.aws.amazon.com/AWSCloudFormation/latest/Us
 Use the `AWS::FSx::FileSystem` resource to create a new FSx for Lustre or FSx for Windows File Server file system\. 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html)   
-Use the `AWS::KinesisAnalyticsV2::Application` resource to create an Amazon Kinesis Data Analytics application\. 
+Use the `AWS::KinesisAnalyticsV2::Application` resource to create an Amazon Managed Service for Apache Flink application\. 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.html)   
 Use the `AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption` resource to add an Amazon CloudWatch log stream to monitor application configuration errors\. 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html)   
-Use the `AWS::KinesisAnalyticsV2::ApplicationOutput` resource to describe a SQL\-based Amazon Kinesis Data Analytics application's output configuration\. 
+Use the `AWS::KinesisAnalyticsV2::ApplicationOutput` resource to describe a SQL\-based Amazon Managed Service for Apache Flink application's output configuration\. 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationreferencedatasource.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationreferencedatasource.html)   
-Use the `AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource` resource to describe a reference data source for a SQL\-based Amazon Kinesis Data Analytics application\.  | February 15, 2019 | 
+Use the `AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource` resource to describe a reference data source for a SQL\-based Amazon Managed Service for Apache Flink application\.  | February 15, 2019 | 
 | [Updated resources](#ReleaseHistory) | The following resources were updated: `AWS::OpsWorksCM::Server`, `AWS::ServiceDiscovery::Instance`, and `AWS::ServiceDiscovery::Service`\. 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html)   
@@ -7093,7 +7129,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  Support for stack tags in CodePipeline artifacts  |  August 18, 2017  |  You can now specify tags for stacks in template configuration files for use as artifacts for CodePipeline pipelines\. Specified tags are applied to stacks created using the template configuration file\. For more information, see [AWS CloudFormation Artifacts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-cfn-artifacts.html)\.  |  2010\-05\-15  | 
 |  Create encrypted file systems  |  August 14, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  New resources for AWS Batch support  |  August 8, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
-|  New resources for Amazon Kinesis Data Analytics support  |  July 28, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
+|  New resources for Amazon Managed Service for Apache Flink support  |  July 28, 2017  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Use StackSets to centrally manage stacks across accounts and regions  |  July 25, 2017  |  StackSets enables you to create, update, or delete stacks across multiple accounts and regions in a single operation\. Using an administrator account, you define and manage an AWS CloudFormation template, and use the template as the basis for provisioning stacks into selected target accounts across specified regions\. For more information about StackSets, see [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)\.  |  2010\-05\-15  | 
 |  View stack events by client request token  |  July 14, 2017  |  In the console, stack operations display the client request token on the **Events** tab\. All events triggered by a given stack operation are assigned the same client request token, which you can use to track operations\. For more information, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-view-stack-data-resources.html) and [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_StackEvent.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_StackEvent.html) in the *AWS CloudFormation API Reference*\.  |  2010\-05\-15  | 
 |  Use stack quick\-create links  |  July 14, 2017  |  Use quick\-create links to get stacks up and running quickly\. You can specify the template URL, stack name, and template parameters to prepopulate a single **Create Stack Wizard** page\. For more information, see [Creating Quick\-Create Links for Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stacks-quick-create-links.html)\.  | 2010\-05\-15 | 

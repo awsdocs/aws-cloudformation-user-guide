@@ -12,7 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[MaxVisibleColumns](#cfn-quicksight-analysis-smallmultiplesoptions-maxvisiblecolumns)" : Double,
   "[MaxVisibleRows](#cfn-quicksight-analysis-smallmultiplesoptions-maxvisiblerows)" : Double,
-  "[PanelConfiguration](#cfn-quicksight-analysis-smallmultiplesoptions-panelconfiguration)" : PanelConfiguration
+  "[PanelConfiguration](#cfn-quicksight-analysis-smallmultiplesoptions-panelconfiguration)" : PanelConfiguration,
+  "[XAxis](#cfn-quicksight-analysis-smallmultiplesoptions-xaxis)" : SmallMultiplesAxisProperties,
+  "[YAxis](#cfn-quicksight-analysis-smallmultiplesoptions-yaxis)" : SmallMultiplesAxisProperties
 }
 ```
 
@@ -23,6 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MaxVisibleRows](#cfn-quicksight-analysis-smallmultiplesoptions-maxvisiblerows): Double
   [PanelConfiguration](#cfn-quicksight-analysis-smallmultiplesoptions-panelconfiguration): 
     PanelConfiguration
+  [XAxis](#cfn-quicksight-analysis-smallmultiplesoptions-xaxis): 
+    SmallMultiplesAxisProperties
+  [YAxis](#cfn-quicksight-analysis-smallmultiplesoptions-yaxis): 
+    SmallMultiplesAxisProperties
 ```
 
 ## Properties<a name="aws-properties-quicksight-analysis-smallmultiplesoptions-properties"></a>
@@ -45,4 +51,16 @@ The default value is `Auto`, which automatically adjusts the rows in the grid to
 Configures the display options for each small multiples panel\.  
 *Required*: No  
 *Type*: [PanelConfiguration](aws-properties-quicksight-analysis-panelconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`XAxis`  <a name="cfn-quicksight-analysis-smallmultiplesoptions-xaxis"></a>
+The properties of a small multiples X axis\.  
+*Required*: No  
+*Type*: [SmallMultiplesAxisProperties](aws-properties-quicksight-analysis-smallmultiplesaxisproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`YAxis`  <a name="cfn-quicksight-analysis-smallmultiplesoptions-yaxis"></a>
+The properties of a small multiples Y axis\.  
+*Required*: No  
+*Type*: [SmallMultiplesAxisProperties](aws-properties-quicksight-analysis-smallmultiplesaxisproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

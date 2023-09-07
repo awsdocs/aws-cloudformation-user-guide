@@ -52,9 +52,12 @@ The names of one or more AWS accounts for which you want to deploy stack set upd
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AccountsUrl`  <a name="cfn-cloudformation-stackset-deploymenttargets-accountsurl"></a>
-Property description not available\.  
+Returns the value of the `AccountsUrl` property\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `5120`  
+*Pattern*: `(s3://|http(s?)://).+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OrganizationalUnitIds`  <a name="cfn-cloudformation-stackset-deploymenttargets-organizationalunitids"></a>

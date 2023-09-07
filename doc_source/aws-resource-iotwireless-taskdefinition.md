@@ -13,8 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoTWireless::TaskDefinition",
   "Properties" : {
       "[AutoCreateTasks](#cfn-iotwireless-taskdefinition-autocreatetasks)" : Boolean,
+      "[LoRaWANUpdateGatewayTaskEntry](#cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskentry)" : LoRaWANUpdateGatewayTaskEntry,
       "[Name](#cfn-iotwireless-taskdefinition-name)" : String,
       "[Tags](#cfn-iotwireless-taskdefinition-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TaskDefinitionType](#cfn-iotwireless-taskdefinition-taskdefinitiontype)" : String,
       "[Update](#cfn-iotwireless-taskdefinition-update)" : UpdateWirelessGatewayTaskCreate
     }
 }
@@ -26,9 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTWireless::TaskDefinition
 Properties: 
   [AutoCreateTasks](#cfn-iotwireless-taskdefinition-autocreatetasks): Boolean
+  [LoRaWANUpdateGatewayTaskEntry](#cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskentry): 
+    LoRaWANUpdateGatewayTaskEntry
   [Name](#cfn-iotwireless-taskdefinition-name): String
   [Tags](#cfn-iotwireless-taskdefinition-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TaskDefinitionType](#cfn-iotwireless-taskdefinition-taskdefinitiontype): String
   [Update](#cfn-iotwireless-taskdefinition-update): 
     UpdateWirelessGatewayTaskCreate
 ```
@@ -39,6 +44,12 @@ Properties:
 Whether to automatically create tasks using this task definition for all gateways with the specified current version\. If `false`, the task must be created by calling `CreateWirelessGatewayTask`\.  
 *Required*: Yes  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LoRaWANUpdateGatewayTaskEntry`  <a name="cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskentry"></a>
+LoRaWANUpdateGatewayTaskEntry object\.  
+*Required*: No  
+*Type*: [LoRaWANUpdateGatewayTaskEntry](aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotwireless-taskdefinition-name"></a>
@@ -54,6 +65,13 @@ The tags are an array of key\-value pairs to attach to the specified resource\. 
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TaskDefinitionType`  <a name="cfn-iotwireless-taskdefinition-taskdefinitiontype"></a>
+A filter to list only the wireless gateway task definitions that use this task definition type\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `UPDATE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Update`  <a name="cfn-iotwireless-taskdefinition-update"></a>

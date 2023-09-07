@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application RunConfiguration<a name="aws-properties-kinesisanalyticsv2-application-runconfiguration"></a>
 
-Describes the starting parameters for an Kinesis Data Analytics application\.
+Describes the starting parameters for an Managed Service for Apache Flink application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-runconfiguration-syntax"></a>
 
@@ -33,7 +33,7 @@ Describes the restore behavior of a restarting application\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FlinkRunConfiguration`  <a name="cfn-kinesisanalyticsv2-application-runconfiguration-flinkrunconfiguration"></a>
-Describes the starting parameters for a Flink\-based Kinesis Data Analytics application\.  
+Describes the starting parameters for a Managed Service for Apache Flink application\.  
 *Required*: No  
 *Type*: [FlinkRunConfiguration](aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

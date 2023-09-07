@@ -25,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ImageName](#cfn-appstream-fleet-imagename)" : String,
       "[InstanceType](#cfn-appstream-fleet-instancetype)" : String,
       "[MaxConcurrentSessions](#cfn-appstream-fleet-maxconcurrentsessions)" : Integer,
+      "[MaxSessionsPerInstance](#cfn-appstream-fleet-maxsessionsperinstance)" : Integer,
       "[MaxUserDurationInSeconds](#cfn-appstream-fleet-maxuserdurationinseconds)" : Integer,
       "[Name](#cfn-appstream-fleet-name)" : String,
       "[Platform](#cfn-appstream-fleet-platform)" : String,
@@ -57,6 +58,7 @@ Properties:
   [ImageName](#cfn-appstream-fleet-imagename): String
   [InstanceType](#cfn-appstream-fleet-instancetype): String
   [MaxConcurrentSessions](#cfn-appstream-fleet-maxconcurrentsessions): Integer
+  [MaxSessionsPerInstance](#cfn-appstream-fleet-maxsessionsperinstance): Integer
   [MaxUserDurationInSeconds](#cfn-appstream-fleet-maxuserdurationinseconds): Integer
   [Name](#cfn-appstream-fleet-name): String
   [Platform](#cfn-appstream-fleet-platform): String
@@ -200,6 +202,12 @@ The following instance types are available for Elastic fleets:
 
 `MaxConcurrentSessions`  <a name="cfn-appstream-fleet-maxconcurrentsessions"></a>
 The maximum number of concurrent sessions that can be run on an Elastic fleet\. This setting is required for Elastic fleets, but is not used for other fleet types\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MaxSessionsPerInstance`  <a name="cfn-appstream-fleet-maxsessionsperinstance"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

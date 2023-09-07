@@ -63,10 +63,12 @@ The following resource types are also available through *advanced* event selecto
 +  `AWS::Glue::Table` 
 +  `AWS::GuardDuty::Detector` 
 +  `AWS::KendraRanking::ExecutionPlan` 
++  `AWS::KinesisVideo::Stream` 
 +  `AWS::ManagedBlockchain::Network` 
 +  `AWS::ManagedBlockchain::Node` 
 +  `AWS::MedicalImaging::Datastore` 
 +  `AWS::PCAConnectorAD::Connector` 
++  `AWS::SageMaker::Endpoint` 
 +  `AWS::SageMaker::ExperimentTrialComponent` 
 +  `AWS::SageMaker::FeatureGroup` 
 +  `AWS::S3::AccessPoint` 

@@ -41,3 +41,59 @@ If the SSM Parameter Store parameter exists in the same Region as the task you'r
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-ecs-service-secret--examples"></a>
+
+
+
+### Specifying a secret in a service<a name="aws-properties-ecs-service-secret--examples--Specifying_a_secret_in_a_service"></a>
+
+The following example specifies a secret for the service\.
+
+#### JSON<a name="aws-properties-ecs-service-secret--examples--Specifying_a_secret_in_a_service--json"></a>
+
+```
+  {
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+         "ECSTaskDefinition": {
+            "Type": "AWS::ECS::TaskDefinition",
+            "Properties": {
+                "ContainerDefinitions": [
+                    {
+                        "Essential": true,
+                        "Image": "amazon/amazon-ecs-sample",
+                        "Name": "example"
+                    }
+                ],
+                "ExecutionRoleArn": "arn:aws:iam::aws_account_id:role/ecsTaskExecutionRole",
+                "Family": "task-definition-cfn",
+                "Secrets": {
+                    "Name": "TestKey",
+                    "ValueFrom": 'arn:aws:secretsmanager:region:aws_account_id:secret:secret-name'
+                }
+            }
+        
+        }
+        }
+    }
+```
+
+#### YAML<a name="aws-properties-ecs-service-secret--examples--Specifying_a_secret_in_a_service--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  ECSTaskDefinition:
+    Type: 'AWS::ECS::TaskDefinition'
+    Properties:
+      ContainerDefinitions:
+          Essential: true
+          Image: 'amazon/amazon-ecs-sample'
+          Name: example
+      ExecutionRoleArn: 'arn:aws:iam::aws_account_id:role/ecsTaskExecutionRole'
+      Family: task-definition-cfn
+      Secrets:
+          Name: TestKey
+          ValueFrom:'arn:aws:secretsmanager:region:aws_account_id:secret:secret-name'
+```

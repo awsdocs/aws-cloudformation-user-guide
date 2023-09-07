@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CacheFullBehavior](#cfn-medialive-channel-rtmpgroupsettings-cachefullbehavior)" : String,
   "[CacheLength](#cfn-medialive-channel-rtmpgroupsettings-cachelength)" : Integer,
   "[CaptionData](#cfn-medialive-channel-rtmpgroupsettings-captiondata)" : String,
+  "[IncludeFillerNalUnits](#cfn-medialive-channel-rtmpgroupsettings-includefillernalunits)" : String,
   "[InputLossAction](#cfn-medialive-channel-rtmpgroupsettings-inputlossaction)" : String,
   "[RestartDelay](#cfn-medialive-channel-rtmpgroupsettings-restartdelay)" : Integer
 }
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CacheFullBehavior](#cfn-medialive-channel-rtmpgroupsettings-cachefullbehavior): String
   [CacheLength](#cfn-medialive-channel-rtmpgroupsettings-cachelength): Integer
   [CaptionData](#cfn-medialive-channel-rtmpgroupsettings-captiondata): String
+  [IncludeFillerNalUnits](#cfn-medialive-channel-rtmpgroupsettings-includefillernalunits): String
   [InputLossAction](#cfn-medialive-channel-rtmpgroupsettings-inputlossaction): String
   [RestartDelay](#cfn-medialive-channel-rtmpgroupsettings-restartdelay): Integer
 ```
@@ -63,6 +65,12 @@ The cache length, in seconds, that is used to calculate buffer size\.
 
 `CaptionData`  <a name="cfn-medialive-channel-rtmpgroupsettings-captiondata"></a>
 Controls the types of data that pass to onCaptionInfo outputs\. If set to all, 608 and 708 carried DTVCC data is passed\. If set to field1AndField2608, DTVCC data is stripped out, but 608 data from both fields is passed\. If set to field1608, only the data carried in 608 from field 1 video is passed\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IncludeFillerNalUnits`  <a name="cfn-medialive-channel-rtmpgroupsettings-includefillernalunits"></a>
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

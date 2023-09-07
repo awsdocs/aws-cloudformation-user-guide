@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ContainerRecipe ComponentParameter<a name="aws-properties-imagebuilder-containerrecipe-componentparameter"></a>
 
-<a name="aws-properties-imagebuilder-containerrecipe-componentparameter-description"></a>The `ComponentParameter` property type specifies Property description not available\. for an [AWS::ImageBuilder::ContainerRecipe](aws-resource-imagebuilder-containerrecipe.md)\.
+Contains a key/value pair that sets the named component parameter\.
 
 ## Syntax<a name="aws-properties-imagebuilder-containerrecipe-componentparameter-syntax"></a>
 
@@ -26,13 +26,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-imagebuilder-containerrecipe-componentparameter-properties"></a>
 
 `Name`  <a name="cfn-imagebuilder-containerrecipe-componentparameter-name"></a>
-Property description not available\.  
+The name of the component parameter to set\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Pattern*: `[^\x00]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-imagebuilder-containerrecipe-componentparameter-value"></a>
-Property description not available\.  
+Sets the value for the named component parameter\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application InputLambdaProcessor<a name="aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor"></a>
 
-An object that contains the Amazon Resource Name \(ARN\) of the Amazon Lambda function that is used to preprocess records in the stream in a SQL\-based Kinesis Data Analytics application\. 
+An object that contains the Amazon Resource Name \(ARN\) of the Amazon Lambda function that is used to preprocess records in the stream in a SQL\-based Managed Service for Apache Flink application\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor-syntax"></a>
 

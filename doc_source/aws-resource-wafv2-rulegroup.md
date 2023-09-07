@@ -1,7 +1,7 @@
 # AWS::WAFv2::RuleGroup<a name="aws-resource-wafv2-rulegroup"></a>
 
 **Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
+This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF developer guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
 
 Use an [AWS::WAFv2::RuleGroup](#aws-resource-wafv2-rulegroup) to define a collection of rules for inspecting and controlling web requests\. You use a rule group in an [AWS::WAFv2::WebACL](aws-resource-wafv2-webacl.md) by providing its Amazon Resource Name \(ARN\) to the rule statement `RuleGroupReferenceStatement`, when you add rules to the web ACL\. 
 

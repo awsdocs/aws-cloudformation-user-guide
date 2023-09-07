@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Id`  <a name="cfn-securityhub-automationrule-relatedfinding-id"></a>
  The product\-generated identifier for a related finding\.   
+ Array Members: Minimum number of 1 item\. Maximum number of 20 items\.   
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

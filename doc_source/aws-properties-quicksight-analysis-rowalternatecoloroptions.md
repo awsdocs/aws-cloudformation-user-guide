@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[RowAlternateColors](#cfn-quicksight-analysis-rowalternatecoloroptions-rowalternatecolors)" : [ String, ... ],
-  "[Status](#cfn-quicksight-analysis-rowalternatecoloroptions-status)" : String
+  "[Status](#cfn-quicksight-analysis-rowalternatecoloroptions-status)" : String,
+  "[UsePrimaryBackgroundColor](#cfn-quicksight-analysis-rowalternatecoloroptions-useprimarybackgroundcolor)" : String
 }
 ```
 
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [RowAlternateColors](#cfn-quicksight-analysis-rowalternatecoloroptions-rowalternatecolors): 
     - String
   [Status](#cfn-quicksight-analysis-rowalternatecoloroptions-status): String
+  [UsePrimaryBackgroundColor](#cfn-quicksight-analysis-rowalternatecoloroptions-useprimarybackgroundcolor): String
 ```
 
 ## Properties<a name="aws-properties-quicksight-analysis-rowalternatecoloroptions-properties"></a>
@@ -34,6 +36,13 @@ Determines the list of row alternate colors\.
 
 `Status`  <a name="cfn-quicksight-analysis-rowalternatecoloroptions-status"></a>
 Determines the widget status\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `DISABLED | ENABLED`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UsePrimaryBackgroundColor`  <a name="cfn-quicksight-analysis-rowalternatecoloroptions-useprimarybackgroundcolor"></a>
+The primary background color options for alternate rows\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  

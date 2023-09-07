@@ -1,6 +1,6 @@
 # AWS::EMRServerless::Application InitialCapacityConfigKeyValuePair<a name="aws-properties-emrserverless-application-initialcapacityconfigkeyvaluepair"></a>
 
-The initial capacity configuration per worker\.
+<a name="aws-properties-emrserverless-application-initialcapacityconfigkeyvaluepair-description"></a>The `InitialCapacityConfigKeyValuePair` property type specifies Property description not available\. for an [AWS::EMRServerless::Application](aws-resource-emrserverless-application.md)\.
 
 ## Syntax<a name="aws-properties-emrserverless-application-initialcapacityconfigkeyvaluepair-syntax"></a>
 
@@ -26,16 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-emrserverless-application-initialcapacityconfigkeyvaluepair-properties"></a>
 
 `Key`  <a name="cfn-emrserverless-application-initialcapacityconfigkeyvaluepair-key"></a>
-The worker type for an analytics framework\. For Spark applications, the key can either be set to `Driver` or `Executor`\. For Hive applications, it can be set to `HiveDriver` or `TezTask`\.  
-*Minimum*: 1  
-*Maximum*: 50  
-*Pattern*: `^[a-zA-Z]+[-_]*[a-zA-Z]+$`  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Value`  <a name="cfn-emrserverless-application-initialcapacityconfigkeyvaluepair-value"></a>
-The value for the initial capacity configuration per worker\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: [InitialCapacityConfig](aws-properties-emrserverless-application-initialcapacityconfig.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

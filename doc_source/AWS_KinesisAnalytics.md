@@ -1,4 +1,4 @@
-# Amazon Kinesis Data Analytics resource type reference<a name="AWS_KinesisAnalytics"></a>
+# Amazon Managed Service for Apache Flink resource type reference<a name="AWS_KinesisAnalytics"></a>
 
 **Resource types**
 + [AWS::KinesisAnalytics::Application](aws-resource-kinesisanalytics-application.md)
