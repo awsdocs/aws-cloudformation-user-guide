@@ -106,7 +106,7 @@ To get a list of supported version, use the `ListVersions` operation\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-grafana-workspace-name"></a>
 The name of the workspace\.  

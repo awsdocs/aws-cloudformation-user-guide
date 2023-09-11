@@ -1,6 +1,6 @@
 # AWS::VpcLattice::TargetGroup HealthCheckConfig<a name="aws-properties-vpclattice-targetgroup-healthcheckconfig"></a>
 
-The health check configuration of a target group\. Health check configurations aren't used for target groups of type `LAMBDA` or `ALB`\.
+Describes the health check configuration of a target group\. Health check configurations aren't used for target groups of type `LAMBDA` or `ALB`\.
 
 ## Syntax<a name="aws-properties-vpclattice-targetgroup-healthcheckconfig-syntax"></a>
 
@@ -66,7 +66,7 @@ The number of consecutive successful health checks required before considering a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Matcher`  <a name="cfn-vpclattice-targetgroup-healthcheckconfig-matcher"></a>
-The codes to use when checking for a successful response from a target\. These are called *Success codes* in the console\.  
+The codes to use when checking for a successful response from a target\.  
 *Required*: No  
 *Type*: [Matcher](aws-properties-vpclattice-targetgroup-matcher.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

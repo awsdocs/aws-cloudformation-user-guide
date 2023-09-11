@@ -68,7 +68,7 @@ The name of the new resource\.
 
 `RoleArn`  <a name="cfn-iotwireless-destination-rolearn"></a>
 The ARN of the IAM Role that authorizes the destination\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  

@@ -1,6 +1,6 @@
 # AWS::VpcLattice::ServiceNetworkServiceAssociation DnsEntry<a name="aws-properties-vpclattice-servicenetworkserviceassociation-dnsentry"></a>
 
-DNS information about the service\.
+The DNS information\.
 
 ## Syntax<a name="aws-properties-vpclattice-servicenetworkserviceassociation-dnsentry-syntax"></a>
 

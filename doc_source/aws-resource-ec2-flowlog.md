@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::FlowLog",
   "Properties" : {
+      "[DeliverCrossAccountRole](#cfn-ec2-flowlog-delivercrossaccountrole)" : String,
       "[DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn)" : String,
       "[DestinationOptions](#cfn-ec2-flowlog-destinationoptions)" : DestinationOptions,
       "[LogDestination](#cfn-ec2-flowlog-logdestination)" : String,
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::FlowLog
 Properties: 
+  [DeliverCrossAccountRole](#cfn-ec2-flowlog-delivercrossaccountrole): String
   [DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn): String
   [DestinationOptions](#cfn-ec2-flowlog-destinationoptions): 
     DestinationOptions
@@ -48,6 +50,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-ec2-flowlog-properties"></a>
+
+`DeliverCrossAccountRole`  <a name="cfn-ec2-flowlog-delivercrossaccountrole"></a>
+The ARN of the IAM role that allows the service to publish flow logs across accounts\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeliverLogsPermissionArn`  <a name="cfn-ec2-flowlog-deliverlogspermissionarn"></a>
 The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account\.  

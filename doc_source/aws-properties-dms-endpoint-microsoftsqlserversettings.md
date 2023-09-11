@@ -12,12 +12,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[BcpPacketSize](#cfn-dms-endpoint-microsoftsqlserversettings-bcppacketsize)" : Integer,
   "[ControlTablesFileGroup](#cfn-dms-endpoint-microsoftsqlserversettings-controltablesfilegroup)" : String,
+  "[DatabaseName](#cfn-dms-endpoint-microsoftsqlserversettings-databasename)" : String,
+  "[ForceLobLookup](#cfn-dms-endpoint-microsoftsqlserversettings-forceloblookup)" : Boolean,
+  "[Password](#cfn-dms-endpoint-microsoftsqlserversettings-password)" : String,
+  "[Port](#cfn-dms-endpoint-microsoftsqlserversettings-port)" : Integer,
   "[QuerySingleAlwaysOnNode](#cfn-dms-endpoint-microsoftsqlserversettings-querysinglealwaysonnode)" : Boolean,
   "[ReadBackupOnly](#cfn-dms-endpoint-microsoftsqlserversettings-readbackuponly)" : Boolean,
   "[SafeguardPolicy](#cfn-dms-endpoint-microsoftsqlserversettings-safeguardpolicy)" : String,
   "[SecretsManagerAccessRoleArn](#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanageraccessrolearn)" : String,
   "[SecretsManagerSecretId](#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanagersecretid)" : String,
+  "[ServerName](#cfn-dms-endpoint-microsoftsqlserversettings-servername)" : String,
+  "[TlogAccessMode](#cfn-dms-endpoint-microsoftsqlserversettings-tlogaccessmode)" : String,
+  "[TrimSpaceInChar](#cfn-dms-endpoint-microsoftsqlserversettings-trimspaceinchar)" : Boolean,
   "[UseBcpFullLoad](#cfn-dms-endpoint-microsoftsqlserversettings-usebcpfullload)" : Boolean,
+  "[Username](#cfn-dms-endpoint-microsoftsqlserversettings-username)" : String,
   "[UseThirdPartyBackupDevice](#cfn-dms-endpoint-microsoftsqlserversettings-usethirdpartybackupdevice)" : Boolean
 }
 ```
@@ -27,12 +35,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [BcpPacketSize](#cfn-dms-endpoint-microsoftsqlserversettings-bcppacketsize): Integer
   [ControlTablesFileGroup](#cfn-dms-endpoint-microsoftsqlserversettings-controltablesfilegroup): String
+  [DatabaseName](#cfn-dms-endpoint-microsoftsqlserversettings-databasename): String
+  [ForceLobLookup](#cfn-dms-endpoint-microsoftsqlserversettings-forceloblookup): Boolean
+  [Password](#cfn-dms-endpoint-microsoftsqlserversettings-password): String
+  [Port](#cfn-dms-endpoint-microsoftsqlserversettings-port): Integer
   [QuerySingleAlwaysOnNode](#cfn-dms-endpoint-microsoftsqlserversettings-querysinglealwaysonnode): Boolean
   [ReadBackupOnly](#cfn-dms-endpoint-microsoftsqlserversettings-readbackuponly): Boolean
   [SafeguardPolicy](#cfn-dms-endpoint-microsoftsqlserversettings-safeguardpolicy): String
   [SecretsManagerAccessRoleArn](#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanageraccessrolearn): String
   [SecretsManagerSecretId](#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanagersecretid): String
+  [ServerName](#cfn-dms-endpoint-microsoftsqlserversettings-servername): String
+  [TlogAccessMode](#cfn-dms-endpoint-microsoftsqlserversettings-tlogaccessmode): String
+  [TrimSpaceInChar](#cfn-dms-endpoint-microsoftsqlserversettings-trimspaceinchar): Boolean
   [UseBcpFullLoad](#cfn-dms-endpoint-microsoftsqlserversettings-usebcpfullload): Boolean
+  [Username](#cfn-dms-endpoint-microsoftsqlserversettings-username): String
   [UseThirdPartyBackupDevice](#cfn-dms-endpoint-microsoftsqlserversettings-usethirdpartybackupdevice): Boolean
 ```
 
@@ -48,6 +64,30 @@ The maximum size of the packets \(in bytes\) used to transfer data using BCP\.
 Specifies a file group for the AWS DMS internal tables\. When the replication task starts, all the internal AWS DMS control tables \(awsdms\_ apply\_exception, awsdms\_apply, awsdms\_changes\) are created for the specified file group\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DatabaseName`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-databasename"></a>
+Database name for the endpoint\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ForceLobLookup`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-forceloblookup"></a>
+Forces LOB lookup on inline LOB\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Password`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-password"></a>
+Endpoint connection password\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Port`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-port"></a>
+Endpoint TCP port\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QuerySingleAlwaysOnNode`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-querysinglealwaysonnode"></a>
@@ -84,10 +124,34 @@ The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that co
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ServerName`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-servername"></a>
+Fully qualified domain name of the endpoint\. For an Amazon RDS SQL Server instance, this is the output of [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html), in the ` [Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html).Address` field\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TlogAccessMode`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-tlogaccessmode"></a>
+Indicates the mode used to fetch CDC data\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TrimSpaceInChar`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-trimspaceinchar"></a>
+Use the `TrimSpaceInChar` source endpoint setting to right\-trim data on CHAR and NCHAR data types during migration\. Setting `TrimSpaceInChar` does not left\-trim data\. The default value is `true`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `UseBcpFullLoad`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-usebcpfullload"></a>
 Use this to attribute to transfer data for full\-load operations using BCP\. When the target table contains an identity column that does not exist in the source table, you must disable the use BCP for loading table option\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Username`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-username"></a>
+Endpoint connection user name\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseThirdPartyBackupDevice`  <a name="cfn-dms-endpoint-microsoftsqlserversettings-usethirdpartybackupdevice"></a>

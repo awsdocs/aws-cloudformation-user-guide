@@ -152,7 +152,7 @@ The type of endpoint\. Valid values are `source` and `target`\.
 
 `EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
 The type of engine for the endpoint, depending on the `EndpointType` value\.  
-*Valid values*: `mysql` \| `oracle` \| `postgres` \| `mariadb` \| `aurora` \| `aurora-postgresql` \| `opensearch` \| `redshift` \| `s3` \| `db2` \| `azuredb` \| `sybase` \| `dynamodb` \| `mongodb` \| `kinesis` \| `kafka` \| `elasticsearch` \| `docdb` \| `sqlserver` \| `neptune`  
+*Valid values*: `mysql` \| `oracle` \| `postgres` \| `mariadb` \| `aurora` \| `aurora-postgresql` \| `opensearch` \| `redshift` \| `redshift-serverless` \|`s3` \| `db2` \| `azuredb` \| `sybase` \| `dynamodb` \| `mongodb` \| `kinesis` \| `kafka` \| `elasticsearch` \| `docdb` \| `sqlserver` \| `neptune`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

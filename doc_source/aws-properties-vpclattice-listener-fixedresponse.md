@@ -1,6 +1,6 @@
 # AWS::VpcLattice::Listener FixedResponse<a name="aws-properties-vpclattice-listener-fixedresponse"></a>
 
-Information about an action that returns a custom HTTP response\.
+Describes an action that returns a custom HTTP response\.
 
 ## Syntax<a name="aws-properties-vpclattice-listener-fixedresponse-syntax"></a>
 

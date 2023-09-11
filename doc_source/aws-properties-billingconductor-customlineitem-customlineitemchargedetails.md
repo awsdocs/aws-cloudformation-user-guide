@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Flat](#cfn-billingconductor-customlineitem-customlineitemchargedetails-flat)" : CustomLineItemFlatChargeDetails,
+  "[LineItemFilters](#cfn-billingconductor-customlineitem-customlineitemchargedetails-lineitemfilters)" : [ LineItemFilter, ... ],
   "[Percentage](#cfn-billingconductor-customlineitem-customlineitemchargedetails-percentage)" : CustomLineItemPercentageChargeDetails,
   "[Type](#cfn-billingconductor-customlineitem-customlineitemchargedetails-type)" : String
 }
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Flat](#cfn-billingconductor-customlineitem-customlineitemchargedetails-flat): 
     CustomLineItemFlatChargeDetails
+  [LineItemFilters](#cfn-billingconductor-customlineitem-customlineitemchargedetails-lineitemfilters): 
+    - LineItemFilter
   [Percentage](#cfn-billingconductor-customlineitem-customlineitemchargedetails-percentage): 
     CustomLineItemPercentageChargeDetails
   [Type](#cfn-billingconductor-customlineitem-customlineitemchargedetails-type): String
@@ -32,6 +35,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A `CustomLineItemFlatChargeDetails` that describes the charge details of a flat custom line item\.  
 *Required*: No  
 *Type*: [CustomLineItemFlatChargeDetails](aws-properties-billingconductor-customlineitem-customlineitemflatchargedetails.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LineItemFilters`  <a name="cfn-billingconductor-customlineitem-customlineitemchargedetails-lineitemfilters"></a>
+A representation of the line item filter\.  
+*Required*: No  
+*Type*: List of [LineItemFilter](aws-properties-billingconductor-customlineitem-lineitemfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Percentage`  <a name="cfn-billingconductor-customlineitem-customlineitemchargedetails-percentage"></a>

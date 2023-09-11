@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DataSources](#cfn-guardduty-detector-datasources)" : CFNDataSourceConfigurations,
       "[Enable](#cfn-guardduty-detector-enable)" : Boolean,
-      "[Features](#cfn-guardduty-detector-features)" : [ FeatureConfigurations, ... ],
+      "[Features](#cfn-guardduty-detector-features)" : [ CFNFeatureConfiguration, ... ],
       "[FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency)" : String,
-      "[Tags](#cfn-guardduty-detector-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-guardduty-detector-tags)" : [ TagItem, ... ]
     }
 }
 ```
@@ -32,10 +32,10 @@ Properties:
     CFNDataSourceConfigurations
   [Enable](#cfn-guardduty-detector-enable): Boolean
   [Features](#cfn-guardduty-detector-features): 
-    - FeatureConfigurations
+    - CFNFeatureConfiguration
   [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency): String
   [Tags](#cfn-guardduty-detector-tags): 
-    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+    - TagItem
 ```
 
 ## Properties<a name="aws-resource-guardduty-detector-properties"></a>
@@ -55,7 +55,7 @@ Specifies whether the detector is to be enabled on creation\.
 `Features`  <a name="cfn-guardduty-detector-features"></a>
 A list of features that will be configured for the detector\.  
 *Required*: No  
-*Type*: List of [FeatureConfigurations](aws-properties-guardduty-detector-featureconfigurations.md)  
+*Type*: List of [CFNFeatureConfiguration](aws-properties-guardduty-detector-cfnfeatureconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FindingPublishingFrequency`  <a name="cfn-guardduty-detector-findingpublishingfrequency"></a>
@@ -70,7 +70,7 @@ Specifies tags added to a new detector resource\. Each tag consists of a key and
 Currently, support is available only for creating and deleting a tag\. No support exists for updating the tags\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
 *Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Type*: List of [TagItem](aws-properties-guardduty-detector-tagitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-guardduty-detector-return-values"></a>
@@ -80,6 +80,13 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
  When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique ID of the detector\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-guardduty-detector-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-guardduty-detector-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-guardduty-detector--examples"></a>
 

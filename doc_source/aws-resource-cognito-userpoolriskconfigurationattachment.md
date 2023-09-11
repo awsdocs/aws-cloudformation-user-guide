@@ -159,7 +159,7 @@ The following example sets risk configurations in the referenced user pool and c
          },
          "CompromisedCredentialsRiskConfiguration":{
             "Actions":{
-               "EventAction":"BLOCKED"
+               "EventAction":"BLOCK"
             },
             "EventFilter":[
                {
@@ -218,7 +218,7 @@ UserPoolRiskConfiguration:
         ReplyTo: "your-reply-to@amazon.com" 
     CompromisedCredentialsRiskConfiguration:
       Actions: 
-        EventAction: "BLOCKED" 
+        EventAction: "BLOCK" 
         EventFilter: - !Ref EventFilter 
     RiskExceptionConfiguration:
         BlockedIPRangeList: 

@@ -4,9 +4,29 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_BillingConductor.md) | The following resource was updated: AWS::BillingConductor::CustomLineItem LineItemFilter\. 
+
+ [AWS::BillingConductor::CustomLineItem LineItemFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html)   
+You can use `LineItemFilter` for your `CustomLineItem` to customize the definition of a billing group's total cost when you include the billing group as a resource value for a percentage custom line item\.  | September 7, 2023 | 
+| [Updated resource](AWS_CleanRooms.md) | The following resource was updated: `AWS::CleanRooms::Membership`\. 
+
+[AWS::CleanRooms::Membership](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html)  
+Use the `MembershipProtectedQueryOutputConfiguration`, `MembershipProtectedQueryResultConfiguration`, and `ProtectedQueryS3OutputConfiguration` properties to specify configurations for protected query results\.  | September 7, 2023 | 
+| [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::View 
+
+ [AWS::Connect::View](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-view.html)   
+Use the `AWS::Connect::View` resource to create a customer\-managed view in the specified instance\.  | September 7, 2023 | 
+| [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::ViewVersion 
+
+ [AWS::Connect::ViewVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-viewversion.html)   
+Use the `AWS::Connect::ViewVersion` resource to create a version for the specified customer\-managed view within the specified instance\.  | September 7, 2023 | 
+| [Added properties](AWS_Cognito.md) | Added AWS::Cognito::LogDeliveryConfiguration and associated parameters for CloudWatch Logs configuration in user pools\. 
+
+ [AWS::Cognito::LogDeliveryConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-logdeliveryconfiguration.html)   
+You can configure a user pool to log detailed information about user errors to CloudWatch Logs\.  | September 7, 2023 | 
 | [Updated resource](AWS_CloudFormation.md) | The following resource was updated: `AWS::CloudFormation::Stack`\. 
 
-[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html)  
+[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)  
 The `Capabilities`, `ChangeSetId`, `CreationTime`, `Description`, `DisableRollback`, `EnableTerminationProtection`, `LastUpdateDate`, `Outputs`, `ParentId`, `RoleARN`, `RootId`, `StackId`, `StackName`, `StackPolicyBody`, `StackPolicyURL`, `StackStatus`, `StackStatusReason`, and `TemplateBody` properties can be accessed only when using AWS Cloud Control API\.  | August 31, 2023 | 
 | [Updated resource](AWS_DataSync.md) | The following resource was updated: `AWS::DataSync::Task`\. 
 
@@ -18,23 +38,23 @@ Use the `TaskReportConfig` property to configure task reports, which can help yo
 Use the `AWS::CleanRooms::AnalysisTemplate` resource to specify a new analysis template resource in AWS Clean Rooms\.  | August 31, 2023 | 
 | [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::Connector 
 
- [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+ [AWS::PCAConnectorAD::Connector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-connector.html)   
 Creates and manage connector between AWS Private CA and an Active Directory\.  | August 31, 2023 | 
 | [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::DirectoryRegistration 
 
- [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+ [AWS::PCAConnectorAD::DirectoryRegistration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-directoryregistration.html)   
 Create and manage a directory registration that authorizes communication between AWS Private CA and an Active Directory  | August 31, 2023 | 
 | [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::ServicePrincipalName 
 
- [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+ [AWS::PCAConnectorAD::ServicePrincipalName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-serviceprincipalname.html)   
 Create and manage service principal name \(SPN\) for the service account in Active Directory\.  | August 31, 2023 | 
 | [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::TemplateGroupAccessControlEntry 
 
- [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+ [AWS::PCAConnectorAD::TemplateGroupAccessControlEntry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-templategroupaccesscontrolentry.html)   
 Create and manage group access control entries from Active Directory groups\.  | August 31, 2023 | 
 | [New resource](AWS_PCAConnectorAD.md) | The following resource was added: AWS::PCAConnectorAD::Template 
 
- [https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html](https://docs.aws.amazon.com/https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_Operations.html)   
+ [AWS::PCAConnectorAD::Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-template.html)   
 Create and manage an Active Directory compatible certificate template\.  | August 31, 2023 | 
 | [Updated resource](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACL\. 
 
@@ -178,6 +198,10 @@ Multiple parameters have been added for this resource\. See the linked documenta
 
  [AWS::Transfer::Connector SftpConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html)   
 Use the `SftpConfig` resource to specify values for a connector\. The connector establishes a relationship between your AWS storage and a partner's SFTP server\.  | August 3, 2023 | 
+| [Added properties](AWS_Cognito.md) | Added IdentityPoolTags to AWS::Cognito::IdentityPool and Ref and GetAtt values to AWS::Cognito::IdentityPoolRoleAttachment\. 
+
+ [AWS::Cognito::IdentityPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypooltags)   
+You can add tags to identity pools, and Ref now returns an identity pool ID for IdentityPoolRoleAttachment\.  | August 3, 2023 | 
 | [New resource](AWS_SNS.md) | The following resource was added: AWS::SNS::TopicInlinePolicy\. 
 
  [AWS::SNS::TopicInlinePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html)   
@@ -332,7 +356,7 @@ Use the `AWS::CleanRooms::ConfiguredTable` resource to specify a new configured 
 Use the `AWS::CleanRooms::ConfiguredTable` resource to specify a new configured association resource in AWS Clean Rooms\. 
 
  [AWS::CleanRooms::Membership](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html)   
-Use the `AWS::CleanRooms::ConfiguredTable` resource to specify a membership for a specific collaboration identifier and join the collaboration in AWS Clean Rooms\.  | June 15, 2023 | 
+Use the `AWS::CleanRooms::Membership` resource to specify a membership for a specific collaboration identifier and join the collaboration in AWS Clean Rooms\.  | June 15, 2023 | 
 | [New resources](AWS_MediaConnect.md) | The following resources were added: `AWS::MediaConnect::Bridge`, `AWS::MediaConnect::BridgeOutput`, `AWS::MediaConnect::BridgeSource`, and `AWS::MediaConnect::Gateway`\. 
 
  [AWS::MediaConnect::Bridge](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html.html)   

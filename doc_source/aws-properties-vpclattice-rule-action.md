@@ -1,6 +1,6 @@
 # AWS::VpcLattice::Rule Action<a name="aws-properties-vpclattice-rule-action"></a>
 
-Describes the action for a rule\. Each rule must include exactly one of the following types of actions: `forward` or `fixed-response`, and it must be the last action to be performed\.
+Describes the action for a rule\.
 
 ## Syntax<a name="aws-properties-vpclattice-rule-action-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-vpclattice-rule-action-properties"></a>
 
 `FixedResponse`  <a name="cfn-vpclattice-rule-action-fixedresponse"></a>
-Describes the rule action that returns a custom HTTP response\.  
+The fixed response action\. The rule returns a custom HTTP response\.  
 *Required*: No  
 *Type*: [FixedResponse](aws-properties-vpclattice-rule-fixedresponse.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

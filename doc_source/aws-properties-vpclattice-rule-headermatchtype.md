@@ -1,6 +1,6 @@
 # AWS::VpcLattice::Rule HeaderMatchType<a name="aws-properties-vpclattice-rule-headermatchtype"></a>
 
-Describes a header match type\. Only one can be provided\.
+Describes a header match type\.
 
 ## Syntax<a name="aws-properties-vpclattice-rule-headermatchtype-syntax"></a>
 
@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-vpclattice-rule-headermatchtype-properties"></a>
 
 `Contains`  <a name="cfn-vpclattice-rule-headermatchtype-contains"></a>
-Specifies a contains type match\.  
+A contains type match\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Exact`  <a name="cfn-vpclattice-rule-headermatchtype-exact"></a>
-Specifies an exact type match\.  
+An exact type match\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-vpclattice-rule-headermatchtype-prefix"></a>
-Specifies a prefix type match\. Matches the value with the prefix\.  
+A prefix type match\. Matches the value with the prefix\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

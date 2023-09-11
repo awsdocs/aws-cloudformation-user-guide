@@ -20,3 +20,5 @@
 + [AWS::Connect::TrafficDistributionGroup](aws-resource-connect-trafficdistributiongroup.md)
 + [AWS::Connect::User](aws-resource-connect-user.md)
 + [AWS::Connect::UserHierarchyGroup](aws-resource-connect-userhierarchygroup.md)
++ [AWS::Connect::View](aws-resource-connect-view.md)
++ [AWS::Connect::ViewVersion](aws-resource-connect-viewversion.md)

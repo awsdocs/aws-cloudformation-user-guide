@@ -25,6 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AuditLogs`  <a name="cfn-guardduty-detector-cfnkubernetesconfiguration-auditlogs"></a>
 Describes whether Kubernetes audit logs are enabled as a data source for the detector\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [CFNKubernetesAuditLogsConfiguration](aws-properties-guardduty-detector-cfnkubernetesauditlogsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

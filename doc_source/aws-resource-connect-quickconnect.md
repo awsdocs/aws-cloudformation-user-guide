@@ -91,3 +91,6 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 
 `QuickConnectArn`  <a name="QuickConnectArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the quick connect\.
+
+`QuickConnectType`  <a name="QuickConnectType-fn::getatt"></a>
+Property description not available\.

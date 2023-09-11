@@ -1,6 +1,6 @@
 # AWS::VpcLattice::TargetGroup Matcher<a name="aws-properties-vpclattice-targetgroup-matcher"></a>
 
-The codes to use when checking for a successful response from a target for health checks\.
+Describes the codes to use when checking for a successful response from a target for health checks\.
 
 ## Syntax<a name="aws-properties-vpclattice-targetgroup-matcher-syntax"></a>
 

@@ -31,7 +31,7 @@ The ID of the target group\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Weight`  <a name="cfn-vpclattice-rule-weightedtargetgroup-weight"></a>
-Only required if you specify multiple target groups for a forward action\. The "weight" determines how requests are distributed to the target group\. For example, if you specify two target groups, each with a weight of 10, each target group receives half the requests\. If you specify two target groups, one with a weight of 10 and the other with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other target group\. If there's only one target group specified, then the default value is 100\.  
+Only required if you specify multiple target groups for a forward action\. The weight determines how requests are distributed to the target group\. For example, if you specify two target groups, each with a weight of 10, each target group receives half the requests\. If you specify two target groups, one with a weight of 10 and the other with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other target group\. If there's only one target group specified, then the default value is 100\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

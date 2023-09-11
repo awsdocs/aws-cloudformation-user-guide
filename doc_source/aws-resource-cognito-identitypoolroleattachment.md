@@ -55,7 +55,7 @@ The map of the roles associated with this pool\. For a given role, the key is ei
 
 ### Ref<a name="aws-resource-cognito-identitypoolroleattachment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns a generated ID, such as `IdentityPoolRoleAttachment-EXAMPLEwnOR3n`\.
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the `IdentityPoolId`, such as `us-east-2:0d01f4d7-1305-4408-b437-12345EXAMPLE`\.
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

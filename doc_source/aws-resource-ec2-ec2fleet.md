@@ -94,7 +94,7 @@ Describes the configuration of Spot Instances in an EC2 Fleet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TagSpecifications`  <a name="cfn-ec2-ec2fleet-tagspecifications"></a>
-The key\-value pair for tagging the EC2 Fleet request on creation\. For more information, see [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)\.  
+The key\-value pair for tagging the EC2 Fleet request on creation\. For more information, see [Tag your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)\.  
 If the fleet type is `instant`, specify a resource type of `fleet` to tag the fleet or `instance` to tag the instances at launch\.  
 If the fleet type is `maintain` or `request`, specify a resource type of `fleet` to tag the fleet\. You cannot specify a resource type of `instance`\. To tag instances at launch, specify the tags in a [launch template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)\.  
 *Required*: No  

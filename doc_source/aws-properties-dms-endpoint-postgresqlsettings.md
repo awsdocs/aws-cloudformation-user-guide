@@ -11,7 +11,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AfterConnectScript](#cfn-dms-endpoint-postgresqlsettings-afterconnectscript)" : String,
+  "[BabelfishDatabaseName](#cfn-dms-endpoint-postgresqlsettings-babelfishdatabasename)" : String,
   "[CaptureDdls](#cfn-dms-endpoint-postgresqlsettings-captureddls)" : Boolean,
+  "[DatabaseMode](#cfn-dms-endpoint-postgresqlsettings-databasemode)" : String,
   "[DdlArtifactsSchema](#cfn-dms-endpoint-postgresqlsettings-ddlartifactsschema)" : String,
   "[ExecuteTimeout](#cfn-dms-endpoint-postgresqlsettings-executetimeout)" : Integer,
   "[FailTasksOnLobTruncation](#cfn-dms-endpoint-postgresqlsettings-failtasksonlobtruncation)" : Boolean,
@@ -31,7 +33,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AfterConnectScript](#cfn-dms-endpoint-postgresqlsettings-afterconnectscript): String
+  [BabelfishDatabaseName](#cfn-dms-endpoint-postgresqlsettings-babelfishdatabasename): String
   [CaptureDdls](#cfn-dms-endpoint-postgresqlsettings-captureddls): Boolean
+  [DatabaseMode](#cfn-dms-endpoint-postgresqlsettings-databasemode): String
   [DdlArtifactsSchema](#cfn-dms-endpoint-postgresqlsettings-ddlartifactsschema): String
   [ExecuteTimeout](#cfn-dms-endpoint-postgresqlsettings-executetimeout): Integer
   [FailTasksOnLobTruncation](#cfn-dms-endpoint-postgresqlsettings-failtasksonlobtruncation): Boolean
@@ -56,11 +60,23 @@ Example: `afterConnectScript=SET session_replication_role='replica'`
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`BabelfishDatabaseName`  <a name="cfn-dms-endpoint-postgresqlsettings-babelfishdatabasename"></a>
+The Babelfish for Aurora PostgreSQL database name for the endpoint\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `CaptureDdls`  <a name="cfn-dms-endpoint-postgresqlsettings-captureddls"></a>
 To capture DDL events, AWS DMS creates various artifacts in the PostgreSQL database when the task starts\. You can later remove these artifacts\.  
 If this value is set to `N`, you don't have to create tables or triggers on the source database\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DatabaseMode`  <a name="cfn-dms-endpoint-postgresqlsettings-databasemode"></a>
+Specifies the default behavior of the replication's handling of PostgreSQL\- compatible endpoints that require some additional configuration, such as Babelfish endpoints\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DdlArtifactsSchema`  <a name="cfn-dms-endpoint-postgresqlsettings-ddlartifactsschema"></a>

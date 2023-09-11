@@ -37,7 +37,7 @@ Allow the use of regular expressions in the login page path\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoginPath`  <a name="cfn-wafv2-webacl-awsmanagedrulesatpruleset-loginpath"></a>
-The path of the login endpoint for your application\. For example, for the URL `https://example.com/web/login`, you would provide the path `/web/login`\.  
+The path of the login endpoint for your application\. For example, for the URL `https://example.com/web/login`, you would provide the path `/web/login`\. Login paths that start with the path that you provide are considered a match\. For example `/web/login` matches the login paths `/web/login`, `/web/login/`, `/web/loginPage`, and `/web/login/thisPage`, but doesn't match the login path `/home/web/login` or `/website/login`\.  
 The rule group inspects only HTTP `POST` requests to your specified login endpoint\.  
 *Required*: Yes  
 *Type*: String  

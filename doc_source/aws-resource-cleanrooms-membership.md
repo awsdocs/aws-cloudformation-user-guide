@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CleanRooms::Membership",
   "Properties" : {
       "[CollaborationIdentifier](#cfn-cleanrooms-membership-collaborationidentifier)" : String,
+      "[DefaultResultConfiguration](#cfn-cleanrooms-membership-defaultresultconfiguration)" : MembershipProtectedQueryResultConfiguration,
       "[QueryLogStatus](#cfn-cleanrooms-membership-querylogstatus)" : String,
       "[Tags](#cfn-cleanrooms-membership-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CleanRooms::Membership
 Properties: 
   [CollaborationIdentifier](#cfn-cleanrooms-membership-collaborationidentifier): String
+  [DefaultResultConfiguration](#cfn-cleanrooms-membership-defaultresultconfiguration): 
+    MembershipProtectedQueryResultConfiguration
   [QueryLogStatus](#cfn-cleanrooms-membership-querylogstatus): String
   [Tags](#cfn-cleanrooms-membership-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -40,6 +43,12 @@ The unique ID for the associated collaboration\.
 *Maximum*: `36`  
 *Pattern*: `.*[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DefaultResultConfiguration`  <a name="cfn-cleanrooms-membership-defaultresultconfiguration"></a>
+The default protected query result configuration as specified by the member who can receive results\.  
+*Required*: No  
+*Type*: [MembershipProtectedQueryResultConfiguration](aws-properties-cleanrooms-membership-membershipprotectedqueryresultconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QueryLogStatus`  <a name="cfn-cleanrooms-membership-querylogstatus"></a>
 An indicator as to whether query logging has been enabled or disabled for the collaboration\.  

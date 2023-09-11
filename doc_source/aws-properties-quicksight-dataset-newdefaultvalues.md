@@ -33,10 +33,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-dataset-newdefaultvalues-properties"></a>
 
 `DateTimeStaticValues`  <a name="cfn-quicksight-dataset-newdefaultvalues-datetimestaticvalues"></a>
-A list of static default values for a given date time parameter\. The valid format for this property is `yyyy-MM-dd’T’HH:mm:ss’Z’`\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `32`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DecimalStaticValues`  <a name="cfn-quicksight-dataset-newdefaultvalues-decimalstaticvalues"></a>

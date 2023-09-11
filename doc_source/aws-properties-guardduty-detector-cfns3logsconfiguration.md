@@ -24,6 +24,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Enable`  <a name="cfn-guardduty-detector-cfns3logsconfiguration-enable"></a>
  The status of S3 data event logs as a data source\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

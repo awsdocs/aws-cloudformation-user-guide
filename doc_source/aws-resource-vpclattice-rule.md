@@ -43,7 +43,7 @@ Properties:
 ## Properties<a name="aws-resource-vpclattice-rule-properties"></a>
 
 `Action`  <a name="cfn-vpclattice-rule-action"></a>
-Describes the action for a rule\. Each rule must include exactly one of the following types of actions: `forward` or `fixed-response`, and it must be the last action to be performed\.  
+Describes the action for a rule\.  
 *Required*: Yes  
 *Type*: [Action](aws-properties-vpclattice-rule-action.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
