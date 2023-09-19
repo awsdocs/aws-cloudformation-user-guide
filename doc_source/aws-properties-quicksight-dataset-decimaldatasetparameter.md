@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet DecimalDatasetParameter<a name="aws-properties-quicksight-dataset-decimaldatasetparameter"></a>
 
-<a name="aws-properties-quicksight-dataset-decimaldatasetparameter-description"></a>The `DecimalDatasetParameter` property type specifies Property description not available\. for an [AWS::QuickSight::DataSet](aws-resource-quicksight-dataset.md)\.
+A decimal parameter that is created in the dataset\.
 
 ## Syntax<a name="aws-properties-quicksight-dataset-decimaldatasetparameter-syntax"></a>
 
@@ -30,25 +30,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-dataset-decimaldatasetparameter-properties"></a>
 
 `DefaultValues`  <a name="cfn-quicksight-dataset-decimaldatasetparameter-defaultvalues"></a>
-Property description not available\.  
+A list of default values for a given decimal parameter\. This structure only accepts static values\.  
 *Required*: No  
 *Type*: [DecimalDatasetParameterDefaultValues](aws-properties-quicksight-dataset-decimaldatasetparameterdefaultvalues.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-quicksight-dataset-decimaldatasetparameter-id"></a>
-Property description not available\.  
+An identifier for the decimal parameter created in the dataset\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-quicksight-dataset-decimaldatasetparameter-name"></a>
-Property description not available\.  
+The name of the decimal parameter that is created in the dataset\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValueType`  <a name="cfn-quicksight-dataset-decimaldatasetparameter-valuetype"></a>
-Property description not available\.  
+The value type of the dataset parameter\. Valid values are `single value` or `multi value`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

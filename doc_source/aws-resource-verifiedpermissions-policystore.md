@@ -68,3 +68,49 @@ The [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr
 
 `PolicyStoreId`  <a name="PolicyStoreId-fn::getatt"></a>
 The unique ID of the new or updated policy store\.
+
+## Examples<a name="aws-resource-verifiedpermissions-policystore--examples"></a>
+
+
+
+### Creating a policy store with a schema and verification enabled<a name="aws-resource-verifiedpermissions-policystore--examples--Creating_a_policy_store_with_a_schema_and_verification_enabled"></a>
+
+The following example creates a policy store that is configured with a schema and policy validation against that schema turned on\.
+
+#### JSON<a name="aws-resource-verifiedpermissions-policystore--examples--Creating_a_policy_store_with_a_schema_and_verification_enabled--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation sample template for creating a policy store for Verified Permissions.",
+    "Resources": {
+        "MyPolicyStore": {
+            "Type": "AWS::VerifiedPermissions::PolicyStore",
+            "Properties": {
+                "Schema": {
+                    "CedarJson": "{\"PhotoApp\":{\"commonTypes\":{\"PersonType\":{\"type\":\"Record\",\"attributes\":{\"age\":{\"type\":\"Long\"},\"name\":{\"type\":\"String\"}}},\"ContextType\":{\"type\":\"Record\",\"attributes\":{\"ip\":{\"type\":\"Extension\",\"name\":\"ipaddr\",\"required\":false},\"authenticated\":{\"type\":\"Boolean\",\"required\":true}}}},\"entityTypes\":{\"User\":{\"shape\":{\"type\":\"Record\",\"attributes\":{\"userId\":{\"type\":\"String\"},\"personInformation\":{\"type\":\"PersonType\"}}},\"memberOfTypes\":[\"UserGroup\"]},\"UserGroup\":{\"shape\":{\"type\":\"Record\",\"attributes\":{}}},\"Photo\":{\"shape\":{\"type\":\"Record\",\"attributes\":{\"account\":{\"type\":\"Entity\",\"name\":\"Account\",\"required\":true},\"private\":{\"type\":\"Boolean\",\"required\":true}}},\"memberOfTypes\":[\"Album\",\"Account\"]},\"Album\":{\"shape\":{\"type\":\"Record\",\"attributes\":{}}},\"Account\":{\"shape\":{\"type\":\"Record\",\"attributes\":{}}}},\"actions\":{\"viewPhoto\":{\"appliesTo\":{\"principalTypes\":[\"User\",\"UserGroup\"],\"resourceTypes\":[\"Photo\"],\"context\":{\"type\":\"ContextType\"}}},\"createPhoto\":{\"appliesTo\":{\"principalTypes\":[\"User\",\"UserGroup\"],\"resourceTypes\":[\"Photo\"],\"context\":{\"type\":\"ContextType\"}}},\"listPhotos\":{\"appliesTo\":{\"principalTypes\":[\"User\",\"UserGroup\"],\"resourceTypes\":[\"Photo\"],\"context\":{\"type\":\"ContextType\"}}}}}}"
+                },
+                "ValidationSettings": {
+                    "Mode": "STRICT"
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-verifiedpermissions-policystore--examples--Creating_a_policy_store_with_a_schema_and_verification_enabled--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Description": "AWS CloudFormation sample template for creating a policy store for Verified Permissions." 
+Resources:
+  MyPolicyStore:
+    Type: AWS::VerifiedPermissions::PolicyStore
+    Properties:
+      Schema:
+        CedarJson: '{"PhotoApp":{"commonTypes":{"PersonType":{"type":"Record","attributes":{"age":{"type":"Long"},"name":{"type":"String"}}},"ContextType":{"type":"Record","attributes":{"ip":{"type":"Extension","name":"ipaddr","required":false},"authenticated":{"type":"Boolean","required":true}}}},"entityTypes":{"User":{"shape":{"type":"Record","attributes":{"userId":{"type":"String"},"personInformation":{"type":"PersonType"}}},"memberOfTypes":["UserGroup"]},"UserGroup":{"shape":{"type":"Record","attributes":{}}},"Photo":{"shape":{"type":"Record","attributes":{"account":{"type":"Entity","name":"Account","required":true},"private":{"type":"Boolean","required":true}}},"memberOfTypes":["Album","Account"]},"Album":{"shape":{"type":"Record","attributes":{}}},"Account":{"shape":{"type":"Record","attributes":{}}}},"actions":{"viewPhoto":{"appliesTo":{"principalTypes":["User","UserGroup"],"resourceTypes":["Photo"],"context":{"type":"ContextType"}}},"createPhoto":{"appliesTo":{"principalTypes":["User","UserGroup"],"resourceTypes":["Photo"],"context":{"type":"ContextType"}}},"listPhotos":{"appliesTo":{"principalTypes":["User","UserGroup"],"resourceTypes":["Photo"],"context":{"type":"ContextType"}}}}}}'
+      ValidationSettings:
+        Mode: STRICT
+```

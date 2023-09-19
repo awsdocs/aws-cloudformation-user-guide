@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet RowLevelPermissionTagConfiguration<a name="aws-properties-quicksight-dataset-rowlevelpermissiontagconfiguration"></a>
 
-<a name="aws-properties-quicksight-dataset-rowlevelpermissiontagconfiguration-description"></a>The `RowLevelPermissionTagConfiguration` property type specifies Property description not available\. for an [AWS::QuickSight::DataSet](aws-resource-quicksight-dataset.md)\.
+The element you can use to define tags for row\-level security\.
 
 ## Syntax<a name="aws-properties-quicksight-dataset-rowlevelpermissiontagconfiguration-syntax"></a>
 
@@ -28,19 +28,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-dataset-rowlevelpermissiontagconfiguration-properties"></a>
 
 `Status`  <a name="cfn-quicksight-dataset-rowlevelpermissiontagconfiguration-status"></a>
-Property description not available\.  
+The status of row\-level security tags\. If enabled, the status is `ENABLED`\. If disabled, the status is `DISABLED`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagRuleConfigurations`  <a name="cfn-quicksight-dataset-rowlevelpermissiontagconfiguration-tagruleconfigurations"></a>
-Property description not available\.  
+The configuration of tags on a dataset to set row\-level security\.   
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagRules`  <a name="cfn-quicksight-dataset-rowlevelpermissiontagconfiguration-tagrules"></a>
-Property description not available\.  
+A set of rules associated with row\-level security, such as the tag names and columns that they are assigned to\.  
 *Required*: Yes  
 *Type*: List of [RowLevelPermissionTagRule](aws-properties-quicksight-dataset-rowlevelpermissiontagrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

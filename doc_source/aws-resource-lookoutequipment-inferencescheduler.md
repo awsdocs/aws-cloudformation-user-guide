@@ -84,7 +84,7 @@ The name of the inference scheduler\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelName`  <a name="cfn-lookoutequipment-inferencescheduler-modelname"></a>
-The name of the ML model used for the inference scheduler\.   
+The name of the machine learning model used for the inference scheduler\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

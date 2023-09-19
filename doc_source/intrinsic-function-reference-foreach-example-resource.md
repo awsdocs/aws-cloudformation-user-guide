@@ -249,7 +249,7 @@ Resources:
 
 ## Replicate multiple resources<a name="intrinsic-function-reference-foreach-example-replicate-multiple-resources"></a>
 
-This example creates multtiple instances of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html) and [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html) using a naming convention of "\{ResourceType\}$\{Identifier\}"\. You can declare multiple resource types under one `Fn::ForEach` loop to take advantage of a single identifier\.
+This example creates multiple instances of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html) and [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html) using a naming convention of "\{ResourceType\}$\{Identifier\}"\. You can declare multiple resource types under one `Fn::ForEach` loop to take advantage of a single identifier\.
 
 **Note**  
 The example below assumes the `TwoNatGateways` and `ThreeNatGateways` Conditions exist, and `PublicSubnetA`, `PublicSubnetB`, and `PublicSubnetC` Resources are defined\.

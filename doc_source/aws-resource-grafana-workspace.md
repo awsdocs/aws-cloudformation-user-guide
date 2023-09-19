@@ -100,13 +100,14 @@ The user\-defined description of the workspace\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GrafanaVersion`  <a name="cfn-grafana-workspace-grafanaversion"></a>
-Specifies the version of Grafana to support in the new workspace\.  
-To get a list of supported version, use the `ListVersions` operation\.  
+Specifies the version of Grafana to support in the workspace\. Defaults to the latest version on create \(for example, 9\.4\), or the current version of the workspace on update\.  
+Can only be used to upgrade \(for example, from 8\.4 to 9\.4\), not downgrade \(for example, from 9\.4 to 8\.4\)\.  
+To know what versions are available to upgrade to for a specific workspace, see the [ListVersions](https://docs.aws.amazon.com/grafana/latest/APIReference/API_ListVersions.html) operation\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-grafana-workspace-name"></a>
 The name of the workspace\.  

@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-config-configrule-source-properties"></a>
 
 `CustomPolicyDetails`  <a name="cfn-config-configrule-source-custompolicydetails"></a>
-Property description not available\.  
+Provides the runtime system, policy definition, and whether debug logging is enabled\. Required when owner is set to `CUSTOM_POLICY`\.  
 *Required*: No  
 *Type*: [CustomPolicyDetails](aws-properties-config-configrule-custompolicydetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

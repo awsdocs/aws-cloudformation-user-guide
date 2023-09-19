@@ -4,6 +4,22 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_MediaPackageV2.md) | The following resources were added: AWS::MediaPackageV2::Channel, AWS::MediaPackageV2::ChannelGroup, AWS::MediaPackageV2::ChannelPolicy, AWS::MediaPackageV2::OriginEndpoint, and AWS::MediaPackageV2::OriginEndpointPolicy\. 
+
+ [AWS::MediaPackageV2::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html)   
+Use the `AWS::MediaPackageV2::ChannelGroup` resource to specify the configuration parameters for a channel\. 
+
+ [AWS::MediaPackageV2::ChannelGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channelgroup.html)   
+Use the `AWS::MediaPackageV2::ChannelGroup` resource to specify the configuration parameters for a channel group\. 
+
+ [AWS::MediaPackageV2::ChannelPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channnelpolicy.html)   
+Use the `AWS::MediaPackageV2::ChannelPolicy` resource to specify the configuration parameters for a channel policy\. 
+
+ [AWS::MediaPackageV2::OriginEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html)   
+Use the `AWS::MediaPackageV2::OriginEndpoint` resource to specify the configuration parameters for an origin endpoint\. 
+
+ [AWS::MediaPackageV2::OriginEndpointPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpointpolicy.html)   
+Use the `AWS::MediaPackageV2::OriginEndpointPolicy` resource to specify the configuration parameters for an origin endpoint policy\.  | September 14, 2023 | 
 | [Updated resource](AWS_BillingConductor.md) | The following resource was updated: AWS::BillingConductor::CustomLineItem LineItemFilter\. 
 
  [AWS::BillingConductor::CustomLineItem LineItemFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html)   

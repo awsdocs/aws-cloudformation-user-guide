@@ -12,7 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WorkSpacesWeb::UserSettings",
   "Properties" : {
+      "[AdditionalEncryptionContext](#cfn-workspacesweb-usersettings-additionalencryptioncontext)" : {Key: Value, ...},
+      "[CookieSynchronizationConfiguration](#cfn-workspacesweb-usersettings-cookiesynchronizationconfiguration)" : CookieSynchronizationConfiguration,
       "[CopyAllowed](#cfn-workspacesweb-usersettings-copyallowed)" : String,
+      "[CustomerManagedKey](#cfn-workspacesweb-usersettings-customermanagedkey)" : String,
       "[DisconnectTimeoutInMinutes](#cfn-workspacesweb-usersettings-disconnecttimeoutinminutes)" : Double,
       "[DownloadAllowed](#cfn-workspacesweb-usersettings-downloadallowed)" : String,
       "[IdleDisconnectTimeoutInMinutes](#cfn-workspacesweb-usersettings-idledisconnecttimeoutinminutes)" : Double,
@@ -29,7 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::WorkSpacesWeb::UserSettings
 Properties: 
+  [AdditionalEncryptionContext](#cfn-workspacesweb-usersettings-additionalencryptioncontext): 
+    Key: Value
+  [CookieSynchronizationConfiguration](#cfn-workspacesweb-usersettings-cookiesynchronizationconfiguration): 
+    CookieSynchronizationConfiguration
   [CopyAllowed](#cfn-workspacesweb-usersettings-copyallowed): String
+  [CustomerManagedKey](#cfn-workspacesweb-usersettings-customermanagedkey): String
   [DisconnectTimeoutInMinutes](#cfn-workspacesweb-usersettings-disconnecttimeoutinminutes): Double
   [DownloadAllowed](#cfn-workspacesweb-usersettings-downloadallowed): String
   [IdleDisconnectTimeoutInMinutes](#cfn-workspacesweb-usersettings-idledisconnecttimeoutinminutes): Double
@@ -42,12 +50,30 @@ Properties:
 
 ## Properties<a name="aws-resource-workspacesweb-usersettings-properties"></a>
 
+`AdditionalEncryptionContext`  <a name="cfn-workspacesweb-usersettings-additionalencryptioncontext"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Map of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CookieSynchronizationConfiguration`  <a name="cfn-workspacesweb-usersettings-cookiesynchronizationconfiguration"></a>
+The configuration that specifies which cookies should be synchronized from the end user's local browser to the remote browser\.  
+*Required*: No  
+*Type*: [CookieSynchronizationConfiguration](aws-properties-workspacesweb-usersettings-cookiesynchronizationconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `CopyAllowed`  <a name="cfn-workspacesweb-usersettings-copyallowed"></a>
 Specifies whether the user can copy text from the streaming session to the local device\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomerManagedKey`  <a name="cfn-workspacesweb-usersettings-customermanagedkey"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DisconnectTimeoutInMinutes`  <a name="cfn-workspacesweb-usersettings-disconnecttimeoutinminutes"></a>
 The amount of time that a streaming session remains active after users disconnect\.  

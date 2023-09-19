@@ -53,9 +53,9 @@ Specifies the content that you want to use for the new policy template, written 
 
 ### Ref<a name="aws-resource-verifiedpermissions-policytemplate-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique id of the new or updated policy template\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref`function, `Ref`returns the unique id of the policy store followed by '\|' and the unique id of the new or updated policy template\. For example:
 
-`{ "Ref": "PTEXAMPLEabcdefg111111" }`
+`{ "Ref": "POLICYSTOREabcde111111|POLICYTEMPLATEab111111" }`
 
 For more information about using the `Ref`function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -69,3 +69,82 @@ For more information about using the `Fn::GetAtt`intrinsic function, see [Fn::Ge
 
 `PolicyTemplateId`  <a name="PolicyTemplateId-fn::getatt"></a>
 The unique identifier of the new or modified policy template\.
+
+## Examples<a name="aws-resource-verifiedpermissions-policytemplate--examples"></a>
+
+
+
+### Creating a policy template<a name="aws-resource-verifiedpermissions-policytemplate--examples--Creating_a_policy_template"></a>
+
+The following example creates a policy template with the specified statement\.
+
+#### JSON<a name="aws-resource-verifiedpermissions-policytemplate--examples--Creating_a_policy_template--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation sample template for creating a policy template for Verified Permissions.",
+    "Parameters": {
+        "PolicyStoreId": {
+            "Type": "String"
+        },
+        "Description": {
+            "Type": "String"
+        },
+        "Statement": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "PolicyTemplate": {
+            "Type": "AWS::VerifiedPermissions::PolicyTemplate",
+            "Properties": {
+                "PolicyStoreId": {
+                    "Ref": "PolicyStoreId"
+                },
+                "Description": {
+                    "Ref": "Description"
+                },
+                "Statement": {
+                    "Ref": "Statement"
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "PolicyTemplateId": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "PolicyTemplate",
+                    "PolicyTemplateId"
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-verifiedpermissions-policytemplate--examples--Creating_a_policy_template--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Description": "AWS CloudFormation sample template for creating a policy template for Verified Permissions." 
+Parameters:
+  PolicyStoreId:
+    Type: String
+  Description:
+    Type: String
+  Statement:
+    Type: String
+Resources:
+  PolicyTemplate:
+    Type: AWS::VerifiedPermissions::PolicyTemplate
+    Properties:
+      PolicyStoreId: !Ref PolicyStoreId
+      Description: !Ref Description
+      Statement: !Ref Statement
+Outputs:
+  PolicyTemplateId:
+    Value: !GetAtt PolicyTemplate.PolicyTemplateId
+```

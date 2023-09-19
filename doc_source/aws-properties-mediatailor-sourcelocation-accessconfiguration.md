@@ -34,7 +34,7 @@ Before you can use `S3_SIGV4`, you must meet these requirements:
 • The caller of the API must have s3:GetObject IAM permissions to read all top level manifests referenced by your MediaTailor VodSource packaging configurations\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `S3_SIGV4 | SECRETS_MANAGER_ACCESS_TOKEN`  
+*Allowed values*: `AUTODETECT_SIGV4 | S3_SIGV4 | SECRETS_MANAGER_ACCESS_TOKEN`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretsManagerAccessTokenConfiguration`  <a name="cfn-mediatailor-sourcelocation-accessconfiguration-secretsmanageraccesstokenconfiguration"></a>

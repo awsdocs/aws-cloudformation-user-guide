@@ -99,3 +99,97 @@ The [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr
 
 `IdentitySourceId`  <a name="IdentitySourceId-fn::getatt"></a>
 The unique ID of the new or updated identity store\.
+
+## Examples<a name="aws-resource-verifiedpermissions-identitysource--examples"></a>
+
+
+
+### Creating an identity source for a Amazon Cognito user pool<a name="aws-resource-verifiedpermissions-identitysource--examples--Creating_an_identity_source_for_a__user_pool"></a>
+
+The following example creates an identity source in the specified policy store that points to a Amazon Cognito user pool using the specified client ID\. The new identity source returns objects of the specified data type\.
+
+#### JSON<a name="aws-resource-verifiedpermissions-identitysource--examples--Creating_an_identity_source_for_a__user_pool--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation sample template for creating an identity source for Verified Permissions.",
+    "Parameters": {
+        "PolicyStoreId": {
+            "Type": "String"
+        },
+        "UserPoolArn": {
+            "Type": "String"
+        },
+        "ClientIds": {
+            "Type": "List<String>"
+        },
+        "PrincipalEntityType": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "IdentitySource": {
+            "Type": "AWS::VerifiedPermissions::IdentitySource",
+            "Properties": {
+                "PolicyStoreId": {
+                    "Ref": "PolicyStoreId"
+                },
+                "Configuration": {
+                    "CognitoUserPoolConfiguration": {
+                        "UserPoolArn": {
+                            "Ref": "UserPoolArn"
+                        },
+                        "ClientIds": {
+                            "Ref": "ClientIds"
+                        }
+                    }
+                },
+                "PrincipalEntityType": {
+                    "Ref": "PrincipalEntityType"
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "IdentitySourceId": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "IdentitySource",
+                    "IdentitySourceId"
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-verifiedpermissions-identitysource--examples--Creating_an_identity_source_for_a__user_pool--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Description": "AWS CloudFormation sample template for creating an identity source for Verified Permissions
+Parameters:
+  PolicyStoreId:
+    Type: String
+  UserPoolArn:
+    Type: String
+  ClientIds:
+    Type: List<String>
+  PrincipalEntityType:
+    Type: String
+Resources:
+  IdentitySource:
+    Type: AWS::VerifiedPermissions::IdentitySource
+    Properties:
+      PolicyStoreId: !Ref PolicyStoreId
+      Configuration:
+        CognitoUserPoolConfiguration:
+          UserPoolArn: !Ref UserPoolArn
+          ClientIds: !Ref ClientIds
+      PrincipalEntityType: !Ref PrincipalEntityType
+Outputs:
+  IdentitySourceId:
+    Value: !GetAtt IdentitySource.IdentitySourceId
+```

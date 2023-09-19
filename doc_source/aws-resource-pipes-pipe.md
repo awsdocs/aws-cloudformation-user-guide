@@ -189,3 +189,315 @@ Resources:
       Enrichment: arn:aws:execute-api:us-east-1:123456789123:53eo2i89p9/*/POST/pets
       Target: arn:aws:states:us-east-1:123456789123:stateMachine:PipeTargetStateMachine
 ```
+
+### Create a pipe with an event filter<a name="aws-resource-pipes-pipe--examples--Create_a_pipe_with_an_event_filter"></a>
+
+The following example:
++ Provisions a DynamoDB table and associated data stream to act as the pipe source, and a Amazon SQS queue for the pipe target\.
++ Provisions an IAM execution role for the pipe that defines the necessary permissions to access both the source and target\. 
++ Creates a pipe that connects the DynamoDB stream source to the Amazon SQS queue target\.
++ Within the pipe, defines an event filter with an event pattern that selects events where `eventname` is `INSERT` or `MODIFY`\.
+
+**Note**  
+Be aware that you will be billed for the AWS resources used if you create a stack from this template\.
+
+#### JSON<a name="aws-resource-pipes-pipe--examples--Create_a_pipe_with_an_event_filter--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+
+ "Description" : "EventBridge Pipe template example. Provisions a pipe, along with a DynamoDB stream as the pipe source and an SQS queue as the pipe target. Also provisions an execution role that contains the necessary permissions to access both the source and target. Once provisioned, the pipe receives events from the DynamoDB data stream, applies a filter, and sends matching events on to an SQS Queue. You will be billed for the Amazon resources used if you create a stack from this template.",
+
+  "Parameters" : {
+    "SourceTableName" : {
+      "Type" : "String",
+      "Default" : "pipe-example-source",
+      "Description" : "Specify the name of the table to provision as the pipe source, or accept the default."
+    },
+  "TargetQueueName" : {
+    "Type" : "String",
+    "Default" : "pipe-example-target",
+    "Description" : "Specify the name of the queue to provision as the pipe target, or accept the default."
+  },
+    "PipeName" : {
+      "Type" : "String",
+      "Default" : "pipe-with-filtering-example",
+      "Description" : "Specify the name of the table to provision as the pipe source, or accept the default."
+    }
+},
+  "Resources": {
+    "PipeSourceDynamoDBTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [{
+            "AttributeName": "Album",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "Artist",
+            "AttributeType": "S"
+          }
+
+        ],
+        "KeySchema": [{
+            "AttributeName": "Album",
+            "KeyType": "HASH"
+
+          },
+          {
+            "AttributeName": "Artist",
+            "KeyType": "RANGE"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 10,
+          "WriteCapacityUnits": 10
+        },
+        "StreamSpecification": {
+          "StreamViewType": "NEW_AND_OLD_IMAGES"
+        },
+        "TableName": { "Ref" : "SourceTableName" }
+      }
+    },
+    "PipeTargetQueue": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "QueueName": { "Ref" : "TargetQueueName" }
+      }
+    },
+    "PipeTutorialPipeRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [{
+            "Effect": "Allow",
+            "Principal": {
+              "Service": "pipes.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+              "StringLike": {
+                "aws:SourceArn": {
+	"Fn::Join": [
+		"", 
+                [
+                  "arn:",
+                  { "Ref": "AWS::Partition" },
+                  ":pipes:",
+                  { "Ref": "AWS::Region" },
+                  ":",
+                  { "Ref": "AWS::AccountId" },
+                  ":pipe/",
+                  { "Ref": "PipeName" }
+               ]
+	]
+       },
+                "aws:SourceAccount": { "Ref" : "AWS::AccountId" }
+              }
+            }
+          }]
+        },
+        "Description" : "EventBridge Pipe template example. Execution role that grants the pipe the permissions necessary to send events to the specified pipe.",
+        "Path": "/",
+        "Policies": [{
+            "PolicyName": "SourcePermissions",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [{
+                "Effect": "Allow",
+                "Action": [
+                  "dynamodb:DescribeStream",
+                  "dynamodb:GetRecords",
+                  "dynamodb:GetShardIterator",
+                  "dynamodb:ListStreams"
+                ],
+                "Resource": [
+                  { "Fn::GetAtt" : [ "PipeSourceDynamoDBTable", "StreamArn" ] }
+                ]
+              }]
+            }
+          },
+          {
+            "PolicyName": "TargetPermissions",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [{
+                "Effect": "Allow",
+                "Action": [
+                  "sqs:SendMessage"
+                ],
+                "Resource": [
+                  { "Fn::GetAtt" : [ "PipeTargetQueue", "Arn" ] }
+                ]
+              }]
+            }
+          }
+        ]
+      }
+  },
+    "PipeWithFiltering": {
+      "Type": "AWS::Pipes::Pipe",
+      "Properties": {
+        "Description" : "EventBridge Pipe template example. Pipe that receives events from a DynamoDB stream, applies a filter, and sends matching events on to an SQS Queue.",
+        "Name": { "Ref" : "PipeName" },
+        "RoleArn": {"Fn::GetAtt" : ["PipeTutorialPipeRole", "Arn"] },
+        "Source": { "Fn::GetAtt" : [ "PipeSourceDynamoDBTable", "StreamArn" ] },
+        "SourceParameters": {
+          "DynamoDBStreamParameters" : {
+            "StartingPosition" : "LATEST"
+         },
+        "FilterCriteria" : {
+          "Filters" : [ {
+            "Pattern" : "{ \"eventName\": [\"INSERT\", \"MODIFY\"] }"
+         }]
+        }
+        },
+        "Target": { "Fn::GetAtt" : [ "PipeTargetQueue", "Arn" ] }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-pipes-pipe--examples--Create_a_pipe_with_an_event_filter--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  EventBridge Pipe template example. Provisions a pipe, along with a DynamoDB
+  stream as the pipe source and an SQS queue as the pipe target. Also provisions
+  an execution role that contains the necessary permissions to access both the
+  source and target. Once provisioned, the pipe receives events from the
+  DynamoDB data stream, applies a filter, and sends matching events on to an SQS
+  Queue. You will be billed for the Amazon resources used if you create a stack
+  from this template.
+Parameters:
+  SourceTableName:
+    Type: String
+    Default: pipe-example-source
+    Description: >-
+      Specify the name of the table to provision as the pipe source, or accept
+      the default.
+  TargetQueueName:
+    Type: String
+    Default: pipe-example-target
+    Description: >-
+      Specify the name of the queue to provision as the pipe target, or accept
+      the default.
+  PipeName:
+    Type: String
+    Default: pipe-with-filtering-example
+    Description: >-
+      Specify the name of the table to provision as the pipe source, or accept
+      the default.
+Resources:
+  PipeSourceDynamoDBTable:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: Album
+          AttributeType: S
+        - AttributeName: Artist
+          AttributeType: S
+      KeySchema:
+        - AttributeName: Album
+          KeyType: HASH
+        - AttributeName: Artist
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 10
+        WriteCapacityUnits: 10
+      StreamSpecification:
+        StreamViewType: NEW_AND_OLD_IMAGES
+      TableName:
+        Ref: SourceTableName
+  PipeTargetQueue:
+    Type: 'AWS::SQS::Queue'
+    Properties:
+      QueueName:
+        Ref: TargetQueueName
+  PipeTutorialPipeRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: pipes.amazonaws.com
+            Action: 'sts:AssumeRole'
+            Condition:
+              StringLike:
+                'aws:SourceArn':
+                  'Fn::Join':
+                    - ''
+                    - - 'arn:'
+                      - Ref: 'AWS::Partition'
+                      - ':pipes:'
+                      - Ref: 'AWS::Region'
+                      - ':'
+                      - Ref: 'AWS::AccountId'
+                      - ':pipe/'
+                      - Ref: PipeName
+                'aws:SourceAccount':
+                  Ref: 'AWS::AccountId'
+      Description: >-
+        EventBridge Pipe template example. Execution role that grants the pipe
+        the permissions necessary to send events to the specified pipe.
+      Path: /
+      Policies:
+        - PolicyName: SourcePermissions
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'dynamodb:DescribeStream'
+                  - 'dynamodb:GetRecords'
+                  - 'dynamodb:GetShardIterator'
+                  - 'dynamodb:ListStreams'
+                Resource:
+                  - 'Fn::GetAtt':
+                      - PipeSourceDynamoDBTable
+                      - StreamArn
+        - PolicyName: TargetPermissions
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'sqs:SendMessage'
+                Resource:
+                  - 'Fn::GetAtt':
+                      - PipeTargetQueue
+                      - Arn
+  PipeWithFiltering:
+    Type: 'AWS::Pipes::Pipe'
+    Properties:
+      Description: >-
+        EventBridge Pipe template example. Pipe that receives events from a
+        DynamoDB stream, applies a filter, and sends matching events on to an
+        SQS Queue.
+      Name:
+        Ref: PipeName
+      RoleArn:
+        'Fn::GetAtt':
+          - PipeTutorialPipeRole
+          - Arn
+      Source:
+        'Fn::GetAtt':
+          - PipeSourceDynamoDBTable
+          - StreamArn
+      SourceParameters:
+        DynamoDBStreamParameters:
+          StartingPosition: LATEST
+        FilterCriteria:
+          Filters:
+            - Pattern: '{ "eventName": ["INSERT", "MODIFY"] }'
+      Target:
+        'Fn::GetAtt':
+          - PipeTargetQueue
+          - Arn
+```

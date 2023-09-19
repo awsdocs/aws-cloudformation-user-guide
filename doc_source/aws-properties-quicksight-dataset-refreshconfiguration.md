@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet RefreshConfiguration<a name="aws-properties-quicksight-dataset-refreshconfiguration"></a>
 
-<a name="aws-properties-quicksight-dataset-refreshconfiguration-description"></a>The `RefreshConfiguration` property type specifies Property description not available\. for an [AWS::QuickSight::DataSet](aws-resource-quicksight-dataset.md)\.
+The refresh configuration of a dataset\.
 
 ## Syntax<a name="aws-properties-quicksight-dataset-refreshconfiguration-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-dataset-refreshconfiguration-properties"></a>
 
 `IncrementalRefresh`  <a name="cfn-quicksight-dataset-refreshconfiguration-incrementalrefresh"></a>
-Property description not available\.  
+The incremental refresh for the dataset\.  
 *Required*: No  
 *Type*: [IncrementalRefresh](aws-properties-quicksight-dataset-incrementalrefresh.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

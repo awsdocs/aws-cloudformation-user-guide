@@ -24,7 +24,7 @@ Type: AWS::DevOpsGuru::LogAnomalyDetectionIntegration
 
 ### Ref<a name="aws-resource-devopsguru-loganomalydetectionintegration-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns Amazon Resource Name \(ARN\) of the `LogAnomalyDetectionIntegration`\. For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the user account ID\. For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
 ### Fn::GetAtt<a name="aws-resource-devopsguru-loganomalydetectionintegration-return-values-fn--getatt"></a>
 

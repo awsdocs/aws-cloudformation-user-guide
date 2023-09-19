@@ -102,3 +102,350 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-resource-ssmincidents-responseplan--examples"></a>
+
+### Create a response plan<a name="aws-resource-ssmincidents-responseplan--examples--Create_a_response_plan"></a>
+
+The following example creates a response plan\.
+
+**Note**  
+This example also demonstrates creating a replication set\. We recommend creating a replication set and response plan using a single template\. This template also incorporates resources from [AWS Systems Manager Incident Manager Contacts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_SSMContacts.html)\.
+
+#### JSON<a name="aws-resource-ssmincidents-responseplan--examples--Create_a_response_plan--json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Description": "Sample AWS CloudFormation template to create a response plan and replication set (JSON).",
+   "Parameters": {
+      "ContactEmail": {
+         "Type": "String",
+         "Description": "The email address to use to engage the contact channel."
+      },
+      "ChatbotSnsArn": {
+         "Type": "String",
+         "Description": "The Amazon Simple Notification Service (SNS) targets that AWS Chatbot uses to provide the chat channel with updates about an incident."
+      },
+      "NotificationTargetArn": {
+         "Type": "String",
+         "Description": "The SNS topic used by AWS Chatbot to send notifications to the incidents chat channel.",
+         "AllowedPattern": "^arn:aws(-cn|-us-gov)?:[a-z0-9-]*:[a-z0-9-]*:([0-9]{12})?:.+$"
+      },
+      "SsmRoleArn": {
+         "Type": "String",
+         "Description": "The Amazon Resource Name (ARN) of the role that the Automation runbook assumes when running commands.",
+         "AllowedPattern": "^arn:aws(-cn|-us-gov)?:iam::([0-9]{12})?:role/.+$"
+      },
+      "SsmAutomationDocument": {
+         "Type": "String",
+         "Description": "The Systems Manager Automation runbook to use during an incident.",
+         "AllowedPattern": "^[a-zA-Z0-9_\\-.:/]{3,128}$"
+      }
+   },
+   "Resources": {
+      "MyReplicationSet": {
+         "Type": "AWS::SSMIncidents::ReplicationSet",
+         "Properties": {
+            "Regions": [
+               {
+                  "RegionName": {
+                     "Ref": "AWS::Region"
+                  }
+               }
+            ],
+            "Tags": [
+               {
+                  "Key": "MyReplicationSetTagKey",
+                  "Value": "MyReplicationSetTagValue"
+               }
+            ]
+         }
+      },
+      "MyIncidentsResponsePlan": {
+         "Type": "AWS::SSMIncidents::ResponsePlan",
+         "Properties": {
+            "Name": "MyResponsePlan",
+            "ChatChannel": {
+               "ChatbotSns": "ChatbotSnsArn"
+            },
+            "Engagements": "MyEscalationPlanContact",
+            "Actions": [
+               {
+                  "SsmAutomation": {
+                     "RoleArn": "SsmRoleArn",
+                     "DocumentName": "SsmAutomationDocument",
+                     "DocumentVersion": "1",
+                     "TargetAccount": "IMPACTED_ACCOUNT",
+                     "Parameters": [
+                        {
+                           "Key": "Key1",
+                           "Values": [
+                              "Value1"
+                           ]
+                        }
+                     ],
+                     "DynamicParameters": [
+                        {
+                           "Key": "Key2",
+                           "Value": {
+                              "Variable": "INCIDENT_RECORD_ARN"
+                           }
+                        },
+                        {
+                           "Key": "Key3",
+                           "Value": {
+                              "Variable": "INVOLVED_RESOURCES"
+                           }
+                        }
+                     ]
+                  }
+               }
+            ],
+            "IncidentTemplate": {
+               "Title": "MyIncident",
+               "Impact": 1,
+               "Summary": "My incident summary.",
+               "DedupeString": "MyDedupeString",
+               "NotificationTargets": [
+                  {
+                     "SnsTopicArn": "NotificationTargetArn"
+                  }
+               ],
+               "IncidentTags": [
+                  {
+                     "Key": "MyIncidentTagKey",
+                     "Value": "MyIncidentTagValue"
+                  }
+               ]
+            },
+            "Tags": [
+               {
+                  "Key": "MyResponsePlanTagKey",
+                  "Value": "MyResponsePlanTagValue"
+               }
+            ]
+         },
+         "DependsOn": "MyReplicationSet"
+      },
+      "MyContactChannelEmail": {
+         "Type": "AWS::SSMContacts::ContactChannel",
+         "Properties": {
+            "ContactId": "MySSMContact",
+            "ChannelName": "emailChannel",
+            "ChannelType": "EMAIL",
+            "ChannelAddress": "ContactEmail"
+         },
+         "DependsOn": "MyReplicationSet"
+      },
+      "MySSMContact": {
+         "Type": "AWS::SSMContacts::Contact",
+         "Properties": {
+            "Alias": "my-ssm-contact",
+            "DisplayName": "MySSMContact",
+            "Type": "PERSONAL"
+         },
+         "DependsOn": "MyReplicationSet"
+      },
+      "MySSMContactEngagementPlan": {
+         "Type": "AWS::SSMContacts::Plan",
+         "Properties": {
+            "ContactId": "MySSMContact",
+            "Stages": [
+               {
+                  "DurationInMinutes": 10,
+                  "Targets": [
+                     {
+                        "ChannelTargetInfo": {
+                           "ChannelId": "MyContactChannelEmail",
+                           "RetryIntervalInMinutes": 3
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         "DependsOn": "MyReplicationSet"
+      },
+      "MyEscalationPlanContact": {
+         "Type": "AWS::SSMContacts::Contact",
+         "Properties": {
+            "Alias": "my-escalation-plan",
+            "DisplayName": "MyEscalationPlan",
+            "Type": "ESCALATION"
+         },
+         "DependsOn": "MyReplicationSet"
+      },
+      "MyEscalationPlan": {
+         "Type": "AWS::SSMContacts::Plan",
+         "Properties": {
+            "ContactId": "MyEscalationPlanContact",
+            "Stages": [
+               {
+                  "DurationInMinutes": 0,
+                  "Targets": [
+                     {
+                        "ContactTargetInfo": {
+                           "ContactId": "MySSMContact",
+                           "IsEssential": true
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         "DependsOn": "MyReplicationSet"
+      }
+   },
+   "Outputs": {
+      "ReplicationSetArn": {
+         "Value": "MyReplicationSet"
+      },
+      "Region": {
+         "Value": "AWS::Region"
+      },
+      "SSMContactArn": {
+         "Value": "MySSMContact"
+      },
+      "EscalationPlanArn": {
+         "Value": "MyEscalationPlanContact"
+      },
+      "ResponsePlanArn": {
+         "Value": "MyIncidentsResponsePlan"
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-ssmincidents-responseplan--examples--Create_a_response_plan--yaml"></a>
+
+```
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Sample AWS CloudFormation template to create a response plan and replication set (YAML)."
+Parameters:
+  ContactEmail:
+    Type: String
+    Description: The email address to use to engage the contact channel.
+  ChatbotSnsArn:
+    Type: String
+    Description: The Amazon Simple Notification Service (SNS) targets that AWS
+      Chatbot uses to provide the chat channel with updates about an incident.
+  NotificationTargetArn:
+    Type: String
+    Description: The SNS topic used by AWS Chatbot to send notifications to the
+      incidents chat channel.
+    AllowedPattern: ^arn:aws(-cn|-us-gov)?:[a-z0-9-]*:[a-z0-9-]*:([0-9]{12})?:.+$
+  SsmRoleArn:
+    Type: String
+    Description: The Amazon Resource Name (ARN) of the role that the Automation
+      runbook assumes when running commands.
+    AllowedPattern: ^arn:aws(-cn|-us-gov)?:iam::([0-9]{12})?:role/.+$
+  SsmAutomationDocument:
+    Type: String
+    Description: The Systems Manager Automation runbook to use during an incident.
+    AllowedPattern: ^[a-zA-Z0-9_\-.:/]{3,128}$
+Resources:
+  MyReplicationSet:
+    Type: AWS::SSMIncidents::ReplicationSet
+    Properties:
+      Regions:
+        - RegionName:
+            Ref: AWS::Region
+      Tags:
+        - Key: MyReplicationSetTagKey
+          Value: MyReplicationSetTagValue
+  MyIncidentsResponsePlan:
+    Type: AWS::SSMIncidents::ResponsePlan
+    Properties:
+      Name: MyResponsePlan
+      ChatChannel:
+        ChatbotSns: ChatbotSnsArn
+      Engagements: MyEscalationPlanContact
+      Actions:
+        - SsmAutomation:
+            RoleArn: SsmRoleArn
+            DocumentName: SsmAutomationDocument
+            DocumentVersion: "1"
+            TargetAccount: IMPACTED_ACCOUNT
+            Parameters:
+              - Key: Key1
+                Values:
+                  - Value1
+            DynamicParameters:
+              - Key: Key2
+                Value:
+                  Variable: INCIDENT_RECORD_ARN
+              - Key: Key3
+                Value:
+                  Variable: INVOLVED_RESOURCES
+      IncidentTemplate:
+        Title: MyIncident
+        Impact: 1
+        Summary: "My incident summary."
+        DedupeString: MyDedupeString
+        NotificationTargets:
+          - SnsTopicArn: NotificationTargetArn
+        IncidentTags:
+          - Key: MyIncidentTagKey
+            Value: MyIncidentTagValue
+      Tags:
+        - Key: MyResponsePlanTagKey
+          Value: MyResponsePlanTagValue
+    DependsOn: MyReplicationSet
+  MyContactChannelEmail:
+    Type: AWS::SSMContacts::ContactChannel
+    Properties:
+      ContactId: MySSMContact
+      ChannelName: emailChannel
+      ChannelType: EMAIL
+      ChannelAddress: ContactEmail
+    DependsOn: MyReplicationSet
+  MySSMContact:
+    Type: AWS::SSMContacts::Contact
+    Properties:
+      Alias: my-ssm-contact
+      DisplayName: MySSMContact
+      Type: PERSONAL
+    DependsOn: MyReplicationSet
+  MySSMContactEngagementPlan:
+    Type: AWS::SSMContacts::Plan
+    Properties:
+      ContactId: MySSMContact
+      Stages:
+        - DurationInMinutes: 10
+          Targets:
+            - ChannelTargetInfo:
+                ChannelId: MyContactChannelEmail
+                RetryIntervalInMinutes: 3
+    DependsOn: MyReplicationSet
+  MyEscalationPlanContact:
+    Type: AWS::SSMContacts::Contact
+    Properties:
+      Alias: my-escalation-plan
+      DisplayName: MyEscalationPlan
+      Type: ESCALATION
+    DependsOn: MyReplicationSet
+  MyEscalationPlan:
+    Type: AWS::SSMContacts::Plan
+    Properties:
+      ContactId: MyEscalationPlanContact
+      Stages:
+        - DurationInMinutes: 0
+          Targets:
+            - ContactTargetInfo:
+                ContactId: MySSMContact
+                IsEssential: true
+    DependsOn: MyReplicationSet
+Outputs:
+  ReplicationSetArn:
+    Value: MyReplicationSet
+  Region:
+    Value: AWS::Region
+  SSMContactArn:
+    Value: MySSMContact
+  EscalationPlanArn:
+    Value: MyEscalationPlanContact
+  ResponsePlanArn:
+    Value: MyIncidentsResponsePlan
+```

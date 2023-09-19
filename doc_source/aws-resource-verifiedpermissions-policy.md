@@ -83,3 +83,202 @@ The unique ID of the new or updated policy\.
 The type of the policy\. This is one of the following values:  
 + Static
 + TemplateLinked
+
+## Examples<a name="aws-resource-verifiedpermissions-policy--examples"></a>
+
+
+
+### Creating a static policy<a name="aws-resource-verifiedpermissions-policy--examples--Creating_a_static_policy"></a>
+
+The following example creates a static policy in the specified policy store with the specified policy statement\.
+
+#### JSON<a name="aws-resource-verifiedpermissions-policy--examples--Creating_a_static_policy--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation sample template for creating a static policy for Verified Permissions",
+    "Parameters": {
+        "PolicyStoreId": {
+            "Type": "String"
+        },
+        "Description": {
+            "Type": "String"
+        },
+        "Statement": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "StaticPolicy": {
+            "Type": "AWS::VerifiedPermissions::Policy",
+            "Properties": {
+                "PolicyStoreId": {
+                    "Ref": "PolicyStoreId"
+                },
+                "Definition": {
+                    "Static": {
+                        "Description": {
+                            "Ref": "Description"
+                        },
+                        "Statement": {
+                            "Ref": "Statement"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "PolicyId": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "StaticPolicy",
+                    "PolicyId"
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-verifiedpermissions-policy--examples--Creating_a_static_policy--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Description": "AWS CloudFormation sample template for creating a static policy for Verified Permissions."
+Parameters:
+  PolicyStoreId:
+    Type: String
+  Description:
+    Type: String
+  Statement:
+    Type: String
+Resources:
+  StaticPolicy:
+    Type: AWS::VerifiedPermissions::Policy
+    Properties:
+      PolicyStoreId: !Ref PolicyStoreId
+      Definition:
+        Static:
+          Description: !Ref Description
+          Statement: !Ref Statement
+Outputs:
+  PolicyId:
+    Value: !GetAtt StaticPolicy.PolicyId
+```
+
+### Creating a template\-linked policy<a name="aws-resource-verifiedpermissions-policy--examples--Creating_a_template-linked_policy"></a>
+
+The following example creates a policy that is linked to the specified policy template\. You must specify the type and ID for the placeholders in your template\.
+
+#### JSON<a name="aws-resource-verifiedpermissions-policy--examples--Creating_a_template-linked_policy--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation sample template for creating a template-linked policy for Verified Permissions.",
+    "Parameters": {
+        "PolicyStoreId": {
+            "Type": "String"
+        },
+        "PolicyTemplateId": {
+            "Type": "String"
+        },
+        "PrincipalType": {
+            "Type": "String"
+        },
+        "PrincipalId": {
+            "Type": "String"
+        },
+        "ResourceType": {
+            "Type": "String"
+        },
+        "ResourceId": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "TemplateLinkedPolicy": {
+            "Type": "AWS::VerifiedPermissions::Policy",
+            "Properties": {
+                "PolicyStoreId": {
+                    "Ref": "PolicyStoreId"
+                },
+                "Definition": {
+                    "TemplateLinked": {
+                        "PolicyTemplateId": {
+                            "Ref": "PolicyTemplateId"
+                        },
+                        "Principal": {
+                            "EntityType": {
+                                "Ref": "PrincipalType"
+                            },
+                            "EntityId": {
+                                "Ref": "PrincipalId"
+                            }
+                        },
+                        "Resource": {
+                            "EntityType": {
+                                "Ref": "ResourceType"
+                            },
+                            "EntityId": {
+                                "Ref": "ResourceId"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "PolicyId": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "TemplateLinkedPolicy",
+                    "PolicyId"
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-verifiedpermissions-policy--examples--Creating_a_template-linked_policy--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Description": "AWS CloudFormation sample template for creating a template-linked policy for Verified Permissions." 
+Parameters:
+  PolicyStoreId:
+    Type: String
+  PolicyTemplateId:
+    Type: String
+  PrincipalType:
+    Type: String
+  PrincipalId:
+    Type: String
+  ResourceType:
+    Type: String
+  ResourceId:
+    Type: String
+Resources:
+  TemplateLinkedPolicy:
+    Type: AWS::VerifiedPermissions::Policy
+    Properties:
+      PolicyStoreId: !Ref PolicyStoreId
+      Definition:
+        TemplateLinked:
+          PolicyTemplateId: !Ref PolicyTemplateId
+          Principal:
+            EntityType: !Ref PrincipalType
+            EntityId: !Ref PrincipalId
+          Resource:
+            EntityType: !Ref ResourceType
+            EntityId: !Ref ResourceId
+Outputs:
+  PolicyId:
+    Value: !GetAtt TemplateLinkedPolicy.PolicyId
+```

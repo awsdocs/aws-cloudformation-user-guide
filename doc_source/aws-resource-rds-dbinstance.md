@@ -69,7 +69,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeleteAutomatedBackups](#cfn-rds-dbinstance-deleteautomatedbackups)" : Boolean,
       "[DeletionProtection](#cfn-rds-dbinstance-deletionprotection)" : Boolean,
       "[Domain](#cfn-rds-dbinstance-domain)" : String,
+      "[DomainAuthSecretArn](#cfn-rds-dbinstance-domainauthsecretarn)" : String,
+      "[DomainDnsIps](#cfn-rds-dbinstance-domaindnsips)" : [ String, ... ],
+      "[DomainFqdn](#cfn-rds-dbinstance-domainfqdn)" : String,
       "[DomainIAMRoleName](#cfn-rds-dbinstance-domainiamrolename)" : String,
+      "[DomainOu](#cfn-rds-dbinstance-domainou)" : String,
       "[EnableCloudwatchLogsExports](#cfn-rds-dbinstance-enablecloudwatchlogsexports)" : [ String, ... ],
       "[EnableIAMDatabaseAuthentication](#cfn-rds-dbinstance-enableiamdatabaseauthentication)" : Boolean,
       "[EnablePerformanceInsights](#cfn-rds-dbinstance-enableperformanceinsights)" : Boolean,
@@ -149,7 +153,12 @@ Properties:
   [DeleteAutomatedBackups](#cfn-rds-dbinstance-deleteautomatedbackups): Boolean
   [DeletionProtection](#cfn-rds-dbinstance-deletionprotection): Boolean
   [Domain](#cfn-rds-dbinstance-domain): String
+  [DomainAuthSecretArn](#cfn-rds-dbinstance-domainauthsecretarn): String
+  [DomainDnsIps](#cfn-rds-dbinstance-domaindnsips): 
+    - String
+  [DomainFqdn](#cfn-rds-dbinstance-domainfqdn): String
   [DomainIAMRoleName](#cfn-rds-dbinstance-domainiamrolename): String
+  [DomainOu](#cfn-rds-dbinstance-domainou): String
   [EnableCloudwatchLogsExports](#cfn-rds-dbinstance-enablecloudwatchlogsexports): 
     - String
   [EnableIAMDatabaseAuthentication](#cfn-rds-dbinstance-enableiamdatabaseauthentication): Boolean
@@ -508,11 +517,46 @@ For more information, see [ Kerberos Authentication](https://docs.aws.amazon.com
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DomainAuthSecretArn`  <a name="cfn-rds-dbinstance-domainauthsecretarn"></a>
+The ARN for the Secrets Manager secret with the credentials for the user joining the domain\.  
+Example: `arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456`   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DomainDnsIps`  <a name="cfn-rds-dbinstance-domaindnsips"></a>
+The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers\.  
+Constraints:  
++ Two IP addresses must be provided\. If there isn't a secondary domain controller, use the IP address of the primary domain controller for both entries in the list\.
+Example: `123.124.125.126,234.235.236.237`   
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DomainFqdn`  <a name="cfn-rds-dbinstance-domainfqdn"></a>
+The fully qualified domain name \(FQDN\) of an Active Directory domain\.  
+Constraints:  
++ Can't be longer than 64 characters\.
+Example: `mymanagedADtest.mymanagedAD.mydomain`   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DomainIAMRoleName`  <a name="cfn-rds-dbinstance-domainiamrolename"></a>
 The name of the IAM role to use when making API calls to the Directory Service\.  
 This setting doesn't apply to the following DB instances:  
 + Amazon Aurora \(The domain is managed by the DB cluster\.\)
 + RDS Custom
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DomainOu`  <a name="cfn-rds-dbinstance-domainou"></a>
+The Active Directory organizational unit for your DB instance to join\.  
+Constraints:  
++ Must be in the distinguished name format\.
++ Can't be longer than 64 characters\.
+Example: `OU=mymanagedADtestOU,DC=mymanagedADtest,DC=mymanagedAD,DC=mydomain`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

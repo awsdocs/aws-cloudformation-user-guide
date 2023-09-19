@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet IntegerDatasetParameter<a name="aws-properties-quicksight-dataset-integerdatasetparameter"></a>
 
-<a name="aws-properties-quicksight-dataset-integerdatasetparameter-description"></a>The `IntegerDatasetParameter` property type specifies Property description not available\. for an [AWS::QuickSight::DataSet](aws-resource-quicksight-dataset.md)\.
+An integer parameter that is created in the dataset\.
 
 ## Syntax<a name="aws-properties-quicksight-dataset-integerdatasetparameter-syntax"></a>
 
@@ -30,25 +30,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-dataset-integerdatasetparameter-properties"></a>
 
 `DefaultValues`  <a name="cfn-quicksight-dataset-integerdatasetparameter-defaultvalues"></a>
-Property description not available\.  
+A list of default values for a given integer parameter\. This structure only accepts static values\.  
 *Required*: No  
 *Type*: [IntegerDatasetParameterDefaultValues](aws-properties-quicksight-dataset-integerdatasetparameterdefaultvalues.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-quicksight-dataset-integerdatasetparameter-id"></a>
-Property description not available\.  
+An identifier for the integer parameter created in the dataset\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-quicksight-dataset-integerdatasetparameter-name"></a>
-Property description not available\.  
+The name of the integer parameter that is created in the dataset\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValueType`  <a name="cfn-quicksight-dataset-integerdatasetparameter-valuetype"></a>
-Property description not available\.  
+The value type of the dataset parameter\. Valid values are `single value` or `multi value`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

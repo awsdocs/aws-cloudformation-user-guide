@@ -154,6 +154,7 @@ service-provider::service-name::data-type-name
 + [AWS Elemental MediaConvert](AWS_MediaConvert.md)
 + [AWS Elemental MediaLive](AWS_MediaLive.md)
 + [AWS Elemental MediaPackage](AWS_MediaPackage.md)
++ [AWS Elemental MediaPackage V2](AWS_MediaPackageV2.md)
 + [AWS Elemental MediaTailor](AWS_MediaTailor.md)
 + [AWS Elemental MediaStore](AWS_MediaStore.md)
 + [Amazon MQ](AWS_AmazonMQ.md)

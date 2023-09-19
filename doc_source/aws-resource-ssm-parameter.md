@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-ssm-parameter-description)" : String,
       "[Name](#cfn-ssm-parameter-name)" : String,
       "[Policies](#cfn-ssm-parameter-policies)" : String,
-      "[Tags](#cfn-ssm-parameter-tags)" : {Key: Value, ...},
+      "[Tags](#cfn-ssm-parameter-tags)" : Json,
       "[Tier](#cfn-ssm-parameter-tier)" : String,
       "[Type](#cfn-ssm-parameter-type)" : String,
       "[Value](#cfn-ssm-parameter-value)" : String
@@ -41,8 +41,7 @@ Properties:
   [Description](#cfn-ssm-parameter-description): String
   [Name](#cfn-ssm-parameter-name): String
   [Policies](#cfn-ssm-parameter-policies): String
-  [Tags](#cfn-ssm-parameter-tags): 
-    Key: Value
+  [Tags](#cfn-ssm-parameter-tags): Json
   [Tier](#cfn-ssm-parameter-tier): String
   [Type](#cfn-ssm-parameter-type): String
   [Value](#cfn-ssm-parameter-value): String
@@ -93,7 +92,7 @@ Information about the policies assigned to a parameter\.
 `Tags`  <a name="cfn-ssm-parameter-tags"></a>
 Optional metadata that you assign to a resource in the form of an arbitrary set of tags \(key\-value pairs\)\. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment\. For example, you might want to tag a Systems Manager parameter to identify the type of resource to which it applies, the environment, or the type of configuration data referenced by the parameter\.  
 *Required*: No  
-*Type*: Map of String  
+*Type*: Json  
 *Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

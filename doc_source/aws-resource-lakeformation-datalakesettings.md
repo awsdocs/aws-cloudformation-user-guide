@@ -67,7 +67,8 @@ For more information, see [External data filtering setting](https://docs.aws.ama
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowFullTableExternalDataAccess`  <a name="cfn-lakeformation-datalakesettings-allowfulltableexternaldataaccess"></a>
-Property description not available\.  
+ Specifies whether query engines and applications can get credentials without IAM session tags if the user has full table access\. It provides query engines and applications performance benefits as well as simplifies data access\. Amazon EMR on Amazon EC2 is able to leverage this setting\.   
+For more information, see [https://docs.aws.amazon.com/lake-formation/latest/dg/using-cred-vending.html](https://docs.aws.amazon.com/lake-formation/latest/dg/using-cred-vending.html)  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -103,7 +104,8 @@ A list of the account IDs of AWS accounts with Amazon EMR clusters or third\-par
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MutationType`  <a name="cfn-lakeformation-datalakesettings-mutationtype"></a>
-Property description not available\.  
+ Specifies whether the data lake settings are updated by adding new values to the current settings \(`append`\) or by replacing the current settings with new settings \( `Replace`\)\.   
+If you choose `Replace`, your current data lake settings will be replaced with the new values in your template\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -144,11 +146,13 @@ In this example the value of `AllowExternalDataFiltering` is set to `false`\. Wh
             "DataLakePrincipalIdentifier": "arn:aws:iam::012345678910:role/sample-role2"
           }
         ],
+        "AllowFullTableExternalDataAccess": false,
         "AllowExternalDataFiltering": false,
         "AuthorizedSessionTagValueList": [
           "sample_val1",
           "sample_val2"
         ],
+        "MutationType": "REPLACE"
         "Parameters": {
           "CROSS_ACCOUNT_VERSION": "2"
         },
@@ -173,10 +177,12 @@ Resources:
       Admins:
         - DataLakePrincipalIdentifier: "arn:aws:iam::012345678910:role/sample-role1"
         - DataLakePrincipalIdentifier: "arn:aws:iam::012345678910:role/sample-role2"
+      AllowFullTableExternalDataAccess: false
       AllowExternalDataFiltering: false
       AuthorizedSessionTagValueList:
         - "sample_val1"
         - "sample_val2"
+      MutationType": "REPLACE"
       Parameters:
         "CROSS_ACCOUNT_VERSION": "2"
       TrustedResourceOwners:
@@ -205,6 +211,7 @@ In this example, the `AllowExternalDataFiltering` property is set to true, and i
             "DataLakePrincipalIdentifier": "arn:aws:iam::012345678910:role/sample-role2"
           }
         ],
+        "AllowFullTableExternalDataAccess": true
         "AllowExternalDataFiltering": true,
         "AuthorizedSessionTagValueList": [
           "sample_val1",
@@ -235,6 +242,7 @@ In this example, the `AllowExternalDataFiltering` property is set to true, and i
             "DataLakePrincipalIdentifier": "333333333333"
           }
         ],
+        "MutationType": "APPEND"
         "Parameters": {
           "CROSS_ACCOUNT_VERSION": "3"
         },
@@ -259,6 +267,8 @@ Resources:
       Admins:
         - DataLakePrincipalIdentifier: "arn:aws:iam::012345678910:role/sample-role1"
         - DataLakePrincipalIdentifier: "arn:aws:iam::012345678910:role/sample-role2"
+
+      AllowFullTableExternalDataAccess: true
       AllowExternalDataFiltering: true
       AuthorizedSessionTagValueList:
         - "sample_val1"
@@ -275,6 +285,7 @@ Resources:
             - "ALL"
       ExternalDataFilteringAllowList:
         - DataLakePrincipalIdentifier: "333333333333"
+      MutationType: "APPEND"
       Parameters:
         "CROSS_ACCOUNT_VERSION": "3"
       TrustedResourceOwners:

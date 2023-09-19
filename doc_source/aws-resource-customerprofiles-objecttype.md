@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Fields](#cfn-customerprofiles-objecttype-fields)" : [ FieldMap, ... ],
       "[Keys](#cfn-customerprofiles-objecttype-keys)" : [ KeyMap, ... ],
       "[ObjectTypeName](#cfn-customerprofiles-objecttype-objecttypename)" : String,
+      "[SourceLastUpdatedTimestampFormat](#cfn-customerprofiles-objecttype-sourcelastupdatedtimestampformat)" : String,
       "[Tags](#cfn-customerprofiles-objecttype-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TemplateId](#cfn-customerprofiles-objecttype-templateid)" : String
     }
@@ -41,6 +42,7 @@ Properties:
   [Keys](#cfn-customerprofiles-objecttype-keys): 
     - KeyMap
   [ObjectTypeName](#cfn-customerprofiles-objecttype-objecttypename): String
+  [SourceLastUpdatedTimestampFormat](#cfn-customerprofiles-objecttype-sourcelastupdatedtimestampformat): String
   [Tags](#cfn-customerprofiles-objecttype-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TemplateId](#cfn-customerprofiles-objecttype-templateid): String
@@ -95,6 +97,12 @@ The name of the profile object type\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SourceLastUpdatedTimestampFormat`  <a name="cfn-customerprofiles-objecttype-sourcelastupdatedtimestampformat"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-customerprofiles-objecttype-tags"></a>
 The tags used to organize, track, or control access for this resource\.  

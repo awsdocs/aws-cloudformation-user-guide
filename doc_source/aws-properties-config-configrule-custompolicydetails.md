@@ -1,6 +1,6 @@
 # AWS::Config::ConfigRule CustomPolicyDetails<a name="aws-properties-config-configrule-custompolicydetails"></a>
 
-Provides the runtime system, policy definition, and whether debug logging enabled\. You can specify the following CustomPolicyDetails parameter values only for AWS Config Custom Policy rules\.
+Provides the CustomPolicyDetails, the rule owner \(` AWS ` for managed rules, `CUSTOM_POLICY` for Custom Policy rules, and `CUSTOM_LAMBDA` for Custom Lambda rules\), the rule identifier, and the events that cause the evaluation of your AWS resources\.
 
 ## Syntax<a name="aws-properties-config-configrule-custompolicydetails-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-config-configrule-custompolicydetails-properties"></a>
 
 `EnableDebugLogDelivery`  <a name="cfn-config-configrule-custompolicydetails-enabledebuglogdelivery"></a>
-Property description not available\.  
+The boolean expression for enabling debug logging for your AWS Config Custom Policy rule\. The default value is `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -42,7 +42,9 @@ The runtime system for your AWS Config Custom Policy rule\. Guard is a policy\-a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyText`  <a name="cfn-config-configrule-custompolicydetails-policytext"></a>
-Property description not available\.  
+The policy definition containing the logic for your AWS Config Custom Policy rule\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `10000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

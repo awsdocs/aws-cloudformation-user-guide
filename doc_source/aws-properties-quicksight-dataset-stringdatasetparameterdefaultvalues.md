@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet StringDatasetParameterDefaultValues<a name="aws-properties-quicksight-dataset-stringdatasetparameterdefaultvalues"></a>
 
-<a name="aws-properties-quicksight-dataset-stringdatasetparameterdefaultvalues-description"></a>The `StringDatasetParameterDefaultValues` property type specifies Property description not available\. for an [AWS::QuickSight::DataSet](aws-resource-quicksight-dataset.md)\.
+A list of default values for a given string dataset parameter type\. This structure only accepts static values\.
 
 ## Syntax<a name="aws-properties-quicksight-dataset-stringdatasetparameterdefaultvalues-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-dataset-stringdatasetparameterdefaultvalues-properties"></a>
 
 `StaticValues`  <a name="cfn-quicksight-dataset-stringdatasetparameterdefaultvalues-staticvalues"></a>
-Property description not available\.  
+A list of static default values for a given string parameter\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

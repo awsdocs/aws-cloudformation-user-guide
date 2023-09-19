@@ -2,11 +2,12 @@
 
 Specifies a network address translation \(NAT\) gateway in the specified subnet\. You can create either a public NAT gateway or a private NAT gateway\. The default is a public NAT gateway\. If you create a public NAT gateway, you must specify an elastic IP address\.
 
-With a NAT gateway, instances in a private subnet can connect to the internet, other AWS services, or an on\-premises network using the IP address of the NAT gateway\.
+With a NAT gateway, instances in a private subnet can connect to the internet, other AWS services, or an on\-premises network using the IP address of the NAT gateway\. For more information, see [NAT Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) in the *Amazon VPC User Guide*\.
 
 If you add a default route \(`AWS::EC2::Route` resource\) that points to a NAT gateway, specify the NAT gateway ID for the route's `NatGatewayId` property\.
 
-For more information, see [NAT Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) in the *Amazon VPC User Guide*\.
+**Important**  
+When you associate an EIP or secondary EIPs with a public NAT gateway, the network border group of the EIPs must match the network border group of the Availability Zone \(AZ\) that the public NAT gateway is in\. If it's not the same, the NAT gateway will fail to launch\. You can see the network border group for the subnet's AZ by viewing the details of the subnet\. Similarly, you can view the network border group of an EIP by viewing the details of the EIP address\. For more information about network border groups and EIPs, see [Allocate an Elastic IP address](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#allocate-eip) in the *Amazon VPC User Guide*\. 
 
 ## Syntax<a name="aws-resource-ec2-natgateway-syntax"></a>
 

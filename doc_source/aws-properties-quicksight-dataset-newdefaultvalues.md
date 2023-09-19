@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet NewDefaultValues<a name="aws-properties-quicksight-dataset-newdefaultvalues"></a>
 
-<a name="aws-properties-quicksight-dataset-newdefaultvalues-description"></a>The `NewDefaultValues` property type specifies Property description not available\. for an [AWS::QuickSight::DataSet](aws-resource-quicksight-dataset.md)\.
+The new default values for the parameter\.
 
 ## Syntax<a name="aws-properties-quicksight-dataset-newdefaultvalues-syntax"></a>
 
@@ -33,25 +33,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-dataset-newdefaultvalues-properties"></a>
 
 `DateTimeStaticValues`  <a name="cfn-quicksight-dataset-newdefaultvalues-datetimestaticvalues"></a>
-Property description not available\.  
+A list of static default values for a given date time parameter\. The valid format for this property is `yyyy-MM-dd’T’HH:mm:ss’Z’`\.  
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `32`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DecimalStaticValues`  <a name="cfn-quicksight-dataset-newdefaultvalues-decimalstaticvalues"></a>
-Property description not available\.  
+A list of static default values for a given decimal parameter\.  
 *Required*: No  
 *Type*: List of Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IntegerStaticValues`  <a name="cfn-quicksight-dataset-newdefaultvalues-integerstaticvalues"></a>
-Property description not available\.  
+A list of static default values for a given integer parameter\.  
 *Required*: No  
 *Type*: List of Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StringStaticValues`  <a name="cfn-quicksight-dataset-newdefaultvalues-stringstaticvalues"></a>
-Property description not available\.  
+A list of static default values for a given string parameter\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
